@@ -3,7 +3,7 @@
 }
 
 .md-typeset h1{
-    color: rgb(107, 101, 101);
+    color: rgb(140, 131, 131);
     font-weight: 500;
 }
 
@@ -14,7 +14,7 @@
 
 .md-typeset h3 {
     font-weight: 500;
-    color: #5a5856;
+    color: #767471;
 }
 
 .md-typeset a{
@@ -120,7 +120,7 @@
     margin: 0;
 }
 .fa-file-arrow-down {
-    background-image: linear-gradient(160deg, #545cec 0%, #80d0c7 100%);
+    background-image: linear-gradient(160deg, #13364d 0%, #80d0c7 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -289,7 +289,7 @@ visibility: hidden;
 }
 
 .md-header{
-    color: #545cec;
+    color: #13364d;
     background-color: white;
     display: inline-block;
 
@@ -516,7 +516,7 @@ color: #a8a39f;
 
     .md-nav--primary .md-nav__title {
         background-color: var(--md-default-fg-color--lightest);
-        color: #545CEC;
+        color: #13364d;
         cursor: pointer;
         height: 5.6rem;
         line-height: 2.4rem;
@@ -543,7 +543,7 @@ color: #a8a39f;
         top: .4rem;
         width: 1.2rem;
         visibility: visible;
-        color:#545CEC
+        color:#13364d
     }
 
     .md-nav--primary .md-nav__title .md-nav__icon:after {
