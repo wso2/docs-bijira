@@ -101,12 +101,12 @@
 
 
 html .md-typeset .superfences-tabs > label{
-    color: #545CEC;
+    color: #13364d;
     font-weight: normal;
 }
 
 html .md-typeset .superfences-tabs > label:hover {
-    color: #545CEC;
+    color: #13364d;
     font-weight: bold;
 }
 
@@ -146,12 +146,12 @@ html .md-typeset .superfences-tabs > label:hover {
 
 [data-md-color-primary=indigo] .md-nav-link-wrapper a:focus,
 [data-md-color-primary=indigo] .md-nav-link-wrapper a:hover {
-    color: #545CEC;
+    color: #13364d;
 }
 
 .hljs-title,
 .hljs-section {
-    color: #545CEC;
+    color: #13364d;
     font-weight: normal;
 }
 
@@ -163,7 +163,7 @@ html .md-typeset .superfences-tabs > label:hover {
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-    color: #545CEC;
+    color: #13364d;
 }
 
 .home_icon {
@@ -269,7 +269,7 @@ html .md-typeset .superfences-tabs > label:hover {
         line-height: .9rem;
         white-space: unset;
         background-color: rgba(0,0,0,.01);
-        border-top: 3px solid #545CEC;
+        border-top: 3px solid #13364d;
         box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
     }
 }
@@ -540,7 +540,7 @@ html .md-footer-meta.md-typeset a,
 
   /* Highlighted text */
   .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    color: #545CEC !important;
+    color: #13364d !important;
     background-color: #f1f1f1 !important
   }
 
