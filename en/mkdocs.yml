@@ -1,0 +1,138 @@
+# Copyright (c) 2025, WSO2 LLC. (http://www.wso2.com) All Rights Reserved.
+#
+# WSO2 LLC. licenses this file to you under the Apache License,
+# Version 2.0 (the "License"); you may not use this file except
+# in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# Project information
+site_name: ""
+site_description: Bijira Documentation
+site_author: WSO2
+site_url: https://wso2.com/bijira/docs
+
+# Repository
+repo_name: wso2/docs-bijira
+repo_url: https://github.com/SavinduDimal/docs-bijira-temp
+edit_uri: https://github.com/SavinduDimal/docs-bijira-temp/edit/dev/en/docs/
+dev_addr: localhost:8000
+
+# Copyright
+copyright: ©2023 WSO2 LLC. 
+
+# Configuration
+theme:
+  name: material
+  custom_dir: theme/material
+  logo: assets/images/logo.png
+  font:
+    text: Montserrat
+  favicon: assets/images/favicon.png
+  features:    
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  language: 'en'
+  palette:
+   # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    logo: logo
+#Breaks build if there's a warning
+strict: false
+# Navigation
+nav:
+  - Home: index.md
+      
+# Extensions
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: docs
+  - attr_list
+plugins:
+  - search
+  - include-markdown
+  - glightbox
+  - open-in-new-tab
+  - markdownextradata: {}
+extra_css:
+  # - assets/lib/highlightjs/default.min.css
+  # - assets/css/theme.css
+  # - assets/css/prism.css
+  # - assets/lib/json-formatter/json-formatter.css
+  
+  - assets/lib/highlightjs/styles/vs.min.css
+  - assets/css/blue-palette-alt2.css
+  - assets/css/bijiratheme.css
+  - assets/lib/json-formatter/json-formatter.css
+  - assets/css/config-catalog.css
+  - assets/lib/fontawesome-free-6.3.0-web/css/all.min.css  
+extra_javascript:
+  - assets/lib/json-formatter/json-formatter.umd.js
+  - assets/lib/highlightjs/highlight.min.js
+ # - assets/js/theme.js
+  #- assets/js/prism-ballerina.js
+  - assets/js/bijiratheme.js
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wso2
+#site_version: 1.0.0
+# base_path: http://localhost:8000
+
