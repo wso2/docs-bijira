@@ -22,12 +22,12 @@ site_url: https://wso2.com/bijira/docs
 
 # Repository
 repo_name: wso2/docs-bijira
-repo_url: https://github.com/SavinduDimal/docs-bijira-temp
-edit_uri: https://github.com/SavinduDimal/docs-bijira-temp/edit/dev/en/docs/
+repo_url: https://github.com/wso2/docs-bijira
+edit_uri: https://github.com/wso2/docs-bijira/edit/main/en/docs/
 dev_addr: localhost:8000
 
 # Copyright
-copyright: ©2023 WSO2 LLC. 
+copyright: ©2025 WSO2 LLC. 
 
 # Configuration
 theme:
@@ -72,8 +72,34 @@ strict: false
 # Navigation
 nav:
   - Home: index.md
-      
-# Extensions
+  - Introduction: 
+      - What is Bijira? : what-is-bijira.md
+  - Quick Start: deploy-your-first-api-proxy.md
+  - Bijira Samples: 
+      - Samples Overview: samples-overview.md
+      - Quick deploy Samples: quick-deploy-samples.md
+  - Bijira Concepts: 
+    # - Resource Hierarchy: resource-hierarchy.md
+    - Organization: organization.md
+    - Project: project.md
+    - CI/CD: ci-cd.md
+    - Deployment Tracks: deployment-tracks.md
+    - Connections: connections.md
+    - Data Planes: data-planes.md
+  - Create API Proxy:
+      - Create API Proxy for My APIs (Ingress): 
+        - Import API Contract: import-api-contract.md
+        - Start with Endpoint: start-with-endpoints.md
+        - Start from Scratch: start-from-scratch.md
+        - Create with GenAI: create-with-genai.md
+      - Create API Proxy for Third Party APIs (Egress):
+        - Get from Marketplace: get-from-marketplace.md
+        - Import API Contract: import-api-egress-contract.md
+        - AI APIs: ai-apis.md
+  - API Governance:
+    - API Governance Overview: api-governance-overview.md
+  
+
 # Extensions
 markdown_extensions:
   - markdown.extensions.admonition
