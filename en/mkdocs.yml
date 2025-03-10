@@ -87,17 +87,44 @@ nav:
     - Connections: connections.md
     - Data Planes: data-planes.md
   - Create API Proxy:
-      - Create API Proxy for My APIs (Ingress): 
-        - Import API Contract: import-api-contract.md
-        - Start with Endpoint: start-with-endpoints.md
-        - Start from Scratch: start-from-scratch.md
-        - Create with GenAI: create-with-genai.md
-      - Create API Proxy for Third Party APIs (Egress):
-        - Get from Marketplace: get-from-marketplace.md
-        - Import API Contract: import-api-egress-contract.md
-        - AI APIs: ai-apis.md
+      - Overview: create-api-proxy/overview.md
+      - My APIs (Ingress):
+        - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
+        - Start with Endpoint: create-api-proxy/my-apis/start-with-endpoint.md
+        - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
+        - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
+      - Third Party APIs (Egress):
+        - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
+        - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
+        - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
+  - Design API Proxy:
+    - Policy: policy.md
+    - Documents: documents.md
+    - Lifecycle: lifecycle.md
+    - Subscription Plan: subscription-plan.md
+  - Test API Proxy:
+    - OpenAPI Console: openapi-console.md
+    - cURL: curl.md
+    - AI Chat: ai-chat.md
+    - 3rd Party Tools: third-party-tools.md
+  - Deploy API Proxy: deploy-api-proxy.md
+  - Insigts:
+    - API Insigts: api-insigts.md
+    - Compliance: compliance.md
+  - Observerbility:
+    - Metrics: metrics.md
+    - Logs: logs.md
   - API Governance:
     - API Governance Overview: api-governance-overview.md
+  - Administer:
+    - User Management: user-management.md
+    - Role Management: role-management.md
+    - Settings: settings.md
+  - References:
+    - Glossary: glossary.md
+    - FAQ: faq.md
+    - Troubleshooting: troubleshooting.md
+    - Release Notes: release-notes.md
   
 
 # Extensions
