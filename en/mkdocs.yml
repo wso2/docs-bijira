@@ -104,7 +104,7 @@ nav:
       - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
     - Documents: develop-api-proxy/documents.md
     - Lifecycle: develop-api-proxy/lifecycle-management.md
-    - Subscription Plan: develop-api-proxy/subscription-plan.md
+    - Subscription Plans: develop-api-proxy/subscription-plans.md
   - Test API Proxy:
     - OpenAPI Console: openapi-console.md
     - cURL: curl.md
@@ -122,7 +122,8 @@ nav:
   - Administer:
     - User Management: user-management.md
     - Role Management: role-management.md
-    - Settings: settings.md
+    - Settings:
+      - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
   - References:
     - Glossary: glossary.md
     - FAQ: faq.md
