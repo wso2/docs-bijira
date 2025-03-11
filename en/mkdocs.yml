@@ -80,12 +80,12 @@ nav:
       - Quick deploy Samples: quick-deploy-samples.md
   - Bijira Concepts: 
     # - Resource Hierarchy: resource-hierarchy.md
-    - Organization: organization.md
-    - Project: project.md
-    - CI/CD: ci-cd.md
-    - Deployment Tracks: deployment-tracks.md
-    - Connections: connections.md
-    - Data Planes: data-planes.md
+    - Organization: bijira-concepts/organization.md
+    - Project: bijira-concepts/project.md
+    - CI/CD: bijira-concepts/ci-cd.md
+    - Deployment Tracks: bijira-concepts/deployment-tracks.md
+    - Connections: bijira-concepts/connections.md
+    - Data Planes: bijira-concepts/data-planes.md
   - Create API Proxy:
       - Overview: create-api-proxy/overview.md
       - My APIs (Ingress):
