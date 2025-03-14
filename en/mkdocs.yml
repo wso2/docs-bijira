@@ -97,11 +97,14 @@ nav:
         - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
         - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
         - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
-  - Design API Proxy:
-    - Policy: policy.md
-    - Documents: documents.md
-    - Lifecycle: lifecycle.md
-    - Subscription Plan: subscription-plan.md
+  - Develop API Proxy:
+    - Policy:
+      - Policy Overview: develop-api-proxy/policy/policy-overview.md
+      - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
+      # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
+    - Documents: develop-api-proxy/documents.md
+    - Lifecycle: develop-api-proxy/lifecycle-management.md
+    - Subscription Plans: develop-api-proxy/subscription-plans.md
   - Test API Proxy:
     - OpenAPI Console: openapi-console.md
     - cURL: curl.md
@@ -119,7 +122,8 @@ nav:
   - Administer:
     - User Management: user-management.md
     - Role Management: role-management.md
-    - Settings: settings.md
+    - Settings:
+      - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
   - References:
     - Glossary: glossary.md
     - FAQ: faq.md
