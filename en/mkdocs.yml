@@ -99,9 +99,9 @@ nav:
         - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
   - Develop API Proxy:
     - Policy:
-      - About Policies: develop-api-proxy/policy/about-policies.md
+      - Policy Overview: develop-api-proxy/policy/policy-overview.md
       - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
-      - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
+      # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
     - Documents: develop-api-proxy/documents.md
     - Lifecycle: develop-api-proxy/lifecycle-management.md
     - Subscription Plans: develop-api-proxy/subscription-plans.md
