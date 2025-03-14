@@ -73,7 +73,7 @@ strict: false
 nav:
   - Home: index.md
   - Introduction: 
-      - What is Bijira? : what-is-bijira.md
+      - What is Bijira? : introduction/what-is-bijira.md
   - Quick Start: deploy-your-first-api-proxy.md
   - Bijira Samples: 
       - Samples Overview: samples-overview.md
