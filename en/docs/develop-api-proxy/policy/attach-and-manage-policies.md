@@ -32,11 +32,9 @@ To attach a resource level policy to the `Request`, `Response`, or `Error` flow 
 4. From the list of resources, click the **Attach Policy Button** for the required policy. 
     ![Resource level policy button](../../assets/img/develop-api-proxy/policy/click-resource-level-policy-button.png)
 5. In the **Edit Mediation Policies** pane, click **Attach Mediation Policy** in the respective flow where you want to attach a policy.  
-<!-- TODO: Need to update these images with Bijira prod -->
     ![Edit mediation policies pane](../../assets/img/develop-api-proxy/policy/edit-mediation-policies-pane.png) 
 6. In the **Policy List** pane that opens, click on a policy to view its details.
 7. If the attached policy requires parameter configuration, on the policy pane enter the appropriate values and configure the parameters. To make a parameter a configurable variable, input the value in the `${<variableName>}` format. For example, you can use `${name}` as an example.
-<!-- TODO: Need to update these images with Bijira prod -->
     ![Configure policy](../../assets/img/develop-api-proxy/policy/configure-policy.png) 
 8. Click **Add** to attach the policy to the selected flow. Then, click **Save** to apply the configuration to the API resource.  
 
