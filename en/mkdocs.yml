@@ -106,10 +106,10 @@ nav:
     - Lifecycle: develop-api-proxy/lifecycle-management.md
     - Subscription Plans: develop-api-proxy/subscription-plans.md
   - Test API Proxy:
-    - OpenAPI Console: openapi-console.md
-    - cURL: curl.md
-    - AI Chat: ai-chat.md
-    - 3rd Party Tools: third-party-tools.md
+    - OpenAPI Console: test-api-proxy/openapi-console.md
+    - cURL: test-api-proxy/curl.md
+    - API Chat: test-api-proxy/api-chat.md
+    - Third Party Tools: test-api-proxy/third-party-tools.md
   - Deploy API Proxy: deploy-api-proxy.md
   - Insigts:
     - API Insigts: api-insigts.md
