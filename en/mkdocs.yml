@@ -76,9 +76,11 @@ nav:
       - What is Bijira? : introduction/what-is-bijira.md
       - Quick Start Guide: introduction/quick-start-guide.md
   - Bijira Samples: 
-      - Samples Overview: samples-overview.md
-      - Quick deploy Samples: quick-deploy-samples.md
-  - Bijira Concepts: 
+      - Samples Overview: samples/samples-overview.md
+  - Tutorials:
+    - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
+    - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
+  - Bijira Concepts:
     # - Resource Hierarchy: resource-hierarchy.md
     - Organization: bijira-concepts/organization.md
     - Project: bijira-concepts/project.md
@@ -117,7 +119,8 @@ nav:
     - Metrics: metrics.md
     - Logs: logs.md
   - API Governance:
-    - API Governance Overview: api-governance-overview.md
+    - API Governance Overview: governance/overview.md
+    - Govern API Proxy: governance/govern-api-proxy.md
   - Administer:
     - User Management: user-management.md
     - Role Management: role-management.md
