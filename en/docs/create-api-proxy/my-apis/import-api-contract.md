@@ -8,36 +8,45 @@ In this guide, you will:
 - Configure and Deploy the API proxy.
 - Test the API proxy to verify its functionality.
 
-### Prerequisites
+## Prerequisites
 
 - A valid Bijira account with available resource quota.
 
-### Create an API Proxy
+## Create an API Proxy
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
 1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
-2. Select **Import API Contract**.
-3. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
+2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
+3. Select **Import API Contract**.
+4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
+
    ```
    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/open-api.yaml
    ```
+
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
 6. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-### Configure and Deploy the API Proxy
+## Configure and Deploy the API Proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
-2. Select **Configure and Deploy** option from the **Deploy** dropdown and click **Configure and Deploy** button.
+2. Select **Configure and Deploy** option from the **Deploy** dropdown and click it.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-### Test the API Proxy 
+## Test the API Proxy
 
 1. Navigate to the **Test --> OpenAPI Console** page of the API Proxy.
 2. Use the OpenAPI Console to test the API Proxy.
 
-### API Proxy Behavior
+## Publish the API proxy
+
+1. In the left navigation menu, click **Lifecycle** under **Develop**. This takes you to the **Lifecycle** page.
+2. Click **Publish**.
+3. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
+
+## API Proxy Behavior
 
 The Reading List API Proxy provides the following functionality:
 
