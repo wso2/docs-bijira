@@ -95,7 +95,7 @@ nav:
         - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
       - Third Party APIs (Egress):
         - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
-        - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
+        - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
         - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
   - Develop API Proxy:
     - Policy:
@@ -109,7 +109,6 @@ nav:
     - OpenAPI Console: test-api-proxy/openapi-console.md
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
-    - Third Party Tools: test-api-proxy/third-party-tools.md
   - Deploy API Proxy: deploy-api-proxy.md
   - Insigts:
     - API Insigts: api-insigts.md
