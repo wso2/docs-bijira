@@ -109,7 +109,6 @@ nav:
     - OpenAPI Console: test-api-proxy/openapi-console.md
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
-    - Third Party Tools: test-api-proxy/third-party-tools.md
   - Deploy API Proxy: deploy-api-proxy.md
   - Insigts:
     - API Insigts: api-insigts.md
