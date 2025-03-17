@@ -8,7 +8,7 @@ An API proxy acts as an intermediary between an existing API and Bijira, interce
 
 ## Create an API Proxy
 
-In this guide, you will create an API proxy from the Scratch.
+In this guide, you will create an API proxy using an endpoint.
 
 1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
