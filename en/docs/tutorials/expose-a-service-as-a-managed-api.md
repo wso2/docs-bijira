@@ -34,7 +34,7 @@ You can create an API proxy by following several methods. In this guide, you wil
    | **Identifier**      | `reading-list-api-qs`                          |
    | **Base Path**    | `/apim-p/reading-list-api-qs/v1.0`                                    |
    | **Version**    | `1.0`                                       |
-   | **Target**     | `https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.choreoapis.dev/godzilla/reading-list-api-service/v1.0`       |
+   | **Target**     | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0`       |
    | **Access Mode** | **External**: API is publicly accessible    |
 
 7. Click **Create**. This creates the component and takes you to the **Overview** page of the component.
