@@ -111,7 +111,6 @@ nav:
     - OpenAPI Console: test-api-proxy/openapi-console.md
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
-  - Deploy API Proxy: deploy-api-proxy.md
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md
