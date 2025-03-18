@@ -112,25 +112,11 @@ nav:
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
   - Deploy API Proxy: deploy-api-proxy.md
-  - Insigts:
-    - API Insigts: api-insigts.md
-    - Compliance: compliance.md
-  - Observerbility:
-    - Metrics: metrics.md
-    - Logs: logs.md
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md
   - Administer:
-    - User Management: user-management.md
-    - Role Management: role-management.md
-    - Settings:
-      - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
-  - References:
-    - Glossary: glossary.md
-    - FAQ: faq.md
-    - Troubleshooting: troubleshooting.md
-    - Release Notes: release-notes.md
+    - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
   
 
 # Extensions
