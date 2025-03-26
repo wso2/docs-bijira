@@ -24,6 +24,21 @@ When a mediation policy is attached to a specific flow, the API invocation under
 
 ## Attach a Policy
 
+### Attach an API level Policy
+To attach an API level policy to the `Request` flow of a REST API proxy, follow the steps given below:
+
+1. Sign in to the [Bijira Console](https://console.bijira.dev).
+2. Select the project and API to which you want to attach a policy.
+3. In the left navigation menu, click **Develop**, then click **Policy**.
+4. Click the **Add API-level Policies** button in the **API Proxy Contract** component. 
+    ![Add API-level Policies button](../../assets/img/develop-api-proxy/policy/click-add-api-level-policy-button.png)
+5. In the **API Policies** pane, click **Attach Mediation Policy** to view the applicable mediation policy list.
+    ![Policy list](../../assets/img/develop-api-proxy/policy/click-attach-policy-button.png)
+6. In the **Policy List** pane that opens, click on a policy to view its details and configure its parameters. To make a parameter a configurable variable, input the value in the `${<variableName>}` format. For example, you can use `${name}` as an example.
+    ![Configurable Parameters](../../assets/img/develop-api-proxy/policy/configure-policy-API-level.png)
+7. Click **Add** to attach the policy. Then, click **Save** to apply the configuration to the API.  
+
+### Attach a Resource level Policy
 To attach a resource level policy to the `Request`, `Response`, or `Error` flow of a REST API proxy, follow the steps given below:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev).
