@@ -4,14 +4,13 @@ To govern the API proxies, you can define rulesets/documents, and policies. Thes
 
 To define the governance compliance standards for API proxies, you can either create Spectral rulesets or use the natural language specification to define the rules.
 
-### Create a Ruleset
+## Create a Ruleset
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
 2. In the Bijira Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Governance**. This opens the Governance page.
 4. From the Rulesets / Documents section, select Rulesets and click **Add Rulesets** button.
 5. Provide the following details
-
 
 | Field Name | Description  | Mandatory | Options/Values |
 |------------|---------------------------------------|-----------|----------------|
@@ -25,8 +24,7 @@ To define the governance compliance standards for API proxies, you can either cr
 
 ![Add Rulesets](../../assets/img/governance/add-rulesets.png)
 
-
-### Add a Document
+## Add a Document
 
 1. From the Rulesets / Documents section, select Documents and click **Add Document** button.
 2. Provide the following details
@@ -41,7 +39,7 @@ To define the governance compliance standards for API proxies, you can either cr
 
 ![Add Document](../../assets/img/governance/add-document.png)
 
-### Policy
+## Policy
 
 Policy will be used to enforce the rulesets and documents on the API proxies. A policy can only be have either rulesets or documents attached to it. To create a policy, follow the below steps.
 
@@ -59,7 +57,7 @@ Policy will be used to enforce the rulesets and documents on the API proxies. A 
 
 ![Add Policy](../../assets/img/governance/add-policy.png)
 
-#### Enforcement Detail
+### Enforcement Detail
 
 | Field Name         | Description                                                                                  | Mandatory | Options/Values |
 |--------------------|----------------------------------------------------------------------------------------------|-----------|--------------|
@@ -69,4 +67,4 @@ Policy will be used to enforce the rulesets and documents on the API proxies. A 
 
 ![Enforcement Detail](../../assets/img/governance/enforcement-detail.png)
 
-By adding the policy, all the existing and newly created API proxies will be validated against the defined rulesets and documents. 
+By adding the policy, all the existing and newly created API proxies will be validated against the defined rulesets and documents.

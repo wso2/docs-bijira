@@ -20,16 +20,16 @@ The essential requirements for a private data plane include upstream-compatible 
 
 ### System components
 
-Setting up the Bijira PDP system involves using a Helm installation on the Kubernetes infrastructure. 
+Setting up the Bijira PDP system involves using a Helm installation on the Kubernetes infrastructure.
 The following software components are installed during the helm execution:
 
-  - Cilium CNI and service mesh.
-  - Bijira API Gateways and related components.
-  - Bijira PDP agent.
-  - Observability and logging APIs, along with observability agents.
-  - Flux controller.
+- Cilium CNI and service mesh.
+- Bijira API Gateways and related components.
+- Bijira PDP agent.
+- Observability and logging APIs, along with observability agents.
+- Flux controller.
 
-All of these software components receive automatic updates, including security patches and bug fixes through the flux controller connected to the Bijira Update Management System. 
+All of these software components receive automatic updates, including security patches and bug fixes through the flux controller connected to the Bijira Update Management System.
 
 ### Connectivity with the control plane
 
@@ -37,86 +37,20 @@ The private data plane requires communication with the Bijira control plane to m
 
 The following table outlines the inbound and outbound connections from a private data plane:
 
-<table border=1>
-<thead>
-<tr>
-<th align="left">Data plane component</th>
-<th align="left">Endpoint</th>
-<th align="left">Direction</th>
-<th align="left">Protocol</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan=2>Bijira PDP agent</td>
-<td>Bijira control plane (CP) (mizzen server)</td>
-<td>Outbound</td>
-<td>WSS</td>
-</tr>
-<tr>
-<td>Kubernetes API server</td>
-<td>Outbound (cluster internal)</td>
-<td>HTTPS, WS</td>
-</tr>
-<tr>
-<td rowspan=2>APIM/local adaptor</td>
-<td>Global adaptor</td>
-<td>Outbound</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td>Azure Service Bus (CP)</td>
-<td>Outbound</td>
-<td>AMQP</td>
-</tr>
-<tr>
-<td >APIM/Enforcer</td>
-<td>Event hub (CP)</td>
-<td>Outbound</td>
-<td>AMQP</td>
-</tr>
-<tr>
-<td>Bijira secret resolver</td>
-<td>Cloud secret store</td>
-<td>Outbound (VPC internal)</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td rowspan=2>Container registry</td>
-<td>Container registry (public)</td>
-<td>Inbound</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td>Container registry</td>
-<td>Outbound (VPC internal)</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td rowspan=2>Certificate manager</td>
-<td>Azure DNS service</td>
-<td>Outbound</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td>LetsEncrypt</td>
-<td>Outbound</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td>Flux source controller</td>
-<td>GitHub</td>
-<td>Outbound</td>
-<td>HTTPS</td>
-</tr>
-<tr>
-<td>Flux Helm controller</td>
-<td>Bijira container registry</td>
-<td>Outbound</td>
-<td>HTTPS</td>
-</tr>
-</tbody>
-</table> 
+| Data plane component      | Endpoint                                | Direction                 | Protocol |
+|:---------------------------|:---------------------------------------|:---------------------------|:---------|
+| Bijira PDP agent           | Bijira control plane (CP) (mizzen server) | Outbound                  | WSS      |
+|                            | Kubernetes API server                  | Outbound (cluster internal) | HTTPS, WS |
+| APIM/local adaptor         | Global adaptor                         | Outbound                  | HTTPS    |
+|                            | Azure Service Bus (CP)                 | Outbound                  | AMQP     |
+| APIM/Enforcer              | Event hub (CP)                         | Outbound                  | AMQP     |
+| Bijira secret resolver     | Cloud secret store                     | Outbound (VPC internal)    | HTTPS    |
+| Container registry         | Container registry (public)            | Inbound                   | HTTPS    |
+|                            | Container registry                     | Outbound (VPC internal)    | HTTPS    |
+| Certificate manager        | Azure DNS service                      | Outbound                  | HTTPS    |
+|                            | LetsEncrypt                            | Outbound                  | HTTPS    |
+| Flux source controller     | GitHub                                 | Outbound                  | HTTPS    |
+| Flux Helm controller       | Bijira container registry              | Outbound                  | HTTPS    |
 
 All communication between the control plane and the private data plane is secured using TLS.
 
@@ -146,9 +80,9 @@ The Bijira private data plane ensures extensive, production-grade security, rang
 
 Bijira supports the following management models for private data planes (PDPs), fostering collaboration between WSO2 and customers across diverse scenarios:
 
-  - WSO2 fully managed (infrastructure and PDP in WSO2 subscription) model
-  - WSO2 fully managed (infrastructure and PDP in customer subscription) model
-  - Customer self-managed (WSO2 provides installation script and updates) model
+- WSO2 fully managed (infrastructure and PDP in WSO2 subscription) model
+- WSO2 fully managed (infrastructure and PDP in customer subscription) model
+- Customer self-managed (WSO2 provides installation script and updates) model
 
 <!-- TODO: Check the linked document -->
 <!-- To explore each management model in detail so that you can make informed decisions depending on the supported cloud-based operations and security, see [Private Data Plane Management Models](../references/private-data-plane-management-models.md). -->

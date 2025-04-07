@@ -10,7 +10,13 @@ In this guide, you will:
 
 ## Prerequisites
 
-- A valid Bijira account with available resource quota.
+- If you're signing in to the Bijira Console for the first time, create an organization:
+    1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in using your preferred method.
+    2. Enter a unique organization name. For example, `Stark Industries`.
+    3. Read and accept the privacy policy and terms of use.
+    4. Click **Create**.
+
+  This creates the organization and opens the **Project Home** page of the default project created for you.
 
 ## Create an API Proxy
 
@@ -21,7 +27,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 3. Select **Import API Contract**.
 4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
 
-   ```
+   ```text
    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/open-api.yaml
    ```
 

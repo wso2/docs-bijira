@@ -35,7 +35,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 1. On the project home page, click **Import API Contract** under **Create an API Proxy for My API (Ingress)**.
 2. Click **Try with Sample URL** and click **Next**.
-3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process. 
+3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
     ![Create API Proxy from Contract](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Deploy the API Proxy

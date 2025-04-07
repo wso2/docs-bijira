@@ -1,21 +1,21 @@
 # Create API Subscription Plans
 
-API subscription plans are essential to control and manage access to APIs. These plans define the rules and limitations on how clients can interact with APIs, ensuring efficient resource utilization and robust security. With the option to set rate limits and burst control, subscription plans allow API providers to manage traffic, prevent misuse, and offer tiered service levels. Organizations can implement subscription plans to provide varying levels of API access, accommodating different user needs and business models, while ensuring optimal performance and security. 
+API subscription plans are essential to control and manage access to APIs. These plans define the rules and limitations on how clients can interact with APIs, ensuring efficient resource utilization and robust security. With the option to set rate limits and burst control, subscription plans allow API providers to manage traffic, prevent misuse, and offer tiered service levels. Organizations can implement subscription plans to provide varying levels of API access, accommodating different user needs and business models, while ensuring optimal performance and security.
 
-In Bijira, users with the administrator role can create, update, and delete subscription plans at the organization level. 
+In Bijira, users with the administrator role can create, update, and delete subscription plans at the organization level.
 
 !!! tip
     Deleting a subscription plan is only possible if there are no active subscriptions associated with it.  
 
-To create an organization-level subscription plan, follow the steps given below: 
+To create an organization-level subscription plan, follow the steps given below:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the Bijira Console header, go to the **Organization** list and select your organization. 
+2. In the Bijira Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click **Subscription Plans** tab (Here you can see the already available Subscription Plans).
 5. Click **+ Create**.
 6. In the **Create Subscription Plan** pane, enter the appropriate values for each field:
-    
+
     !!! note
          - In the **Name** field, you must specify a name to uniquely identify the subscription plan in various contexts. The value is editable only at the time you create the subscription plan. You cannot change the name after you create it.
          - The **Stop on Quota Reach** checkbox is selected by default when creating a subscription plan. When selected, requests return an HTTP 429 response if the request count exceeds the limit. If you clear the checkbox, requests are allowed even if the quota is exceeded.

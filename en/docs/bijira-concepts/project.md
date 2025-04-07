@@ -5,9 +5,3 @@ A project in Bijira is a logical group of related components that typically repr
 At deployment time, all components within a given project are deployed into a single namespace of the Kubernetes cluster. Components within a project can be exposed to the public internet, internally to the rest of the organization, or privately within the project only. A project in Bijira is represented as a cell with regard to the [Cell-based architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md). The following diagram illustrates a project and how the components within a project are laid out at runtime:
 
 ![Project](../assets/img/bijira-concepts/project.png){.cInlineImage-full}
-
-
-
-
-
-
