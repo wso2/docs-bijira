@@ -21,7 +21,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 3. Select **Import API Contract**.
 4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
 
-   ```
+   ```text
    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/open-api.yaml
    ```
 

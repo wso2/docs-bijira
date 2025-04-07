@@ -6,12 +6,14 @@ Follow the steps below to create an AI API:
 
 ---
 
-## 1. Access the Bijira Console  
+## 1. Access the Bijira Console
+
 1. Sign in to the [Bijira Console](https://console.bijira.dev/) and select your project.  
 
 ---
 
-## 2. Create an AI API  
+## 2. Create an AI API
+
 1. Click **+Create**.
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **AI APIs**.  
 3. On the **Create AI API Proxy from Marketplace** page, select the desired **AI Provider**.  
@@ -30,13 +32,15 @@ Follow the steps below to create an AI API:
 
 ---
 
-## 3. Configure Backend Settings  
+## 3. Configure Backend Settings
+
 1. In the left navigation menu, click **Develop**, then select **Policy**.  
 2. Depending on the AI provider’s requirements, configure **Endpoint Configurations** or set up an **API-level mediation policy** to handle authentication and authorization.  
 
 ---
 
-## Next Steps  
+## Next Steps
+
 - **Test the AI API** to ensure it correctly forwards requests to the AI service. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).  
 - **Apply additional policies** (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/policy-overview.md).  
 - **Publish the API for consumers** to enable integration into applications. See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).  

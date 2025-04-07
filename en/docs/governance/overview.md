@@ -17,9 +17,11 @@ Bijira API Management provides a comprehensive governance capabilities that powe
 This section outlines the governance concepts available in Bijira.
 
 ## Governance Concepts
+
 API Management Governance build on the following concepts
 
 ### Ruleset
+
 A ruleset is a collection of rules that define governance policies to be enforced on APIs. These rules cover various aspects of API management, including security, compliance, performance, and operational guidelines. Rulesets can be defined at the organization level and later applied through policies to ensure governance enforcement.
 
 Each ruleset must have a unique name and may include a description to provide additional context. Rulesets are used to validate specific aspects of an API, including:
@@ -68,4 +70,3 @@ Policies can be enforced based on the severity of rule violations. The supported
 Policies define actions to be taken when a rule violation is detected. The supported actions include:
 
 - **Notify** – Alerts users about the violation. Notifications appear in compliance dashboards, allowing users to review and take necessary actions.
-

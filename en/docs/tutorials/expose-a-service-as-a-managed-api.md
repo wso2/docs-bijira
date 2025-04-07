@@ -25,17 +25,17 @@ You can create an API proxy by following several methods. In this guide, you wil
 5. Click **Next**.
 6. Update the populated API proxy details with the following values:
 
-   !!! info
-   The **Identifier** field must be unique and cannot be changed after creation.
+    !!! info
+         The **Identifier** field must be unique and cannot be changed after creation.
 
-   | **Field**      | **Value**                                   |
-       |----------------|---------------------------------------------|
-   | **Name**| `Reading List API`                          |
-   | **Identifier**      | `reading-list-api-qs`                          |
-   | **Base Path**    | `/apim-p/reading-list-api-qs/v1.0`                                    |
-   | **Version**    | `1.0`                                       |
-   | **Target**     | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0`       |
-   | **Access Mode** | **External**: API is publicly accessible    |
+         | **Field**      | **Value**                                   |
+            |----------------|---------------------------------------------|
+         | **Name**| `Reading List API`                          |
+         | **Identifier**      | `reading-list-api-qs`                          |
+         | **Base Path**    | `/apim-p/reading-list-api-qs/v1.0`                                    |
+         | **Version**    | `1.0`                                       |
+         | **Target**     | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0`       |
+         | **Access Mode** | **External**: API is publicly accessible    |
 
 7. Click **Create**. This creates the component and takes you to the **Overview** page of the component.
 
@@ -48,7 +48,7 @@ By default, the API will be automatically deployed to the development environmen
 1. In the left navigation menu, click **Deploy**.
 2. In the **Build Area** card, click **Deploy**.
 
-Additionally, you can click the down arrow next to **Deploy** and select **Configure and Deploy** to make any necessary changes before deploying the API proxy. 
+Additionally, you can click the down arrow next to **Deploy** and select **Configure and Deploy** to make any necessary changes before deploying the API proxy.
 
 Once the deployment is complete, the **Development** card indicates the **Deployment Status** as **Active**.
 
@@ -57,6 +57,7 @@ Now you are ready to test the API proxy.
 ## Step 3: Test the API proxy
 
 You can test the API proxy in the development environment before promoting it to production. Bijira provides the following options to test your API proxy:
+
 - Console
 - cURL
 - API Chat
@@ -65,8 +66,8 @@ In this guide, you will use the OpenAPI Console.
 
 1. In the left navigation menu, click **Test** and then click **Console**.
 
-   !!! tip
-   Since the API proxy is secured when deployed, you will need a key to invoke it. Bijira automatically generates a key when you navigate to the **Console** pane.
+    !!! tip
+         Since the API proxy is secured when deployed, you will need a key to invoke it. Bijira automatically generates a key when you navigate to the **Console** pane.
 
 2. In the **Console** pane, select **Development** from the environment drop-down list.
 3. Expand the `GET /books` method and click **Try it Out** to test it.
@@ -84,12 +85,12 @@ Once you verify that the API proxy is working as expected in the development env
 2. In the **Development** card, click **Promote**.
 3. In the **Configure & Deploy** pane, click **Next**.
 
-   !!! tip
-   If you want to specify a different endpoint for your production environment, you can make the change in the **Configure & Deploy** pane.
+    !!! tip
+         If you want to specify a different endpoint for your production environment, you can make the change in the **Configure & Deploy** pane.
 
-   The **Production** card indicates the **Deployment Status** as **Active** when the API proxy is successfully deployed to production.
+         The **Production** card indicates the **Deployment Status** as **Active** when the API proxy is successfully deployed to production.
 
-   If you want to verify that the API proxy is working as expected in production, you can test the API in the production environment.
+         If you want to verify that the API proxy is working as expected in production, you can test the API in the production environment.
 
 Now that your API is deployed in both development and production environments and can be invoked, the next step is to publish it so that consumers can discover and subscribe to it.
 

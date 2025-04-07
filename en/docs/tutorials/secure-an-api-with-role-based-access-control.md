@@ -18,7 +18,7 @@ There are two types of users in the organization:
 - **Human resource manager (HR manager)**: Can perform all operations (list users, list a user, create users, and delete a user).
 - **Human resource officer (HR officer)**: Can only list existing users and list a specific user.
 
-## Implement role-based access control with Bijira.
+## Implement role-based access control with Bijira
 
 Let’s take a look at the steps to implement the scenario described above using Choreo and Asgardeo.
 

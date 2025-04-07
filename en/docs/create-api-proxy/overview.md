@@ -6,19 +6,19 @@ An API proxy can be used to expose an existing API which is hosted in same organ
 
 Creating an **API proxy** for:
 
-- **My APIs(Ingress APIs)**
-  
-    An API Proxy can be created to front an existing ingress api in following scenarios:
+- **My APIs (Ingress APIs)**
 
-    - [Import API Contract](my-apis/import-api-contract.md)
-    - [Start with Endpoint](my-apis/start-with-endpoint.md)
-    - [Start from Scratch](my-apis/start-from-scratch.md)   
-    - [Create with GenAI](my-apis/create-with-genai.md)
+    An API Proxy can be created to front an existing ingress API in the following scenarios:
+
+      - [Import API Contract](my-apis/import-api-contract.md)
+      - [Start with Endpoint](my-apis/start-with-endpoint.md)
+      - [Start from Scratch](my-apis/start-from-scratch.md)
+      - [Create with GenAI](my-apis/create-with-genai.md)
 
 - **Third Party APIs(Egress APIs)**
 
     An API Proxy can be created to front an Endpoint or API which is managed by a third party in following scenarios:
 
-    - [Get from Marketplace](third-party-apis/get-from-marketplace.md)
-    - [Import API Contract](third-party-apis/import-api-contract.md)
-    - [AI APIs](third-party-apis/ai-apis.md)
+      - [Get from Marketplace](third-party-apis/get-from-marketplace.md)
+      - [Import API Contract](third-party-apis/import-api-contract.md)
+      - [AI APIs](third-party-apis/ai-apis.md)
