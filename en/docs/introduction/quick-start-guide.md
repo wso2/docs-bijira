@@ -23,18 +23,21 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
     !!! info
         The **Name** field must be unique and cannot be changed after creation.
 
-    | **Field**                | **Value**                          |
-    |--------------------------|------------------------------------|
-    | **Project Display Name** | Book List Project                  |
-    | **Name**                 | book-list-project                  |
-    | **Project Description**  | My sample project                  |
+    | **Field**                | **Value**         |
+    | ------------------------ | ----------------- |
+    | **Project Display Name** | Sample Project    |
+    | **Name**                 | sample-project    |
+    | **Project Description**  | My sample project |
 
 4. Click **Create**. This creates the project and takes you to the project home page.
 
 ## Step 2: Create an API Proxy
 
 1. On the project home page, click **Import API Contract** under **Create an API Proxy for My API (Ingress)**.
-2. Click **Try with Sample URL** and click **Next**.
+2. Click **Try with Sample URL**, enter the following URL, and then click **Next**:
+   ```http
+   https://raw.githubusercontent.com/wso2/getting-started-samples/refs/heads/main/helpers/helpers-spec.yaml
+   ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
     ![Create API Proxy from Contract](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
@@ -44,7 +47,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 2. In the **Build Area** card, click **Configure & Deploy**. This opens the **Configure & Deploy** pane.
 3. Select **External** to make the API publicly accessible, and then click **Deploy**.
 
-    ![CConfigure and Deploy](../../assets/img/introduction/configure-and-deploy.png)
+    ![Configure and Deploy](../../assets/img/introduction/configure-and-deploy.png)
     Once the deployment is complete, the **Development** card indicates the **Deployment Status** as **Active**.
 
 Now you are ready to test the API proxy.
@@ -65,7 +68,7 @@ In this guide, you will use the OpenAPI Console.
         Since the API proxy is secured when deployed, you will need a key to invoke it. Bijira automatically generates a key when you navigate to the **OpenAPI Console** pane.
 
 2. In the **OpenAPI Console** pane, select **Development** from the environment drop-down list.
-3. Expand the `GET /books` method and click **Try it Out** to test it.
+3. Expand the `GET /uuid` method and click **Try it Out** to test it.
 4. Click **Execute**. You will see a response similar to the following:
 
     ![API proxy response](../../assets/img/introduction/test-response.png)
