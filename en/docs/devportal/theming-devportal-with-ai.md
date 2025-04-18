@@ -43,7 +43,7 @@ Go through the following steps to customize the theme of the Devportal with AI.
 
 6. Go to `Developer portal` to see the changes.
 
-    ![Publish to Devportal](../assets/img/devportal/view_devportal.png)
+    ![View Devportal](../assets/img/devportal/view_devportal.png)
 
     The finalized view will be as follows:
 
