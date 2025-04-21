@@ -117,7 +117,12 @@ nav:
     - Govern API Proxy: governance/govern-api-proxy.md
   - Administer:
     - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
-  
+  - Developer Portal:
+    - Theming Developer Portal:
+      - Theming with AI: devportal/theming-devportal-with-ai.md
+      - Theming Manually:
+        - Theme in Organizational Level: devportal/theming-devportal-org-level.md
+        - Theme in API Level: devportal/theming-devportal-api-level.md
 
 # Extensions
 markdown_extensions:
