@@ -123,6 +123,10 @@ nav:
       - Theming Manually:
         - Theme in Organizational Level: devportal/theming-devportal-org-level.md
         - Theme in API Level: devportal/theming-devportal-api-level.md
+    - Discover APIs:
+      - Search APIs: devportal/discover-apis/api-search.md
+      - Overview: devportal/discover-apis/api-overview.md
+      - Documentations: devportal/discover-apis/api-documentations.md
     - Manage Applications:
         - Create an Application: devportal/manage-applications/create-an-application.md
     - Manage Subscriptions:
