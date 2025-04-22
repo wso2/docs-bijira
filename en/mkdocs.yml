@@ -123,6 +123,10 @@ nav:
       - Theming Manually:
         - Theme in Organizational Level: devportal/theming-devportal-org-level.md
         - Theme in API Level: devportal/theming-devportal-api-level.md
+    - Manage Applications:
+        - Create an Application: devportal/manage-applications/create-an-application.md
+    - Manage Subscriptions:
+        - Subscribe to an API: devportal/manage-subscriptions/subscribe-to-an-api.md
 
 # Extensions
 markdown_extensions:
