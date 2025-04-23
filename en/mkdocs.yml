@@ -125,7 +125,7 @@ nav:
         - Theme in API Level: devportal/theming-devportal-api-level.md
     - Discover APIs:
       - Search APIs: devportal/discover-apis/api-search.md
-      - Overview: devportal/discover-apis/api-overview.md
+      - API Overview: devportal/discover-apis/api-overview.md
       - Documentations: devportal/discover-apis/api-documentations.md
     - Manage Applications:
         - Create an Application: devportal/manage-applications/create-an-application.md
