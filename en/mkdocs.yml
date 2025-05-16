@@ -115,6 +115,8 @@ nav:
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md
+  - Monitor and Insights:
+    - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
     - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
   - Developer Portal:
