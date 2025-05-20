@@ -5,7 +5,7 @@ AI-powered branding simplifies the process of customizing your organization's De
 ## Prerequisites
 
 - If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `TestingOrg`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.

@@ -5,7 +5,7 @@ An API proxy acts as an intermediary between an existing API and Bijira, interce
 ## Prerequisites
 
 - If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -16,7 +16,7 @@ An API proxy acts as an intermediary between an existing API and Bijira, interce
 
 In this guide, you will create an API proxy using an endpoint.
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start with Endpoint**.
 4. Provide the following URL as the **Endpoint URL**.

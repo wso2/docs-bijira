@@ -7,7 +7,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 ## Prerequisites
 
 - If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -18,7 +18,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 You can create an API proxy by following several methods. In this guide, you will create an API proxy by providing a sample URL.
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more API Proxies in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Click the **Import API Proxy** card.
 4. In the **Create API Proxy from Contract** pane, click **Try with sample URL**.
