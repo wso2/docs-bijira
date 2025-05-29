@@ -45,7 +45,7 @@ Bijira roles are defined as follows:
 
 The Organization ID serves as a unique identifier for each organization. To get the organization ID, follow the steps below:
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. Click on the **Organization** list on the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. In the header, click the **Organization** list. This will open the organization level settings page.
@@ -55,7 +55,7 @@ The Organization ID serves as a unique identifier for each organization. To get 
 
 The organization handle is a unique string that directly corresponds to your organization's name. To get the organization handle, follow the steps below:
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. Click on the **Organization** list on the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. Under **Organization** click **Copy Handle**.

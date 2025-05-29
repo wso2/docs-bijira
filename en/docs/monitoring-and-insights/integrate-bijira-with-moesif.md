@@ -50,7 +50,7 @@ If you are an existing user with a registered organization, or you do not have a
 
 Let's configure Bijira to publish events to Moesif.
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/cloud-native-app-developer) and sign in.
+1. Go to [Bijira Console](https://console.bijira.dev/cloud-native-app-developer) and sign in.
 2. In the left navigation, click **Admin** and then click **Settings**. 
 3. In the header, click the **Organization** list. This will open the organization level settings page. 
 4. Click **Moesif Dashboard**.
@@ -80,4 +80,4 @@ You have configured Bijira to publish data to Moesif. Let's see how you can view
 3. Click **Next** on the notification. This will take you to the final step, where you can opt to add team members. In this guide, let's skip this step. 
 4. Click **Finish**.
 
-You can now view your API's insights in the Moesif dashboard. 
+You can now view your API's insights in the Moesif dashboard.

@@ -15,7 +15,7 @@
 # under the License.
 
 # Project information
-site_name: ""
+site_name: "Bijira Documentation"
 site_description: Bijira Documentation
 site_author: WSO2
 site_url: https://wso2.com/bijira/docs
@@ -100,7 +100,10 @@ nav:
         - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
         - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
   - Develop API Proxy:
-    - Policy:
+    - Authentication and Authorization:
+      - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
+      - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
+    - Policy: 
       - Overview: develop-api-proxy/policy/overview.md
       - Policies: develop-api-proxy/policy/policies.md
       - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
@@ -119,6 +122,7 @@ nav:
     - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
     - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
+    - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
   - Developer Portal:
     - Theming Developer Portal:
       - Theming with AI: devportal/theming-devportal-with-ai.md

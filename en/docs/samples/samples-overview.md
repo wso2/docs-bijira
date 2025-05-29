@@ -22,7 +22,7 @@ You can filter and explore Bijira's sample collection based on your preference.
 
 To view available samples, follow these steps:
 
-1. Sign in to the [Bijira Console](https://console.choreo.dev/).
+1. Sign in to the [Bijira Console](https://console.bijira.dev/).
 2. In the Bijira Console header, go to the **Project** list and select your project to open its **Overview** page.
 3. On the project **Overview** page, click on **Create**.
 4. In Create a New API Proxy view, navigate to **Try a Sample** tab.
