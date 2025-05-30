@@ -38,10 +38,9 @@ You can provide fine-grained access control to your API resources with scopes. F
 
 ## Step 1: Create an API and an application in Asgardeo
 
- Follow the [Asgardeo API Authorization guide](https://wso2.com/asgardeo/docs/guides/api-authorization/) to create an application and an API in Asgardeo and to enable API authorization.
+Follow the [Asgardeo API Authorization guide](https://wso2.com/asgardeo/docs/guides/api-authorization/) to create an application and an API in Asgardeo and to enable API authorization.
 
-!!! note
-     <!-- - Use the fully qualified name of the scope when adding scopes.  -->
+!!! note 
     - Do the following under the protocol tab:
         - Select `JWT` as the **Access Token**.
         - Select the appropriate grant types.
