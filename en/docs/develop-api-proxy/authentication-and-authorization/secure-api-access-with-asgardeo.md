@@ -42,7 +42,7 @@ You can provide fine-grained access control to your API resources with scopes. F
 
 !!! note
      <!-- - Use the fully qualified name of the scope when adding scopes.  -->
-     - Do the following under the protocol tab:
+    - Do the following under the protocol tab:
         - Select `JWT` as the **Access Token**.
         - Select the appropriate grant types.
         - Copy the client ID and client secret of the application for future reference.
@@ -55,9 +55,6 @@ Follow the steps below to consume the Bijira API and use an external IdP for aut
 2. Click **Applications**. and then click **+Create**.
 3. Enter a name for the application. 
 4. Click **Create**.
-
-
-
 5. Click on the newly created application.
 6. At the top of the application page, under **OAuth2** click **Add Consumer Key**. 
 7. Enter the **Client ID** you copied in [step 2](#step-2-create-an-api-and-an-application-in-asgardeo).
@@ -71,7 +68,7 @@ Follow the steps below to consume the Bijira API and use an external IdP for aut
 10. You can click on the **Instructions** to view instructions to generate an access token.
 11. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
-## Step 3: Invoke the Bijira API with scopes
+## Step 3: Invoke the Bijira API
 
 1. On the Bijira Developer Portal, go to your application. 
 2. On the top of the page, under **OAuth2**, click **View** to see the **Token Endpoint** URL.

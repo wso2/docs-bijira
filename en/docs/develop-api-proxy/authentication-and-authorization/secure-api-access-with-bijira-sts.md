@@ -2,15 +2,13 @@
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. APIs are essential for enabling communication and data exchange between different software applications and services, making them a critical component in modern software development. However, their openness and accessibility can also make them targets for various security risks. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions. 
 
-Bijira's built-in Secure Token Service can seamlessly integrate with Bijira APIs to provide authentication and authorization. This guide will walk you through setting up Bijira STS to authenticate API invocations.
+Bijira's built-in Secure Token Service (STS) can seamlessly integrate with Bijira APIs to provide authentication and authorization. This guide will walk you through setting up Bijira STS to authenticate API invocations.
 
 This guide walks you through the following steps:
 
 <!-- - Assign scopes to an API in Bijira.  -->
-- Create an API in Asgardeo.
-- Create an application in Asgardeo and consume the Asgardeo API.
-- Create an application in Bijira and enable external IdP authentication.
-- Invoke the API with scopes.
+- Create an application in Bijira and generate access token.
+- Invoke the API.
 
 ## Prerequisites
 
@@ -20,7 +18,7 @@ To follow this guide, you need to satisfy the following prerequisites:
 - Deploy and publish your API. 
 
 !!! note
-    It is important to note that Bijira STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external IdP such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/)
+    It is important to note that Bijira STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external IdP such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
 
 <!-- ## Step 1: Assign scopes to an API in Bijira
 
