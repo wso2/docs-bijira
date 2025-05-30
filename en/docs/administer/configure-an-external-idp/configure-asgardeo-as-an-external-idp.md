@@ -14,7 +14,7 @@ Before you proceed, be sure to complete the following:
 - Find the Client ID:
   Go to the **Protocol** tab of the Asgardeo application and copy the **Client ID**.
 
-## Add Asgardeo as an external IdP in Bijira
+## Step 1: Add Asgardeo as an external IdP in Bijira
 
 Follow the steps below to add Asgardeo as an external IdP in Bijira:
 
@@ -35,3 +35,14 @@ Follow the steps below to add Asgardeo as an external IdP in Bijira:
 11. Click **Add**. 
 
 Now you have configured Asgardeo as an external IdP in Bijira.
+
+## Step 2: Add Asgardeo as an external IdP in Bijira Developer Portal
+
+Once the Asgardeo is configured as an external IdP in Bijira, it is necessary to configure it in the Bijira Developer Portal as well. For that, follow the steps below.
+
+1. In the left navigation menu of the Bijira Console, click **Admin** and then click **Settings**.
+2. Click the **Developer Portal** tab, then click the **Identity Providers** tab. This page will list all the Identity providers available in Bijira.
+3. Select the Identity Provider you configured at [Step 1](#step-1-add-asgardeo-as-an-external-idp-in-bijira).
+4. Click **Save**.
+
+Now you have configured Asgardeo as an external IdP in Bijira Developer Portal as well.
