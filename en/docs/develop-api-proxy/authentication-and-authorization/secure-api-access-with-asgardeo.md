@@ -56,7 +56,7 @@ Follow the steps below to consume the Bijira API and use an external IdP for aut
 3. Enter a name for the application. 
 4. Click **Create**.
 5. Click on the newly created application.
-6. At the top of the application page, under **OAuth2** click **Add Consumer Key**. 
+6. At the top of the application page, under **OAuth2** click **+ Add Client ID**. 
 7. Enter the **Client ID** you copied in [step 2](#step-2-create-an-api-and-an-application-in-asgardeo).
 8. Click **+Add**.
 
@@ -77,17 +77,27 @@ Follow the steps below to consume the Bijira API and use an external IdP for aut
     === "Format"
 
         ``` sh
-        curl -X POST '<TOKEN_ENDPOINT>?grant_type=password&scope=<REQUIRED_SCOPES>&username=<USER_NAME>&password=<USER_PASSWORD>' \
-         --header 'Content-Type: application/x-www-form-urlencoded' \
-         --header 'Authorization: Basic <BASE64-ENCODED ASGARDEO_APP_CLIENT_ID:ASGARDEO_APP_CLIENT_SECRET>'
+        curl -X POST <TOKEN_ENDPOINT> \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "grant_type=password" \
+            -d "username=<USER_NAME>" \
+            -d "password=<USER_PASSWORD>" \
+            -d "client_id=<ASGARDEO_APP_CLIENT_ID>" \
+            -d "client_secret=<ASGARDEO_APP_CLIENT_SECRET>" \
+            -d "scope=<REQUIRED_SCOPES>"
         ```
 
     === "Example"
 
         ``` sh
-        curl -X POST 'https://dev.api.asgardeo.io/t/orgHandle/oauth2/token?grant_type=password&scope=<REQUIRED_SCOPES>&username=<USER_NAME>&password=<USER_PASSWORD>' \
-        --header 'Content-Type: application/x-www-form-urlencoded' \
-        --header 'Authorization: Basic <BASE64-ENCODED CLIENT_ID:CLIENT_SECRET>'
+        curl -X POST https://api.asgardeo.io/t/orghandle/oauth2/token \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "grant_type=password" \
+            -d "username=<USER_NAME>" \
+            -d "password=<USER_PASSWORD>" \
+            -d "client_id=<CLIENT_ID>" \
+            -d "client_secret=<CLIENT_SECRET>" \
+            -d "scope=<REQUIRED_SCOPES>"
         ```
 
-5. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../../test-api-proxy/openapi-console/) in Bijira.
+5. Once you receive the access token, you can [test invoking the resource using cURL](../../../test-api-proxy/curl/) in Bijira.
