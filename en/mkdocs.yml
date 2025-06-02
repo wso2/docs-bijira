@@ -108,6 +108,7 @@ nav:
     - Documents: develop-api-proxy/documents.md
     - Lifecycle: develop-api-proxy/lifecycle-management.md
     - Subscription Plans: develop-api-proxy/subscription-plans.md
+    - Control API Visibility: develop-api-proxy/control-api-visibility.md
   - Test API Proxy:
     - OpenAPI Console: test-api-proxy/openapi-console.md
     - cURL: test-api-proxy/curl.md
