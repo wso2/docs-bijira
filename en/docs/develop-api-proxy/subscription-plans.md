@@ -6,7 +6,7 @@ Bijira allows users with the administrator role to create, update, and delete su
 
 Once created, Bijira allows API publishers to assign subscription plans to APIs, providing different levels of access based on user needs.
 
-To assign subscription plans to an API, follow the steps given below: 
+To assign subscription plans to an API, follow the steps given below:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
 2. Select the project and the API which you want to assign subscription plans.
@@ -17,7 +17,7 @@ To assign subscription plans to an API, follow the steps given below:
 
 5. Click **Save**.
 
-When an API has subscription plans assigned to it, API consumers can select the plan that best fits their requirements during the subscription process. 
+When an API has subscription plans assigned to it, API consumers can select the plan that best fits their requirements during the subscription process.
 
 <!-- TODO: Link the correct documentation after it is done -->
 <!-- For details, see [Subscribe to an API with a Subscription Plan](./subscribe-to-an-api-with-a-subscription-plan.md) -->

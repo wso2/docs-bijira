@@ -21,7 +21,7 @@ The following lifecycle states are applicable to APIs in Bijira:
 
 To change the lifecycle state of an API via the Bijira Console, follow the instructions given below:
 
-!!! tip      
+!!! tip
      You must have publishing privileges to manage the lifecycle states of a component.
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).

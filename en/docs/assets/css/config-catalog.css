@@ -240,6 +240,15 @@ html .md-typeset .superfences-tabs>label {
     border-bottom: 0.05rem dashed var(--md-primary-fg-color--light);
 }
 
+.md-typeset a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+.md-typeset a:hover {
+    color: #1A4C6D; 
+  }
+
 .md-typeset .superfences-tabs {
     display: flex;
     position: relative;

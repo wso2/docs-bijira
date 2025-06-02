@@ -6,10 +6,12 @@ Bijira provides built-in support for multiple well-known third-party APIs throug
 
 Follow these steps to create an API proxy for a third-party API by importing its API contract:  
 
-### 1. Access the Bijira Console  
+### 1. Access the Bijira Console
+
 1. Sign in to the [Bijira Console](https://console.bijira.dev/) and select your project.  
 
-### 2. Import the API Contract  
+### 2. Import the API Contract
+
 1. Click **+Create**.
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **Import API Contract**.  
 3. On the **Create API Proxy from Contract** page, provide the API contract using one of the following methods:  
@@ -19,7 +21,8 @@ Follow these steps to create an API proxy for a third-party API by importing its
     - Import from SwaggerHub  
 4. Click **Next**.
 
-### 3. Configure API Proxy Details  
+### 3. Configure API Proxy Details
+
 1. Update the required API proxy details, including:  
     - API Name  
     - Identifier  
@@ -30,11 +33,13 @@ Follow these steps to create an API proxy for a third-party API by importing its
 
    Once created, the overview page of the new API proxy appears.  
 
-### 4. Configure Backend Settings  
+### 4. Configure Backend Settings
+
 1. In the left navigation menu, click **Develop**, then select **Policy**.  
 2. Depending on the third-party API requirements, configure **Endpoint Configurations** or set up an **API-level mediation policy** to handle authentication and authorization.  
 
-### Next Steps  
+### Next Steps
+
 - **Test the API proxy** to ensure it correctly forwards requests to the third-party API. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).  
 - **Apply additional policies** if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/policy-overview.md).  
 - **Publish the API for consumers.** See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).  

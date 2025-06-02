@@ -11,10 +11,9 @@ Follow these steps to test a REST endpoint using the OpenAPI Console:
 
     ![OpenAPI Console](../assets/img/test-api-proxy/openapi-console.png){.cInlineImage-full}
 
-7. Expand the resource you want to test.
-8. Click the **Try it out** button to enable testing.
-9. Provide values for any parameters, if applicable.
-10. Click **Execute**. The response will be displayed under the **Responses** section.
+5. Expand the resource you want to test.
+6. Click the **Try it out** button to enable testing.
+7. Provide values for any parameters, if applicable.
+8. Click **Execute**. The response will be displayed under the **Responses** section.
 
     ![OpenAPI Console Response](../assets/img/test-api-proxy/openapi-console-response.png){.cInlineImage-full}
-

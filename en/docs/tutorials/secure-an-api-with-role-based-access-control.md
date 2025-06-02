@@ -18,17 +18,23 @@ There are two types of users in the organization:
 - **Human resource manager (HR manager)**: Can perform all operations (list users, list a user, create users, and delete a user).
 - **Human resource officer (HR officer)**: Can only list existing users and list a specific user.
 
-## Implement role-based access control with Bijira.
+## Implement role-based access control with Bijira
 
 Let’s take a look at the steps to implement the scenario described above using Choreo and Asgardeo.
 
 ### Prerequisites
 
-- A valid Bijira account with available resource quota.
+- If you're signing in to the Bijira Console for the first time, create an organization:
+    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+    2. Enter a unique organization name. For example, `Stark Industries`.
+    3. Read and accept the privacy policy and terms of use.
+    4. Click **Create**.
+
+  This creates the organization and opens the **Project Home** page of the default project created for you.
 
 ### Step 1: Create an API proxy component and deploy it
 
-1. Go to [https://console.bijira.dev/](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. To create an API proxy component, follow the instructions in [Start with Endpoint](../create-api-proxy/my-apis/start-with-endpoint.md).
 3. In the left navigation menu, click **Policy**.
 4. Click the **+** in the **API Proxy Contract** and replace the resources with following.
