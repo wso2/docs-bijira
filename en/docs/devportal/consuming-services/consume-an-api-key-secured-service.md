@@ -16,7 +16,7 @@ To consume an API secured with an API key, create an application in the Bijira D
 1. Navigate to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in.
 2. Click on **Applications** in the Developer Portal sidebar.
 3. Select the Application the desired API is subscribed to.
-4. Under the **Subscribed APIs** section, click the **Generate Key** button in the row corresponding to the desired API to generate its API key.
+4. Under the **Subscribed APIs** section, click **Generate Key** button in the row corresponding to the desired API to generate its API key.
 5. The API key will be generated with the scopes defined for the selected API.
 
 ## Consume an API
