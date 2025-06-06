@@ -122,6 +122,7 @@ nav:
     - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
     - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
+    - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
     - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
   - Developer Portal:
     - Theming Developer Portal:
@@ -135,6 +136,7 @@ nav:
       - Documentations: devportal/discover-apis/api-documentations.md
     - Consume a Service:
       - Consume a service secured with OAuth2: devportal/consuming-services/consume-an-api-key-secured-service.md
+      - Consume a service secured with API key: devportal/consuming-services/consume-an-api-key-secured-service.md
     - Manage Applications:
         - Create an Application: devportal/manage-applications/create-an-application.md
     - Manage Subscriptions:
