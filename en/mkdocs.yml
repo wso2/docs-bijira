@@ -135,7 +135,7 @@ nav:
       - API Overview: devportal/discover-apis/api-overview.md
       - Documentations: devportal/discover-apis/api-documentations.md
     - Consume a Service:
-      - Consume a service secured with OAuth2: devportal/consuming-services/consume-an-api-key-secured-service.md
+      - Consume a service secured with OAuth2: devportal/consuming-services/consume-an-oauth2-secured-service.md
       - Consume a service secured with API key: devportal/consuming-services/consume-an-api-key-secured-service.md
     - Manage Applications:
         - Create an Application: devportal/manage-applications/create-an-application.md
