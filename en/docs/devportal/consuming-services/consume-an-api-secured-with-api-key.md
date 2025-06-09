@@ -1,4 +1,4 @@
-# Consume an API Key Secured Service
+# Consume an API Secured with API Key
 
 ## Prerequisites
 
