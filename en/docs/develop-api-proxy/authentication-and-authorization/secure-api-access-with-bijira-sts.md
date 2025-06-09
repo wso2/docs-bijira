@@ -54,7 +54,7 @@ You can provide fine-grained access control to your API resources with scopes. F
         - Select the appropriate grant types.
         - Copy the client ID and client secret of the application for future reference. -->
 
-## Step 1: Create an application in Bijira and enable external IdP authentication
+## Step 1: Create an application and enable Bijira STS authentication
 
 Follow the steps below to consume the Bijira API using Bijira STS.
 
@@ -63,7 +63,7 @@ Follow the steps below to consume the Bijira API using Bijira STS.
 3. Enter a name for the application. 
 4. Click **Create**.
 5. Click on the newly created application.
-6. At the top of the application page, under **OAuth2** click **Generate**. This will generatae consumer keys for the application.
+6. At the top of the application page, under **OAuth2** click **Generate**. This will generate consumer keys for the application.
 7. Once successfully generated, you will be shown a dialog which contains the Identity provider connection data.
 8. Click on the **Generate Token** button to generate an access token. Please make sure to copy the access token to use in step 2.
 9. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.

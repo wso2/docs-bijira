@@ -46,3 +46,7 @@ Once the Asgardeo is configured as an external IdP in Bijira, it is necessary to
 4. Click **Save**.
 
 Now you have configured Asgardeo as an external IdP in Bijira Developer Portal as well.
+
+## What Next?
+
+To secure API access with the above-configured Asgardeo Identity Provider follow the steps mentioned [here](../../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo/).
