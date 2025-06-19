@@ -115,6 +115,8 @@ nav:
     - OpenAPI Console: test-api-proxy/openapi-console.md
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
+  - MCP Servers:
+    - Get Started with MCP Servers: mcp-servers/get-started-with-mcp.md
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md
