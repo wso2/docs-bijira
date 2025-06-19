@@ -14,6 +14,9 @@ In this tutorial, let's see how you can build an MCP server using a backend API 
 
     This creates the organization and opens the organization home page.
 
+    !!! important
+        This feature is currently in preview and available only to a limited number of organizations. If you're interested in trying it out within your organization, please reach us at [bijira-help@wso2.com](mailto:bijira-help@wso2.com).
+
 ## Step 1: Create a Project
 
 1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
