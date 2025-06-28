@@ -15,6 +15,6 @@ Bijira now includes support for MCP servers. It provides a complete solution for
 ## MCP Use Cases with Bijira
 
 - [Design and Publish MCP Servers](design-mcp-servers.md)
-- Customize the Developer Portal to an MCP Hub
+- [Customize the Developer Portal to an MCP Hub](devportal-mcp-hub.md)
 
 

@@ -116,7 +116,7 @@ nav:
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
   - MCP Servers:
-    - Get Started with MCP Servers: mcp-servers/get-started-with-mcp.md
+    - Overview: mcp-servers/get-started-with-mcp.md
     - Design MCP Servers: mcp-servers/design-mcp-servers.md
     - Customize the Developer Portal to an MCP Hub: mcp-servers/devportal-mcp-hub.md
   - API Governance:
