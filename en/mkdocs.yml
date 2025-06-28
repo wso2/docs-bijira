@@ -137,7 +137,6 @@ nav:
       - Devportal Mode: devportal/developer-portal-mode.md
     - Discover APIs:
       - Search APIs: devportal/discover-apis/api-search.md
-      - API Overview: devportal/discover-apis/api-overview.md
       - Documentations: devportal/discover-apis/api-documentations.md
     - Consume an API:
       - Consume an API Secured with OAuth2: devportal/consuming-services/consume-an-api-secured-with-oauth2.md

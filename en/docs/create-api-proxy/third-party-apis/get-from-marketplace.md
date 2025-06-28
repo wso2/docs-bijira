@@ -54,7 +54,7 @@ To integrate the `Currency API`, follow these steps:
 ### Next Steps
 
 - Test the API proxy to ensure it correctly forwards requests to the third-party API. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).
-- Apply additional policies if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/policy-overview.md).
+- Apply additional policies if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/attach-and-manage-policies.md#attach-a-policy).
 - Publish the API for consumers.  See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).
 
 By following these steps, you can seamlessly integrate third-party APIs into your Bijira environment and manage them efficiently.
