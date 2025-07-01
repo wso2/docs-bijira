@@ -251,6 +251,16 @@ visibility: hidden;
 
 }
 
+.h2Icon{
+    background: #F7F8FB;
+    border-radius: 50%;
+    padding: 0.45rem;
+    gap: 10px;
+    height: 2rem;
+    width: 2rem;
+
+}
+
 .hText{
   font-size: 17px;
   padding-top: 0.6rem;

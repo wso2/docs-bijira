@@ -39,7 +39,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
-    ![Create API Proxy from Contract](../../assets/img/introduction/create-api-proxy-from-contract.png)
+    ![Create API Proxy from Contract](../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
 
@@ -60,7 +60,7 @@ In this guide, you will use the OpenAPI Console.
 3. Expand the `GET /uuid` method and click **Try it Out** to test it.
 4. Click **Execute**. You will see a response similar to the following:
 
-    ![API proxy response](../../assets/img/introduction/test-response.png)
+    ![API proxy response](../assets/img/introduction/test-response.png)
 
     This indicates that your API proxy is working as expected.
 
@@ -95,7 +95,7 @@ You can observe that the API lifecycle stage has changed to **Published**. Now t
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.
 
 1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the Bijira Developer Portal.
-    ![Go to DevPortal](../../assets/img/introduction/go-to-developer-portal.png)
+    ![Go to DevPortal](../assets/img/introduction/go-to-developer-portal.png)
 2. Subscribe to the API and Generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications**.
     2. Click **Create**.

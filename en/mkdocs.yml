@@ -116,7 +116,9 @@ nav:
     - cURL: test-api-proxy/curl.md
     - API Chat: test-api-proxy/api-chat.md
   - MCP Servers:
-    - Get Started with MCP Servers: mcp-servers/get-started-with-mcp.md
+    - Overview: mcp-servers/get-started-with-mcp.md
+    - Design MCP Servers: mcp-servers/design-mcp-servers.md
+    - Customize the Developer Portal to an MCP Hub: mcp-servers/devportal-mcp-hub.md
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md
@@ -132,9 +134,9 @@ nav:
       - Theming Manually:
         - Theme in Organizational Level: devportal/theming-devportal-org-level.md
         - Theme in API Level: devportal/theming-devportal-api-level.md
+      - Devportal Mode: devportal/developer-portal-mode.md
     - Discover APIs:
       - Search APIs: devportal/discover-apis/api-search.md
-      - API Overview: devportal/discover-apis/api-overview.md
       - Documentations: devportal/discover-apis/api-documentations.md
     - Consume an API:
       - Consume an API Secured with OAuth2: devportal/consuming-services/consume-an-api-secured-with-oauth2.md

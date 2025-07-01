@@ -42,7 +42,7 @@ Follow the steps below to create an AI API:
 ## Next Steps
 
 - **Test the AI API** to ensure it correctly forwards requests to the AI service. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).  
-- **Apply additional policies** (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/policy-overview.md).  
+- **Apply additional policies** (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/attach-and-manage-policies.md#attach-a-policy).  
 - **Publish the API for consumers** to enable integration into applications. See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).  
 
 By following these steps, you can efficiently integrate AI services into your Bijira environment and manage them with ease.  

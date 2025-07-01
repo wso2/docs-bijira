@@ -29,4 +29,4 @@ To change the lifecycle state of an API via the Bijira Console, follow the instr
 3. In the left navigation menu, click **Develop**, and then click **Lifecycle**.
 4. In the **Lifecycle Management** pane, you will see the lifecycle state transition diagram indicating the current lifecycle state of the component. Just above the lifecycle state transition diagram, The possible lifecycle states you can apply to the component are displayed just above the lifecycle state transition diagram. Click on a required lifecycle state to apply it to the component. For example, if a component is in the **Created** state, you can click either **Pre-release** or **Publish**.
 
-    ![Life Cycle Management](../../assets/img/develop-api-proxy/lifecycle-management.png)
+    ![Life Cycle Management](../assets/img/develop-api-proxy/lifecycle-management.png)

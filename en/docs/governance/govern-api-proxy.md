@@ -22,7 +22,7 @@ To define the governance compliance standards for API proxies, you can either cr
 | Spectral Ruleset| Define the ruleset content using the **Spectral**. You can upload a pre-written ruleset file.  | Yes | - |
 | Provider Name| The name of the provider who created the ruleset.                                                                                                                                                                                                                           | Yes | - |
 
-![Add Rulesets](../../assets/img/governance/add-rulesets.png)
+![Add Rulesets](../assets/img/governance/add-rulesets.png)
 
 ## Add a Document
 
@@ -37,7 +37,7 @@ To define the governance compliance standards for API proxies, you can either cr
 | Artifact Type | The type of the API.                                 | Yes       | HTTP API       |
 | Document | Select a file for the document.                      | Yes       | -              |
 
-![Add Document](../../assets/img/governance/add-document.png)
+![Add Document](../assets/img/governance/add-document.png)
 
 ## Policy
 
@@ -55,7 +55,7 @@ Policy will be used to enforce the rulesets and documents on the API proxies. A 
 | Enforcement Detail | The detail of the policy enforcement criteria.               | Yes       |                 |
 | Ruleset/Document   | The rulesets or document that should attached to the policy. | Yes       | -               |
 
-![Add Policy](../../assets/img/governance/add-policy.png)
+![Add Policy](../assets/img/governance/add-policy.png)
 
 ### Enforcement Detail
 
@@ -65,6 +65,6 @@ Policy will be used to enforce the rulesets and documents on the API proxies. A 
 | Severity Levels    | The severity level of the policy violation.                                                  | Yes       | Error, Warn, Info |
 | Actions            | The action to be taken when a policy violation is detected. (Currently only supports Notify) | Yes       | Notify  |
 
-![Enforcement Detail](../../assets/img/governance/enforcement-detail.png)
+![Enforcement Detail](../assets/img/governance/enforcement-detail.png)
 
 By adding the policy, all the existing and newly created API proxies will be validated against the defined rulesets and documents.
