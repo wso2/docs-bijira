@@ -13,9 +13,6 @@ If you're signing in to the Bijira Console for the first time, create an organiz
 
 This creates the organization and opens the organization home page.
 
-!!! important
-    This feature is currently in preview and available only to a limited number of organizations. If you're interested in trying it out within your organization, please reach us at [bijira-help@wso2.com](mailto:bijira-help@wso2.com).
-
 ### Create a Project
 
 1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
@@ -35,18 +32,15 @@ This creates the organization and opens the organization home page.
 
 ## Create an MCP Server
 
-Bijira provides two ways of creating MCP Servers.
+Bijira provides two ways of creating MCP Servers. On the project home page, select **MCP Server** to view the available options.
 
-- MCP Servers for existing API Proxies
-- MCP Servers for direct backends
+![Create MCP Server](../assets/img/introduction/mcp/mcp-create-options.png)
 
-On the project home page, select **MCP Server** to view the available options.
-
-![Create MCP Server](../assets/img/introduction/mcp/create-mcp-options.png)
-
-If you select **Import API Contract** option, you will see the following view.
+### MCP Servers for existing API Proxies
 
 ![Create MCP Server from contract](../assets/img/introduction/mcp/mcp-create-from-contract.png)
+
+### MCP Servers for HTTP backends
 
 If you select **Start from Existing Proxy**, you will get the following view. Here, you will get the option to select an existing API Proxy in Bijira.
 
@@ -116,6 +110,9 @@ Now that your MCP Server is deployed in both development and production environm
 You can view the published MCP Server via the Developer Portal.
 
 In the Lifecycle Management pane, click **Go to DevPortal**. This takes you to the MCP Server published to the Bijira Developer Portal.
+
+!!!info
+    If you need to do MCP specific customization to the Developer portal, please refer the [MCP Hub documentation](./devportal-mcp-hub.md).
 
 ![MCP Devportal landing](../assets/img/introduction/mcp/mcp-devportal-landing.png)
 
