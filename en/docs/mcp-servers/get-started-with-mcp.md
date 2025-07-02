@@ -12,9 +12,18 @@ For more information, refer to the official [specification](https://modelcontext
 
 Bijira now includes support for MCP servers. It provides a complete solution for transforming existing APIs into intelligent, AI-ready tools. With a centralized control plane, Bijira simplifies the entire lifecycle of MCP server management—from creation to discovery—delivering a seamless experience for both API developers and AI agent builders. Additionally, Bijira allows you to customize the developer portal to deliver a tailored, MCP-only experience for your consumers.
 
+![MCP Inspector](../assets/img/introduction/mcp/mcp-architecture.png)
+
+In summary, Bijira provides the following capabilities related to MCP.
+
+1. Create MCP Servers from existing API proxies or HTTP backends.
+2. Automatically generate the MCP tool schemas.
+3. Secure the MCP Servers with OAuth2 security.
+4. Customize the Developer portal into an MCP Hub.
+
 ## MCP Use Cases with Bijira
 
-- [Design and Publish MCP Servers](design-mcp-servers.md)
+- [Design and Publish MCP Servers for your APIs](design-mcp-servers.md)
 - [Customize the Developer Portal to an MCP Hub](devportal-mcp-hub.md)
 
 
