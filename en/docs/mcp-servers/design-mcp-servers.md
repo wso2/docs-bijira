@@ -36,11 +36,13 @@ Bijira provides two ways of creating MCP Servers. On the project home page, sele
 
 ![Create MCP Server](../assets/img/introduction/mcp/mcp-create-options.png)
 
-### MCP Servers for existing API Proxies
+### MCP Servers for HTTP backends
+
+This option lets you create an MCP Server based on any HTTP API you have.
 
 ![Create MCP Server from contract](../assets/img/introduction/mcp/mcp-create-from-contract.png)
 
-### MCP Servers for HTTP backends
+### MCP Servers for existing API Proxies
 
 If you select **Start from Existing Proxy**, you will get the following view. Here, you will get the option to select an existing API Proxy in Bijira.
 
