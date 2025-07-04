@@ -90,6 +90,9 @@ You can test the MCP Server in the development environment before promoting it t
 
 ## Publish the MCP Server
 
+!!!important
+    If you already have a Devportal themed published, please republish the theme before publshing the MCP Servers to Devportal.
+
 Once you verify that the MCP Server is working as expected in the development environment, you can promote it to production.
 
 1. In the left navigation menu, click **Deploy**.
