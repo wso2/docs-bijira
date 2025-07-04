@@ -30,6 +30,10 @@ dev_addr: localhost:8000
 copyright: ©2025 WSO2 LLC. 
 
 # Configuration
+watch:
+  - theme/
+  - docs/assets/
+
 theme:
   name: material
   custom_dir: theme/material
@@ -84,9 +88,7 @@ nav:
     # - Resource Hierarchy: resource-hierarchy.md
     - Organization: bijira-concepts/organization.md
     - Project: bijira-concepts/project.md
-    - CI/CD: bijira-concepts/ci-cd.md
     - Deployment Tracks: bijira-concepts/deployment-tracks.md
-    - Connections: bijira-concepts/connections.md
     - Data Planes: bijira-concepts/data-planes.md
   - Create API Proxy:
       - Overview: create-api-proxy/overview.md
@@ -118,7 +120,7 @@ nav:
   - MCP Servers:
     - Overview: mcp-servers/get-started-with-mcp.md
     - Design MCP Servers: mcp-servers/design-mcp-servers.md
-    - Customize the Developer Portal to an MCP Hub: mcp-servers/devportal-mcp-hub.md
+    - Customize Developer Portal as an MCP Hub: mcp-servers/devportal-mcp-hub.md
   - API Governance:
     - API Governance Overview: governance/overview.md
     - Govern API Proxy: governance/govern-api-proxy.md

@@ -1,4 +1,4 @@
-# Customize Developer Portal to an MCP Hub
+# Customize Developer Portal as an MCP Hub
 
 Bijira’s developer portal is fully themeable to suit your needs. If you primarily work with MCP Servers, Bijira offers the flexibility to tailor the developer portal for a streamlined, MCP-centric experience. This curated view allows you to hide unrelated features, simplify navigation, and highlight only the tools, documentation, and Servers relevant to MCP use cases. Whether you're building integrations, exposing tools to LLMs, or managing contextual data sources, this focused setup helps reduce clutter and improves developer efficiency by surfacing only what matters most for MCP workflows.
 
