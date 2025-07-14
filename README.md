@@ -106,11 +106,11 @@ docs-bijira/
 ├── en/                          # English documentation
 │   ├── docs/                    # Documentation source files
 │   ├── theme/                   # Custom theme files
-│   ├── mkdocs.yml              # MkDocs configuration
-│   ├── requirements.txt        # Python dependencies
-│   └── serve.sh               # Validation and build script
-├── devportal-theming/          # Theming assets
-└── README.md                   # This file
+│   ├── mkdocs.yml               # MkDocs configuration
+│   ├── requirements.txt         # Python dependencies
+│   └── serve.sh                 # Validation and build script
+├── devportal-theming/           # Theming assets
+└── README.md                    # This file
 ```
 
 ### Making Changes
