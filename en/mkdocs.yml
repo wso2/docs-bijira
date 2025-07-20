@@ -98,9 +98,20 @@ nav:
         - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
         - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
       - Third Party APIs (Egress):
+        - AI APIs: 
+          - Overview: create-api-proxy/third-party-apis/ai-apis.md
+          - Providers:
+              - OpenAI: create-api-proxy/third-party-apis/open-ai.md
+              - Azure OpenAI: create-api-proxy/third-party-apis/azure-ai.md
+              - Mistral: create-api-proxy/third-party-apis/mistral.md
+              - AWS Bedrock: create-api-proxy/third-party-apis/awsbedrock.md
+              - Anthropic: create-api-proxy/third-party-apis/claude.md
+          - Policies:
+              - Token-Based Rate Limit: create-api-proxy/third-party-apis/token-ratelimit.md
+              - Guardrails: create-api-proxy/third-party-apis//guardrail.md
+              - Semantic Cache: create-api-proxy/third-party-apis//semantic-cache.md
         - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
         - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
-        - AI APIs: create-api-proxy/third-party-apis/ai-apis.md
   - Develop API Proxy:
     - Authentication and Authorization:
       - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
