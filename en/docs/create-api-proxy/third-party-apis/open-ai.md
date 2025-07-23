@@ -38,10 +38,10 @@ Follow the steps below to create an AI API:
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Policy](../../assets/img/create-api-proxy/third-party-apis/ai-apis/policy-view.png)  
+    ![Policy](../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-policy-view.png)  
 
 2. Click endpoint **Endpoint Configurations**
-    ![Endpoint-config](../../assets/img/create-api-proxy/third-party-apis/ai-apis/endpoint-policy.png)
+    ![Endpoint-config](../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-policy.png)
 
 3. Configure **Endpoint Configurations** to handle backend security authentication and authorization. 
 
@@ -50,7 +50,7 @@ Follow the steps below to create an AI API:
     | Authorization | Bearer xxxxxxxxxxxxxxxxx    |
    
 
-    ![Endpoint-config](../../assets/img/create-api-proxy/third-party-apis/ai-apis/endpoint-config.png)
+    ![Endpoint-config](../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-config.png)
 
 
 ## 4. Deploy to development and Production Environments

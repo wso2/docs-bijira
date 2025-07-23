@@ -38,7 +38,7 @@ Follow the steps below to create an AI API:
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Policy](../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-policy.png)  
+    ![Policy](../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-polocy.png)  
 
 2. Click endpoint **Endpoint Configurations**
     ![Endpoint-config](../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-endpoint.png)
