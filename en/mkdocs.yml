@@ -108,7 +108,17 @@ nav:
               - Anthropic: create-api-proxy/third-party-apis/claude.md
           - Policies:
               - Token-Based Rate Limit: create-api-proxy/third-party-apis/token-ratelimit.md
-              - Guardrails: create-api-proxy/third-party-apis//guardrail.md
+              - Guardrails:
+                - Overview: create-api-proxy/third-party-apis/guardrails.md
+                # - Basic Guardrails:
+                - Regex Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail.md
+                - Word Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/word-count-guardrail.md
+                - Sentence Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
+                - Content Length Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/content-length-guardrail.md
+                - URL Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
+                # - Third Party Guardrail Integrations:
+                - Azure Content Safety Content Moderation: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
+                - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/third-party-guardrail-integrations/aws-bedrock-guardrail.md
               - Semantic Cache: create-api-proxy/third-party-apis//semantic-cache.md
         - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
         - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
