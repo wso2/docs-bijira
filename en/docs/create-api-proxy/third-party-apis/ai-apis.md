@@ -18,5 +18,5 @@ The AI Gateway is a specialized gateway in Bijira, designed for seamless integra
 It allows developers to create native APIs for these services directly from the Bijira Console, with advanced features like security, token-based rate limiting, semantic caching, guardrails policies for content safety all out of the box.
 
 - [Token Based Rate Limiting](../token-ratelimit)
-- [Guardrails](guardrail)
-- [Semantic caching](semantic-cache)
+- [Guardrails](../guardrails)
+- [Semantic caching](../semantic-cache)
