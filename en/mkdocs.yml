@@ -118,7 +118,7 @@ nav:
                 - URL Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
                 # - Third Party Guardrail Integrations:
                 - Azure Content Safety Content Moderation: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
-                - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/third-party-guardrail-integrations/aws-bedrock-guardrail.md
+                - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
               - Semantic Cache: create-api-proxy/third-party-apis//semantic-cache.md
         - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
         - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
