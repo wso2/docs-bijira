@@ -94,6 +94,7 @@ nav:
       - Overview: create-api-proxy/overview.md
       - My APIs (Ingress):
         - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
+        - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
         - Start with Endpoint: create-api-proxy/my-apis/start-with-endpoint.md
         - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
         - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
