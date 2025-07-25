@@ -33,7 +33,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 ## Step 2: Create an API Proxy
 
-1. On the project home page, click **Import API Contract** under **Create an API Proxy for My API (Ingress)**.
+1. On the project home page, click **Import API Contract** under **My APIs (Ingress)**.
 2. Click **URL for API Contract**, enter the following URL, and then click **Next**:
    ```http
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
