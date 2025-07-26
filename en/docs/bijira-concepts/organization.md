@@ -1,61 +1,94 @@
-﻿# Organization
+﻿# Organizations in Bijira
 
-An organization in Bijira is a logical grouping of users and user resources. A first-time user must create an organization and be a member of it when signing in to Bijira. Users and resources in an organization cannot access resources in another organization unless an admin of the other organization invites them and adds them as a member of that organization. A user cannot create more than one organization.
+Organizations are the foundational building blocks in Bijira, providing a secure and logical grouping of users, resources, and projects. This covers everything you need to know about organizations in Bijira, including their structure, management, permissions, and unique identifiers.
 
-## Switch organizations
+---
 
-If you are a member of more than one organization, you can switch from one organization to another when necessary. To do this, select the required organization from the **Organization** list in the Bijira Console header.
+## What is an Organization?
 
-{% include "../administer/inviting-members.md" %}
+An **organization** in Bijira is a logical container for users and their resources. Every user must belong to an organization to use Bijira. Organizations help isolate resources, manage access, and enable collaboration within a defined boundary.
 
-## Manage user permission
+- **First-time user onboarding:** First-time users must create an organization and become its member upon signing up.
+- **Resource isolation**: Users and resources in one organization cannot access those in another, unless explicitly invited.
+- **Single organization per user**: A user can only create one organization, but may be invited to join others.
 
-Bijira manages user permissions with groups and roles.
+---
+
+## Switching between Organizations
+
+If you are a member of multiple organizations, you can easily switch between them by following steps below.
+
+1. In the Bijira Console header, click the **Organization** list.
+2. Select the desired organization from the dropdown.
+
+---
+
+## Inviting Members to Your Organization
+
+To collaborate, you can invite new members to your organization. (See the [Inviting Members](../administer/inviting-members.md) guide for step-by-step instructions.)
+
+---
+
+## Managing User Permissions
+
+Bijira uses a combination of **groups** and **roles** to manage user permissions efficiently.
 
 ### Groups
 
-A group in Bijira is a collection of users, each with one or more roles assigned to them. Users within a group inherit the permissions associated with the roles assigned to that group. For instance, if a user is added to the `API Publisher` group, they will automatically receive the `API Publisher` role.
+A **group** is a collection of users with one or more roles assigned. Users inherit all permissions associated with the group's roles. For example, adding a user to the `API Publisher` group automatically grants them the `API Publisher` role.
 
-Bijira comes with predefined groups already configured with specific roles, as follows:
+#### Predefined Groups
 
-- **API Publisher**: A collection of users who have the API Publisher role.
-- **API Subscriber**: A collection of users who have the API Subscriber role.
-- **Admin** : A collection of users who have the Admin role.
-- **Billing Admin** : A collection of users who have the Billing Admin role.
-- **Bijira DevOps** : A collection of users who have the Bijira DevOps role.
-- **Developer** : Users who develop, deploy, and manage cloud native applications at scale.
-- **External API Subscriber**: A collection of users who have the External API Subscriber role.
+Bijira provides several predefined groups, each mapped to specific roles.
 
-When creating a new group to invite members, be sure to assign a role to the group to ensure users have the required permissions.
+- **Admin**: Users who have full access to the Choreo (user management, application development, billing and subscription, etc.).
+- **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
+- **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
+- **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
+- **Choreo DevOps**: Users who are involved in deployment management.
+
+> **Tip:** When creating a new group, always assign at least one role to ensure members have the required permissions.
 
 ### Roles
 
-Bijira roles are defined as follows:
+Roles define what actions a user can perform within an organization. The main roles in Bijira are:
 
-- **API Publisher**: An API publisher can discover, create, publish, delete, test, and manage an API.
-- **API Subscriber**: An API subscriber is a developer in a particular organization. An API subscriber can subscribe to an application, manage subscriptions, manage applications, generate API keys, and manage API keys.
-- **Admin**: An administrator is responsible for all administration tasks, including user management, customizing the Developer Portal, managing projects, enabling analytics, managing domains, etc.
-- **Billing Admin**: Is responsible for billing administration that includes viewing tiers, creating and viewing organizations, managing invoices, viewing and creating subscriptions, and viewing and creating payment methods.
-- **Bijira DevOps**: A Bijira DevOps user is a user with access to the Bijira DevOps portal, enabling them to actively manage, ensure dependable deployment, and monitor components.
-- **Developer** : A user who can develop, deploy, and manage cloud native applications at scale.  
-- **External API subscriber**: External API subscribers are API consumers who have access only to the API Developer Portal. They can join an organization with the sole purpose of consuming APIs.
-- **Environment Manager (Deprecated)**: Manages deployment environments.
+- **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
+- **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
+- **Admin**: Users who have full access to the Choreo (user management, application development, billing and subscription, etc.)
+- **Choreo DevOps**: Users who are involved in deployment management.
+- **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
 
-## Organization ID
+---
 
-The Organization ID serves as a unique identifier for each organization. To get the organization ID, follow the steps below:
+## Organization Identifiers
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
-2. Click on the **Organization** list on the header and select your organization.
+Bijira uses two unique identifiers for organizations, the **Organization ID** and the **Organization Handle**.
+
+### Organization ID
+
+A unique, system-generated identifier for each organization. To find your Organization ID:
+
+1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in.
+2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
-4. In the header, click the **Organization** list. This will open the organization level settings page.
-5. Under **Organization** click **Copy ID**.
+4. In the header, click the **Organization** list to open organization-level settings.
+5. Under **Organization**, click **Copy ID**.
 
-## Organization Handle
+### Organization Handle
 
-The organization handle is a unique string that directly corresponds to your organization's name. To get the organization handle, follow the steps below:
+A unique, human-readable string that corresponds to your organization's name. To find your Organization Handle:
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
-2. Click on the **Organization** list on the header and select your organization.
+1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in.
+2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
-4. Under **Organization** click **Copy Handle**.
+4. Under **Organization**, click **Copy Handle**.
+
+---
+
+## Best Practices for Organization Management
+
+- **Assign roles carefully**: Only grant users the permissions they need.
+- **Use groups for easier management**: Assign roles to groups and add users to groups for scalable permission management.
+- **Regularly review membership**: Periodically audit group memberships and roles to ensure security and compliance.
+- **Leverage organization identifiers**: Use the Organization ID and Handle for integrations, support, and automation.
