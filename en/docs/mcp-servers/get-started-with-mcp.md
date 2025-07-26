@@ -24,6 +24,7 @@ In summary, Bijira provides the following capabilities related to MCP.
 ## MCP Use Cases with Bijira
 
 - [Design and Publish MCP Servers for your APIs](design-mcp-servers.md)
+- [Proxy Existing MCP Servers]()
 - [Customize the Developer Portal to an MCP Hub](devportal-mcp-hub.md)
 
 
