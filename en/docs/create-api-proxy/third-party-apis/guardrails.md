@@ -8,7 +8,9 @@ Guardrails are a set of guidelines and best practices designed to ensure the saf
     - [Sentence Count Guardrail](../guardrails/basic-guardrails/sentence-count-guardrail)
     - [Content Length Guardrail](../guardrails/basic-guardrails/content-length-guardrail)
     - [URL Guardrail](../guardrails/basic-guardrails/url-guardrail)
-- **Advanced Guardrails**: These are additional security measures that can be applied to specific AI APIs, providing enhanced security and control.
+    - [Regex PII Masking](../guardrails/basic-guardrails/regex-pii-masking)
+- **Advanced Guardrails**: For more sophisticated AI applications that require enhanced flexibility and control, Bijira integrates with Guardrails AI—an extensible framework that enables seamless integration of complex AI models and services. This framework allows you to leverage open-source fine-tuned language models to implement advanced guardrails tailored to your specific requirements.
+    - [PII Masking](../guardrails/advanced-guardrails/pii-masking)
 - **Third Party Guardrail Integrations**: These are integrations with third-party services that offer additional security and compliance features for AI APIs.
     - [Azure Content Safety Content Moderation](../guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation)
     - [AWS Bedrock Guardrails](../guardrails/third-party-guardrail-integrations/aws-bedrock-guardrails)
