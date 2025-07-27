@@ -1,6 +1,6 @@
-# Proxy Existing MCP Servers
+# Proxy Remote MCP Servers
 
-Bijira allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, Bijira provides the capacility to manage the tools of your proxied MCP servers through the console.
+Bijira allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, Bijira provides the capablity to manage the tools of your proxied MCP servers through the console.
 
 ## Create an MCP Server Proxy
 
@@ -10,6 +10,10 @@ You can use the Start with MCP Server URL option to create a new MCP Server prox
 
 !!!important
     Make sure you provide the complete url ending with **/mcp** as this will be used to connect and fetch the tools in the creation step.
+
+    At the moment, Bijira supports only the **2025-03-16** specification. Therefore, it is important to make sure your MCP Server is 
+    compatible with this specification version.
+    
 
 ## Manage Tools of your MCP Server
 
