@@ -25,11 +25,14 @@ This policy provides the capability to integrate with [AWS Bedrock Guardrails](h
     | AWS Role Region | The AWS region where the IAM role is deployed. This is optional and can be used if you want to use a role instead of access keys. |
     | AWS Role External ID | The external ID used for the AWS role assumption. This is optional and can be used if you want to use a role instead of access keys. |
     | JSON Path | The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation. |
-    | Redact PII | When enabled, detected PIIs are redacted and will not be restored to its original form. This should be enabled when the policy is attached to the response flow to prevent exposing AI-generated content with sensitive data to the client. When disabled and applied to the request flow, detected PII is temporarily masked and automatically restored in the corresponding response. |
+    | Redact PII | When enabled, detected PIIs are redacted and will not be restored to its original form. This should be enabled when the policy is attached to the response flow to prevent exposing AI-generated content with sensitive data to the client. When disabled and applied to the request flow, detected PII is temporarily masked and can be restored in the corresponding response. |
     | Passthrough On Error | If enabled, the request or response is passed through without validation when the AWS Bedrock Guardrail service is unavailable. Otherwise, a guardrail validation error is triggered. |
     | Show Guardrail Assessment | When enabled, the error response will include detailed information about the reason for the guardrail intervention. |
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
+
+!!! note "PII Unmasking with AWS Bedrock Guardrail"
+    If you want to use the AWS Bedrock Guardrail for PII unmasking, you must attach the policy to both the request and response flows. This allows the policy to mask PII in the request and unmask it in the response. Moreover, the `Redact PII` option should be disabled in both flows to allow the PII to be restored in the response. If you enable `Redact PII` in the response flow, the PII will be permanently redacted and not restored.
 
 ### Sample AWS Bedrock Guardrail Configuration
 

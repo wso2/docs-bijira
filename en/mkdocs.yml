@@ -117,6 +117,9 @@ nav:
                 - Sentence Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
                 - Content Length Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/content-length-guardrail.md
                 - URL Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
+                - Regex PII Masking: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
+                # - Advanced Guardrails:
+                - PII Masking: create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking.md
                 # - Third Party Guardrail Integrations:
                 - Azure Content Safety Content Moderation: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
                 - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
