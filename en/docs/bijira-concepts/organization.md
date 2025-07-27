@@ -41,7 +41,7 @@ A **group** is a collection of users with one or more roles assigned. Users inhe
 
 Bijira provides several predefined groups, each mapped to specific roles.
 
-- **Admin**: Users who have full access to the Choreo (user management, application development, billing and subscription, etc.).
+- **Admin**: Users who have full access to the Bijira (user management, application development, billing and subscription, etc.).
 - **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
 - **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
 - **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
@@ -55,7 +55,7 @@ Roles define what actions a user can perform within an organization. The main ro
 
 - **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
 - **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
-- **Admin**: Users who have full access to the Choreo (user management, application development, billing and subscription, etc.)
+- **Admin**: Users who have full access to the Bijira (user management, application development, billing and subscription, etc.)
 - **Choreo DevOps**: Users who are involved in deployment management.
 - **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
 
