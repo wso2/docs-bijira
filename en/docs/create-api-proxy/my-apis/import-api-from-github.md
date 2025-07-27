@@ -31,6 +31,9 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 
         You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) if needed. Write access is only used for sending pull requests; Bijira will not push changes directly to your repository.
 
+    !!! note
+        If you are the owner of the GitHub organization and need to authorize the Bijira GitHub App on behalf of your collaborators, you can install the Bijira GitHub App directly in your organization via [install App](https://github.com/marketplace/choreo-apps).
+
 5. Enter the following repository details:
 
     | **Field**              | **Value**          |
