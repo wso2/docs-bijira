@@ -145,6 +145,7 @@ nav:
   - MCP Servers:
     - Overview: mcp-servers/get-started-with-mcp.md
     - Design MCP Servers: mcp-servers/design-mcp-servers.md
+    - Proxy Remote MCP Servers: mcp-servers/proxy-remote-servers.md
     - Customize Developer Portal as an MCP Hub: mcp-servers/devportal-mcp-hub.md
   - API Governance:
     - API Governance Overview: governance/overview.md
