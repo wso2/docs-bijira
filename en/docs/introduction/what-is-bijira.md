@@ -1,30 +1,33 @@
 # What is Bijira?
 
-Bijira is a cloud-based API management platform designed to simplify API development, deployment, security, and monitoring. Built on the foundation of WSO2 API Manager, Bijira provides a streamlined experience for organizations looking to manage APIs efficiently while leveraging key capabilities from Choreo.
+Bijira is next-generation, AI-native SaaS platform for full lifecycle API management, built to meet the demands of cloud-native and AI-driven ecosystems. Designed to simplify and accelerate API development, deployment, security, and monitoring, Bijira offers a unified control plane to manage all your APIs whether they’re internal, external, or AI-powered, across hybrid and multi-cloud environments.
+
+Powered by the proven foundation of WSO2 API Manager and enriched with key innovations from Choreo, Bijira delivers a seamless developer experience, intelligent governance, and enterprise-grade scalability.
 
 ## Key Capabilities of Bijira
 
 ### API Design and Development
-
-- **Seamless API Creation**: Define, document, and publish APIs using an intuitive user interface.
+- **Seamless API Creation:** Design, document, and publish APIs effortlessly using a visual interface or natural-language prompts powered by GenAI.
+- **Contract-First and No-Code Options:** Import OpenAPI/AsyncAPI specs or use low-code tools to define API behavior.
 
 ### API Security and Governance
 
-- **Robust Access Control**: Enforce authentication and authorization policies with OAuth.
-- **Rate Limiting and Throttling**: Protect your APIs from abuse by setting up request quotas and rate limits.
+- **Robust Access Control:** Enforce fine-grained authentication and authorization with OAuth2, OIDC, and role-based access control.
+- **Governance-as-Code:** Apply API design and security best practices using AI-assisted policy validation and rulesets.
+- **Rate Limiting and Throttling:** Protect APIs from abuse with granular control over traffic and quotas.
 
 ### API Lifecycle Management
 
-- **Comprehensive API Lifecycle Support**: From design to deprecation, Bijira enables smooth API versioning and management.
+- **Comprehensive Lifecycle Support:** From design to deprecation, Bijira streamlines API versioning, deployment, testing, promotion, and retirement.
 
 ### Developer Experience and API Discoverability
 
-- **Developer Portal**: Provide a self-service portal for developers to discover, subscribe to, and test APIs.
-- **API Documentation**: Auto-generate API documentation to improve adoption and usability.
+- **Developer Portal:** Offer a branded, self-service portal for API discovery, subscription, and interactive testing.
+- **Auto-Generated Documentation:** Improve usability and adoption with dynamic, always up-to-date API docs.
 
 ### Analytics and Monitoring
 
-- **Real-time API Insights**: Track API performance, consumer usage, and error rates through built-in analytics.
-- **Observability and Logging**: Gain deeper visibility into API interactions with detailed logs and event tracking.
+- **Real-time Insights:** Monitor API performance, consumer behavior, latency, and error rates through built-in analytics dashboards.
+- **Detailed Logging and Tracing:** Enable full observability with structured logs, metrics, and event tracking.
 
-Bijira brings a modern API management experience, empowering organizations to build, secure, and scale APIs efficiently while reducing operational overhead.
+Bijira empowers teams to build, secure, and scale modern APIs faster, while reducing operational complexity and enabling AI-powered innovation at every stage of the API lifecycle.
