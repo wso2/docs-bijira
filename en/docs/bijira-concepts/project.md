@@ -13,6 +13,7 @@ A **project** in Bijira is a logical grouping of API Proxies that typically work
 ## Project Structure and Components
 
 A project may include:
+
 - **API Proxies**: Managed APIs that expose services securely.
 - **MCP Servers**: Managed MCP servers to be consumed by AI agents.
 
