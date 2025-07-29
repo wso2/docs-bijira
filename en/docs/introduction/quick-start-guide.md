@@ -100,7 +100,7 @@ To generate credentials for the published API and invoke it via the Developer Po
     1. In the Developer Portal left navigation menu, click **Applications**.
     2. Click **Create**.
     3. Add a sample application name and click **Create**. This will create a new application. Click on the application name and it will navigate you to the application's home page.
-    4. Click **Subscribe to more APIs** under **Subscribed APIs** section. This will navigate you to the API proxy listing page.
+    4. Click **Explore more** under **Subscribed APIs** section. This will navigate you to the API proxy listing page.
     5. From the respective API card, choose the Application and click **Subscribe**. Now your application is subscribed to the published API with your selected subscription plan.
     6. Open the created application by selecting **Applications** from the left menu, and click on the application name.
     7. Click **Generate Key** under **OAuth2**. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
