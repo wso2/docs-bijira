@@ -13,7 +13,7 @@ Follow these steps to create an API proxy for a third-party API available in the
 ### 2. Select a Third-Party API
 
 1. Click **+Create**.
-2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **Get From Marketplace**.
+2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **Browse APIs**.
 3. In the **Create API Proxy from Marketplace** page, browse or search for the desired third-party API.
 4. Select the API you want to integrate.
 
