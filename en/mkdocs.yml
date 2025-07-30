@@ -156,6 +156,7 @@ nav:
     - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
     - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
     - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+    - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
   - Developer Portal:
     - Theming Developer Portal:
       - Theming with AI: devportal/theming-devportal-with-ai.md
