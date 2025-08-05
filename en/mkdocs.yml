@@ -130,6 +130,9 @@ nav:
     - Authentication and Authorization:
       - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
       - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
+      - Secure API Access with Azure AD: develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
+      - Secure Communication Between the Bijira Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
+      - Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
     - Policy: 
       - Overview: develop-api-proxy/policy/overview.md
       - Policies: develop-api-proxy/policy/policies.md
