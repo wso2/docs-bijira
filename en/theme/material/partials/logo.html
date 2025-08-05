@@ -1,8 +1,10 @@
-{#-
-  This file was automatically generated - do not edit
--#}
-{% if config.theme.logo %}
-  <img src="{{ config.theme.logo | url }}" alt="logo" style="vertical-align: middle;">
+{% if config.theme.logo or config.logo_light %}
+    {% if config.theme.logo %}
+        <img class="logo-light" src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color-scheme="default">
+    {% endif %}
+    {% if config.theme.logo_light %}
+        <img class="logo-dark" src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color-scheme="slate">
+    {% endif %}
 {% else %}
   {% set icon = config.theme.icon.logo or "material/library" %}
   {% include ".icons/" ~ icon ~ ".svg" %}

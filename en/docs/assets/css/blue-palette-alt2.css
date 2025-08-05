@@ -1,6 +1,7 @@
+@import url('partials/_typography.css');
 
 :root {
-    --md-primary-fg-color: white
+    --md-primary-fg-color: white;
     --md-primary-fg-color--light: white;
     --md-primary-fg-color--dark: #147ecc;
     --md-primary-bg-color: #fff;
@@ -12,10 +13,9 @@
     --md-banner: url(../img/banner-for-blue-alt-light.png) no-repeat left top;
     --md-default-fg-color: black;
     --md-default-fg-color--light: black;
-
 }
 :root {
-    --md-text-font: 'Source Sans Pro', sans-serif;
+    --md-text-font: "Gilmer", sans-serif;
     --md-code-font: 'Source Sans Pro', sans-serif;
 }
 /* colors for dark theme */
@@ -25,7 +25,7 @@
     --md-primary-fg-color-header-text: #f5f6f7;
     --md-primary-fg-color-header-text-active: #13364d;
     --md-accent-fg-color: #13364d;
-    --md-default-bg-color: #23272f;
+    --md-default-bg-color: #082336;
     --md-typeset-a-color: #13364d;
     --md-banner: url(../img/banner-for-blue-alt-dark.png) no-repeat left top;
     --md-hjs-color: rgb(186, 186, 255);
@@ -33,8 +33,7 @@
     --md-hjs-other-color: #f2b4b4;
     --md-default-fg-color: white;
     --md-default-fg-color--light: white;
-
-
+    --md-subheader-text-color: #6697b0;
 }
 /* colors for the light theme */
 [data-md-color-scheme="default"] {
@@ -49,7 +48,7 @@
     --md-hjs-other-color: #a31515;
     --md-default-fg-color: black;
     --md-default-fg-color--light: black;
-
+    --md-subheader-text-color: #407893;
 }
 .md-tabs {
     background-color: var(--md-primary-fg-color-header);

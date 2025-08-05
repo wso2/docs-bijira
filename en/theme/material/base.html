@@ -119,7 +119,7 @@
     {% set scheme  = palette.scheme  | d("default", true) %}
     {% set primary = palette.primary | d("", true) %}
     {% set accent  = palette.accent  | d("", true) %}
-    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}">
+    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}" >
   {% else %}
     <body dir="{{ direction }}">
   {% endif %}
