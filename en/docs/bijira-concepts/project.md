@@ -13,6 +13,7 @@ A **project** in Bijira is a logical grouping of API Proxies that typically work
 ## Project Structure and Components
 
 A project may include:
+
 - **API Proxies**: Managed APIs that expose services securely.
 - **MCP Servers**: Managed MCP servers to be consumed by AI agents.
 
@@ -23,6 +24,7 @@ All components within a project can be managed together, versioned, and deployed
 ## Deployment Model
 
 At deployment time, all components in a project are deployed into a single namespace within a Kubernetes cluster. This provides:
+
 - **Resource isolation**: Each project runs in its own namespace, preventing interference between projects.
 - **Flexible exposure**: Components can be exposed to the public internet, internally to the organization, or privately within the project only.
 - **Unified management**: Bijira provides tools to manage deployments, scaling, and monitoring for all project components.

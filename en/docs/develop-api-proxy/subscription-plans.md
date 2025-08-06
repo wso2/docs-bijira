@@ -10,7 +10,7 @@ To assign subscription plans to an API, follow the steps given below:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
 2. Select the project and the API which you want to assign subscription plans.
-3. In the left navigation menu, click **Manage** and then click **Subscription Plans**. This displays the subscription plans available for the component.
+3. In the left navigation menu, click **Develop** and then click **Subscription Plans**. This displays the subscription plans available for the component.
 4. Enable the **Subscription Plan Status** toggle corresponding to the subscription plans you want to assign to the API.
 
     ![Subscription Plans](../assets/img/develop-api-proxy/subscription-plans.png)
