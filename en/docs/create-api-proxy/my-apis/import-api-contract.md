@@ -46,11 +46,13 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 1. Navigate to the **Test --> OpenAPI Console** page of the API Proxy.
 2. Use the OpenAPI Console to test the API Proxy.
 
-## Publish the API proxy
+## Promote the API Proxy to Production and Publish the API proxy
 
-1. In the left navigation menu, click **Lifecycle** under **Develop**. This takes you to the **Lifecycle** page.
-2. Click **Publish**.
-3. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
+1. Navigate to the **Deploy** page of the API Proxy.
+2. Select **Promote to Production**.
+3. In the left navigation menu, click **Lifecycle** under **Develop**. This takes you to the **Lifecycle** page.
+4. Click **Publish**.
+5. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
 
 ## API Proxy Behavior
 
