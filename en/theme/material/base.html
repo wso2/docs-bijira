@@ -119,7 +119,7 @@
     {% set scheme  = palette.scheme  | d("default", true) %}
     {% set primary = palette.primary | d("", true) %}
     {% set accent  = palette.accent  | d("", true) %}
-    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}">
+    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}" >
   {% else %}
     <body dir="{{ direction }}">
   {% endif %}
@@ -138,23 +138,6 @@
         <a href="{{ skip.url | url }}" class="md-skip">
           {{ lang.t("action.skip") }}
         </a>
-      {% endif %}
-    </div>
-    <div data-md-component="announce">
-      {% if self.announce() %}
-        <aside class="md-banner">
-          <div class="md-banner__inner md-grid md-typeset">
-            {% if "announce.dismiss" in features %}
-              <button class="md-banner__button md-icon" aria-label="{{ lang.t('announce.dismiss') }}">
-                {% include ".icons/material/close.svg" %}
-              </button>
-            {% endif %}
-            {% block announce %}{% endblock %}
-          </div>
-          {% if "announce.dismiss" in features %}
-            {% include "partials/javascripts/announce.html" %}
-          {% endif %}
-        </aside>
       {% endif %}
     </div>
     {% if config.extra.version %}
@@ -189,9 +172,9 @@
               {% if page.meta and page.meta.hide %}
                 {% set hidden = "hidden" if "navigation" in page.meta.hide %}
               {% endif %}
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }} style="width: 20%;">
                 <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
+                  <div class="md-sidebar__inner" style="padding-right: 8px;">
                     {% include "partials/nav.html" %}
                   </div>
                 </div>
@@ -212,7 +195,7 @@
           {% endblock %}
           {% block container %}
             <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+              <article class="md-content__inner md-typeset" style="margin-right: 4px;">
                 {% block content %}
                   {% include "partials/content.html" %}
                 {% endblock %}
