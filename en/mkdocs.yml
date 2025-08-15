@@ -27,7 +27,7 @@ edit_uri: https://github.com/wso2/docs-bijira/edit/main/en/docs/
 dev_addr: localhost:8000
 
 # Copyright
-copyright: ©2025 WSO2 LLC. 
+copyright: ©2025 WSO2 LLC.
 
 # Configuration
 watch:
@@ -42,14 +42,14 @@ theme:
   font:
     text: Montserrat
   favicon: assets/images/favicon.png
-  features:    
+  features:
     - navigation.expand
     - navigation.path
     - navigation.top
     - content.code.copy
     - content.action.edit
     - content.action.view
-  language: 'en'
+  language: "en"
   palette:
     # Dark mode
     - scheme: slate
@@ -62,7 +62,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    
+
   icon:
     logo: logo
 #Breaks build if there's a warning
@@ -70,107 +70,109 @@ strict: false
 # Navigation
 nav:
   - Home: index.md
-  - Introduction: 
-      - What is Bijira? : introduction/what-is-bijira.md
+  - Introduction:
+      - What is Bijira?: introduction/what-is-bijira.md
       - Quick Start Guide: introduction/quick-start-guide.md
-  - Bijira Samples: 
+  - Bijira Samples:
       - Samples Overview: samples/samples-overview.md
   - Tutorials:
-    - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
-    - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
+      - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
+      - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
   - Bijira Concepts:
-    # - Resource Hierarchy: resource-hierarchy.md
-    - Organization: bijira-concepts/organization.md
-    - Project: bijira-concepts/project.md
-    # - Deployment Tracks: bijira-concepts/deployment-tracks.md
-    - Data Planes: bijira-concepts/data-planes.md
+      # - Resource Hierarchy: resource-hierarchy.md
+      - Organization: bijira-concepts/organization.md
+      - Project: bijira-concepts/project.md
+      # - Deployment Tracks: bijira-concepts/deployment-tracks.md
+      - Data Planes: bijira-concepts/data-planes.md
   - Create API Proxy:
       - Overview: create-api-proxy/overview.md
       - My APIs (Ingress):
-        - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
-        - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
-        - Start with Endpoint: create-api-proxy/my-apis/start-with-endpoint.md
-        - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
-        - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
+          - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
+          - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
+          - Start with Endpoint: create-api-proxy/my-apis/start-with-endpoint.md
+          - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
+          - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
       - Third Party APIs (Egress):
-        - AI APIs: 
-          - Overview: create-api-proxy/third-party-apis/ai-apis.md
-          - Providers:
-              - OpenAI: create-api-proxy/third-party-apis/open-ai.md
-              - Azure OpenAI: create-api-proxy/third-party-apis/azure-ai.md
-              - Mistral: create-api-proxy/third-party-apis/mistral.md
-              - AWS Bedrock: create-api-proxy/third-party-apis/awsbedrock.md
-              - Anthropic: create-api-proxy/third-party-apis/claude.md
-          - Policies:
-              - Token-Based Rate Limit: create-api-proxy/third-party-apis/token-ratelimit.md
-              - Guardrails:
-                - Overview: create-api-proxy/third-party-apis/guardrails.md
-                # - Basic Guardrails:
-                - Regex Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail.md
-                - Word Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/word-count-guardrail.md
-                - Sentence Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
-                - Content Length Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/content-length-guardrail.md
-                - URL Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
-                - Regex PII Masking: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
-                # - Advanced Guardrails:
-                - PII Masking: create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking.md
-                # - Third Party Guardrail Integrations:
-                - Azure Content Safety Content Moderation: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
-                - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
-              - Semantic Cache: create-api-proxy/third-party-apis//semantic-cache.md
-        - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
-        - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
+          - AI APIs:
+              - Overview: create-api-proxy/third-party-apis/ai-apis.md
+              - Providers:
+                  - OpenAI: create-api-proxy/third-party-apis/open-ai.md
+                  - Azure OpenAI: create-api-proxy/third-party-apis/azure-ai.md
+                  - Mistral: create-api-proxy/third-party-apis/mistral.md
+                  - AWS Bedrock: create-api-proxy/third-party-apis/awsbedrock.md
+                  - Anthropic: create-api-proxy/third-party-apis/claude.md
+              - Policies:
+                  - Token-Based Rate Limit: create-api-proxy/third-party-apis/token-ratelimit.md
+                  - Guardrails:
+                      - Overview: create-api-proxy/third-party-apis/guardrails.md
+                      # - Basic Guardrails:
+                      - Regex Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail.md
+                      - Word Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/word-count-guardrail.md
+                      - Sentence Count Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
+                      - Content Length Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/content-length-guardrail.md
+                      - URL Guardrail: create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
+                      - Regex PII Masking: create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
+                      # - Advanced Guardrails:
+                      - PII Masking: create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking.md
+                      # - Third Party Guardrail Integrations:
+                      - Azure Content Safety Content Moderation: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
+                      - AWS Bedrock Guardrail: create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
+                  - Semantic Cache: create-api-proxy/third-party-apis//semantic-cache.md
+          - Get from Marketplace: create-api-proxy/third-party-apis/get-from-marketplace.md
+          - Import API Contract: create-api-proxy/third-party-apis/import-api-contract.md
   - Develop API Proxy:
-    - Authentication and Authorization:
-      - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
-      - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
-      - Secure API Access with Azure AD: develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
-      - Secure Communication Between the Bijira Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
-      - Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
-    - Policy: 
-      - Overview: develop-api-proxy/policy/overview.md
-      - Policies: develop-api-proxy/policy/policies.md
-      - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
-      # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
-    - Documents: develop-api-proxy/documents.md
-    - Lifecycle: develop-api-proxy/lifecycle-management.md
-    - Subscription Plans: develop-api-proxy/subscription-plans.md
+      - Authentication and Authorization:
+          - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
+          - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
+          - Secure API Access with Azure AD: develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
+          - Secure Communication Between the Bijira Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
+          - Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
+      - Policy:
+          - Overview: develop-api-proxy/policy/overview.md
+          - Policies: develop-api-proxy/policy/policies.md
+          - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
+        # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
+      - Documents: develop-api-proxy/documents.md
+      - Lifecycle: develop-api-proxy/lifecycle-management.md
+      - Subscription Plans: develop-api-proxy/subscription-plans.md
   - Test API Proxy:
-    - OpenAPI Console: test-api-proxy/openapi-console.md
-    - cURL: test-api-proxy/curl.md
-    - API Chat: test-api-proxy/api-chat.md
+      - OpenAPI Console: test-api-proxy/openapi-console.md
+      - cURL: test-api-proxy/curl.md
+      - API Chat: test-api-proxy/api-chat.md
   - MCP Servers:
-    - Overview: mcp-servers/get-started-with-mcp.md
-    - Design MCP Servers: mcp-servers/design-mcp-servers.md
-    - Proxy Remote MCP Servers: mcp-servers/proxy-remote-servers.md
-    - Customize Developer Portal as an MCP Hub: mcp-servers/devportal-mcp-hub.md
+      - Overview: mcp-servers/get-started-with-mcp.md
+      - Design MCP Servers: mcp-servers/design-mcp-servers.md
+      - Proxy Remote MCP Servers: mcp-servers/proxy-remote-servers.md
+      - Customize Developer Portal as an MCP Hub: mcp-servers/devportal-mcp-hub.md
   - API Governance:
-    - API Governance Overview: governance/overview.md
-    - Govern API Proxy: governance/govern-api-proxy.md
+      - API Governance Overview: governance/overview.md
+      - Govern API Proxy: governance/govern-api-proxy.md
   - Monitor and Insights:
-    - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
+      - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
-    - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
-    - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
-    - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
-    - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
+      - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
+      - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
+      - Manage Environments: administer/manage-environments/manage-environments.md
+      - Manage CD pipelines: administer/manage-cd-pipelines/manage-cd-pipelines.md
+      - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+      - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
   - Developer Portal:
-    - Theming Developer Portal:
-      - Theming with AI: devportal/theming-devportal-with-ai.md
-      - Theming Manually:
-        - Theme in Organizational Level: devportal/theming-devportal-org-level.md
-        - Theme in API Level: devportal/theming-devportal-api-level.md
-      - Devportal Mode: devportal/developer-portal-mode.md
-    - Discover APIs:
-      - Search APIs: devportal/discover-apis/api-search.md
-      - Documentations: devportal/discover-apis/api-documentations.md
-    - Consume an API:
-      - Consume an API Secured with OAuth2: devportal/consuming-services/consume-an-api-secured-with-oauth2.md
-      - Consume an API Secured with API Key: devportal/consuming-services/consume-an-api-secured-with-api-key.md
-    - Manage Applications:
-        - Create an Application: devportal/manage-applications/create-an-application.md
-    - Manage Subscriptions:
-        - Subscribe to an API: devportal/manage-subscriptions/subscribe-to-an-api.md
+      - Theming Developer Portal:
+          - Theming with AI: devportal/theming-devportal-with-ai.md
+          - Theming Manually:
+              - Theme in Organizational Level: devportal/theming-devportal-org-level.md
+              - Theme in API Level: devportal/theming-devportal-api-level.md
+          - Devportal Mode: devportal/developer-portal-mode.md
+      - Discover APIs:
+          - Search APIs: devportal/discover-apis/api-search.md
+          - Documentations: devportal/discover-apis/api-documentations.md
+      - Consume an API:
+          - Consume an API Secured with OAuth2: devportal/consuming-services/consume-an-api-secured-with-oauth2.md
+          - Consume an API Secured with API Key: devportal/consuming-services/consume-an-api-secured-with-api-key.md
+      - Manage Applications:
+          - Create an Application: devportal/manage-applications/create-an-application.md
+      - Manage Subscriptions:
+          - Subscribe to an API: devportal/manage-subscriptions/subscribe-to-an-api.md
 
 # Extensions
 markdown_extensions:
@@ -196,7 +198,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
@@ -214,17 +216,17 @@ extra_css:
   # - assets/css/theme.css
   # - assets/css/prism.css
   # - assets/lib/json-formatter/json-formatter.css
-  
+
   - assets/lib/highlightjs/styles/vs.min.css
   - assets/css/blue-palette-alt2.css
   - assets/css/bijiratheme.css
   - assets/lib/json-formatter/json-formatter.css
   - assets/css/config-catalog.css
-  - assets/lib/fontawesome-free-6.3.0-web/css/all.min.css  
+  - assets/lib/fontawesome-free-6.3.0-web/css/all.min.css
 extra_javascript:
   - assets/lib/json-formatter/json-formatter.umd.js
   - assets/lib/highlightjs/highlight.min.js
- # - assets/js/theme.js
+  # - assets/js/theme.js
   #- assets/js/prism-ballerina.js
   - assets/js/bijiratheme.js
 extra:
