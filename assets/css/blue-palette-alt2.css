@@ -1,0 +1,84 @@
+@import url('partials/_typography.css');
+
+:root {
+    --md-primary-fg-color: white;
+    --md-primary-fg-color--light: white;
+    --md-primary-fg-color--dark: #147ecc;
+    --md-primary-bg-color: #fff;
+    --md-primary-bg-color--light: #ffffffb3;
+    --md-accent-fg-color: #033982;
+    --md-accent-fg-color--transparent: #0339821a;
+    --md-accent-bg-color: #fff;
+    --md-accent-bg-color--light: #ffffffb3;
+    --md-banner: url(../img/banner-for-blue-alt-light.png) no-repeat left top;
+    --md-default-fg-color: black;
+    --md-default-fg-color--light: black;
+}
+:root {
+    --md-text-font: "Gilmer", sans-serif;
+    --md-code-font: 'Source Sans Pro', sans-serif;
+}
+/* colors for dark theme */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: white;
+    --md-primary-fg-color-header: white;
+    --md-primary-fg-color-header-text: #f5f6f7;
+    --md-primary-fg-color-header-text-active: #13364d;
+    --md-accent-fg-color: #13364d;
+    --md-default-bg-color: #082336;
+    --md-typeset-a-color: #13364d;
+    --md-banner: url(../img/banner-for-blue-alt-dark.png) no-repeat left top;
+    --md-hjs-color: rgb(186, 186, 255);
+    --md-hjs-attr-color: #96ffc5;
+    --md-hjs-other-color: #f2b4b4;
+    --md-default-fg-color: white;
+    --md-default-fg-color--light: white;
+    --md-subheader-text-color: #6697b0;
+    --md-mainBackground-gradient: radial-gradient(circle at center, #36e67c, #f8dea9);
+    --md-primary-border: 1px solid rgba(255, 255, 255, 0.25);
+    --md-searchbar-bg-color: #edeef32c;
+}
+/* colors for the light theme */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color-header: #f5f6f7;
+    --md-primary-fg-color-header-text: black;
+    --md-primary-fg-color-header-text-active: #13364d;
+    --md-accent-fg-color: #13364d;
+    --md-default-bg-color: #ffffff;
+    --md-typeset-a-color: var(--md-primary-fg-color);
+    --md-hjs-color: #36464e;
+    --md-hjs-attr-color: #1aab5b;
+    --md-hjs-other-color: #a31515;
+    --md-default-fg-color: black;
+    --md-default-fg-color--light: black;
+    --md-subheader-text-color: #407893;
+    --md-mainBackground-gradient: radial-gradient(circle at center, #3a92de, #f3bf59);
+    --md-primary-border: 1px solid #d8dde8;
+    --md-searchbar-bg-color: #edeef3;
+}
+.md-tabs {
+    background-color: var(--md-primary-fg-color-header);
+    color: var(--md-primary-fg-color-header-text);
+}
+.md-tabs__link--active, .md-tabs__link:focus, .md-tabs__link:hover {
+    color: var(--md-primary-fg-color-header-text-active)!important;
+}
+.hljs-attr {
+    color: var(--md-hjs-attr-color) !important;
+}
+.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag {
+    color: var( --md-hjs-color) !important;
+}
+.hljs-addition, .hljs-attribute, .hljs-literal, .hljs-section, .hljs-string, .hljs-template-tag, .hljs-template-variable, .hljs-title, .hljs-type{
+    color: var(--md-hjs-other-color)!important;
+}
+
+
+.banner-link {
+    width: 711px;
+    height: 363px;
+}
+
+.md-header{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08), inset 0px -1px 0px #E1E2E7;
+}
