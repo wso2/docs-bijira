@@ -1,0 +1,39 @@
+{% import "partials/language.html" as lang with context %}
+
+{% set class = "md-nav__item" %}
+{% if nav_item.active %}
+  {% set class = class ~ " md-nav__item--active" %}
+{% endif %}
+{% if nav_item.children %}
+  {% set class = class ~ " md-nav__item--nested" %}
+{% endif %}
+
+<li class="{{ class }}">
+  {% if nav_item.children %}
+    {% if nav_item.active %}
+      {% set checked = "checked" %}
+    {% endif %}
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="{{ path }}" {{ checked }}>
+    <label class="md-nav__link" for="{{ path }}" id="{{ path }}_label" tabindex="{{ level }}">
+      {{ nav_item.title }}
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label" aria-expanded="{{ nav_item.active | lower }}">
+      <label class="md-nav__title" for="{{ path }}">
+        <span class="md-nav__icon md-icon"></span>
+        {{ nav_item.title }}
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        {% for nav_item in nav_item.children %}
+          {% set path = path ~ "-" ~ loop.index %}
+          {% set level = level + 1 %}
+          {% include "partials/nav-item.html" %}
+        {% endfor %}
+      </ul>
+    </nav>
+  {% else %}
+    <a href="{{ nav_item.url | url }}" class="md-nav__link{% if nav_item.active %} md-nav__link--active{% endif %}">
+      {{ nav_item.title }}
+    </a>
+  {% endif %}
+</li>
