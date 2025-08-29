@@ -37,6 +37,9 @@ To configure enterprise login for your Bijira organization, follow the steps giv
 
        Thank you.
 
+!!! note
+    You can choose to configure enterprise login for the Bijira Console, the Bijira Developer Portal, or both.
+
 The Bijira support team will perform the necessary configurations and respond to you with a verification code. You must sign in to your domain host account and configure the DNS record for your email domain with the following values:
 
 | **Field**                    | **Value**                                      |
@@ -55,11 +58,18 @@ Follow the steps given below to configure the federated IdP:
 
 1. Sign in to [Asgardeo](https://asgardeo.io/).
 2. To configure a federated enterprise identity provider for your Asgardeo organization, follow the steps in [Asgardeo documentation - Add Standard-Based Login](https://wso2.com/asgardeo/docs/guides/authentication/enterprise-login/).
-3. In the Asgardeo Console left navigation menu, click **Applications**. You will see an application named **WSO2_LOGIN_FOR_BIJIRA**.
-4. Click on the application to edit it.
-5. Click the **Sign-in Method** tab. You can observe the configured connection.
+3. In the Asgardeo Console left-hand menu, click **Applications**. 
+You will see applications listed with the names, **WSO2_LOGIN_FOR_BIJIRA** and **WSO2_LOGIN_FOR_BIJIRADEVPORTAL**.
+
+4. In this example, we’ll configure an external identity for the Bijira Console.
+5. Click on the **WSO2_LOGIN_FOR_BIJIRA** application.
+6. Click the **Sign-in Method** tab. You can observe the configured connection.
 
 Now, users in your enterprise IdP can sign in to the Bijira Console using their enterprise IDs.
+
+!!! note
+        You can follow the same steps to configure the external identity for the Bijira DevPortal using **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** Application.
+
 
 ## Configure role-based access control for enterprise login
 
@@ -85,8 +95,8 @@ Before you proceed with the configuration, make sure you complete the following:
 
 3. To configure the application, follow the steps given below:
 
-   1. In the Asgardeo Console left navigation menu, click **Applications**. You will see an application named **WSO2_LOGIN_FOR_BIJIRA**.
-   2. Click on the application to edit it.
+   1. In the Asgardeo Console left navigation menu, click **Applications**
+   2. Click on the **WSO2_LOGIN_FOR_BIJIRA** or **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** application that you want to configure
    3. Click the **Sign-in Method** tab.
    4. Configure the IdP for login depending on the protocol you selected:
       - For OpenID Connect, follow the instructions in [Enable the OIDC IdP for login](https://wso2.com/asgardeo/docs/guides/authentication/enterprise-login/add-oidc-idp-login/#enable-the-oidc-idp-for-login).
@@ -107,7 +117,6 @@ Before you proceed with the configuration, make sure you complete the following:
 
     Before you map Bijira groups to enterprise IdP groups, ensure you meet the following criteria:
 
-    - Asgardeo is your key manager.
     - You have permission to perform actions of the organization administrator role.
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
