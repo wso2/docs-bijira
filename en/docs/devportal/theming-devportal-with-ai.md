@@ -17,7 +17,7 @@ This creates the organization and opens the **Project Home** page of the default
 Go though the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
-- Go to sidebar and click the dropdown near the username and select `Settings`.
+- In the left navigation menu, click `Admin` and then click `Settings`.
 - Select `Developer Portal` tab.
 
 ## Theme your Devportal with AI

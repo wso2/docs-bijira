@@ -10,7 +10,7 @@ To subscribe to an API via an application, follow these steps:
 
 3. On the **Applications** page, click on the application you want to use to subscribe to an API.
 
-4. Under the **Subscribed APIs** section, click **Subscribe to more APIs**.
+4. Under the **Subscribed API Proxies** section, click **Explore more**.
 
 5. In the **APIs** page, click **Subscribe** to subscribe to an API. You can subscribe to one or more APIs based on your requirements.
 
