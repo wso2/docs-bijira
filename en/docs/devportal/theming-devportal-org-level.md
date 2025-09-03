@@ -22,7 +22,7 @@ This creates the organization and opens the **Project Home** page of the default
 Go though the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
-- Go to sidebar and click the dropdown near the username and select `Settings`.
+- In the left navigation menu, click `Admin` and then click `Settings`.
 - Select `Developer Portal` tab.
 
 ## Theme your Devportal in Org Level
@@ -33,15 +33,9 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 1. Select `Org Level` tab.
 2. Select `Theme Settings` tab. Here, you can manage and customize theme colors for your organization.
-3. Select the colors below from the palette. A preview can be shown.
-
-    | Field Name         | Color                    |
-    |--------------------|--------------------------|
-    | Background         | #f8ff84                |
-    | Primary - Main     | #3e9529                |
-    | Secondary - Main   | #8d21c4                |
-    | Text- Main         | #1f1fcd                |
-    | Gradient- Main     | linear-gradient(135deg, #cbd340 0%, #79d93f 100%) |
+3. Expand the **Color Palette** section to see the available color fields.
+4. Click on each color field to open the color selection interface and choose your desired colors.
+5. The preview panel on the right will show real-time changes as you modify the colors.
 
     ![Customized theme preview](../assets/img/devportal/customized_theming.png)
 
@@ -106,16 +100,18 @@ Go through the following steps to customize the theme of the Devportal in the or
 ### CSS
 
 1. Select `CSS` tab. You can modify CSS styles to adjust the appearance of the pages.
-2. Paste the below code for `.hero-title` .
+2. Paste the below code for `.hero-title`.
 
-    ``` CSS
-     .hero-title{
+    ```css
+    .hero-title {
         font-size: 2rem;
         font-weight: 1000;
         color: var(--primary-dark-color);
         margin-bottom: 5rem;
         line-height: 2;
-     }
+    }
+    ```
+
 3. The changes can be seen in the preview section.
 
     ![Change with CSS](../assets/img/devportal/change_with_css.png)

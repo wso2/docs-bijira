@@ -22,7 +22,7 @@ This creates the organization and opens the **Project Home** page of the default
 Go though the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
-- Go to sidebar and click the dropdown near the username and select `Settings`.
+- In the left navigation menu, click `Admin` and then click `Settings`.
 - Select `Developer Portal` tab.
 
 ## Theme your Devportal in API Level
@@ -45,7 +45,7 @@ Here you can adjust appearance of the API Overview page by changing the css styl
 
 ![API Level CSS](../assets/img/devportal/api-level-css.png)
 
-1. Replace the following sections in the CSS.You can see the changes in the preview.
+1. Replace the following sections in the CSS, You can see the changes in the preview.
 
     ```CSS
     .key-benefit-item h3 {
