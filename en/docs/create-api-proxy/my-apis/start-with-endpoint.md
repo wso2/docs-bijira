@@ -22,7 +22,7 @@ In this guide, you will create an API proxy using an endpoint.
 4. Provide the following URL as the **Endpoint URL**.
 
    ```
-   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/open-api.yaml
+   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml   
    ```
 
 5. Click **Next**.
