@@ -22,21 +22,27 @@ To generate an access token for **testing purposes**, follow these steps:
 
 5. This will generate the consumer key and consumer secret with default configurations.
 
+6. You can add scopes through the Request Permission section in the Access Token dialog.
+
+![Scope List](../../assets/img/devportal/ScopeSection.png)
+
+!!!info
+    Currently, Bijira does not support configuring allowed scopes at the application level.
+
 You can use the **View** and **Modify** buttons to inspect and customize the default key generation settings.
 
-To generate a test token for testing purposes, click **Generate** and copy the displayed token. 
+To generate a test token for testing purposes, click **Generate** and copy the displayed token.
 
 Alternatively, click **Instructions** to view details about the token endpoint. You can either copy the generated cURL command to obtain a test token using a cURL client, or use the consumer key and consumer secret to generate an API access token by invoking the token endpoint. You can also revoke the access token by invoking the revoke endpoint.
-
 
 ## Consume an API
 
 Use this generated access token to authenticate API requests by including it in the `Bearer` header when invoking the API.
 
 Example:
-    
+
 ```bash
-curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.bijiraapis.dev/greet"  
+curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.bijiraapis.dev/greet"
 ```
 
 !!! note
