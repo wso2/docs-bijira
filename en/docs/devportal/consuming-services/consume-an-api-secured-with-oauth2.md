@@ -22,7 +22,7 @@ To generate an access token for **testing purposes**, follow these steps:
 
 5. This will generate the consumer key and consumer secret with default configurations.
 
-6. You can add scopes through the Request Permission section in the Generate Key modal.
+6. You can add scopes through the Request Permission section in the Access Token dialog.
 
 ![Scope List](../../assets/img/devportal/ScopeSection.png)
 
