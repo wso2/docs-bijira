@@ -1,0 +1,2803 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bijira Documentation">
+      
+      
+        <meta name="author" content="WSO2">
+      
+      
+        <link rel="canonical" href="https://wso2.com/bijira/docs/administer/configure-vpns/configure-vpns/">
+      
+      
+        <link rel="prev" href="../../configure-enterprise-login/configure-enterprise-login/">
+      
+      
+        <link rel="next" href="../../../devportal/theming-devportal-with-ai/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>Bijira Documentation | Configure VPNs on Bijira Cloud Data Plane</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Added the font from google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/lib/highlightjs/styles/vs.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/blue-palette-alt2.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/bijiratheme.css">
+    
+      <link rel="stylesheet" href="../../../assets/lib/json-formatter/json-formatter.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/config-catalog.css">
+    
+      <link rel="stylesheet" href="../../../assets/lib/fontawesome-free-6.3.0-web/css/all.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/highlightjs/styles/vs.css" />
+<!-- scripts -->
+<script type="text/javascript" src="../../assets/lib/highlightjs/highlight.min.js"></script>
+<script type="text/javascript" src="../../assets/lib/highlightjs/ballerina.min.js"></script>
+<script type="text/javascript">
+	hljs.highlightAll();
+</script>
+   <!-- Google Tag Manager -->
+   <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+       'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.setAttributeNode(d.createAttribute('data-ot-ignore'));
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PSTXMT');
+   </script>
+   <!-- End Google Tag Manager -->
+
+   <!-- todo Add the cookie consent notice -->
+   <!-- CookiePro cookie consent notice start -->
+   <!-- <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="486163bc-a8c5-40d8-b185-c707cc718a23" ></script>
+   <script src="https://wso2.com//sites/all/themes/wso2_d7/js/cookie-revoke.js"></script> -->
+
+   <!-- CookiePro cookies consent notice end -->
+   
+  </script>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" >
+  
+    
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure-vpns-on-the-bijira-cloud-data-plane" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bijira Documentation" class="md-header__button md-logo" aria-label="Bijira Documentation" data-md-component="logo">
+      
+    
+        <img class="logo-light" src="../../../assets/images/BijiraDocs.svg" alt="logo" data-md-component="logo" data-md-color-scheme="default">
+    
+    
+        <img class="logo-dark" src="../../../assets/images/BijiraDocsWhite.svg" alt="logo" data-md-component="logo" data-md-color-scheme="slate">
+    
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configure VPNs on Bijira Cloud Data Plane
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div
+  class="md-search"
+  data-md-component="search"
+  role="dialog"
+  style="margin-left: 12px"
+>
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search" id="search">
+      <input
+        type="text"
+        class="md-search__input"
+        name="query"
+        id="query"
+        aria-label="Search"
+        placeholder="Search"
+        autocapitalize="off"
+        autocorrect="off"
+        autocomplete="off"
+        spellcheck="false"
+        data-md-component="search-query"
+        required
+      />
+      <label class="md-search__icon md-icon" for="__search" style="color :rgb(223, 223, 223)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button
+          type="reset"
+          class="md-search__icon md-icon"
+          title="Clear"
+          aria-label="Clear"
+          tabindex="-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output" id="dropDownSearchResults">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <div class="row" style="display: flex; align-items: center;">
+  <div style="display: block; float: left; width: 49%">
+    <a
+      class="md-source"
+      data-md-component="source"
+      href="https://discord.com/invite/wso2"
+    >
+      <div class="md-source__icon md-icon">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+      </div>
+      <label>Get Help</label>
+    </a>
+  </div>
+  <div style="width: 49%; float: right; display: block">
+    <!-- <a
+      class="md-source"
+      data-md-component="source"
+      href="https://console.bijira.dev/login/"
+    >
+      <div class="md-source__icon md-icon">
+        <svg
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 101.98 78.17"
+        >
+          <path
+            class="cls-1"
+            d="M97.46,18.83c-.33-7.98-6.9-14.34-14.96-14.34h-39.8c-7.98.34-14.34,6.92-14.34,14.98v17.28s-9.51,0-9.51,0h-.36c-2.24-.18-3.95-1.94-3.95-4.03v-12.87c2.73-1.29,4.61-4.07,4.61-7.29,0-4.45-3.61-8.06-8.06-8.06S3.01,8.1,3.01,12.55c0,3.22,1.88,5.99,4.61,7.29v12.94s.01.49.01.49c.26,5.84,5.21,10.45,11.21,10.45h9.51s0,14.91,0,14.91v.63c.34,7.98,6.92,14.34,14.98,14.34h39.8c7.98-.34,14.34-6.92,14.34-14.98V18.83ZM90.56,58.63v.49c-.27,4.22-3.78,7.57-8.06,7.57h-39.66c-4.22-.27-7.57-3.78-7.57-8.06V18.97c.27-4.22,3.78-7.57,8.06-7.57h39.17c4.45,0,8.06,3.61,8.06,8.06v39.17Z"
+          ></path>
+          <path
+            class="cls-1"
+            d="M49.24,58.3V19.88h16.19c2.41,0,4.49.43,6.24,1.29,1.75.86,3.09,2.06,4.02,3.61.93,1.55,1.39,3.4,1.39,5.57,0,1.82-.47,3.5-1.42,5.03-.95,1.53-2.42,2.76-4.41,3.69v-2.63c1.75.69,3.18,1.56,4.28,2.6,1.1,1.05,1.9,2.23,2.4,3.53.5,1.31.75,2.68.75,4.13,0,3.61-1.18,6.45-3.53,8.51-2.36,2.06-5.6,3.09-9.72,3.09h-16.19ZM55.32,35.19h10.21c1.65,0,2.97-.47,3.97-1.42,1-.95,1.5-2.17,1.5-3.69s-.5-2.75-1.5-3.61c-1-.86-2.32-1.29-3.97-1.29h-10.21v10ZM55.32,52.88h10.57c2.03,0,3.65-.56,4.87-1.68,1.22-1.12,1.83-2.6,1.83-4.46s-.61-3.35-1.83-4.49c-1.22-1.13-2.84-1.7-4.87-1.7h-10.57v12.33Z"
+          ></path>
+        </svg>
+      </div>
+      <label>Try Bijira</label>
+    </a> -->
+    <button
+      class="bijira-button"
+      onclick="window.open('https://console.bijira.dev/login/', '_blank')"
+    >
+      <svg
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 101.98 78.17"
+        width="24"
+        height="24"
+        fill="#6C9BB5"
+      >
+        <path
+          class="cls-1"
+          d="M97.46,18.83c-.33-7.98-6.9-14.34-14.96-14.34h-39.8c-7.98.34-14.34,6.92-14.34,14.98v17.28s-9.51,0-9.51,0h-.36c-2.24-.18-3.95-1.94-3.95-4.03v-12.87c2.73-1.29,4.61-4.07,4.61-7.29,0-4.45-3.61-8.06-8.06-8.06S3.01,8.1,3.01,12.55c0,3.22,1.88,5.99,4.61,7.29v12.94s.01.49.01.49c.26,5.84,5.21,10.45,11.21,10.45h9.51s0,14.91,0,14.91v.63c.34,7.98,6.92,14.34,14.98,14.34h39.8c7.98-.34,14.34-6.92,14.34-14.98V18.83ZM90.56,58.63v.49c-.27,4.22-3.78,7.57-8.06,7.57h-39.66c-4.22-.27-7.57-3.78-7.57-8.06V18.97c.27-4.22,3.78-7.57,8.06-7.57h39.17c4.45,0,8.06,3.61,8.06,8.06v39.17Z"
+        ></path>
+        <path
+          class="cls-1"
+          d="M49.24,58.3V19.88h16.19c2.41,0,4.49.43,6.24,1.29,1.75.86,3.09,2.06,4.02,3.61.93,1.55,1.39,3.4,1.39,5.57,0,1.82-.47,3.5-1.42,5.03-.95,1.53-2.42,2.76-4.41,3.69v-2.63c1.75.69,3.18,1.56,4.28,2.6,1.1,1.05,1.9,2.23,2.4,3.53.5,1.31.75,2.68.75,4.13,0,3.61-1.18,6.45-3.53,8.51-2.36,2.06-5.6,3.09-9.72,3.09h-16.19ZM55.32,35.19h10.21c1.65,0,2.97-.47,3.97-1.42,1-.95,1.5-2.17,1.5-3.69s-.5-2.75-1.5-3.61c-1-.86-2.32-1.29-3.97-1.29h-10.21v10ZM55.32,52.88h10.57c2.03,0,3.65-.56,4.87-1.68,1.22-1.12,1.83-2.6,1.83-4.46s-.61-3.35-1.83-4.49c-1.22-1.13-2.84-1.7-4.87-1.7h-10.57v12.33Z"
+        ></path>
+      </svg>
+      Try Bijira
+    </button>
+  </div>
+</div>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation"  style="width: 20%;">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner" style="padding-right: 8px;">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+    <label class="md-nav__title md-nav__title--site" for="__drawer">
+      <a href="https://wso2.com/bijira/docs/" title="Bijira Documentation"
+         class="md-nav__button md-logo">
+        
+          <img src="../../../assets/images/BijiraDocs.svg" width="48" height="48">
+        
+      </a>
+      Bijira Documentation
+    </label>
+    
+      <div class="md-nav__source">
+        <div class="row" style="display: flex; align-items: center;">
+  <div style="display: block; float: left; width: 49%">
+    <a
+      class="md-source"
+      data-md-component="source"
+      href="https://discord.com/invite/wso2"
+    >
+      <div class="md-source__icon md-icon">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+      </div>
+      <label>Get Help</label>
+    </a>
+  </div>
+  <div style="width: 49%; float: right; display: block">
+    <!-- <a
+      class="md-source"
+      data-md-component="source"
+      href="https://console.bijira.dev/login/"
+    >
+      <div class="md-source__icon md-icon">
+        <svg
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 101.98 78.17"
+        >
+          <path
+            class="cls-1"
+            d="M97.46,18.83c-.33-7.98-6.9-14.34-14.96-14.34h-39.8c-7.98.34-14.34,6.92-14.34,14.98v17.28s-9.51,0-9.51,0h-.36c-2.24-.18-3.95-1.94-3.95-4.03v-12.87c2.73-1.29,4.61-4.07,4.61-7.29,0-4.45-3.61-8.06-8.06-8.06S3.01,8.1,3.01,12.55c0,3.22,1.88,5.99,4.61,7.29v12.94s.01.49.01.49c.26,5.84,5.21,10.45,11.21,10.45h9.51s0,14.91,0,14.91v.63c.34,7.98,6.92,14.34,14.98,14.34h39.8c7.98-.34,14.34-6.92,14.34-14.98V18.83ZM90.56,58.63v.49c-.27,4.22-3.78,7.57-8.06,7.57h-39.66c-4.22-.27-7.57-3.78-7.57-8.06V18.97c.27-4.22,3.78-7.57,8.06-7.57h39.17c4.45,0,8.06,3.61,8.06,8.06v39.17Z"
+          ></path>
+          <path
+            class="cls-1"
+            d="M49.24,58.3V19.88h16.19c2.41,0,4.49.43,6.24,1.29,1.75.86,3.09,2.06,4.02,3.61.93,1.55,1.39,3.4,1.39,5.57,0,1.82-.47,3.5-1.42,5.03-.95,1.53-2.42,2.76-4.41,3.69v-2.63c1.75.69,3.18,1.56,4.28,2.6,1.1,1.05,1.9,2.23,2.4,3.53.5,1.31.75,2.68.75,4.13,0,3.61-1.18,6.45-3.53,8.51-2.36,2.06-5.6,3.09-9.72,3.09h-16.19ZM55.32,35.19h10.21c1.65,0,2.97-.47,3.97-1.42,1-.95,1.5-2.17,1.5-3.69s-.5-2.75-1.5-3.61c-1-.86-2.32-1.29-3.97-1.29h-10.21v10ZM55.32,52.88h10.57c2.03,0,3.65-.56,4.87-1.68,1.22-1.12,1.83-2.6,1.83-4.46s-.61-3.35-1.83-4.49c-1.22-1.13-2.84-1.7-4.87-1.7h-10.57v12.33Z"
+          ></path>
+        </svg>
+      </div>
+      <label>Try Bijira</label>
+    </a> -->
+    <button
+      class="bijira-button"
+      onclick="window.open('https://console.bijira.dev/login/', '_blank')"
+    >
+      <svg
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 101.98 78.17"
+        width="24"
+        height="24"
+        fill="#6C9BB5"
+      >
+        <path
+          class="cls-1"
+          d="M97.46,18.83c-.33-7.98-6.9-14.34-14.96-14.34h-39.8c-7.98.34-14.34,6.92-14.34,14.98v17.28s-9.51,0-9.51,0h-.36c-2.24-.18-3.95-1.94-3.95-4.03v-12.87c2.73-1.29,4.61-4.07,4.61-7.29,0-4.45-3.61-8.06-8.06-8.06S3.01,8.1,3.01,12.55c0,3.22,1.88,5.99,4.61,7.29v12.94s.01.49.01.49c.26,5.84,5.21,10.45,11.21,10.45h9.51s0,14.91,0,14.91v.63c.34,7.98,6.92,14.34,14.98,14.34h39.8c7.98-.34,14.34-6.92,14.34-14.98V18.83ZM90.56,58.63v.49c-.27,4.22-3.78,7.57-8.06,7.57h-39.66c-4.22-.27-7.57-3.78-7.57-8.06V18.97c.27-4.22,3.78-7.57,8.06-7.57h39.17c4.45,0,8.06,3.61,8.06,8.06v39.17Z"
+        ></path>
+        <path
+          class="cls-1"
+          d="M49.24,58.3V19.88h16.19c2.41,0,4.49.43,6.24,1.29,1.75.86,3.09,2.06,4.02,3.61.93,1.55,1.39,3.4,1.39,5.57,0,1.82-.47,3.5-1.42,5.03-.95,1.53-2.42,2.76-4.41,3.69v-2.63c1.75.69,3.18,1.56,4.28,2.6,1.1,1.05,1.9,2.23,2.4,3.53.5,1.31.75,2.68.75,4.13,0,3.61-1.18,6.45-3.53,8.51-2.36,2.06-5.6,3.09-9.72,3.09h-16.19ZM55.32,35.19h10.21c1.65,0,2.97-.47,3.97-1.42,1-.95,1.5-2.17,1.5-3.69s-.5-2.75-1.5-3.61c-1-.86-2.32-1.29-3.97-1.29h-10.21v10ZM55.32,52.88h10.57c2.03,0,3.65-.56,4.87-1.68,1.22-1.12,1.83-2.6,1.83-4.46s-.61-3.35-1.83-4.49c-1.22-1.13-2.84-1.7-4.87-1.7h-10.57v12.33Z"
+        ></path>
+      </svg>
+      Try Bijira
+    </button>
+  </div>
+</div>
+      </div>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+        
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2" id="nav-2_label" tabindex="1">
+      Introduction
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../introduction/what-is-bijira/" class="md-nav__link">
+      What is Bijira?
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../introduction/quick-start-guide/" class="md-nav__link">
+      Quick Start Guide
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3" id="nav-3_label" tabindex="1">
+      Bijira Samples
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-3_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Bijira Samples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../samples/samples-overview/" class="md-nav__link">
+      Samples Overview
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4" id="nav-4_label" tabindex="1">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-4_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../tutorials/expose-a-service-as-a-managed-api/" class="md-nav__link">
+      Expose a Service as a Managed API
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../tutorials/secure-an-api-with-role-based-access-control/" class="md-nav__link">
+      Secure an API with RBAC
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5" id="nav-5_label" tabindex="1">
+      Bijira Concepts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-5_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Bijira Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../bijira-concepts/organization/" class="md-nav__link">
+      Organization
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../bijira-concepts/project/" class="md-nav__link">
+      Project
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../bijira-concepts/data-planes/" class="md-nav__link">
+      Data Planes
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6" id="nav-6_label" tabindex="1">
+      Create API Proxy
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-6_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Create API Proxy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/overview/" class="md-nav__link">
+      Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-2" >
+    <label class="md-nav__link" for="nav-6-2" id="nav-6-2_label" tabindex="2">
+      My APIs (Ingress)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-6-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon"></span>
+        My APIs (Ingress)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/my-apis/import-api-contract/" class="md-nav__link">
+      Import API Contract
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/my-apis/import-api-from-github/" class="md-nav__link">
+      Import API Contract from GitHub
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/my-apis/start-with-endpoint/" class="md-nav__link">
+      Start with Endpoint
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/my-apis/start-from-scratch/" class="md-nav__link">
+      Start from Scratch
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/my-apis/create-with-genai/" class="md-nav__link">
+      Create with GenAI
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-3" >
+    <label class="md-nav__link" for="nav-6-3" id="nav-6-3_label" tabindex="2">
+      Third Party APIs (Egress)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-6-3_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon"></span>
+        Third Party APIs (Egress)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-3-1" >
+    <label class="md-nav__link" for="nav-6-3-1" id="nav-6-3-1_label" tabindex="3">
+      AI APIs
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="3" aria-labelledby="nav-6-3-1_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        AI APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/ai-apis/" class="md-nav__link">
+      Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-3-1-2" >
+    <label class="md-nav__link" for="nav-6-3-1-2" id="nav-6-3-1-2_label" tabindex="4">
+      Providers
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="4" aria-labelledby="nav-6-3-1-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-3-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Providers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/open-ai/" class="md-nav__link">
+      OpenAI
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/azure-ai/" class="md-nav__link">
+      Azure OpenAI
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/mistral/" class="md-nav__link">
+      Mistral
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/awsbedrock/" class="md-nav__link">
+      AWS Bedrock
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/claude/" class="md-nav__link">
+      Anthropic
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-3-1-3" >
+    <label class="md-nav__link" for="nav-6-3-1-3" id="nav-6-3-1-3_label" tabindex="4">
+      Policies
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="4" aria-labelledby="nav-6-3-1-3_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-3-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        Policies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/token-ratelimit/" class="md-nav__link">
+      Token-Based Rate Limit
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-6-3-1-3-2" >
+    <label class="md-nav__link" for="nav-6-3-1-3-2" id="nav-6-3-1-3-2_label" tabindex="5">
+      Guardrails
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="5" aria-labelledby="nav-6-3-1-3-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-6-3-1-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Guardrails
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/" class="md-nav__link">
+      Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail/" class="md-nav__link">
+      Regex Guardrail
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/word-count-guardrail/" class="md-nav__link">
+      Word Count Guardrail
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail/" class="md-nav__link">
+      Sentence Count Guardrail
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/content-length-guardrail/" class="md-nav__link">
+      Content Length Guardrail
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail/" class="md-nav__link">
+      URL Guardrail
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking/" class="md-nav__link">
+      Regex PII Masking
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking/" class="md-nav__link">
+      PII Masking
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation/" class="md-nav__link">
+      Azure Content Safety Content Moderation
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail/" class="md-nav__link">
+      AWS Bedrock Guardrail
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/semantic-cache/" class="md-nav__link">
+      Semantic Cache
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/get-from-marketplace/" class="md-nav__link">
+      Get from Marketplace
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../create-api-proxy/third-party-apis/import-api-contract/" class="md-nav__link">
+      Import API Contract
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-7" >
+    <label class="md-nav__link" for="nav-7" id="nav-7_label" tabindex="1">
+      Develop API Proxy
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-7_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Develop API Proxy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-7-1" >
+    <label class="md-nav__link" for="nav-7-1" id="nav-7-1_label" tabindex="2">
+      Authentication and Authorization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-7-1_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        Authentication and Authorization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo/" class="md-nav__link">
+      Secure API Access with Asgardeo
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts/" class="md-nav__link">
+      Secure API Access with Bijira STS
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad/" class="md-nav__link">
+      Secure API Access with Azure AD
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2/" class="md-nav__link">
+      Secure Communication Between the Bijira Gateway and Your Backend with OAuth2
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls/" class="md-nav__link">
+      Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-7-2" >
+    <label class="md-nav__link" for="nav-7-2" id="nav-7-2_label" tabindex="2">
+      Policy
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-7-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-7-2">
+        <span class="md-nav__icon md-icon"></span>
+        Policy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/policy/overview/" class="md-nav__link">
+      Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/policy/policies/" class="md-nav__link">
+      Policies
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/policy/attach-and-manage-policies/" class="md-nav__link">
+      Attach and Manage Policies
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/documents/" class="md-nav__link">
+      Documents
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/lifecycle-management/" class="md-nav__link">
+      Lifecycle
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../develop-api-proxy/subscription-plans/" class="md-nav__link">
+      Subscription Plans
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8" id="nav-8_label" tabindex="1">
+      Test API Proxy
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-8_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Test API Proxy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../test-api-proxy/openapi-console/" class="md-nav__link">
+      OpenAPI Console
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../test-api-proxy/curl/" class="md-nav__link">
+      cURL
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../test-api-proxy/api-chat/" class="md-nav__link">
+      API Chat
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-9" >
+    <label class="md-nav__link" for="nav-9" id="nav-9_label" tabindex="1">
+      MCP Servers
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-9_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        MCP Servers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../mcp-servers/get-started-with-mcp/" class="md-nav__link">
+      Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../mcp-servers/design-mcp-servers/" class="md-nav__link">
+      Design MCP Servers
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../mcp-servers/proxy-remote-servers/" class="md-nav__link">
+      Proxy Remote MCP Servers
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../mcp-servers/devportal-mcp-hub/" class="md-nav__link">
+      Customize Developer Portal as an MCP Hub
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-10" >
+    <label class="md-nav__link" for="nav-10" id="nav-10_label" tabindex="1">
+      API Governance
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-10_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        API Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../governance/overview/" class="md-nav__link">
+      API Governance Overview
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../governance/govern-api-proxy/" class="md-nav__link">
+      Govern API Proxy
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-11" >
+    <label class="md-nav__link" for="nav-11" id="nav-11_label" tabindex="1">
+      Monitor and Insights
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-11_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Monitor and Insights
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../monitoring-and-insights/integrate-bijira-with-moesif/" class="md-nav__link">
+      Integrate Bijira with Moesif
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+  
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+    
+      
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-12" checked>
+    <label class="md-nav__link" for="nav-12" id="nav-12_label" tabindex="1">
+      Administer
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-12_label" aria-expanded="true">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon"></span>
+        Administer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../settings/create-api-subscription-plans/" class="md-nav__link">
+      Create API Subscription Plans
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../settings/configure-a-custom-domain-for-your-organization/" class="md-nav__link">
+      Configure a Custom Domain for Your Organization
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../manage-environments/manage-environments/" class="md-nav__link">
+      Manage Environments
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../manage-cd-pipelines/manage-cd-pipelines/" class="md-nav__link">
+      Manage CD pipelines
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../configure-an-external-idp/configure-asgardeo-as-an-external-idp/" class="md-nav__link">
+      Configure Asgardeo as an External IdP
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../configure-enterprise-login/configure-enterprise-login/" class="md-nav__link">
+      Configure Enterprise Login
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+  
+
+
+
+<li class="md-nav__item md-nav__item--active">
+  
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Configure VPNs on Bijira Cloud Data Plane
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        
+        
+        
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13" >
+    <label class="md-nav__link" for="nav-13" id="nav-13_label" tabindex="1">
+      Developer Portal
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="1" aria-labelledby="nav-13_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon"></span>
+        Developer Portal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-1" >
+    <label class="md-nav__link" for="nav-13-1" id="nav-13-1_label" tabindex="2">
+      Theming Developer Portal
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-13-1_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-1">
+        <span class="md-nav__icon md-icon"></span>
+        Theming Developer Portal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/theming-devportal-with-ai/" class="md-nav__link">
+      Theming with AI
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-1-2" >
+    <label class="md-nav__link" for="nav-13-1-2" id="nav-13-1-2_label" tabindex="3">
+      Theming Manually
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="3" aria-labelledby="nav-13-1-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Theming Manually
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/theming-devportal-org-level/" class="md-nav__link">
+      Theme in Organizational Level
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/theming-devportal-api-level/" class="md-nav__link">
+      Theme in API Level
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/developer-portal-mode/" class="md-nav__link">
+      Devportal Mode
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-2" >
+    <label class="md-nav__link" for="nav-13-2" id="nav-13-2_label" tabindex="2">
+      Discover APIs
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-13-2_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-2">
+        <span class="md-nav__icon md-icon"></span>
+        Discover APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/discover-apis/api-search/" class="md-nav__link">
+      Search APIs
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/discover-apis/api-documentations/" class="md-nav__link">
+      Documentations
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-3" >
+    <label class="md-nav__link" for="nav-13-3" id="nav-13-3_label" tabindex="2">
+      Consume an API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-13-3_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-3">
+        <span class="md-nav__icon md-icon"></span>
+        Consume an API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/consuming-services/consume-an-api-secured-with-oauth2/" class="md-nav__link">
+      Consume an API Secured with OAuth2
+    </a>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/consuming-services/consume-an-api-secured-with-api-key/" class="md-nav__link">
+      Consume an API Secured with API Key
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-4" >
+    <label class="md-nav__link" for="nav-13-4" id="nav-13-4_label" tabindex="2">
+      Manage Applications
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-13-4_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-4">
+        <span class="md-nav__icon md-icon"></span>
+        Manage Applications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/manage-applications/create-an-application/" class="md-nav__link">
+      Create an Application
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+          
+          
+
+
+
+
+  
+
+
+<li class="md-nav__item md-nav__item--nested">
+  
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="nav-13-5" >
+    <label class="md-nav__link" for="nav-13-5" id="nav-13-5_label" tabindex="2">
+      Manage Subscriptions
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" data-md-level="2" aria-labelledby="nav-13-5_label" aria-expanded="false">
+      <label class="md-nav__title" for="nav-13-5">
+        <span class="md-nav__icon md-icon"></span>
+        Manage Subscriptions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+          
+
+
+
+
+
+<li class="md-nav__item">
+  
+    <a href="../../../devportal/manage-subscriptions/subscribe-to-an-api/" class="md-nav__link">
+      Subscribe to an API
+    </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+    
+    
+    
+    
+    
+    <!-- <a href="#" title="On this page" class="nav_link md-icon md-content__icon toc_icon" id="tocToggleBtn">toc</a> -->
+    <label class="md-nav__title" for="__toc"></label>
+    <ul data-md-scrollfix >
+        
+        <li class="md-nav__item">
+  <a href="#configure-and-use-tailscale-to-access-private-network-endpoints" class="md-nav__link">
+    Configure and use Tailscale to access private network endpoints
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure and use Tailscale to access private network endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-tailscale-proxy-component" class="md-nav__link">
+    Step 1: Create the Tailscale proxy component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-and-deploy-the-tailscale-proxy" class="md-nav__link">
+    Step 2: Configure and deploy the Tailscale proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-api-proxy-to-forward-traffic-to-tailscale-proxy" class="md-nav__link">
+    Step 3: Configure API Proxy to forward traffic to Tailscale proxy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#post-deployment-actions" class="md-nav__link">
+    Post-deployment actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-deployment actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handle-node-key-expiry" class="md-nav__link">
+    Handle node key expiry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-auth-key-expiry" class="md-nav__link">
+    Handle auth key expiry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-port-mapping-configurations" class="md-nav__link">
+    Update port mapping configurations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-tailscale-acls" class="md-nav__link">
+    Use Tailscale ACLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    Security best practices
+  </a>
+  
+</li>
+        
+        
+        
+        
+        
+    </ul>
+    
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" style="margin-right: 4px;">
+                
+                  
+
+  
+    <a href="https://github.com/wso2/docs-bijira/edit/main/en/docs/administer/configure-vpns/configure-vpns.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/wso2/docs-bijira/raw/main/en/docs/administer/configure-vpns/configure-vpns.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="configure-vpns-on-the-bijira-cloud-data-plane">Configure VPNs on the Bijira Cloud Data Plane<a class="headerlink" href="#configure-vpns-on-the-bijira-cloud-data-plane" title="Permanent link">&para;</a></h1>
+<p>Secure access to private networks from the Bijira cloud data plane is an essential use case for cloud data plane users.</p>
+<p>Bijira allows this secure connection using <a href="https://tailscale.com/">Tailscale</a>. For this, Bijira provides a prebuilt Tailscale image component that can act as a forward proxy, which you can deploy in your Bijira project. This tailscale deployment allows you to forward traffic to your external networks via Tailscale’s peer-to-peer <a href="https://tailscale.com/kb/1035/wireguard">WireGuard</a> network.</p>
+<p>The following diagram illustrates the high-level deployment architecture of the Tailscale pre-installed forward proxy:</p>
+<p><a class="glightbox" href="../../../assets/img/administer/tailscale/deployment-architecture.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Deployment architecture" src="../../../assets/img/administer/tailscale/deployment-architecture.png" /></a></p>
+<p>Let's take a look at the specifics of each part to understand the deployment architecture.</p>
+<ul>
+<li>
+<p><strong>Bijira project</strong></p>
+<p>In Bijira, a project groups API Proxies and MCP Servers. For more information on what a project in Bijira is, see the documentation on <a href="../../../bijira-concepts/project/">Project</a>.</p>
+</li>
+<li>
+<p><strong>Tailscale proxy</strong></p>
+<p>This acts as the Tailscale pre-installed forward proxy, facilitating secure peer-to-peer WireGuard connections from the Bijira cloud data plane to private networks. It includes a <a href="https://tailscale.com/kb/1278/tailscaled">Tailscale Daemon</a>, <a href="https://tailscale.com/kb/1112/userspace-networking#socks5-vs-http">SOCKS5 proxy</a>, and a configurable TCP forwarder.</p>
+</li>
+<li>
+<p><strong>Tailscale daemon</strong></p>
+<p>This is the core component of Tailscale. It is a software service that provides secure network connectivity and private networking solutions. For more details see the <a href="https://tailscale.com/kb/1278/tailscaled">Tailscale documentation</a>.</p>
+</li>
+<li>
+<p><strong>SOCKS5 proxy</strong></p>
+<p>This uses Tailscale’s <a href="https://tailscale.com/kb/1112/userspace-networking">userspace networking</a> mode, rather than the kernel mode. Therefore, the inbuilt SOCKS5 proxy handles the forwarded traffic and directs it through the Tailscale network.</p>
+</li>
+<li>
+<p><strong>TCP forwarder</strong></p>
+<p>Forwards inbound TCP (transmission control protocol) traffic from the Tailscale proxy container’s network interface to the SOCKS5 proxy, ensuring it reaches its destination via the secured WireGuard tunnel.</p>
+</li>
+<li>
+<p><strong>API Proxies and Bijira API gateway</strong></p>
+<p>API proxies within the same project as the Tailscale proxy can send their traffic to the ports exposed on the Tailscale proxy. The Tailscale proxy then forwards this traffic to the correct target node and IP address in your Tailscale network that is defined in the port mapping of the endpoint configuration</p>
+</li>
+</ul>
+<hr>
+
+<p>Now that you understand the deployment architecture, let’s explore how you can use Tailscale to secure connections to your private networks.</p>
+<h2 id="configure-and-use-tailscale-to-access-private-network-endpoints">Configure and use Tailscale to access private network endpoints<a class="headerlink" href="#configure-and-use-tailscale-to-access-private-network-endpoints" title="Permanent link">&para;</a></h2>
+<p>This section walks you through the steps to create, configure, deploy, and use the Tailscale proxy component.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Understand the basics of <a href="https://tailscale.com/blog/how-tailscale-works">how Tailscale works</a>.</li>
+<li>Have a Tailscale account (Tailnet). There are multiple plans available for you to set up your Tailscale network. For details, see <a href="https://tailscale.com/pricing">Tailscale plans</a>.</li>
+<li>Install Tailscale and connect your private data center or server to it, so that your private services are accessible via your Tailscale network. To quickly get started with Tailscale, see the <a href="https://tailscale.com/kb/1017/install">Tailscale quickstart</a>.</li>
+</ul>
+<h3 id="step-1-create-the-tailscale-proxy-component">Step 1: Create the Tailscale proxy component<a class="headerlink" href="#step-1-create-the-tailscale-proxy-component" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Sign in to the <a href="https://console.bijira.dev/">Bijira Console</a>.</li>
+<li>In the Bijira Console top navigation menu, select the <strong>Organization</strong>, and then the <strong>Project</strong>.</li>
+<li>On the project home page, click <strong>Admin</strong> menu, and select the <strong>Settings</strong> sub menu.</li>
+<li>Click on the VPN Configuration tab and then click the Create button</li>
+</ol>
+<p><a class="glightbox" href="../../../assets/img/administer/tailscale/create-tailscale-view.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Tailscale view" src="../../../assets/img/administer/tailscale/create-tailscale-view.png" /></a></p>
+<ol>
+<li>
+<p>Enter a name, identifier, and a description for the tailscale proxy. For this guide, let's enter the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Tailscale proxy</td>
+</tr>
+<tr>
+<td>Identifier</td>
+<td>tailscale-proxy</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Tailscale proxy component</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<p>Now you have successfully created the Tailscale proxy. You can proceed to configure and deploy it.</p>
+<p><a class="glightbox" href="../../../assets/img/administer/tailscale/tailscale-created-view.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Successful Tailscale created view" src="../../../assets/img/administer/tailscale/tailscale-created-view.png" /></a></p>
+<h3 id="step-2-configure-and-deploy-the-tailscale-proxy">Step 2: Configure and deploy the Tailscale proxy<a class="headerlink" href="#step-2-configure-and-deploy-the-tailscale-proxy" title="Permanent link">&para;</a></h3>
+<p>Here, you will set the Tailscale authentication key, configure endpoints, and deploy the Tailscale proxy.</p>
+<p>Follow the steps given below:</p>
+<h4>Step 2.1: Configure and deploy the Tailscale proxy</h4>
+<p>To configure and deploy the tailscale proxy, follow the steps given below:</p>
+<ol>
+<li>
+<p>Enter Your Tailscale Auth Key</p>
+<p>To connect your system to Tailscale, you need an <strong>Auth Key</strong>. Follow the steps below to generate one:</p>
+<ul>
+<li>Visit the Tailscale Admin Keys page: <a href="https://login.tailscale.com/admin/settings/keys">https://login.tailscale.com/admin/settings/keys</a>  </li>
+<li>Click on the <strong>Generate Auth Key</strong> button to create a new key.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note<p>When generating an Auth Key, you can configure various properties such as expiration, reusability, and ephemeral settings. For detailed guidance, refer to the official Tailscale documentation: <a href="https://tailscale.com/kb/1085/auth-keys#generate-an-auth-key">Auth Keys Guide</a></p>
+</p>
+</div>
+</li>
+<li>
+<p>Configure Endpoints</p>
+<p>To forward traffic from the Tailscale proxy to external devices, follow these steps:</p>
+<p>i. Identify the external Tailscale device (node) and port that you want to make accessible via the Tailscale proxy. You can view your Tailscale devices in the <a href="https://login.tailscale.com/admin/machines">Tailscale machines</a> page.</p>
+<ul>
+<li>Example: Device IP <code>192.168.1.1</code>, port <code>9000</code>.</li>
+</ul>
+<p>ii. In the "Add Endpoint Configuration" section of the Tailscale proxy interface, fill in the following fields:</p>
+<ul>
+<li><strong>Endpoint Name:</strong> A descriptive name for the endpoint (e.g., <code>Internal Security APIs</code>).  </li>
+<li><strong>Port:</strong> The port on the Tailscale proxy that will receive incoming API traffic (e.g., <code>8090</code>).  </li>
+<li><strong>Target IP:</strong> The IP address of the external device where the traffic should be forwarded (e.g., <code>192.168.1.1</code>).  </li>
+<li><strong>Target Port:</strong> The port on the external device that should receive the traffic (e.g., <code>9000</code>).</li>
+</ul>
+<p>iii. Click the <strong>Add</strong> button to save the endpoint and the port mapping.  </p>
+<p>iv. Repeat the process for any additional endpoints you want to configure.  </p>
+<h4>Example Mappings</h4>
+<ul>
+<li>API Traffic sent to <strong>port 8090</strong> on the Tailscale proxy is forwarded to <strong>port 9000</strong> on the external tailscale node with IP <strong>192.168.1.1</strong>.  </li>
+<li>API Traffic sent to <strong>port 8001</strong> on the Tailscale proxy is forwarded to <strong>port 10112</strong> on the external tailscale node with IP <strong>192.112.10.1</strong>.</li>
+</ul>
+<p>By completing these steps, you ensure that incoming traffic to the Tailscale proxy is properly routed to the intended external devices and ports.</p>
+</li>
+<li>
+<p>Click <strong>Save &amp; Deploy</strong> to apply configurations and deploy the tailscale proxy.</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../../../assets/img/administer/tailscale/tailscale-configure.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Configure Tailscale proxy" src="../../../assets/img/administer/tailscale/tailscale-configure.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the Tailscale proxy is deployed, you can observe a new node connected to your Tailscale network. To view this, go to the <a href="https://login.tailscale.com/admin/machines">Tailscale machines</a> page of your Tailscale coordination server.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can configure multiple endpoints and port mappings on the same Tailscale device, and also across multiple Tailscale devices. This allows you to forward traffic from different ports to different external devices as needed.</p>
+</div>
+<h3 id="step-3-configure-api-proxy-to-forward-traffic-to-tailscale-proxy">Step 3: Configure API Proxy to forward traffic to Tailscale proxy<a class="headerlink" href="#step-3-configure-api-proxy-to-forward-traffic-to-tailscale-proxy" title="Permanent link">&para;</a></h3>
+<p>After the deployment is complete, the Tailscale proxy URL will be displayed in the environment view.</p>
+<ol>
+<li>
+<p>From the dropdown menus, select the desired Endpoint and Protocol (HTTP or HTTPS).</p>
+</li>
+<li>
+<p>The Tailscale URL will automatically update based on your selections.</p>
+</li>
+<li>
+<p>Copy the generated URL and set it as the target endpoint in your API proxy's configuration. This will route the API traffic through the Tailscale proxy.</p>
+</li>
+</ol>
+<h2 id="post-deployment-actions">Post-deployment actions<a class="headerlink" href="#post-deployment-actions" title="Permanent link">&para;</a></h2>
+<h3 id="handle-node-key-expiry">Handle node key expiry<a class="headerlink" href="#handle-node-key-expiry" title="Permanent link">&para;</a></h3>
+<p>Tailscale nodes have a default <a href="https://tailscale.com/kb/1010/node-keys">node key</a> expiry time of 180 days. Nodes require re-authentication after key expiry to avoid connection losses and application downtime. There is an option to disable node key expiry if necessary. For more details, see <a href="https://tailscale.com/kb/1028/key-expiry">Node key expiry documentation</a>.</p>
+<h3 id="handle-auth-key-expiry">Handle auth key expiry<a class="headerlink" href="#handle-auth-key-expiry" title="Permanent link">&para;</a></h3>
+<p><a href="https://tailscale.com/kb/1085/auth-keys">Auth keys</a> are used to register new nodes into your Tailscale network. The default <a href="https://tailscale.com/kb/1085/auth-keys#key-expiry">expiry time for auth keys</a> is 90 days, but nodes remain connected even after auth key expiry. This becomes an issue only if the Tailscale Proxy component is redeployed or restarted.</p>
+<h3 id="update-port-mapping-configurations">Update port mapping configurations<a class="headerlink" href="#update-port-mapping-configurations" title="Permanent link">&para;</a></h3>
+<p>If you want to add a new private endpoint to your network and access it via the same Tailscale proxy within Bijira, you must add a new port mapping entry in the endpoint configuration of your Tailscale proxy deployment.</p>
+<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="use-tailscale-acls">Use Tailscale ACLs<a class="headerlink" href="#use-tailscale-acls" title="Permanent link">&para;</a></h3>
+<p>You can use <a href="https://tailscale.com/kb/1018/acls">Tailscale ACLs</a> to precisely manage permission for users and devices on your Tailnet.</p>
+<h2 id="security-best-practices">Security best practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<p>Before deploying the Tailscale proxy in production environments, it is recommended to follow the Tailscale <a href="https://tailscale.com/kb/1300/production-best-practices">production best practices</a> and <a href="https://tailscale.com/kb/1196/security-hardening">security best practices</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bijira blocks incoming connections from other nodes in your Tailnet to the Tailscale proxy to prevent access to your project’s namespace in the Bijira cloud data plane.</p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+      
+        <footer class="md-footer">
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../configure-enterprise-login/configure-enterprise-login/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure Enterprise Login" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Configure Enterprise Login
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../devportal/theming-devportal-with-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: Theming with AI" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Theming with AI
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="footer-copyright-right">
+    <div class="footer-copyright-top">
+      Copyright &copy; <a href="https://wso2.com/">WSO2</a> LLC (2025)
+    </div>
+    <div class="footer-copyright-bottom">
+      Content licensed under <a href="https://creativecommons.org/licenses/by/4.0">CC By 4.0.</a> | Sample code
+      licensed under <a href="http://www.apache.org/licenses/">Apache 2.0</a>.
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.top", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+        <script src="../../../assets/lib/json-formatter/json-formatter.umd.js"></script>
+      
+        <script src="../../../assets/lib/highlightjs/highlight.min.js"></script>
+      
+        <script src="../../../assets/js/bijiratheme.js"></script>
+      
+        <script src="../../../js/open_in_new_tab.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
