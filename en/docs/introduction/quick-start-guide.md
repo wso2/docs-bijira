@@ -39,6 +39,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
+    /* replace this image with websocket option */
     ![Create API Proxy from Contract](../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
