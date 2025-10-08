@@ -156,6 +156,10 @@ nav:
       - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
       - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
       - Configure VPNs on Bijira Cloud Data Plane: administer/configure-vpns/configure-vpns.md
+  - Workflows:
+      - Configure Workflow Approvals: workflows/configure-workflow-approvals.md
+      - Submit Workflow Approval Requests: workflows/submit-workflow-requests.md
+      - Review Workflow Approval Requests: workflows/review-workflows-requests.md
   - Developer Portal:
       - Theming Developer Portal:
           - Theming with AI: devportal/theming-devportal-with-ai.md
