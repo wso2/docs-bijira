@@ -30,7 +30,7 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
 
    ```text
-   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/chat-app/asyncapi.yaml   
+   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/chat-service-api/asyncapi.yaml   
    ```
 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
@@ -55,3 +55,7 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 3. In the left navigation menu, click **Lifecycle** under **Develop**. This takes you to the **Lifecycle** page.
 4. Click **Publish**.
 5. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
+
+## API Proxy Behavior
+
+This Chat Service API Proxy enables clients to establish persistent connections with the server, allowing multiple users to connect simultaneously and exchange real-time messages. It also supports broadcasting messages to all users participating in the chat.
