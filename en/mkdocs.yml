@@ -89,6 +89,7 @@ nav:
           - REST APIs:
               - Create with GenAI: create-api-proxy/my-apis/http/create-with-genai.md
               - Import API Contract: create-api-proxy/my-apis/http/import-api-contract.md
+              - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
               - Start with Endpoint: create-api-proxy/my-apis/http/start-with-endpoint.md
               - Start from Scratch: create-api-proxy/my-apis/http/start-from-scratch.md
           - WebSocket APIs:
