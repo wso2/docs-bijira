@@ -86,11 +86,17 @@ nav:
   - Create API Proxy:
       - Overview: create-api-proxy/overview.md
       - My APIs (Ingress):
-          - Import API Contract: create-api-proxy/my-apis/import-api-contract.md
-          - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
-          - Start with Endpoint: create-api-proxy/my-apis/start-with-endpoint.md
-          - Start from Scratch: create-api-proxy/my-apis/start-from-scratch.md
-          - Create with GenAI: create-api-proxy/my-apis/create-with-genai.md
+          - REST APIs:
+              - Create with GenAI: create-api-proxy/my-apis/http/create-with-genai.md
+              - Import API Contract: create-api-proxy/my-apis/http/import-api-contract.md
+              - Import API Contract from GitHub: create-api-proxy/my-apis/import-api-from-github.md
+              - Start with Endpoint: create-api-proxy/my-apis/http/start-with-endpoint.md
+              - Start from Scratch: create-api-proxy/my-apis/http/start-from-scratch.md
+          - WebSocket APIs:
+              - Create with GenAI: create-api-proxy/my-apis/websocket/create-with-genai.md
+              - Import API Contract: create-api-proxy/my-apis/websocket/import-api-contract.md
+              - Start with Endpoint: create-api-proxy/my-apis/websocket/start-with-endpoint.md
+              - Start from Scratch: create-api-proxy/my-apis/websocket/start-from-scratch.md
       - Third Party APIs (Egress):
           - AI APIs:
               - Overview: create-api-proxy/third-party-apis/ai-apis.md
