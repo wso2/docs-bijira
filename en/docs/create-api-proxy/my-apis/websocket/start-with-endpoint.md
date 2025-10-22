@@ -22,7 +22,8 @@ In this guide, you will create a WebSocket API proxy using an endpoint.
 1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start with Endpoint**.
-4. Provide the following URL as the **Endpoint URL**.
+4. Select the API Type as **WebSocket**.
+5. Provide the following URL as the **Endpoint URL**.
 
    ```text
    https://samples.choreoapps.dev/company/chat-app 

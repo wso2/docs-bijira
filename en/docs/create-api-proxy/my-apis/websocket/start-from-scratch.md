@@ -31,6 +31,7 @@ The WebSocket connection begins with an initial handshake that leverages the HTT
     | **Base Path**     | `/default/chat-app-api/v1.0`       |
     | **Description**      | `Sample proxy for chat app api` |
     | **Target**      | `https://samples.choreoapps.dev/company/chat-app` |
+    | **API Type**      | `WebSocket` |
     | **Access Mode**      | `External` |
 
 5. Click **Create** to create the API Proxy. Wait for the setup to complete.

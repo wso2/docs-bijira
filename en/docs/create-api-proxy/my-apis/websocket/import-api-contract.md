@@ -27,7 +27,8 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Import API Contract**.
-4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
+4. Select the API Type as **WebSocket**.
+5. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
 
    ```text
    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/chat-service-api/asyncapi.yaml   
