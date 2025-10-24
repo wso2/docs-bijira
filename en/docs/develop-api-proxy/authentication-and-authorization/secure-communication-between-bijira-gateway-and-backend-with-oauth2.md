@@ -20,7 +20,7 @@ When you need the Bijira Gateway to call your backend over OAuth2, use the Outbo
 To configure the OAuth2 policy, follow the steps given below:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the **Proxies** pane, click on the API proxy for which you want to configure OAuth2. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../create-api-proxy/my-apis/import-api-contract.md).
+2. In the **Proxies** pane, click on the API proxy for which you want to configure OAuth2. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../create-api-proxy/my-apis/http/import-api-contract.md).
 3. In the left navigation menu, click **Develop** and then click **Policies**.
 4. Choose the resource you want to secure, then click **Attach Mediation Policy**.
 5. In the policy picker, select **OAuth2 (1.0.0)**.
