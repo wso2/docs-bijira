@@ -10,10 +10,10 @@ Creating an **API proxy** for:
 
     An API Proxy can be created to front an existing ingress API in the following scenarios:
 
-      - [Import API Contract](my-apis/import-api-contract.md)
-      - [Start with Endpoint](my-apis/start-with-endpoint.md)
-      - [Start from Scratch](my-apis/start-from-scratch.md)
-      - [Create with GenAI](my-apis/create-with-genai.md)
+      - [Import API Contract](my-apis/http/import-api-contract.md)
+      - [Start with Endpoint](my-apis/http/start-with-endpoint.md)
+      - [Start from Scratch](my-apis/http/start-from-scratch.md)
+      - [Create with GenAI](my-apis/http/create-with-genai.md)
 
 - **Third Party APIs(Egress APIs)**
 
