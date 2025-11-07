@@ -131,6 +131,7 @@ nav:
           - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
           - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
           - Secure API Access with Azure AD: develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
+          - Secure API Access with an External IdP: develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md
           - Secure Communication Between the Bijira Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
           - Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
       - Policy:
@@ -161,7 +162,10 @@ nav:
       - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
       - Manage Environments: administer/manage-environments/manage-environments.md
       - Manage CD pipelines: administer/manage-cd-pipelines/manage-cd-pipelines.md
-      - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+      - Configure External IDP:
+        - Configure Asgardeo as an External IdP: administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+        - Configure Azure as an External IdP: administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md
+        - Configure Custom External IdP: administer/configure-an-external-idp/configure-custom-external-idp.md
       - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
       - Configure VPNs on Bijira Cloud Data Plane: administer/configure-vpns/configure-vpns.md
   - Workflows:

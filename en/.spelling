@@ -736,6 +736,7 @@ secure-api-access-with-azure-ad
 configure-an-external-idp
 configure-asgardeo-as-an-external-idp
 configure-azure-ad-as-an-external-idp
+configure-custom-external-idp
 test-apis-with-bijira-apichat
 ci-cd
 autoscale
