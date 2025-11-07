@@ -2,8 +2,8 @@
 
 If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) for identity and access management, follow the platform-specific guides below to add them as an External IdP in Bijira.
 
-- [Configure Asgardeo as an External IdP](../../../administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp/)
-- [Configure Azure as an External IdP](../../../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp/)
+- [Configure Asgardeo as an External IdP](configure-asgardeo-as-an-external-idp.md)
+- [Configure Azure as an External IdP](configure-azure-ad-as-an-external-idp.md)
 
 If you use any other Identity Provider, you can still integrate it with Bijira provided it supports standard OIDC/OAuth2 endpoints. Integrating a custom IdP allows you to enforce API access using scopes and restrict access to specific user groups. This guide walks you through the steps to set up the external IdP.
 
@@ -44,4 +44,4 @@ Now you have configured your IdP as an external IdP in Bijira Developer Portal a
 
 ## What Next?
 
-To secure API access with the above-configured Identity Provider follow the steps mentioned [here](../../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp/).
+To secure API access with the above-configured Identity Provider follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md).

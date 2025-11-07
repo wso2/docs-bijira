@@ -14,7 +14,7 @@ This guide walks you through the following steps:
 To follow this guide, you need to satisfy the following prerequisites:
 
 - [Configure Custom External IdP](../../administer/configure-an-external-idp/configure-custom-external-idp.md).
-- If you don't already have an API Proxy in Bijira, [create API Proxy](../../../create-api-proxy/overview/).
+- If you don't already have an API Proxy in Bijira, [create API Proxy](../../create-api-proxy/overview.md).
 - Deploy and publish your API. 
 - Create an OAuth2 application in your external IdP.
 
@@ -58,4 +58,4 @@ Follow the steps below to consume the Bijira API and use an external IdP for aut
             -d "scope=<REQUIRED_SCOPES>"
         ```
 
-5. Once you receive the access token, you can [test invoking the resource using cURL](../../../test-api-proxy/curl/) in Bijira.
+5. Once you receive the access token, you can [test invoking the resource using cURL](../../test-api-proxy/curl.md) in Bijira.
