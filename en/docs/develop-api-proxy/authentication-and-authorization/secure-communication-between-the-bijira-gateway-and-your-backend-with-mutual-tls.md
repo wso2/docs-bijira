@@ -4,7 +4,7 @@ To establish secure communication between the Bijira Gateway and your backend, y
 
 Mutual TLS authentication involves both the client and server validating each other’s certificates before establishing a connection. The following diagram depicts this scenario:
 
-![Mutual TLS authentication](../../../assets/img/authentication-and-authorization/mutual-ssl-authentication.png)
+![Mutual TLS authentication](../../assets/img/authentication-and-authorization/mutual-ssl-authentication.png)
 
 ## Configure mutual TLS to establish secure connectivity
 
@@ -46,17 +46,17 @@ Follow the step-by-step instructions below depending on how you want to establis
     7. Click **Add Client Certificate**.
     8. In the **Add Client Certificate Pair** dialog, select **Generate new key pair** and specify a value as the common name for the certificate pair. This value will be used to identify the certificate.
 
-        ![Generate new key pair](../../../assets/img/authentication-and-authorization/generate-new-key-pair.png)
+        ![Generate new key pair](../../assets/img/authentication-and-authorization/generate-new-key-pair.png)
        
     9. Optionally, click **Show advanced options** to expand the section and specify appropriate values for each of the fields.
     10. Click **Generate**. This generates the certificate and lists it under **Existing Certificates**.
     11. Click the more options icon corresponding to the certificate and then click **View and Download**.
 
-         ![View and download certificate](../../../assets/img/authentication-and-authorization/view-and-download.png)
+         ![View and download certificate](../../assets/img/authentication-and-authorization/view-and-download.png)
        
         This opens the certificate for you to view and download.
 
-         ![Certificate details](../../../assets/img/authentication-and-authorization/certificate-details.png)
+         ![Certificate details](../../assets/img/authentication-and-authorization/certificate-details.png)
 
     12. To download the certificate in PEM format, click **Download**. You can add this certificate as a trusted certificate in the API backend server.
     
@@ -74,17 +74,17 @@ Follow the step-by-step instructions below depending on how you want to establis
     7. Click **Add Client Certificate**.
     8. In the **Add Client Certificate Pair** dialog, select **Use my own key pair**.
 
-        ![Use own key pair](../../../assets/img/authentication-and-authorization/use-own-key-pair.png)
+        ![Use own key pair](../../assets/img/authentication-and-authorization/use-own-key-pair.png)
        
     9. Upload the private key and public certificate in PEM format or copy and paste the content of the private key and public certificate.
     10. Click **Add**. This generates the certificate and lists it under **Existing Certificates**.
     11. Click the more options icon corresponding to the certificate and then click **View and Download**.
 
-         ![View and download certificate](../../../assets/img/authentication-and-authorization/view-and-download.png)
+         ![View and download certificate](../../assets/img/authentication-and-authorization/view-and-download.png)
        
-        This opens the certificate for you to view and download.
+       This opens the  certificate for you to view and download.
 
-         ![Certificate details](../../../assets/img/authentication-and-authorization/certificate-details.png)
+         ![Certificate details](../../assets/img/authentication-and-authorization/certificate-details.png)
 
     12. To download the certificate in PEM format, click **Download**. You can add this certificate as a trusted certificate in the API backend server.
    
@@ -97,7 +97,7 @@ To associate a certificate with the API, follow the steps given below:
 1. On the **Endpoints** page, go to the **Existing Certificates** section.
 2. Select the certificate you want to associate with the API.
 
-    ![Associate certificate](../../../assets/img/authentication-and-authorization/associate-certificate.png)
+    ![Associate certificate](../../assets/img/authentication-and-authorization/associate-certificate.png)
 
 3. Click **Save**.
    
