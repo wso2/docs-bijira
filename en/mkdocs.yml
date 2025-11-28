@@ -155,6 +155,9 @@ nav:
   - API Governance:
       - API Governance Overview: governance/overview.md
       - Govern API Proxy: governance/govern-api-proxy.md
+  - Gateway Federation:
+      - Overview: federation/overview.md
+      - Discover APIs from AWS API Gateway: federation/api-discovery-aws.md
   - Monitor and Insights:
       - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
