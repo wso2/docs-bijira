@@ -98,6 +98,9 @@ nav:
               - Start with Endpoint: create-api-proxy/my-apis/websocket/start-with-endpoint.md
               - Start from Scratch: create-api-proxy/my-apis/websocket/start-from-scratch.md
               - Limitations: create-api-proxy/my-apis/websocket/quotas-and-limitations.md
+          - GraphQL APIs:
+              - Import API Contract: create-api-proxy/my-apis/graphql/import-api-contract.md
+              - Start with Endpoint: create-api-proxy/my-apis/graphql/start-with-endpoint.md
       - Third Party APIs (Egress):
           - AI APIs:
               - Overview: create-api-proxy/third-party-apis/ai-apis.md
@@ -145,6 +148,7 @@ nav:
   - Test API Proxy:
       - OpenAPI Console: test-api-proxy/openapi-console.md
       - WebSocket Console: test-api-proxy/ws-test-console.md
+      - GraphQL Console: test-api-proxy/graphql-console.md
       - cURL: test-api-proxy/curl.md
       - API Chat: test-api-proxy/api-chat.md
   - MCP Servers:
