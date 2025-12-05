@@ -44,7 +44,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     | **API Directory**      | /reading-list-api |
 
 
-    ![Create API from Github](../../assets/img/create-api-proxy/import-from-github/api_from_github_select_repo.png)
+    ![Create API from Github](../../../assets/img/create-api-proxy/import-from-github/api_from_github_select_repo.png)
 
     !!! note
         To select the relevant directory, click on the **Edit** action next to the **API Directory** input field. Then, enter `reading-list-api` as the directory name to quickly search and locate the correct directory.
@@ -70,7 +70,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 1. In the left navigation menu, click **Deploy**.
 2. If the build is in progress, you can view the Build information.
 
-![Create API from Github](../../assets/img/create-api-proxy/import-from-github/api_from_github_build_page.png)
+![Create API from Github](../../../assets/img/create-api-proxy/import-from-github/api_from_github_build_page.png)
 
 
  <!-- keep list -->
@@ -78,6 +78,6 @@ You can create an API proxy either by selecting the source from a GitHub reposit
    This opens the **Configure & Deploy** pane. <br><br>
 4. Select **External** as the **API Access Mode** and click **Deploy**. The **Development** card indicates the **Deployment Status** as **Active** when the API proxy is successfully deployed.
 
-![Create API from Github](../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
+![Create API from Github](../../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
 
 Now, you are ready to test the API proxy. You can test the API via the [OpenAPI Console](../../../test-api-proxy/openapi-console/) provided in Bijira
