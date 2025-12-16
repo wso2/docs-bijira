@@ -14,6 +14,30 @@ An API proxy acts as an intermediary between an existing API and Bijira, interce
 
 2. Fork the [Bijira samples repository](https://github.com/wso2/bijira-samples), which contains the [sample proxy source](https://github.com/wso2/bijira-samples/tree/main/reading-list-api).
 
+## Configure component.yaml
+
+When creating an API proxy from a GitHub repository, you must include a `component.yaml` configuration file in your repository. This file must be located at `.choreo/component.yaml` within your API directory.
+
+### Required Configuration
+
+The `component.yaml` file for API proxies must include the following structure:
+
+```yaml
+proxy:
+  type: REST
+  schemaFilePath: openapi.yaml
+```
+
+### Configuration Fields
+
+| **Field** | **Required** | **Description** |
+|-----------|--------------|-----------------|
+| `proxy.type` | Required | The type of API proxy. Supported values are: <br>- `REST` - For REST APIs (uses OpenAPI specification) <br>- `WS` - For WebSocket APIs (uses AsyncAPI specification) |
+| `proxy.schemaFilePath` | Required | The path to your API specification file relative to the API directory. For REST APIs, this should point to your OpenAPI specification file (e.g., `openapi.yaml`). For WebSocket APIs, this should point to your AsyncAPI specification file (e.g., `asyncapi.yaml`). |
+
+!!! note
+    The `component.yaml` file must be present in the `.choreo` directory within your API directory for Bijira to successfully build and deploy your API proxy from GitHub.
+
 ## Step 1: Create an API proxy
 
 You can create an API proxy either by selecting the source from a GitHub repository, uploading an OpenAPI specification file, or providing an OpenAPI specification URL. This guide demonstrates how to create an API proxy using a GitHub repository as the source.
