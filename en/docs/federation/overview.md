@@ -1,6 +1,6 @@
 # Gateway Federation in Bijira
 
-## What is a Gateway Federatio?
+## What is Gateway Federation?
 
 ## Gateway Federation Overview
 
