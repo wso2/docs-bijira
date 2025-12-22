@@ -19,7 +19,7 @@ export BALLERINA_CENTRAL_ACCESS_TOKEN=<access-token>
 
 ## Configure mTLS Policy
 
-1. Mutual SSL will be configured through a mediation. Please download the mediation app from [link to the mediation app].
+1. Mutual SSL will be configured through a mediation. Please download the mediation app from [here](../../assets/files/develop-api-proxy/policy/authenticator-mtls.zip).
 2. Open the `Ballerina.toml` file in your preferred text editor and modify the `org` parameter to match with your current Bijira organization. 
 3. Build the mediation app and publish it to the Ballerina central using the following command. 
 
