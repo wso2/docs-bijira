@@ -31,9 +31,9 @@ If you are a new user, follow the steps below to register an organization and ge
 
      This opens the **Quick Install** page. As there is no data, you cannot proceed. Let's configure Moesif to receive data from Bijira. 
 
- 6. Select **WSO2** as the **Server Integration**.
- 7. From the WSO2 integration options, select **WSO2 Bijira**.
- 8. Copy the **Application Id**. 
+6. Select **WSO2** as the **Server Integration**.
+7. From the WSO2 integration options, select **WSO2 Bijira**.
+8. Copy the **Application Id**. 
     
      ![First Time user API Key](../assets/img/monitoring-and-insights/first_time_key_moesif.png)
      
@@ -76,7 +76,7 @@ You have configured Bijira to publish data to Moesif. Let's see how you can view
 
 2. Once you publish data, your Moesif dashboard will receive events. Once Moesif receives events, you will see a notification on Moesif confirming that it received data. 
 
-    ![Data Recieved Moesif Notification](../assets/img/monitoring-and-insights/data_recieved_moesif_notification.png){.cInlineImage-full}
+    ![Data Received Moesif Notification](../assets/img/monitoring-and-insights/data_recieved_moesif_notification.png){.cInlineImage-full}
 
 3. Click **Next** on the notification. This will take you to the final step, where you can opt to add team members. In this guide, let's skip this step. 
 4. Click **Finish**.

@@ -49,7 +49,7 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 1. Navigate to the **Test --> Console** page of the API Proxy.
 2. Use the Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API proxy
+## Promote the API Proxy to Production and Publish the API Proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.
