@@ -18,20 +18,25 @@ To generate an access token for **testing purposes**, follow these steps:
 
 3. Click on the application for which you want to generate keys and tokens.
 
-4. In the Application detail banner click **Generate Key** under **OAuth2** section.
+4. In the Application detail banner, click **Manage Keys**. This opens the **Manage Keys** page.
 
-5. This will generate the consumer key and consumer secret with default configurations.
+5. On the **Manage Keys** page, select either the **Production** or **Sandbox** tab based on your requirement.
 
-6. You can add scopes through the Request Permission section in the Access Token dialog.
+    !!!info
+        Sandbox keys can only be used in the sandbox environment.
 
-![Scope List](../../assets/img/devportal/ScopeSection.png)
+6. Click **Generate** and wait for the keys to be generated. This will generate the consumer key and consumer secret with default configurations. Once the keys are generated, close the dialog.
 
-!!!info
-    Currently, Bijira does not support configuring allowed scopes at the application level.
+7. Click **Generate** to generate an access token. You can add scopes through the Request Permission section in the Access Token dialog.
+
+    ![Scope List](../../assets/img/devportal/ScopeSection.png)
+
+    !!!info
+        Currently, Bijira does not support configuring allowed scopes at the application level.
+
+8. Copy the displayed access token.
 
 You can use the **View** and **Modify** buttons to inspect and customize the default key generation settings.
-
-To generate a test token for testing purposes, click **Generate** and copy the displayed token.
 
 Alternatively, click **Instructions** to view details about the token endpoint. You can either copy the generated cURL command to obtain a test token using a cURL client, or use the consumer key and consumer secret to generate an API access token by invoking the token endpoint. You can also revoke the access token by invoking the revoke endpoint.
 

@@ -7,17 +7,40 @@ Before proceeding, ensure you have [Created an Application](../manage-applicatio
 
 ## Creating an API Key
 
-To consume an API secured with an API key, create an application in the Bijira Developer Portal and subscribe it to the API under a defined usage policy. The API key will then be associated with that specific application.
+To consume an API secured with an API key, ensure that the desired API has API Key authentication enabled. Then create an application in the Bijira Developer Portal and subscribe it to the API under a defined usage policy. The API key will then be associated with that specific application.
 
 ---
 
 ### Steps to Create an API Key
 
-1. Navigate to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in.
-2. Click on **Applications** in the Developer Portal sidebar.
-3. Select the Application the desired API is subscribed to.
-4. Under the **Subscribed APIs** section, click **Generate Key** button in the row corresponding to the desired API to generate its API key.
-5. The API key will be generated with the scopes defined for the selected API.
+1. Ensure the desired API has API Key authentication enabled.
+
+2. Navigate to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in.
+
+3. Click on **Applications** in the Developer Portal sidebar.
+
+4. Click on the application to open it.
+
+5. Subscribe to the API that has API Key authentication enabled via your application. For more information, see [Subscribe to an API](../manage-subscriptions/subscribe-to-an-api.md).
+
+6. In the Application detail banner, click **Manage Keys**. This opens the **Manage Keys** page.
+
+7. On the **Manage Keys** page, select either the **Production** or **Sandbox** tab based on your requirement.
+
+    !!!info
+        Sandbox keys can only be used in the sandbox environment.
+
+8. In the **API Keys** section, locate the API Key enabled API that you subscribed to and click **Generate Key** beside it.
+
+    ![API Keys section in Manage Keys page](../../assets/img/devportal/api-keys-section.png)
+
+9. In the **Generate API Key** dialog that opens, enter an API Key name.
+
+10. Click **Generate** and wait for the API key to be generated.
+
+11. Copy the generated API key from the dialog and click **Done** to close the dialog. The API key will not be visible in the UI again after closing the dialog.
+
+You can use the **Regenerate** button to generate a new API key, or the **Revoke** button to revoke an existing API key.
 
 ## Consume an API
 
