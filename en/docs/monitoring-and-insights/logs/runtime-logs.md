@@ -60,7 +60,7 @@ Each gateway log entry displays the following details:
     - `Duration`: The time taken for the gateway to serve the request.  
   - `gatewayCode`: Indicates the state of the request from the gateway perspective. Possible values are as follows:
     - `BACKEND_RESPONSE`:  Indicates successful processing of the request by the gateway with a response to the client from the backend application.
-    - `CORS_RESPONSE`: Denotes a CORS (Cross Origin Resource Sharing) request.
+    - `CORS_RESPONSE`: Denotes a CORS (Cross-Origin Resource Sharing) request.
     - `AUTH_FAILURE`: Indicates a request failure at the gateway due to authentication or authorization issues, such as an invalid token.
     - `NO_HEALTHY_BACKEND`: Indicates a request failure at the gateway due to a non-existent backend.
     - `RATE_LIMITED`: Indicates a request failure at the gateway due to surpassing the rate limit enforced within the component.
