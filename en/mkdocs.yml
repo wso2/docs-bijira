@@ -141,6 +141,7 @@ nav:
           - Overview: develop-api-proxy/policy/overview.md
           - Policies: develop-api-proxy/policy/policies.md
           - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
+          - Secure Client-Gateway Communication with Mutual TLS: develop-api-proxy/policy/secure-client-gateway-communication-with-mtls.md
         # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
       - Documents: develop-api-proxy/documents.md
       - Lifecycle: develop-api-proxy/lifecycle-management.md
@@ -163,6 +164,10 @@ nav:
       - Overview: federation/overview.md
       - Discover APIs from AWS API Gateway: federation/api-discovery-aws.md
   - Monitor and Insights:
+      - Logs: 
+        - Overview: monitoring-and-insights/logs/overview.md
+        - Runtime Logs: monitoring-and-insights/logs/runtime-logs.md
+        - Audit Logs: monitoring-and-insights/logs/audit-logs.md
       - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
       - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
