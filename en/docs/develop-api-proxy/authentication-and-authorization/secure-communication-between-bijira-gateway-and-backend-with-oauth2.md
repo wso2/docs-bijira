@@ -4,12 +4,12 @@ OAuth2 is an industry-standard authorization framework that enables secure, dele
 
 ## Configure OAuth2 to establish secure connectivity
 
-When you need the Bijira Gateway to call your backend over OAuth2, use the Outbound OAuth2 mediation policy. This policy obtains an access token from your Identity Provider (IdP) and injects it into the outbound request.
+When you need the Bijira Gateway to call your backend over OAuth2, use the Outbound OAuth2 mediation policy. This policy obtains an access token from your key manager and injects it into the outbound request..
 
 ### Prerequisites
 
 - **Protected Backend**: The target endpoint must enforce OAuth2 (e.g., bearer-token validation).
-- **IdP Token Endpoint**: The URL of the IdP's token endpoint that protects your backend.
+- **Token Endpoint**: The URL of the Key manager's token endpoint that protects your backend.
 - **OAuth2 Application Credentials**: A client ID and secret for an OAuth2 application dedicated to the Bijira Gateway's outbound calls.
 
 !!! note

@@ -101,7 +101,7 @@ To verify the authenticity of claims in a JWT, the claims must be validated usin
 
 JSON web key set (JWKS) is a set of keys to validate a JWT. It contains a collection of JSON web keys, which are public keys used to verify the signature of a JWT.
 
-Typically, when a third party (such as an identity provider)issues a JWT and the recipient needs to verify its signature, they can use a JWKS. 
+Typically, when a third party key manager issues a JWT and the recipient needs to verify its signature, they can use a JWKS. 
 JWKS allows the issuer to rotate keys dynamically rather than hard-coding the public key in the application. The recipient can obtain the public key by accessing the JWKS endpoint.
 
 ## JWKS support in Bijira to validate the JWT
