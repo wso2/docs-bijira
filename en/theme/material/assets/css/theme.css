@@ -446,7 +446,7 @@
 
 .md-nav__link-read_time {
     font-size: 10px;
-    color: var(--md-default-fg-color--light);;
+    color: var(--md-default-fg-color--light);
     white-space: nowrap;
     word-break: keep-all;
     font-style: italic;
