@@ -50,17 +50,18 @@ theme:
     - content.action.view
   language: "en"
   palette:
-    # Dark mode
-    - scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-
-    # Light mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+    # Palette toggle for light mode
+       - media: "(prefers-color-scheme: light)"
+         scheme: default 
+         toggle:
+          icon: assets/libs/oxygen-ui-icons/1.7.3/crescent-bright-16.svg
+          name: Switch to dark mode
+      # Palette toggle for dark mode
+       - media: "(prefers-color-scheme: dark)"
+         scheme: slate
+         toggle:
+           icon: assets/libs/oxygen-ui-icons/1.7.3/sun-16.svg
+           name: Switch to light mode
 
   icon:
     logo: logo
@@ -72,17 +73,12 @@ nav:
   - Introduction:
       - What is Bijira?: introduction/what-is-bijira.md
       - Quick Start Guide: introduction/quick-start-guide.md
-  - Bijira Samples:
-      - Samples Overview: samples/samples-overview.md
-  - Tutorials:
-      - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
-      - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
-  - Bijira Concepts:
-      # - Resource Hierarchy: resource-hierarchy.md
-      - Organization: bijira-concepts/organization.md
-      - Project: bijira-concepts/project.md
-      # - Deployment Tracks: bijira-concepts/deployment-tracks.md
-      - Data Planes: bijira-concepts/data-planes.md
+      - Bijira Concepts:
+        # - Resource Hierarchy: resource-hierarchy.md
+        - Organization: bijira-concepts/organization.md
+        - Project: bijira-concepts/project.md
+        # - Deployment Tracks: bijira-concepts/deployment-tracks.md
+        - Data Planes: bijira-concepts/data-planes.md
   - Create API Proxy:
       - Overview: create-api-proxy/overview.md
       - My APIs (Ingress):
@@ -183,6 +179,11 @@ nav:
       - Configure Workflow Approvals: workflows/configure-workflow-approvals.md
       - Submit Workflow Approval Requests: workflows/submit-workflow-requests.md
       - Review Workflow Approval Requests: workflows/review-workflows-requests.md
+  - Tutorials:
+      - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
+      - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
+  - Bijira Samples:
+      - Samples Overview: samples/samples-overview.md
   - Developer Portal:
       - Theming Developer Portal:
           - Theming with AI: devportal/theming-devportal-with-ai.md
@@ -239,27 +240,103 @@ plugins:
   - open-in-new-tab
   - markdownextradata: {}
 extra_css:
-  # - assets/lib/highlightjs/default.min.css
-  # - assets/css/theme.css
-  # - assets/css/prism.css
-  # - assets/lib/json-formatter/json-formatter.css
-
-  - assets/lib/highlightjs/styles/vs.min.css
-  - assets/css/blue-palette-alt2.css
-  - assets/css/bijiratheme.css
+  - assets/lib/highlightjs/default.min.css
+  - assets/css/theme.css
   - assets/lib/json-formatter/json-formatter.css
-  - assets/css/config-catalog.css
-  - assets/lib/fontawesome-free-6.3.0-web/css/all.min.css
 extra_javascript:
   - assets/lib/json-formatter/json-formatter.umd.js
   - assets/lib/highlightjs/highlight.min.js
-  # - assets/js/theme.js
-  #- assets/js/prism-ballerina.js
-  - assets/js/bijiratheme.js
+  - assets/js/theme.js
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/wso2
+  expanded_navs:
+    - title: Introduction
+      options:
+        - verticle-line
+    - title: Create API Proxy
+      options:
+        - verticle-line
+        - divider
+    - title: Tutorials
+      options:
+        - verticle-line-only
+    - title: Develop API Proxy
+      options:
+        - verticle-line-only
+    - title: Test API Proxy
+      options:
+        - verticle-line-only
+    - title: MCP Servers
+      options:
+        - verticle-line-only
+    - title: API Governance
+      options:
+        - verticle-line-only
+    - title: Gateway Federation
+      options:
+        - verticle-line-only
+    - title: Monitor and Insights
+      options:
+        - verticle-line-only
+    - title: Administer
+      options:
+        - verticle-line-only
+    - title: Workflows
+      options:
+        - verticle-line-only
+    - title: Bijira Samples
+      options:
+        - verticle-line-only
+    - title: Developer Portal
+      options:
+        - verticle-line
+        - divider
+  nav_icons:
+    Home:
+      icon: octicons/home-16
+      level: 1
+    Introduction:
+      icon: octicons/info-16
+      level: 1
+    Bijira Samples:
+      icon: octicons/file-code-16
+      level: 1
+    Tutorials:
+      icon: octicons/mortar-board-16
+      level: 1
+    Create API Proxy:
+      icon: octicons/pencil-16
+      level: 1
+    Develop API Proxy: 
+      icon: octicons/tools-16
+      level: 1
+    Test API Proxy:
+      icon: octicons/bug-16
+      level: 1
+    MCP Servers:
+      icon: octicons/server-16
+      level: 1
+    API Governance:
+      icon: octicons/shield-16
+      level: 1
+    Gateway Federation:
+      icon: octicons/git-branch-16
+      level: 1
+    Monitor and Insights:
+      icon: octicons/graph-16
+      level: 1
+    Administer:
+      icon: octicons/lock-16
+      level: 1
+    Workflows:
+      icon: octicons/workflow-16
+      level: 1
+    Developer Portal:
+      icon: octicons/book-16
+      level: 1
+
 #site_version: 1.0.0
 # base_path: http://localhost:8000
 

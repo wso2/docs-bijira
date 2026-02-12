@@ -1,5 +1,5 @@
 <!--
- * Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com).
+ * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -16,14 +16,22 @@
  * under the License.
 -->
 
-{% if config.theme.logo or config.logo_light %}
-    {% if config.theme.logo %}
-        <img src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color="default">
-    {% endif %}
-    {% if config.theme.logo_light %}
-        <img src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color="slate">
-    {% endif %}
-{% else %}
-  {% set icon = config.theme.icon.logo or "material/library" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-{% endif %}
+{% extends "base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+      .md-sidebar--primary {
+          display: none !important;
+      }
+
+      .md-sidebar--secondary {
+          display: none !important;
+      }
+
+      [dir=ltr] .md-sidebar--secondary:not([hidden])~.md-content > .md-content__inner,
+      [dir=rtl] .md-sidebar--primary:not([hidden])~.md-content > .md-content__inner {
+          max-width: 1200px !important;
+      }
+  </style>
+{% endblock %}

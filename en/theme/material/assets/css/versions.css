@@ -1,4 +1,4 @@
-<!--
+/**
  * Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
@@ -14,16 +14,8 @@
  * KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations
  * under the License.
--->
+ */
 
-{% if config.theme.logo or config.logo_light %}
-    {% if config.theme.logo %}
-        <img src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color="default">
-    {% endif %}
-    {% if config.theme.logo_light %}
-        <img src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color="slate">
-    {% endif %}
-{% else %}
-  {% set icon = config.theme.icon.logo or "material/library" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-{% endif %}
+.md-content__inner {
+    text-align: center;
+}
