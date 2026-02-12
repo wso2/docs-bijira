@@ -2,21 +2,21 @@
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions.
 
-Organizations using Microsoft Azure AD for identity and access management (IAM) can seamlessly integrate it with Bijira as an external Identity Provider (IdP). This guide will walk you through setting up Bijira to authenticate API invocations through Azure AD which is configured as an external IdP.
+Organizations using Microsoft Azure AD for identity and access management (IAM) can seamlessly integrate it with Bijira as an external key manager. This guide will walk you through setting up Bijira to authenticate API invocations through Azure AD which is configured as an external key manager.
 
 This guide walks you through the following steps:
 
 - Assign scopes to an API in Bijira.
 - Create an API in Azure AD.
 - Create an application in Azure AD and consume the Azure API.
-- Enable external IdP authentication and create an application in Bijira.
+- Enable external key manager authentication and create an application in Bijira.
 - Invoke the API with scopes.
 
 ## Prerequisites
 
 To follow this guide, you need to satisfy the following prerequisites:
 
--  [Configure Azure AD as an external IdP](../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md).
+-  [Configure Azure AD as an external key manager](../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md).
 -  An API: If you don't already have a service in Bijira, [develop a service](../develop-components/develop-services/develop-a-service.md) or an [API Proxy](../develop-components/develop-an-api-proxy.md).
 - Deploy and publish your API.
 - An Azure Active Directory account:  If you don’t already have one, set up an Azure Active Directory account at [https://azure.microsoft.com/en-gb/](https://azure.microsoft.com/en-gb/).
@@ -47,7 +47,7 @@ You can provide fine-grained access control to your API resources with Permissio
 
 ## Step 2: Create a web API on Azure AD
 
-To enable external IdP authentication for APIs,  create an API on Azure AD that represents the API on Bijira. Follow the steps below:
+To enable external key manager authentication for APIs,  create an API on Azure AD that represents the API on Bijira. Follow the steps below:
 
 1. Sign in to the Azure console.
 2. Follow the [Azure guide](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application) to create a Web API that represents your API on Bijira.
@@ -117,11 +117,11 @@ To invoke the application, provide client secrets to the consuming application. 
 
 For more information, refer to the Azure documentation: [Add a Client Secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
 
-## Step 4: Enable external IdP authentication
-1. Select Azure Active Directory (Azure AD) as an external Identity Provider (IdP)
+## Step 4: Enable external key manager authentication
+1. Select Azure Active Directory (Azure AD) as an external key manager
 
 ## Step 5: Create an application in Bijira Devportal
-Follow the steps below to consume the Bijira API through external IdP for authentication:
+Follow the steps below to consume the Bijira API through external key manager for authentication:
 
 1. Sign in to the [Bjira Developer Portal](https://devportal.bijira.dev/).
 2. Click **Applications** tab and then click **+Create**.

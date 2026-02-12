@@ -1,47 +1,61 @@
-# Configure Custom External Identity Provider (IdP)
+# Configure Custom External Key Manager
 
-If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) for identity and access management, follow the platform-specific guides below to add them as an External IdP in Bijira.
+If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) as a key manager follow the platform-specific guides below to add them as an external key manager in Bijira.
 
-- [Configure Asgardeo as an External IdP](configure-asgardeo-as-an-external-idp.md)
-- [Configure Azure as an External IdP](configure-azure-ad-as-an-external-idp.md)
+- [Configure Asgardeo as an External Key Manager](configure-asgardeo-as-an-external-idp.md)
+- [Configure Azure as an External Key Manager](configure-azure-ad-as-an-external-idp.md)
 
-If you use any other Identity Provider, you can still integrate it with Bijira provided it supports standard OIDC/OAuth2 endpoints. Integrating a custom IdP allows you to enforce API access using scopes and restrict access to specific user groups. This guide walks you through the steps to set up the external IdP.
+If you use any other Key manager, you can still integrate it with Bijira provided it supports standard OIDC/OAuth2 endpoints. Integrating a custom key manager allows you to enforce API access using scopes and restrict access to specific user groups. This guide walks you through the steps to set up the external key manager.
 
 ## Prerequisites
 
 Before you try out this guide, be sure you have the following:
 
-- The IdP’s `Well‑Known URL` (to import configuration automatically).
-- Administrator access to your Bijira organization and to the IdP.
+- The key manager's `Well‑Known URL` (to import configuration automatically).
+- Administrator access to your Bijira organization and to the key manager.
 
-## Step 1: Add custom external IdP in Bijira
+## Step 1: Add custom external key manager in Bijira
 
-Follow the steps below to add a custom IdP in Bijira:
+Follow the steps below to add a custom key manager in Bijira:
 
 1. Sign in to the Bijira Console at [https://console.bijira.dev/](https://console.bijira.dev).
 2. In the left navigation menu, click **Settings**.
 3. In the header, click the **Organization** list. This will open the organization level settings page.
-4. On the **Application Security** tab, click **Identity Providers** and then click **+ Identity Provider**.
-5. Select  **Custom** as the Identity Provider.
-6. Provide a name and a description for the IdP.
-7. Obtain the `Well-Known URL` of your IdP and Provide it under Well-Known URL.
-8. Leave the **Apply to all environments** checkbox selected. However, if you want to restrict the use of the external IdP to a certain environment, you can select them from the **Environments** list.
+4. On the **Key Managers** tab, click **+ Key Manager**.
+
+    ![Key Managers tab](../../assets/img/administer/settings/external-km/add_external_km.png)
+
+5. Select  **Custom** as the key manager.
+
+    ![Select Custom](../../assets/img/administer/settings/external-km/add_external_km_custom_select.png)
+
+6. Provide a name and a description for the key manager.
+7. Obtain the `Well-Known URL` of your key manager and Provide it under Well-Known URL.
+8. Leave the **Apply to all environments** checkbox selected. However, if you want to restrict the use of the external key manager to a certain environment, you can select them from the **Environments** list.
+
+    ![Custom key manager configuration page 1](../../assets/img/administer/settings/external-km/add_external_km_custom_page_1.png)
+
 9. Click **Next**.
+    ![Custom key manager configuration page 2](../../assets/img/administer/settings/external-km/add_external_km_custom_page_2.png)
 10. The next page will list all the relevant configurations extracted from the `Well-Known URL`. Review the configurations and click **Add**.
 
-Now you have configured your custom IdP as an external IdP in Bijira.
+Now you have configured your custom key manager as an external key manager in Bijira.
 
-## Step 2: Add the external IdP in Bijira Developer Portal¶
+![Add Key Manager button](../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
 
-Once the IdP is configured as an external IdP in Bijira, it is necessary to configure it in the Bijira Developer Portal as well. For that, follow the steps below.
+## Step 2: Add the external key manager in Bijira Developer Portal¶
+
+Once the key manager is configured as an external key manager in Bijira, it is necessary to configure it in the Bijira Developer Portal as well. For that, follow the steps below.
 
 1. In the left navigation menu of the Bijira Console, click **Admin** and then click **Settings**.
-2. Click the **Developer Portal** tab, then click the **Identity Providers** tab. This page will list all the Identity providers available in Bijira.
-3. Select the Identity Provider you configured at [Step 1](#step-1-add-custom-external-idp-in-bijira).
+2. Click the **Developer Portal** tab, then click the **Key Managers** tab. This page will list all the key managers available in Bijira.
+3. Select the key manager you configured at [Step 1](#step-1-add-custom-external-key-manager-in-bijira).
 4. Click **Save**.
 
-Now you have configured your IdP as an external IdP in Bijira Developer Portal as well.
+Now you have configured your key manager as an external key manager in Bijira Developer Portal as well.
+
+![Key Managers tab](../../assets/img/administer/settings/external-km/add_external_km_custom_devportal.png)
 
 ## What Next?
 
-To secure API access with the above-configured Identity Provider follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md).
+To secure API access with the above-configured key manager follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md).

@@ -18,7 +18,7 @@ To follow this guide, you need to satisfy the following prerequisites:
 - Deploy and publish your API. 
 
 !!! note
-    It is important to note that Bijira STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external IdP such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
+    It is important to note that Bijira STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external key manager such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
 
 <!-- ## Step 1: Assign scopes to an API in Bijira
 
@@ -64,7 +64,7 @@ Follow the steps below to consume the Bijira API using Bijira STS.
 4. Click **Create**.
 5. Click on the newly created application.
 6. At the top of the application page, under **OAuth2** click **Generate**. This will generate consumer keys for the application.
-7. Once successfully generated, you will be shown a dialog which contains the Identity provider connection data.
+7. Once successfully generated, you will be shown a dialog which contains the key manager connection data.
 8. Click on the **Generate Token** button to generate an access token. Please make sure to copy the access token to use in step 2.
 9. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
