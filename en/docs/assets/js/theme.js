@@ -144,7 +144,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var docSetLang = pageHeader.getAttribute('data-lang') == null ? 'en' : pageHeader.getAttribute('data-lang');
 
   if (window.location.pathname.split('/')[1] !== docSetLang) {
-+    docSetLang = '';
+    docSetLang = '';
   } else {
     docSetLang = docSetLang + '/';
   }
@@ -168,7 +168,13 @@ window.addEventListener('DOMContentLoaded', function() {
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
 
-        var data = JSON.parse(request.responseText);
+      var data;
+      try {
+        data = JSON.parse(request.responseText);
+      } catch (e) {
+        console.error("Failed to parse versions.json:", e);
+        return;
+      }
       var dropdown =  document.getElementById('version-select-dropdown');
       var checkVersionsPage = document.getElementById('current-version-stable');
       
@@ -191,8 +197,13 @@ window.addEventListener('DOMContentLoaded', function() {
                   else {
                       url = docSetUrl + url;
                   }
-                  liElem.innerHTML =  '<a href="' + url + '" target="' + 
-                      target + '">' + key + '</a>';
+                  const anchor = document.createElement('a');
+
+                  anchor.setAttribute('href', url);
+                  anchor.setAttribute('target', target);
+                  anchor.textContent = key;
+
+                  liElem.appendChild(anchor);
 
                   dropdown.insertBefore(liElem, dropdown.firstChild);
               }
@@ -231,21 +242,34 @@ window.addEventListener('DOMContentLoaded', function() {
               }
           });
 
-          // Past releases update
-          document.getElementById('previous-versions').innerHTML = 
-                  previousVersions.join(' ');
+          /// --- Past releases update ---
+const prevEl = document.getElementById('previous-versions');
+if (prevEl) {
+  prevEl.innerHTML = previousVersions.join(' ');
+}
 
-          // Current released version update
-          document.getElementById('current-version-number').innerHTML = 
-                  data.current;
-          document.getElementById('current-version-documentation-link')
-                  .setAttribute('href', docSetUrl + data.all[data.current].doc);
-          document.getElementById('current-version-release-notes-link')
-                  .setAttribute('href', docSetUrl + data.all[data.current].notes);
-        
-          // Pre-release version update
-          document.getElementById('pre-release-version-documentation-link')
-              .setAttribute('href', docSetUrl + 'next/');
+// --- Current released version update ---
+const currentNum = document.getElementById('current-version-number');
+if (currentNum) {
+  currentNum.textContent = data.current; // safer than innerHTML
+}
+
+const docLink = document.getElementById('current-version-documentation-link');
+if (docLink) {
+  docLink.setAttribute('href', docSetUrl + data.all[data.current].doc);
+}
+
+const notesLink = document.getElementById('current-version-release-notes-link');
+if (notesLink) {
+  notesLink.setAttribute('href', docSetUrl + data.all[data.current].notes);
+}
+
+// --- Pre-release version update ---
+const preRelLink = document.getElementById('pre-release-version-documentation-link');
+if (preRelLink) {
+  preRelLink.setAttribute('href', docSetUrl + 'next/');
+}
+
       }
       
   } else {
