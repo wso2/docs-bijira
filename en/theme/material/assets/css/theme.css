@@ -759,10 +759,11 @@
 .md-footer__content,
 .md-copyright__content {
     max-width: none !important;
-    padding: .5rem 1.7rem;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: var(--md-footer-section-horizontal-spacing);
+    padding: 0.5rem 1.7rem;
+    /* Let the original flex layout take effect */
+    /* display: grid; */ /* removed to respect _footer.css flex */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */ /* optional, only if grid needed */
+    gap: var(--md-footer-section-horizontal-spacing);
 }
 
 .md-copyright {

@@ -157,25 +157,25 @@
                   {% set current_url = page.url.lstrip('/') %}
                   {% set normalized_base_path = base_path.lstrip('/').rstrip('/') ~ '/' %}
                   {% if current_url.startswith(normalized_base_path) %}
-                    {% set current_url = current_url[len(normalized_base_path):] %}
+                    {% set current_url = current_url[normalized_base_path|length:] %}
                   {% endif %}
                 {% set current_page = page.file.src_path %}
-                {% set should_stay_expanded = false %}
+                {% set should_stay_expanded_list = [] %}
                 {% if behavior_config.stay_expanded_when_url_starts_with and not should_stay_expanded %}
                   {% for stay_pattern in behavior_config.stay_expanded_when_url_starts_with %}
                       {% if current_url.startswith(stay_pattern) %}
-                      {% set should_stay_expanded = true %}
+                      {% set _ = should_stay_expanded_list.append(1) %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                {% if not should_stay_expanded and behavior_config.stay_expanded_on_pages %}
+                {% if should_stay_expanded_list|length == 0 and behavior_config.stay_expanded_on_pages %}
                   {% for stay_page in behavior_config.stay_expanded_on_pages %}
                     {% if current_page == stay_page %}
-                      {% set should_stay_expanded = true %}
+                      {% set _ = should_stay_expanded_list.append(1) %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                {% if not should_stay_expanded and behavior_config.collapse_when_url_starts_with %}
+                {% if should_stay_expanded_list|length == 0 and behavior_config.collapse_when_url_starts_with %}
                   {% for url_pattern in behavior_config.collapse_when_url_starts_with %}
                     {% if current_url.startswith(url_pattern) %}
                       {% set _ = should_collapse_list.append(1) %}
@@ -186,7 +186,7 @@
             {% endif %}
           {% endfor %}
         {% endif %}
-        {% if should_stay_expanded %}
+        {% if should_stay_expanded_list|length > 0 %}
           {% set checked_attr = "checked" %}
         {% elif should_collapse_list|length > 0 %}
           {% set checked_attr = "" %}

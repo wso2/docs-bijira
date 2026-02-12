@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add a class to content tabs that has multiple child elements rather than a code block
   document.querySelectorAll('.tabbed-content').forEach(tabbedContent => {
     const tabbedBlocks = Array.from(tabbedContent.querySelectorAll('.tabbed-block'));
-    
+
     // Check if each .tabbed-block has more than 1 child or if its immediate child is not .highlight
     const shouldAddClass = tabbedBlocks.some(tabbedBlock => 
       tabbedBlock.children.length > 1 || !tabbedBlock.firstElementChild.classList.contains('highlight')
@@ -121,18 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Set last vsited valid page in session storage
+// Set last visited valid page in session storage
 window.addEventListener("DOMContentLoaded", function () {
-  fetch(window.location.href, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }).then((response) => {
-    if (response.status !== 404) {
-      sessionStorage.setItem("lastValidPage", window.location.href);
-    }
-  });
+  // Check if the server indicated this page is valid
+  const isPageValid = document.documentElement.getAttribute("data-page-valid") === "true";
+  
+  if (isPageValid) {
+    sessionStorage.setItem("lastValidPage", window.location.href);
+  }
 });
 
 /* 
@@ -144,11 +140,14 @@ window.addEventListener('DOMContentLoaded', function() {
   window.versionsLoaded = true;
   
   var pageHeader = document.getElementById('page-header');
+  if (!pageHeader) return;
   var docSetLang = pageHeader.getAttribute('data-lang') == null ? 'en' : pageHeader.getAttribute('data-lang');
 
-  (window.location.pathname.split('/')[1] !== docSetLang) ? 
-      docSetLang = '' :
-      docSetLang = docSetLang + '/';
+  if (window.location.pathname.split('/')[1] !== docSetLang) {
++    docSetLang = '';
+  } else {
+    docSetLang = docSetLang + '/';
+  }
 
   var docSetUrl = window.location.origin + '/' + docSetLang;
   
