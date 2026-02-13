@@ -16,14 +16,17 @@
  * under the License.
 -->
 
-{% if config.theme.logo or config.logo_light %}
-    {% if config.theme.logo %}
-        <img src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color="default">
-    {% endif %}
-    {% if config.theme.logo_light %}
-        <img src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color="slate">
-    {% endif %}
-{% else %}
-  {% set icon = config.theme.icon.logo or "material/library" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-{% endif %}
+<div class="md-copyright md-typeset">
+  <div class="md-copyright__content">
+    <div class="md-copyright__highlight">
+      {% if build_date_utc.year == 2024 %}
+      &copy; {{ build_date_utc.year }} <a href="https://wso2.com/">WSO2</a> LLC.
+      {% else %}
+      &copy; 2024-{{ build_date_utc.year }} <a href="https://wso2.com/">WSO2</a> LLC.
+      {% endif %}
+      &nbsp;|&nbsp;
+      Content licensed under <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC By 4.0</a>. |
+      Sample code licensed under <a href="http://www.apache.org/licenses/" target="_blank">Apache 2.0</a>.
+    </div>
+  </div>
+</div>

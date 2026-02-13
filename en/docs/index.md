@@ -1,3 +1,3 @@
 ---
-template: templates/home-page-2.html
+template: templates/home-page.html
 ---

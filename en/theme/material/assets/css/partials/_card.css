@@ -1,5 +1,5 @@
-<!--
- * Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com).
+/**
+ * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -14,16 +14,21 @@
  * KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations
  * under the License.
--->
+ */
 
-{% if config.theme.logo or config.logo_light %}
-    {% if config.theme.logo %}
-        <img src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color="default">
-    {% endif %}
-    {% if config.theme.logo_light %}
-        <img src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color="slate">
-    {% endif %}
-{% else %}
-  {% set icon = config.theme.icon.logo or "material/library" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-{% endif %}
+:root,
+[data-md-color-scheme=default] {
+  --md-card-border-radius: var(--md-border-radius-2x);
+}
+
+:root,
+[data-md-color-scheme=slate] {
+}
+
+.md-card {
+  box-shadow: var(--md-default-box-shadow);
+  border: 1px solid var(--md-divider-color);
+  border-radius: var(--md-card-border-radius);
+  background-color: var(--md-surface-fg-color);
+  padding: 30px;
+}

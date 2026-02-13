@@ -1,5 +1,5 @@
 <!--
- * Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com).
+ * Copyright (c) 2025, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -16,14 +16,12 @@
  * under the License.
 -->
 
-{% if config.theme.logo or config.logo_light %}
-    {% if config.theme.logo %}
-        <img src="{{ config.theme.logo | url }}" alt="logo" data-md-component="logo" data-md-color="default">
-    {% endif %}
-    {% if config.theme.logo_light %}
-        <img src="{{ config.theme.logo_light | url }}" alt="logo" data-md-component="logo" data-md-color="slate">
-    {% endif %}
-{% else %}
-  {% set icon = config.theme.icon.logo or "material/library" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-{% endif %}
+<link rel="stylesheet" href="{{ 'assets/css/report-issues.css' | url }}">
+
+<div class="report-issues-fixed">
+  <button class="md-typeset md-button md-button--small md-button--flex md-button--report-issues"
+          onclick="javascript:window.open('https://github.com/wso2/docs-bijira'+'/issues/new?title=Doc%20Feedback:&labels=docs&body=Location%20:%20'+window.location.href)"
+          title="Report Issues">
+    <label class="md-header__link__label">Report Issues</label>
+  </button>
+</div>
