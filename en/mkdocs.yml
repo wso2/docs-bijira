@@ -155,9 +155,18 @@ nav:
   - API Governance:
       - API Governance Overview: governance/overview.md
       - Govern API Proxy: governance/govern-api-proxy.md
-  - Gateway Federation:
-      - Overview: federation/overview.md
-      - Discover APIs from AWS API Gateway: federation/api-discovery-aws.md
+  - API Gateway:
+      - Overview: api-platform-gateway/overview.md
+      - Bijira Cloud Gateway: api-platform-gateway/cloud-gateway.md
+      - Self-Hosted Gateway:
+          - Getting Started: api-platform-gateway/getting-started.md
+          - Setting Up: api-platform-gateway/setting-up.md
+          - Adding and Managing Policies: api-platform-gateway/manage-policies.md
+          - Analytics: api-platform-gateway/analytics.md
+          - Troubleshooting: api-platform-gateway/troubleshooting.md
+      - Third-Party Gateways:
+          - Overview: federation/overview.md
+          - Discover APIs from AWS API Gateway: federation/api-discovery-aws.md
   - Monitor and Insights:
       - Logs: 
         - Overview: monitoring-and-insights/logs/overview.md
@@ -321,8 +330,8 @@ extra:
     API Governance:
       icon: octicons/shield-16
       level: 1
-    Gateway Federation:
-      icon: octicons/git-branch-16
+    API Gateway:
+      icon: octicons/globe-16
       level: 1
     Monitor and Insights:
       icon: octicons/graph-16
