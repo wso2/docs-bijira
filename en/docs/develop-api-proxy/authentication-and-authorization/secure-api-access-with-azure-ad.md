@@ -127,12 +127,12 @@ For more information, refer to the Azure documentation: [Add a Client Secret](ht
 ## Step 5: Create an application in Bijira Devportal
 Follow the steps below to consume the Bijira API through external key manager for authentication:
 
-1. Sign in to the [Bjira Developer Portal](https://devportal.bijira.dev/).
+1. Sign in to the [Bijira Developer Portal](https://devportal.bijira.dev/).
 2. Click **Applications** tab and then click **+Create**.
 3. Enter a name for the application.
 4. Click **Create** and **Subscribe** to the API you assigned scopes.
 
-## Step 5: Invoke the API with scopes
+## Step 6: Invoke the API with scopes
 
 You can now invoke the Bijira API using the authorization code grant. Bijira will authenticate the user with Azure AD and provide access to the resource.
 
