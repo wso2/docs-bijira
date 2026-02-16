@@ -16,7 +16,7 @@ This guide walks you through the following steps:
 
 To follow this guide, you need to satisfy the following prerequisites:
 
--  [Configure Azure AD as an external key manager](../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md).
+-  [Configure Azure AD as an external key manager](../../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md).
 -  An API: If you don't already have a service in Bijira, [develop a service](../develop-components/develop-services/develop-a-service.md) or an [API Proxy](../develop-components/develop-an-api-proxy.md).
 - Deploy and publish your API.
 - An Azure Active Directory account:  If you don’t already have one, set up an Azure Active Directory account at [https://azure.microsoft.com/en-gb/](https://azure.microsoft.com/en-gb/).
