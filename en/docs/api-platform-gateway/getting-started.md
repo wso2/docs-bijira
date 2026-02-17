@@ -14,7 +14,7 @@ Before you begin, ensure you have:
 - **unzip** installed
 - **Docker** installed and running (for Quick Start)
 
-## Step 1: Create a Self-Hosted Gateway in Bijira Console
+## Create a Self-Hosted Gateway in Bijira Console
 
 1. Sign in to [Bijira Console](https://console.bijira.dev).
 2. Navigate to **Gateways** from the left navigation.
@@ -32,12 +32,14 @@ Before you begin, ensure you have:
 
     ![Gateway Add](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
 
-6. Click **Add**.
+6. Click **Add** and you will be navigated to Gateway View Page.
 
-## Follow the instructions in Quick Start Guide
+## Setup Gateway
 
 ![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
 ![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
+
+Follow the instructions on Quick Start Guide Flow.
 
 ### Step 1: Download the Gateway
 
@@ -85,11 +87,51 @@ curl -k https://localhost:8443/health
 
 The gateway should show as **Active** in the Bijira Console under **Gateways**.
 
+## Add API and Invoke
+
+### Step 1: Create an API Proxy.
+
+In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
+
+1. Navigate to projects.
+2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
+3. Select **Import API Contract**.
+4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
+
+    ```text
+    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml   
+    ```
+
+5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
+
+6. Select the **Gateway Type** as the **Self-Hosted Gateway**
+
+    ![API Add](../../assets/img/api-platform-gateway/gateway/add-api.png)
+
+6. Click **Create** to create the API Proxy. Wait for the setup to complete and you will be navigated to the API Overview Page.
+
+    ![API Overview](../../assets/img/api-platform-gateway/gateway/api-overview.png)
+
+### Step 2: Deploy the API Proxy (Optional)
+
+1. Navigate to the **Deploy** page of the API Proxy. 
+
+    ![API Deploy](../../assets/img/api-platform-gateway/gateway/api-deploy.png)
+
+2. Click **Deploy**.
+
+## Test the API Proxy
+
+1. Navigate to the **Test --> cURL** page of the API Proxy.
+
+    ![API Test](../../assets/img/api-platform-gateway/gateway/api-try-out.png)
+
+2. Use the **cURL** for relevant resource to test the API Proxy.
+
 ## Next Steps
 
 Your Self-Hosted Gateway is now running! Here's what to do next:
 
-- **Deploy APIs**: Deploy your API proxies to the environment associated with this gateway
 - **Configure Policies**: Apply policies through the [Adding and Managing Policies](manage-policies.md) guide
 - **Monitor**: View gateway health and metrics using [Analytics](analytics.md)
 
