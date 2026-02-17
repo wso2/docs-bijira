@@ -31,31 +31,28 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.1/gateway-v0.8.1.zip && \
-    unzip gateway-v0.8.1.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.6/gateway-v0.8.6.zip && \
+    unzip gateway-v0.8.6.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `gateway-v0.8.1/configs/keys.env` with the required environment variables:
+    Run this command to create `gateway-v0.8.6/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > gateway-v0.8.1/configs/keys.env << 'ENVFILE'
+    cat > gateway-v0.8.6/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=platform-api.preview-dv.choreo.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
-
-    !!! warning "Important"
-        Replace `<your-gateway-token>` with the Gateway Registration Token from the Bijira Console. This token is shown only once, so ensure you copy it before leaving the page.
 
     ### Step 3: Start the Gateway
 
     1. Navigate to the gateway folder:
 
         ```bash
-        cd gateway-v0.8.1
+        cd gateway-v0.8.6
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -98,18 +95,18 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.1/gateway-v0.8.1.zip && \
-    unzip gateway-v0.8.1.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.6/gateway-v0.8.6.zip && \
+    unzip gateway-v0.8.6.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `gateway-v0.8.1/configs/keys.env` with the required environment variables:
+    Run this command to create `gateway-v0.8.6/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > gateway-v0.8.1/configs/keys.env << 'ENVFILE'
+    cat > gateway-v0.8.6/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=platform-api.preview-dv.choreo.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -122,7 +119,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd gateway-v0.8.1
+        cd gateway-v0.8.6
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -167,9 +164,9 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     Run this command to install the gateway chart with control plane configurations:
 
     ```bash
-    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.4.0 \
-      --set gateway.controller.controlPlane.host="host.docker.internal" \
-      --set gateway.controller.controlPlane.port=8443 \
+    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.8.6 \
+      --set gateway.controller.controlPlane.host="connect.choreo.dev" \
+      --set gateway.controller.controlPlane.port=443 \
       --set gateway.controller.controlPlane.token.value="your-gateway-token"
     ```
 
@@ -212,7 +209,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     Then install with:
 
     ```bash
-    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.4.0 \
+    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.8.6 \
       -f values.yaml
     ```
 

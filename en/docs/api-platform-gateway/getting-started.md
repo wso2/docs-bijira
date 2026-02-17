@@ -46,8 +46,8 @@ Follow the instructions on Quick Start Guide Flow.
 Run this command in your terminal to download the gateway:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.4/gateway-v0.8.4.zip && \
-unzip gateway-v0.8.4.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.6/gateway-v0.8.6.zip && \
+unzip gateway-v0.8.6.zip
 ```
 
 ### Step 2: Configure the Gateway
@@ -55,21 +55,21 @@ unzip gateway-v0.8.4.zip
 Run this command to create the gateway configuration with your environment variables:
 
 ```bash
-cat > gateway-v0.8.4/configs/keys.env << 'ENVFILE'
+cat > gateway-v0.8.6/configs/keys.env << 'ENVFILE'
 MOESIF_KEY=<your-moesif-key>
 GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
 GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
 ENVFILE
 ```
 
-Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.4/configs/keys.env file will be created with these environment variables.
+Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.6/configs/keys.env file will be created with these environment variables.
 
 ### Step 3: Start the Gateway
 
 Navigate to the gateway directory and start it using Docker Compose:
 
 ```bash
-cd gateway-v0.8.4
+cd gateway-v0.8.6
 docker compose --env-file configs/keys.env up
 ```
 
