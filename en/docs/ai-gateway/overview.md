@@ -14,7 +14,7 @@ Create and manage AI gateway runtimes directly within the AI Workspace:
 - **Multiple deployment options**: Deploy via Quick Start, Virtual Machine, Docker, or Kubernetes
 - **Monitor gateway status**: Track the availability of your gateway deployments
 
-Learn more in the [AI Gateways](ai-gateways/setting-up.md) section.
+Learn more in the [AI Gateways](ai-workspace/ai-gateways/setting-up.md) section.
 
 ### LLM Providers
 
@@ -24,7 +24,7 @@ Connect to various LLM service providers and manage their configurations:
 - **Manage provider credentials**: Securely store and manage API keys and authentication
 - **Monitor provider status**: Track the availability and health of connected providers
 
-Learn more in the [LLM Providers](llm-providers/overview.md) section.
+Learn more in the [LLM Providers](ai-workspace/llm-providers/overview.md) section.
 
 ### LLM Proxies
 
@@ -34,10 +34,10 @@ Create and manage proxy endpoints for your LLM services:
 - **Attach policies and guardrails**: Apply rate limiting, content filtering, and security policies
 - **Track proxy traffic**: Monitor usage and performance metrics
 
-Learn more in the [LLM Proxies](llm-proxies/overview.md) section.
+Learn more in the [LLM Proxies](ai-workspace/llm-proxies/overview.md) section.
 
 ### MCP Features (Coming Soon)
 
 Model Context Protocol (MCP) External Servers and Registries will be available soon.
 
-To get started, refer to the [Getting Started](ai-workspace/overview.md) guide.
+To get started, refer to the [Getting Started](ai-workspace/getting-started.md) guide.
