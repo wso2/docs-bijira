@@ -1,6 +1,6 @@
 # Configure LLM Provider
 
-LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, and others to the AI Workspace. Once configured, you can use these providers across multiple LLM Proxies.
+LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, and others to the AI Workspace. Once configured, these providers serve as the backend for your LLM Proxies, enabling you to route requests through a managed gateway with built-in security, rate limiting, and guardrails.
 
 ## Prerequisites
 
