@@ -1,6 +1,6 @@
 # Getting Started
 
-Get up and running with the AI Workspace by following these three steps: create an AI gateway, configure an LLM provider, and set up an LLM proxy.
+The AI Workspace enables you to manage AI gateways, LLM providers, and LLM proxies. Follow these steps to get started.
 
 ## Step 1: Create an AI Gateway
 
