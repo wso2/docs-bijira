@@ -2,15 +2,42 @@
 
 The AI Gateway provides a unified interface for managing AI services, including Large Language Model (LLM) providers and proxy configurations. It enables organizations to seamlessly integrate, manage, and govern AI capabilities within their API ecosystem.
 
-## Components
+## AI Workspace 
 
-### AI Workspace
+The AI Workspace is a comprehensive platform for managing AI services, including AI gateways, LLM providers, proxy configurations, and Model Context Protocol (MCP) integrations.
 
-The AI Workspace is your central hub for configuring and managing AI-related services. It provides:
+### AI Gateways
 
-- **[AI Gateways](ai-workspace/ai-gateways/ai-gateways.md)**: Create and manage AI gateway runtimes that process and route requests between your applications and LLM providers
-- **[LLM Providers](ai-workspace/llm-providers/overview.md)**: Connect to various AI service providers and manage credentials
-- **[LLM Proxies](ai-workspace/llm-proxies/overview.md)**: Create proxy endpoints with attached policies for rate limiting and guardrails
-- **MCP Features (Coming Soon)**: MCP External Servers and Registries
+Create and manage AI gateway runtimes directly within the AI Workspace:
 
-For detailed information, refer to the [AI Workspace](ai-workspace/overview.md) documentation.
+- **Create gateways**: Set up gateway runtimes to process and route AI requests
+- **Multiple deployment options**: Deploy via Quick Start, Virtual Machine, Docker, or Kubernetes
+- **Monitor gateway status**: Track the availability of your gateway deployments
+
+Learn more in the [AI Gateways](ai-gateways/setting-up.md) section.
+
+### LLM Providers
+
+Connect to various LLM service providers and manage their configurations:
+
+- **Connect OpenAI, Anthropic, and more**: Integrate multiple AI service providers
+- **Manage provider credentials**: Securely store and manage API keys and authentication
+- **Monitor provider status**: Track the availability and health of connected providers
+
+Learn more in the [LLM Providers](llm-providers/overview.md) section.
+
+### LLM Proxies
+
+Create and manage proxy endpoints for your LLM services:
+
+- **Create proxy endpoints**: Set up endpoints for routing AI requests
+- **Attach policies and guardrails**: Apply rate limiting, content filtering, and security policies
+- **Track proxy traffic**: Monitor usage and performance metrics
+
+Learn more in the [LLM Proxies](llm-proxies/overview.md) section.
+
+### MCP Features (Coming Soon)
+
+Model Context Protocol (MCP) External Servers and Registries will be available soon.
+
+To get started, refer to the [Getting Started](ai-workspace/overview.md) guide.

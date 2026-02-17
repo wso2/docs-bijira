@@ -235,9 +235,9 @@ Generate API keys to authenticate requests to your deployed gateways.
 
 The **Deployed Gateways** section shows the gateways where your proxy is currently deployed. Each gateway entry displays:
 
-- **Gateway name** (e.g., saadha-api-gateway)
+- **Gateway name** 
 - **Deployment status** - Active or Not Active
-- **Deployment identifier** (e.g., saadha-api-gateway_2026-02-17.1)
+- **Deployment identifier** 
 
 ---
 

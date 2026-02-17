@@ -158,8 +158,8 @@ nav:
   - AI Gateway:
       - Overview: ai-gateway/overview.md
       - AI Workspace:
-          - Overview: ai-gateway/ai-workspace/overview.md
-          - AI Gateways: ai-gateway/ai-workspace/ai-gateways/ai-gateways.md
+          - Getting Started: ai-gateway/ai-workspace/getting-started.md
+          - Setting Up: ai-gateway/ai-workspace/ai-gateways/setting-up.md
           - LLM Providers:
               - Overview: ai-gateway/ai-workspace/llm-providers/overview.md
               - Configure Provider: ai-gateway/ai-workspace/llm-providers/configure-provider.md

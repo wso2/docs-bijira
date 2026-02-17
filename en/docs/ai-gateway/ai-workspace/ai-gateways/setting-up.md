@@ -30,17 +30,17 @@ The AI Gateways page displays a list of all configured gateways with the followi
 
 2. Click **+ Add AI Gateway**.
 
-3. Fill in the gateway details:
+   3. Fill in the gateway details:
 
-    1. **Name*** (Required): Enter a unique name for the gateway (e.g., `production-gateway`, `dev-gateway`).
+       1. **Name*** (Required): Enter a unique name for the gateway (e.g., `production-gateway`, `dev-gateway`).
 
-    2. **Description** (Optional): Add a brief description to identify the gateway's purpose.
+       2. **Description** (Optional): Add a brief description to identify the gateway's purpose.
 
-    3. **URL*** (Required): Enter the gateway URL (e.g., `https://localhost:8443`). This is the endpoint where the gateway runtime is accessible.
+       3. **URL*** (Required): Enter the gateway URL (e.g., `https://localhost:8443`). This is the endpoint where the gateway runtime is accessible.
 
-    4. **Associated Environment*** (Required): Select the environment from the dropdown (e.g., `Development`, `Production`).
+       4. **Associated Environment*** (Required): Select the environment from the dropdown (e.g., `Development`, `Production`).
 
-   ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
+        ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
 
 4. Click **Add Gateway** to create the gateway.
 
