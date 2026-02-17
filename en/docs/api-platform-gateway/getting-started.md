@@ -36,56 +36,57 @@ Before you begin, ensure you have:
 
 ## Setup Gateway
 
-![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
-![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
+1. Follow the instructions on Quick Start Guide Flow.
 
-Follow the instructions on Quick Start Guide Flow.
+    ![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
+    ![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
 
-### Step 1: Download the Gateway
 
-Run this command in your terminal to download the gateway:
+    ### Step 1: Download the Gateway
 
-```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.6/gateway-v0.8.6.zip && \
-unzip gateway-v0.8.6.zip
-```
+    Run this command in your terminal to download the gateway:
 
-### Step 2: Configure the Gateway
+    ```bash
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.6/gateway-v0.8.6.zip && \
+    unzip gateway-v0.8.6.zip
+    ```
 
-Run this command to create the gateway configuration with your environment variables:
+    ### Step 2: Configure the Gateway
 
-```bash
-cat > gateway-v0.8.6/configs/keys.env << 'ENVFILE'
-MOESIF_KEY=<your-moesif-key>
-GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
-GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
-ENVFILE
-```
+    Run this command to create the gateway configuration with your environment variables:
 
-Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.6/configs/keys.env file will be created with these environment variables.
+    ```bash
+    cat > gateway-v0.8.6/configs/keys.env << 'ENVFILE'
+    MOESIF_KEY=<your-moesif-key>
+    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
+    GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
+    ENVFILE
+    ```
 
-### Step 3: Start the Gateway
+    Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.6/configs/keys.env file will be created with these environment variables.
 
-Navigate to the gateway directory and start it using Docker Compose:
+    ### Step 3: Start the Gateway
 
-```bash
-cd gateway-v0.8.6
-docker compose --env-file configs/keys.env up
-```
+    Navigate to the gateway directory and start it using Docker Compose:
 
-### Step 4: Verify the Gateway
+    ```bash
+    cd gateway-v0.8.6
+    docker compose --env-file configs/keys.env up
+    ```
 
-Check that the gateway is running and connected:
+    ### Step 4: Verify the Gateway
 
-```bash
-# Check container status
-docker compose ps
+    Check that the gateway is running and connected:
 
-# Check gateway health
-curl -k https://localhost:8443/health
-```
+    ```bash
+    # Check container status
+    docker compose ps
 
-The gateway should show as **Active** in the Bijira Console under **Gateways**.
+    # Check gateway health
+    curl -k https://localhost:8443/health
+    ```
+
+    The gateway should show as **Active** in the Bijira Console under **Gateways**.
 
 ## Add API and Invoke
 
