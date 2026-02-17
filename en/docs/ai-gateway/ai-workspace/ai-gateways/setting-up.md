@@ -1,4 +1,4 @@
-# AI Gateways
+# Setting up an AI Gateway
 
 AI Gateways are the runtime components that process and route requests between your applications and LLM providers. You can create and manage AI gateways directly within the AI Workspace to deploy your LLM providers and proxies.
 
