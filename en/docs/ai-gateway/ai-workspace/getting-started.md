@@ -1,5 +1,8 @@
 # Getting Started
 
+!!! note
+    The AI Workspace is currently available as a Feature Preview. To enable this feature, you must enable the **Self-Hosted Gateway** feature flag.
+
 Get up and running with the AI Workspace by following these three steps: create an AI gateway, configure an LLM provider, and set up an LLM proxy.
 
 ## Step 1: Create an AI Gateway
