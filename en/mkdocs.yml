@@ -155,6 +155,18 @@ nav:
   - API Governance:
       - API Governance Overview: governance/overview.md
       - Govern API Proxy: governance/govern-api-proxy.md
+  - AI Gateway:
+      - Overview: ai-gateway/overview.md
+      - AI Workspace:
+          - Overview: ai-gateway/ai-workspace/overview.md
+          - LLM Providers:
+              - Overview: ai-gateway/ai-workspace/llm-providers/overview.md
+              - Configure Provider: ai-gateway/ai-workspace/llm-providers/configure-provider.md
+              - Manage Provider: ai-gateway/ai-workspace/llm-providers/manage-provider.md
+          - LLM Proxies:
+              - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
+              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/create-proxy.md
+              - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
   - API Gateway:
       - Overview: api-platform-gateway/overview.md
       - Bijira Cloud Gateway: api-platform-gateway/cloud-gateway.md
@@ -329,6 +341,9 @@ extra:
       level: 1
     API Governance:
       icon: octicons/shield-16
+      level: 1
+    AI Gateway:
+      icon: octicons/cpu-16
       level: 1
     API Gateway:
       icon: octicons/globe-16
