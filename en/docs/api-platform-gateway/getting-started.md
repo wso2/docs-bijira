@@ -18,55 +18,60 @@ Before you begin, ensure you have:
 
 1. Sign in to [Bijira Console](https://console.bijira.dev).
 2. Navigate to **Gateways** from the left navigation.
+
+    ![Gateway List Empty](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
+
 3. Select the **API Platform** tab.
 4. Click **+ Add Self-Hosted Gateway**.
 5. Provide the following details:
-   - **Name**: A unique name for your gateway
-   - **Description**: Optional description
-   - **URL**: The URL where your gateway will be accessible (e.g., `https://localhost:8443`)
-   - **Associated Environment**: Select the environment for this gateway
-6. Click **Create**.
 
-## Step 2: Copy the Gateway Registration Token
+    - **Name**: A unique name for your gateway
+    - **Description**: Optional description
+    - **URL**: The URL where your gateway will be accessible (e.g., `https://localhost:8443`)
+    - **Associated Environment**: Select the environment for this gateway
 
-After creating the gateway, you'll see the **Gateway Registration Token**. 
+    ![Gateway Add](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
 
-!!! warning "Important"
-    This token is shown only once. Ensure it is securely saved before leaving the page.
+6. Click **Add**.
 
-Copy the token and store it securely. You'll need it to configure the gateway.
+## Follow the instructions in Quick Start Guide
 
-## Step 3: Download the Gateway
+![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
+![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
+
+### Step 1: Download the Gateway
 
 Run this command in your terminal to download the gateway:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.1/gateway-v0.8.1.zip && \
-unzip gateway-v0.8.1.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.4/gateway-v0.8.4.zip && \
+unzip gateway-v0.8.4.zip
 ```
 
-## Step 4: Configure the Gateway
+### Step 2: Configure the Gateway
 
 Run this command to create the gateway configuration with your environment variables:
 
 ```bash
-cat > gateway-v0.8.1/configs/keys.env << 'ENVFILE'
-BIJIRA_GATEWAY_TOKEN=<your-gateway-token>
+cat > gateway-v0.8.4/configs/keys.env << 'ENVFILE'
+MOESIF_KEY=<your-moesif-key>
+GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
+GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
 ENVFILE
 ```
 
-Replace `<your-gateway-token>` with the token you copied in Step 2.
+Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.4/configs/keys.env file will be created with these environment variables.
 
-## Step 5: Start the Gateway
+### Step 3: Start the Gateway
 
 Navigate to the gateway directory and start it using Docker Compose:
 
 ```bash
-cd gateway-v0.8.1
-docker compose up -d
+cd gateway-v0.8.4
+docker compose --env-file configs/keys.env up
 ```
 
-## Step 6: Verify the Gateway
+### Step 4: Verify the Gateway
 
 Check that the gateway is running and connected:
 
