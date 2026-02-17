@@ -4,7 +4,8 @@ LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, 
 
 ## Prerequisites
 
-- Access to Bijira Console with Admin or Developer role
+- Access to Bijira Console with **Admin** role
+- At least one [AI Gateway created and set up](../ai-gateways/ai-gateways.md)
 - API credentials for your LLM provider (API key, access tokens, etc.)
 
 ## Add a New Provider

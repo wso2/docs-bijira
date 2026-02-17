@@ -5,7 +5,7 @@ LLM Proxies provide a managed API gateway layer that routes requests to your con
 ## Prerequisites
 
 !!! info "Before You Begin"
-    - Access to Bijira Console with Admin or Developer role
+    - Access to Bijira Console with **Admin** or **Developer** role
     - At least one [configured and deployed LLM Provider](../llm-providers/configure-provider.md)
 
 ---

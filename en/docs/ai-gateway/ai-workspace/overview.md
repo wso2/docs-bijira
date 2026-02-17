@@ -1,6 +1,16 @@
 # AI Workspace Overview
 
-The AI Workspace is a comprehensive platform for managing AI services, including LLM providers, proxy configurations, and Model Context Protocol (MCP) integrations.
+The AI Workspace is a comprehensive platform for managing AI services, including AI gateways, LLM providers, proxy configurations, and Model Context Protocol (MCP) integrations.
+
+## AI Gateways
+
+Create and manage AI gateway runtimes directly within the AI Workspace:
+
+- **Create gateways**: Set up gateway runtimes to process and route AI requests
+- **Multiple deployment options**: Deploy via Quick Start, Virtual Machine, Docker, or Kubernetes
+- **Monitor gateway status**: Track the availability of your gateway deployments
+
+Learn more in the [AI Gateways](ai-gateways/ai-gateways.md) section.
 
 ## LLM Providers
 
