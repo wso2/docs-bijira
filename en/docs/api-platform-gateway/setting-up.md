@@ -42,7 +42,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     ```bash
     cat > gateway-v0.8.7/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -106,7 +106,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     ```bash
     cat > gateway-v0.8.7/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -179,7 +179,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
 
     ```bash
     helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.8.7 \
-      --set gateway.controller.controlPlane.host="connect.choreo.dev" \
+      --set gateway.controller.controlPlane.host="connect.bijira.dev" \
       --set gateway.controller.controlPlane.port=443 \
       --set gateway.controller.controlPlane.token.value="your-gateway-token" \
       --set gateway.config.analytics.publishers.moesif.application_id="your-moesif-key" \
