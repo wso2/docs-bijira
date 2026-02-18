@@ -6,8 +6,6 @@ This guide walks you through setting up a Bijira Self-Hosted Gateway in your env
 
 The Self-Hosted Gateway enables you to run the Bijira API Gateway in your own infrastructure while maintaining centralized management through Bijira's control plane. This guide covers the fastest way to get started.
 
-!!! note
-    The self-hosted gateway is currently available as a Feature Preview. To enable this feature, you must enable the **Self-Hosted Gateway** feature flag.
 
 ## Prerequisites
 
