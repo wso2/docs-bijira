@@ -49,8 +49,8 @@ Before you begin, ensure you have:
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.8.7/gateway-v0.8.7.zip && \
-    unzip gateway-v0.8.7.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v0.9.0/gateway-v0.9.0.zip && \
+    unzip gateway-v0.9.0.zip
     ```
 
     ### Step 2: Configure the Gateway
@@ -58,21 +58,21 @@ Before you begin, ensure you have:
     Run this command to create the gateway configuration with your environment variables:
 
     ```bash
-    cat > gateway-v0.8.7/configs/keys.env << 'ENVFILE'
+    cat > gateway-v0.9.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
 
-    Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.8.7/configs/keys.env file will be created with these environment variables.
+    Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.9.0/configs/keys.env file will be created with these environment variables.
 
     ### Step 3: Start the Gateway
 
     Navigate to the gateway directory and start it using Docker Compose:
 
     ```bash
-    cd gateway-v0.8.7
+    cd gateway-v0.9.0
     docker compose --env-file configs/keys.env up
     ```
 
