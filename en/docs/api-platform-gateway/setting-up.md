@@ -89,6 +89,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
 
     - cURL installed
     - unzip installed
+    - Docker Compose installed
 
     ### Step 1: Download the Gateway
 

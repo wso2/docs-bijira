@@ -16,6 +16,7 @@ Before you begin, ensure you have:
 - **cURL** installed
 - **unzip** installed
 - **Docker** installed and running (for Quick Start)
+- **Docker Compose** installed
 
 ## Create a Self-Hosted Gateway in Bijira Console
 
