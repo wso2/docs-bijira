@@ -61,7 +61,7 @@ Before you begin, ensure you have:
     ```bash
     cat > gateway-v0.8.7/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.choreo.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
