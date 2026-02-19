@@ -48,7 +48,7 @@ You can attach policies and guardrails to your proxy that apply to all requests:
     Each guardrail includes advanced configuration options that allow you to fine-tune its behavior. After selecting a guardrail, you can configure these settings before attaching it to the proxy.
 
 !!! info
-    Learn more about each policy in the [Policy Hub](https://policyhub.choreoapps.dev/).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 

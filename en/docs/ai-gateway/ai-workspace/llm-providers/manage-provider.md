@@ -132,96 +132,56 @@ Set up the API key that client applications must provide:
 
 <div style="border-left: 4px solid #9C27B0; padding-left: 16px; margin-bottom: 24px;">
 
-Control token consumption and prevent cost overruns with two independent rate limiting views.
+Control request and token consumption to prevent cost overruns and ensure fair usage across all consumers.
 
 </div>
 
-### Overview: Two Rate Limiting Views
+The Rate Limiting tab provides two independent sections: **Backend** and **Per Consumer**.
 
-The Rate Limiting tab provides **two side-by-side sections**:
+| Section | Controls | Protects |
+|---------|----------|----------|
+| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend |
+| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers |
 
-| View | Purpose | Protects |
-|------|---------|----------|
-| **Backend** | Limits gateway → upstream provider calls | Your provider API credentials |
-| **Per Consumer** | Limits application → provider calls | Fair usage across consumers |
+Both sections support two configuration modes:
 
-### Backend Rate Limits
+- **Provider-wide** — A single limit applied across all API endpoints.
+- **Per Resource** — Individual limits per API endpoint (e.g., chat completions vs. embeddings).
 
-Controls calls **from the gateway to the upstream provider**.
+!!! note
+    Provider-wide and Per Resource modes are mutually exclusive per section. Clear existing limits before switching modes.
 
-**Configuration Modes:**
+### Limit Criteria
 
-=== "Provider-wide"
-    Single rate limit for **all requests** to the provider.
-    
-    Best for: Simple setups, consistent usage patterns
+Each section lets you configure:
 
-=== "Per Resource"
-    Different rate limits for **each endpoint** (e.g., chat vs embeddings).
-    
-    Best for: Different costs per endpoint, granular control
+| Criterion | Description |
+|-----------|-------------|
+| **Request Count** | Maximum number of requests within the reset duration |
+| **Token Count** | Maximum number of tokens (prompt + completion) within the reset duration |
+| **Cost** | Cost-based limiting *(Coming soon)* |
 
-**Adding a Backend Rate Limit:**
+For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, `minute`, `hour`, or `all`).
 
-1. Select mode: **Provider-wide** or **Per Resource**
-2. If Per Resource: Expand the endpoint to limit
-3. Click **+ Add Rate Limit**
-4. Configure:
-    - **Limit**: Max tokens (e.g., `100000`)
-    - **Time Window**: `hourly`, `daily`, or `monthly`
-5. Click **Save**
+### Provider-wide Configuration
 
----
+1. Select **Provider-wide** in the Backend or Per Consumer section.
+2. Enable **Request Count** and/or **Token Count**.
+3. Enter the **Quota** and select the **Reset Duration** for each criterion.
+4. Click **Save**.
 
-### Per Consumer Rate Limits
+### Per Resource Configuration
 
-Controls calls **from applications/users to the provider**.
-
-**Configuration Modes:**
-
-=== "Provider-wide"
-    Single limit per consumer across **all endpoints**.
-    
-    Best for: Simple consumer quotas, uniform limits
-
-=== "Per Resource"  
-    Different limits per consumer for **each endpoint**.
-    
-    Best for: Granular per-consumer, per-endpoint control
-
-**Adding a Consumer Rate Limit:**
-
-1. Select mode: **Provider-wide** or **Per Resource**
-2. If Per Resource: Expand the endpoint to limit
-3. Click **+ Add Rate Limit**
-4. Configure:
-    - **Limit**: Max tokens per consumer (e.g., `50000`)
-    - **Time Window**: `hourly`, `daily`, or `monthly`
-5. Click **Save**
-
----
-
-### Managing Rate Limits
-
-- **Edit**: Click a rate limit to modify its values
-- **Delete**: Click delete icon to remove
-- **Auto-save**: Changes apply automatically
+1. Select **Per Resource** in the Backend or Per Consumer section.
+2. Expand **Limit per Resource** to set default limits for all endpoints:
+    - Enable the criteria and configure **Quota** and **Reset Duration**.
+3. To override limits for a specific endpoint, expand that resource row and configure it separately.
+4. Click **Save**.
 
 !!! tip "Cost Control Best Practices"
-    **Backend Limits:**
-    
-    - Set conservative limits to protect your provider credentials
-    - Monitor actual usage before increasing limits
-    
-    **Consumer Limits:**
-    
-    - Ensure fair usage across all applications
-    - Start with Provider-wide for simplicity
-    - Use Per Resource when endpoints have different token costs
-    
-    📊 **Track usage:** Monitor through the Insights dashboard and adjust as needed
+    Set conservative backend limits first to protect your provider credentials. Monitor actual usage via the Insights dashboard before increasing limits. Use Per Resource mode only when endpoints have significantly different usage patterns.
 
-**Learn more:** [Token-Based Rate Limiting Policy](../policies/token-based-rate-limit.md)
+**Learn more:** [Token-Based Rate Limiting](../policies/token-based-rate-limit.md)
 
 ---
 
@@ -267,7 +227,7 @@ The tab displays all guardrails currently attached to the provider:
 !!! warning "Production Impact"
     Guardrail changes apply immediately to all deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
 
-**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md)
+**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md). For the full policy catalog, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -359,5 +319,5 @@ Permanently remove the provider and all its configurations.
 ## Next Steps
 
 - [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Configure and deploy proxy endpoints using your provider
-- [Configure Policies](../policies/overview.md) - Explore all available guardrails and policies
-- [Monitor Usage](../../monitor-and-insights.md) - Track performance, costs, and token consumption
+- [Policies Overview](../policies/overview.md) - Explore all available guardrails and policies
+- [Guardrails Overview](../policies/guardrails/overview.md) - Configure content safety and compliance rules

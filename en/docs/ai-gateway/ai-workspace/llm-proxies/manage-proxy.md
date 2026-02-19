@@ -206,7 +206,7 @@ Understanding how guardrails are applied:
     Removing a guardrail takes effect after saving. Ensure no active applications depend on the guardrail's protection.
 
 !!! info
-    Learn more about each policy in the [Policy Hub](https://policyhub.choreoapps.dev/).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -217,6 +217,24 @@ Understanding how guardrails are applied:
 The Get Started panel on the right side of the proxy details page provides quick access to API key generation and deployment information.
 
 </div>
+
+### Invoke URL
+
+The **Invoke URL** shows the base URL for calling this proxy through a specific gateway. Select a gateway from the dropdown to see its URL.
+
+The URL follows the format:
+
+```
+https://{gateway-host}/{proxy-name}
+```
+
+To call a specific resource, append the resource path:
+
+```
+https://{gateway-host}/{proxy-name}/chat/completions
+```
+
+The proxy URL is independent of the provider URL — the provider's vhost is not part of the proxy path.
 
 ### LLM Proxy Keys
 
@@ -272,5 +290,6 @@ To delete a proxy, click the **delete** icon (trash icon) in the top-right corne
 
 ## Next Steps
 
-- [Explore Policies](../policies/overview.md) - Learn about all available policies for proxies
-- [Policy Hub](https://policyhub.choreoapps.dev/) - Browse and learn about available guardrails and policies
+- [Policies Overview](../policies/overview.md) - Learn about all available policies for proxies
+- [Guardrails Overview](../policies/guardrails/overview.md) - Configure content safety and compliance guardrails
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) - Browse the full catalog of available guardrails and policies

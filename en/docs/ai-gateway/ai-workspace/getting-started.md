@@ -44,5 +44,6 @@ For detailed instructions, see [Configure LLM Proxy](llm-proxies/create-proxy.md
 
 - [Manage your provider](llm-providers/manage-provider.md) — Configure connection, access control, security, rate limiting, guardrails, and models
 - [Manage your proxy](llm-proxies/manage-proxy.md) — Configure provider settings, resources, security, and guardrails
-- [Explore policies](policies/overview.md) — Learn about rate limiting, caching, and guardrails
-- [Policy Hub](https://policyhub.choreoapps.dev/) — Browse all available guardrails and policies
+- [Explore policies](policies/overview.md) — Learn about rate limiting and guardrails
+- [Insights](insights.md) — Monitor traffic, token usage, and guardrail activity
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Browse all available guardrails and policies
