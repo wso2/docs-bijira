@@ -2,6 +2,9 @@
 
 This guide walks you through setting up a Bijira Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to Bijira's control plane.
 
+!!! note
+    This feature is currently available in the **US region** only.
+
 ## Overview
 
 The Self-Hosted Gateway enables you to run the Bijira API Gateway in your own infrastructure while maintaining centralized management through Bijira's control plane. This guide covers the fastest way to get started.
@@ -100,16 +103,29 @@ Before you begin, ensure you have:
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
-1. Navigate to projects.
-2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
+1. Navigate to **projects**.
+
+
+    ![Navigate Project](../../assets/img/api-platform-gateway/gateway/navigate-project.png)
+
+
+2. To create a new project for your APIs, click **+ Create Project** and follow the setup steps. Otherwise, select **Default** to continue with the default project.
+
+    ![Select Project](../../assets/img/api-platform-gateway/gateway/select-project.png)
+
 3. Select **Import API Contract**.
-4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
+
+    ![Select Import API Contract](../../assets/img/api-platform-gateway/gateway/select-import-api-flow.png)
+
+4. Select **URL** option and provide the following URL to import the API contract:
 
     ```text
     https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml   
     ```
 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
+
+    ![Import API Contract](../../assets/img/api-platform-gateway/gateway/create-api-contract-url.png)
 
 6. Select the **Gateway Type** as the **Self-Hosted Gateway**
 
@@ -120,6 +136,11 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
     ![API Overview](../../assets/img/api-platform-gateway/gateway/api-overview.png)
 
 ### Step 2: Deploy the API Proxy (Optional)
+
+!!! note
+    This step is **optional** at this stage, as the API is deployed to the gateway by default. However, if you make any changes to the API, you must redeploy it.
+    
+    To redeploy, navigate to the **Deploy page** of the API Proxy and click **Deploy**.
 
 1. Navigate to the **Deploy** page of the API Proxy. 
 
