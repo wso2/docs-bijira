@@ -19,13 +19,14 @@ Before you begin, ensure you have:
 ## Create a Self-Hosted Gateway in Bijira Console
 
 1. Sign in to [Bijira Console](https://console.bijira.dev).
-2. Navigate to **Gateways** from the left navigation.
+2. Go to **Organization Level** in Bijira.
+3. From the left navigation, select **Admin** → **Gateways**.
 
     ![Gateway List Empty](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
 
-3. Select the **API Platform** tab.
-4. Click **+ Add Self-Hosted Gateway**.
-5. Provide the following details:
+4. Select the **API Platform** tab.
+5. Click **+ Add Self-Hosted Gateway**.
+6. Provide the following details:
 
     - **Name**: A unique name for your gateway
     - **Description**: Optional description
@@ -34,11 +35,14 @@ Before you begin, ensure you have:
 
     ![Gateway Add](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
 
-6. Click **Add** and you will be navigated to Gateway View Page.
+7. Click **Add** and you will be navigated to the Gateway View Page.
 
 ## Setup Gateway
 
-1. Follow the instructions on Quick Start Guide Flow.
+1. Next, download, set up, and start the gateway on your machine by following the steps in the **Quick Start** section or the detailed instructions below (Steps 1–4).
+
+    !!! note
+        Be sure to copy the commands from the Quick Start section, since the keys are auto-generated for you.
 
     ![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
     ![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
@@ -65,7 +69,7 @@ Before you begin, ensure you have:
     ENVFILE
     ```
 
-    Once you copy the above command displayed in the console `<your-moesif-key>` and `<your-gateway-token>` will be populated and gateway-v0.9.0/configs/keys.env file will be created with these environment variables.
+    Once you copy the above command from the screen, the `<your-moesif-key>` and `<your-gateway-token>` placeholders will be populated and the `gateway-v0.9.0/configs/keys.env` file will be created with these environment variables.
 
     ### Step 3: Start the Gateway
 
