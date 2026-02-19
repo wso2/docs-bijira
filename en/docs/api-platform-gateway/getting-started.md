@@ -85,7 +85,7 @@ Before you begin, ensure you have:
     docker compose ps
 
     # Check gateway health
-    curl -k https://localhost:8443/health
+    curl http://localhost:9002/health
     ```
 
     The gateway should show as **Active** in the Bijira Console under **Gateways**.

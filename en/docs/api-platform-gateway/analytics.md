@@ -12,7 +12,7 @@ To view analytics for your Self-Hosted Gateway:
 
 1. Sign in to the [Bijira Console](https://console.bijira.dev).
 2. Select your organization and project.
-3. Navigate to **Monitor** in the left navigation.
+3. In the left navigation, go to **Insights** and select **API Insights**.
 4. Select the environment associated with your Self-Hosted Gateway.
 
 ## Analytics Dashboard
