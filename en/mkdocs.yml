@@ -174,18 +174,19 @@ nav:
               - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/token-based-rate-limit.md
               - Guardrails:
                   - Overview: ai-gateway/ai-workspace/policies/guardrails/overview.md
-                  - API Key Auth: ai-gateway/ai-workspace/policies/guardrails/api-key-auth.md
-                  - JWT Auth: ai-gateway/ai-workspace/policies/guardrails/jwt-auth.md
-                  - CORS: ai-gateway/ai-workspace/policies/guardrails/cors.md
+                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
+                  - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
+                  - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
+                  - Semantic Cache: ai-gateway/ai-workspace/policies/guardrails/semantic-cache.md
+              - Other Policies:
+#                  - API Key Auth: ai-gateway/ai-workspace/policies/guardrails/api-key-auth.md
+#                  - JWT Auth: ai-gateway/ai-workspace/policies/guardrails/jwt-auth.md
+#                  - CORS: ai-gateway/ai-workspace/policies/guardrails/cors.md
                   - Rate Limit - Basic: ai-gateway/ai-workspace/policies/guardrails/basic-rate-limit.md
                   - Token Based Rate Limit: ai-gateway/ai-workspace/policies/guardrails/token-based-ratelimit.md
                   - Model Round Robin: ai-gateway/ai-workspace/policies/guardrails/model-round-robin.md
                   - Prompt Decorator: ai-gateway/ai-workspace/policies/guardrails/prompt-decorator.md
                   - Prompt Template: ai-gateway/ai-workspace/policies/guardrails/prompt-template.md
-#                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
-                  - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
-                  - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
-                  - Semantic Cache: ai-gateway/ai-workspace/policies/guardrails/semantic-cache.md
   - API Gateway:
       # - Overview: api-platform-gateway/overview.md
       # - Bijira Cloud Gateway: api-platform-gateway/cloud-gateway.md

@@ -2,12 +2,30 @@
 
 The AI Workspace provides built-in policies that let you govern how traffic flows through your LLM Providers and LLM Proxies. Policies can be applied at the provider level (affecting all proxies that use the provider) or at the proxy level (scoped to a specific proxy or individual endpoints).
 
-## Available Policies
+## Guardrails
+
+Guardrails enforce content safety and compliance on requests and responses.
+
+| Guardrail | Description |
+|-----------|-------------|
+| [Semantic Prompt Guard](guardrails/semantic-prompt-guard.md) | Block or allow prompts based on semantic similarity to configured phrases. |
+| [PII Masking Regex](guardrails/regex-pii-masking.md) | Detect and mask PII in requests and responses using regex patterns. |
+| [Azure Content Safety](guardrails/azure-content-safety.md) | Filter harmful content using Azure Content Safety moderation. |
+| [Semantic Cache](guardrails/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
+
+## Other Policies
 
 | Policy | Description |
 |--------|-------------|
-| [Token-Based Rate Limit](token-based-rate-limit.md) | Control LLM token consumption to manage costs and ensure fair usage across consumers. |
-| [Guardrails](guardrails/overview.md) | Enforce content safety, compliance, and quality standards on requests and responses. |
+| [Token-Based Rate Limit](token-based-rate-limit.md) | Control request and token consumption to manage costs. |
+| [API Key Auth](guardrails/api-key-auth.md) | Validate incoming requests using an API key. |
+| [JWT Auth](guardrails/jwt-auth.md) | Validate JWT tokens on incoming requests. |
+| [CORS](guardrails/cors.md) | Handle cross-origin resource sharing and preflight requests. |
+| [Rate Limit - Basic](guardrails/basic-rate-limit.md) | Enforce a simple request count limit within a time window. |
+| [Token Based Rate Limit](guardrails/token-based-ratelimit.md) | Enforce rate limits based on LLM token consumption. |
+| [Model Round Robin](guardrails/model-round-robin.md) | Distribute requests across multiple models in round-robin order. |
+| [Prompt Decorator](guardrails/prompt-decorator.md) | Prepend or append content to every request. |
+| [Prompt Template](guardrails/prompt-template.md) | Apply reusable parameterized prompt templates to requests. |
 
 ## Where Policies are Applied
 

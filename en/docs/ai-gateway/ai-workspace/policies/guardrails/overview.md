@@ -1,20 +1,23 @@
 # Guardrails Overview
 
-Guardrails are policies that you attach to LLM Providers and LLM Proxies to control how traffic flows through the AI Gateway. They can enforce authentication, apply rate limits, manage cross-origin access, inspect content for safety and compliance, enhance prompts, and cache responses — all without changes to client applications.
+Guardrails inspect and act on the content of requests and responses flowing through the AI Gateway — detecting unsafe content, masking sensitive data, and caching responses. They run without any changes to client applications.
+
+## Available Guardrails
+
+| Guardrail | Description |
+|-----------|-------------|
+| [Semantic Prompt Guard](semantic-prompt-guard.md) | Block or allow prompts based on semantic similarity to configured phrases. Requires an embedding provider. |
+| [PII Masking Regex](regex-pii-masking.md) | Detect and mask Personally Identifiable Information (PII) using regex patterns. No external service required. |
+| [Azure Content Safety](azure-content-safety.md) | Filter harmful content (hate, sexual, self-harm, violence) using Azure Content Safety. Requires an Azure subscription. |
+| [Semantic Cache](semantic-cache.md) | Cache LLM responses and serve them for semantically similar future requests. Requires an embedding provider and vector database. |
 
 ## How Guardrails Work
 
-When a guardrail is attached to an LLM Provider or Proxy, the AI Gateway runs it on every request and response. What the guardrail does depends on its type:
-
-| Guardrail type | Behavior |
-|----------------|----------|
-| **API Key Auth, JWT Auth** | Validates the request and rejects it with `401 Unauthorized` if authentication fails. |
-| **CORS** | Validates the `Origin` header and responds to preflight (`OPTIONS`) requests with `204 No Content`. Disallowed origins receive an empty response with no CORS headers. |
-| **Traffic Management** (Rate Limit - Basic, Token Based Rate Limit) | Counts requests or token usage and rejects excess traffic with `429 Too Many Requests`, including a `Retry-After` header. |
-| **Prompt Enhancement** (Prompt Decorator, Prompt Template) | Modifies the request payload before forwarding it upstream. Does not block requests. |
-| **Content Safety** (Semantic Prompt Guard, Azure Content Safety) | Inspects content and blocks violating requests or responses with `422 Unprocessable Entity`. |
-| **PII Masking** (PII Masking Regex) | Detects and masks sensitive information in the request or response. Does not block — the modified payload is forwarded normally. |
-| **Model Round Robin** | Rewrites the model in the request and routes to the next available model. Returns `503 Service Unavailable` if all models are suspended due to failures. |
+| Guardrail | Behavior |
+|-----------|----------|
+| **Semantic Prompt Guard** | Blocks requests with `422 Unprocessable Entity` if the prompt is semantically similar to a denied phrase, or not similar enough to any allowed phrase. |
+| **PII Masking Regex** | Masks PII in the request before forwarding upstream. In masking mode, original values are restored in the response. Does not block requests. |
+| **Azure Content Safety** | Blocks requests or responses with `422 Unprocessable Entity` if content meets or exceeds a configured severity threshold. |
 | **Semantic Cache** | Returns a cached LLM response (`200`) for semantically similar requests, bypassing the upstream LLM entirely. |
 
 ## Applying Guardrails
@@ -23,8 +26,8 @@ Guardrails can be configured on both LLM Providers and LLM Proxies:
 
 | Level | Scope | Best For |
 |-------|-------|----------|
-| **LLM Provider (Global)** | All endpoints, across all proxies using the provider | Organization-wide policies applied uniformly (e.g., authentication, PII masking) |
-| **LLM Provider (Per Resource)** | A specific endpoint, across all proxies using the provider | Endpoint-specific provider-level rules (e.g., stricter limits on a sensitive endpoint) |
+| **LLM Provider (Global)** | All endpoints, across all proxies using the provider | Organization-wide policies applied uniformly (e.g., PII masking) |
+| **LLM Provider (Per Resource)** | A specific endpoint, across all proxies using the provider | Endpoint-specific provider-level rules |
 | **LLM Proxy (Global)** | All endpoints of the proxy | Proxy-wide rules (e.g., content filters for a specific app) |
 | **LLM Proxy (Per Resource)** | A specific endpoint within the proxy | Endpoint-specific rules scoped to a single proxy |
 
@@ -56,69 +59,20 @@ When guardrails are configured at multiple levels, all of them are evaluated. Pr
 8. Click **Submit**.
 9. Save the proxy configuration and redeploy as needed.
 
-## Available Guardrails
-
-### Security & Access Control
-
-These guardrails control who can access the LLM Provider or Proxy and from where.
-
-| Guardrail | Description |
-|-----------|-------------|
-| [API Key Auth](api-key-auth.md) | Validate incoming requests using an API key from a header or query parameter. |
-| [JWT Auth](jwt-auth.md) | Validate JWT tokens with support for remote JWKS endpoints, claim validation, and claim forwarding. **Requires a key manager configuration.** |
-| [CORS](cors.md) | Handle cross-origin resource sharing — validate `Origin` headers and respond to preflight requests. |
-
-### Traffic Management
-
-These guardrails control the rate and volume of traffic flowing through the gateway.
-
-| Guardrail | Description |
-|-----------|-------------|
-| [Rate Limit - Basic](basic-rate-limit.md) | Enforce a simple request count limit within a configurable time window. |
-| [Token Based Rate Limit](token-based-ratelimit.md) | Enforce rate limits based on LLM token consumption (prompt tokens, completion tokens, or total tokens). |
-| [Model Round Robin](model-round-robin.md) | Distribute requests across multiple AI models using round-robin selection, with automatic model suspension on failures. |
-
-### Prompt Enhancement
-
-These guardrails modify or transform prompts before they reach the LLM.
-
-| Guardrail | Description |
-|-----------|-------------|
-| [Prompt Decorator](prompt-decorator.md) | Prepend or append text or chat messages to every request — useful for injecting system instructions or safety guidelines. |
-| [Prompt Template](prompt-template.md) | Apply reusable parameterized prompt templates. Clients reference templates by name and pass parameters, which the gateway substitutes before forwarding to the LLM. |
-
-### Content Safety
-
-These guardrails inspect content to detect and block unsafe, non-compliant, or sensitive information.
-
-| Guardrail | Description |
-|-----------|-------------|
-| [Semantic Prompt Guard](semantic-prompt-guard.md) | Allow or deny prompts based on semantic similarity to a configured list of allowed/denied phrases. **Requires an embedding provider (OpenAI, Mistral AI, or Azure OpenAI).** |
-| [PII Masking Regex](regex-pii-masking.md) | Detect and mask Personally Identifiable Information (PII) using configurable regular expression patterns. No external service required. |
-| [Azure Content Safety Content Moderation](azure-content-safety.md) | Use Azure Content Safety to detect hate speech, sexual content, self-harm, and violence. **Requires an Azure Content Safety subscription.** |
-
-### Performance
-
-These guardrails optimize LLM usage and reduce costs.
-
-| Guardrail | Description |
-|-----------|-------------|
-| [Semantic Cache](semantic-cache.md) | Cache LLM responses and serve them for semantically similar future requests — reducing latency and API costs. **Requires an embedding provider and a vector database (Redis or Milvus).** |
-
 ## Guardrail Intervention Response
 
-When a content safety guardrail intervenes, it returns an error response with the following structure:
+When a guardrail blocks a request or response, it returns the following structure:
 
 ```json
 {
+  "type": "<GUARDRAIL_TYPE>",
   "message": {
     "action": "GUARDRAIL_INTERVENED",
-    "actionReason": "<reason for intervention>",
-    "assessments": "<detailed assessment (if Show Guardrail Assessment is enabled)>",
+    "interveningGuardrail": "<guardrail name>",
     "direction": "REQUEST or RESPONSE",
-    "interveningGuardrail": "<guardrail name>"
-  },
-  "type": "<GUARDRAIL_TYPE>"
+    "actionReason": "<reason for intervention>",
+    "assessments": "<detailed assessment (if Show Assessment is enabled)>"
+  }
 }
 ```
 
