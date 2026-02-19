@@ -1,6 +1,8 @@
 # Configure LLM Proxy
 
-LLM Proxies provide a managed API gateway layer that routes requests to your configured LLM providers with built-in authentication, resource management, security policies, and guardrails.
+An LLM Proxy exposes a managed endpoint that your applications use to reach an LLM Provider. Once deployed, the proxy handles authentication and enforces any guardrails you configure — while the provider can be called directly, the proxy lets you isolate different applications or environments with independent keys, guardrails, and access controls on top of the same provider.
+
+This guide walks you through creating a proxy, optionally attaching guardrails, and deploying it to a gateway.
 
 ## Prerequisites
 

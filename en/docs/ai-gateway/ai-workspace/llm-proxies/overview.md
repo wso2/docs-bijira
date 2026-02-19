@@ -1,29 +1,29 @@
 # LLM Proxies Overview
 
-LLM Proxies provide a managed API gateway layer that sits between your applications and LLM providers. They enable you to create standardized endpoints with built-in security, monitoring, and governance capabilities while maintaining full control over how your applications interact with Large Language Models.
+## Why a Proxy on Top of a Provider?
 
-By configuring proxies in the AI Workspace, you can:
+An **LLM Provider** connects the gateway to an upstream LLM service and can be called directly. An **LLM Proxy** adds a dedicated endpoint on top — with its own API keys, guardrails, and access controls.
 
-- **Unified interface**: Create consistent API endpoints regardless of the underlying provider
-- **Policy enforcement**: Apply rate limiting, guardrails, and security policies
-- **Traffic management**: Monitor and control API usage
-- **Cost optimization**: Implement caching and smart routing to reduce costs
-- **Security**: Add authentication and authorization layers
+The main benefit is isolation. A single provider can back multiple proxies: one for a customer-facing chatbot with strict guardrails, another for an internal tool with relaxed settings. Each proxy is independently configured, and swapping the underlying provider doesn't require any changes to the applications calling the proxy.
 
-[//]: # (## Quick Start)
+## What You Can Do with a Proxy
 
-[//]: # ()
-[//]: # (To start using LLM Proxies:)
+**Expose a controlled API endpoint**
+The proxy gives you a stable URL your applications call. You control which resources (API paths) are exposed, and can enable or disable them without touching the upstream provider.
 
-[//]: # ()
-[//]: # (1. Navigate to AI Workspace in your Bijira dashboard)
+**Enforce authentication**
+Require applications to present an API key before their requests are forwarded to the LLM. Keys are generated per proxy and expire after 90 days.
 
-[//]: # (2. Select "LLM Proxies" from the menu)
+**Apply guardrails**
+Attach content safety, PII masking, or semantic caching policies globally across all endpoints, or target them at specific resources only.
 
-[//]: # (3. Click "Create Proxy" and fill in the basic details)
+**Isolate environments and teams**
+Create separate proxies for different teams, applications, or environments (dev, staging, production) — each with independent rate limits, guardrails, and access keys — all sharing the same provider backend.
 
-[//]: # (4. Configure your resources, security, and guardrails)
+**Switch providers without client changes**
+Because applications call the proxy URL rather than the provider directly, you can swap the underlying LLM Provider (e.g., from OpenAI to Azure OpenAI) without any changes on the client side.
 
-[//]: # (5. Save and deploy your proxy)
+## Next Steps
 
-**Next:** [Configure LLM Proxy](configure-proxy.md) - Step-by-step guide to configure and deploy your first proxy
+- [Configure LLM Proxy](configure-proxy.md) — Step-by-step guide to create and deploy your first proxy
+- [Manage Proxy](manage-proxy.md) — Update configuration, guardrails, and resources after deployment
