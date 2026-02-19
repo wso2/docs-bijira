@@ -37,8 +37,8 @@ watch:
 theme:
   name: material
   custom_dir: theme/material
-  logo: assets/images/BijiraDocs.svg
-  logo_light: assets/images/BijiraDocsWhite.svg
+  logo: assets/images/APIPlatformDocs.svg
+  logo_light: assets/images/APIPlatformDocsWhite.svg
   font:
     text: Montserrat
   favicon: assets/images/favicon.png
