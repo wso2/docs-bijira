@@ -77,7 +77,7 @@ Configure how the gateway authenticates with the upstream provider:
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 16px; margin-bottom: 24px;">
 
-Control which API endpoints are accessible through this provider. Also referred to as the **Resources** tab.
+Control which API endpoints are accessible through this provider. Also referred to as the Resources tab.
 
 </div>
 
@@ -95,7 +95,7 @@ Control endpoint availability:
 
 - **Toggle switches**: Enable/disable individual resources
 - **Effect**: Disabled resources are blocked at the gateway
-- **Apply**: Changes take effect immediately on next request
+- **Apply**: Changes take effect after redeploying the provider
 
 ---
 
@@ -138,10 +138,13 @@ Control request and token consumption to prevent cost overruns and ensure fair u
 
 The Rate Limiting tab provides two independent sections: **Backend** and **Per Consumer**.
 
-| Section | Controls | Protects |
-|---------|----------|----------|
-| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend |
-| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers |
+| Section | Controls | Protects | Status |
+|---------|----------|----------|--------|
+| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend | Available |
+| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers | *Coming soon* |
+
+!!! info "Per Consumer Rate Limiting — Coming Soon"
+    Per consumer rate limiting is not yet available. Only the **Backend** section is currently configurable.
 
 Both sections support two configuration modes:
 
@@ -165,14 +168,14 @@ For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, 
 
 ### Provider-wide Configuration
 
-1. Select **Provider-wide** in the Backend or Per Consumer section.
+1. Select **Provider-wide** in the Backend section.
 2. Enable **Request Count** and/or **Token Count**.
 3. Enter the **Quota** and select the **Reset Duration** for each criterion.
 4. Click **Save**.
 
 ### Per Resource Configuration
 
-1. Select **Per Resource** in the Backend or Per Consumer section.
+1. Select **Per Resource** in the Backend section.
 2. Expand **Limit per Resource** to set default limits for all endpoints:
     - Enable the criteria and configure **Quota** and **Reset Duration**.
 3. To override limits for a specific endpoint, expand that resource row and configure it separately.
@@ -189,7 +192,7 @@ For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, 
 
 <div style="border-left: 4px solid #F44336; padding-left: 16px; margin-bottom: 24px;">
 
-Attach and configure guardrails to enforce content safety, compliance, and quality standards.
+Attach guardrails to enforce content safety, compliance, and quality standards. Guardrails on a provider can be applied globally (all endpoints) or per resource (specific endpoints), and affect all proxies that use this provider.
 
 </div>
 
@@ -203,29 +206,39 @@ The tab displays all guardrails currently attached to the provider:
 
 ### Add a Guardrail
 
-**To attach a new guardrail:**
+Guardrails can be added globally (applying to all endpoints) or per resource (applying to a specific endpoint).
 
-1. Click **+ Add Guardrail**
-2. A sidebar opens showing available guardrail types
-3. Select a guardrail (e.g., PII Masking, Content Filter, Semantic Cache)
-4. Configure the guardrail settings:
+**To add a global guardrail:**
+
+1. In the **Global Guardrails** section, click **+ Add Guardrail**.
+2. A sidebar opens showing available guardrail types.
+3. Select a guardrail and configure its settings:
     - Fill in required parameters
     - Expand **Advanced Settings** for additional options
-5. Click **Add** to attach it to the provider
+4. Click **Add** to attach it to the provider.
+
+**To add a resource-level guardrail:**
+
+1. Find the resource you want to protect and expand its card.
+2. Click **+ Add Guardrail** within that resource.
+3. Select and configure the guardrail (same process as global guardrails).
+4. Click **Add** to attach it to the resource.
 
 ### Configure Guardrails
 
-**To modify an existing guardrail:**
+Guardrail parameters cannot be edited in place. To change a guardrail's configuration, you must delete it and add it again with the updated settings.
 
-- Click on the guardrail to expand its settings
-- Update parameters as needed
-- Changes are auto-saved and apply immediately
+**To update a guardrail:**
+
+1. Delete the existing guardrail.
+2. Click **+ Add Guardrail** and re-add it with the updated configuration.
+3. Redeploy the provider to apply the changes.
 
 !!! tip "Advanced Settings"
-    Each guardrail includes advanced configuration options such as custom thresholds, severity levels, and execution phases. Click **Advanced Settings** when configuring.
+    Each guardrail includes advanced configuration options such as custom thresholds, severity levels, and execution phases. Click **Advanced Settings** when adding a guardrail.
 
 !!! warning "Production Impact"
-    Guardrail changes apply immediately to all deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
+    Guardrail changes require a manual redeploy to take effect on deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
 
 **Learn more:** [Guardrails Overview](../policies/guardrails/overview.md). For the full policy catalog, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
@@ -238,14 +251,6 @@ The tab displays all guardrails currently attached to the provider:
 Configure which AI models are accessible through this provider.
 
 </div>
-
-### View Available Models
-
-The tab shows all models currently available:
-
-- **Model names** (e.g., `gpt-4`, `gpt-3.5-turbo`, `claude-3-opus`)
-- **Model descriptions** and capabilities
-- **Enable/disable status** for each model
 
 ### Add Models
 
@@ -266,7 +271,7 @@ Control which models applications can access:
 
 ---
 
-## 🔄 Lifecycle Operations
+## Lifecycle Operations
 
 ---
 
@@ -300,10 +305,10 @@ Permanently remove the provider and all its configurations.
 
 1. Navigate to **AI Workspace** > **LLM Providers**
 2. Find the provider in the list
-3. Click the **Delete** or **🗑️** icon
+3. Click the **Delete** icon
 4. Review the warning and confirm deletion
 
-!!! danger "⚠️ Warning: Irreversible Action"
+!!! danger "Warning: Irreversible Action"
     Deleting a provider will:
     
     - ❌ Remove it from all deployed gateways **immediately**
@@ -318,6 +323,6 @@ Permanently remove the provider and all its configurations.
 
 ## Next Steps
 
-- [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Configure and deploy proxy endpoints using your provider
+- [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy proxy endpoints using your provider
 - [Policies Overview](../policies/overview.md) - Explore all available guardrails and policies
 - [Guardrails Overview](../policies/guardrails/overview.md) - Configure content safety and compliance rules

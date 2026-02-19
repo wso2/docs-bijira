@@ -6,9 +6,8 @@ The API Key Auth policy validates incoming requests by checking for a valid API 
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
-| **Key Name** | Yes | The name of the header or query parameter that carries the API key (e.g., `x-api-key`, `Authorization`). |
-| **Key Location** | Yes | Where the key is sent: `header` or `query`. |
-| **Value Prefix** | No | An optional prefix to strip from the key value before validation (e.g., `Bearer`). Case-insensitive. |
+| **key**   | Yes | The name of the header or query parameter that carries the API key (e.g., `x-api-key`, `Authorization`). |
+| **in**    | Yes | Where the key is sent: `header` or `query`. |
 
 ## Add This Policy
 
@@ -16,9 +15,8 @@ The API Key Auth policy validates incoming requests by checking for a valid API 
 2. Click on the provider or proxy name.
 3. Go to the **Guardrails** tab.
 4. Click **+ Add Guardrail** and select **API Key Auth** from the sidebar.
-5. Enter the **Key Name** and select the **Key Location**.
-6. Optionally, set a **Value Prefix** if the key is sent with a prefix (e.g., `Bearer`).
-7. Click **Add** (for providers) or **Submit** (for proxies).
+5. Enter the **key** name and select the **in**(key location).
+7. Click **Add**.
 8. Deploy the provider or proxy to apply the changes.
 
 ## Behavior

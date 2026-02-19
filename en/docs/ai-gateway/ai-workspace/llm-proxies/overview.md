@@ -26,4 +26,4 @@ By configuring proxies in the AI Workspace, you can:
 
 [//]: # (5. Save and deploy your proxy)
 
-**Next:** [Configure LLM Proxy](create-proxy.md) - Step-by-step guide to configure and deploy your first proxy
+**Next:** [Configure LLM Proxy](configure-proxy.md) - Step-by-step guide to configure and deploy your first proxy

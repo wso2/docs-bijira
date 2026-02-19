@@ -3,7 +3,7 @@
 The Token Based Rate Limit policy enforces rate limits based on LLM token consumption rather than request count. It tracks prompt tokens, completion tokens, and total tokens separately, allowing fine-grained control over how much token capacity is consumed within a time window.
 
 !!! info "Built-in Rate Limiting vs. Token Based Rate Limit Policy"
-    The AI Workspace also has a first-class **Rate Limiting** tab on LLM Providers that provides request and token limits with Backend and Per Consumer scopes. The Token Based Rate Limit policy is a lower-level alternative that can be attached through the Guardrails interface with direct control over prompt token, completion token, and total token limits.
+    The AI Workspace also has a first-class **Rate Limiting** tab on LLM Providers that provides request and token limits on the Backend scope (Per Consumer coming soon). The Token Based Rate Limit policy is a lower-level alternative that can be attached through the Guardrails interface with direct control over prompt token, completion token, and total token limits.
 
 ## Configuration Parameters
 
@@ -50,5 +50,5 @@ You can configure limits for any combination of the three token categories. At l
 
 - [Guardrails Overview](overview.md)
 - [Rate Limit - Basic](basic-rate-limit.md) — Simple request count-based rate limiting
-- [Token-Based Rate Limiting](../token-based-rate-limit.md) — Built-in rate limiting with Backend and Per Consumer scopes
+- [Token-Based Rate Limiting](../token-based-rate-limit.md) — Built-in rate limiting with Backend scope
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

@@ -166,9 +166,9 @@ nav:
               - Manage Provider: ai-gateway/ai-workspace/llm-providers/manage-provider.md
           - LLM Proxies:
               - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
-              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/create-proxy.md
+              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/configure-proxy.md
               - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
-          - Insights: ai-gateway/ai-workspace/insights.md
+#          - Insights: ai-gateway/ai-workspace/insights.md
           - Policies:
               - Overview: ai-gateway/ai-workspace/policies/overview.md
               - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/token-based-rate-limit.md
@@ -182,7 +182,7 @@ nav:
                   - Model Round Robin: ai-gateway/ai-workspace/policies/guardrails/model-round-robin.md
                   - Prompt Decorator: ai-gateway/ai-workspace/policies/guardrails/prompt-decorator.md
                   - Prompt Template: ai-gateway/ai-workspace/policies/guardrails/prompt-template.md
-                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
+#                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
                   - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
                   - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
                   - Semantic Cache: ai-gateway/ai-workspace/policies/guardrails/semantic-cache.md

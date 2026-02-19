@@ -13,7 +13,7 @@ The AI Workspace provides built-in policies that let you govern how traffic flow
 
 Policies are configured through the management tabs of your LLM Providers and LLM Proxies:
 
-- **LLM Provider** — Rate limits and guardrails configured on a provider apply to all traffic routed through that provider across all proxies.
+- **LLM Provider** — Rate limits and guardrails configured on a provider apply to all proxies that use it. Guardrails can be applied globally (all endpoints) or per resource (specific endpoints).
 - **LLM Proxy** — Guardrails configured on a proxy can be applied globally (all endpoints) or per resource (specific endpoints).
 
 When both provider-level and proxy-level policies are active, they are both enforced. Provider-level policies act as a baseline, and proxy-level policies add additional protection.

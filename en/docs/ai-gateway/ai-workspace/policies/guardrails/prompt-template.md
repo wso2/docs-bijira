@@ -18,6 +18,14 @@ Translate the following text from [[from]] to [[to]]: [[text]]
 
 When a client calls `template://translate?from=English&to=Spanish&text=Hello`, the policy replaces each placeholder with the corresponding query parameter value.
 
+## Advanced Settings
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| **JSON Path** | — | JSONPath expression to limit template resolution to a specific field in the request payload. If omitted, template references are resolved across the entire request payload. |
+| **On Missing Template** | `error` | Behavior when a referenced template name is not found. `error` returns an immediate error response; `passthrough` leaves the original template reference unchanged. |
+| **On Unresolved Placeholder** | `keep` | Behavior when a placeholder has no matching query parameter. `keep` leaves the placeholder as-is; `empty` replaces it with an empty string; `error` returns an immediate error response. |
+
 ## Add This Policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **LLM Proxies**.
@@ -25,8 +33,9 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 3. Go to the **Guardrails** tab.
 4. Click **+ Add Guardrail** and select **Prompt Template** from the sidebar.
 5. Add one or more templates, each with a name and prompt string using `[[param]]` placeholders.
-6. Click **Add** (for providers) or **Submit** (for proxies).
-7. Deploy the provider or proxy to apply the changes.
+6. Optionally expand **Advanced Settings** to configure JSON Path, On Missing Template, or On Unresolved Placeholder behavior.
+7. Click **Add** (for providers) or **Submit** (for proxies).
+8. Deploy the provider or proxy to apply the changes.
 
 ## Example: Translation Template
 

@@ -3,7 +3,7 @@
 The Rate Limit - Basic policy enforces a simple request count limit on an LLM Provider or Proxy. Use it to cap the total number of requests allowed within a time window, regardless of token consumption.
 
 !!! info "Built-in Rate Limiting vs. Rate Limit - Basic Policy"
-    The AI Workspace also has a first-class **Rate Limiting** tab on LLM Providers that provides request count and token count limits with Backend and Per Consumer scopes. The Rate Limit - Basic policy is a lightweight alternative that can be attached through the Guardrails interface when you need a simple per-route request cap.
+    The AI Workspace also has a first-class **Rate Limiting** tab on LLM Providers that provides request count and token count limits on the Backend scope (Per Consumer coming soon). The Rate Limit - Basic policy is a lightweight alternative that can be attached through the Guardrails interface when you need a simple per-route request cap.
 
 ## Configuration Parameters
 
@@ -28,10 +28,11 @@ The Rate Limit - Basic policy enforces a simple request count limit on an LLM Pr
 - Incoming requests are counted per route or API.
 - When the request count exceeds the configured limit within the time window, the gateway returns HTTP `429 Too Many Requests`.
 - The counter resets after the duration elapses.
+- **When multiple limit rules are configured, the most restrictive limit is enforced.**
 
 ## Related
 
 - [Guardrails Overview](overview.md)
 - [Token Based Rate Limit](token-based-ratelimit.md) — Rate limiting based on LLM token consumption
-- [Token-Based Rate Limiting](../token-based-rate-limit.md) — Built-in rate limiting with Backend and Per Consumer scopes
+- [Token-Based Rate Limiting](../token-based-rate-limit.md) — Built-in rate limiting with Backend scope
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

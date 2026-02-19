@@ -38,7 +38,7 @@ An LLM proxy is a managed API endpoint that routes requests to your provider wit
 5. Click **Deploy to Gateway** and deploy to your active gateway.
 6. Click **Generate API Key** to get credentials for calling the proxy.
 
-For detailed instructions, see [Configure LLM Proxy](llm-proxies/create-proxy.md).
+For detailed instructions, see [Configure LLM Proxy](llm-proxies/configure-proxy.md).
 
 ## What's Next
 

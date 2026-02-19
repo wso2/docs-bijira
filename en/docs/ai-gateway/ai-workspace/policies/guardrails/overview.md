@@ -8,12 +8,13 @@ When a guardrail is attached to an LLM Provider or Proxy, the AI Gateway runs it
 
 | Guardrail type | Behavior |
 |----------------|----------|
-| **Security & Access Control** (API Key Auth, JWT Auth, CORS) | Validates the request and rejects it with `401` or `403` if authentication or origin checks fail. |
+| **API Key Auth, JWT Auth** | Validates the request and rejects it with `401 Unauthorized` if authentication fails. |
+| **CORS** | Validates the `Origin` header and responds to preflight (`OPTIONS`) requests with `204 No Content`. Disallowed origins receive an empty response with no CORS headers. |
 | **Traffic Management** (Rate Limit - Basic, Token Based Rate Limit) | Counts requests or token usage and rejects excess traffic with `429 Too Many Requests`, including a `Retry-After` header. |
 | **Prompt Enhancement** (Prompt Decorator, Prompt Template) | Modifies the request payload before forwarding it upstream. Does not block requests. |
 | **Content Safety** (Semantic Prompt Guard, Azure Content Safety) | Inspects content and blocks violating requests or responses with `422 Unprocessable Entity`. |
 | **PII Masking** (PII Masking Regex) | Detects and masks sensitive information in the request or response. Does not block — the modified payload is forwarded normally. |
-| **Model Round Robin** | Rewrites the model in the request and routes to the next available model. Does not block requests. |
+| **Model Round Robin** | Rewrites the model in the request and routes to the next available model. Returns `503 Service Unavailable` if all models are suspended due to failures. |
 | **Semantic Cache** | Returns a cached LLM response (`200`) for semantically similar requests, bypassing the upstream LLM entirely. |
 
 ## Applying Guardrails
@@ -22,9 +23,10 @@ Guardrails can be configured on both LLM Providers and LLM Proxies:
 
 | Level | Scope | Best For |
 |-------|-------|----------|
-| **LLM Provider** | All proxies using the provider | Organization-wide policies (e.g., authentication, PII masking) |
+| **LLM Provider (Global)** | All endpoints, across all proxies using the provider | Organization-wide policies applied uniformly (e.g., authentication, PII masking) |
+| **LLM Provider (Per Resource)** | A specific endpoint, across all proxies using the provider | Endpoint-specific provider-level rules (e.g., stricter limits on a sensitive endpoint) |
 | **LLM Proxy (Global)** | All endpoints of the proxy | Proxy-wide rules (e.g., content filters for a specific app) |
-| **LLM Proxy (Per Resource)** | A single endpoint within the proxy | Endpoint-specific rules (e.g., stricter limits on sensitive endpoints) |
+| **LLM Proxy (Per Resource)** | A specific endpoint within the proxy | Endpoint-specific rules scoped to a single proxy |
 
 When guardrails are configured at multiple levels, all of them are evaluated. Provider-level guardrails run first, followed by proxy-level guardrails.
 
@@ -35,11 +37,12 @@ When guardrails are configured at multiple levels, all of them are evaluated. Pr
 1. Navigate to **AI Workspace** > **LLM Providers**.
 2. Click on the provider name.
 3. Go to the **Guardrails** tab.
-4. Click **+ Add Guardrail**.
-5. Select a guardrail from the sidebar panel.
-6. Configure the guardrail parameters.
-7. Click **Add**.
-8. Click **Deploy to Gateway** to apply the changes.
+4. To add a guardrail to all endpoints, click **+ Add Guardrail** under **Global Guardrails**.
+5. To add a guardrail to a specific endpoint, expand the resource card and click **+ Add Guardrail**.
+6. Select a guardrail from the sidebar panel.
+7. Configure the guardrail parameters.
+8. Click **Add**.
+9. Click **Deploy to Gateway** to apply the changes.
 
 **On an LLM Proxy:**
 

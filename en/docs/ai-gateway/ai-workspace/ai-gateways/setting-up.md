@@ -238,4 +238,4 @@ Once the gateway runtime is running and connected, the gateway status will chang
 ## Next Steps
 
 - [Configure LLM Provider](../llm-providers/configure-provider.md) - Set up an LLM provider and deploy it to your gateway
-- [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Create a proxy and deploy it to your gateway
+- [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Create a proxy and deploy it to your gateway

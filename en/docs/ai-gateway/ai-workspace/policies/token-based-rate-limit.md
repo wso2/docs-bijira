@@ -1,15 +1,18 @@
 # Token-Based Rate Limiting
 
-AI services bill on a per-token basis, so uncontrolled usage can lead to unexpected costs. Token-based rate limiting lets you set caps on how many requests or tokens can be consumed within a given time window — both on the backend (gateway to upstream provider) and per consumer (application to gateway).
+AI services bill on a per-token basis, so uncontrolled usage can lead to unexpected costs. Token-based rate limiting lets you set caps on how many requests or tokens can be consumed within a given time window on the backend (gateway to upstream provider).
 
 ## Overview
 
-The AI Workspace supports two independent rate limiting scopes:
+The AI Workspace supports two rate limiting scopes:
 
-| Scope | Controls | Protects |
-|-------|----------|----------|
-| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend |
-| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers |
+| Scope | Controls | Protects | Status |
+|-------|----------|----------|--------|
+| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend | Available |
+| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers | *Coming soon* |
+
+!!! info "Per Consumer Rate Limiting — Coming Soon"
+    Per consumer rate limiting is not yet available. Only the **Backend** scope is currently configurable.
 
 Both scopes support two configuration modes:
 
@@ -50,13 +53,13 @@ Rate limits configured on an LLM Provider apply to all LLM Proxies that use that
 2. Click on the provider name to open its details page.
 3. Go to the **Rate Limiting** tab.
 
-The tab is divided into two sections — **Backend** and **Per Consumer**. Each section is configured independently.
+The tab is divided into two sections — **Backend** and **Per Consumer**. Only the Backend section is currently configurable; Per Consumer is coming soon.
 
 ### Provider-wide Mode
 
 Applies a single rate limit across all endpoints of the provider.
 
-1. Select **Provider-wide** under the Backend or Per Consumer section.
+1. Select **Provider-wide** under the Backend section.
 2. Enable **Request Count**, **Token Count**, or both.
 3. For each enabled criterion, set:
     - **Quota** — The maximum allowed value (e.g., `1000` requests or `500000` tokens)
@@ -74,7 +77,7 @@ In Per Resource mode, the configuration panel includes:
 
 **To configure:**
 
-1. Select **Per Resource** under the Backend or Per Consumer section.
+1. Select **Per Resource** under the Backend section.
 2. Expand **Limit per Resource** to set the default limits:
     - Enable **Request Count** and/or **Token Count**.
     - For each enabled criterion, set the **Quota** and **Reset Duration**.
@@ -82,11 +85,7 @@ In Per Resource mode, the configuration panel includes:
 4. Click **Save**.
 
 !!! tip "Best Practice"
-    Start with conservative backend limits to protect your provider credentials, then monitor actual usage from the Insights dashboard before increasing them. For consumer limits, begin with Provider-wide for simplicity and switch to Per Resource only when endpoints have significantly different usage patterns.
-
-## What Happens When a Limit Is Exceeded
-
-When a rate limit is exceeded, the gateway returns HTTP `429 Too Many Requests`. The response includes a `Retry-After` header with the number of seconds until the quota resets — which is the time remaining in the current window, not the full window duration.
+    Start with conservative backend limits to protect your provider credentials, then monitor actual usage from the Insights dashboard before increasing them. Switch to Per Resource only when endpoints have significantly different usage patterns.
 
 ## Related
 

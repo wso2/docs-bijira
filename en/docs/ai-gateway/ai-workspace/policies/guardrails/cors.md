@@ -6,13 +6,13 @@ The CORS policy handles Cross-Origin Resource Sharing for your LLM Provider or P
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
-| **Allowed Origins** | No | `["*"]` | List of allowed origins. Supports wildcard `"*"` to permit all origins. |
-| **Allowed Methods** | No | `GET, POST, PUT, DELETE, OPTIONS` | HTTP methods that are allowed for cross-origin requests. |
-| **Allowed Headers** | No | (none) | Request headers allowed in cross-origin requests. Use `"*"` to allow all headers. |
-| **Exposed Headers** | No | (none) | Response headers that browsers are permitted to access. |
-| **Max Age** | No | (not set) | Duration in seconds that browsers can cache preflight responses. |
-| **Allow Credentials** | No | `false` | Whether to allow cookies and credentials in cross-origin requests. Cannot be `true` when **Allowed Origins**, **Allowed Headers**, or **Allowed Methods** use wildcard `"*"`. |
-| **Forward Preflight** | No | `false` | When enabled, preflight requests that fail CORS validation are forwarded to the upstream instead of being rejected. |
+| **Allowed Origins** | Yes      | `["*"]` | List of allowed origins. Supports wildcard `"*"` to permit all origins. |
+| **Allowed Methods** | No       | `GET, POST, PUT, DELETE, OPTIONS` | HTTP methods that are allowed for cross-origin requests. |
+| **Allowed Headers** | No       | (none) | Request headers allowed in cross-origin requests. Use `"*"` to allow all headers. |
+| **Exposed Headers** | No       | (none) | Response headers that browsers are permitted to access. |
+| **Max Age** | No       | (not set) | Duration in seconds that browsers can cache preflight responses. |
+| **Allow Credentials** | No       | `false` | Whether to allow cookies and credentials in cross-origin requests. Cannot be `true` when **Allowed Origins**, **Allowed Headers**, or **Allowed Methods** use wildcard `"*"`. |
+| **Forward Preflight** | No       | `false` | When enabled, preflight requests that fail CORS validation are forwarded to the upstream instead of being rejected. |
 
 ## Add This Policy
 

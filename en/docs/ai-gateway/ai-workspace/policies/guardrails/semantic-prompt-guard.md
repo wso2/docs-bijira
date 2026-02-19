@@ -18,16 +18,16 @@ When a request arrives, the guardrail:
 
 ## Configuration Parameters
 
-These are the parameters configurable from the policy UI when adding the guardrail:
+All parameters are optional and available under **Advanced Settings**.
 
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| **Allowed Phrases** | Conditional | A list of phrases that represent *acceptable* prompts. If provided, prompts must be semantically similar to at least one allowed phrase, or they are blocked. At least one of **Allowed Phrases** or **Denied Phrases** must be set. |
-| **Denied Phrases** | Conditional | A list of phrases that represent *unacceptable* prompts. If provided, prompts semantically similar to any denied phrase are blocked. At least one of **Allowed Phrases** or **Denied Phrases** must be set. |
-| **Allow Similarity Threshold** | No | Cosine similarity threshold (0.0–1.0) for matching against allowed phrases. Default: `0.65`. Higher values require closer matches to pass. |
-| **Deny Similarity Threshold** | No | Cosine similarity threshold (0.0–1.0) for matching against denied phrases. Default: `0.65`. Higher values require closer matches to trigger a block. |
-| **JSON Path** | No | A JSONPath expression to extract the field to evaluate (e.g., `$.messages[0].content`). If not specified, the entire payload is evaluated. |
-| **Show Guardrail Assessment** | No | When enabled, the intervention response includes the matched phrase and similarity score. |
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| **JSON Path** | — | JSONPath expression to extract the prompt from the JSON payload (e.g., `$.message`, `$.data.prompt`). If empty, the entire payload is validated as a string. |
+| **Allow Similarity Threshold** | `0.65` | Minimum cosine similarity (0.0–1.0) for a prompt to match an allowed phrase. Higher values require closer matches to pass. |
+| **Deny Similarity Threshold** | `0.65` | Minimum cosine similarity (0.0–1.0) for a prompt to match a denied phrase. Prompts at or above this threshold are blocked. |
+| **Allowed Phrases** | — | Phrases that represent acceptable prompts. If set, the prompt must be semantically similar to at least one allowed phrase or it is blocked. |
+| **Denied Phrases** | — | Phrases that represent unacceptable prompts. If set, any prompt semantically similar to a denied phrase is blocked. |
+| **Show Assessment** | `false` | When `true`, the intervention response includes the matched phrase and similarity score. |
 
 ## Gateway Configuration
 

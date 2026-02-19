@@ -93,6 +93,42 @@ Click **Back to LLM Proxy** to return to the proxy details page.
 
 ---
 
+## Get Started
+
+Once the proxy is deployed, the proxy details page shows the **Get Started** panel on the right.
+
+### Invoke URL
+
+Select a gateway from the **Gateways** dropdown to see the base URL for calling this proxy through that gateway.
+
+The URL follows the format:
+
+```
+https://{gateway-host}/{proxy-name}
+```
+
+To call a specific resource, append the resource path:
+
+```
+https://{gateway-host}/{proxy-name}/chat/completions
+```
+
+### LLM Proxy Keys
+
+Generate an API key to authenticate requests to the deployed gateway.
+
+1. Click **Generate API Key** in the Get Started panel.
+2. Copy and save your API key immediately.
+
+!!! danger "Important"
+    API keys are only displayed once. Store it in a secure location immediately — you will not be able to retrieve it again.
+
+### Deployed Gateways
+
+The **Deployed Gateways** section lists all gateways this proxy is deployed to, along with the deployment status.
+
+---
+
 ## Next Steps
 
 - [Manage Your Proxy](manage-proxy.md) - Configure provider, resources, security, and guardrails
