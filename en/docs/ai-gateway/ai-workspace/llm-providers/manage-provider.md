@@ -77,25 +77,29 @@ Configure how the gateway authenticates with the upstream provider:
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 16px; margin-bottom: 24px;">
 
-Control which API endpoints are available through this provider. 
+Control which API endpoints are accessible through this provider.
 
 </div>
 
-### Import API Specification
+### Mode
 
-The provider's OpenAPI spec defines available endpoints:
+Select the access control mode at the top of the tab:
 
-1. Spec is automatically loaded from the provider template
-2. Click **Import Specification** to manually import or refresh
-3. All API paths and methods are extracted and listed
+| Mode | Behavior |
+|------|----------|
+| **Allow all** | All resources are accessible by default. Move specific resources to **Denied Resources** to block them. |
+| **Deny all** | All resources are blocked by default. Move specific resources to **Allowed Resources** to permit them. |
 
-### Enable/Disable Resources
+Use the arrow buttons between the two panels to move resources:
 
-Control endpoint availability:
+- **`>>`** — Move all resources to the other panel
+- **`>`** — Move selected resource(s) to the other panel
+- **`<`** — Move selected resource(s) back
+- **`<<`** — Move all resources back
 
-- **Toggle switches**: Enable/disable individual resources
-- **Effect**: Disabled resources are blocked at the gateway
-- **Apply**: Changes take effect after redeploying the provider
+### Import Resources
+
+Click **Import resources from specification** to load or refresh the resource list from the provider's OpenAPI specification.
 
 ---
 
