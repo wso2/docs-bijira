@@ -166,8 +166,25 @@ nav:
               - Manage Provider: ai-gateway/ai-workspace/llm-providers/manage-provider.md
           - LLM Proxies:
               - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
-              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/create-proxy.md
+              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/configure-proxy.md
               - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
+#          - Insights: ai-gateway/ai-workspace/insights.md
+          - Policies:
+              - Overview: ai-gateway/ai-workspace/policies/overview.md
+              - Guardrails:
+                  - Overview: ai-gateway/ai-workspace/policies/guardrails/overview.md
+#                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
+                  - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
+                  - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
+                  - Word Count: ai-gateway/ai-workspace/policies/guardrails/word-count-guardrail.md
+                  - Sentence Count: ai-gateway/ai-workspace/policies/guardrails/sentence-count-guardrail.md
+              - Other Policies:
+#                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/other-policies/token-based-rate-limit.md
+#                  - Rate Limit - Basic: ai-gateway/ai-workspace/policies/other-policies/basic-rate-limit.md
+                  - Model Round Robin: ai-gateway/ai-workspace/policies/other-policies/model-round-robin.md
+                  - Prompt Decorator: ai-gateway/ai-workspace/policies/other-policies/prompt-decorator.md
+                  - Prompt Template: ai-gateway/ai-workspace/policies/other-policies/prompt-template.md
+                  - Semantic Cache: ai-gateway/ai-workspace/policies/other-policies/semantic-cache.md
   - API Gateway:
       # - Overview: api-platform-gateway/overview.md
       # - Bijira Cloud Gateway: api-platform-gateway/cloud-gateway.md

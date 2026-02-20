@@ -1,6 +1,6 @@
 # Getting Started
 
-Get up and running with the AI Workspace by following these three steps: create an AI gateway, configure an LLM provider, and set up an LLM proxy.
+The AI Workspace enables you to manage AI gateways, LLM providers, and LLM proxies. Follow these steps to get started.
 
 ## Step 1: Create an AI Gateway
 
@@ -38,11 +38,10 @@ An LLM proxy is a managed API endpoint that routes requests to your provider wit
 5. Click **Deploy to Gateway** and deploy to your active gateway.
 6. Click **Generate API Key** to get credentials for calling the proxy.
 
-For detailed instructions, see [Configure LLM Proxy](llm-proxies/create-proxy.md).
+For detailed instructions, see [Configure LLM Proxy](llm-proxies/configure-proxy.md).
 
 ## What's Next
 
 - [Manage your provider](llm-providers/manage-provider.md) — Configure connection, access control, security, rate limiting, guardrails, and models
 - [Manage your proxy](llm-proxies/manage-proxy.md) — Configure provider settings, resources, security, and guardrails
-- [Explore policies](policies/overview.md) — Learn about rate limiting, caching, and guardrails
-- [Policy Hub](https://policyhub.choreoapps.dev/) — Browse all available guardrails and policies
+

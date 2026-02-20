@@ -1,6 +1,8 @@
 # Configure LLM Proxy
 
-LLM Proxies provide a managed API gateway layer that routes requests to your configured LLM providers with built-in authentication, resource management, security policies, and guardrails.
+An LLM Proxy exposes a managed endpoint that your applications use to reach an LLM Provider. Once deployed, the proxy handles authentication and enforces any guardrails you configure — while the provider can be called directly, the proxy lets you isolate different applications or environments with independent keys, guardrails, and access controls on top of the same provider.
+
+This guide walks you through creating a proxy, optionally attaching guardrails, and deploying it to a gateway.
 
 ## Prerequisites
 
@@ -48,7 +50,7 @@ You can attach policies and guardrails to your proxy that apply to all requests:
     Each guardrail includes advanced configuration options that allow you to fine-tune its behavior. After selecting a guardrail, you can configure these settings before attaching it to the proxy.
 
 !!! info
-    Learn more about each policy in the [Policy Hub](https://policyhub.choreoapps.dev/).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -90,6 +92,42 @@ Click **Back to LLM Proxy** to return to the proxy details page.
 
 !!! info "Deployment Status"
     Monitor deployment progress on this page. Changes take effect within seconds of successful deployment.
+
+---
+
+## Get Started
+
+Once the proxy is deployed, the proxy details page shows the **Get Started** panel on the right.
+
+### Invoke URL
+
+Select a gateway from the **Gateways** dropdown to see the base URL for calling this proxy through that gateway.
+
+The URL follows the format:
+
+```
+https://{gateway-host}/{proxy-name}
+```
+
+To call a specific resource, append the resource path:
+
+```
+https://{gateway-host}/{proxy-name}/chat/completions
+```
+
+### LLM Proxy Keys
+
+Generate an API key to authenticate requests to the deployed gateway.
+
+1. Click **Generate API Key** in the Get Started panel.
+2. Copy and save your API key immediately.
+
+!!! danger "Important"
+    API keys are only displayed once. Store it in a secure location immediately — you will not be able to retrieve it again.
+
+### Deployed Gateways
+
+The **Deployed Gateways** section lists all gateways this proxy is deployed to, along with the deployment status.
 
 ---
 

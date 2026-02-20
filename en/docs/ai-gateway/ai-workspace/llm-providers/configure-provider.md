@@ -84,7 +84,7 @@ You can attach policies and guardrails to your provider that apply to all reques
     Each guardrail includes advanced configuration options that allow you to fine-tune its behavior. After selecting a guardrail, you can configure these settings before attaching it to the provider.
 
 !!! info
-    Learn more about each policy in the [Policies section](../policies/overview.md).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ## Save Provider
 
@@ -107,7 +107,31 @@ After creating your provider, you must deploy it to a gateway before it can be u
 
 3. Wait for the deployment to complete. The status will change to **Deployed**.
 
+## Get Started
+
+Once the provider is deployed, the provider details page shows the Invoke URL on the left and a **Get Started** panel on the right.
+
+### Invoke URL
+
+Select a gateway from the **Gateways** dropdown to see the base URL for accessing this provider through that gateway.
+
+### API Keys
+
+Generate an API key to authenticate requests to the deployed gateway.
+
+1. Click **Generate API Key** in the Get Started panel.
+2. Copy and save your API key immediately.
+
+!!! danger "Important"
+    API keys are only displayed once. Store it in a secure location immediately — you will not be able to retrieve it again.
+
+### Deployed Gateways
+
+The **Deployed Gateways** section lists all gateways this provider is deployed to, along with the host address and deployment status.
+
+---
+
 ## Next Steps
 
-- [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Configure and deploy a proxy endpoint using your provider
+- [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy a proxy endpoint using your provider
 - [Manage Provider](manage-provider.md) - Configure access control, security, rate limiting, and more

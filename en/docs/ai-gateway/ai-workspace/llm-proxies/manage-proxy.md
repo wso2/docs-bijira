@@ -142,9 +142,9 @@ Configure how client applications authenticate when accessing your proxy endpoin
 
 ## Guardrails
 
-<div style="border-left: 4px solid #d32f2f; padding-left: 16px; margin-bottom: 24px;" markdown>
+<div style="border-left: 4px solid #d32f2f; padding-left: 16px; margin-bottom: 24px;">
 
-Attach and configure guardrails to enforce content safety, compliance, and quality standards. This works similarly to how guardrails are configured for [LLM providers](../llm-providers/manage-provider.md#guardrails).
+Attach guardrails to enforce content safety, compliance, and quality standards on this proxy.
 
 </div>
 
@@ -182,62 +182,16 @@ Resource-wise guardrails apply to **specific endpoints** only. This section list
 
 4. Click **Submit** to attach the guardrail to the resource.
 
-!!! note
-    If no resources have been imported in the Resources tab, the Resource-wise Guardrails section will display: *No resources available.*
-
-### Guardrail Scope
-
-Understanding how guardrails are applied:
-
-| Scope | Applies To | Use Case |
-|-------|------------|----------|
-| **Global** | All proxy endpoints | Organization-wide policies (e.g., PII masking, content filters) |
-| **Resource-specific** | A single endpoint | Endpoint-specific rules (e.g., rate limits, content length) |
-
-!!! tip "Mixing Scopes"
-    You can combine global and resource-specific guardrails. Global guardrails apply first to all requests, and resource-specific guardrails add additional protection for specific endpoints. This provides layered defense for sensitive operations.
-
 ### Manage Guardrails
 
 - **View**: Global guardrails appear as pills in the Global Guardrails section. Resource-specific guardrails appear under each resource card.
 - **Remove**: Click the **×** icon on a guardrail pill to remove it.
 
 !!! warning
-    Removing a guardrail takes effect after saving. Ensure no active applications depend on the guardrail's protection.
+    After adding or removing guardrails, you must redeploy the proxy for the changes to take effect. Click **Deploy to Gateway** to apply your changes.
 
 !!! info
-    Learn more about each policy in the [Policy Hub](https://policyhub.choreoapps.dev/).
-
----
-
-## Get Started
-
-<div style="border-left: 4px solid #7b1fa2; padding-left: 16px; margin-bottom: 24px;">
-
-The Get Started panel on the right side of the proxy details page provides quick access to API key generation and deployment information.
-
-</div>
-
-### LLM Proxy Keys
-
-Generate API keys to authenticate requests to your deployed gateways.
-
-1. Click **Generate API Key** in the Get Started panel.
-
-2. The generated API key is displayed in a success notification with a copy button.
-
-3. Copy and save your API key immediately.
-
-!!! danger "Important"
-    API keys are only displayed once at generation time. For security reasons, you won't be able to see the key again after navigating away. Store it in a secure location immediately.
-
-### Deployed Gateways
-
-The **Deployed Gateways** section shows the gateways where your proxy is currently deployed. Each gateway entry displays:
-
-- **Gateway name** 
-- **Deployment status** - Active or Not Active
-- **Deployment identifier** 
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -248,7 +202,7 @@ After making configuration changes across any tab (Provider, Resources, Security
 Use the **Cancel** button to discard all unsaved changes and revert to the last saved state.
 
 !!! info
-    Configuration changes take effect immediately on all deployed gateways after saving.
+    Configuration changes require a manual redeploy to take effect on deployed gateways. After saving, click **Deploy to Gateway** to apply your changes.
 
 ---
 
@@ -272,5 +226,5 @@ To delete a proxy, click the **delete** icon (trash icon) in the top-right corne
 
 ## Next Steps
 
-- [Explore Policies](../policies/overview.md) - Learn about all available policies for proxies
-- [Policy Hub](https://policyhub.choreoapps.dev/) - Browse and learn about available guardrails and policies
+- [Policies Overview](../policies/overview.md) - Learn about all available policies for proxies
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) - Browse the full catalog of available guardrails and policies

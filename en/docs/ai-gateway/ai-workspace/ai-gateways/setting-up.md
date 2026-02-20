@@ -40,7 +40,7 @@ The AI Gateways page displays a list of all configured gateways with the followi
 
        4. **Associated Environment*** (Required): Select the environment from the dropdown (e.g., `Development`, `Production`).
 
-        ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
+    ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
 
 4. Click **Add Gateway** to create the gateway.
 
@@ -238,4 +238,4 @@ Once the gateway runtime is running and connected, the gateway status will chang
 ## Next Steps
 
 - [Configure LLM Provider](../llm-providers/configure-provider.md) - Set up an LLM provider and deploy it to your gateway
-- [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Create a proxy and deploy it to your gateway
+- [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Create a proxy and deploy it to your gateway

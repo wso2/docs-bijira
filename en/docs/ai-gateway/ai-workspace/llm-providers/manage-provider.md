@@ -77,25 +77,29 @@ Configure how the gateway authenticates with the upstream provider:
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 16px; margin-bottom: 24px;">
 
-Control which API endpoints are accessible through this provider. Also referred to as the **Resources** tab.
+Control which API endpoints are accessible through this provider.
 
 </div>
 
-### Import API Specification
+### Mode
 
-The provider's OpenAPI spec defines available endpoints:
+Select the access control mode at the top of the tab:
 
-1. Spec is automatically loaded from the provider template
-2. Click **Import Specification** to manually import or refresh
-3. All API paths and methods are extracted and listed
+| Mode | Behavior |
+|------|----------|
+| **Allow all** | All resources are accessible by default. Move specific resources to **Denied Resources** to block them. |
+| **Deny all** | All resources are blocked by default. Move specific resources to **Allowed Resources** to permit them. |
 
-### Enable/Disable Resources
+Use the arrow buttons between the two panels to move resources:
 
-Control endpoint availability:
+- **`>>`** — Move all resources to the other panel
+- **`>`** — Move selected resource(s) to the other panel
+- **`<`** — Move selected resource(s) back
+- **`<<`** — Move all resources back
 
-- **Toggle switches**: Enable/disable individual resources
-- **Effect**: Disabled resources are blocked at the gateway
-- **Apply**: Changes take effect immediately on next request
+### Import Resources
+
+Click **Import resources from specification** to load or refresh the resource list from the provider's OpenAPI specification.
 
 ---
 
@@ -132,96 +136,59 @@ Set up the API key that client applications must provide:
 
 <div style="border-left: 4px solid #9C27B0; padding-left: 16px; margin-bottom: 24px;">
 
-Control token consumption and prevent cost overruns with two independent rate limiting views.
+Control request and token consumption to prevent cost overruns and ensure fair usage across all consumers.
 
 </div>
 
-### Overview: Two Rate Limiting Views
+The Rate Limiting tab provides two independent sections: **Backend** and **Per Consumer**.
 
-The Rate Limiting tab provides **two side-by-side sections**:
+| Section | Controls | Protects | Status |
+|---------|----------|----------|--------|
+| **Backend** | Requests from the gateway to the upstream LLM provider | Your provider API credentials and total spend | Available |
+| **Per Consumer** | Requests from client applications to the gateway | Fair usage across all consumers | *Coming soon* |
 
-| View | Purpose | Protects |
-|------|---------|----------|
-| **Backend** | Limits gateway → upstream provider calls | Your provider API credentials |
-| **Per Consumer** | Limits application → provider calls | Fair usage across consumers |
+!!! info "Per Consumer Rate Limiting — Coming Soon"
+    Per consumer rate limiting is not yet available. Only the **Backend** section is currently configurable.
 
-### Backend Rate Limits
+Both sections support two configuration modes:
 
-Controls calls **from the gateway to the upstream provider**.
+- **Provider-wide** — A single limit applied across all API endpoints.
+- **Per Resource** — Individual limits per API endpoint (e.g., chat completions vs. embeddings).
 
-**Configuration Modes:**
+!!! note
+    Provider-wide and Per Resource modes are mutually exclusive per section. Clear existing limits before switching modes.
 
-=== "Provider-wide"
-    Single rate limit for **all requests** to the provider.
-    
-    Best for: Simple setups, consistent usage patterns
+### Limit Criteria
 
-=== "Per Resource"
-    Different rate limits for **each endpoint** (e.g., chat vs embeddings).
-    
-    Best for: Different costs per endpoint, granular control
+Each section lets you configure:
 
-**Adding a Backend Rate Limit:**
+| Criterion | Description |
+|-----------|-------------|
+| **Request Count** | Maximum number of requests within the reset duration |
+| **Token Count** | Maximum number of tokens (prompt + completion) within the reset duration |
+| **Cost** | Cost-based limiting *(Coming soon)* |
 
-1. Select mode: **Provider-wide** or **Per Resource**
-2. If Per Resource: Expand the endpoint to limit
-3. Click **+ Add Rate Limit**
-4. Configure:
-    - **Limit**: Max tokens (e.g., `100000`)
-    - **Time Window**: `hourly`, `daily`, or `monthly`
-5. Click **Save**
+For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, `minute`, or `hour`).
 
----
+### Provider-wide Configuration
 
-### Per Consumer Rate Limits
+1. Select **Provider-wide** in the Backend section.
+2. Enable **Request Count** and/or **Token Count**.
+3. Enter the **Quota** and select the **Reset Duration** for each criterion.
+4. Click **Save**.
 
-Controls calls **from applications/users to the provider**.
+### Per Resource Configuration
 
-**Configuration Modes:**
-
-=== "Provider-wide"
-    Single limit per consumer across **all endpoints**.
-    
-    Best for: Simple consumer quotas, uniform limits
-
-=== "Per Resource"  
-    Different limits per consumer for **each endpoint**.
-    
-    Best for: Granular per-consumer, per-endpoint control
-
-**Adding a Consumer Rate Limit:**
-
-1. Select mode: **Provider-wide** or **Per Resource**
-2. If Per Resource: Expand the endpoint to limit
-3. Click **+ Add Rate Limit**
-4. Configure:
-    - **Limit**: Max tokens per consumer (e.g., `50000`)
-    - **Time Window**: `hourly`, `daily`, or `monthly`
-5. Click **Save**
-
----
-
-### Managing Rate Limits
-
-- **Edit**: Click a rate limit to modify its values
-- **Delete**: Click delete icon to remove
-- **Auto-save**: Changes apply automatically
+1. Select **Per Resource** in the Backend section.
+2. Expand **Limit per Resource** to set default limits for all endpoints:
+    - Enable the criteria and configure **Quota** and **Reset Duration**.
+3. To override limits for a specific endpoint, expand that resource row and configure it separately.
+4. Click **Save**.
 
 !!! tip "Cost Control Best Practices"
-    **Backend Limits:**
-    
-    - Set conservative limits to protect your provider credentials
-    - Monitor actual usage before increasing limits
-    
-    **Consumer Limits:**
-    
-    - Ensure fair usage across all applications
-    - Start with Provider-wide for simplicity
-    - Use Per Resource when endpoints have different token costs
-    
-    📊 **Track usage:** Monitor through the Insights dashboard and adjust as needed
+    Set conservative backend limits first to protect your provider credentials. Monitor actual usage via the Insights dashboard before increasing limits. Use Per Resource mode only when endpoints have significantly different usage patterns.
 
-**Learn more:** [Token-Based Rate Limiting Policy](../policies/token-based-rate-limit.md)
+**Learn more:** [Token-Based Rate Limiting](../policies/other-policies/token-based-rate-limit.md)
 
 ---
 
@@ -229,7 +196,7 @@ Controls calls **from applications/users to the provider**.
 
 <div style="border-left: 4px solid #F44336; padding-left: 16px; margin-bottom: 24px;">
 
-Attach and configure guardrails to enforce content safety, compliance, and quality standards.
+Attach guardrails to enforce content safety, compliance, and quality standards. Guardrails on a provider can be applied globally (all endpoints) or per resource (specific endpoints), and affect all proxies that use this provider.
 
 </div>
 
@@ -243,31 +210,41 @@ The tab displays all guardrails currently attached to the provider:
 
 ### Add a Guardrail
 
-**To attach a new guardrail:**
+Guardrails can be added globally (applying to all endpoints) or per resource (applying to a specific endpoint).
 
-1. Click **+ Add Guardrail**
-2. A sidebar opens showing available guardrail types
-3. Select a guardrail (e.g., PII Masking, Content Filter, Semantic Cache)
-4. Configure the guardrail settings:
+**To add a global guardrail:**
+
+1. In the **Global Guardrails** section, click **+ Add Guardrail**.
+2. A sidebar opens showing available guardrail types.
+3. Select a guardrail and configure its settings:
     - Fill in required parameters
     - Expand **Advanced Settings** for additional options
-5. Click **Add** to attach it to the provider
+4. Click **Add** to attach it to the provider.
+
+**To add a resource-level guardrail:**
+
+1. Find the resource you want to protect and expand its card.
+2. Click **+ Add Guardrail** within that resource.
+3. Select and configure the guardrail (same process as global guardrails).
+4. Click **Add** to attach it to the resource.
 
 ### Configure Guardrails
 
-**To modify an existing guardrail:**
+Guardrail parameters cannot be edited in place. To change a guardrail's configuration, you must delete it and add it again with the updated settings.
 
-- Click on the guardrail to expand its settings
-- Update parameters as needed
-- Changes are auto-saved and apply immediately
+**To update a guardrail:**
+
+1. Delete the existing guardrail.
+2. Click **+ Add Guardrail** and re-add it with the updated configuration.
+3. Redeploy the provider to apply the changes.
 
 !!! tip "Advanced Settings"
-    Each guardrail includes advanced configuration options such as custom thresholds, severity levels, and execution phases. Click **Advanced Settings** when configuring.
+    Each guardrail includes advanced configuration options such as custom thresholds, severity levels, and execution phases. Click **Advanced Settings** when adding a guardrail.
 
 !!! warning "Production Impact"
-    Guardrail changes apply immediately to all deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
+    Guardrail changes require a manual redeploy to take effect on deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
 
-**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md)
+**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md). For the full policy catalog, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -278,14 +255,6 @@ The tab displays all guardrails currently attached to the provider:
 Configure which AI models are accessible through this provider.
 
 </div>
-
-### View Available Models
-
-The tab shows all models currently available:
-
-- **Model names** (e.g., `gpt-4`, `gpt-3.5-turbo`, `claude-3-opus`)
-- **Model descriptions** and capabilities
-- **Enable/disable status** for each model
 
 ### Add Models
 
@@ -306,7 +275,7 @@ Control which models applications can access:
 
 ---
 
-## 🔄 Lifecycle Operations
+## Lifecycle Operations
 
 ---
 
@@ -336,28 +305,27 @@ Push configuration changes to deployed gateways.
 
 Permanently remove the provider and all its configurations.
 
+!!! warning "Prerequisite"
+    A provider cannot be deleted if any LLM Proxy is currently using it. Delete or reassign all dependent proxies before proceeding.
+
 **To delete:**
 
 1. Navigate to **AI Workspace** > **LLM Providers**
 2. Find the provider in the list
-3. Click the **Delete** or **🗑️** icon
+3. Click the **Delete** icon
 4. Review the warning and confirm deletion
 
-!!! danger "⚠️ Warning: Irreversible Action"
+!!! danger "Warning: Irreversible Action"
     Deleting a provider will:
-    
+
     - ❌ Remove it from all deployed gateways **immediately**
-    - ❌ Break any LLM Proxies using this provider
     - ❌ Break applications consuming this provider
     - ❌ Delete all configuration (guardrails, rate limits, models)
     - ❌ **Cannot be undone**
-    
-    **Before deleting:** Update all dependent proxies and applications to use alternative providers.
 
 ---
 
 ## Next Steps
 
-- [Configure LLM Proxy](../llm-proxies/create-proxy.md) - Configure and deploy proxy endpoints using your provider
-- [Configure Policies](../policies/overview.md) - Explore all available guardrails and policies
-- [Monitor Usage](../../monitor-and-insights.md) - Track performance, costs, and token consumption
+- [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy proxy endpoints using your provider
+- [Policies Overview](../policies/overview.md) - Explore all available guardrails and policies
