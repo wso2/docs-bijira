@@ -40,7 +40,7 @@ The AI Gateways page displays a list of all configured gateways with the followi
 
        4. **Associated Environment*** (Required): Select the environment from the dropdown (e.g., `Development`, `Production`).
 
-        ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
+    ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/ai-gateway/ai-gateway-form.png)
 
 4. Click **Add Gateway** to create the gateway.
 
