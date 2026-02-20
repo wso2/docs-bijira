@@ -176,7 +176,6 @@ nav:
 #                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
                   - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
                   - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
-                  - AWS Bedrock Guardrail: ai-gateway/ai-workspace/policies/guardrails/aws-bedrock-guardrail.md
                   - Word Count: ai-gateway/ai-workspace/policies/guardrails/word-count-guardrail.md
                   - Sentence Count: ai-gateway/ai-workspace/policies/guardrails/sentence-count-guardrail.md
               - Other Policies:

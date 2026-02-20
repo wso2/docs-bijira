@@ -11,7 +11,6 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [Semantic Prompt Guard](guardrails/semantic-prompt-guard.md) | Block or allow prompts based on semantic similarity to configured phrases. |
 | [PII Masking Regex](guardrails/regex-pii-masking.md) | Detect and mask PII in requests and responses using regex patterns. |
 | [Azure Content Safety](guardrails/azure-content-safety.md) | Filter harmful content using Azure Content Safety moderation. |
-| [AWS Bedrock Guardrail](guardrails/aws-bedrock-guardrail.md) | Content safety and PII protection via AWS Bedrock Guardrails. |
 | [Word Count](guardrails/word-count-guardrail.md) | Enforce word count limits on prompts or responses. |
 | [Sentence Count](guardrails/sentence-count-guardrail.md) | Enforce sentence count limits on prompts or responses. |
 

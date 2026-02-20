@@ -9,7 +9,6 @@ Guardrails inspect and act on the content of requests and responses flowing thro
 | [Semantic Prompt Guard](semantic-prompt-guard.md) | Block or allow prompts based on semantic similarity to configured phrases. Requires an embedding provider. |
 | [PII Masking Regex](regex-pii-masking.md) | Detect and mask Personally Identifiable Information (PII) using regex patterns. No external service required. |
 | [Azure Content Safety](azure-content-safety.md) | Filter harmful content (hate, sexual, self-harm, violence) using Azure Content Safety. Requires an Azure subscription. |
-| [AWS Bedrock Guardrail](aws-bedrock-guardrail.md) | Content safety validation and PII protection via AWS Bedrock Guardrails. Requires an AWS account and Bedrock Guardrail resource. |
 | [Word Count](word-count-guardrail.md) | Enforce minimum or maximum word count limits on prompts or responses. |
 | [Sentence Count](sentence-count-guardrail.md) | Enforce minimum or maximum sentence count limits on prompts or responses. |
 
@@ -20,7 +19,6 @@ Guardrails inspect and act on the content of requests and responses flowing thro
 | **Semantic Prompt Guard** | Blocks requests with `422 Unprocessable Entity` if the prompt is semantically similar to a denied phrase, or not similar enough to any allowed phrase. |
 | **PII Masking Regex** | Masks PII in the request before forwarding upstream. In masking mode, original values are restored in the response. Does not block requests. |
 | **Azure Content Safety** | Blocks requests or responses with `422 Unprocessable Entity` if content meets or exceeds a configured severity threshold. |
-| **AWS Bedrock Guardrail** | Blocks requests or responses with `422 Unprocessable Entity` if content violates configured Bedrock content policies. |
 | **Word Count** | Blocks requests or responses with `422 Unprocessable Entity` if the word count falls outside the configured limits. |
 | **Sentence Count** | Blocks requests or responses with `422 Unprocessable Entity` if the sentence count falls outside the configured limits. |
 
