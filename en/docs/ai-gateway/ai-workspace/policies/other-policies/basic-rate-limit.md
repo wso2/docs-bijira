@@ -32,7 +32,5 @@ The Rate Limit - Basic policy enforces a simple request count limit on an LLM Pr
 
 ## Related
 
-- [Guardrails Overview](overview.md)
-- [Token Based Rate Limit](token-based-ratelimit.md) — Rate limiting based on LLM token consumption
-- [Token-Based Rate Limiting](../token-based-rate-limit.md) — Built-in rate limiting with Backend scope
+- [Policies Overview](../overview.md)
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

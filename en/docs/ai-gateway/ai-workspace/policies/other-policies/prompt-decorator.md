@@ -76,6 +76,6 @@ The following configuration prepends a system instruction to every chat completi
 
 ## Related
 
-- [Guardrails Overview](overview.md)
+- [Policies Overview](../overview.md)
 - [Prompt Template](prompt-template.md) — Apply reusable prompt templates with parameter substitution
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

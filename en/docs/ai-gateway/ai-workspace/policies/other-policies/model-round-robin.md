@@ -28,5 +28,5 @@ The Model Round Robin policy distributes requests across multiple AI models usin
 
 ## Related
 
-- [Guardrails Overview](overview.md)
+- [Policies Overview](../overview.md)
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

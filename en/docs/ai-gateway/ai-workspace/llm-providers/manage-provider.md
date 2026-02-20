@@ -184,7 +184,7 @@ For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, 
 !!! tip "Cost Control Best Practices"
     Set conservative backend limits first to protect your provider credentials. Monitor actual usage via the Insights dashboard before increasing limits. Use Per Resource mode only when endpoints have significantly different usage patterns.
 
-**Learn more:** [Token-Based Rate Limiting](../policies/token-based-rate-limit.md)
+**Learn more:** [Token-Based Rate Limiting](../policies/other-policies/token-based-rate-limit.md)
 
 ---
 

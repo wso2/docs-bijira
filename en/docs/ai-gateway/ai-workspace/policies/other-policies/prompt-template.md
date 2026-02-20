@@ -76,6 +76,6 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 
 ## Related
 
-- [Guardrails Overview](overview.md)
+- [Policies Overview](../overview.md)
 - [Prompt Decorator](prompt-decorator.md) — Inject fixed content into prompts without client-side changes
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

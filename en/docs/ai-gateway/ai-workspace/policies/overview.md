@@ -11,21 +11,20 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [Semantic Prompt Guard](guardrails/semantic-prompt-guard.md) | Block or allow prompts based on semantic similarity to configured phrases. |
 | [PII Masking Regex](guardrails/regex-pii-masking.md) | Detect and mask PII in requests and responses using regex patterns. |
 | [Azure Content Safety](guardrails/azure-content-safety.md) | Filter harmful content using Azure Content Safety moderation. |
-| [Semantic Cache](guardrails/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
+| [AWS Bedrock Guardrail](guardrails/aws-bedrock-guardrail.md) | Content safety and PII protection via AWS Bedrock Guardrails. |
+| [Word Count](guardrails/word-count-guardrail.md) | Enforce word count limits on prompts or responses. |
+| [Sentence Count](guardrails/sentence-count-guardrail.md) | Enforce sentence count limits on prompts or responses. |
+| [Semantic Cache](other-policies/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
 
 ## Other Policies
 
 | Policy | Description |
 |--------|-------------|
-| [Token-Based Rate Limit](token-based-rate-limit.md) | Control request and token consumption to manage costs. |
-| [API Key Auth](guardrails/api-key-auth.md) | Validate incoming requests using an API key. |
-| [JWT Auth](guardrails/jwt-auth.md) | Validate JWT tokens on incoming requests. |
-| [CORS](guardrails/cors.md) | Handle cross-origin resource sharing and preflight requests. |
-| [Rate Limit - Basic](guardrails/basic-rate-limit.md) | Enforce a simple request count limit within a time window. |
-| [Token Based Rate Limit](guardrails/token-based-ratelimit.md) | Enforce rate limits based on LLM token consumption. |
-| [Model Round Robin](guardrails/model-round-robin.md) | Distribute requests across multiple models in round-robin order. |
-| [Prompt Decorator](guardrails/prompt-decorator.md) | Prepend or append content to every request. |
-| [Prompt Template](guardrails/prompt-template.md) | Apply reusable parameterized prompt templates to requests. |
+| [Token-Based Rate Limit](other-policies/token-based-rate-limit.md) | Limit request count and token consumption via the built-in Rate Limiting tab or the Token Based Rate Limit policy. |
+| [Rate Limit - Basic](other-policies/basic-rate-limit.md) | Enforce a simple request count limit within a time window. |
+| [Model Round Robin](other-policies/model-round-robin.md) | Distribute requests across multiple models in round-robin order. |
+| [Prompt Decorator](other-policies/prompt-decorator.md) | Prepend or append content to every request. |
+| [Prompt Template](other-policies/prompt-template.md) | Apply reusable parameterized prompt templates to requests. |
 
 ## Where Policies are Applied
 
@@ -44,5 +43,5 @@ Visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/) to explore all
 
 ## Next Steps
 
-- [Token-Based Rate Limit](token-based-rate-limit.md) — Set token usage limits for backend and per-consumer traffic
+- [Token-Based Rate Limit](guardrails/token-based-rate-limit.md) — Set token usage limits for backend and per-consumer traffic
 - [Guardrails Overview](guardrails/overview.md) — Explore available guardrails and how to configure them
