@@ -77,7 +77,7 @@ Configure how the gateway authenticates with the upstream provider:
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 16px; margin-bottom: 24px;">
 
-Control which API endpoints are accessible through this provider. Also referred to as the Resources tab.
+Control which API endpoints are available through this provider. Also referred to as the Resources tab.
 
 </div>
 
