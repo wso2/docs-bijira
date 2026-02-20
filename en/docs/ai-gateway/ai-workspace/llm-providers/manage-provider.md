@@ -164,7 +164,7 @@ Each section lets you configure:
 | **Token Count** | Maximum number of tokens (prompt + completion) within the reset duration |
 | **Cost** | Cost-based limiting *(Coming soon)* |
 
-For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, `minute`, `hour`, or `all`).
+For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, `minute`, or `hour`).
 
 ### Provider-wide Configuration
 
