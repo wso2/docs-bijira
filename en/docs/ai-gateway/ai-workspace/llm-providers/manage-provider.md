@@ -325,4 +325,3 @@ Permanently remove the provider and all its configurations.
 
 - [Configure LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy proxy endpoints using your provider
 - [Policies Overview](../policies/overview.md) - Explore all available guardrails and policies
-- [Guardrails Overview](../policies/guardrails/overview.md) - Configure content safety and compliance rules

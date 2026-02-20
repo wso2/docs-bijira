@@ -70,5 +70,4 @@ The following configuration blocks prompts with more than 3 sentences.
 
 - [Guardrails Overview](overview.md)
 - [Word Count Guardrail](word-count-guardrail.md)
-- [Content Length Guardrail](content-length-guardrail.md)
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

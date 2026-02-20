@@ -227,5 +227,4 @@ To delete a proxy, click the **delete** icon (trash icon) in the top-right corne
 ## Next Steps
 
 - [Policies Overview](../policies/overview.md) - Learn about all available policies for proxies
-- [Guardrails Overview](../policies/guardrails/overview.md) - Configure content safety and compliance guardrails
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) - Browse the full catalog of available guardrails and policies

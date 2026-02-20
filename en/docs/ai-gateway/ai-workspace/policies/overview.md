@@ -44,5 +44,4 @@ Visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/) to explore all
 
 ## Next Steps
 
-- [Token-Based Rate Limit](guardrails/token-based-rate-limit.md) — Set token usage limits for backend and per-consumer traffic
 - [Guardrails Overview](guardrails/overview.md) — Explore available guardrails and how to configure them

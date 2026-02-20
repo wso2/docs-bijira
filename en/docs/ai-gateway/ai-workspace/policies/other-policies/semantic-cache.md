@@ -93,6 +93,4 @@ Start at `0.85` and adjust based on observed cache hit rates and response releva
 
 ## Related
 
-- [Guardrails Overview](overview.md)
-- [Semantic Prompt Guard](semantic-prompt-guard.md) — Use embeddings to allow/deny prompts by semantic similarity
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

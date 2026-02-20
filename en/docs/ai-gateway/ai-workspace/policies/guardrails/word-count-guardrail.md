@@ -70,5 +70,4 @@ The following configuration blocks prompts that exceed 10 words.
 
 - [Guardrails Overview](overview.md)
 - [Sentence Count Guardrail](sentence-count-guardrail.md)
-- [Content Length Guardrail](content-length-guardrail.md)
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
