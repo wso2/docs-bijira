@@ -14,7 +14,6 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [AWS Bedrock Guardrail](guardrails/aws-bedrock-guardrail.md) | Content safety and PII protection via AWS Bedrock Guardrails. |
 | [Word Count](guardrails/word-count-guardrail.md) | Enforce word count limits on prompts or responses. |
 | [Sentence Count](guardrails/sentence-count-guardrail.md) | Enforce sentence count limits on prompts or responses. |
-| [Semantic Cache](other-policies/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
 
 ## Other Policies
 
@@ -25,6 +24,8 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [Model Round Robin](other-policies/model-round-robin.md) | Distribute requests across multiple models in round-robin order. |
 | [Prompt Decorator](other-policies/prompt-decorator.md) | Prepend or append content to every request. |
 | [Prompt Template](other-policies/prompt-template.md) | Apply reusable parameterized prompt templates to requests. |
+| [Semantic Cache](other-policies/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
+
 
 ## Where Policies are Applied
 
