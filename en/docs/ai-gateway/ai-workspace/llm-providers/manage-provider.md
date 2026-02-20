@@ -301,6 +301,9 @@ Push configuration changes to deployed gateways.
 
 Permanently remove the provider and all its configurations.
 
+!!! warning "Prerequisite"
+    A provider cannot be deleted if any LLM Proxy is currently using it. Delete or reassign all dependent proxies before proceeding.
+
 **To delete:**
 
 1. Navigate to **AI Workspace** > **LLM Providers**
@@ -310,14 +313,11 @@ Permanently remove the provider and all its configurations.
 
 !!! danger "Warning: Irreversible Action"
     Deleting a provider will:
-    
+
     - ❌ Remove it from all deployed gateways **immediately**
-    - ❌ Break any LLM Proxies using this provider
     - ❌ Break applications consuming this provider
     - ❌ Delete all configuration (guardrails, rate limits, models)
     - ❌ **Cannot be undone**
-    
-    **Before deleting:** Update all dependent proxies and applications to use alternative providers.
 
 ---
 
