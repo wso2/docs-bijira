@@ -1,17 +1,22 @@
 # Word Count Guardrail
 
-The Word Count Guardrail validates the number of words in a payload or a specific JSON field. Use it to enforce content length policies — for example, limiting how long a user's prompt can be.
+The Word Count Guardrail validates the number of words in a request or response. Use it to enforce content length policies — for example, limiting how long a user's prompt can be, or ensuring responses meet a minimum length requirement.
 
-## Configuration Parameters
+## Configuration
 
-| Parameter | Description |
-|-----------|-------------|
-| **Guardrail Name** | A unique name for this guardrail instance. Used for tracking and in intervention responses. |
-| **Minimum Word Count** | The minimum number of words the content must contain. |
-| **Maximum Word Count** | The maximum number of words the content can contain. |
-| **JSON Path** | A JSONPath expression to extract a specific field from the payload for validation (e.g., `$.messages[0].content`). If not specified, the entire payload is used. |
-| **Invert the Guardrail Decision** | When enabled, the guardrail intervenes when the word count **is within** the specified range. When disabled, it intervenes when the word count is **outside** the range. |
-| **Show Guardrail Assessment** | When enabled, the intervention response includes details about the violation. |
+All parameters are under **Advanced Settings**. Configure a **request** section, a **response** section, or both.
+
+### Request / Response Parameters
+
+Each section (request and response) has the following parameters:
+
+| Parameter | Required | Default | Description |
+|-----------|----------|---------|-------------|
+| **min** | Yes | `0` | Minimum number of words required. |
+| **max** | Yes | `0` | Maximum number of words allowed. Set to `0` to disable the upper limit. |
+| **jsonPath** | No | — | JSONPath expression to extract a specific field for validation (e.g., `$.messages[0].content`). If not set, the entire payload is evaluated. |
+| **invert** | No | `false` | When `true`, the guardrail intervenes when the word count **is within** the configured range instead of outside it. |
+| **showAssessment** | No | `false` | When `true`, the intervention response includes details about the violation. |
 
 ## Add This Guardrail
 
@@ -19,50 +24,36 @@ The Word Count Guardrail validates the number of words in a payload or a specifi
 2. Click on the provider or proxy name.
 3. Go to the **Guardrails** tab.
 4. Click **+ Add Guardrail** and select **Word Count Guardrail** from the sidebar.
-5. Fill in the configuration parameters.
+5. Expand **Advanced Settings** and configure the **request** and/or **response** sections.
 6. Click **Add** (for providers) or **Submit** (for proxies).
 7. Deploy the provider or proxy to apply the changes.
 
 ## Example: Limit Prompt Length
 
-The following configuration blocks prompts that exceed 10 words.
+The following configuration blocks requests where the user message exceeds 50 words.
 
-**Configuration:**
+**Advanced Settings — request:**
 
 | Parameter | Value |
 |-----------|-------|
-| Guardrail Name | `Prompt Length Limit` |
-| Minimum Word Count | `2` |
-| Maximum Word Count | `10` |
-| JSON Path | `$.messages[0].content` |
-| Invert the Guardrail Decision | `false` |
-| Show Guardrail Assessment | `true` |
-
-**Sample request that would be blocked:**
-
-```json
-{
-  "messages": [
-    {
-      "role": "user",
-      "content": "This is a test message with more than 10 words in it, so it will be blocked."
-    }
-  ]
-}
-```
+| min | `1` |
+| max | `50` |
+| jsonPath | `$.messages[0].content` |
+| invert | `false` |
+| showAssessment | `true` |
 
 **Intervention response:**
 
 ```json
 {
+  "type": "WORD_COUNT_GUARDRAIL",
   "message": {
     "action": "GUARDRAIL_INTERVENED",
-    "actionReason": "Violation of applied word count constraints detected.",
-    "assessments": "Violation of word count detected. Expected between 2 and 10 words.",
+    "interveningGuardrail": "Word Count Guardrail",
     "direction": "REQUEST",
-    "interveningGuardrail": "Prompt Length Limit"
-  },
-  "type": "WORD_COUNT_GUARDRAIL"
+    "actionReason": "Violation of applied word count constraints detected.",
+    "assessments": "Violation of word count detected. Expected between 1 and 50 words."
+  }
 }
 ```
 

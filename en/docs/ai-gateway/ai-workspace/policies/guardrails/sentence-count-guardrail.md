@@ -1,17 +1,22 @@
 # Sentence Count Guardrail
 
-The Sentence Count Guardrail validates the number of sentences in a payload or a specific JSON field. Use it to enforce policies on the structural complexity of prompts or responses.
+The Sentence Count Guardrail validates the number of sentences in a request or response. Use it to enforce policies on the structural complexity of prompts or responses — for example, requiring responses to be at least a certain length, or capping how many sentences a user prompt can contain.
 
-## Configuration Parameters
+## Configuration
 
-| Parameter | Description |
-|-----------|-------------|
-| **Guardrail Name** | A unique name for this guardrail instance. Used for tracking and in intervention responses. |
-| **Minimum Sentence Count** | The minimum number of sentences the content must contain. |
-| **Maximum Sentence Count** | The maximum number of sentences the content can contain. |
-| **JSON Path** | A JSONPath expression to extract a specific field from the payload for validation (e.g., `$.messages[0].content`). If not specified, the entire payload is used. |
-| **Invert the Guardrail Decision** | When enabled, the guardrail intervenes when the sentence count **is within** the specified range. When disabled, it intervenes when the sentence count is **outside** the range. |
-| **Show Guardrail Assessment** | When enabled, the intervention response includes details about the violation. |
+All parameters are under **Advanced Settings**. Configure a **request** section, a **response** section, or both.
+
+### Request / Response Parameters
+
+Each section (request and response) has the following parameters:
+
+| Parameter | Required | Default | Description |
+|-----------|----------|---------|-------------|
+| **min** | Yes | `0` | Minimum number of sentences required. |
+| **max** | Yes | `0` | Maximum number of sentences allowed. Set to `0` to disable the upper limit. |
+| **jsonPath** | No | — | JSONPath expression to extract a specific field for validation (e.g., `$.messages[0].content`). If not set, the entire payload is evaluated. |
+| **invert** | No | `false` | When `true`, the guardrail intervenes when the sentence count **is within** the configured range instead of outside it. |
+| **showAssessment** | No | `false` | When `true`, the intervention response includes details about the violation. |
 
 ## Add This Guardrail
 
@@ -19,50 +24,36 @@ The Sentence Count Guardrail validates the number of sentences in a payload or a
 2. Click on the provider or proxy name.
 3. Go to the **Guardrails** tab.
 4. Click **+ Add Guardrail** and select **Sentence Count Guardrail** from the sidebar.
-5. Fill in the configuration parameters.
+5. Expand **Advanced Settings** and configure the **request** and/or **response** sections.
 6. Click **Add** (for providers) or **Submit** (for proxies).
 7. Deploy the provider or proxy to apply the changes.
 
 ## Example: Limit Prompt to 3 Sentences
 
-The following configuration blocks prompts with more than 3 sentences.
+The following configuration blocks requests where the user message contains more than 3 sentences.
 
-**Configuration:**
+**Advanced Settings — request:**
 
 | Parameter | Value |
 |-----------|-------|
-| Guardrail Name | `Sentence Limit` |
-| Minimum Sentence Count | `1` |
-| Maximum Sentence Count | `3` |
-| JSON Path | `$.messages[0].content` |
-| Invert the Guardrail Decision | `false` |
-| Show Guardrail Assessment | `true` |
-
-**Sample request that would be blocked:**
-
-```json
-{
-  "messages": [
-    {
-      "role": "user",
-      "content": "This is sentence one. This is sentence two. This is sentence three. This is sentence four."
-    }
-  ]
-}
-```
+| min | `1` |
+| max | `3` |
+| jsonPath | `$.messages[0].content` |
+| invert | `false` |
+| showAssessment | `true` |
 
 **Intervention response:**
 
 ```json
 {
+  "type": "SENTENCE_COUNT_GUARDRAIL",
   "message": {
     "action": "GUARDRAIL_INTERVENED",
-    "actionReason": "Violation of applied sentence count constraints detected.",
-    "assessments": "Violation of sentence count detected. Expected between 1 and 3 sentences.",
+    "interveningGuardrail": "Sentence Count Guardrail",
     "direction": "REQUEST",
-    "interveningGuardrail": "Sentence Limit"
-  },
-  "type": "SENTENCE_COUNT_GUARDRAIL"
+    "actionReason": "Violation of applied sentence count constraints detected.",
+    "assessments": "Violation of sentence count detected. Expected between 1 and 3 sentences."
+  }
 }
 ```
 
