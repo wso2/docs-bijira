@@ -1,70 +1,66 @@
-# AI assisted SDK Generation
+# AI-Assisted SDK Generation
 
-The AI-assisted SDK generation feature helps developers quickly create a use case–specific SDK and sample application code based on selected APIs. Instead of integrating multiple SDKs manually, developers can generate a single SDK and a working code example tailored to their requirements.
+AI-assisted SDK generation creates custom SDKs and sample application code based on your selected APIs. Instead of manually integrating multiple SDKs, you generate a single SDK with working code examples tailored to your specific requirements.
 
 ## What is AI-assisted SDK Generation?
 
-When building applications that consume multiple APIs, developers often need to:
+Building applications with multiple APIs typically requires you to:
+
 - Download and manage multiple SDKs
 - Understand how the APIs work together
 - Write integration code from scratch
 
-This process can take significant time and effort.
+AI-assisted SDK generation streamlines this process by:
 
-AI-assisted SDK generation simplifies this by:
+- Creates a single SDK from your selected APIs
+- Generates application code based on your use case
+- Provides you a ready starting point for development
 
-- Combining selected APIs into a single SDK
-- Generating application code based on your use case
-- Providing a ready starting point for development
-
-This allows developers to focus on business logic instead of setup and integration.
+This lets you focus on business logic rather than setup and integration.
 
 ## Prerequisites
 
-- There should be at least one API in the project to use this feature. If there are no APIs, you can create an API proxy by following the instructions in [this guide](../../introduction/quick-start-guide.md).
+Before proceeding, ensure you have [Created an Application](../manage-applications/create-an-application.md) and [Subscribed to an API](../manage-subscriptions/subscribe-to-an-api.md) to generate an SDK.
 
-## Generate an SDK using the Devportal
+!!! tip
+    Subscribe to multiple APIs to create more comprehensive SDKs.
 
-Follow these steps to generate a use case–specific SDK and sample application.
+## Generate an SDK
 
-### Step 1: Select APIs for your Application
+Follow these steps to generate a custom SDK and sample application code.
 
-1. Sign in to the Devportal.
-2. Go to **Applications**.
-3. Open an existing application or create a new one (for example, *MySampleApp*).
-4. Go to the **APIs** tab and subscribe to the APIs using the created application.  
-   To use this feature, you need to subscribe to at least one API. You can subscribe to multiple APIs based on your SDK generation requirement.
+### Step 1: Select APIs for SDK Generation
 
-### Step 2: Select APIs for SDK Generation
+1. Navigate to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in.
+2. Click on **Applications** in the Developer Portal sidebar.
+3. Click on the application for which you want to generate the custom SDK.
+4. Choose which subscribed APIs to include in your SDK by clicking on the checkbox.
 
-1. Go to the **Applications** tab and select the created application (for example, *MySampleApp*).
-2. All subscribed APIs will be listed. Select the APIs you want to include in the SDK generation.
+    !!! note
+        The **Generate SDK** button activates when you select at least one API.
 
-!!! note
-    The **Generate SDK** button becomes active once **one or more APIs are selected**.
+    ![Select APIs](../../assets/img/devportal/ai_sdk_gen_button.png)
 
-![Theme with AI button](../../assets/img/devportal/ai_sdk_gen_button.png)
+### Step 2: Generate SDK
 
-### Step 3: Generate SDK
+1. Click **Generate SDK** to open the SDK generation panel.
 
-1. Click the **Generate SDK** button. This opens the SDK generation drawer.
+    ![SDK Drawer](../../assets/img/devportal/sdk_drawer.png)
 
-![SDK Drawer](../../assets/img/devportal/sdk_drawer.png)
+2. Select your preferred programming language from the dropdown (for example, Java).
+3. Describe your use case to help the AI generate relevant code.
 
-2. Select the programming language for the SDK from the dropdown list (for example, Java).
-3. Describe your use case in the text area. This helps the AI understand your requirement and generate relevant application code.
+    **Example:**
+    > Create an application that allows users to view and manage their orders using the Order API and the User API.
 
-   Example:
-   > Create an application that allows users to view and manage their orders using the Order API and the User API.
-
-4. Click the **Arrow** button to start the SDK generation process.
-5. The system processes your request and generates a use case-specific SDK along with sample application code. Once the generation is complete, a ZIP file containing the SDK and sample code is downloaded to your local machine.
+4. Click the **Arrow** button to start generation.
+5. The system generates your custom SDK and sample code. When complete, it downloads a ZIP file containing both the SDK and sample application code.
 
 ![SDK Download](../../assets/img/devportal/sdk_generation_in_progress.png)
 
-## Notes and Considerations
+## Important Notes
 
 - AI services require valid configuration and active subscriptions.
-- Generated code is intended as a starting point and may require modifications.
-- Application code generation currently uses the **Anthropic Claude 3.5 Sonnet (20241022)** model.
+- Generated code serves as a starting point and may need customization
+- This uses **Anthropic Claude 3.5 Sonnet (20241022)** for application code generation
 
