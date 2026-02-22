@@ -240,6 +240,8 @@ nav:
           - Create an Application: devportal/manage-applications/create-an-application.md
       - Manage Subscriptions:
           - Subscribe to an API: devportal/manage-subscriptions/subscribe-to-an-api.md
+      - SDK Generation:
+          - AI Assisted SDK Generation: devportal/sdk-generation/ai-assisted-sdk-generation.md
 
 # Extensions
 markdown_extensions:
