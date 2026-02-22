@@ -12,9 +12,9 @@ Building applications with multiple APIs typically requires you to:
 
 AI-assisted SDK generation streamlines this process by:
 
-- Creates a single SDK from your selected APIs
-- Generates application code based on your use case
-- Provides you a ready starting point for development
+- Createing a single SDK from your selected APIs
+- Generating application code based on your use case
+- Providing you a ready starting point for development
 
 This lets you focus on business logic rather than setup and integration.
 
@@ -61,6 +61,6 @@ Follow these steps to generate a custom SDK and sample application code.
 ## Important Notes
 
 - AI services require valid configuration and active subscriptions.
-- Generated code serves as a starting point and may need customization
-- This uses **Anthropic Claude 3.5 Sonnet (20241022)** for application code generation
+- Generated code serves as a starting point and may need customization.
+- This uses **Anthropic Claude 3.5 Sonnet (20241022)** for application code generation.
 
