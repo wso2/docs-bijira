@@ -168,6 +168,7 @@ nav:
               - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
               - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/configure-proxy.md
               - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
+          - Invoke via SDKs: ai-gateway/ai-workspace/using-sdks.md
 #          - Insights: ai-gateway/ai-workspace/insights.md
           - Policies:
               - Overview: ai-gateway/ai-workspace/policies/overview.md

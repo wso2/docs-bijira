@@ -133,5 +133,6 @@ The **Deployed Gateways** section lists all gateways this proxy is deployed to, 
 
 ## Next Steps
 
+- [Invoke via SDKs](../using-sdks.md) - Connect to your proxy from Python using provider-native SDKs
 - [Manage Your Proxy](manage-proxy.md) - Configure provider, resources, security, and guardrails
 - [Apply Policies](../policies/overview.md) - Learn about available policies for rate limiting and caching
