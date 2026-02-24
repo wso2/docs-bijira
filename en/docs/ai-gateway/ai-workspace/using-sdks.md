@@ -233,7 +233,6 @@ All requests to the gateway must include your API key in the `X-API-Key` request
         google_api_key=API_KEY,
         client_options={"api_endpoint": INVOKE_URL},
         additional_headers={"X-API-Key": API_KEY},
-        transport="rest",
     )
 
     response = llm.invoke([HumanMessage(content="What is WSO2?")])
