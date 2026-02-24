@@ -99,6 +99,11 @@ Before you begin, ensure you have:
 
 ## Add API and Invoke
 
+!!! note
+    This feature is currently available only for **REST API** proxies that are created from **scratch**, by **importing from OpenAPI**, or by specifying an **endpoint**.
+
+    This feature is not currently available for **REST API** proxies created by importing an API contract from **GitHub**, or for **WebSocket**, **GraphQL**, **MCP**, or **Egress** APIs.
+
 ### Step 1: Create an API Proxy.
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
