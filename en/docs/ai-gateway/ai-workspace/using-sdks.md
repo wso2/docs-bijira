@@ -383,6 +383,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 !!! note
     The `model` / `azure_deployment` parameter must be your **Azure deployment name**, not the underlying model name.
 
+
 === "Azure OpenAI SDK"
 
     **Install:** `pip install openai`
@@ -444,6 +445,94 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
         azure_endpoint=INVOKE_URL,
         api_key=API_KEY,
         default_headers={"X-API-Key": API_KEY},
+    )
+
+    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    print(response.content)
+    ```
+
+    **Streaming:**
+
+    ```python
+    for chunk in llm.stream([HumanMessage(content="Count from 1 to 5.")]):
+        if chunk.content:
+            print(chunk.content, end="", flush=True)
+    ```
+
+## Azure AI Foundry
+
+!!! note
+    The `model` parameter must be your **Azure deployment name**.
+
+=== "Azure AI Inference SDK"
+
+    **Install:** `pip install azure-ai-inference`
+
+    !!! note
+        The `ChatCompletionsClient` appends `/chat/completions` to the endpoint. Append `/models` to your Invoke URL so the full path resolves to `/models/chat/completions` on the upstream Azure resource.
+
+    **Basic chat completion:**
+
+    ```python
+    from azure.ai.inference import ChatCompletionsClient
+    from azure.ai.inference.models import UserMessage
+    from azure.core.credentials import AzureKeyCredential
+
+    INVOKE_URL = "https://<gateway-host>/<context>"
+    API_KEY = "<your-gateway-api-key>"
+
+    client = ChatCompletionsClient(
+        endpoint=INVOKE_URL + "/models",
+        credential=AzureKeyCredential(API_KEY),
+        headers={"X-API-Key": API_KEY},
+    )
+
+    response = client.complete(
+        model="<your-deployment-name>",
+        messages=[UserMessage(content="What is WSO2?")],
+    )
+
+    print(response.choices[0].message.content)
+    ```
+
+    **Streaming:**
+
+    ```python
+    with client.complete(
+        model="<your-deployment-name>",
+        messages=[UserMessage(content="Count from 1 to 5.")],
+        stream=True,
+    ) as stream:
+        for update in stream:
+            if update.choices and update.choices[0].delta.content:
+                print(update.choices[0].delta.content, end="", flush=True)
+    ```
+
+=== "LangChain"
+
+    **Install:** `pip install langchain-azure-ai`
+
+    !!! note
+        Like the Azure AI Inference SDK, append `/models` to your Invoke URL.
+
+    **Basic invoke:**
+
+    ```python
+    from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
+    from azure.core.credentials import AzureKeyCredential
+    from langchain_core.messages import HumanMessage
+
+    INVOKE_URL = "https://<gateway-host>/<context>"
+    API_KEY = "<your-gateway-api-key>"
+
+    llm = AzureAIChatCompletionsModel(
+        endpoint=INVOKE_URL + "/models",
+        credential=AzureKeyCredential(API_KEY),
+        model="<your-deployment-name>",
+        api_version="2024-05-01-preview",
+        client_kwargs={
+            "headers": {"X-API-Key": API_KEY},
+        },
     )
 
     response = llm.invoke([HumanMessage(content="What is WSO2?")])
