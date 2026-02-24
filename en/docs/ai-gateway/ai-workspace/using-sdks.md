@@ -399,7 +399,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
     client = AzureOpenAI(
         api_key=API_KEY,
         azure_endpoint=INVOKE_URL,
-        api_version="2024-06-01",
+        api_version="2024-10-21",
         default_headers={"X-API-Key": API_KEY},
     )
 
@@ -441,7 +441,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 
     llm = AzureChatOpenAI(
         azure_deployment="<your-deployment-name>",
-        api_version="2024-06-01",
+        api_version="2024-10-21",
         azure_endpoint=INVOKE_URL,
         api_key=API_KEY,
         default_headers={"X-API-Key": API_KEY},
