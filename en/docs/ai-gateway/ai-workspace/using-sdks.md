@@ -15,7 +15,7 @@ The examples below apply to both providers and proxies — the only difference b
 All requests to the gateway must include your API key in the location configured in the **Security** tab of your provider or proxy. By default this is the `X-API-Key` request header, and the code examples below use that default.
 
 !!! note
-    If you have configured a different key name or location (for example, `Authorization` as a header), adjust the header name in the examples accordingly. See [Configure Inbound Authentication](configure-inbound-auth.md) for details.
+    Depending on the SDK or provider you use, you can choose the key name and location that works best and configure it in the **Security** tab. See [Configure Inbound Authentication](configure-inbound-auth.md). The examples below use the default `X-API-Key` header.
 
 ## OpenAI
 
