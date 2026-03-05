@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Quick Start Guide - API Proxy
 
 Bijira simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 

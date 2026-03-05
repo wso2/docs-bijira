@@ -72,7 +72,9 @@ nav:
   - Home: index.md
   - Introduction:
       - What is Bijira?: introduction/what-is-bijira.md
-      - Quick Start Guide: introduction/quick-start-guide.md
+      - Quick Start Guide:
+        - API Proxy: introduction/quick-start-guide.md
+        - MCP Server: introduction/quick-start-guide-mcp.md
       - Bijira Concepts:
         # - Resource Hierarchy: resource-hierarchy.md
         - Organization: bijira-concepts/organization.md
