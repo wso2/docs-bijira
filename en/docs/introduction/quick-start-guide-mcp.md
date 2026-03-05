@@ -83,7 +83,7 @@ Now that your MCP Server is deployed in both development and production environm
 
 1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the MCP Server. The current lifecycle stage is **Created**.
 2. Click **Publish**.
-3. In the **Publish MCP Server** dialog, click **Confirm** to publish the MCP Server with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
+3. In the **Publish MCP Server** dialog, click **Confirm** to publish the MCP Server with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the lifecycle state to **Published**.
     
     !!! Info
         If you want to configure the Developer Portal as an MCP Hub, follow the [Developer Portal Mode](../devportal/developer-portal-mode.md) documentation.
