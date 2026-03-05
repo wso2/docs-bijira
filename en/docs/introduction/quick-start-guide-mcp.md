@@ -38,7 +38,7 @@ In this tutorial, you will use Bijira to create an MCP Server from an HTTP backe
    ```http
    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
    ```
-3. The **Create MCP Server from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
+3. The **Create MCP Server from Contract** page will be opened. Click **Create** to complete the MCP Server creation process.
 
     ![Create MCP Server from Contract](../assets/img/introduction/mcp-create-server.png)
 
@@ -81,9 +81,9 @@ Now that your MCP Server is deployed in both development and production environm
 
 ## Step 5: Publish the MCP Server
 
-1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the API. The current lifecycle stage is **Created**.
+1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the MCP Server. The current lifecycle stage is **Created**.
 2. Click **Publish**.
-3. In the **Publish MCP Server** dialog, click **Confirm** to proceed with publishing the API with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
+3. In the **Publish MCP Server** dialog, click **Confirm** to publish the MCP Server with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
     
     !!! Info
         If you want to configure the Developer Portal as an MCP Hub, follow the [Developer Portal Mode](../devportal/developer-portal-mode.md) documentation.
@@ -98,7 +98,7 @@ MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server,
 
     ![Go to DevPortal](../assets/img/introduction/mcp-go-to-developer-portal.png)
 
-2. Subscribe to the API and Generate credentials.
+2. Subscribe to the MCP Server and generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications** and then click **Create**.
     2. Enter an application name and click **Create**. Click the application name to open its home page.
     3. Click **Explore More** under the **Subscribed MCP Servers** section. This will navigate you to the MCP Server listing page.
@@ -110,11 +110,11 @@ MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server,
         !!!info
             Sandbox keys can only be used in the sandbox environment.
 
-    9. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
-    10. Close the dialog.
-    11. Click **Generate** to generate an access token. Copy the generated access token.
+    8. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
+    9. Close the dialog.
+    10. Click **Generate** to generate an access token. Copy the generated access token.
 
-3. Invoke the API:
+3. Invoke the MCP Server:
     1. Go to the MCP Server listing page using the left navigation menu.
     2. Click on the MCP Server.
     3. Click **Documentation** to open the MCP Playground.
@@ -128,4 +128,4 @@ MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server,
         
         ![MCP Inspector Devportal](../assets/img/introduction/mcp-inspector-devportal.png)
 
-Now you have successfully created, deployed, tested, and published a MCP Server using Bijira.
+Now you have successfully created, deployed, tested, and published an MCP Server using Bijira.
