@@ -1,6 +1,6 @@
-# Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS
+# Secure Communication Between the API Platform Gateway and Your Backend with Mutual TLS
 
-To establish secure communication between the Bijira Gateway and your backend, you can configure mutual TLS.
+To establish secure communication between the API Platform Gateway and your backend, you can configure mutual TLS.
 
 Mutual TLS authentication involves both the client and server validating each other’s certificates before establishing a connection. The following diagram depicts this scenario:
 
@@ -8,7 +8,7 @@ Mutual TLS authentication involves both the client and server validating each ot
 
 ## Configure mutual TLS to establish secure connectivity
 
-To establish secure connectivity between the Bijira Gateway and your backend using mutual TLS, you must add the certificate of the backend (server certificate) to Bijira and add the certificate of Bijira (client certificate) as a trusted certificate in the backend.
+To establish secure connectivity between the API Platform Gateway and your backend using mutual TLS, you must add the certificate of the backend (server certificate) to API Platform and add the certificate of API Platform (client certificate) as a trusted certificate in the backend.
 
 ### Step 1: Configure the backend certificate 
 
@@ -19,7 +19,7 @@ To establish secure connectivity between the Bijira Gateway and your backend usi
 
 To configure the backend certificate, follow the steps given below:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the **Proxy Listing** pane, click on the API proxy for which you want to configure TLS. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
 3. In the left navigation menu, click **Develop** -> **Policy** and then click **Endpoint Configuration** in Service Contract Endpoint section
 4. On the **Endpoint Configuration** section, click **Configure** corresponding to the endpoint.
@@ -29,15 +29,15 @@ To configure the backend certificate, follow the steps given below:
 
 There are two approaches you can take to configure mutual TLS.
 
- - Generate a key pair with a self-signed certificate from Bijira, download the public certificate, and subsequently add and configure it in the backend.
- - Upload your own public or private certificate pair to Bijira. Subsequently, add and configure the public certificate of this key pair in your backend.
+ - Generate a key pair with a self-signed certificate from API Platform, download the public certificate, and subsequently add and configure it in the backend.
+ - Upload your own public or private certificate pair to API Platform. Subsequently, add and configure the public certificate of this key pair in your backend.
 
 Follow the step-by-step instructions below depending on how you want to establish mutual TLS with the backend service:
 
-=== "Generate a key pair through Bijira"
-    When you follow these steps, Bijira generates a key pair with a self-signed certificate. You can attach this key pair to any API proxy created within the same project.
+=== "Generate a key pair through API Platform"
+    When you follow these steps, API Platform generates a key pair with a self-signed certificate. You can attach this key pair to any API proxy created within the same project.
 
-    1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.bijira.dev/).
     2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
     3. In the left navigation menu, click **Develop** and then click **Endpoints**.
     4. On the **Endpoints** page, click **Configure** corresponding to the endpoint.    
@@ -65,7 +65,7 @@ Follow the step-by-step instructions below depending on how you want to establis
 === "Use your own certificate pair"
     Here, you can use your own public certificate and private certificate as client certificates.
 
-    1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.bijira.dev/).
     2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
     3. In the left navigation menu, click **Develop** and then click **Endpoints**.
     4. On the **Endpoints** page, click **Configure** corresponding to the endpoint.  

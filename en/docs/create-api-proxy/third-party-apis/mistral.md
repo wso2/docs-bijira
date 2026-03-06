@@ -4,9 +4,9 @@ Follow the steps below to create an AI API:
 
 ---
 
-## 1. Access the Bijira Console
+## 1. Access the API Platform Console
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/) and select your project.  
+1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.  
 
 ---
 
@@ -73,4 +73,4 @@ Follow the steps below to create an AI API:
 
 - **Publish the API for consumers** to enable integration into applications. See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).  
 
-By following these steps, you can efficiently integrate Open AI services into your Bijira environment and manage them with ease.  
+By following these steps, you can efficiently integrate Open AI services into your API Platform environment and manage them with ease.  

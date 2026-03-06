@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Setup script for Bijira Documentation local development
-echo "🚀 Setting up Bijira Documentation for local development..."
+# Setup script for API Platform Documentation local development
+echo "🚀 Setting up API Platform Documentation for local development..."
 
 # Check if Python 3.12 is available
 if ! command -v python3 &> /dev/null; then

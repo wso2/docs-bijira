@@ -1,13 +1,13 @@
 # Quick Start Guide
 
-Bijira simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
+WSO2 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 
-In this tutorial, you will use Bijira to expose a service as an API proxy and publish it to the Bijira Developer Portal for application developers to consume.
+In this tutorial, you will use API Platform to expose a service as an API proxy and publish it to the API Platform Developer Portal for application developers to consume.
 
 ## Prerequisites
 
-1. If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
+1. If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
     2. Enter a unique organization name.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -16,7 +16,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 ## Step 1: Create a Project
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
 3. Enter the following details:
 
@@ -44,7 +44,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 ## Step 3: Test the API Proxy
 
-You can test the API proxy in the development environment before promoting it to production. Bijira provides the following options to test your API proxy:
+You can test the API proxy in the development environment before promoting it to production. API Platform provides the following options to test your API proxy:
 
 - OpenAPI Console
 - cURL
@@ -55,7 +55,7 @@ In this guide, you will use the OpenAPI Console.
 1. In the left navigation menu, click **Test** and then click **Console**.
 
     !!! tip
-        Since the API proxy is secured when deployed, you will need a key to invoke it. Bijira automatically generates a key when you navigate to the **OpenAPI Console** pane.
+        Since the API proxy is secured when deployed, you will need a key to invoke it. API Platform automatically generates a key when you navigate to the **OpenAPI Console** pane.
 
 2. In the **OpenAPI Console** pane, select **Development** from the environment drop-down list.
 3. Expand the `GET /uuid` method and click **Try it Out** to test it.
@@ -88,14 +88,14 @@ Now that your API is deployed in both development and production environments an
 2. Click **Publish**.
 3. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
 
-You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the Bijira Developer Portal.
+You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the API Platform Developer Portal.
 
 ## Step 6: Invoke the API
 
 <!-- TODO: Need to improve the documentation after devportal is refined with snaps and steps -->
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.
 
-1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the Bijira Developer Portal.
+1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the API Platform Developer Portal.
     ![Go to DevPortal](../assets/img/introduction/go-to-developer-portal.png)
 2. Subscribe to the API and Generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications**.
@@ -110,7 +110,7 @@ To generate credentials for the published API and invoke it via the Developer Po
         !!!info
             Sandbox keys can only be used in the sandbox environment.
 
-    9. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
+    9. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. API Platform generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
     10. Close the dialog.
     11. Click **Generate** to generate an access token that you can use to invoke APIs. Copy the generated access token.
 
@@ -122,4 +122,4 @@ To generate credentials for the published API and invoke it via the Developer Po
     5. Paste your copied access token with following format: `Bearer <ACCESS_TOKEN>`
     6. Click **Send API Request**.
 
-Now you have successfully created, deployed, tested, and published an API proxy using Bijira.
+Now you have successfully created, deployed, tested, and published an API proxy using API Platform.

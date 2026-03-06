@@ -1,8 +1,8 @@
-# Bijira Documentation
+# API Platform Documentation
 
-This is the Bijira documentation repository. This repository is open and we welcome your contributions!
+This is the WSO2 API Platform documentation repository. This repository is open and we welcome your contributions!
 
-To see the Bijira documentation site, go to [https://wso2.com/bijira/docs/](https://wso2.com/bijira/docs/)
+To see the API Platform documentation site, go to [https://wso2.com/bijira/docs/](https://wso2.com/bijira/docs/)
 
 ## Local Development Setup
 

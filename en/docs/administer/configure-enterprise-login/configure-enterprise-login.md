@@ -1,19 +1,19 @@
 # Configure Enterprise Login
 
-With Bijira, you can configure enterprise login to allow users from an external identity provider (IdP) to sign in to Bijira seamlessly without changing their credentials.
+With API Platform, you can configure enterprise login to allow users from an external identity provider (IdP) to sign in to API Platform seamlessly without changing their credentials.
 
-This guide walks you through the steps to configure enterprise login for your organization in Bijira.
+This guide walks you through the steps to configure enterprise login for your organization in API Platform.
 
 ## Prerequisites
 
 Before you proceed with the configuration, set up the following:
 
 - A valid email domain for your organization.
-- Access the [Bijira Console](https://console.bijira.dev/) via your Google, GitHub, or Microsoft account. If you are a new user, create an organization with a unique organization name. For example, "Stark Industries".
+- Access the [API Platform Console](https://console.bijira.dev/) via your Google, GitHub, or Microsoft account. If you are a new user, create an organization with a unique organization name. For example, "Stark Industries".
 
-## Configure enterprise login for your Bijira organization
+## Configure enterprise login for your API Platform organization
 
-To configure enterprise login for your Bijira organization, follow the steps given below:
+To configure enterprise login for your API Platform organization, follow the steps given below:
 
 - **If you already have a support account with us**, send us your organization name/handle and the email domains specific to your organization through our support portal.
 
@@ -38,9 +38,9 @@ To configure enterprise login for your Bijira organization, follow the steps giv
        Thank you.
 
 !!! note
-    You can choose to configure enterprise login for the Bijira Console, the Bijira Developer Portal, or both.
+    You can choose to configure enterprise login for the API Platform Console, the API Platform Developer Portal, or both.
 
-The Bijira support team will perform the necessary configurations and respond to you with a verification code. You must sign in to your domain host account and configure the DNS record for your email domain with the following values:
+The API Platform support team will perform the necessary configurations and respond to you with a verification code. You must sign in to your domain host account and configure the DNS record for your email domain with the following values:
 
 | **Field**                    | **Value**                                      |
 | ---------------------------- | ---------------------------------------------- |
@@ -48,11 +48,11 @@ The Bijira support team will perform the necessary configurations and respond to
 | **Time to Live (TTL)**       | Keep the default value or use `86400`          |
 | **Value/Answer/Destination** | wso2-domain-verification:<`verification_code`> |
 
-Now, you are ready to bring your own identity to Bijira.
+Now, you are ready to bring your own identity to API Platform.
 
-## Bring your own identity to Bijira
+## Bring your own identity to API Platform
 
-When you create an organization in Bijira, an organization with the same name is provisioned for you in Asgardeo. To bring your own identity to Bijira, you must configure a federated enterprise IdP on Asgardeo in the organization that is provisioned for you.
+When you create an organization in API Platform, an organization with the same name is provisioned for you in Asgardeo. To bring your own identity to API Platform, you must configure a federated enterprise IdP on Asgardeo in the organization that is provisioned for you.
 
 Follow the steps given below to configure the federated IdP:
 
@@ -61,29 +61,29 @@ Follow the steps given below to configure the federated IdP:
 3. In the Asgardeo Console left-hand menu, click **Applications**. 
 You will see applications listed with the names, **WSO2_LOGIN_FOR_BIJIRA** and **WSO2_LOGIN_FOR_BIJIRADEVPORTAL**.
 
-4. In this example, we’ll configure an external identity for the Bijira Console.
+4. In this example, we’ll configure an external identity for the API Platform Console.
 5. Click on the **WSO2_LOGIN_FOR_BIJIRA** application.
 6. Click the **Sign-in Method** tab. You can observe the configured connection.
 
-Now, users in your enterprise IdP can sign in to the Bijira Console using their enterprise IDs.
+Now, users in your enterprise IdP can sign in to the API Platform Console using their enterprise IDs.
 
 !!! note
-        You can follow the same steps to configure the external identity for the Bijira DevPortal using **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** Application.
+        You can follow the same steps to configure the external identity for the API Platform DevPortal using **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** Application.
 
 
 ## Configure role-based access control for enterprise login
 
-To streamline the enterprise login process and grant appropriate permission, Bijira provides the flexibility to configure role-based access control for users who reside in an external IdP.
+To streamline the enterprise login process and grant appropriate permission, API Platform provides the flexibility to configure role-based access control for users who reside in an external IdP.
 
-To set up role-based access control for enterprise login within Bijira, follow the steps given below:
+To set up role-based access control for enterprise login within API Platform, follow the steps given below:
 
 ### Prerequisites
 
 Before you proceed with the configuration, make sure you complete the following:
 
-1. Configure enterprise login for your organization. For instructions, see [Configure enterprise login for your Bijira organization](#configure-enterprise-login-for-your-bijira-organization).
+1. Configure enterprise login for your organization. For instructions, see [Configure enterprise login for your API Platform organization](#configure-enterprise-login-for-your-api-platform-organization).
 2. Ensure your enterprise identity provider includes the group/role attributes in tokens it sends to Asgardeo via the respective protocol.
-3. Be sure you have administrator privileges in Bijira.
+3. Be sure you have administrator privileges in API Platform.
 
 ### Step 1: Configure Asgardeo
 
@@ -111,16 +111,16 @@ Before you proceed with the configuration, make sure you complete the following:
    3. Click **New Attribute** and select the **Groups** attribute.
    4. Click **Save** and then click **Save Changes**.
 
-### Step 2: Map Bijira groups to enterprise IdP groups via the Bijira Console
+### Step 2: Map API Platform groups to enterprise IdP groups via the API Platform Console
 
 !!! note
 
-    Before you map Bijira groups to enterprise IdP groups, ensure you meet the following criteria:
+    Before you map API Platform groups to enterprise IdP groups, ensure you meet the following criteria:
 
     - You have permission to perform actions of the organization administrator role.
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. This takes you to the organization's home page.
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. This takes you to the organization's home page.
 3. In the left navigation menu, click **Settings**. This opens the organization-level settings page.
 4. In the **Access Control** tab, click **Groups**.
 
@@ -128,7 +128,7 @@ Before you proceed with the configuration, make sure you complete the following:
    ![Group mapping](../../assets/img/administer/settings/group-mapping.png)
 
 
-6. Click the edit icon corresponding to the Bijira group you want to map to the enterprise IdP group.
+6. Click the edit icon corresponding to the API Platform group you want to map to the enterprise IdP group.
 7. In the **IdP Group Name** field, specify the exact name you configured in the enterprise IdP and enter to add it.
 
     !!! tip
@@ -136,4 +136,4 @@ Before you proceed with the configuration, make sure you complete the following:
 
 8. Click **Save**.
 
-By following these steps, you have successfully configured role-based access control for enterprise login in Bijira, allowing users from the external IdP to have the appropriate permission.
+By following these steps, you have successfully configured role-based access control for enterprise login in API Platform, allowing users from the external IdP to have the appropriate permission.

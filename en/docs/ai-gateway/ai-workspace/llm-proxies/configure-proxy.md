@@ -7,7 +7,7 @@ This guide walks you through creating a proxy, optionally attaching guardrails, 
 ## Prerequisites
 
 !!! info "Before You Begin"
-    - Access to Bijira Console with **Admin** or **Developer** role
+    - Access to API Platform Console with **Admin** or **Developer** role
     - At least one [configured and deployed LLM Provider](../llm-providers/configure-provider.md)
 
 ---

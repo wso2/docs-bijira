@@ -9,7 +9,7 @@ LLM Providers are integrations with AI service platforms that offer language mod
 
 ## Supported Providers
 
-Bijira AI Workspace supports the following LLM providers:
+API Platform AI Workspace supports the following LLM providers:
 
 | Provider | Description | Learn More |
 |----------|-------------|-----------|
@@ -27,7 +27,7 @@ Bijira AI Workspace supports the following LLM providers:
 [//]: # (To start using LLM Providers:)
 
 [//]: # ()
-[//]: # (1. Navigate to AI Workspace in your Bijira dashboard)
+[//]: # (1. Navigate to AI Workspace in your API Platform dashboard)
 
 [//]: # (2. Select "LLM Providers" from the menu)
 

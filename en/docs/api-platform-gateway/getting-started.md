@@ -1,13 +1,13 @@
 # Getting Started with Self-Hosted Gateway
 
-This guide walks you through setting up a Bijira Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to Bijira's control plane.
+This guide walks you through setting up a API Platform Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.
 
 !!! note
     This feature is currently available in the **US region** only.
 
 ## Overview
 
-The Self-Hosted Gateway enables you to run the Bijira API Gateway in your own infrastructure while maintaining centralized management through Bijira's control plane. This guide covers the fastest way to get started.
+The Self-Hosted Gateway enables you to run the API Platform API Gateway in your own infrastructure while maintaining centralized management through API Platform's control plane. This guide covers the fastest way to get started.
 
 
 ## Prerequisites
@@ -19,10 +19,10 @@ Before you begin, ensure you have:
 - **Docker** installed and running (for Quick Start)
 - **Docker Compose** installed
 
-## Create a Self-Hosted Gateway in Bijira Console
+## Create a Self-Hosted Gateway in API Platform Console
 
-1. Sign in to [Bijira Console](https://console.bijira.dev).
-2. Go to **Organization Level** in Bijira.
+1. Sign in to [API Platform Console](https://console.bijira.dev).
+2. Go to **Organization Level** in API Platform.
 3. From the left navigation, select **Admin** → **Gateways**.
 
     ![Gateway List Empty](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
@@ -95,7 +95,7 @@ Before you begin, ensure you have:
     curl http://localhost:9002/health
     ```
 
-    The gateway should show as **Active** in the Bijira Console under **Gateways**.
+    The gateway should show as **Active** in the API Platform Console under **Gateways**.
 
 ## Add API and Invoke
 

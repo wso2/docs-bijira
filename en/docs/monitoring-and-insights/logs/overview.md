@@ -1,6 +1,6 @@
 # Logs
 
-The unified log view in Bijira allows you to view runtime and audit logs to gain API Proxy and user insights while ensuring data privacy. Bijira provides real-time insights through live logs and allows you to view historical logs for insights into the past. 
+The unified log view in API Platform allows you to view runtime and audit logs to gain API Proxy and user insights while ensuring data privacy. API Platform provides real-time insights through live logs and allows you to view historical logs for insights into the past. 
 
 You also have the flexibility to define a required time range to view relevant log entries, where an intuitive scrolling capability facilitates easy viewing of appropriate logs within the selected time frame. The log view also provides advanced filtering capabilities that allow you to efficiently navigate through appropriate logs to expedite troubleshooting in distributed environments.
 

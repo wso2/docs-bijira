@@ -1,12 +1,12 @@
 # Lifecycle Management
 
-API lifecycle management is an important aspect of API management. The API lifecycle consists of various states that an API passes through, from creation to retirement. In Bijira, there are six distinct lifecycle states: created, pre-released, published, deprecated, and retired.
+API lifecycle management is an important aspect of API management. The API lifecycle consists of various states that an API passes through, from creation to retirement. In API Platform, there are six distinct lifecycle states: created, pre-released, published, deprecated, and retired.
 
 By leveraging the various lifecycle states, API managers can optimize the development process and ensure that subscribers have access to the latest and most reliable APIs.
 
 ## API Lifecycle States
 
-The following lifecycle states are applicable to APIs in Bijira:
+The following lifecycle states are applicable to APIs in API Platform:
 
 | **API lifecycle state** | **Use case** | **Corresponding action** |
 |-----------------------|------------|-----------|
@@ -18,12 +18,12 @@ The following lifecycle states are applicable to APIs in Bijira:
 
 ## Manage the Lifecycle of an API
 
-To change the lifecycle state of an API via the Bijira Console, follow the instructions given below:
+To change the lifecycle state of an API via the API Platform Console, follow the instructions given below:
 
 !!! tip
      You must have publishing privileges to manage the lifecycle states of a component.
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. Select the project and the API that you want to change lifecycle.
 3. In the left navigation menu, click **Develop**, and then click **Lifecycle**.
 4. In the **Lifecycle Management** pane, you will see the lifecycle state transition diagram indicating the current lifecycle state of the component. Just above the lifecycle state transition diagram, The possible lifecycle states you can apply to the component are displayed just above the lifecycle state transition diagram. Click on a required lifecycle state to apply it to the component. For example, if a component is in the **Created** state, you can click either **Pre-release** or **Publish**.

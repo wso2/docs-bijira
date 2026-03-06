@@ -1,6 +1,6 @@
 # Proxy Remote MCP Servers
 
-Bijira allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, Bijira provides the capablity to manage the tools of your proxied MCP servers through the console.
+API Platform allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, API Platform provides the capablity to manage the tools of your proxied MCP servers through the console.
 
 ## Create an MCP Server Proxy
 
@@ -11,7 +11,7 @@ You can use the Start with MCP Server URL option to create a new MCP Server prox
 !!!important
     Make sure you provide the complete url ending with **/mcp** as this will be used to connect and fetch the tools in the creation step.
 
-    At the moment, Bijira supports only the **2025-03-16** specification. Therefore, it is important to make sure your MCP Server is 
+    At the moment, API Platform supports only the **2025-03-16** specification. Therefore, it is important to make sure your MCP Server is 
     compatible with this specification version.
     
 
@@ -31,7 +31,7 @@ You have to **redeploy** the MCP Server after saving for the new changes to be r
 
 ## Test the MCP Server
 
-You can test the MCP Server in the development environment before promoting it to production. Bijira provides an **MCP Playground** for this purpose.
+You can test the MCP Server in the development environment before promoting it to production. API Platform provides an **MCP Playground** for this purpose.
 
 1. Select **MCP Playground** under the Test section.
 2. Select Development from the environment drop-down list (If you have deployed the MCP Server to other environments, you can select the respective options as well).
@@ -68,7 +68,7 @@ Now that your MCP Server is deployed in both development and production environm
 
 You can view the published MCP Server via the Developer Portal.
 
-In the Lifecycle Management pane, click **Go to DevPortal**. This takes you to the MCP Server published to the Bijira Developer Portal.
+In the Lifecycle Management pane, click **Go to DevPortal**. This takes you to the MCP Server published to the API Platform Developer Portal.
 
 !!!info
     If you need to do MCP specific customization to the Developer portal, please refer the [MCP Hub documentation](./devportal-mcp-hub.md).
@@ -83,7 +83,7 @@ MCP consumers can discover the available tools through this view. Additionally, 
 
 ## Connect the MCP Server with MCP Clients / AI Agents
 
-MCP Servers in Bijira are secured by default. To access them, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
+MCP Servers in API Platform are secured by default. To access them, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
 
 For more information regarding managing applications, please refer [this](../devportal/manage-applications/create-an-application.md).
 

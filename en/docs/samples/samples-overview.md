@@ -1,6 +1,6 @@
 # Samples Overview
 
-Bijira provides an extensive collection of samples for a wide range of use cases. You can quickly deploy and explore these samples to easily understand the core functionalities of the platform.
+API Platform provides an extensive collection of samples for a wide range of use cases. You can quickly deploy and explore these samples to easily understand the core functionalities of the platform.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Before you use the samples, complete the following steps:
 
 - If you're signing in for the first time, follow these steps to create an organization and then create a project:
 
-    1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in using your Google, GitHub, Microsoft, Enterprise ID, or Email.
+    1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, Microsoft, Enterprise ID, or Email.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**. This creates an organization and takes you to its **Overview** page.
@@ -16,14 +16,14 @@ Before you use the samples, complete the following steps:
     6. Enter a display name, unique name, and description for the project.
     7. Click **Create**. This creates the project and takes you to its **Overview** page.
 
-## Explore the Bijira samples collection
+## Explore the API Platform samples collection
 
-You can filter and explore Bijira's sample collection based on your preference.
+You can filter and explore API Platform's sample collection based on your preference.
 
 To view available samples, follow these steps:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the Bijira Console header, go to the **Project** list and select your project to open its **Overview** page.
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+2. In the API Platform Console header, go to the **Project** list and select your project to open its **Overview** page.
 3. On the project **Overview** page, click on **Create**.
 4. In Create a New API Proxy view, navigate to **Try a Sample** tab.
 

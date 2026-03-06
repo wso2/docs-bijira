@@ -4,13 +4,13 @@ LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, 
 
 ## Prerequisites
 
-- Access to Bijira Console with **Admin** role
+- Access to API Platform Console with **Admin** role
 - At least one [AI Gateway created and set up](../ai-gateways/setting-up.md)
 - API credentials for your LLM provider (API key, access tokens, etc.)
 
 ## Add a New Provider
 
-1. Navigate to **AI Workspace** in your Bijira dashboard.
+1. Navigate to **AI Workspace** in your API Platform dashboard.
 2. Select **Service Providers** from the menu.
 3. Click **+ Add New Provider** and choose your provider type (e.g., **OpenAI**, **Anthropic**).
 

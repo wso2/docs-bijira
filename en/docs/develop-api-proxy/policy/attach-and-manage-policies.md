@@ -1,8 +1,8 @@
 # Attach and Manage Policies
 
-You can easily attach one or more policies to an API proxy component implementation via the Bijira Console. If necessary, you can also rearrange or swap the policies you attach.
+You can easily attach one or more policies to an API proxy component implementation via the API Platform Console. If necessary, you can also rearrange or swap the policies you attach.
 
-In Bijira, when you attach a mediation policy to a proxy, the deployment is a two-step process.
+In API Platform, when you attach a mediation policy to a proxy, the deployment is a two-step process.
 
 1. Deployment initiation:
 
@@ -10,17 +10,17 @@ In Bijira, when you attach a mediation policy to a proxy, the deployment is a tw
 
 2. Deploying the API:
 
-     Once the deployment initiation is complete, you can specify configuration values if any, and proceed to deploy. Bijira builds the generated mediation application and pushes the Docker image to the Docker registry. Finally, Bijira deploys the mediation application with the API Proxy.
+     Once the deployment initiation is complete, you can specify configuration values if any, and proceed to deploy. API Platform builds the generated mediation application and pushes the Docker image to the Docker registry. Finally, API Platform deploys the mediation application with the API Proxy.
 
 When a mediation policy is attached to a specific flow, the API invocation undergoes the following behavioral modification:
 
  ![Request/Response flow](../../assets/img/develop-api-proxy/policy/request-response-flow.png)
 
-- In the request path, the requests that pass through the gateway reach the relevant component, and Bijira executes any attached policies to the resource's request path before sending it to the backend.
+- In the request path, the requests that pass through the gateway reach the relevant component, and API Platform executes any attached policies to the resource's request path before sending it to the backend.
 
-- In the response path, the mediation component receives response messages from the backend, and Bijira executes any mediation policies attached to the `Response` flow or the `Error` flow. Then the response is forwarded to the client.
+- In the response path, the mediation component receives response messages from the backend, and API Platform executes any mediation policies attached to the `Response` flow or the `Error` flow. Then the response is forwarded to the client.
 
-- If an error occurs during the execution of policies or due to an internal error, Bijira executes the `Error` flow and sends an error response to the client.
+- If an error occurs during the execution of policies or due to an internal error, API Platform executes the `Error` flow and sends an error response to the client.
 
 ## Attach a Policy
 
@@ -28,7 +28,7 @@ When a mediation policy is attached to a specific flow, the API invocation under
 
 To attach an API level policy to the `Request` flow of a REST API proxy, follow the steps given below:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. Click the **Add API-level Policies** button in the **API Proxy Contract** component.
@@ -43,7 +43,7 @@ To attach an API level policy to the `Request` flow of a REST API proxy, follow 
 
 To attach a resource level policy to the `Request`, `Response`, or `Error` flow of a REST API proxy, follow the steps given below:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. From the list of resources, click the **Attach Policy Button** for the required policy.
@@ -60,7 +60,7 @@ To attach a resource level policy to the `Request`, `Response`, or `Error` flow 
 
 To deploy the API follow the steps below:
 
-1. In the left navigation menu, click **Deploy** and then click **Configure & Deploy**. Bijira performs the mediation application generation step and opens the **Configure & Deploy** pane.
+1. In the left navigation menu, click **Deploy** and then click **Configure & Deploy**. API Platform performs the mediation application generation step and opens the **Configure & Deploy** pane.
     <!-- TODO: Add images to step 1 and 2 after they are done -->
     <!-- ![Configure and deploy API](../../assets/img/develop-api-proxy/policy/configure-and-deploy-api.png)  -->
 
@@ -72,14 +72,14 @@ To deploy the API follow the steps below:
 
 ## Refresh Mediation Policies
 
-Bijira selectively generates and builds the mediation application code during component deployment depending on specific changes. These changes include:
+API Platform selectively generates and builds the mediation application code during component deployment depending on specific changes. These changes include:
 
 - Addition, deletion, or modification of API resources.
 - Attachment, removal, or editing of API mediation policies.
 - Endpoint modifications via the **Develop** page.
 - Initial configuration or removal of backend endpoints or mutual TLS certificates.
 
-If none of the above changes occur during deployment, Bijira skips the code generation and build process of the mediation application.
+If none of the above changes occur during deployment, API Platform skips the code generation and build process of the mediation application.
 
 !!! info
     - If you want to enforce the code generation and build process of the mediation application in instances where the specified changes do not take place, you must turn on the **Refresh Mediation Policies** toggle when you configure and deploy the component.
@@ -87,7 +87,7 @@ If none of the above changes occur during deployment, Bijira skips the code gene
 
 ## Implement an API policy
 
-Bijira allows you to implement an API policy as a Ballerina project and attach it to an API proxy component. 
+API Platform allows you to implement an API policy as a Ballerina project and attach it to an API proxy component. 
 
 !!! info
     Supported Ballerina version: 2201.5.5 
@@ -109,7 +109,7 @@ export BALLERINA_CENTRAL_ACCESS_TOKEN=<access-token>
 
 ### Step 1: Initialize a Ballerina project
 
-Bijira provides a template to initialize a mediation policy project with all the required configurations. The mediation policy project will be created as a Ballerina project.
+API Platform provides a template to initialize a mediation policy project with all the required configurations. The mediation policy project will be created as a Ballerina project.
 
 To create a Ballerina project for the mediation policy using `mediation.template` as the project template, issue the following command:  
    
@@ -219,7 +219,7 @@ In this guide, you are not going to make any changes to the `Fault` flow. Theref
 
 #### Publish as a private custom policy
  
- Bijira supports publishing a policy as a private custom policy. Publishing a policy as a private custom policy makes the policy inaccessible outside of the organization. To publish a policy as a private custom policy, change the visibility to `private` prior to pushing the package to Ballerina Central as follows:
+ API Platform supports publishing a policy as a private custom policy. Publishing a policy as a private custom policy makes the policy inaccessible outside of the organization. To publish a policy as a private custom policy, change the visibility to `private` prior to pushing the package to Ballerina Central as follows:
 
  1. Open the `Ballerina.toml` file of your policy. 
  2. Set the visibility to **private** by adding the configuration `visibility="private"`. For example:
@@ -246,7 +246,7 @@ When implementing a policy, it is essential to follow best practices to ensure e
 - The HTTP request/response objects and context record parameters gets passed as references to the policy functions. Therefore, the changes you make to these values persist throughout the policy execution and are propagated to subsequent policies. This behavior allows the request and response objects to accumulate transformations applied by attached policies.
 - Familiarize yourself with the different return types of policy flows. The following return types are unmodifiable:
     - **http:Response** - Returns an HTTP response when you terminate the mediation flow prematurely. For example,  in the in-flow sequence, the mediation sequence terminates before calling the backend. The mediation policy then sends an HTTP response to the client.
-    - **false** - Returns `false` if you want to terminate the mediation sequence with a predefined response (on the Bijira side).
+    - **false** - Returns `false` if you want to terminate the mediation sequence with a predefined response (on the API Platform side).
     - **error** - Returns an error if you want to terminate the mediation flow and transfer control to the fault flow. The fault flow would then construct an error response and send it to the client.
     - **()** - Returns () to signal the successful completion of the policy. Once the proxy has completed executing the policy, it starts to execute the next policy in the sequence.
 
@@ -254,7 +254,7 @@ When implementing a policy, it is essential to follow best practices to ensure e
 
 Once you implement a policy, you must publish it to Ballerina Central. 
 
-When you attach a policy and deploy an API, Bijira pulls the necessary packages from Ballerina Central and bundles them into the mediation application under the hood. Therefore to use policies in your APIs, you must publish them as public packages. 
+When you attach a policy and deploy an API, API Platform pulls the necessary packages from Ballerina Central and bundles them into the mediation application under the hood. Therefore to use policies in your APIs, you must publish them as public packages. 
 
 To publish the policy, follow the steps given below:
 
@@ -313,7 +313,7 @@ The policy function modifies the same request/response/context instance that you
 
 ### Glossary
 
-Here are some of the common terms used when working with policies in Bijira:
+Here are some of the common terms used when working with policies in API Platform:
 
 #### mediation:Context
 
@@ -404,7 +404,7 @@ The `Ballerina.toml` file needs to include the following keywords for the mediat
 
 #### Policy name and description
 
-The `Package.md` file contains information about the policy. Bijira uses this information to render the policy configuring UI. This file is written in Markdown format and should be structured as follows.
+The `Package.md` file contains information about the policy. API Platform uses this information to render the policy configuring UI. This file is written in Markdown format and should be structured as follows.
 
 **Format:**
 
@@ -434,6 +434,6 @@ This policy validates the request and response headers with the configured value
 
 #### Policy versioning
 
-When it comes to policy versioning in Bijira or mediation dependencies, it is important to consider the major version changes in the Ballerina language. For example, transitioning from update 1 to update 2 requires a major version increment, which can introduce significant incompatibilities.
+When it comes to policy versioning in API Platform or mediation dependencies, it is important to consider the major version changes in the Ballerina language. For example, transitioning from update 1 to update 2 requires a major version increment, which can introduce significant incompatibilities.
 
 Therefore, to ensure compatibility, the recommended approach is to version the policy package in a manner that the major version gets upgraded when the Choreo/mediation dependency version is upgraded to a major version.  

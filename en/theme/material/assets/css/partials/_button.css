@@ -89,7 +89,7 @@
   width: var(--md-header-link-icon-size);
 }
 
-/* Try Bijira button */
+/* Try API Platform button */
 
 .md-button.md-button--try-bijira:hover {
   color: #ff7300;

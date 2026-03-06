@@ -1,8 +1,8 @@
 # Submit Workflow Approval Requests
 
-In Bijira, if an administrator [configures a workflow to require approval](./configure-workflow-approvals.md), you must submit a request to obtain approval to perform the task.
+In API Platform, if an administrator [configures a workflow to require approval](./configure-workflow-approvals.md), you must submit a request to obtain approval to perform the task.
 
-When you submit a workflow approval request, Bijira notifies all authorized reviewers via email. Once an authorized reviewer approves or rejects the request, you will receive an email with the decision details. See [Review Workflow Approval Requests](./review-workflows-requests.md) for more information on workflow approval request reviews.
+When you submit a workflow approval request, API Platform notifies all authorized reviewers via email. Once an authorized reviewer approves or rejects the request, you will receive an email with the decision details. See [Review Workflow Approval Requests](./review-workflows-requests.md) for more information on workflow approval request reviews.
 
 The approach to request approval can vary depending on the workflow. Click the relevant tab:
 
@@ -18,7 +18,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to promote an api proxy from the development environment to production, follow these steps:
 
-    1. Sign in to the [Bijira Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to deploy. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation menu, click **Deploy**.
     4. Go to the **Development** card and click **Request to Promote**.
@@ -26,7 +26,7 @@ The approach to request approval can vary depending on the workflow. Click the r
     5. In the **Request Approval** pane, enter your request details and click **Submit**. This creates a request and notifies all authorized assignees via email about the request.
 
     !!! note
-         When an environment promotion request for a specific api proxy is pending review, Bijira restricts other developers from making the same request until the pending request is either approved or rejected.
+         When an environment promotion request for a specific api proxy is pending review, API Platform restricts other developers from making the same request until the pending request is either approved or rejected.
 
     When an authorized assignee approves the request, you will receive a confirmation email and can proceed to promote the api proxy to production.
 
@@ -51,7 +51,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to configure a custom URL for an api proxy, follow these steps:
 
-    1. Sign in to the [Bijira Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to configure. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation, click the **Admin** drop-down and then click **Settings**.
     4. Click the **URL Settings** tab. This displays the active deployments of the component across different environments and indicates whether a custom URL is configured.

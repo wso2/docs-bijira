@@ -1,10 +1,10 @@
-# Bijira Cloud Gateway
+# API Platform Cloud Gateway
 
-Bijira Cloud Gateway is a fully managed, WSO2-hosted API gateway that provides instant API deployment with zero infrastructure management.
+API Platform Cloud Gateway is a fully managed, WSO2-hosted API gateway that provides instant API deployment with zero infrastructure management.
 
 ## Overview
 
-The Bijira Cloud Gateway is the default gateway available in your organization. When you deploy an API proxy, it's automatically routed through the cloud gateway without any additional setup or configuration required.
+The API Platform Cloud Gateway is the default gateway available in your organization. When you deploy an API proxy, it's automatically routed through the cloud gateway without any additional setup or configuration required.
 
 ## Key Features
 
@@ -21,7 +21,7 @@ The Bijira Cloud Gateway is the default gateway available in your organization. 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     Bijira Control Plane                        │
+│                     API Platform Control Plane                        │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
 │  │ API Manager │  │ Policy Hub  │  │ Monitoring & Analytics  │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
@@ -29,7 +29,7 @@ The Bijira Cloud Gateway is the default gateway available in your organization. 
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                  Bijira Cloud Gateway (WSO2-Managed)            │
+│                  API Platform Cloud Gateway (WSO2-Managed)            │
 │  ┌─────────────────────────────────────────────────────────┐    │
 │  │              Managed Gateway Cluster                     │    │
 │  │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐     │    │
@@ -45,9 +45,9 @@ The Bijira Cloud Gateway is the default gateway available in your organization. 
                    (publicly accessible)
 ```
 
-## When to Use Bijira Cloud Gateway
+## When to Use API Platform Cloud Gateway
 
-The Bijira Cloud Gateway is ideal for:
+The API Platform Cloud Gateway is ideal for:
 
 - **Quick starts**: Get APIs running immediately without infrastructure setup
 - **Managed operations**: Focus on API development, not gateway management
@@ -66,18 +66,18 @@ Consider using a [Self-Hosted Gateway](prerequisites.md) instead if you require:
 
 ## Getting Started
 
-The Bijira Cloud Gateway is available by default. To deploy an API:
+The API Platform Cloud Gateway is available by default. To deploy an API:
 
-1. **Create an API proxy** in the Bijira Console.
+1. **Create an API proxy** in the API Platform Console.
 2. **Configure your API** with endpoints, policies, and security settings.
 3. **Deploy the API** to an environment.
 4. **Access your API** through the generated gateway URL.
 
-That's it! Your API is immediately available through the Bijira Cloud Gateway.
+That's it! Your API is immediately available through the API Platform Cloud Gateway.
 
 ## Gateway URL
 
-APIs deployed to the Bijira Cloud Gateway are accessible at:
+APIs deployed to the API Platform Cloud Gateway are accessible at:
 
 ```
 https://<organization>.gateway.bijira.dev/<api-context>/<version>
@@ -90,7 +90,7 @@ https://acme-corp.gateway.bijira.dev/orders/v1
 
 ## Included Capabilities
 
-All features of the Bijira platform are available with the Cloud Gateway:
+All features of the API Platform platform are available with the Cloud Gateway:
 
 - **Policy Enforcement**: Apply rate limiting, authentication, and other policies
 - **Analytics**: Full API analytics and insights

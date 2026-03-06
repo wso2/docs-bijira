@@ -2,7 +2,7 @@
 
 There are scenarios where a backend service needs to apply specific logic or make decisions depending on the user consuming an API. In such scenarios, you must pass end-user attributes to the backend during an API call.
 
-Bijira provides a method to send user information to a backend service through a JSON Web Token (JWT) in an HTTP header of an API request.
+API Platform provides a method to send user information to a backend service through a JSON Web Token (JWT) in an HTTP header of an API request.
 
 ## How it works
 
@@ -12,7 +12,7 @@ For each API request, a digitally signed JWT is carried to the backend service i
 
 `{token header}.{claims list}.{signature}`
 
-When a request goes through Bijira, the backend JWT is appended as the `X-JWT-Assertion` header in the outgoing message. The backend service fetches the JWT and retrieves the required information about the user, application, or token.
+When a request goes through API Platform, the backend JWT is appended as the `X-JWT-Assertion` header in the outgoing message. The backend service fetches the JWT and retrieves the required information about the user, application, or token.
 
 ## Claims
 
@@ -59,10 +59,10 @@ The following table describes the information contained in the sample JWT claims
 | `jti`                                   | The unique token identifier.                                                                               |   Mandatory              |
 | `exp`                                   | The token expiry time.                                                                                     |   Mandatory              |
 | `iss`                                   | The issuer of the token.                                                                                   |   Mandatory              |
-| `http://wso2.org/claims/apiname`        | The name of the API in Bijira.                                                                             |   Optional               |
+| `http://wso2.org/claims/apiname`        | The name of the API in API Platform.                                                                             |   Optional               |
 | `http://wso2.org/claims/version`        | The API version.                                                                                           |   Optional               |
-| `http://wso2.org/claims/keytype`        | The environment in Bijira that the API is in (`Development` or `production`).                              |   Optional |
-| `http://wso2.org/claims/apicontext`     | The API context in Bijira.                                                                                 |   Optional               |
+| `http://wso2.org/claims/keytype`        | The environment in API Platform that the API is in (`Development` or `production`).                              |   Optional |
+| `http://wso2.org/claims/apicontext`     | The API context in API Platform.                                                                                 |   Optional               |
 | `http://wso2.org/claims/subscriber`     | The subscriber to the API, usually the app developer.                                                      |   Optional |
 | `http://wso2.org/claims/applicationname`| The application through which the API invocation is done.                                                  |   Optional |
 | `http://wso2.org/claims/applicationid`  | The ID of the application through which the API invocation is done.                                        |   Optional |
@@ -104,9 +104,9 @@ JSON web key set (JWKS) is a set of keys to validate a JWT. It contains a collec
 Typically, when a third party key manager issues a JWT and the recipient needs to verify its signature, they can use a JWKS. 
 JWKS allows the issuer to rotate keys dynamically rather than hard-coding the public key in the application. The recipient can obtain the public key by accessing the JWKS endpoint.
 
-## JWKS support in Bijira to validate the JWT
+## JWKS support in API Platform to validate the JWT
 
- Bijira provides an endpoint to specify the public keys for backend JWT validation. Here are the endpoint URLs for the US East and EU regions:
+ API Platform provides an endpoint to specify the public keys for backend JWT validation. Here are the endpoint URLs for the US East and EU regions:
 
 - [https://gateway.e1-us-east-azure.bijiraapis.dev/.wellknown/jwks](https://gateway.e1-us-east-azure.bijiraapis.dev/.wellknown/jwks)
 - [https://gateway.e1-eu-north-azure.bijiraapis.dev/.wellknown/jwks](https://gateway.e1-eu-north-azure.bijiraapis.dev/.wellknown/jwks)
@@ -142,7 +142,7 @@ The following table describes the information contained in the JWKS response:
 
 | **Property** | **Description**                                                                   |  
 |--------------|-----------------------------------------------------------------------------------|
-| `kty`        | The cryptographic family to which the key belongs. <br> Bijira only supports RSA. |
+| `kty`        | The cryptographic family to which the key belongs. <br> API Platform only supports RSA. |
 | `e`          | The exponent value of the public key.                                             |
 | `use`        | The purpose of the key. For example, whether it is for signing or encryption.     |
 | `kid`        | The identification parameter to match a specific key.                             |
@@ -151,9 +151,9 @@ The following table describes the information contained in the JWKS response:
 
 ## Enable passing end-user attributes to the backend
 
-To enable passing end-user attributes to the backend through API calls via Bijira, follow the steps given below:
+To enable passing end-user attributes to the backend through API calls via API Platform, follow the steps given below:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the **Proxy Listing**page, click on the API Proxy for which you want to pass end-user attributes to the backend.
 3. In the left navigation menu, click **Develop** and then click **Policies**.
 4. Select the API Proxy Level policies, then click **Attach Mediation Policy**.

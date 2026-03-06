@@ -4,7 +4,7 @@ The AI Workspace provides a built-in **Insights** page that gives you real-time 
 
 ## Accessing Insights
 
-1. Navigate to **AI Workspace** in your Bijira dashboard.
+1. Navigate to **AI Workspace** in your API Platform dashboard.
 2. Click **Insights** in the left navigation sidebar.
 
 The Insights page loads an embedded analytics dashboard scoped to your AI Workspace activity.
@@ -61,4 +61,4 @@ See [Guardrails Overview](policies/guardrails/overview.md) for more on configuri
 
 - [Token-Based Rate Limiting](policies/guardrails/token-based-rate-limit.md) — Set token limits and use Insights to monitor usage
 - [Guardrails Overview](policies/guardrails/overview.md) — Monitor guardrail interventions through Insights
-- [Integrate Bijira with Moesif](../../monitoring-and-insights/integrate-bijira-with-moesif.md) — Advanced Moesif integration options for the broader Bijira platform
+- [Integrate API Platform with Moesif](../../monitoring-and-insights/integrate-bijira-with-moesif.md) — Advanced Moesif integration options for the broader API Platform platform

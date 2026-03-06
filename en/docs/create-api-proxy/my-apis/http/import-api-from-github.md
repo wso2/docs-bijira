@@ -1,18 +1,18 @@
 # Create an API Proxy from a GitHub Repository Source
 
-An API proxy acts as an intermediary between an existing API and Bijira, intercepting all requests made to the API. It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
+An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API. It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
 
 ## Prerequisites
 
-1. If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+1. If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
 
     This creates the organization and opens the **Project Home** page of the default project created for you.
 
-2. Fork the [Bijira samples repository](https://github.com/wso2/bijira-samples), which contains the [sample proxy source](https://github.com/wso2/bijira-samples/tree/main/reading-list-api).
+2. Fork the [API Platform samples repository](https://github.com/wso2/bijira-samples), which contains the [sample proxy source](https://github.com/wso2/bijira-samples/tree/main/reading-list-api).
 
 ## Configure component.yaml
 
@@ -36,27 +36,27 @@ proxy:
 | `proxy.schemaFilePath` | Required | The path to your API specification file relative to the API directory. For REST APIs, this should point to your OpenAPI specification file (e.g., `openapi.yaml`). For WebSocket APIs, this should point to your AsyncAPI specification file (e.g., `asyncapi.yaml`). |
 
 !!! note
-    The `component.yaml` file must be present in the `.choreo` directory within your API directory for Bijira to successfully build and deploy your API proxy from GitHub.
+    The `component.yaml` file must be present in the `.choreo` directory within your API directory for API Platform to successfully build and deploy your API proxy from GitHub.
 
 ## Step 1: Create an API proxy
 
 You can create an API proxy either by selecting the source from a GitHub repository, uploading an OpenAPI specification file, or providing an OpenAPI specification URL. This guide demonstrates how to create an API proxy using a GitHub repository as the source.
 
-1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Select Import API Contract and click on GitHub tab.
 4. Click on **Authorize With GitHub** card under **Connect a Git Repository** section to connect your GitHub account.
-    - If you haven’t connected your GitHub repository to Bijira, enter your GitHub credentials and select the repository you forked in the prerequisites section to install the [Bijira GitHub App](https://github.com/marketplace/choreo-apps).
+    - If you haven’t connected your GitHub repository to API Platform, enter your GitHub credentials and select the repository you forked in the prerequisites section to install the [API Platform GitHub App](https://github.com/marketplace/choreo-apps).
 
     !!! note
-        The **Bijira GitHub App** requires the following permissions:
+        The **API Platform GitHub App** requires the following permissions:
          - Read and write access to code and pull requests.
          - Read access to issues and metadata.
 
-        You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) if needed. Write access is only used for sending pull requests; Bijira will not push changes directly to your repository.
+        You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) if needed. Write access is only used for sending pull requests; API Platform will not push changes directly to your repository.
 
     !!! note
-        If you are the owner of the GitHub organization and need to authorize the Bijira GitHub App on behalf of your collaborators, you can install the Bijira GitHub App directly in your organization via [install App](https://github.com/marketplace/choreo-apps).
+        If you are the owner of the GitHub organization and need to authorize the API Platform GitHub App on behalf of your collaborators, you can install the API Platform GitHub App directly in your organization via [install App](https://github.com/marketplace/choreo-apps).
 
 5. Enter the following repository details:
 
@@ -104,4 +104,4 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 
 ![Create API from Github](../../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
 
-Now, you are ready to test the API proxy. You can test the API via the [OpenAPI Console](../../../test-api-proxy/openapi-console/) provided in Bijira
+Now, you are ready to test the API proxy. You can test the API via the [OpenAPI Console](../../../test-api-proxy/openapi-console/) provided in API Platform

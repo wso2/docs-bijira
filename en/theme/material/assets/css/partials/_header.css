@@ -38,7 +38,7 @@
   min-height: var(--md-header-min-height);
 }
 
-/* Community button group (Get Help + Try Bijira) */
+/* Community button group (Get Help + Try API Platform) */
 .md-header__community {
   flex: 0 0 auto;
   white-space: nowrap;
@@ -53,7 +53,7 @@
   align-items: center;
 }
 
-/* Divider before Get Help / Try Bijira group */
+/* Divider before Get Help / Try API Platform group */
 .md-header__community .md-header__extra:before {
   margin: 10px 15px;
   width: 1px;

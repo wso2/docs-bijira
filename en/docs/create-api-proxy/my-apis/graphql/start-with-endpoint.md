@@ -6,8 +6,8 @@ Unlike traditional REST APIs that require multiple endpoints for different resou
 
 ## Prerequisites
 
-- If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+- If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -18,13 +18,13 @@ Unlike traditional REST APIs that require multiple endpoints for different resou
 
 In this guide, you will create a GraphQL API proxy using an endpoint.
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start with Endpoint**.
 4. Select the API Type as **GraphQL**.
 5. Click **Try with Sample URL** to use the sample GraphQL endpoint URL.
 
-6. Click outside the input field or press Tab to validate the endpoint. Bijira will automatically validate the endpoint and fetch the GraphQL schema through introspection. Wait for the validation to complete.
+6. Click outside the input field or press Tab to validate the endpoint. API Platform will automatically validate the endpoint and fetch the GraphQL schema through introspection. Wait for the validation to complete.
 
 7. Click **Next**.
 8. Edit the pre-defined values as needed. You can keep the default values for this sample.

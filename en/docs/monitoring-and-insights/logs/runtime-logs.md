@@ -1,12 +1,12 @@
 # Runtime logs
 
-Bijira runtime logs provide insights into both project and API Proxy-level logs, covering application and gateway logs. These logs streamline the debugging process by centralizing diverse log sources.
+API Platform runtime logs provide insights into both project and API Proxy-level logs, covering application and gateway logs. These logs streamline the debugging process by centralizing diverse log sources.
 
-In Bijira, any organization member can view runtime logs via the runtime logs page. Bijira allows you to apply filters based on parameters such as log level (error, warn, info, debug), log type (application, gateway, system), and environment (development, staging, production) to simplify the debugging process.
+In API Platform, any organization member can view runtime logs via the runtime logs page. API Platform allows you to apply filters based on parameters such as log level (error, warn, info, debug), log type (application, gateway, system), and environment (development, staging, production) to simplify the debugging process.
 
 To access runtime logs, follow the steps below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the left navigation menu, click **Observability** and then click **Logs**. This displays runtime logs for the past 30 days by default.
 
     To view logs based on a specific time range and other requirements, you can apply the necessary filter criteria.
