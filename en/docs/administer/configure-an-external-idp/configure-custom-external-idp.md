@@ -43,7 +43,7 @@ Now you have configured your custom key manager as an external key manager in AP
 
 ![Add Key Manager button](../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
 
-## Step 2: Add the external key manager in API Platform Developer Portal¶
+## Step 2: Add the external key manager in API Platform Developer Portal
 
 Once the key manager is configured as an external key manager in API Platform, it is necessary to configure it in the API Platform Developer Portal as well. For that, follow the steps below.
 
