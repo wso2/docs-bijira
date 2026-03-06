@@ -1,4 +1,4 @@
-# Bijira API Management Governance
+# API Platform API Management Governance
 
 API Management Governance consists of a set of processes, practices, roles, and responsibilities designed to ensure the effective and efficient management of APIs throughout their lifecycle. Establishing a governance strategy is essential for maintaining consistency, security, and compliance in API development, management, and consumption.
 
@@ -12,9 +12,9 @@ Implementing API governance provides the following benefits:
 - **Discoverability and Reusability** – Facilitates API cataloging and reuse to minimize redundant development efforts.
 - **Business Agility** – Accelerates API delivery, helping organizations meet customer and partner needs efficiently.
 
-Bijira API Management provides a comprehensive governance capabilities that powered by AI to evaluate API compliance with governance standards given in a form of natural language specification, and also spectral based compliance validation for rules defined in OpenAPI and AsyncAPI specifications.
+API Platform API Management provides a comprehensive governance capabilities that powered by AI to evaluate API compliance with governance standards given in a form of natural language specification, and also spectral based compliance validation for rules defined in OpenAPI and AsyncAPI specifications.
 
-This section outlines the governance concepts available in Bijira.
+This section outlines the governance concepts available in API Platform.
 
 ## Governance Concepts
 
@@ -37,7 +37,7 @@ When defining a ruleset, the API type must be specified. Supported API types inc
 
 ### Documents
 
-Documents are used to feed specifications and guidelines to the Bijira AI engine for compliance validation. Documents can be in the form of natural language specifications or OpenAPI/AsyncAPI specifications.
+Documents are used to feed specifications and guidelines to the API Platform AI engine for compliance validation. Documents can be in the form of natural language specifications or OpenAPI/AsyncAPI specifications.
 
 ### Policy
 

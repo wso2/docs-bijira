@@ -1,12 +1,12 @@
 # API Platform Gateway Overview
 
-Bijira provides two types of API Platform gateways powered by WSO2, giving you flexibility to choose the deployment model that best fits your requirements. Both gateway types are managed through Bijira's unified control plane, ensuring consistent API management, policy enforcement, and monitoring across all your environments.
+API Platform provides two types of API Platform gateways powered by WSO2, giving you flexibility to choose the deployment model that best fits your requirements. Both gateway types are managed through API Platform's unified control plane, ensuring consistent API management, policy enforcement, and monitoring across all your environments.
 
 ## Gateway Types
 
-### Bijira Cloud Gateway (SaaS)
+### API Platform Cloud Gateway (SaaS)
 
-The Bijira Cloud Gateway is a fully managed, WSO2-hosted gateway that requires zero infrastructure management on your part.
+The API Platform Cloud Gateway is a fully managed, WSO2-hosted gateway that requires zero infrastructure management on your part.
 
 | Aspect | Description |
 |--------|-------------|
@@ -25,12 +25,12 @@ The Bijira Cloud Gateway is a fully managed, WSO2-hosted gateway that requires z
 
 ### Self-Hosted Gateway
 
-The Self-Hosted Gateway is a containerized instance of the Bijira Gateway that you deploy and manage in your own infrastructure—on-premises, in a private cloud, or in any public cloud provider.
+The Self-Hosted Gateway is a containerized instance of the API Platform Gateway that you deploy and manage in your own infrastructure—on-premises, in a private cloud, or in any public cloud provider.
 
 | Aspect | Description |
 |--------|-------------|
 | **Deployment** | Your infrastructure (Kubernetes, Docker, VM) |
-| **Management** | You manage the runtime; Bijira manages configuration |
+| **Management** | You manage the runtime; API Platform manages configuration |
 | **Availability** | You control redundancy and failover |
 | **Scaling** | You control scaling based on your needs |
 | **Maintenance** | You handle runtime updates and patches |
@@ -44,7 +44,7 @@ The Self-Hosted Gateway is a containerized instance of the Bijira Gateway that y
 
 ## Comparison
 
-| Feature | Bijira Cloud Gateway | Self-Hosted Gateway |
+| Feature | API Platform Cloud Gateway | Self-Hosted Gateway |
 |---------|---------------------|---------------------|
 | Infrastructure management | WSO2 | You |
 | Data residency control | WSO2 cloud regions | Your choice |
@@ -58,31 +58,31 @@ The Self-Hosted Gateway is a containerized instance of the Bijira Gateway that y
 
 ## Architecture
 
-Both gateway types connect to Bijira's unified control plane:
+Both gateway types connect to API Platform's unified control plane:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     Bijira Control Plane                        │
+│                     API Platform Control Plane                  │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
 │  │ API Manager │  │ Policy Hub  │  │ Monitoring & Analytics  │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
 └───────────┬───────────────────────────────────┬─────────────────┘
             │                                   │
             ▼                                   ▼
-┌───────────────────────┐           ┌───────────────────────────┐
-│  Bijira Cloud Gateway │           │    Your Environment       │
-│  (WSO2-Managed)       │           │  ┌─────────────────────┐  │
-│  ┌─────────────────┐  │           │  │  Self-Hosted Gateway│  │
-│  │  Gateway Cluster│  │           │  │  ┌─────┐ ┌─────┐    │  │
-│  └─────────────────┘  │           │  │  │ GW1 │ │ GW2 │    │  │
-└───────────────────────┘           │  │  └─────┘ └─────┘    │  │
-                                    │  └─────────────────────┘  │
-                                    │           │               │
-                                    │           ▼               │
-                                    │  ┌─────────────────────┐  │
-                                    │  │  Backend Services   │  │
-                                    │  └─────────────────────┘  │
-                                    └───────────────────────────┘
+┌───────────────────────────────┐    ┌───────────────────────────┐
+│  API Platform Cloud Gateway   │    │    Your Environment       │
+│  (WSO2-Managed)               │    │  ┌─────────────────────┐  │
+│  ┌─────────────────┐          │    │  │  Self-Hosted Gateway│  │
+│  │  Gateway Cluster│          │    │  │  ┌─────┐ ┌─────┐    │  │
+│  └─────────────────┘          │    │  │  │ GW1 │ │ GW2 │    │  │
+└───────────────────────────────┘    │  │  └─────┘ └─────┘    │  │
+                                     │  └─────────────────────┘  │
+                                     │           │               │
+                                     │           ▼               │
+                                     │  ┌─────────────────────┐  │
+                                     │  │  Backend Services   │  │
+                                     │  └─────────────────────┘  │
+                                     └───────────────────────────┘
 ```
 
 ## Common Features
@@ -100,15 +100,15 @@ Both gateway types share these capabilities through the unified control plane:
 
 ## Getting Started
 
-### Using Bijira Cloud Gateway
+### Using API Platform Cloud Gateway
 
-The Bijira Cloud Gateway is available by default in your organization. Simply deploy your APIs and they will be routed through the managed gateway.
+The API Platform Cloud Gateway is available by default in your organization. Simply deploy your APIs and they will be routed through the managed gateway.
 
-1. Create an API proxy in the Bijira Console.
+1. Create an API proxy in the API Platform Console.
 2. Deploy the API to an environment.
 3. The API is automatically available through the cloud gateway.
 
-For more details, see [Bijira Cloud Gateway](cloud-gateway.md).
+For more details, see [API Platform Cloud Gateway](cloud-gateway.md).
 
 ### Using Self-Hosted Gateway
 

@@ -1,6 +1,6 @@
 # Manage Continuous Deployment Pipelines
 
-By default, all the organizations in Bijira are provisioned with a default continuous deployment pipeline.
+By default, all the organizations in API Platform are provisioned with a default continuous deployment pipeline.
 
 Environments within an organization are applied to projects in the order specified by the continuous deployment pipeline. The organization's default continuous deployment pipeline is applied to all the projects. You can create additional pipelines and customize the sequence in which environments are applied in projects.
 
@@ -8,8 +8,8 @@ Environments within an organization are applied to projects in the order specifi
 
 To create a new pipeline, follow the steps given below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. On the **CD Pipelines** page, click **+ Create Pipeline** and specify the following details required to create a new pipeline:
 
@@ -25,8 +25,8 @@ To create a new pipeline, follow the steps given below:
 
 To edit a pipeline, follow the steps given below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. Click the edit icon corresponding to the pipeline you want to edit.
 5. Update the pipeline name, mark the pipeline as default, and change the sequence of environments.
@@ -42,8 +42,8 @@ To delete a pipeline, follow the steps given below:
 !!! info "Note"
     The **default** continuous deployment pipeline of the organization cannot be deleted.
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. Click the delete icon corresponding to the pipeline you want to delete. This displays a confirmation dialog with details on the impact of deletion.
 
@@ -57,8 +57,8 @@ To delete a pipeline, follow the steps given below:
 
 To add a pipeline to a project, follow the steps given below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to add the pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 5. Click **+ Add** and select the pipelines you want to add to the project.
@@ -68,8 +68,8 @@ To add a pipeline to a project, follow the steps given below:
 
 To remove a pipeline from a project, follow the steps given below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to remove the pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 5. Click **Remove** corresponding to the pipeline you want to remove from the project. This displays a confirmation dialog with details on the impact of deletion.
@@ -80,8 +80,8 @@ To remove a pipeline from a project, follow the steps given below:
 
 To change the default pipeline of a project, follow the steps given below:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**. Then select your organization.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to change the default pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 5. Click **Set as Default** corresponding to the pipeline you want to set as the default pipeline for the project. This displays a confirmation dialog that details the impact of setting the new pipeline as the project default.

@@ -4,7 +4,7 @@ The subscription process ensures secure authentication of API requests using app
 
 To subscribe to an API via an application, follow these steps:
 
-1. Go to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in to your organization.
+1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in to your organization.
 
 2. To navigate to applications, in the Developer Portal sidebar, click **Applications**.
 

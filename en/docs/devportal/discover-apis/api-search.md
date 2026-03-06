@@ -1,6 +1,6 @@
 # Search APIs
 
-You can search for APIs in the Developer Portal that have already been published from Bijira.
+You can search for APIs in the Developer Portal that have already been published from API Platform.
 
 1. Click **APIs** from the sidebar.APIs list can be seen
 

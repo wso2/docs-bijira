@@ -1,12 +1,12 @@
-﻿# Organizations in Bijira
+﻿# Organizations in API Platform
 
-Organizations are the foundational building blocks in Bijira, providing a secure and logical grouping of users, resources, and projects. This covers everything you need to know about organizations in Bijira, including their structure, management, permissions, and unique identifiers.
+Organizations are the foundational building blocks in API Platform, providing a secure and logical grouping of users, resources, and projects. This covers everything you need to know about organizations in API Platform, including their structure, management, permissions, and unique identifiers.
 
 ---
 
 ## What is an Organization?
 
-An **organization** in Bijira is a logical container for users and their resources. Every user must belong to an organization to use Bijira. Organizations help isolate resources, manage access, and enable collaboration within a defined boundary.
+An **organization** in API Platform is a logical container for users and their resources. Every user must belong to an organization to use API Platform. Organizations help isolate resources, manage access, and enable collaboration within a defined boundary.
 
 - **First-time user onboarding:** First-time users must create an organization and become its member upon signing up.
 - **Resource isolation**: Users and resources in one organization cannot access those in another, unless explicitly invited.
@@ -18,7 +18,7 @@ An **organization** in Bijira is a logical container for users and their resourc
 
 If you are a member of multiple organizations, you can easily switch between them by following steps below.
 
-1. In the Bijira Console header, click the **Organization** list.
+1. In the API Platform Console header, click the **Organization** list.
 2. Select the desired organization from the dropdown.
 
 ---
@@ -31,7 +31,7 @@ To collaborate, you can invite new members to your organization. (See the [Invit
 
 ## Managing User Permissions
 
-Bijira uses a combination of **groups** and **roles** to manage user permissions efficiently.
+API Platform uses a combination of **groups** and **roles** to manage user permissions efficiently.
 
 ### Groups
 
@@ -39,9 +39,9 @@ A **group** is a collection of users with one or more roles assigned. Users inhe
 
 #### Predefined Groups
 
-Bijira provides several predefined groups, each mapped to specific roles.
+API Platform provides several predefined groups, each mapped to specific roles.
 
-- **Admin**: Users who have full access to the Bijira (user management, application development, billing and subscription, etc.).
+- **Admin**: Users who have full access to the API Platform (user management, application development, billing and subscription, etc.).
 - **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
 - **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
 - **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
@@ -51,11 +51,11 @@ Bijira provides several predefined groups, each mapped to specific roles.
 
 ### Roles
 
-Roles define what actions a user can perform within an organization. The main roles in Bijira are:
+Roles define what actions a user can perform within an organization. The main roles in API Platform are:
 
 - **API Publisher**: Users who understand the technical aspects of the API (interfaces, documentation, versions, etc.) and create and publish APIs into the Developer Portal.
 - **API Subscriber**: Users or Application Developers who search the Developer Portal to discover APIs and use them. They read the documentation and forums, rates/comments on the APIs, subscribes to APIs, obtain access tokens, and invokes the APIs.
-- **Admin**: Users who have full access to the Bijira (user management, application development, billing and subscription, etc.)
+- **Admin**: Users who have full access to the API Platform (user management, application development, billing and subscription, etc.)
 - **Choreo DevOps**: Users who are involved in deployment management.
 - **Choreo Platform Engineer**: Users who perform tasks focusing on infrastructure, governance, service mesh, and monitoring.
 
@@ -63,13 +63,13 @@ Roles define what actions a user can perform within an organization. The main ro
 
 ## Organization Identifiers
 
-Bijira uses two unique identifiers for organizations, the **Organization ID** and the **Organization Handle**.
+API Platform uses two unique identifiers for organizations, the **Organization ID** and the **Organization Handle**.
 
 ### Organization ID
 
 A unique, system-generated identifier for each organization. To find your Organization ID:
 
-1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in.
 2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. In the header, click the **Organization** list to open organization-level settings.
@@ -79,7 +79,7 @@ A unique, system-generated identifier for each organization. To find your Organi
 
 A unique, human-readable string that corresponds to your organization's name. To find your Organization Handle:
 
-1. Go to the [Bijira Console](https://console.bijira.dev/) and sign in.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in.
 2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. Under **Organization**, click **Copy Handle**.

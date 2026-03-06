@@ -1,11 +1,11 @@
 # Create API Proxy from Scratch
 
-An API proxy acts as an intermediary between an existing API and Bijira, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
+An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
 
 ## Prerequisites
 
-- If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+- If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -16,7 +16,7 @@ An API proxy acts as an intermediary between an existing API and Bijira, interce
 
 In this guide, you will create an API proxy from the Scratch.
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start from Scratch**.
 4. Specify the following values as API proxy details:

@@ -6,13 +6,13 @@ Before proceeding, ensure you have [Created an Application](../manage-applicatio
 
 ## Generate keys
 
-Bijira uses OAuth 2.0 bearer token-based authentication for API access. An API access token is a string passed as an HTTP header in API requests to authenticate access.
+API Platform uses OAuth 2.0 bearer token-based authentication for API access. An API access token is a string passed as an HTTP header in API requests to authenticate access.
 
-Once you create an application, you can generate credentials for it. Bijira provides a consumer key and consumer secret when you generate credentials for the first time. The consumer key acts as the unique identifier for the application and is used for authentication.
+Once you create an application, you can generate credentials for it. API Platform provides a consumer key and consumer secret when you generate credentials for the first time. The consumer key acts as the unique identifier for the application and is used for authentication.
 
 To generate an access token for **testing purposes**, follow these steps:
 
-1. Navigate to the [Bijira Developer Portal](https://devportal.bijira.dev) and sign in.
+1. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
 
 2. Click on **Applications** in the Developer Portal sidebar.
 
@@ -32,7 +32,7 @@ To generate an access token for **testing purposes**, follow these steps:
     ![Scope List](../../assets/img/devportal/ScopeSection.png)
 
     !!!info
-        Currently, Bijira does not support configuring allowed scopes at the application level.
+        Currently, API Platform does not support configuring allowed scopes at the application level.
 
 8. Copy the displayed access token.
 

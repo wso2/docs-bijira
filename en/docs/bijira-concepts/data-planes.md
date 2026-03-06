@@ -1,26 +1,26 @@
 # Data Planes
 
-Bijira’s architecture is built around two core components, i.e. the control plane and the data plane.
+API Platform’s architecture is built around two core components, i.e. the control plane and the data plane.
 
 ### Control Plane
 The control plane manages key administrative tasks, including the configuration of organizations, users, and projects. It also orchestrates the entire API Proxy development lifecycle, from creation and deployment to governance enforcement, observability enablement, and publishing to the Developer Portal for application developers to consume APIs.
 
-As a SaaS platform, the Bijira control plane oversees both cloud data planes and private data planes. It supports a wide range of user roles, including CIOs, architects, and developers.
+As a SaaS platform, the API Platform control plane oversees both cloud data planes and private data planes. It supports a wide range of user roles, including CIOs, architects, and developers.
 
 ### Data Plane
 The data plane is where user-deployed API Proxies run, based on configurations defined in the control plane. All traffic related to these API Proxies is confined within the data plane, ensuring that user data remains securely contained.
 
-Bijira supports two types of data planes.
+API Platform supports two types of data planes.
 
 - **Cloud Data Planes (CDP):** Use a multi-tenant infrastructure to deploy API Proxies, offering a shared yet secure runtime environment.
 - **Private Data Planes (PDP):** Offer dedicated infrastructure for a single organization, providing enhanced privacy and control to meet specific compliance or security requirements.
 
-![Bijira high-level view](../assets/img/bijira-concepts/high-level-view.png)
+![API Platform high-level view](../assets/img/bijira-concepts/high-level-view.png)
 
 ## Private Data Planes
 
 ### Infrastructure Compatibility
-Bijira private data planes can be deployed on most major cloud providers such as Azure, AWS, GCP, as well as on-premises environments.
+API Platform private data planes can be deployed on most major cloud providers such as Azure, AWS, GCP, as well as on-premises environments.
 
 Minimum infrastructure requirements include,
 
@@ -33,7 +33,7 @@ Minimum infrastructure requirements include,
 
 ### System components
 
-Setting up a Bijira PDP involves deploying components via Helm on the Kubernetes infrastructure. The installation include,
+Setting up a API Platform PDP involves deploying components via Helm on the Kubernetes infrastructure. The installation include,
 
 - Cilium CNI
 - API Gateways and related components
@@ -67,7 +67,7 @@ All communications between the control plane and the private data plane are secu
 
 ### Observability Architecture
 
-The following diagram illustrates the log and observability architecture of a Bijira Azure PDP deployment.
+The following diagram illustrates the log and observability architecture of a API Platform Azure PDP deployment.
 
 ![Observability architecture](../assets/img/bijira-concepts/observability-architecture.png)
 
@@ -76,7 +76,7 @@ The following diagram illustrates the log and observability architecture of a Bi
 This architecture emphasizes data privacy and regulatory compliance by retaining logs and observability data within the data plane itself. Key design principles include:
 
 - **Data storage at source:** Logs and observability data are stored locally within the data plane, improving security and simplifying access, and ensuring compliance.
-- **Direct browser-to-data-plane interaction:** The Bijira Console in the user’s browser interacts directly with APIs in the data plane, reducing potential data routing complexities and ensuring a more secure, direct flow of information.
+- **Direct browser-to-data-plane interaction:** The API Platform Console in the user’s browser interacts directly with APIs in the data plane, reducing potential data routing complexities and ensuring a more secure, direct flow of information.
 - **Minimized exposure points:** Retrieving data directly from in-plane APIs minimizes the number of data transfer points, effectively decreasing the chances of data exposure or interception.
 - **Regulatory compliance:** By supporting data locality, the architecture aligns with GDPR, CCPA, and other regulatory frameworks.
 - **Real-time insights and improved performance:** Direct communication between the browser and the data plane enables faster data access and near real-time visibility.
@@ -84,13 +84,13 @@ This architecture emphasizes data privacy and regulatory compliance by retaining
 
 ### Security
 
-The Bijira private data plane is built with production-grade security in mind, covering infrastructure, architecture, and zero-trust network security. All inbound traffic passes through a firewall and is authenticated and authorized via the API Gateway.
+The API Platform private data plane is built with production-grade security in mind, covering infrastructure, architecture, and zero-trust network security. All inbound traffic passes through a firewall and is authenticated and authorized via the API Gateway.
 
 End-to-end encryption is enforced using Cilium transparent encryption, ensuring secure and efficient network traffic flow.
 
 ### Private Data Plane Management Models
 
-Bijira supports flexible management models for private data planes, facilitating collaboration between WSO2 and customers across diverse scenarios.
+API Platform supports flexible management models for private data planes, facilitating collaboration between WSO2 and customers across diverse scenarios.
 
 - **WSO2 Fully Managed – WSO2 Subscription:** Infrastructure and PDP are hosted under WSO2’s subscription.
 - **WSO2 Fully Managed – Customer Subscription:** Infrastructure is hosted under the customer’s subscription, but WSO2 manages the PDP.

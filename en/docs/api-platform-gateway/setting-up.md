@@ -1,6 +1,6 @@
 # Setting Up
 
-This guide provides detailed instructions for deploying the Bijira Self-Hosted Gateway in production environments. Choose the infrastructure option that matches your environment.
+This guide provides detailed instructions for deploying the API Platform Self-Hosted Gateway in production environments. Choose the infrastructure option that matches your environment.
 
 !!! tip "Quick Start"
     If you're just getting started, see the [Getting Started](getting-started.md) guide for a quick setup.
@@ -113,7 +113,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     ```
 
     !!! warning "Important"
-        Replace `<your-gateway-token>` with the Gateway Registration Token from the Bijira Console. This token is shown only once, so ensure you copy it before leaving the page.
+        Replace `<your-gateway-token>` with the Gateway Registration Token from the API Platform Console. This token is shown only once, so ensure you copy it before leaving the page.
 
     ### Step 3: Start the Gateway
 
@@ -188,7 +188,7 @@ This guide provides detailed instructions for deploying the Bijira Self-Hosted G
     ```
 
     !!! warning "Important"
-        Replace `your-gateway-token` with the Gateway Registration Token from the Bijira Console. This token is shown only once, so ensure you copy it before leaving the page.
+        Replace `your-gateway-token` with the Gateway Registration Token from the API Platform Console. This token is shown only once, so ensure you copy it before leaving the page.
 
     ### Verifying the Installation
 

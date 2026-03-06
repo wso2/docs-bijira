@@ -1,13 +1,13 @@
 # Expose a Service as a Managed API
 
-Bijira simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
+API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 
-In this tutorial, you will use Bijira to expose a service as an API proxy and publish it to the Bijira Developer Portal for application developers to consume.
+In this tutorial, you will use API Platform to expose a service as an API proxy and publish it to the API Platform Developer Portal for application developers to consume.
 
 ## Prerequisites
 
-- If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+- If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -18,7 +18,7 @@ In this tutorial, you will use Bijira to expose a service as an API proxy and pu
 
 You can create an API proxy by following several methods. In this guide, you will create an API proxy by providing a sample URL.
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more API Proxies in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Click the **Import API Proxy** card.
 4. In the **Create API Proxy from Contract** pane, click **Try with sample URL**.
@@ -56,7 +56,7 @@ Now you are ready to test the API proxy.
 
 ## Step 3: Test the API proxy
 
-You can test the API proxy in the development environment before promoting it to production. Bijira provides the following options to test your API proxy:
+You can test the API proxy in the development environment before promoting it to production. API Platform provides the following options to test your API proxy:
 
 - Console
 - cURL
@@ -67,7 +67,7 @@ In this guide, you will use the OpenAPI Console.
 1. In the left navigation menu, click **Test** and then click **Console**.
 
     !!! tip
-         Since the API proxy is secured when deployed, you will need a key to invoke it. Bijira automatically generates a key when you navigate to the **Console** pane.
+         Since the API proxy is secured when deployed, you will need a key to invoke it. API Platform automatically generates a key when you navigate to the **Console** pane.
 
 2. In the **Console** pane, select **Development** from the environment drop-down list.
 3. Expand the `GET /books` method and click **Try it Out** to test it.
@@ -100,16 +100,16 @@ Now that your API is deployed in both development and production environments an
 2. Click **Publish**.
 3. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
 
-You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the Bijira Developer Portal.
+You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the API Platform Developer Portal.
 
 ## Step 6: Invoke the API
 
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps:
 
-1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Petstore API published to the Bijira Developer Portal.
+1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Petstore API published to the API Platform Developer Portal.
 2. Generate credentials:
     1. In the Developer Portal left navigation menu, click **Production** under **Credentials**.
-    2. Click **Generate Credentials**. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
+    2. Click **Generate Credentials**. API Platform generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
 3. Invoke the API:
     1. In the Developer Portal left navigation menu, click **Try Out**.
     2. In the **Endpoint** list, select **Development** as the environment to try out the API.
@@ -117,4 +117,4 @@ To generate credentials for the published API and invoke it via the Developer Po
     4. Expand the `GET /pet/findByStatus` operation and click **Try it out**.
     5. Select **available** as the status and click **Execute**.
 
-Now you have successfully created, deployed, tested, and published an API proxy using Bijira.
+Now you have successfully created, deployed, tested, and published an API proxy using API Platform.

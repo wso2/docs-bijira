@@ -12,8 +12,8 @@ In this guide, you will:
 
 ## Prerequisites
 
-- If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+- If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -24,7 +24,7 @@ In this guide, you will:
 
 In this guide, you will use a sample URL to import a GraphQL schema definition and create a GraphQL API proxy.
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Import API Contract**.
 4. Select the API Type as **GraphQL**.

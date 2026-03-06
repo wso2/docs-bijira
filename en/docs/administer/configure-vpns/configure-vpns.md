@@ -1,8 +1,8 @@
-# Configure VPNs on the Bijira Cloud Data Plane
+# Configure VPNs on the API Platform Cloud Data Plane
 
-Secure access to private networks from the Bijira cloud data plane is an essential use case for cloud data plane users.
+Secure access to private networks from the API Platform cloud data plane is an essential use case for cloud data plane users.
 
-Bijira allows this secure connection using [Tailscale](https://tailscale.com/). For this, Bijira provides a prebuilt Tailscale image component that can act as a forward proxy, which you can deploy in your Bijira project. This tailscale deployment allows you to forward traffic to your external networks via Tailscale’s peer-to-peer [WireGuard](https://tailscale.com/kb/1035/wireguard) network.
+API Platform allows this secure connection using [Tailscale](https://tailscale.com/). For this, API Platform provides a prebuilt Tailscale image component that can act as a forward proxy, which you can deploy in your API Platform project. This tailscale deployment allows you to forward traffic to your external networks via Tailscale’s peer-to-peer [WireGuard](https://tailscale.com/kb/1035/wireguard) network.
 
 The following diagram illustrates the high-level deployment architecture of the Tailscale pre-installed forward proxy:
 
@@ -10,13 +10,13 @@ The following diagram illustrates the high-level deployment architecture of the 
 
 Let's take a look at the specifics of each part to understand the deployment architecture.
 
-- **Bijira project**
+- **API Platform project**
 
-    In Bijira, a project groups API Proxies and MCP Servers. For more information on what a project in Bijira is, see the documentation on [Project](../../bijira-concepts/project.md).
+    In API Platform, a project groups API Proxies and MCP Servers. For more information on what a project in API Platform is, see the documentation on [Project](../../bijira-concepts/project.md).
 
 - **Tailscale proxy**
 
-    This acts as the Tailscale pre-installed forward proxy, facilitating secure peer-to-peer WireGuard connections from the Bijira cloud data plane to private networks. It includes a [Tailscale Daemon](https://tailscale.com/kb/1278/tailscaled), [SOCKS5 proxy](https://tailscale.com/kb/1112/userspace-networking#socks5-vs-http), and a configurable TCP forwarder.
+    This acts as the Tailscale pre-installed forward proxy, facilitating secure peer-to-peer WireGuard connections from the API Platform cloud data plane to private networks. It includes a [Tailscale Daemon](https://tailscale.com/kb/1278/tailscaled), [SOCKS5 proxy](https://tailscale.com/kb/1112/userspace-networking#socks5-vs-http), and a configurable TCP forwarder.
 
   - **Tailscale daemon**
 
@@ -30,7 +30,7 @@ Let's take a look at the specifics of each part to understand the deployment arc
 
     Forwards inbound TCP (transmission control protocol) traffic from the Tailscale proxy container’s network interface to the SOCKS5 proxy, ensuring it reaches its destination via the secured WireGuard tunnel.
 
-- **API Proxies and Bijira API gateway**
+- **API Proxies and API Platform API gateway**
 
     API proxies within the same project as the Tailscale proxy can send their traffic to the ports exposed on the Tailscale proxy. The Tailscale proxy then forwards this traffic to the correct target node and IP address in your Tailscale network that is defined in the port mapping of the endpoint configuration
 
@@ -50,8 +50,8 @@ This section walks you through the steps to create, configure, deploy, and use t
 
 ### Step 1: Create the Tailscale proxy component
 
-1.  Sign in to the [Bijira Console](https://console.bijira.dev/).
-2.  In the Bijira Console top navigation menu, select the **Organization**, and then the **Project**.
+1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
+2.  In the API Platform Console top navigation menu, select the **Organization**, and then the **Project**.
 3.  On the project home page, click **Admin** menu, and select the **Settings** sub menu.
 4.  Click on the VPN Configuration tab and then click the Create button
 
@@ -153,7 +153,7 @@ Tailscale nodes have a default [node key](https://tailscale.com/kb/1010/node-key
 
 ### Update port mapping configurations
 
-If you want to add a new private endpoint to your network and access it via the same Tailscale proxy within Bijira, you must add a new port mapping entry in the endpoint configuration of your Tailscale proxy deployment.
+If you want to add a new private endpoint to your network and access it via the same Tailscale proxy within API Platform, you must add a new port mapping entry in the endpoint configuration of your Tailscale proxy deployment.
 
 ## Best practices
 
@@ -167,4 +167,4 @@ You can use [Tailscale ACLs](https://tailscale.com/kb/1018/acls) to precisely ma
 Before deploying the Tailscale proxy in production environments, it is recommended to follow the Tailscale [production best practices](https://tailscale.com/kb/1300/production-best-practices) and [security best practices](https://tailscale.com/kb/1196/security-hardening).
 
 !!! note
-    Bijira blocks incoming connections from other nodes in your Tailnet to the Tailscale proxy to prevent access to your project’s namespace in the Bijira cloud data plane.
+    API Platform blocks incoming connections from other nodes in your Tailnet to the Tailscale proxy to prevent access to your project’s namespace in the API Platform cloud data plane.

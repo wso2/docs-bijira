@@ -1,14 +1,14 @@
 # Import a Third-Party API Contract
 
-Bijira provides built-in support for multiple well-known third-party APIs through the **Bijira Marketplace**. However, if you need to create an API proxy for a third-party API that is not available in the Bijira Marketplace, you can do so by importing its API contract.  
+API Platform provides built-in support for multiple well-known third-party APIs through the **API Platform Marketplace**. However, if you need to create an API proxy for a third-party API that is not available in the API Platform Marketplace, you can do so by importing its API contract.  
 
 ## Steps to Create an API Proxy by Importing an API Contract  
 
 Follow these steps to create an API proxy for a third-party API by importing its API contract:  
 
-### 1. Access the Bijira Console
+### 1. Access the API Platform Console
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/) and select your project.  
+1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.  
 
 ### 2. Import the API Contract
 
@@ -44,4 +44,4 @@ Follow these steps to create an API proxy for a third-party API by importing its
 - **Apply additional policies** if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/attach-and-manage-policies.md#attach-a-policy).  
 - **Publish the API for consumers.** See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).  
 
-By following these steps, you can seamlessly integrate third-party APIs into your Bijira environment and manage them efficiently.  
+By following these steps, you can seamlessly integrate third-party APIs into your API Platform environment and manage them efficiently.  

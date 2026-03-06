@@ -6,7 +6,7 @@ You can apply a policy in API or resource level to alter the  `Request`, `Respon
 
 ## Inbuilt Mediation Policies
 
-Bijira supports a set of inbuilt mediation policies that can handle common API transformation and mediation tasks. These policies run within a single mediation service, making it straightforward to implement and manage complex mediation logic. The following inbuilt policies are available in Bijira at API level and resource level:
+API Platform supports a set of inbuilt mediation policies that can handle common API transformation and mediation tasks. These policies run within a single mediation service, making it straightforward to implement and manage complex mediation logic. The following inbuilt policies are available in API Platform at API level and resource level:
 
 ### API-level Policies
 
@@ -30,7 +30,7 @@ Bijira supports a set of inbuilt mediation policies that can handle common API t
 
 These inbuilt mediation policies provide flexibility to manage API requests and responses, allowing for custom transformations and logic without requiring custom code.
 
-For details on attaching and managing one or more policies to an API proxy component implementation via the Bijira Console, see [Attach and Manage Policies](../policy/attach-and-manage-policies.md).
+For details on attaching and managing one or more policies to an API proxy component implementation via the API Platform Console, see [Attach and Manage Policies](../policy/attach-and-manage-policies.md).
 
 <!-- TODO: Check whether we need advanced settings on mediation policies -->
 <!-- For details on applying advanced settings on mediation policies, see [Apply Advanced Settings on Mediation Policies](../policy/apply-advanced-settings-on-mediation-policies.md). -->

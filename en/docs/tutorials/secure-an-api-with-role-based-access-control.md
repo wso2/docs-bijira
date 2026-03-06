@@ -2,7 +2,7 @@
 
 Role-based access control (RBAC) is a flexible and scalable approach to manage access to API resources. In this approach, each user or group is assigned a specific role that determines the permissions granted to perform operations on an API resource.
 
-This tutorial explains how to implement RBAC using Bijira. It includes a real-world scenario with instructions to create and publish an API proxy component in Bijira and apply role-based access control.
+This tutorial explains how to implement RBAC using API Platform. It includes a real-world scenario with instructions to create and publish an API proxy component in API Platform and apply role-based access control.
 
 ## Scenario
 
@@ -18,14 +18,14 @@ There are two types of users in the organization:
 - **Human resource manager (HR manager)**: Can perform all operations (list users, list a user, create users, and delete a user).
 - **Human resource officer (HR officer)**: Can only list existing users and list a specific user.
 
-## Implement role-based access control with Bijira
+## Implement role-based access control with API Platform
 
 Let’s take a look at the steps to implement the scenario described above using Choreo and Asgardeo.
 
 ### Prerequisites
 
-- If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your preferred method.
+- If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -34,7 +34,7 @@ Let’s take a look at the steps to implement the scenario described above using
 
 ### Step 1: Create an API proxy component and deploy it
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. To create an API proxy component, follow the instructions in [Start with Endpoint](../create-api-proxy/my-apis/http/start-with-endpoint.md).
 3. In the left navigation menu, click **Policy**.
 4. Click the **+** in the **API Proxy Contract** and replace the resources with following.

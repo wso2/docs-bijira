@@ -1,14 +1,14 @@
 # Creating an API Proxy from Marketplace
 
-Bijira provides built-in support for multiple well-known third-party APIs through the Bijira Marketplace. The marketplace contains API contracts for these third-party services, allowing you to create and publish API proxies effortlessly.
+API Platform provides built-in support for multiple well-known third-party APIs through the API Platform Marketplace. The marketplace contains API contracts for these third-party services, allowing you to create and publish API proxies effortlessly.
 
 ## Steps to Create an API Proxy from the Marketplace
 
-Follow these steps to create an API proxy for a third-party API available in the Bijira Marketplace:
+Follow these steps to create an API proxy for a third-party API available in the API Platform Marketplace:
 
-### 1. Access the Bijira Console
+### 1. Access the API Platform Console
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/) and select your project.
+1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.
 
 ### 2. Select a Third-Party API
 
@@ -57,4 +57,4 @@ To integrate the `Currency API`, follow these steps:
 - Apply additional policies if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/attach-and-manage-policies.md#attach-a-policy).
 - Publish the API for consumers.  See [Lifecycle Management](../../develop-api-proxy/lifecycle-management.md).
 
-By following these steps, you can seamlessly integrate third-party APIs into your Bijira environment and manage them efficiently.
+By following these steps, you can seamlessly integrate third-party APIs into your API Platform environment and manage them efficiently.

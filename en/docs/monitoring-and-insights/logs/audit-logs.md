@@ -2,9 +2,9 @@
 
 Audit logs, also called audit trails, enhance security, ensure compliance, provide operational insights, and help manage risks. 
 
-In Bijira, an audit log records organization-level user-specific operations performed via the Bijira Console. It also captures the timestamp and the outcome of the action. 
+In API Platform, an audit log records organization-level user-specific operations performed via the API Platform Console. It also captures the timestamp and the outcome of the action. 
 
-As of now, Bijira captures the following user-specific operations as audit logs:
+As of now, API Platform captures the following user-specific operations as audit logs:
 
 - Project creation, update, and deletion.
 - API Proxy creation, update, and deletion.
@@ -19,12 +19,12 @@ As of now, Bijira captures the following user-specific operations as audit logs:
 - On-premises key management.
 - Project-level configuration management.
 
-In Bijira, organization administrators are allowed to view audit logs by default. If other members need to access organization-specific audit logs, the administrator can create a role with the relevant permission and assign it to members. For step-by-step instructions on how to create and assign a role with relevant permission, see [Manage audit log access](#manage-audit-log-access).
+In API Platform, organization administrators are allowed to view audit logs by default. If other members need to access organization-specific audit logs, the administrator can create a role with the relevant permission and assign it to members. For step-by-step instructions on how to create and assign a role with relevant permission, see [Manage audit log access](#manage-audit-log-access).
 
 To view audit logs, follow these steps:
 
-1. Sign in to [Bijira](https://console.bijira.dev/).
-2. In the Bijira Console, go to the top navigation menu and click **Organization**.
+1. Sign in to [API Platform](https://console.bijira.dev/).
+2. In the API Platform Console, go to the top navigation menu and click **Organization**.
    
     !!! tip
          As of now, you can only view organization-level audit logs.
@@ -37,7 +37,7 @@ To view audit logs, follow these steps:
 
 ## Audit log retention
 
-Bijira retains audit logs for one year and archives them for an additional year. Therefore, the total retention period for audit logs is two years.
+API Platform retains audit logs for one year and archives them for an additional year. Therefore, the total retention period for audit logs is two years.
 
 ## Manage audit log access
 
@@ -48,7 +48,7 @@ Follow the steps given below to create a role with audit log access permission a
 
 ### Step 1: Create a role with audit log access permission
 
-1. In the Bijira Console, go to the top navigation menu and click **Organization**.
+1. In the API Platform Console, go to the top navigation menu and click **Organization**.
 2. In the left navigation menu, click **Admin** and then click **Settings**.
 3. On the **Access Control** tab, click **Roles** and then click **+ Create Role**.
 4. Enter a name and description for the role.

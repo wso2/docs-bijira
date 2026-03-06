@@ -1,8 +1,8 @@
-# Configure Approvals for Bijira Workflows
+# Configure Approvals for API Platform Workflows
 
-Bijira allows you to configure approval processes for specific workflows within the platform. An approval process for a workflow ensures that critical or sensitive changes are properly managed and controlled.
+API Platform allows you to configure approval processes for specific workflows within the platform. An approval process for a workflow ensures that critical or sensitive changes are properly managed and controlled.
 
-Bijira currently allows you to configure approvals for environment promotion and URL customization workflows.
+API Platform currently allows you to configure approvals for environment promotion and URL customization workflows.
 
 Configuring approvals for environment promotion allows authorized users to control components being promoted to a critical/production environment.
 
@@ -36,11 +36,11 @@ Click the respective tab for details on permissions depending on the workflow fo
 To set up an approval process for a workflow, follow these steps:
 
 !!! note
-     - You must have administrator privileges in Bijira to configure workflow approvals.
+     - You must have administrator privileges in API Platform to configure workflow approvals.
      - Administrators can designate specific roles and assignees to receive notifications associated with each workflow.
 
-1. Sign in to the [Bijira Console](https://console.Bijira.dev/).
-2. In the Bijira Console header, go to the **Organization** list and select your organization.
+1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click the **Admin** Drop down and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Workflows** tab.
 5. Turn on the workflow you want to enable by clicking the relevant status toggle.
@@ -51,7 +51,7 @@ To set up an approval process for a workflow, follow these steps:
     - In the **Roles** field, select one or more roles depending on your preference. All users assigned to the selected roles will be eligible to receive notifications. Scope of notification delivery depends on the role assignment level when [configuring permissions](#permissions-to-review-and-respond-to-approval-requests):
          1. Project level roles-to-group assignment: Users in these groups will receive notifications only for approval requests raised within the specific project where the role is assigned.
          2. Organization level roles-to-group assignment: Users in these groups will receive notifications for approval requests raised across all projects in the organization.
-    - In the **Assignees** field, select specific users to be Assignees. Assignees can be any Bijira user, even if they are not assigned to a selected role.
+    - In the **Assignees** field, select specific users to be Assignees. Assignees can be any API Platform user, even if they are not assigned to a selected role.
 
     !!! info "Important"
          Only roles having [relevant approval permission](#permissions-to-review-and-respond-to-approval-requests) can be selected to receive notifications, so that respective users can always review and respond to requests. However, users in Assignees field are there for notification purpose only, they may not have required privileges to review and approve requests.

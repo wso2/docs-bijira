@@ -1,6 +1,6 @@
 # Documents
 
-When an API consumer signs in to the Bijira Developer Portal to browse APIs, it is not sufficient to just have an API thumbnail along with the name and version of the API. An API consumer would expect to see more details about the API, such as the following:
+When an API consumer signs in to the API Platform Developer Portal to browse APIs, it is not sufficient to just have an API thumbnail along with the name and version of the API. An API consumer would expect to see more details about the API, such as the following:
 
 - A brief description of the API.
 - How to invoke the API.
@@ -13,7 +13,7 @@ To provide such information that improves the overall visibility of the API, an 
 
 To add documentation for an API, follow the steps given below.
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 
 2. Select the project and the API that you want to add documentation.
 

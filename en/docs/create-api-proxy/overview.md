@@ -1,6 +1,6 @@
 # Overview
 
-Bijira API Manager allows you to create API proxies that can be used to secure, protect, and manage access to your APIs. You can create an API proxy by defining a set of policies and behaviors that control how the API proxy interacts with the backend service.
+API Platform API Manager allows you to create API proxies that can be used to secure, protect, and manage access to your APIs. You can create an API proxy by defining a set of policies and behaviors that control how the API proxy interacts with the backend service.
 
 An API proxy can be used to expose an existing API which is hosted in same organization or a third party API.
 

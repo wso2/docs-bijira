@@ -1,6 +1,6 @@
 # Deployment Tracks
 
-Deployment Tracks in Bijira are structured pathways for simplified software component deployment. They act like advanced CI/CD pipelines, ensuring your components reach their destinations seamlessly, whether from source code or prebuilt images. They establish an organized and structured approach that minimizes the chances of errors and challenges that are typically associated with deployment workflows.
+Deployment Tracks in API Platform are structured pathways for simplified software component deployment. They act like advanced CI/CD pipelines, ensuring your components reach their destinations seamlessly, whether from source code or prebuilt images. They establish an organized and structured approach that minimizes the chances of errors and challenges that are typically associated with deployment workflows.
 
 ## The significance of Deployment Tracks
 
@@ -12,11 +12,11 @@ Deployment Tracks offer practical solutions to enhance the API consumer experien
 
 ## Streamlined deployments
 
-For streamlined deployments, Bijira dissects two integral approaches that leverage Deployment Tracks: the comprehensive CI/CD integration and the focused CD-Only strategy.
+For streamlined deployments, API Platform dissects two integral approaches that leverage Deployment Tracks: the comprehensive CI/CD integration and the focused CD-Only strategy.
 
 ### CI/CD with Deployment Tracks
 
-A deployment track is linked to a particular branch within a GitHub repository. This connection is useful for handling deployments to various environments. On Bijira's Deploy page, you can easily visualize the deployments to specific environments associated with your selected deployment track. Moreover, the deployment track has a functionality that initiates automatic deployments for the linked branch. When activated, merging a pull request (PR) triggers a deployment to the development environment.
+A deployment track is linked to a particular branch within a GitHub repository. This connection is useful for handling deployments to various environments. On API Platform's Deploy page, you can easily visualize the deployments to specific environments associated with your selected deployment track. Moreover, the deployment track has a functionality that initiates automatic deployments for the linked branch. When activated, merging a pull request (PR) triggers a deployment to the development environment.
 
 ![Deployment tracks - source repo](../assets/img/bijira-concepts/deployment-tracks-source-repo.png){.cInlineImage-half}
 
@@ -28,11 +28,11 @@ If you're inclined to use your own Continuous Integration (CI) systems and want 
 
 ## Efficient API versioning
 
-**This section applies to only service components**. When working with service components in Bijira, it is important to have an effective API versioning mechanism. Bijira follows a versioning mechanism based on Semantic Versioning (SemVer) but only includes the major version and minor version with the prefix `v`.
+**This section applies to only service components**. When working with service components in API Platform, it is important to have an effective API versioning mechanism. API Platform follows a versioning mechanism based on Semantic Versioning (SemVer) but only includes the major version and minor version with the prefix `v`.
 
 For example, `v1.2`.
 
-You can follow the approach given below when you version APIs in Bijira:
+You can follow the approach given below when you version APIs in API Platform:
 
 - Increment the major version when you make incompatible API changes.
 - Increment the minor version when you add functionality in a backward-compatible manner.

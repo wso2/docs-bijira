@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This guide covers common issues you may encounter when deploying and operating the Bijira Self-Hosted Gateway, along with their solutions.
+This guide covers common issues you may encounter when deploying and operating the API Platform Self-Hosted Gateway, along with their solutions.
 
 ## Connection Issues
 
@@ -8,7 +8,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 **Symptoms:**
 
-- Gateway status shows as "Disconnected" in Bijira Console
+- Gateway status shows as "Disconnected" in API Platform Console
 - Logs show connection timeout or refused errors
 
 **Solutions:**
@@ -16,7 +16,7 @@ This guide covers common issues you may encounter when deploying and operating t
 1. **Verify network connectivity:**
 
    ```bash
-   # Test connectivity to Bijira endpoints
+   # Test connectivity to API Platform endpoints
    curl -v https://gateway.bijira.dev/health
    curl -v https://config.bijira.dev/health
    ```
@@ -90,7 +90,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 1. **Verify token is correct:**
 
-   Copy the token again from Bijira Console without any extra spaces or characters.
+   Copy the token again from API Platform Console without any extra spaces or characters.
 
 2. **Check token hasn't expired:**
 
@@ -122,7 +122,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 **Solutions:**
 
-1. Generate a new token in Bijira Console.
+1. Generate a new token in API Platform Console.
 2. Update the gateway configuration.
 3. Restart the gateway.
 
@@ -275,7 +275,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 2. **Force policy resync:**
 
-   In Bijira Console, go to **Settings** > **Self-Hosted Gateways** > **Sync Policies**.
+   In API Platform Console, go to **Settings** > **Self-Hosted Gateways** > **Sync Policies**.
 
 3. **Review gateway logs for sync errors:**
 
@@ -299,7 +299,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 2. Check for overlapping scopes in policy definitions.
 
-3. Use the policy simulation tool in Bijira Console.
+3. Use the policy simulation tool in API Platform Console.
 
 ## Performance Issues
 
@@ -392,7 +392,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 1. **Verify API deployment:**
 
-   Check if the API is deployed to this gateway in Bijira Console.
+   Check if the API is deployed to this gateway in API Platform Console.
 
 2. **Check configuration sync:**
 
@@ -484,7 +484,7 @@ When opening a support request, collect:
 If you cannot resolve an issue using this guide:
 
 1. **Check the documentation:** Review the relevant deployment and configuration guides.
-2. **Search known issues:** Check the Bijira status page and release notes.
+2. **Search known issues:** Check the API Platform status page and release notes.
 3. **Contact support:** Open a support ticket with diagnostic information.
 
 ## What's Next?
