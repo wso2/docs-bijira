@@ -56,7 +56,7 @@ Follow the steps below to consume the API Platform API and use an external key m
 4. Click **Create**.
 5. Click on the newly created application.
 6. At the top of the application page, under **OAuth2** click **+ Add Client ID**. 
-7. Enter the **Client ID** you copied in [step 2](#step-2-create-an-api-and-an-application-in-asgardeo).
+7. Enter the **Client ID** you copied in [step 1](#step-1-create-an-api-and-an-application-in-asgardeo).
 8. Click **+Add**.
 
     !!! note 

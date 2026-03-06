@@ -81,7 +81,7 @@ To set up role-based access control for enterprise login within API Platform, fo
 
 Before you proceed with the configuration, make sure you complete the following:
 
-1. Configure enterprise login for your organization. For instructions, see [Configure enterprise login for your API Platform organization](#configure-enterprise-login-for-your-bijira-organization).
+1. Configure enterprise login for your organization. For instructions, see [Configure enterprise login for your API Platform organization](#configure-enterprise-login-for-your-api-platform-organization).
 2. Ensure your enterprise identity provider includes the group/role attributes in tokens it sends to Asgardeo via the respective protocol.
 3. Be sure you have administrator privileges in API Platform.
 

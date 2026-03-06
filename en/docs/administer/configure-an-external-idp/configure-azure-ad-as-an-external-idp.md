@@ -53,7 +53,7 @@ Once the Azure AD is configured as an external key manager in API Platform, it i
 
 1. In the left navigation menu of the API Platform Console, click **Admin** and then click **Settings**.
 2. Click the **Developer Portal** tab, then click the **Key Managers** tab. This page will list all the key managers available in API Platform.
-3. Select the key manager you configured at [Step 1](#step-1-add-azure-active-directory-as-an-external-key-manager-in-bijira).
+3. Select the key manager you configured at [Step 1](#step-1-add-azure-active-directory-as-an-external-key-manager-in-api-platform).
 4. Click **Save**.
 
 Now you have configured Azure AD as an external key manager in API Platform Developer Portal as well.
