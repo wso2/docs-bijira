@@ -1,16 +1,16 @@
 # Adding and Managing Policies
 
-This guide explains how to add and manage policies for your Self-Hosted Gateway using Bijira's unified control plane.
+This guide explains how to add and manage policies for your Self-Hosted Gateway using API Platform's unified control plane.
 
 ## Overview
 
-Policies allow you to enforce security, rate limiting, transformation, and other governance requirements on your APIs. With the Self-Hosted Gateway, you manage policies centrally through Bijira's Policy Hub, and they are automatically synchronized to your gateway.
+Policies allow you to enforce security, rate limiting, transformation, and other governance requirements on your APIs. With the Self-Hosted Gateway, you manage policies centrally through API Platform's Policy Hub, and they are automatically synchronized to your gateway.
 
 ## Adding Policies to an API
 
 To add policies to an API deployed on your Self-Hosted Gateway:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select your organization and project.
 3. Navigate to the API proxy you want to configure.
 4. Click **Develop** in the left navigation, then select **Policies**.

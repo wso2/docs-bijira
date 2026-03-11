@@ -4,7 +4,7 @@ AI Gateways are the runtime components that process and route requests between y
 
 ## Prerequisites
 
-- Access to Bijira Console with **Admin** role
+- Access to API Platform Console with **Admin** role
 
 ---
 

@@ -1,13 +1,13 @@
-# Test APIs with Bijira API Chat
+# Test APIs with API Platform API Chat
 
-Testing APIs is an essential step in the API development process. Bijira simplifies the testing task by allowing you to engage with your APIs using natural language through Bijira API Chat. It eliminates manual test scenario creation and JSON payload accuracy concerns. It enables easy API communication using human language and requires no coding for handling sequences with multiple resource calls. This makes your API testing efficient and user-friendly.
+Testing APIs is an essential step in the API development process. API Platform simplifies the testing task by allowing you to engage with your APIs using natural language through API Platform API Chat. It eliminates manual test scenario creation and JSON payload accuracy concerns. It enables easy API communication using human language and requires no coding for handling sequences with multiple resource calls. This makes your API testing efficient and user-friendly.
 
 !!! info
     This feature is available for REST API Proxy components and Service components with REST endpoints.
 
 Follow the steps below to test an API with API Chat:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. Select the project and API which you want to test.
 3. On the left navigation, click **Test** and then click **API Chat**. This opens the **API Chat** pane.
 4. You can enter your query in natural language and execute it. For example, if you have a resource like `POST /books` and `GET /books`, you can input the following query and execute it to obtain results.

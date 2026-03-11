@@ -1,12 +1,12 @@
 # Configure a Custom Domain for Your Organization
 
-A custom domain is essential for effective branding, discoverability, and credibility of a website. Bijira allows you to easily configure custom domains for your organization, enabling developers to utilize it to configure custom URLs for their API proxies.
+A custom domain is essential for effective branding, discoverability, and credibility of a website. API Platform allows you to easily configure custom domains for your organization, enabling developers to utilize it to configure custom URLs for their API proxies.
 
-This section provides an overview of Bijira's custom domain configuration model and guides you through configuring a custom domain for your organization. It also walks you through utilizing a custom domain to configure a custom URL for a component.
+This section provides an overview of API Platform's custom domain configuration model and guides you through configuring a custom domain for your organization. It also walks you through utilizing a custom domain to configure a custom URL for a component.
 
-## Bijira custom domain configuration model
+## API Platform custom domain configuration model
 
-Bijira allows organization administrators to add custom domains for their organizations. When an administrator adds custom domains to an organization, developers can utilize the custom domains for their respective components.
+API Platform allows organization administrators to add custom domains for their organizations. When an administrator adds custom domains to an organization, developers can utilize the custom domains for their respective components.
 
 ## Configure a custom domain for an organization
 
@@ -17,8 +17,8 @@ To add a custom domain for your organization, follow the steps given below:
 !!! info "Note"
      To add a custom domain, you must have organization administrator privileges.
 
-1.  Sign in to the [Bijira Console](https://console.bijira.dev/).
-2.  In the Bijira Console header, click the **Organization** list.
+1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
+2.  In the API Platform Console header, click the **Organization** list.
 3.  In the left navigation menu, under **Admin**, click **Settings**. This opens the organization-level settings page.
 4.  Click the **URL Settings** tab and then click the **Active Domains** tab.
 5.  Click **+ Add Domains**.
@@ -31,7 +31,7 @@ To add a custom domain for your organization, follow the steps given below:
         !!! tip
             In this context:
 
-                - The **API** entity type represents Bijira API Proxies exposed via an endpoint.
+                - The **API** entity type represents API Platform API Proxies exposed via an endpoint.
 
 7.  Take a look at the generated CNAME target value displayed and create a DNS record associating the domain name to the CNAME target value with your DNS provider.
 
@@ -43,7 +43,7 @@ To add a custom domain for your organization, follow the steps given below:
         If the CNAME mapping is correct, the verification completes successfully. It can take some time for the configured CNAME mapping to be globally available.
 
 9.  On successful verification of the custom domain, click **Next**.
-10. Select a TLS certificate provider depending on your preference. You can either import the TLS certificates you created for the custom domain or click **Let's Encrypt** to allow Bijira to generate and manage the certificates for you.
+10. Select a TLS certificate provider depending on your preference. You can either import the TLS certificates you created for the custom domain or click **Let's Encrypt** to allow API Platform to generate and manage the certificates for you.
 
 !!! note "If you want to import your own certificate, it should adhere to specific guidelines"
           - TLS certificate guidelines:
@@ -91,7 +91,7 @@ To add a custom domain for your organization, follow the steps given below:
                     openssl verify -CAfile <root_or_bundle_cert>.pem certificate_chain.pem
                     ```
                     Replace `<root_or_bundle_cert>.pem` with the path to your root certificate or a bundle containing both the root and intermediate certificates.
-                    5. Once the certificate chain is verified, upload it via the Bijira Console:
+                    5. Once the certificate chain is verified, upload it via the API Platform Console:
                         ![Upload certificate chain](../../assets/img/administer/settings/upload-certificate-chain.png)
                         - If the constructed chain includes the leaf certificate, follow these steps:
                             - Upload the constructed certificate chain in the **TLS Certificate** field.
@@ -127,7 +127,7 @@ To add a custom URL for your component, follow the steps given below:
 !!! info "Note"
     Before you add a custom domain for a specific environment, ensure that the component is deployed to that environment.
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the **Project Overview** pane, click on the API Proxy for which you want to customize the URL.
 3. In the left navigation menu, under **Admin** click **Settings**. This opens the component-level settings page.
 4. Click the **URL Settings** tab. This displays the active deployments of the component across different environments and indicates whether a custom URL is configured. If an active custom domain is available to configure a custom URL for a component in a specific environment, the **Edit URL Mapping** icon in the corresponding **Action** column becomes enabled.

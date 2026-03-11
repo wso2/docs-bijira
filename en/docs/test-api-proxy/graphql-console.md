@@ -1,10 +1,10 @@
 # Test GraphQL APIs via the GraphQL Console
 
-Bijira offers an integrated GraphQL Console to test GraphQL API proxies that you create and deploy. Since Bijira secures APIs with OAuth 2.0 authentication, the GraphQL Console generates test keys to help you invoke your GraphQL operations.
+API Platform offers an integrated GraphQL Console to test GraphQL API proxies that you create and deploy. Since API Platform secures APIs with OAuth 2.0 authentication, the GraphQL Console generates test keys to help you invoke your GraphQL operations.
 
 Follow these steps to test a GraphQL API proxy using the GraphQL Console:
 
-1. Go to the [Bijira Console](https://console.bijira.dev/) and log in.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and log in.
 2. Select the project and GraphQL API proxy that you want to test.
 3. Click **Test** in the left navigation menu, then select **Console**. This will open the **GraphQL Console** pane.
 

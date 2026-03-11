@@ -6,8 +6,8 @@ To define the governance compliance standards for API proxies, you can either cr
 
 ## Create a Ruleset
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the Bijira Console header, go to the **Organization** list and select your organization.
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Governance**. This opens the Governance page.
 4. From the Rulesets / Documents section, select Rulesets and click **Add Rulesets** button.
 5. Provide the following details

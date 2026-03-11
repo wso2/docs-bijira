@@ -15,8 +15,8 @@
 # under the License.
 
 # Project information
-site_name: "Bijira Documentation"
-site_description: Bijira Documentation
+site_name: "API Platform Documentation"
+site_description: API Platform Documentation
 site_author: WSO2
 site_url: https://wso2.com/bijira/docs
 
@@ -71,9 +71,9 @@ strict: false
 nav:
   - Home: index.md
   - Introduction:
-      - What is Bijira?: introduction/what-is-bijira.md
+      - What is API Platform?: introduction/what-is-bijira.md
       - Quick Start Guide: introduction/quick-start-guide.md
-      - Bijira Concepts:
+      - API Platform Concepts:
         # - Resource Hierarchy: resource-hierarchy.md
         - Organization: bijira-concepts/organization.md
         - Project: bijira-concepts/project.md
@@ -128,11 +128,11 @@ nav:
   - Develop API Proxy:
       - Authentication and Authorization:
           - Secure API Access with Asgardeo: develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
-          - Secure API Access with Bijira STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
+          - Secure API Access with API Platform STS: develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
           - Secure API Access with Azure AD: develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
           - Secure API Access with an External Key Manager: develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md
-          - Secure Communication Between the Bijira Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
-          - Secure Communication Between the Bijira Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
+          - Secure Communication Between the API Platform Gateway and Your Backend with OAuth2: develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
+          - Secure Communication Between the API Platform Gateway and Your Backend with Mutual TLS: develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
       - Policy:
           - Overview: develop-api-proxy/policy/overview.md
           - Policies: develop-api-proxy/policy/policies.md
@@ -189,7 +189,7 @@ nav:
                   - Semantic Cache: ai-gateway/ai-workspace/policies/other-policies/semantic-cache.md
   - API Gateway:
       # - Overview: api-platform-gateway/overview.md
-      # - Bijira Cloud Gateway: api-platform-gateway/cloud-gateway.md
+      # - API Platform Cloud Gateway: api-platform-gateway/cloud-gateway.md
       - Self-Hosted Gateway:
           - Getting Started: api-platform-gateway/getting-started.md
           - Setting Up: api-platform-gateway/setting-up.md
@@ -204,7 +204,7 @@ nav:
         - Overview: monitoring-and-insights/logs/overview.md
         - Runtime Logs: monitoring-and-insights/logs/runtime-logs.md
         - Audit Logs: monitoring-and-insights/logs/audit-logs.md
-      - Integrate Bijira with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
+      - Integrate API Platform with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - Administer:
       - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
       - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
@@ -215,7 +215,7 @@ nav:
         - Configure Azure as an External Key Manager: administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md
         - Configure Custom External Key Manager: administer/configure-an-external-idp/configure-custom-external-idp.md
       - Configure Enterprise Login: administer/configure-enterprise-login/configure-enterprise-login.md
-      - Configure VPNs on Bijira Cloud Data Plane: administer/configure-vpns/configure-vpns.md
+      - Configure VPNs on API Platform Cloud Data Plane: administer/configure-vpns/configure-vpns.md
   - Workflows:
       - Configure Workflow Approvals: workflows/configure-workflow-approvals.md
       - Submit Workflow Approval Requests: workflows/submit-workflow-requests.md
@@ -223,7 +223,7 @@ nav:
   - Tutorials:
       - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
       - Secure an API with RBAC: tutorials/secure-an-api-with-role-based-access-control.md
-  - Bijira Samples:
+  - API Platform Samples:
       - Samples Overview: samples/samples-overview.md
   - Developer Portal:
       - Theming Developer Portal:
@@ -329,7 +329,7 @@ extra:
     - title: Workflows
       options:
         - verticle-line-only
-    - title: Bijira Samples
+    - title: API Platform Samples
       options:
         - verticle-line-only
     - title: Developer Portal
@@ -343,7 +343,7 @@ extra:
     Introduction:
       icon: octicons/info-16
       level: 1
-    Bijira Samples:
+    API Platform Samples:
       icon: octicons/file-code-16
       level: 1
     Tutorials:

@@ -1,6 +1,6 @@
 ## Limitations for WebSocket API Proxies
 
-Explore key limitations in Bijira WebSocket API proxies, covering areas like maximum number of connections, maximum connection duration, and more. You can gain insights into the limitations to enhance your understanding and optimize your use of WebSocket API proxies effectively.
+Explore key limitations in API Platform WebSocket API proxies, covering areas like maximum number of connections, maximum connection duration, and more. You can gain insights into the limitations to enhance your understanding and optimize your use of WebSocket API proxies effectively.
 
 WebSocket API proxies have the following limitations.
 

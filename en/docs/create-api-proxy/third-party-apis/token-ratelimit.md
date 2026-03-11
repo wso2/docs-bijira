@@ -1,7 +1,7 @@
 # Token-based rate limiting
 
 AI services often incur costs on a per-token basis, making usage control critical.
-Bijira’s AI Gateway introduces token-based rate limiting that can be applied at the API level.
+API Platform’s AI Gateway introduces token-based rate limiting that can be applied at the API level.
 
 ## Configure Token Based Ratelimit Policy
 

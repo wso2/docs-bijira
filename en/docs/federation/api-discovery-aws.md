@@ -1,6 +1,6 @@
 # Discover APIs from AWS API Gateway
 
-Bijira allows you to discover APIs from AWS API Gateway and bring them under centralized governance.
+API Platform allows you to discover APIs from AWS API Gateway and bring them under centralized governance.
 
 ---
 
@@ -10,7 +10,7 @@ Before you begin, ensure you have:
 
 - An active AWS account with access to AWS API Gateway
 - Appropriate permissions to create IAM users and manage API Gateway resources
-- Admin access to your Bijira organization. (Only required for Step 1 and 2)
+- Admin access to your API Platform organization. (Only required for Step 1 and 2)
 
 ---
 
@@ -26,11 +26,11 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 2: Add an External Gateway in Bijira
+## Step 2: Add an External Gateway in API Platform
 
-Now that you have your AWS credentials ready, configure the external gateway connection in Bijira.
+Now that you have your AWS credentials ready, configure the external gateway connection in API Platform.
 
-1. Navigate to **Organization Level** in Bijira.  
+1. Navigate to **Organization Level** in API Platform.  
 2. Click **Add External Gateway**.
 
       ![Add External Gateway](../assets/img/gateway-federation/add-external-gateway.png)
@@ -45,15 +45,15 @@ Now that you have your AWS credentials ready, configure the external gateway con
    
    ![Add External Gateway Details](../assets/img/gateway-federation/add-external-gateway-form.png){ width="800" }
 
-The external gateway is now connected to Bijira and ready for API discovery.
+The external gateway is now connected to API Platform and ready for API discovery.
 
 ---
 
 ## Step 3: Discover APIs from the Gateway
 
-Once the external gateway is configured, you can discover and federate APIs into Bijira.
+Once the external gateway is configured, you can discover and federate APIs into API Platform.
 
-1. Navigate to a **Project** in Bijira.  
+1. Navigate to a **Project** in API Platform.  
 2. Click **Create** in the project overview.
 3. Click on **Discover APIs**.
 
@@ -73,7 +73,7 @@ Once the external gateway is configured, you can discover and federate APIs into
 !!! Note
         Only [REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html) are supported for discovery from AWS API Gateway.
 
-6. For each API, click **Create** next to the API name. This federates the API into the Bijira control plane.
+6. For each API, click **Create** next to the API name. This federates the API into the API Platform control plane.
    - Repeat for all desired APIs.
    - Navigate to the project **Overview** page to view all federated APIs.
 7. You can view the federated API overview by navigating to the API overview page

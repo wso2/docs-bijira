@@ -1,16 +1,16 @@
 # Analytics
 
-This guide explains how to monitor and analyze API traffic for your Self-Hosted Gateway using Bijira's analytics capabilities.
+This guide explains how to monitor and analyze API traffic for your Self-Hosted Gateway using API Platform's analytics capabilities.
 
 ## Overview
 
-Bijira provides comprehensive analytics for your Self-Hosted Gateway, giving you visibility into API usage, performance, and errors. Analytics data is collected from your gateway and displayed in the Bijira Console.
+API Platform provides comprehensive analytics for your Self-Hosted Gateway, giving you visibility into API usage, performance, and errors. Analytics data is collected from your gateway and displayed in the API Platform Console.
 
 ## Viewing Analytics
 
 To view analytics for your Self-Hosted Gateway:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select your organization and project.
 3. In the left navigation, go to **Insights** and select **API Insights**.
 4. Select the environment associated with your Self-Hosted Gateway.
@@ -108,7 +108,7 @@ MOESIF_KEY=your-moesif-application-id
 
 4. Restart the gateway to apply the configuration.
 
-For detailed instructions, see [Integrate Bijira with Moesif](../monitoring-and-insights/integrate-bijira-with-moesif.md).
+For detailed instructions, see [Integrate API Platform with Moesif](../monitoring-and-insights/integrate-bijira-with-moesif.md).
 
 ### Moesif Features
 
@@ -195,7 +195,7 @@ scrape_configs:
 
 ### Visualizing with Grafana
 
-Import the Bijira Gateway dashboard in Grafana:
+Import the API Platform Gateway dashboard in Grafana:
 
 1. Add Prometheus as a data source.
 2. Import dashboard ID: `12345` (example).

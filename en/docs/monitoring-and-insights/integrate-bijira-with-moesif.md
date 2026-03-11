@@ -1,11 +1,11 @@
-# Integrate Bijira with Moesif
+# Integrate API Platform with Moesif
 
-Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate Bijira with Moesif and gain valuable insights into your API's usage.  While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding. 
+Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage.  While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding. 
 
 In this guide, you will:
 
 - Generate a key in Moesif.
-- Configure Bijira to connect to Moesif.
+- Configure API Platform to connect to Moesif.
 - Invoke an API and observe the insights on the Moesif dashboard. 
 
 ## Step 1: Generate an API key in Moesif
@@ -29,7 +29,7 @@ If you are a new user, follow the steps below to register an organization and ge
  4. Click **Next**.
  5. On the **Overview** page, click **Next**.
 
-     This opens the **Quick Install** page. As there is no data, you cannot proceed. Let's configure Moesif to receive data from Bijira. 
+     This opens the **Quick Install** page. As there is no data, you cannot proceed. Let's configure Moesif to receive data from API Platform. 
 
 6. Select **WSO2** as the **Server Integration**.
 7. From the WSO2 integration options, select **WSO2 Bijira**.
@@ -47,11 +47,11 @@ If you are an existing user with a registered organization, or you do not have a
 3. Copy the **Collection Application Id**.
 
 
-## Step 2: Integrate Bijira with Moesif
+## Step 2: Integrate API Platform with Moesif
 
-Let's configure Bijira to publish events to Moesif.
+Let's configure API Platform to publish events to Moesif.
 
-1. Go to [Bijira Console](https://console.bijira.dev/cloud-native-app-developer) and sign in.
+1. Go to [API Platform Console](https://console.bijira.dev/cloud-native-app-developer) and sign in.
 2. In the left navigation, click **Admin** and then click **Settings**. 
 3. In the header, click the **Organization** list. This will open the organization level settings page. 
 4. Click **Moesif Dashboard**.
@@ -62,15 +62,15 @@ Let's configure Bijira to publish events to Moesif.
 Once you successfully add the key, you will see a delete option next to it. Currently, you can only configure one API key. If you need to add a new API key, you need to delete the existing key and add the new one. 
 
 !!! Note
-    Once you configure the Moesif API key on Bijira, **wait for five minutes before you publish any data to the Moesif** API analytics platform. 
+    Once you configure the Moesif API key on API Platform, **wait for five minutes before you publish any data to the Moesif** API analytics platform. 
 
 
 ## Step 3: Invoke an API and observe the data on the Moesif Dashboard 
 
-You have configured Bijira to publish data to Moesif. Let's see how you can view the insights on Moesif.
+You have configured API Platform to publish data to Moesif. Let's see how you can view the insights on Moesif.
 
 !!! tip
-    - If you have not created an API and deployed it on Bijira, you can follow the [Quick Start Guide](https://wso2.com/bijira/docs/introduction/quick-start-guide/) to get started.
+    - If you have not created an API and deployed it on API Platform, you can follow the [Quick Start Guide](https://wso2.com/bijira/docs/introduction/quick-start-guide/) to get started.
 
 1. Invoke your API by following the [Test REST Endpoints via the OpenAPI Console](https://wso2.com/bijira/docs/test-api-proxy/openapi-console/) guide. 
 

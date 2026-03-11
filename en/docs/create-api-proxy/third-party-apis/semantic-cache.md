@@ -1,6 +1,6 @@
 # Semantic Caching
 
-AI services frequently involve repetitive queries, leading to unnecessary token usage and increased latency. Bijira’s AI Gateway introduces semantic caching, allowing responses to similar requests to be cached and reused intelligently, minimizing redundant processing, improving response times, and reducing overall costs.
+AI services frequently involve repetitive queries, leading to unnecessary token usage and increased latency. API Platform’s AI Gateway introduces semantic caching, allowing responses to similar requests to be cached and reused intelligently, minimizing redundant processing, improving response times, and reducing overall costs.
 
 
 ## Configure Semantic Caching Policy
@@ -107,5 +107,5 @@ Second Request:
 - **Test the AI API** to ensure it properly cache and serves those cached responses upon receiving semantically similar queries. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).  
  
 
-By configuring semantic caching as outlined above, you can efficiently optimize AI service usage within your Bijira environment, significantly reducing latency and operational costs.
+By configuring semantic caching as outlined above, you can efficiently optimize AI service usage within your API Platform environment, significantly reducing latency and operational costs.
   

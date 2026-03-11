@@ -1,6 +1,6 @@
 # Review Workflow Approval Requests
 
-In Bijira, administrators can [configure approvals for workflows](./configure-workflow-approvals.md) and assign specific users as approvers.
+In API Platform, administrators can [configure approvals for workflows](./configure-workflow-approvals.md) and assign specific users as approvers.
 
 If you are assigned as an authorized reviewer for a particular workflow approval request, you will receive an email notification when a [request is submitted for approval](./submit-workflow-requests.md). The email includes a summary of the request.
 
@@ -16,8 +16,8 @@ Approval requests are submitted on behalf of the team. Once approved, any author
 
 To view workflow approval requests assigned to you, follow these steps:
 
-1. Sign in to the [Bijira Console](https://console.bijira.dev/).
-2. In the Bijira Console header, go to the **Organization** list and select your organization.
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click the **Admin** drop-down and then click **Approvals**. This opens the **Approvals** page where you can see all approval requests assigned to you. The **Pending** tab lists requests that are yet to be reviewed. The **Past** tab displays requests already reviewed by you or other approvers, as well as requests canceled by the requester.
 ![Pending Requests](../assets/img/workflows/pending-requests.png)
 4. To view details of a specific request, click **Review** corresponding to it.

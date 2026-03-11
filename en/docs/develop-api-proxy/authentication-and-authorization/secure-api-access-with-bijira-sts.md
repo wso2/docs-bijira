@@ -1,26 +1,26 @@
-# Secure API Access with Bijira STS
+# Secure API Access with API Platform STS
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. APIs are essential for enabling communication and data exchange between different software applications and services, making them a critical component in modern software development. However, their openness and accessibility can also make them targets for various security risks. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions. 
 
-Bijira's built-in Secure Token Service (STS) can seamlessly integrate with Bijira APIs to provide authentication and authorization. This guide will walk you through setting up Bijira STS to authenticate API invocations.
+API Platform's built-in Secure Token Service (STS) can seamlessly integrate with API Platform APIs to provide authentication and authorization. This guide will walk you through setting up API Platform STS to authenticate API invocations.
 
 This guide walks you through the following steps:
 
-<!-- - Assign scopes to an API in Bijira.  -->
-- Create an application in Bijira and generate access token.
+<!-- - Assign scopes to an API in API Platform.  -->
+- Create an application in API Platform and generate access token.
 - Invoke the API.
 
 ## Prerequisites
 
 To follow this guide, you need to satisfy the following prerequisites:
 
-- If you don't already have an API Proxy in Bijira, [create API Proxy](../../../create-api-proxy/overview/).
+- If you don't already have an API Proxy in API Platform, [create API Proxy](../../../create-api-proxy/overview/).
 - Deploy and publish your API. 
 
 !!! note
-    It is important to note that Bijira STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external key manager such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
+    It is important to note that API Platform STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external key manager such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
 
-<!-- ## Step 1: Assign scopes to an API in Bijira
+<!-- ## Step 1: Assign scopes to an API in API Platform
 
 You can provide fine-grained access control to your API resources with scopes. Follow the steps below to assign a scope to the resources in the API:
 
@@ -54,11 +54,11 @@ You can provide fine-grained access control to your API resources with scopes. F
         - Select the appropriate grant types.
         - Copy the client ID and client secret of the application for future reference. -->
 
-## Step 1: Create an application and enable Bijira STS authentication
+## Step 1: Create an application and enable API Platform STS authentication
 
-Follow the steps below to consume the Bijira API using Bijira STS.
+Follow the steps below to consume the API Platform API using API Platform STS.
 
-1. Sign in to your organization in the Bijira Developer Portal at [https://devportal.bijira.dev](https://devportal.bijira.dev).
+1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.bijira.dev](https://devportal.bijira.dev).
 2. Click **Applications**. and then click **+Create**.
 3. Enter a name for the application. 
 4. Click **Create**.
@@ -68,6 +68,6 @@ Follow the steps below to consume the Bijira API using Bijira STS.
 8. Click on the **Generate Token** button to generate an access token. Please make sure to copy the access token to use in step 2.
 9. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
-## Step 2: Invoke the Bijira API
+## Step 2: Invoke the API Platform API
 
-1. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../../test-api-proxy/openapi-console/) in Bijira.
+1. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../../test-api-proxy/openapi-console/) in API Platform.
