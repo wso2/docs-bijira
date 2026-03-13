@@ -3,7 +3,7 @@
 This section explains how you can configure alerts for your API Platform Components. Setting up alerts allows you to proactively monitor your APIs ecosystem and take corrective measures when necessary.
 
 !!! tip
-    Setting up alerts is only available in the API level.
+    Setting up alerts is only available at the API level.
 
 ## Alert Types
 
@@ -15,7 +15,7 @@ API Platform supports the following types of alerts to help you monitor and mana
 
 ### Latency Alerts
 
-Latency alerts notify you if the response latency of a API exceeds a predefined threshold in a given time period. This is useful for APIs that need to meet specific SLAs and for proactively identifying slow components.
+Latency alerts notify you if the response latency of a API exceeds a predefined threshold within a given time period. This is useful for APIs that need to meet specific SLAs and for proactively identifying slow components.
 
 Configurable parameters
 
@@ -41,7 +41,7 @@ Configurable parameters
 
 ### Status Code Alerts
 
-Status code alert triggers when your API returns specific HTTP error(s) (e.g.: **403** Forbidden, **500** Internal Error). These alerts help to detect issues affecting your component’s availability.
+A Status code alert is triggered when your API returns specific HTTP error(s) (e.g.: **403** Forbidden, **500** Internal Error). These alerts help to detect issues affecting your component’s availability.
 
 Configurable parameters
 
@@ -53,11 +53,14 @@ Configurable parameters
 
 
 
-## Configure Alert
+## Configure Alerts
 
 Follow these steps to configure an alert:
 
 1. Navigate to the API you wish to configure alerts for.
+
+    !!! info
+        You need to have a scope of **Choreo DevOps** or **Choreo Platform Engineer** inorder to create Alerts. 
 2. In the left menu, click **Observability** and then click **Alerts**.
 3. Click **Create Alert Rule** to create a new alert rule.
 
