@@ -61,6 +61,7 @@ Follow these steps to configure an alert:
 
     !!! info
         You need to have a scope of **Choreo DevOps** or **Choreo Platform Engineer** inorder to create Alerts. 
+
 2. In the left menu, click **Observability** and then click **Alerts**.
 3. Click **Create Alert Rule** to create a new alert rule.
 
