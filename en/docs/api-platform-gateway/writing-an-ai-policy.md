@@ -28,7 +28,8 @@ Choose based on what your policy needs to do:
 |------|-----------|-------------|
 | Inspect prompt / model | `RequestPolicy` | `RequestBodyMode: BodyModeBuffer` |
 | Inspect headers (auth, routing) | `RequestHeaderPolicy` | `RequestHeaderMode: HeaderModeProcess` |
-| Inspect or modify streaming / buffered response | `StreamingResponsePolicy` | `ResponseBodyMode: BodyModeStream` |
+| Inspect or modify buffered (in-memory) response | `ResponsePolicy` | `ResponseBodyMode: BodyModeBuffer` |
+| Inspect or modify streaming response | `StreamingResponsePolicy` (embeds `ResponsePolicy`) | `ResponseBodyMode: BodyModeStream` |
 
 ## Recommended Pattern
 
