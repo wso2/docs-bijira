@@ -86,7 +86,7 @@ func (p *MyPolicy) Mode() policy.ProcessingMode {
 
 | Setting | When to Use |
 |---------|-------------|
-| `policy.HeaderModeProcess` or `policy.BodyModeBuffer`/`Stream` | When your policy needs to inspect or modify that part of the request/response |
+| `policy.HeaderModeProcess`, `policy.BodyModeBuffer`, or `policy.BodyModeStream` | When your policy needs to inspect or modify that part of the request/response |
 | `policy.HeaderModeSkip` or `policy.BodyModeSkip` | When your policy does not need to run in that phase |
 
 !!! tip
