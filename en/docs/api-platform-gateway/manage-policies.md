@@ -39,5 +39,7 @@ Navigate to [API Platform Policy Hub](https://wso2.com/api-platform/policy-hub/)
 
 ## What's Next?
 
+- [Writing a Custom Policy](writing-a-custom-policy.md): Learn how to build a custom policy using the gateway SDK
+- [Writing an AI Policy](writing-an-ai-policy.md): Learn how to write policies for LLM traffic
 - [Analytics](analytics.md): Monitor API traffic and performance
 - [Troubleshooting](troubleshooting.md): Common issues and solutions

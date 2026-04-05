@@ -196,6 +196,8 @@ nav:
           - Getting Started: api-platform-gateway/getting-started.md
           - Setting Up: api-platform-gateway/setting-up.md
           - Adding and Managing Policies: api-platform-gateway/manage-policies.md
+          - Writing a Custom Policy: api-platform-gateway/writing-a-custom-policy.md
+          - Writing an AI Policy: api-platform-gateway/writing-an-ai-policy.md
           # - Analytics: api-platform-gateway/analytics.md
           # - Troubleshooting: api-platform-gateway/troubleshooting.md
       - Third-Party Gateways:
