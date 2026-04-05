@@ -207,6 +207,14 @@ nav:
         - Runtime Logs: monitoring-and-insights/logs/runtime-logs.md
         - Audit Logs: monitoring-and-insights/logs/audit-logs.md
       - Integrate API Platform with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
+  - API Monetization:
+      - Overview: api-monetization/overview.md
+      - Monetizing APIs:
+          - Getting Started: api-monetization/getting-started.md
+          - Manage Paid Subscription Plans: api-monetization/manage-paid-subscription-plans.md
+      - Consume Monetized APIs:
+          - Subscribe to a Paid Plan: api-monetization/subscribe-to-paid-plan.md
+          - View Billing and Usage: api-monetization/view-billing-and-usage.md
   - Administer:
       - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
       - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
@@ -325,6 +333,9 @@ extra:
     - title: Monitor and Insights
       options:
         - verticle-line-only
+    - title: API Monetization
+      options:
+        - verticle-line-only
     - title: Administer
       options:
         - verticle-line-only
@@ -374,6 +385,9 @@ extra:
       level: 1
     Monitor and Insights:
       icon: octicons/graph-16
+      level: 1
+    API Monetization:
+      icon: octicons/credit-card-16
       level: 1
     Administer:
       icon: octicons/lock-16
