@@ -8,9 +8,14 @@ For full API details, see the [SDK Documentation](https://pkg.go.dev/github.com/
 
 Policies allow you to enforce security, rate limiting, transformation, and other governance requirements on your APIs.
 
+
 ## How It Works
 
 Every request and response that flows through the gateway passes through a **policy chain**. Each policy in the chain declares which phases it participates in, and the kernel calls the appropriate hook for each phase:
+
+
+!!! note
+    A **policy chain** is an ordered sequence of policies that the gateway runs on every request and response for a given API or route. Policies execute in the order they are listed in the API definition YAML — each policy sees the modifications made by the ones before it.
 
 ```
 Incoming Request
