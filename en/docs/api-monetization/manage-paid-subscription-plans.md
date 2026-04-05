@@ -85,5 +85,3 @@ Once published, API consumers can view the API and its available paid plans on t
 
 !!! tip
     For more details on lifecycle states and transitions, see [Lifecycle Management](../develop-api-proxy/lifecycle-management.md).
-
-<!-- TODO: Add link to consumer subscription documentation once available -->
