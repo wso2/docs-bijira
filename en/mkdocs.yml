@@ -182,6 +182,10 @@ nav:
                   - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
                   - Word Count: ai-gateway/ai-workspace/policies/guardrails/word-count-guardrail.md
                   - Sentence Count: ai-gateway/ai-workspace/policies/guardrails/sentence-count-guardrail.md
+              - Rate Limit:
+                  - LLM Cost: ai-gateway/ai-workspace/policies/rate-limit/llm-cost.md
+                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/token-based-rate-limit.md
+                  - LLM Cost-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
               - Other Policies:
 #                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/other-policies/token-based-rate-limit.md
 #                  - Rate Limit - Basic: ai-gateway/ai-workspace/policies/other-policies/basic-rate-limit.md
