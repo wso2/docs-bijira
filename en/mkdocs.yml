@@ -211,6 +211,7 @@ nav:
             - Subscription Based APIs: api-platform-gateway/publish-apis/subscription-based-apis.md
             - Subscription Less APIs: api-platform-gateway/publish-apis/subscription-less-apis.md
             - Lifecycle Management: api-platform-gateway/publish-apis/lifecycle-management.md
+          - Building the Gateway with Custom Policies: api-platform-gateway/build-gateway-with-custom-policies.md
           # - Analytics: api-platform-gateway/analytics.md
           # - Troubleshooting: api-platform-gateway/troubleshooting.md
       - Third-Party Gateways:
