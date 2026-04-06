@@ -10,7 +10,7 @@ For more information, refer to the official [specification](https://modelcontext
 
 ## What is an MCP Proxy?
 
-An MCP Proxy let's you connect the gateway to an upstream MCP Server. The MCP Clients can connect to the dedicated endpoint provided by the gateway to connect to your upstream MCP Server.
+An MCP Proxy lets you connect the gateway to an upstream MCP Server. The MCP Clients can connect to the dedicated endpoint provided by the gateway to connect to your upstream MCP Server.
 The proxy allows you to apply various policies which allow you to control the MCP traffic through the gateway.
 
 ## What does an MCP Proxy offer?
@@ -19,11 +19,11 @@ While MCP defines an RPC-based communication model between agents and tools, it 
 
 - **Enforce Security**: Managing authentication, authorization
 - **Apply Policies**: Enforcing various policies to control MCP traffic
-- **Observability**: Gaining visibility into what tools, servers are being called, what's casing errors and much more.
+- **Observability**: Gaining visibility into what tools, servers are being called, what's causing errors and much more.
 
 MCP Proxy will address these challenges providing built-in security, governance, and observability for all MCP communication.
 
 ## Next Steps
 
 - [Configure MCP Proxy](configure-proxy.md) — Step-by-step guide to create and deploy your first proxy
-- [Manage Proxy](manage-proxy.md) — Update configuration and policies after deployment
+- [Apply Policies](apply-policies) — Apply policies after deployment

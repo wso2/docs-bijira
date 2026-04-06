@@ -38,12 +38,12 @@ Learn more in the [LLM Proxies](ai-workspace/llm-proxies/overview.md) section.
 
 ### MCP Proxies
 
-Create and manage Model Context Protocl (MCP) proxies
+Create and manage Model Context Protocol (MCP) proxies
 
 - **Proxy an existing MCP server**: Create an MCP proxy by providing the server URL
 - **Attach policies**: Apply MCP-specific or generic policies
-- **Track MCP traffic**: View MCP related analytics
+- **Track MCP traffic**: View MCP-related analytics
 
-Learn more in the [MCP Proxies](ai-workspace/mcp-proxies/overview.md) section
+Learn more in the [MCP Proxies](ai-workspace/mcp-proxies/overview.md) section.
 
 To get started, refer to the [Getting Started](ai-workspace/getting-started.md) guide.

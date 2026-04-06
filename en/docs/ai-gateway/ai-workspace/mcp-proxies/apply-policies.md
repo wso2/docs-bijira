@@ -3,7 +3,7 @@
 Once you create an MCP proxy, you can apply various policies through the Policies page.
 
 The AI Workspace provides a set of built-in policies that let you govern how traffic flows through your MCP Proxies. These policies are applied at the policy level.
-However, you have the option to define rules per tools, prompts, etc. inside MCP specific policies if required. This will essential apply the policies in each caapbility level.
+However, you have the option to define rules per tools, prompts, etc. inside MCP specific policies if required. This will essentially apply the policies at each capability level.
 
 ## Access Control Policies
 
@@ -13,7 +13,7 @@ There are several policies that enforce security for MCP Proxies.
 |-----------|-------------|
 | [MCP Authentication](https://wso2.com/api-platform/policy-hub/policies/mcp-auth) | Apply authentication as defined in the MCP Specification. |
 | [MCP Authorization](https://wso2.com/api-platform/policy-hub/policies/mcp-authz) | Apply fine-grained authorization for MCP capabilities and JSON RPC methods. |
-| [MCP Access Control](https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list) | Allow on deny access to MCP capabilties. |
+| [MCP Access Control](https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list) | Allow or deny access to MCP capabilities. |
 
 ## Other Policies
 

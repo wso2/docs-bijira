@@ -27,15 +27,15 @@ This guide walks you through creating a proxy and deploying it to a gateway.
 
 5. Fill in the required proxy details:
 
-    1. **Name***(Required): Enter a unique name for the proxy (e.g., `mcp-tools-proxy`, `context-server-proxy`). The Proxy ID is auto-generated from the name (lowercase, hyphen-separated).
+    1. **Name** (Required): Enter a unique name for the proxy (e.g., `mcp-tools-proxy`, `context-server-proxy`). The Proxy ID is auto-generated from the name (lowercase, hyphen-separated).
 
-    2. **Version***(Required): The version is pre-filled (e.g., `v1.0`). You can edit this if needed.
+    2. **Version** (Required): The version is pre-filled (e.g., `v1.0`). You can edit this if needed.
 
     3. **Description** (Optional): Add a brief description to identify the proxy's purpose.
 
     4. **Context** (Optional): Enter the context path (default: `/`). This is the base path for proxy endpoints (normalized with "/" prefix).
 
-    5. **Target** (Required): The MCP Server URL the gatewat should call. This will be auto populated based on the URL you provided in the previous step.
+    5. **Target** (Required): The MCP Server URL the gateway should call. This will be auto populated based on the URL you provided in the previous step.
 
 6. Click **Create** to create and save the proxy.
 
