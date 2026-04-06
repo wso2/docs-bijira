@@ -182,6 +182,10 @@ nav:
                   - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
                   - Word Count: ai-gateway/ai-workspace/policies/guardrails/word-count-guardrail.md
                   - Sentence Count: ai-gateway/ai-workspace/policies/guardrails/sentence-count-guardrail.md
+              - Rate Limit:
+                  - LLM Cost: ai-gateway/ai-workspace/policies/rate-limit/llm-cost.md
+                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/token-based-rate-limit.md
+                  - LLM Cost-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
               - Other Policies:
 #                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/other-policies/token-based-rate-limit.md
 #                  - Rate Limit - Basic: ai-gateway/ai-workspace/policies/other-policies/basic-rate-limit.md
@@ -198,6 +202,11 @@ nav:
           - Setting Up: api-platform-gateway/setting-up.md
           - Adding and Managing Policies: api-platform-gateway/manage-policies.md
           - Writing a Custom Policy: api-platform-gateway/writing-a-custom-policy.md
+          - Publish APIs:
+            - Overview: api-platform-gateway/publish-apis/overview.md
+            - Subscription Based APIs: api-platform-gateway/publish-apis/subscription-based-apis.md
+            - Subscription Less APIs: api-platform-gateway/publish-apis/subscription-less-apis.md
+            - Lifecycle Management: api-platform-gateway/publish-apis/lifecycle-management.md
           # - Analytics: api-platform-gateway/analytics.md
           # - Troubleshooting: api-platform-gateway/troubleshooting.md
       - Third-Party Gateways:
@@ -209,6 +218,14 @@ nav:
         - Runtime Logs: monitoring-and-insights/logs/runtime-logs.md
         - Audit Logs: monitoring-and-insights/logs/audit-logs.md
       - Integrate API Platform with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
+  - API Monetization:
+      - Overview: api-monetization/overview.md
+      - Monetizing APIs:
+          - Getting Started: api-monetization/getting-started.md
+          - Manage Paid Subscription Plans: api-monetization/manage-paid-subscription-plans.md
+      - Consume Monetized APIs:
+          - Subscribe to a Paid Plan: api-monetization/subscribe-to-paid-plan.md
+          - View Billing and Usage: api-monetization/view-billing-and-usage.md
   - Administer:
       - Create API Subscription Plans: administer/settings/create-api-subscription-plans.md
       - Configure a Custom Domain for Your Organization: administer/settings/configure-a-custom-domain-for-your-organization.md
@@ -327,6 +344,9 @@ extra:
     - title: Monitor and Insights
       options:
         - verticle-line-only
+    - title: API Monetization
+      options:
+        - verticle-line-only
     - title: Administer
       options:
         - verticle-line-only
@@ -376,6 +396,9 @@ extra:
       level: 1
     Monitor and Insights:
       icon: octicons/graph-16
+      level: 1
+    API Monetization:
+      icon: octicons/credit-card-16
       level: 1
     Administer:
       icon: octicons/lock-16

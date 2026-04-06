@@ -14,6 +14,16 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [Word Count](guardrails/word-count-guardrail.md) | Enforce word count limits on prompts or responses. |
 | [Sentence Count](guardrails/sentence-count-guardrail.md) | Enforce sentence count limits on prompts or responses. |
 
+## Rate Limit
+
+Rate limit policies control how much LLM traffic — by token count or monetary cost — can flow through a provider or proxy.
+
+| Policy | Description |
+|--------|-------------|
+| [LLM Cost](rate-limit/llm-cost.md) | Calculate the USD cost of each LLM call and make it available to cost-based rate limiting. No configuration required. |
+| [Token-Based Rate Limit](rate-limit/token-based-rate-limit.md) | Limit prompt, completion, or total token consumption within a time window. |
+| [LLM Cost-Based Rate Limit](rate-limit/llm-cost-based-rate-limit.md) | Enforce monetary spending budgets (e.g., $10/hour). Requires the LLM Cost policy. |
+
 ## Other Policies
 
 | Policy | Description |
