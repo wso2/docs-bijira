@@ -54,3 +54,4 @@ Visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/) to explore all
 ## Next Steps
 
 - [Guardrails Overview](guardrails/overview.md) — Explore available guardrails and how to configure them
+- [Writing an AI Policy](writing-an-ai-policy.md) — Learn how to write a custom AI policy for the self-hosted gateway
