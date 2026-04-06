@@ -17,7 +17,7 @@ Every request and response that flows through the gateway passes through a **pol
 !!! note
     A **policy chain** is an ordered sequence of policies that the gateway runs on every request and response for a given API or API operation. Policies execute in the order they are listed in the API definition YAML — each policy sees the modifications made by the ones before it.
 
-```
+```text
 Incoming Request
        │
        ▼
@@ -39,7 +39,7 @@ Incoming Request
   Downstream Client
 ```
 
-A policy only participates in the phases it implements. A policy that only inspects request headers simply does not implement the response interfaces.
+A policy only participates in the phases it implements. For example policy that only inspects request headers simply does not implement the response interfaces.
 
 ## How to Write a Policy
 
@@ -47,7 +47,7 @@ A policy only participates in the phases it implements. A policy that only inspe
 
 Each policy lives in its own Go module. Create a directory inside your gateway as policies:
 
-```
+```text
 /policies/my-policy/
  ├── go.mod
  ├── my_policy.go
@@ -94,7 +94,7 @@ func (p *MyPolicy) Mode() policy.ProcessingMode {
 
 ### Step 3: Implement Phase Interfaces
 
-Implement only the interfaces for phases you declared in `Mode()`.
+Implement only the interfaces for phases you declared in `Mode()` in step 2.
 
 #### Request Flow
 
@@ -186,6 +186,44 @@ func (p *MyPolicy) OnResponseBody(
 
 Use streaming when processing SSE (Server-Sent Events) responses or large chunked transfers where you cannot or should not buffer the full body. Set `ResponseBodyMode: policy.BodyModeStream` (and/or `RequestBodyMode: policy.BodyModeStream`) in your `Mode()`, then implement the streaming interfaces.
 
+#### Streaming Request
+
+Implement `StreamingRequestPolicy` to process request chunks:
+
+```go
+func (p *MyPolicy) Mode() policy.ProcessingMode {
+    return policy.ProcessingMode{
+        RequestHeaderMode:  policy.HeaderModeProcess,
+        RequestBodyMode:   policy.BodyModeStream,
+    }
+}
+
+func (p *MyPolicy) NeedsMoreRequestData(accumulated []byte) bool {
+    return false // forward every chunk immediately
+}
+
+func (p *MyPolicy) OnRequestBodyChunk(
+    ctx context.Context,
+    reqCtx *policy.RequestStreamContext,
+    chunk *policy.StreamBody,
+    params map[string]interface{},
+) policy.StreamingRequestAction {
+
+    return &policy.ForwardRequestChunk{
+        Body: chunk.Chunk, // nil = pass through
+    }
+}
+
+// Fallback for non-streaming chains
+func (p *MyPolicy) OnRequestBody(
+    ctx context.Context,
+    reqCtx *policy.RequestContext,
+    params map[string]interface{},
+) policy.RequestAction {
+    return nil
+}
+```
+
 #### Streaming Response
 
 Implement `StreamingResponsePolicy` to process responses chunk by chunk:
@@ -238,37 +276,6 @@ func (p *MyPolicy) OnResponseBody(
 }
 ```
 
-#### Streaming Request
-
-Implement `StreamingRequestPolicy` to process request chunks:
-
-```go
-func (p *MyPolicy) NeedsMoreRequestData(accumulated []byte) bool {
-    return false // forward every chunk immediately
-}
-
-func (p *MyPolicy) OnRequestBodyChunk(
-    ctx context.Context,
-    reqCtx *policy.RequestStreamContext,
-    chunk *policy.StreamBody,
-    params map[string]interface{},
-) policy.StreamingRequestAction {
-
-    return &policy.ForwardRequestChunk{
-        Body: chunk.Chunk, // nil = pass through
-    }
-}
-
-// Fallback for non-streaming chains
-func (p *MyPolicy) OnRequestBody(
-    ctx context.Context,
-    reqCtx *policy.RequestContext,
-    params map[string]interface{},
-) policy.RequestAction {
-    return nil
-}
-```
-
 #### Gate-then-Stream Pattern
 
 A common pattern for guardrail policies is to accumulate chunks until you have enough data to make a decision, then switch to pass-through:
@@ -306,6 +313,7 @@ Create a `policy-definition.yaml` in your policy directory:
 
 ```yaml
 name: my-policy
+displayName: my policy
 version: v1.0.0
 
 parameters:

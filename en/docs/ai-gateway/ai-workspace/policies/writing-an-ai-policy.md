@@ -18,7 +18,7 @@ LLM responses come in two formats:
 | Non-streaming | Single JSON object |
 | Streaming | SSE events (`data: {...}`) |
 
-Your policy must handle **both formats**.
+Your policy must be implemented to handle **both formats**.
 
 ## Which Interfaces to Implement
 
@@ -103,3 +103,7 @@ func (p *MyAIPolicy) OnResponseBody(
 - **Always handle both streaming and non-streaming** - The gateway may fall back to buffered mode if any policy in the chain does not support streaming.
 - **Use Metadata to share state** - Pass data between request and response phases using the `Metadata` map.
 - **Implement streaming + fallback for compatibility** - Ensure your policy works correctly regardless of whether the chain runs in streaming or buffered mode.
+
+## Learn More
+
+- [Writing a Custom Policy for the Self-Hosted Gateway](../../../api-platform-gateway/writing-a-custom-policy.md)
