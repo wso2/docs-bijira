@@ -330,7 +330,7 @@ clientID := respCtx.Metadata["clientID"]
 
 ### Step 8: Register and Build
 
-Add your policy to `build.yaml` under `policies:` using `filePath` for local development:
+Add your policy to gateway folder's `build.yaml` under `policies:` using `filePath` for local development:
 
 ```yaml
 policies:
