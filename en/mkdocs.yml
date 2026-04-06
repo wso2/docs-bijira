@@ -196,6 +196,11 @@ nav:
           - Getting Started: api-platform-gateway/getting-started.md
           - Setting Up: api-platform-gateway/setting-up.md
           - Adding and Managing Policies: api-platform-gateway/manage-policies.md
+          - Publish APIs:
+            - Overview: api-platform-gateway/publish-apis/overview.md
+            - Subscription Based APIs: api-platform-gateway/publish-apis/subscription-based-apis.md
+            - Subscription Less APIs: api-platform-gateway/publish-apis/subscription-less-apis.md
+            - Lifecycle Management: api-platform-gateway/publish-apis/lifecycle-management.md
           # - Analytics: api-platform-gateway/analytics.md
           # - Troubleshooting: api-platform-gateway/troubleshooting.md
       - Third-Party Gateways:
