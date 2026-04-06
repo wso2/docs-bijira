@@ -2,7 +2,7 @@
 
 This guide shows how to build a custom policy using the gateway SDK.
 
-For full API details, see the [SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
+For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
 
 ## What is a Policy?
 
