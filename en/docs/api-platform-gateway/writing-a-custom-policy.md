@@ -15,7 +15,7 @@ Every request and response that flows through the gateway passes through a **pol
 
 
 !!! note
-    A **policy chain** is an ordered sequence of policies that the gateway runs on every request and response for a given API or route. Policies execute in the order they are listed in the API definition YAML — each policy sees the modifications made by the ones before it.
+    A **policy chain** is an ordered sequence of policies that the gateway runs on every request and response for a given API or API operation. Policies execute in the order they are listed in the API definition YAML — each policy sees the modifications made by the ones before it.
 
 ```
 Incoming Request
