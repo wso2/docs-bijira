@@ -356,4 +356,6 @@ policies:
 
 ## What's Next?
 
+- [Building the Gateway with Custom Policies](build-gateway-with-custom-policies.md): Build a gateway image that includes your custom policy
+- [Apply Custom Policies to APIs](apply-custom-policies-to-apis.md): Sync your custom policy to the organization and apply it to APIs
 - [Writing an AI Policy](writing-an-ai-policy.md): Learn how to write policies for LLM traffic
