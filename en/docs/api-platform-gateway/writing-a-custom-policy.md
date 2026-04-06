@@ -39,13 +39,13 @@ Incoming Request
   Downstream Client
 ```
 
-A policy only participates in the phases it implements. For example policy that only inspects request headers simply does not implement the response interfaces.
+A policy only participates in the phases it implements. For example, a policy that only inspects request headers does not implement the response interfaces.
 
 ## How to Write a Policy
 
 ### Step 1: Create the Policy
 
-Each policy lives in its own Go module. Create a directory inside your gateway as policies:
+Each policy lives in its own Go module. Create a "policies" directory inside your gateway:
 
 ```text
 /policies/my-policy/
