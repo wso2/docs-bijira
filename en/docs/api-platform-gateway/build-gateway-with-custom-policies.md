@@ -1,4 +1,4 @@
-# Build Gateway with Custom Policies
+# Building the Gateway with Custom Policies
 
 ## Install the AP CLI Tool
 
@@ -11,7 +11,7 @@ The `ap` CLI tool is used to build a custom gateway image with your own policies
     After downloading the zip file for your platform, extract it:
 
     ```bash
-    unzip ap-darwin-arm64.zip   # replace with your downloaded filename
+    unzip ap-darwin-amd64-v0.7.0.zip   # replace with your downloaded filename
     ```
 
     **Step 2: Move the binary to a bin directory**
@@ -106,7 +106,7 @@ Your custom policy can reside anywhere on the filesystem. Use a relative path fr
 
 For example, if your directory layout is:
 
-```
+```text
 my-gateway/
 ├── build.yaml
 └── ../my-custom-policy/   # policy lives outside the gateway directory
@@ -137,10 +137,10 @@ This packages the gateway runtime together with all listed policies into a conta
 
 Once the build completes, the output lists the two image names produced. For example:
 
-```
+```text
 ✓ Built gateway images with 1 policies:
-  • ghcr.io/wso2/api-platform/gateway-v0.10.0-gateway-runtime:0.11.0
-  • ghcr.io/wso2/api-platform/gateway-v0.10.0-gateway-controller:0.11.0
+  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0
+  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0
 ```
 
 A `build-manifest.yaml` file is also written alongside `build.yaml`, recording the resolved versions of all policies included in the build.
@@ -154,10 +154,10 @@ Locate the `gateway-controller` and `gateway-runtime` services and replace their
 ```yaml
 services:
   gateway-controller:
-    image: ghcr.io/wso2/api-platform/gateway-v0.10.0-gateway-controller:0.11.0  # (1)
+    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0  # (1)
 
   gateway-runtime:
-    image: ghcr.io/wso2/api-platform/gateway-v0.10.0-gateway-runtime:0.11.0     # (2)
+    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0     # (2)
 ```
 
 1. Replace with the `gateway-controller` image name from your build output.
