@@ -170,6 +170,10 @@ nav:
               - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
               - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/configure-proxy.md
               - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
+          - MCP Proxies:
+              - Overview: ai-gateway/ai-workspace/mcp-proxies/overview.md
+              - Configure Proxy: ai-gateway/ai-workspace/mcp-proxies/configure-proxy.md
+              - Apply Policies: ai-gateway/ai-workspace/mcp-proxies/apply-policies.md
           - Configure Inbound Auth: ai-gateway/ai-workspace/configure-inbound-auth.md
           - Invoke via SDKs: ai-gateway/ai-workspace/using-sdks.md
 #          - Insights: ai-gateway/ai-workspace/insights.md

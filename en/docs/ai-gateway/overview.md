@@ -36,8 +36,14 @@ Create and manage proxy endpoints for your LLM services:
 
 Learn more in the [LLM Proxies](ai-workspace/llm-proxies/overview.md) section.
 
-### MCP Features (Coming Soon)
+### MCP Proxies
 
-Model Context Protocol (MCP) External Servers and Registries will be available soon.
+Create and manage Model Context Protocol (MCP) proxies
+
+- **Proxy an existing MCP server**: Create an MCP proxy by providing the server URL
+- **Attach policies**: Apply MCP-specific or generic policies
+- **Track MCP traffic**: View MCP-related analytics
+
+Learn more in the [MCP Proxies](ai-workspace/mcp-proxies/overview.md) section.
 
 To get started, refer to the [Getting Started](ai-workspace/getting-started.md) guide.
