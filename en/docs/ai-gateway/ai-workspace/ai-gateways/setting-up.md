@@ -78,8 +78,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v0.8.4/ai-gateway-v0.8.4.zip && \
-    unzip ai-gateway-v0.8.4.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.0.0/wso2apip-ai-gateway-1.0.0.zip && \
+    unzip wso2apip-ai-gateway-1.0.0.zip
     ```
 
     **Step 2: Configure the Gateway**
@@ -87,8 +87,9 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command to create the environment configuration file with the required environment variables:
 
     ```bash
-    cat > ai-gateway-v0.8.4/configs/keys.env << 'ENVFILE'
-    GATEWAY_CONTROLPLANE_HOST=platform-api.preview-dv.choreo.dev
+    cat > wso2apip-ai-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    MOESIF_KEY=<your-moesif-key>
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -100,7 +101,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     1. Navigate to the gateway folder:
 
         ```bash
-        cd ai-gateway-v0.8.4
+        cd wso2apip-ai-gateway-1.0.0
         ```
 
     2. Run this command to start the gateway using the environment file created in Step 2:
@@ -132,8 +133,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v0.8.4/ai-gateway-v0.8.4.zip && \
-    unzip ai-gateway-v0.8.4.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.0.0/wso2apip-ai-gateway-1.0.0.zip && \
+    unzip wso2apip-ai-gateway-1.0.0.zip
     ```
 
     **Step 2: Configure the Gateway**
@@ -145,7 +146,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     1. Navigate to the gateway folder:
 
         ```bash
-        cd ai-gateway-v0.8.4
+        cd wso2apip-ai-gateway-1.0.0
         ```
 
     2. Run this command to start the gateway using the environment file created in Step 2:
@@ -165,8 +166,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v0.8.4/ai-gateway-v0.8.4.zip && \
-    unzip ai-gateway-v0.8.4.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.0.0/wso2apip-ai-gateway-1.0.0.zip && \
+    unzip wso2apip-ai-gateway-1.0.0.zip
     ```
 
     **Step 2: Configure the Gateway**
@@ -178,7 +179,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     1. Navigate to the gateway folder:
 
         ```bash
-        cd ai-gateway-v0.8.4
+        cd wso2apip-ai-gateway-1.0.0
         ```
 
     2. Run this command to start the gateway using the environment file created in Step 2:
@@ -202,7 +203,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command to install the gateway chart with control plane configurations:
 
     ```bash
-    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 0.8.4 \
+    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 1.0.0 \
     --set gateway.controller.controlPlane.host="host.docker.internal" \
     --set gateway.controller.controlPlane.port=8443 \
     --set gateway.controller.controlPlane.token.value="your-gateway-token"
