@@ -80,6 +80,9 @@ The `ap` CLI tool is used to build a custom gateway image with your own policies
 
 The `build.yaml` file is already included in the unzipped gateway package. It declares the gateway version and the list of policies to include. Edit this file to add your custom policies before building the gateway image.
 
+!!! tip "Sample Custom Policies"
+    WSO2 provides a set of sample custom policies to help you get started. You can find them in the [api-platform sample policies repository](https://github.com/wso2/api-platform/tree/main/gateway/sample-policies).
+
 ### Structure
 
 ```yaml
