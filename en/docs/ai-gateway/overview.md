@@ -1,49 +1,104 @@
 # AI Gateway Overview
 
-The AI Gateway provides a unified interface for managing AI services, including Large Language Model (LLM) providers and proxy configurations. It enables organizations to seamlessly integrate, manage, and govern AI capabilities within their API ecosystem.
+The AI Gateway is the standalone runtime plane for routing, securing, and observing AI traffic. It handles Large Language Model (LLM) APIs and Model Context Protocol (MCP) servers, and can run independently or connect to the AI Workspace control plane for centralized management.
 
-## AI Workspace 
+## Quick Start
 
-The AI Workspace is a comprehensive platform for managing AI services, including AI gateways, LLM providers, proxy configurations, and Model Context Protocol (MCP) integrations.
+- [LLM Quick Start Guide](llm/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
+- [MCP Quick Start Guide](mcp/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
 
-### AI Gateways
+## Key Concepts
 
-Create and manage AI gateway runtimes directly within the AI Workspace:
+### LLM Provider Template
 
-- **Create gateways**: Set up gateway runtimes to process and route AI requests
-- **Multiple deployment options**: Deploy via Quick Start, Virtual Machine, Docker, or Kubernetes
-- **Monitor gateway status**: Track the availability of your gateway deployments
+An LLM Provider Template defines the characteristics and behaviors specific to an AI service provider, such as OpenAI, Azure OpenAI, or other LLM platforms. It describes how the gateway should interpret and extract usage and operational metadata, including prompt, completion, total, and remaining token information, as well as request and response model metadata.
 
-Learn more in the [AI Gateways](ai-workspace/ai-gateways/setting-up.md) section.
+Following templates are shipped out-of-the-box
 
-### LLM Providers
+- OpenAI
+- Azure OpenAI
+- Anthropic
+- AWS Bedrock
+- Azure AI Foundry
+- Gemini
 
-Connect to various LLM service providers and manage their configurations:
+### LLM Provider
 
-- **Connect OpenAI, Anthropic, and more**: Integrate multiple AI service providers
-- **Manage provider credentials**: Securely store and manage API keys and authentication
-- **Monitor provider status**: Track the availability and health of connected providers
+An LLM Provider represents a connection from the gateway runtime to an AI backend service such as OpenAI, Azure OpenAI, or other LLM APIs. Administrators configure LLM Providers to define:
 
-Learn more in the [LLM Providers](ai-workspace/llm-providers/overview.md) section.
+- The LLM Provider Template
+- The upstream LLM service URL
+- Authentication credentials (API keys, tokens)
+- Access control rules for which endpoints are exposed
+- Budget control policies, such as token-based rate limiting
+- Organization-wide policies such as guardrails
 
-### LLM Proxies
+Once configured, the LLM Provider allows traffic to flow through the gateway to the AI backend.
 
-Create and manage proxy endpoints for your LLM services:
+### LLM Proxy
 
-- **Create proxy endpoints**: Set up endpoints for routing AI requests
-- **Attach policies and guardrails**: Apply rate limiting, content filtering, and security policies
-- **Track proxy traffic**: Monitor usage and performance metrics
+An LLM Proxy allows developers to create custom API endpoints that consume an LLM Provider, while inheriting administrator-enforced access control, budgeting and organization-wide policies defined at the provider level. Each proxy gets its own URL context (e.g., `/assistant`) and can have its own policies applied. This enables:
 
-Learn more in the [LLM Proxies](ai-workspace/llm-proxies/overview.md) section.
+- Multiple AI applications to share a single LLM Provider
+- Per-application policies such as prompt management and guardrails
+- Separation between platform administration and application development
 
-### MCP Proxies
+### MCP Proxy
 
-Create and manage Model Context Protocol (MCP) proxies
+An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a protocol that enables AI assistants to interact with external tools and data sources. With MCP Proxies, you can:
 
-- **Proxy an existing MCP server**: Create an MCP proxy by providing the server URL
-- **Attach policies**: Apply MCP-specific or generic policies
-- **Track MCP traffic**: View MCP-related analytics
+- Expose MCP servers through a centralized gateway
+- Apply authentication and access control to MCP traffic
+- Manage multiple MCP servers from a single control plane
 
-Learn more in the [MCP Proxies](ai-workspace/mcp-proxies/overview.md) section.
+## Control Plane Integration
 
-To get started, refer to the [Getting Started](ai-workspace/getting-started.md) guide.
+The AI Gateway can be managed in two ways:
+
+- Directly through the Gateway-Controller API for standalone deployments
+- Through the [AI Workspace](../ai-workspace/overview.md), which acts as the control plane for connected gateway runtimes
+
+Use AI Workspace when you want a UI-driven control plane for gateway registration, provider and proxy management, policy configuration, and deployment workflows.
+
+## Default Ports
+
+| Port | Service | Description |
+|------|---------|-------------|
+| 8080 | Router | HTTP traffic |
+| 8443 | Router | HTTPS traffic |
+| 9090 | Gateway-Controller | REST API |
+| 9094 | Gateway-Controller Admin | Health and admin endpoints |
+
+## Architecture
+
+```
+                           ┌─────────────────┐
+                           │ LLM Providers   │
+                           │ (OpenAI, etc.)  │
+                           └────────▲────────┘
+                                    │
+┌──────────┐    ┌──────────────┐    │
+│ AI Apps  │───▶│  AI Gateway  │────┤
+└──────────┘    └──────────────┘    │
+                                    │
+                           ┌────────▼────────┐
+                           │  MCP Servers    │
+                           └─────────────────┘
+```
+
+**How it works:**
+
+1. Administrators verify the Gateway-Controller admin health endpoint and configure the gateway either through the Gateway-Controller API or through AI Workspace
+2. Developers create LLM Proxies to build AI applications on top of available providers
+3. The gateway routes traffic, applies policies, and manages authentication
+
+## Documentation
+
+| Section | Description |
+|---------|-------------|
+| [llm/](llm/) | LLM provider configuration, guardrails, prompt management, and semantic caching |
+| [mcp/](mcp/) | MCP proxy setup and policies |
+| [observability/](observability/) | Logging and tracing configuration |
+| [analytics/](analytics/) | Analytics integrations (Moesif) |
+| [rest-apis/gateway/](../rest-apis/gateway/) | REST API authentication and usage |
+| [AI Workspace](../ai-workspace/overview.md) | Control plane for managing connected AI Gateway runtimes |

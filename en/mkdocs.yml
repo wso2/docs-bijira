@@ -159,45 +159,83 @@ nav:
       - Govern API Proxy: governance/govern-api-proxy.md
   - AI Gateway:
       - Overview: ai-gateway/overview.md
-      - AI Workspace:
-          - Getting Started: ai-gateway/ai-workspace/getting-started.md
-          - Setting Up: ai-gateway/ai-workspace/ai-gateways/setting-up.md
-          - LLM Providers:
-              - Overview: ai-gateway/ai-workspace/llm-providers/overview.md
-              - Configure Provider: ai-gateway/ai-workspace/llm-providers/configure-provider.md
-              - Manage Provider: ai-gateway/ai-workspace/llm-providers/manage-provider.md
-          - LLM Proxies:
-              - Overview: ai-gateway/ai-workspace/llm-proxies/overview.md
-              - Configure Proxy: ai-gateway/ai-workspace/llm-proxies/configure-proxy.md
-              - Manage Proxy: ai-gateway/ai-workspace/llm-proxies/manage-proxy.md
-          - MCP Proxies:
-              - Overview: ai-gateway/ai-workspace/mcp-proxies/overview.md
-              - Configure Proxy: ai-gateway/ai-workspace/mcp-proxies/configure-proxy.md
-              - Apply Policies: ai-gateway/ai-workspace/mcp-proxies/apply-policies.md
-          - Configure Inbound Auth: ai-gateway/ai-workspace/configure-inbound-auth.md
-          - Invoke via SDKs: ai-gateway/ai-workspace/using-sdks.md
-#          - Insights: ai-gateway/ai-workspace/insights.md
-          - Policies:
-              - Overview: ai-gateway/ai-workspace/policies/overview.md
-              - Guardrails:
-                  - Overview: ai-gateway/ai-workspace/policies/guardrails/overview.md
-#                  - Semantic Prompt Guard: ai-gateway/ai-workspace/policies/guardrails/semantic-prompt-guard.md
-                  - PII Masking Regex: ai-gateway/ai-workspace/policies/guardrails/regex-pii-masking.md
-                  - Azure Content Safety: ai-gateway/ai-workspace/policies/guardrails/azure-content-safety.md
-                  - Word Count: ai-gateway/ai-workspace/policies/guardrails/word-count-guardrail.md
-                  - Sentence Count: ai-gateway/ai-workspace/policies/guardrails/sentence-count-guardrail.md
-              - Rate Limit:
-                  - LLM Cost: ai-gateway/ai-workspace/policies/rate-limit/llm-cost.md
-                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/token-based-rate-limit.md
-                  - LLM Cost-Based Rate Limit: ai-gateway/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
-              - Other Policies:
-#                  - Token-Based Rate Limit: ai-gateway/ai-workspace/policies/other-policies/token-based-rate-limit.md
-#                  - Rate Limit - Basic: ai-gateway/ai-workspace/policies/other-policies/basic-rate-limit.md
-                  - Model Round Robin: ai-gateway/ai-workspace/policies/other-policies/model-round-robin.md
-                  - Prompt Decorator: ai-gateway/ai-workspace/policies/other-policies/prompt-decorator.md
-                  - Prompt Template: ai-gateway/ai-workspace/policies/other-policies/prompt-template.md
-                  - Semantic Cache: ai-gateway/ai-workspace/policies/other-policies/semantic-cache.md
-              - Writing an AI Policy: ai-gateway/ai-workspace/policies/writing-an-ai-policy.md
+      - LLM:
+        - Quick Start Guide: ai-gateway/llm/quick-start-guide.md
+        - LLM Provider Templates: ai-gateway/llm/llm-templates.md
+        - Guardrails:
+          - AWS Bedrock Guardrail: ai-gateway/llm/guardrails/aws-bedrock-guardrail.md
+          - Azure Content Safety: ai-gateway/llm/guardrails/azure-content-safety.md
+          - Content Length Guardrail: ai-gateway/llm/guardrails/content-length.md
+          - JSON Schema Guardrail: ai-gateway/llm/guardrails/json-schema.md
+          - PII Masking Regex Guardrail: ai-gateway/llm/guardrails/pii-masking-regex.md
+          - Regex Guardrail: ai-gateway/llm/guardrails/regex.md
+          - Semantic Prompt Guardrail: ai-gateway/llm/guardrails/semantic-prompt-guard.md
+          - Semantic Tool Filtering: ai-gateway/llm/guardrails/semantic-tool-filtering.md
+          - Sentence Count Guardrail: ai-gateway/llm/guardrails/sentence-count.md
+          - URL Guardrail: ai-gateway/llm/guardrails/url.md
+          - Word Count Guardrail: ai-gateway/llm/guardrails/word-count.md
+        - Load Balancing:
+          - Model Round Robin: ai-gateway/llm/load-balancing/model-round-robin.md
+          - Model Weighted Round Robin: ai-gateway/llm/load-balancing/model-weighted-round-robin.md
+        - Prompt Management:
+          - Prompt Decorator: ai-gateway/llm/prompt-management/prompt-decorator.md
+          - Prompt Template: ai-gateway/llm/prompt-management/prompt-template.md
+        - Semantic Caching: ai-gateway/llm/semantic-caching.md
+      - MCP:
+        - Quick Start Guide: ai-gateway/mcp/quick-start-guide.md
+        - Policies:
+          - MCP Access Control List: ai-gateway/mcp/policies/mcp-acl-list.md
+          - MCP Authentication: ai-gateway/mcp/policies/mcp-authentication.md
+          - MCP Authorization: ai-gateway/mcp/policies/mcp-authorization.md
+          - MCP Rewrite: ai-gateway/mcp/policies/mcp-rewrite.md
+      - Observability:
+        - Logging: ai-gateway/observability/logging.md
+        - Tracing: ai-gateway/observability/tracing.md
+      - Analytics:
+        - Moesif Analytics: ai-gateway/analytics/moesif-analytics.md
+        - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
+  - AI Workspace:
+      - Overview: ai-workspace/overview.md
+      - Getting Started: ai-workspace/getting-started.md
+      - AI Gateways:
+          - Setting Up: ai-workspace/ai-gateways/setting-up.md
+      - LLM Providers:
+          - Overview: ai-workspace/llm-providers/overview.md
+          - Configure Provider: ai-workspace/llm-providers/configure-provider.md
+          - Manage Provider: ai-workspace/llm-providers/manage-provider.md
+      - App LLM Proxies:
+          - Overview: ai-workspace/llm-proxies/overview.md
+          - Configure App LLM Proxy: ai-workspace/llm-proxies/configure-proxy.md
+          - Manage App LLM Proxy: ai-workspace/llm-proxies/manage-proxy.md
+      - MCP Proxies:
+          - Overview: ai-workspace/mcp-proxies/overview.md
+          - Configure Proxy: ai-workspace/mcp-proxies/configure-proxy.md
+          - Apply Policies: ai-workspace/mcp-proxies/apply-policies.md
+      - GenAI Applications: ai-workspace/genai-applications.md
+      - Configure Inbound Auth: ai-workspace/configure-inbound-auth.md
+      - Invoke via SDKs: ai-workspace/using-sdks.md
+#      - Insights: ai-workspace/insights.md
+      - Policies:
+          - Overview: ai-workspace/policies/overview.md
+          - Guardrails:
+              - Overview: ai-workspace/policies/guardrails/overview.md
+#              - Semantic Prompt Guard: ai-workspace/policies/guardrails/semantic-prompt-guard.md
+              - PII Masking Regex: ai-workspace/policies/guardrails/regex-pii-masking.md
+              - Azure Content Safety: ai-workspace/policies/guardrails/azure-content-safety.md
+              - Word Count: ai-workspace/policies/guardrails/word-count-guardrail.md
+              - Sentence Count: ai-workspace/policies/guardrails/sentence-count-guardrail.md
+          - Rate Limit:
+              - LLM Cost: ai-workspace/policies/rate-limit/llm-cost.md
+              - Token-Based Rate Limit: ai-workspace/policies/rate-limit/token-based-rate-limit.md
+              - LLM Cost-Based Rate Limit: ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
+          - Other Policies:
+#              - Token-Based Rate Limit: ai-workspace/policies/other-policies/token-based-rate-limit.md
+#              - Rate Limit - Basic: ai-workspace/policies/other-policies/basic-rate-limit.md
+              - Model Round Robin: ai-workspace/policies/other-policies/model-round-robin.md
+              - Prompt Decorator: ai-workspace/policies/other-policies/prompt-decorator.md
+              - Prompt Template: ai-workspace/policies/other-policies/prompt-template.md
+              - Semantic Cache: ai-workspace/policies/other-policies/semantic-cache.md
+          - Writing an AI Policy: ai-workspace/policies/writing-an-ai-policy.md
   - API Gateway:
       # - Overview: api-platform-gateway/overview.md
       # - API Platform Cloud Gateway: api-platform-gateway/cloud-gateway.md
@@ -397,6 +435,9 @@ extra:
       level: 1
     AI Gateway:
       icon: octicons/cpu-16
+      level: 1
+    AI Workspace:
+      icon: octicons/project-roadmap-16
       level: 1
     API Gateway:
       icon: octicons/globe-16
