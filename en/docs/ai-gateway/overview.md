@@ -96,9 +96,9 @@ Use AI Workspace when you want a UI-driven control plane for gateway registratio
 
 | Section | Description |
 |---------|-------------|
-| [llm/](llm/) | LLM provider configuration, guardrails, prompt management, and semantic caching |
-| [mcp/](mcp/) | MCP proxy setup and policies |
-| [observability/](observability/) | Logging and tracing configuration |
-| [analytics/](analytics/) | Analytics integrations (Moesif) |
-| [rest-apis/gateway/](../rest-apis/gateway/) | REST API authentication and usage |
+| [llm/](llm/index.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
+| [mcp/](mcp/index.md) | MCP proxy setup and policies |
+| [observability/](observability/index.md) | Logging and tracing configuration |
+| [analytics/](analytics/index.md) | Analytics integrations (Moesif) |
+| [Gateway-Controller API](gateway-controller-api.md) | Standalone gateway REST API usage for providers and proxies |
 | [AI Workspace](../ai-workspace/overview.md) | Control plane for managing connected AI Gateway runtimes |

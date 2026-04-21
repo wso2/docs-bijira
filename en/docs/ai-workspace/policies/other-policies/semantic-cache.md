@@ -58,7 +58,7 @@ vector_db_provider_ttl = 3600
 
 | Provider | `vector_db_provider` value | Notes |
 |----------|---------------------------|-------|
-| Redis | `REDIS` | Requires [RediSearch](https://redis.io/docs/stack/search/) module |
+| Redis | `REDIS` | Requires [Redis Search](https://redis.io/docs/latest/develop/ai/search-and-query/) module |
 | Milvus | `MILVUS` | Better suited for large-scale deployments (>1M vectors) |
 
 ## Add This Policy
