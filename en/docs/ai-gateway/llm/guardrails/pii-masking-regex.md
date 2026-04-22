@@ -105,7 +105,7 @@ spec:
               - piiEntity: "PHONE"
                 piiRegex: "\\+?[1-9]\\d{1,14}"
             jsonPath: "$.messages[0].content"
-            redactPII: true
+            redactPII: false
 EOF
 ```
 
