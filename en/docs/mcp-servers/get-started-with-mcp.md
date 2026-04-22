@@ -12,7 +12,7 @@ MCP follows a host–client–server architecture and supports two primary trans
 > - Streamable HTTP (SSE) is designed for **remote, network-based communication**.  
 >  
 > **MCP servers deployed on the WSO2 API Platform are hosted and accessed over the network. Therefore, only streamable HTTP (SSE) transport is supported.**  
-> MCP clients connecting to API Platform must be configured to use HTTP/SSE, not `stdio`.
+> MCP clients connecting to API Platform must be configured to use streamable HTTP (SSE), not `stdio`.
 
 For more information, refer to the official [specification](https://modelcontextprotocol.io/introduction).
 
