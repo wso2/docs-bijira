@@ -281,10 +281,12 @@ spec:
 
 To create an LLM provider using any of the out-of-the-box templates:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
@@ -333,7 +335,7 @@ To list all available LLM provider templates:
 
 ```bash
 curl -X GET http://localhost:9090/llm-provider-templates \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic <BASE64_CREDENTIAL>"
 ```
 
 ### Retrieving a Specific Template
@@ -342,7 +344,7 @@ To retrieve details of a specific template:
 
 ```bash
 curl -X GET http://localhost:9090/llm-provider-templates/openai \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic <BASE64_CREDENTIAL>"
 ```
 
 ### Creating Custom Templates
@@ -352,7 +354,7 @@ Platform administrators can create custom templates for LLM providers not covere
 ```bash
 curl -X POST http://localhost:9090/llm-provider-templates \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProviderTemplate
@@ -373,7 +375,7 @@ To update an existing custom template:
 ```bash
 curl -X PUT http://localhost:9090/llm-provider-templates/custom-provider \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProviderTemplate
@@ -394,7 +396,7 @@ To delete a custom template:
 
 ```bash
 curl -X DELETE http://localhost:9090/llm-provider-templates/custom-provider \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic <BASE64_CREDENTIAL>"
 ```
 
 **Note**: Out-of-the-box templates cannot be deleted or modified. Only custom templates created by platform administrators can be updated or deleted.

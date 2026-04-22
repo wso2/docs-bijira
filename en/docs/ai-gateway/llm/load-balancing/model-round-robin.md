@@ -52,10 +52,12 @@ The policy requires `requestModel` configuration from the LLM provider template 
 
 Deploy an LLM provider with round-robin load balancing across multiple models:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider

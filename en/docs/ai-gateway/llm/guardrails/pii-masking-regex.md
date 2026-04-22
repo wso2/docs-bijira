@@ -63,10 +63,12 @@ If `jsonPath` is empty or not specified, the entire payload is processed as a st
 
 Deploy an LLM provider that masks email addresses and phone numbers in requests and restores them in responses:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider

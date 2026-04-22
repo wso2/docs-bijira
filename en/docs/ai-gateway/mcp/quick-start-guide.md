@@ -47,10 +47,12 @@ docker run -p 3001:3001 --name everything --network ai-gateway_gateway-network r
 
 Run the following command to deploy the MCP proxy.
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/mcp-proxies \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp

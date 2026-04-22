@@ -67,10 +67,12 @@ The weighted sequence would be: `[A, A, A, B, B, C]`, meaning:
 
 Deploy an LLM provider with weighted round-robin load balancing:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
@@ -143,7 +145,7 @@ When a model returns a 5xx or 429 response, the policy can automatically suspend
 
 - If all models are suspended, the policy returns HTTP 503 with error: "All models are currently unavailable"
 - Suspension period starts from the time of failure
-- When a model is suspended, the weighted sequence is dynamically adjusted to exclude that model
+- When a model is suspended, its entries in the pre-computed weighted sequence are skipped during traversal until the suspension period expires
 
 ## Use Cases
 
@@ -213,8 +215,9 @@ For models with weights [5, 3, 2]:
 
 ## Notes
 
-- The weighted sequence is pre-computed once during policy initialization and reused for all requests. It is not rebuilt on each request.
+- The weighted sequence is pre-computed once during policy initialization and reused for all requests; suspended models are excluded by skipping their entries during traversal, not by rebuilding the sequence.
 - The round-robin index is maintained per policy instance and increments for each request.
+- This does not reset the round-robin index, so observed traffic shares temporarily shift toward healthy models until the suspended model recovers.
 - Model selection follows the weighted sequence in a deterministic cyclic pattern.
 - The original model from the request is stored in metadata but is replaced with the selected model for routing.
 - If `suspendDuration` is 0, failed models are not suspended and will continue to be selected in the weighted round-robin cycle.

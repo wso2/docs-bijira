@@ -115,10 +115,12 @@ The policy supports JSONPath expressions to extract specific text from request b
 
 Deploy an LLM provider with semantic caching using OpenAI embeddings and Redis vector store:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider

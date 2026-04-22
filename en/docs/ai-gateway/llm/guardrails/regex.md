@@ -62,10 +62,12 @@ The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key 
 
 Deploy an LLM provider that protects against sensitive data leaks by blocking any payloads that mention the word "password" (case-insensitive) in either the user’s message or the LLM’s response. This is achieved by using the regex policy to validate both request and response payloads:
 
+For local or development environments only, the default credentials may be `admin:admin` encoded as `YWRtaW46YWRtaW4=`.
+
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
