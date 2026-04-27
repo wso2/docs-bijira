@@ -256,6 +256,8 @@ nav:
       - Discover APIs:
           - Search APIs: devportal/discover-apis/api-search.md
           - Documentations: devportal/discover-apis/api-documentations.md
+      - API Workflows:
+          - Consuming API Workflows: devportal/api-workflows/consuming-api-workflows.md
       - Consume an API:
           - Consume an API Secured with OAuth2: devportal/consuming-services/consume-an-api-secured-with-oauth2.md
           - Consume an API Secured with API Key: devportal/consuming-services/consume-an-api-secured-with-api-key.md
@@ -265,6 +267,9 @@ nav:
           - Subscribe to an API: devportal/manage-subscriptions/subscribe-to-an-api.md
       - SDK Generation:
           - AI Assisted SDK Generation: devportal/sdk-generation/ai-assisted-sdk-generation.md
+      - Admin Settings:
+          - LLM Instructions: devportal/admin-settings/llm-instructions.md
+          - Managing API Workflows: devportal/admin-settings/managing-api-workflows.md
 
 # Extensions
 markdown_extensions:
