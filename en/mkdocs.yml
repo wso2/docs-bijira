@@ -262,6 +262,7 @@ nav:
         - Overview: monitoring-and-insights/logs/overview.md
         - Runtime Logs: monitoring-and-insights/logs/runtime-logs.md
         - Audit Logs: monitoring-and-insights/logs/audit-logs.md
+      - Insights: monitoring-and-insights/insights.md
       - Integrate API Platform with Moesif: monitoring-and-insights/integrate-bijira-with-moesif.md
   - API Monetization:
       - Overview: api-monetization/overview.md
