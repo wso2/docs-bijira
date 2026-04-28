@@ -28,7 +28,7 @@ This dashboard is especially useful for answering broad questions such as:
 
 ![Insights Overview](../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
 
-### Summary metrics
+### Summary Metrics
 
 | Metric | Description |
 |---|---|
@@ -39,55 +39,136 @@ This dashboard is especially useful for answering broad questions such as:
 | **MCP Traffic** | Total number of MCP tool call events in the selected time range. This is useful for tracking agent-initiated activity across MCP servers and tools. Click **View Details** to drill down. |
 | **API Traffic** | Total number of API calls processed across all supported API types. Compare this with LLM and MCP activity to understand the dominant traffic pattern on the platform. Click **View Details** to drill down. |
 
-### Overall Platform Metrics
+### Charts and Visualizations
 
-Shows traffic, errors, and throttled requests over time. Use it to see whether spikes in traffic align with failures or throttling, and to distinguish between demand-related issues and more isolated failures.
+**Overall Platform Metrics** — Shows traffic, errors, and throttled requests over time. Use it to see whether spikes in traffic align with failures or throttling, and to distinguish between demand-related issues and more isolated failures.
 
-### Consumer Onboarding Trend
+**Consumer Onboarding Trend** — Tracks new consumer registrations over time. This is useful for understanding growth, measuring the effect of onboarding or product changes, and identifying whether increased traffic is being driven by new adoption.
 
-Tracks new consumer registrations over time. This is useful for understanding growth, measuring the effect of onboarding or product changes, and identifying whether increased traffic is being driven by new adoption.
+**Top Applications** — Ranks applications by traffic volume so you can identify the consumers generating the most load. This is particularly helpful when planning capacity, investigating noisy consumers, or prioritizing customer-facing support.
 
-### Top Applications
+**Top APIs Across Platform** — Highlights the most frequently called APIs across all traffic types. This helps you identify which APIs are most critical to day-to-day traffic and therefore most important for reliability, optimization, and incident response.
 
-Ranks applications by traffic volume so you can identify the consumers generating the most load. This is particularly helpful when planning capacity, investigating noisy consumers, or prioritizing customer-facing support.
+**Traffic Breakdown** — A pie chart showing the proportion of total traffic by gateway type — LLM, MCP, and API. Use this to understand how traffic is distributed across your platform.
 
-### Top APIs Across Platform
+**Traffic Intensity (Day vs Hour)** — Displays request volume by day of week and hour of day. Use it to spot recurring usage patterns, plan maintenance windows, and prepare infrastructure for predictable peak periods.
 
-Highlights the most frequently called APIs across all traffic types. This helps you identify which APIs are most critical to day-to-day traffic and therefore most important for reliability, optimization, and incident response.
+**Top Platforms** — Shows the distribution of operating systems used by consumers. This helps you understand the client environments accessing your platform and can inform client compatibility or support decisions.
 
-### Traffic Breakdown
+**Top User Agents** — Breaks down request traffic by HTTP user agent so you can distinguish browser, SDK, and automated traffic. It is useful when you want to understand how users and integrations are interacting with your platform.
 
-A pie chart showing the proportion of total traffic by gateway type — **LLM**, **MCP**, and **API**. Use this to understand how traffic is distributed across your platform.
+**Average Latency over Time** — Tracks average response latency across the platform. Sustained increases can point to backend degradation, upstream issues, or load-related performance problems that require deeper investigation.
 
-### Traffic Intensity (Day vs Hour)
-
-Displays request volume by day of week and hour of day. Use it to spot recurring usage patterns, plan maintenance windows, and prepare infrastructure for predictable peak periods.
-
-### Top Platforms
-
-Shows the distribution of operating systems used by consumers. This helps you understand the client environments accessing your platform and can inform client compatibility or support decisions.
-
-### Top User Agents
-
-Breaks down request traffic by HTTP user agent so you can distinguish browser, SDK, and automated traffic. It is useful when you want to understand how users and integrations are interacting with your platform.
-
-### Average Latency over Time
-
-Tracks average response latency across the platform. Sustained increases can point to backend degradation, upstream issues, or load-related performance problems that require deeper investigation.
-
-### Geo Map
-
-Shows where requests originate geographically. Switch between **Density Heatmap** and **Metric Heatmap** views. This can help with decisions around regional deployments, CDN placement, compliance planning, and understanding where user demand is concentrated.
+**Geo Map** — Shows where requests originate geographically. Switch between **Density Heatmap** and **Metric Heatmap** views. This can help with decisions around regional deployments, CDN placement, compliance planning, and understanding where user demand is concentrated.
 
 ---
 
-## LLM Traffic
+## APIs
 
-The LLM Traffic dashboard provides observability for LLM usage on API Platform. It helps you track provider and model adoption, token consumption, estimated cost, latency, guardrail activity, and semantic cache performance.
+The APIs section provides analytics by API type, covering REST, Async, GraphQL, gRPC, and SOAP traffic. These dashboards help you understand not just how much API traffic the platform is handling, but also which protocol types are most active, where errors are concentrated, and how performance changes across different API styles.
+
+### All APIs Analytics
+
+The All APIs Analytics dashboard combines traffic from every API type into a single view. It is the right dashboard to use when you want to compare traffic behavior across protocols before drilling into a specific API style such as REST or GraphQL.
+
+This dashboard is useful for questions such as:
+
+- Which API protocol contributes the most traffic?
+- Is an increase in latency affecting all API traffic or only a subset?
+- Are failures spread across the platform or concentrated in one type of API?
+
+#### Summary Metrics
+
+| Metric | Description |
+|---|---|
+| **Total Requests** | Total number of API calls across all API types in the selected time range. This gives you the broadest view of platform API demand. |
+| **Average Latency** | Mean response time across all API requests. Use this as a high-level performance indicator before investigating protocol-specific dashboards. |
+| **Error Rate** | Percentage of API requests that resulted in an error. This helps you determine whether failures are isolated or widespread across API traffic. |
+| **Unique Consumers** | Number of distinct users or applications making API calls. This indicates how broadly the APIs are being used across your consumer base. |
+
+#### API Type Breakdown
+
+Cards for each protocol type let you quickly compare relative traffic volumes and navigate to the corresponding drill-down views:
+
+| API Type | Description |
+|---|---|
+| **REST API Traffic** | Number of REST API calls. Click **View Details** to drill further. |
+| **Async API Traffic** | Number of asynchronous API calls, such as event-driven or message-based requests. |
+| **GraphQL API Traffic** | Number of GraphQL queries and mutations. |
+| **gRPC API Traffic** | Number of gRPC remote procedure calls. |
+| **SOAP API Traffic** | Number of SOAP/XML web service calls. |
+
+#### Charts and Visualizations
+
+**Traffic Volume over Time** — Shows request count and average latency on the same chart, making it easier to correlate traffic growth with performance changes. It is especially helpful for checking whether rising usage is contributing to slower responses.
+
+**Error Type Breakdown** — Breaks errors into categories so you can quickly identify the most common failure type. This gives you an immediate sense of whether issues are mostly related to authentication, client behavior, backend systems, or other causes.
+
+**Error Rate Trend** — Shows how the error rate changes over time. This is especially useful for spotting regressions after deployments, validating fixes, and identifying intermittent issues that may not appear in aggregate metrics.
+
+![All APIs Analytics](../assets/img/monitoring-and-insights/insights-4.png){.cInlineImage-full}
+
+**Traffic Intensity (Day vs Hour)** — Highlights when demand is highest by showing request volume by day and hour. Use it to understand recurring demand patterns and to align scaling or maintenance activities with real usage behavior.
+
+**Top Platforms** — A pie chart showing the distribution of API calls by client platform.
+
+**Top User Agents** — A pie chart showing the distribution of API calls by user agent.
+
+### REST API Analytics
+
+The REST API Analytics dashboard is a protocol-specific drill-down for REST traffic. Click **View Details** on the REST API Traffic card in the All APIs Analytics dashboard to open this view. You can also filter by a specific API using the **API** search field at the top.
+
+Because REST traffic often represents the largest share of gateway traffic, this dashboard is particularly useful for day-to-day operational monitoring, troubleshooting client-facing issues, and identifying optimization opportunities.
+
+!!! note
+    Clicking any API type traffic card (REST, Async, GraphQL, gRPC, or SOAP) in the All APIs Analytics dashboard opens a drill-down dashboard for that protocol. Each drill-down follows the same layout as the REST API Analytics dashboard described below.
+
+#### Summary Metrics
+
+| Metric | Description |
+|---|---|
+| **Total Requests** | Total number of REST API calls in the selected time range. Use this to gauge the overall scale of REST traffic. |
+| **Average Latency** | Mean response time for REST requests. This is a key indicator of the responsiveness of your REST APIs. |
+| **Error Rate** | Percentage of REST requests that returned an error. This helps you quickly determine whether consumers are experiencing failures at a significant rate. |
+| **Unique Consumers** | Number of distinct consumers calling REST APIs. This reflects how widely REST APIs are being adopted across applications and users. |
+
+#### Charts and Visualizations
+
+**Traffic Volume over Time** — Shows REST request volume together with latency so you can spot periods where rising demand may be affecting performance. This is one of the quickest ways to identify whether slowdowns are traffic-related.
+
+**Error Type Breakdown** — Categorizes REST errors to help determine whether failures are caused by authentication issues, invalid requests, rate limiting, or server-side problems.
+
+**Error Rate Trend** — Shows how REST error levels change over time, making it easier to pinpoint when a problem started and whether it is improving or worsening.
+
+![REST API Analytics](../assets/img/monitoring-and-insights/insights-5.png){.cInlineImage-full}
+
+**Traffic Intensity (Day vs Hour)** — Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
+
+**HTTP Status Codes over Time** — Breaks responses into 2xx, 4xx, and 5xx classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
+
+**Application Usage Detail** — Lists the applications using the REST APIs, along with owner, usage count, error rate, and average latency. This helps identify which consumers are generating the most load, which ones are seeing the most errors, and which integrations may require follow-up.
+
+**REST API Usage over Time** — Shows traffic trends for individual REST APIs, making it easier to track which APIs are growing, declining, or behaving unusually. It is useful when investigating issues affecting a specific API rather than the entire REST layer.
+
+**Cache Hit Percentage** — Tracks total hits, cache hits, and hit percentage over time. Higher cache hit rates usually reduce backend load and improve response times, so this chart helps you understand whether caching is working effectively.
+
+**Cache Latency** — Shows the latency associated with cached responses so you can understand the performance benefit of caching and whether cached responses are materially improving user experience.
+
+**Top Platforms** — Shows the operating systems used by REST API consumers. This gives you a better understanding of the environments from which REST traffic originates.
+
+**Top User Agents** — Shows the HTTP clients, browsers, SDKs, or tools making REST API calls. This can be helpful when diagnosing traffic patterns tied to a specific client or integration.
+
+**Geo Map** — Displays the geographic origin of REST API traffic, with support for both **Density Heatmap** and **Metric Heatmap** views. Use it to understand regional demand and identify whether location-specific patterns are affecting usage or performance.
+
+---
+
+## LLM APIs Analytics
+
+The LLM APIs Analytics dashboard provides observability for LLM usage on API Platform. It helps you track provider and model adoption, token consumption, estimated cost, latency, guardrail activity, and semantic cache performance.
 
 This dashboard is especially useful for teams building AI-powered experiences because it combines operational insight with cost visibility. Instead of looking only at traffic volume, you can also understand how requests are distributed across providers and models, how much those requests are costing, and whether safeguards such as guardrails or semantic caching are working as expected.
 
-### Summary metrics
+### Summary Metrics
 
 | Metric | Description |
 |---|---|
@@ -98,7 +179,7 @@ This dashboard is especially useful for teams building AI-powered experiences be
 | **Estimated Cost** | Approximate cost of token usage based on provider pricing. This helps you connect usage growth to financial impact. |
 | **Average Latency** | Mean end-to-end response time for LLM requests. This is important for understanding user-perceived responsiveness in AI-assisted features. |
 
-### Charts and visualizations
+### Charts and Visualizations
 
 **Requests by Provider** — Shows request volume by LLM provider so you can understand provider distribution and traffic share. This is useful when comparing vendor usage, planning failover strategies, or managing commercial dependencies.
 
@@ -124,13 +205,13 @@ This dashboard is especially useful for teams building AI-powered experiences be
 
 ---
 
-## MCP Traffic
+## MCP Analytics
 
-The MCP Traffic dashboard provides visibility into Model Context Protocol server activity. It helps you monitor tool call volume, consumer sessions, error rates, and traffic distribution across MCP servers and clients.
+The MCP Analytics dashboard provides visibility into Model Context Protocol server activity. It helps you monitor tool call volume, consumer sessions, error rates, and traffic distribution across MCP servers and clients.
 
 This dashboard is useful when AI agents or MCP-enabled clients are interacting with tools exposed through your platform. It helps you understand which tools are being used most often, whether agents are succeeding or failing, and how activity is distributed across MCP servers and client environments.
 
-### Summary metrics
+### Summary Metrics
 
 | Metric | Description |
 |---|---|
@@ -139,7 +220,7 @@ This dashboard is useful when AI agents or MCP-enabled clients are interacting w
 | **Error Rate** | Percentage of MCP tool calls that resulted in an error. Use this to monitor the reliability of tool execution across MCP interactions. |
 | **Unique Sessions** | Number of distinct MCP sessions, typically representing individual agent or client interactions. This helps you estimate how many separate MCP conversations or runs are taking place. |
 
-### Charts and visualizations
+### Charts and Visualizations
 
 **Traffic Volume over Time** — Shows MCP event count together with latency so you can identify spikes in activity or slower tool execution. This is useful when diagnosing whether increased tool usage is affecting response time.
 
@@ -156,132 +237,3 @@ This dashboard is useful when AI agents or MCP-enabled clients are interacting w
 **Server Distribution** — Shows which MCP servers are handling traffic so you can understand load distribution across your MCP server fleet and identify over-reliance on a particular server.
 
 **Client Distribution** — Shows the distribution of MCP clients by type, helping you identify which runtimes or development environments are driving usage and where MCP adoption is strongest.
-
----
-
-## API Traffic
-
-The API Traffic view provides analytics by API type, covering REST, Async, GraphQL, gRPC, and SOAP traffic. It helps you understand not just how much API traffic the platform is handling, but also which protocol types are most active, where errors are concentrated, and how performance changes across different API styles.
-
-This dashboard is useful for questions such as:
-
-- Which API protocol contributes the most traffic?
-- Is an increase in latency affecting all API traffic or only a subset?
-- Are failures spread across the platform or concentrated in one type of API?
-
-### Summary metrics
-
-| Metric | Description |
-|---|---|
-| **Total Requests** | Total number of API calls across all API types in the selected time range. This gives you the broadest view of platform API demand. |
-| **Average Latency** | Mean response time across all API requests. Use this as a high-level performance indicator before investigating protocol-specific dashboards. |
-| **Error Rate** | Percentage of API requests that resulted in an error. This helps you determine whether failures are isolated or widespread across API traffic. |
-| **Unique Consumers** | Number of distinct users or applications making API calls. This indicates how broadly the APIs are being used across your consumer base. |
-
-### API type breakdown
-
-Cards for each protocol type let you quickly compare relative traffic volumes and navigate to the corresponding drill-down views:
-
-| API Type | Description |
-|---|---|
-| **REST API Traffic** | Number of REST API calls. Click **View Details** to drill further. |
-| **Async API Traffic** | Number of asynchronous API calls, such as event-driven or message-based requests. |
-| **GraphQL API Traffic** | Number of GraphQL queries and mutations. |
-| **gRPC API Traffic** | Number of gRPC remote procedure calls. |
-| **SOAP API Traffic** | Number of SOAP/XML web service calls. |
-
-### Traffic Volume over Time
-
-Shows request count and average latency on the same chart, making it easier to correlate traffic growth with performance changes. It is especially helpful for checking whether rising usage is contributing to slower responses.
-
-### Error Type Breakdown
-
-Breaks errors into categories so you can quickly identify the most common failure type. This gives you an immediate sense of whether issues are mostly related to authentication, client behavior, backend systems, or other causes.
-
-### Error Rate Trend
-
-Shows how the error rate changes over time. This is especially useful for spotting regressions after deployments, validating fixes, and identifying intermittent issues that may not appear in aggregate metrics.
-
-![API Traffic Detail](../assets/img/monitoring-and-insights/insights-4.png){.cInlineImage-full}
-
-### Traffic Intensity (Day vs Hour)
-
-Highlights when demand is highest by showing request volume by day and hour. Use it to understand recurring demand patterns and to align scaling or maintenance activities with real usage behavior.
-
-### Top Platforms
-
-A pie chart showing the distribution of API calls by client platform.
-
-### Top User Agents
-
-A pie chart showing the distribution of API calls by user agent.
-
----
-
-## REST API Detail
-
-The REST API detail view is a protocol-specific drill-down for REST traffic. Click **View Details** on the REST API Traffic card in the API Traffic dashboard to open this view. You can also filter by a specific API using the **API** search field at the top.
-
-Because REST traffic often represents the largest share of gateway traffic, this dashboard is particularly useful for day-to-day operational monitoring, troubleshooting client-facing issues, and identifying optimization opportunities.
-
-### Summary metrics
-
-| Metric | Description |
-|---|---|
-| **Total Requests** | Total number of REST API calls in the selected time range. Use this to gauge the overall scale of REST traffic. |
-| **Average Latency** | Mean response time for REST requests. This is a key indicator of the responsiveness of your REST APIs. |
-| **Error Rate** | Percentage of REST requests that returned an error. This helps you quickly determine whether consumers are experiencing failures at a significant rate. |
-| **Unique Consumers** | Number of distinct consumers calling REST APIs. This reflects how widely REST APIs are being adopted across applications and users. |
-
-### Traffic Volume over Time
-
-Shows REST request volume together with latency so you can spot periods where rising demand may be affecting performance. This is one of the quickest ways to identify whether slowdowns are traffic-related.
-
-### Error Type Breakdown
-
-Categorizes REST errors to help determine whether failures are caused by authentication issues, invalid requests, rate limiting, or server-side problems.
-
-### Error Rate Trend
-
-Shows how REST error levels change over time, making it easier to pinpoint when a problem started and whether it is improving or worsening.
-
-![REST API Detail Extended](../assets/img/monitoring-and-insights/insights-5.png){.cInlineImage-full}
-
-### Traffic Intensity (Day vs Hour)
-
-Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
-
-### HTTP Status Codes over Time
-
-Breaks responses into 2xx, 4xx, and 5xx classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
-
-### Application Usage Detail
-
-Lists the applications using the REST APIs, along with owner, usage count, error rate, and average latency. This helps identify which consumers are generating the most load, which ones are seeing the most errors, and which integrations may require follow-up.
-
-### REST API Usage over Time
-
-Shows traffic trends for individual REST APIs, making it easier to track which APIs are growing, declining, or behaving unusually. It is useful when investigating issues affecting a specific API rather than the entire REST layer.
-
-### Cache Hit Percentage
-
-Tracks total hits, cache hits, and hit percentage over time. Higher cache hit rates usually reduce backend load and improve response times, so this chart helps you understand whether caching is working effectively.
-
-### Cache Latency
-
-Shows the latency associated with cached responses so you can understand the performance benefit of caching and whether cached responses are materially improving user experience.
-
-### Top Platforms
-
-Shows the operating systems used by REST API consumers. This gives you a better understanding of the environments from which REST traffic originates.
-
-### Top User Agents
-
-Shows the HTTP clients, browsers, SDKs, or tools making REST API calls. This can be helpful when diagnosing traffic patterns tied to a specific client or integration.
-
-### Geo Map
-
-Displays the geographic origin of REST API traffic, with support for both **Density Heatmap** and **Metric Heatmap** views. Use it to understand regional demand and identify whether location-specific patterns are affecting usage or performance.
-
-!!! note
-    Clicking any API type traffic card (REST, Async, GraphQL, gRPC, or SOAP) in the API Traffic dashboard opens a drill-down dashboard for that protocol. Each drill-down follows the same layout as the REST API detail view described above.
