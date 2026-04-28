@@ -2,7 +2,7 @@
 
 This is the WSO2 API Platform documentation repository. This repository is open and we welcome your contributions!
 
-To see the API Platform documentation site, go to [https://wso2.com/bijira/docs/](https://wso2.com/bijira/docs/)
+To see the API Platform documentation site, go to [https://wso2.com/api-platform/docs/](https://wso2.com/api-platform/docs/)
 
 ## Local Development Setup
 

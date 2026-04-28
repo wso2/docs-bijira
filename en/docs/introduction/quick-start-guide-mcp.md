@@ -1,13 +1,13 @@
 # Quick Start Guide - MCP Server
 
-Bijira provides a complete solution for transforming existing APIs into intelligent, AI-ready tools using the Model Context Protocol (MCP). With a centralized control plane, Bijira simplifies the entire lifecycle of MCP server management from creation to discovery delivering a seamless experience for both API developers and AI agent builders.
+API Platform provides a complete solution for transforming existing APIs into intelligent, AI-ready tools using the Model Context Protocol (MCP). With a centralized control plane, API Platform simplifies the entire lifecycle of MCP server management from creation to discovery delivering a seamless experience for both API developers and AI agent builders.
 
-In this tutorial, you will use Bijira to create an MCP Server from an HTTP backend, test it using the MCP Playground, publish it, and connect it with an MCP client.
+In this tutorial, you will use API Platform to create an MCP Server from an HTTP backend, test it using the MCP Playground, publish it, and connect it with an MCP client.
 
 ## Prerequisites
 
-1. If you're signing in to the Bijira Console for the first time, create an organization:
-    1. Go to [Bijira Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
+1. If you're signing in to the API Platform Console for the first time, create an organization:
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
     2. Enter a unique organization name.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -16,7 +16,7 @@ In this tutorial, you will use Bijira to create an MCP Server from an HTTP backe
 
 ## Step 1: Create a Project
 
-1. Go to [Bijira Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
 3. Enter the following details:
 
@@ -44,7 +44,7 @@ In this tutorial, you will use Bijira to create an MCP Server from an HTTP backe
 
 ## Step 3: Test the MCP Server
 
-Bijira automatically generates tool schemas based on the information available in your API contract.
+API Platform automatically generates tool schemas based on the information available in your API contract.
 
 You can test the MCP Server in the development environment using the **MCP Playground** before promoting it to production.
 
@@ -88,13 +88,13 @@ Now that your MCP Server is deployed in both development and production environm
     !!! Info
         If you want to configure the Developer Portal as an MCP Hub, follow the [Developer Portal Mode](../devportal/developer-portal-mode.md) documentation.
 
-The MCP Server is now available for consumers to discover and subscribe to via the Bijira Developer Portal.
+The MCP Server is now available for consumers to discover and subscribe to via the API Platform Developer Portal.
 
 ## Step 6: Connect with an MCP Client
 
-MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
+MCP Servers in API Platform are secured by OAuth2 by default. To access an MCP Server, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
 
-1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the MCP Server published in the Bijira Developer Portal.
+1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the MCP Server published in the API Platform Developer Portal.
 
     ![Go to DevPortal](../assets/img/introduction/mcp-go-to-developer-portal.png)
 
@@ -110,7 +110,7 @@ MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server,
         !!!info
             Sandbox keys can only be used in the sandbox environment.
 
-    8. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. Bijira generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
+    8. Click **Generate** and wait for the keys to be generated. If you want to configure Advanced Configurations, click on the **Modify** button once the keys are generated and configure the values. API Platform generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
     9. Close the dialog.
     10. Click **Generate** to generate an access token. Copy the generated access token.
 
@@ -128,4 +128,4 @@ MCP Servers in Bijira are secured by OAuth2 by default. To access an MCP Server,
         
         ![MCP Inspector Devportal](../assets/img/introduction/mcp-inspector-devportal.png)
 
-Now you have successfully created, deployed, tested, and published an MCP Server using Bijira.
+Now you have successfully created, deployed, tested, and published an MCP Server using API Platform.

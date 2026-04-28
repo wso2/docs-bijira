@@ -70,9 +70,9 @@ Once you successfully add the key, you will see a delete option next to it. Curr
 You have configured API Platform to publish data to Moesif. Let's see how you can view the insights on Moesif.
 
 !!! tip
-    - If you have not created an API and deployed it on API Platform, you can follow the [Quick Start Guide](https://wso2.com/bijira/docs/introduction/quick-start-guide/) to get started.
+    - If you have not created an API and deployed it on API Platform, you can follow the [Quick Start Guide](https://wso2.com/api-platform/docs/introduction/quick-start-guide/) to get started.
 
-1. Invoke your API by following the [Test REST Endpoints via the OpenAPI Console](https://wso2.com/bijira/docs/test-api-proxy/openapi-console/) guide. 
+1. Invoke your API by following the [Test REST Endpoints via the OpenAPI Console](https://wso2.com/api-platform/docs/test-api-proxy/openapi-console/) guide. 
 
 2. Once you publish data, your Moesif dashboard will receive events. Once Moesif receives events, you will see a notification on Moesif confirming that it received data. 
 
