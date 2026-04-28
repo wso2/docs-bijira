@@ -15,7 +15,7 @@ This dashboard is especially useful for answering broad questions such as:
 - Are traffic increases concentrated in APIs, LLM usage, or MCP activity?
 - Which applications, APIs, or regions are contributing most to the current load?
 
-Every dashboard supports configurable refresh intervals and time-range filters. At the top of every Insights page you can filter data by **Environment** (e.g. Production, Development) and **Time range** (e.g. Day, Last 7 Days, or a custom range).
+Every dashboard supports configurable refresh intervals and time-range filters, making it possible to use the same dashboards for both short-term operational monitoring and longer-term trend analysis. At the top of every Insights page you can filter data by **Environment** (e.g. Production, Development) and **Time range** (e.g. Day, Last 7 Days, or a custom range).
 
 ![Insights Overview](../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
 
