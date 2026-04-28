@@ -2,19 +2,8 @@
 
 Insights is now integrated into API Platform with Moesif, giving you visibility into your API usage directly from the console. You can monitor API traffic, LLM API usage, MCP activity, and overall platform health. Together, these dashboards help platform teams move from raw event data to operational insight by showing how traffic is distributed, where failures are occurring, which consumers are most active, and how usage changes over time.
 
-Every dashboard supports configurable refresh intervals and time-range filters, making it possible to use the same dashboards for both short-term operational monitoring and longer-term trend analysis.
-
 !!! note
     If you created your organization **before February 20, 2026** and already have an existing Moesif organization that you want to connect, follow the [Integrate API Platform with Moesif](integrate-bijira-with-moesif.md) guide to configure the integration manually.
-
-## Filters
-
-At the top of every Insights page you can filter data by:
-
-- **Environment** – Switch between environments such as Production.
-- **Time range** – Choose a preset period such as Day or Last 7 Days, or define a custom range.
-
----
 
 ## Overview
 
@@ -25,6 +14,8 @@ This dashboard is especially useful for answering broad questions such as:
 - Is the platform seeing unusual traffic or error volume right now?
 - Are traffic increases concentrated in APIs, LLM usage, or MCP activity?
 - Which applications, APIs, or regions are contributing most to the current load?
+
+Every dashboard supports configurable refresh intervals and time-range filters. At the top of every Insights page you can filter data by **Environment** (e.g. Production, Development) and **Time range** (e.g. Day, Last 7 Days, or a custom range).
 
 ![Insights Overview](../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
 
