@@ -5,7 +5,7 @@ Insights is now integrated into API Platform with Moesif, giving you visibility 
 Every dashboard supports configurable refresh intervals and time-range filters, making it possible to use the same dashboards for both short-term operational monitoring and longer-term trend analysis.
 
 !!! note
-    If you created your organization **before 20/02/2026** and already have an existing Moesif organization that you want to connect, follow the [Integrate API Platform with Moesif](integrate-bijira-with-moesif.md) guide to configure the integration manually.
+    If you created your organization **before February 20, 2026** and already have an existing Moesif organization that you want to connect, follow the [Integrate API Platform with Moesif](integrate-bijira-with-moesif.md) guide to configure the integration manually.
 
 ## Filters
 
