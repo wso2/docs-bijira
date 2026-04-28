@@ -50,18 +50,18 @@ The following table details the required inbound and outbound connections for pr
 
 | Data plane component      | Endpoint                                | Direction                 | Protocol |
 |:---------------------------|:---------------------------------------|:---------------------------|:---------|
-| Bijira PDP agent           | Bijira control plane (CP) (mizzen server) | Outbound                  | WSS      |
+| API Platform PDP agent           | API Platform control plane (CP) (mizzen server) | Outbound                  | WSS      |
 |                            | Kubernetes API server                  | Outbound (cluster internal) | HTTPS, WS |
 | APIM/local adaptor         | Global adaptor                         | Outbound                  | HTTPS    |
 |                            | Azure Service Bus (CP)                 | Outbound                  | AMQP     |
 | APIM/Enforcer              | Event hub (CP)                         | Outbound                  | AMQP     |
-| Bijira secret resolver     | Cloud secret store                     | Outbound (VPC internal)    | HTTPS    |
+| API Platform secret resolver     | Cloud secret store                     | Outbound (VPC internal)    | HTTPS    |
 | Container registry         | Container registry (public)            | Inbound                   | HTTPS    |
 |                            | Container registry                     | Outbound (VPC internal)    | HTTPS    |
 | Certificate manager        | Azure DNS service                      | Outbound                  | HTTPS    |
 |                            | LetsEncrypt                            | Outbound                  | HTTPS    |
 | Flux source controller     | GitHub                                 | Outbound                  | HTTPS    |
-| Flux Helm controller       | Bijira container registry              | Outbound                  | HTTPS    |
+| Flux Helm controller       | API Platform container registry              | Outbound                  | HTTPS    |
 
 All communications between the control plane and the private data plane are secured using TLS encryption.
 
