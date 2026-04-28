@@ -116,12 +116,9 @@ Cards for each protocol type let you quickly compare relative traffic volumes an
 
 ### REST API Analytics
 
-The REST API Analytics dashboard is a protocol-specific drill-down for REST traffic. Click **View Details** on the REST API Traffic card in the All APIs Analytics dashboard to open this view. You can also filter by a specific API using the **API** search field at the top.
+The REST API Analytics dashboard is a protocol-specific drill-down for REST traffic. You can open this dashboard by clicking the **REST API Traffic** card in the **All APIs Analytics** dashboard. It includes API-level filtering, HTTP status analysis, cache performance metrics, and geographic usage patterns so you can understand how REST APIs are being consumed and where operational issues may be emerging.
 
 Because REST traffic often represents the largest share of gateway traffic, this dashboard is particularly useful for day-to-day operational monitoring, troubleshooting client-facing issues, and identifying optimization opportunities.
-
-!!! note
-    Clicking any API type traffic card (REST, Async, GraphQL, gRPC, or SOAP) in the All APIs Analytics dashboard opens a drill-down dashboard for that protocol. Each drill-down follows the same layout as the REST API Analytics dashboard described below.
 
 #### Summary Metrics
 
@@ -144,7 +141,7 @@ Because REST traffic often represents the largest share of gateway traffic, this
 
 **Traffic Intensity (Day vs Hour)** — Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
 
-**HTTP Status Codes over Time** — Breaks responses into 2xx, 4xx, and 5xx classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
+**HTTP Status Codes over Time** — Breaks responses into `2xx`, `4xx`, and `5xx` classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
 
 **Application Usage Detail** — Lists the applications using the REST APIs, along with owner, usage count, error rate, and average latency. This helps identify which consumers are generating the most load, which ones are seeing the most errors, and which integrations may require follow-up.
 
@@ -159,6 +156,9 @@ Because REST traffic often represents the largest share of gateway traffic, this
 **Top User Agents** — Shows the HTTP clients, browsers, SDKs, or tools making REST API calls. This can be helpful when diagnosing traffic patterns tied to a specific client or integration.
 
 **Geo Map** — Displays the geographic origin of REST API traffic, with support for both **Density Heatmap** and **Metric Heatmap** views. Use it to understand regional demand and identify whether location-specific patterns are affecting usage or performance.
+
+!!! note
+    Clicking any API type traffic card (**REST**, **Async**, **GraphQL**, **gRPC**, or **SOAP**) in the **All APIs Analytics** dashboard opens a drill-down dashboard for that protocol. Each drill-down follows the same layout as the REST API Analytics dashboard described above.
 
 ---
 
@@ -201,7 +201,7 @@ This dashboard is especially useful for teams building AI-powered experiences be
 
 **Semantic Cache Hit Ratio** — Shows the overall cache efficiency. A high ratio means similar prompts are being served from cache, reducing both latency and cost while improving consistency for repeated requests.
 
-**Semantic Cache Hit over Time** — Shows how cache effectiveness changes over time as prompt patterns evolve. This helps you understand whether semantic caching is becoming more or less useful as user behavior changes.
+**Semantic Cache Hit Over Time** — Shows how cache effectiveness changes over time as prompt patterns evolve. This helps you understand whether semantic caching is becoming more or less useful as user behavior changes.
 
 ---
 
