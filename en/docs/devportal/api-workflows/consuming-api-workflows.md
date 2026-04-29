@@ -38,7 +38,7 @@ Agents that interact with the developer portal can discover workflows through tw
 
 The portal's `llms.txt` file provides a structured index of everything the portal exposes to AI agents, including a list of all published workflows with agent visibility set to **Visible**. Each workflow entry includes its name, description, and a link to its agent prompt and Arazzo specification.
 
-```
+```text
 GET /{orgName}/views/{viewName}/llms.txt
 ```
 
@@ -61,7 +61,6 @@ Once an agent identifies a relevant workflow, it can fetch the full Arazzo speci
 | Resource | Endpoint |
 |---|---|
 | Arazzo specification | `/{orgName}/views/{viewName}/api-workflows/{handle}/arazzo.json` |
-| Agent prompt | `/{orgName}/views/{viewName}/api-workflows/{handle}/prompt` |
 
 ---
 

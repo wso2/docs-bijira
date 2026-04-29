@@ -10,7 +10,7 @@ The portal dynamically generates an `llms.txt` file — a plain-text Markdown in
 
 **Endpoint:**
 
-```
+```text
 GET /{orgName}/views/{viewName}/llms.txt
 ```
 

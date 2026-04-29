@@ -36,7 +36,7 @@ Changes take effect immediately, the updated instructions are reflected in `llms
 
 To verify how your instructions appear to agents, fetch the portal's `llms.txt` directly:
 
-```
+```text
 GET /{orgName}/views/{viewName}/llms.txt
 ```
 
