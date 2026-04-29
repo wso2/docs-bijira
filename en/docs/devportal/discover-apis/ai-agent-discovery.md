@@ -1,6 +1,6 @@
 # AI Agent API Discovery
 
-The Bijira Developer Portal has built-in support for AI agent discoverability. Every published API is automatically exposed through a set of machine-readable endpoints that AI agents, LLM powered assistants, and agentic frameworks can use to discover, understand, and invoke APIs without human assistance.
+The Bijira Developer Portal has built-in support for AI agent discoverability. Every published API is automatically exposed through a set of machine readable endpoints that AI agents, LLM powered assistants, and agentic frameworks can use to discover, understand, and invoke APIs without human assistance.
 
 This page explains how those endpoints work and how agents navigate the portal.
 
@@ -27,11 +27,11 @@ An agent or agentic framework that starts at `llms.txt` immediately understands 
 
 ---
 
-## Machine-Readable API Endpoints
+## Machine Readable API Endpoints
 
 Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw specification files. These endpoints require no authentication, no JavaScript rendering, and no browser. Therefore, agents can fetch them reliably as plain text.
 
-### API Catalog and Per-API Documentation
+### API Catalog and Per API Documentation
 
 | Endpoint | Description |
 |---|---|
@@ -59,7 +59,7 @@ Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw spec
 | Endpoint | Description |
 |---|---|
 | `/{orgName}/views/{viewName}/api-workflows.md` | All published, agent-visible workflows as a single Markdown document |
-| `/{orgName}/views/{viewName}/api-workflows/{handle}/arazzo.json` | Machine-readable Arazzo specification for a specific workflow |
+| `/{orgName}/views/{viewName}/api-workflows/{handle}/arazzo.json` | Machine readable Arazzo specification for a specific workflow |
 
 
 ## How Agents Navigate the Portal
@@ -68,7 +68,7 @@ A typical agent discovery flow looks like this:
 
 1. **Start at `llms.txt`** — the agent fetches the portal's `llms.txt` to get an overview of available APIs and workflows.
 2. **Browse the API catalog** — if the agent needs more detail, it fetches `apis.md` to read descriptions of all APIs at once.
-3. **Retrieve per-API documentation** — once the agent identifies a relevant API, it fetches `/{orgName}/views/{viewName}/api/{apiHandle}.md` for full documentation.
+3. **Retrieve per API documentation** — once the agent identifies a relevant API, it fetches `/{orgName}/views/{viewName}/api/{apiHandle}.md` for full documentation.
 4. **Fetch the specification** — the agent retrieves the OpenAPI, GraphQL, or AsyncAPI specification for the precise endpoint and parameter details needed to make a call.
 5. **Follow a workflow** — if a published workflow matches the task, the agent retrieves the Arazzo specification and agent prompt to follow a vetted, step-by-step call sequence rather than reasoning from scratch.
 

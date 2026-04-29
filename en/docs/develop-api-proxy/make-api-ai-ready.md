@@ -1,6 +1,6 @@
 # Make an API AI-Ready
 
-When you publish an API to the Developer Portal, it is automatically included in the portal's machine-readable surfaces including `llms.txt`, the API catalog Markdown, and per-API documentation endpoints. These surfaces are what AI agents use to discover, understand, and invoke your APIs.
+When you publish an API to the Developer Portal, it is automatically included in the portal's machine readable surfaces including `llms.txt`, the API catalog Markdown, and per API documentation endpoints. These surfaces are what AI agents use to discover, understand, and invoke your APIs.
 
 This page explains what you can do as an API publisher to make your API as useful as possible for AI agents.
 
@@ -34,7 +34,7 @@ For REST APIs, follow these practices in your OpenAPI spec to improve agent accu
 
 ## Add Supporting Documents
 
-Beyond the machine-readable specification, you can attach prose documents to your API (see [Documents](documents.md)). These documents are surfaced to agents in the per-API Markdown endpoint alongside the specification.
+Beyond the machine readable specification, you can attach prose documents to your API (see [Documents](documents.md)). These documents are surfaced to agents in the per API Markdown endpoint alongside the specification.
 
 Use documents to cover things the specification cannot express well:
 
@@ -44,7 +44,7 @@ Use documents to cover things the specification cannot express well:
 - Environment differences (sandbox vs. production)
 - Changelog and migration notes
 
-Well-written prose documents reduce the chance that an agent will misinterpret the specification or hallucinate behavior that doesn't exist.
+Well written prose documents reduce the chance that an agent will misinterpret the specification or hallucinate behavior that doesn't exist.
 
 <!-- Screenshot: Documents tab on the API detail page showing attached documents -->
 
@@ -61,7 +61,7 @@ All published APIs are agent visible by default. If an API should not be surface
 5. Set **Agent Visibility** to **Hidden**.
 6. Complete the publish flow.
 
-Once hidden, the API is excluded from `llms.txt`, `apis.md`, and all per-API Markdown and specification endpoints. It remains visible to human users in the portal.
+Once hidden, the API is excluded from `llms.txt`, `apis.md`, and all per API Markdown and specification endpoints. It remains visible to human users in the portal.
 
 <!-- Screenshot: Publish dialog showing the Agent Visibility toggle set to Hidden -->
 

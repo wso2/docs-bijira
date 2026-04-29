@@ -1,12 +1,12 @@
 # LLM Instructions
 
-LLM Instructions allow portal admins to provide AI agents with high-level context about the developer portal — what APIs are available, how the portal is organized, and any conventions or constraints agents should follow when interacting with it.
+LLM Instructions allow portal admins to provide AI agents with high level context about the developer portal, what APIs are available, how the portal is organized, and any conventions or constraints agents should follow when interacting with it.
 
 These instructions are published as part of the portal's `llms.txt` file, which is the primary entry point for AI agents discovering the portal's capabilities.
 
 ## What Are LLM Instructions?
 
-LLM Instructions are free-form natural language text written by the portal admin. They appear at the top of `llms.txt` and are read by agents before they navigate the rest of the portal's content.
+LLM Instructions are free form natural language text written by the portal admin. They appear at the top of `llms.txt` and are read by agents before they navigate the rest of the portal's content.
 
 Use this space to tell agents:
 
@@ -16,7 +16,7 @@ Use this space to tell agents:
 - Which workflows are the recommended starting points for common tasks
 - Any limitations or usage policies agents should respect
 
-Well-written LLM instructions reduce agent errors and improve the quality of AI-assisted integrations by giving agents the orientation they need upfront, rather than leaving them to infer context from individual API specs.
+Well written LLM instructions reduce agent errors and improve the quality of AI-assisted integrations by giving agents the orientation they need upfront, rather than leaving them to infer context from individual API specs.
 
 ## Writing Effective LLM Instructions
 
@@ -66,7 +66,7 @@ LLM Instructions are configured at the portal (view) level in the admin settings
 
 <!-- Screenshot: Admin settings page showing the LLM Instructions text editor -->
 
-Changes take effect immediately — the updated instructions are reflected in `llms.txt` as soon as you save.
+Changes take effect immediately, the updated instructions are reflected in `llms.txt` as soon as you save.
 
 ## Previewing the Output
 

@@ -1,6 +1,6 @@
 # Consuming API Workflows
 
-API Workflows are published in the developer portal as structured, reusable sequences of API calls. Once an admin publishes a workflow, it becomes available to both human developers browsing the portal and AI agents that consume the portal's machine-readable surfaces.
+API Workflows are published in the developer portal as structured, reusable sequences of API calls. Once an admin publishes a workflow, it becomes available to both human developers browsing the portal and AI agents that consume the portal's machine readable surfaces.
 
 ## How Human Users Discover Workflows
 
@@ -12,7 +12,7 @@ Each workflow is listed with its name and a short description that explains the 
 
 - **Description** — what the workflow does and when to use it
 - **Step-by-step instructions** — the ordered sequence of API calls, inputs, and expected outputs
-- **Arazzo specification** — the machine-readable workflow definition, available to download or copy
+- **Arazzo specification** — the machine readable workflow definition, available to download or copy
 
 <!-- Screenshot: Workflow detail view showing description, steps, and Arazzo spec tab -->
 
@@ -32,7 +32,7 @@ Workflows are included in the portal's global search. Searching for a task or go
 
 ## How AI Agents Discover Workflows
 
-Agents that interact with the developer portal can discover workflows through two machine-readable endpoints:
+Agents that interact with the developer portal can discover workflows through two machine readable endpoints:
 
 ### `llms.txt`
 
