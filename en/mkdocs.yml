@@ -141,6 +141,7 @@ nav:
           - Attach and Manage Policies: develop-api-proxy/policy/attach-and-manage-policies.md
         # - Apply Advanced Settings on Mediation Policies: develop-api-proxy/policy/apply-advanced-settings-on-mediation-policies.md
       - Documents: develop-api-proxy/documents.md
+      - Make an API AI-Ready: develop-api-proxy/make-api-ai-ready.md
       - Lifecycle: develop-api-proxy/lifecycle-management.md
       - Subscription Plans: develop-api-proxy/subscription-plans.md
   - Test API Proxy:
@@ -253,6 +254,7 @@ nav:
               - Theme in Organizational Level: devportal/theming-devportal-org-level.md
               - Theme in API Level: devportal/theming-devportal-api-level.md
           - Devportal Mode: devportal/developer-portal-mode.md
+      - AI Agent Discovery: devportal/discover-apis/ai-agent-discovery.md
       - Discover APIs:
           - Search APIs: devportal/discover-apis/api-search.md
           - Documentations: devportal/discover-apis/api-documentations.md
