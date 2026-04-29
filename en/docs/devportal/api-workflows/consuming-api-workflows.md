@@ -6,29 +6,13 @@ API Workflows are published in the developer portal as structured, reusable sequ
 
 Workflows are surfaced in the **API Workflows** section of the developer portal, accessible from the main navigation.
 
-<!-- Screenshot: Developer portal left navigation with "API Workflows" section highlighted -->
-
 Each workflow is listed with its name and a short description that explains the goal it achieves. Clicking a workflow opens a detail view that includes:
 
 - **Description** — what the workflow does and when to use it
 - **Step-by-step instructions** — the ordered sequence of API calls, inputs, and expected outputs
 - **Arazzo specification** — the machine readable workflow definition, available to download or copy
 
-<!-- Screenshot: Workflow detail view showing description, steps, and Arazzo spec tab -->
-
-### Browsing by API
-
-Workflows are also surfaced in-context on individual API pages. When viewing an API's documentation, any workflows that involve that API appear in a dedicated **Workflows** tab.
-
-<!-- Screenshot: API detail page with "Workflows" tab showing related workflows -->
-
-### Searching for Workflows
-
-Workflows are included in the portal's global search. Searching for a task or goal (for example, "create order" or "authenticate") will surface matching workflows alongside API results.
-
-<!-- Screenshot: Search results showing a workflow result alongside API results -->
-
----
+![View API Flow](../../assets/img/devportal/view-api-flow.png)
 
 ## How AI Agents Discover Workflows
 
@@ -86,8 +70,6 @@ To follow a workflow:
 2. Select the workflow that matches your goal.
 3. Follow the steps in order, using the inputs and outputs described at each step.
 4. If the workflow includes an Arazzo specification, download it to use with tools that support the Arazzo format.
-
-<!-- Screenshot: Workflow step view with numbered steps and input/output fields -->
 
 ## Using a Workflow as an Agent
 

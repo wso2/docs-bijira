@@ -28,7 +28,7 @@ LLM Instructions are configured at the portal (view) level in the admin settings
 3. Enter your instructions in the text editor.
 4. Click **Publish**.
 
-<!-- Screenshot: Admin settings page showing the LLM Instructions text editor -->
+![LLM Instructions text editor](../../assets/img/devportal/llm-instructions.png)
 
 Changes take effect immediately, the updated instructions are reflected in `llms.txt` as soon as you save.
 
@@ -42,4 +42,4 @@ GET /{orgName}/views/{viewName}/llms.txt
 
 Your LLM Instructions will appear at the top of the file, followed by the portal's API and workflow index.
 
-<!-- Screenshot: llms.txt output in a browser showing LLM Instructions at the top -->
+![LLMS-TXT](../../assets/img/devportal/llms-txt.png)

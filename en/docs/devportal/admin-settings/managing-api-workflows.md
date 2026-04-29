@@ -7,7 +7,7 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 
 1. In the Developer Portal, navigate to **Admin - Settings** and select the portal.
 2. Open the **API Workflows** section.
-3. Click **Create Workflow**.
+3. Click **Create**.
 4. Fill in the workflow details:
 
 | Field | Description |
@@ -17,9 +17,9 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 | **Description** | One to two sentences explaining the goal of the workflow and when to use it |
 | **Arazzo Specification** | The machine readable workflow definition in Arazzo format |
 | **Agent Prompt** | Natural language guidance for AI agents on when and how to invoke the workflow |
-| **Source Descriptions** | References to the API specifications used within the workflow |
+| **Agent Visibility** | Controls whether the workflow is surfaced to AI agents. Set to **Visible** to include it in `llms.txt` and `api-workflows.md`, or **Hidden** to exclude it from agent facing surfaces while keeping it accessible to human users in the portal |
 
-<!-- Screenshot: Create Workflow form with fields filled in -->
+![API Workflow Creation](../../assets/img/devportal/api-workflow-creation.png)
 
 5. Click **Save as Draft** to save without publishing, or **Publish** to make the workflow live immediately.
 
@@ -30,8 +30,6 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 2. Select the workflow you want to edit.
 3. Make your changes in the editor.
 4. Click **Save** to update a published workflow, or **Save as Draft** to unpublish it while editing.
-
-<!-- Screenshot: Workflow editor with Arazzo spec and agent prompt fields visible -->
 
 
 ## Publishing and Unpublishing
@@ -47,8 +45,6 @@ To unpublish:
 
 1. Open the workflow.
 2. Click **Unpublish** (or **Save as Draft**). The workflow is removed from the portal and from `llms.txt` / `api-workflows.md` immediately.
-
-<!-- Screenshot: Workflow detail in admin console showing Publish / Unpublish button -->
 
 
 ## Controlling Visibility
@@ -68,16 +64,3 @@ Determines whether the workflow is exposed to AI agents via machine readable sur
 
 - **Visible** — included in `llms.txt` and `api-workflows.md`
 - **Hidden** — excluded from agent-facing surfaces; human users can still see it in the portal UI
-
-<!-- Screenshot: Visibility settings panel on the workflow detail page showing Portal UI and Agent Visibility toggles -->
-
-## Deleting a Workflow
-
-Deleting a workflow permanently removes it and all its associated data.
-
-1. Open the workflow in the admin console.
-2. Click **Delete**.
-3. Confirm the deletion.
-
-!!! warning
-    This action cannot be undone. If agents or developers are actively using the workflow, consider unpublishing it instead of deleting it.
