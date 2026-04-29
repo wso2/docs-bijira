@@ -236,6 +236,16 @@ nav:
               - Prompt Template: ai-workspace/policies/other-policies/prompt-template.md
               - Semantic Cache: ai-workspace/policies/other-policies/semantic-cache.md
           - Writing an AI Policy: ai-workspace/policies/writing-an-ai-policy.md
+  - Event Gateway:
+      - Overview: event-gateway/overview.md
+      - Getting Started: event-gateway/getting-started.md
+      - Setting Up: event-gateway/setting-up.md
+      - Publish APIs:
+        - Overview: event-gateway/publish-apis/overview.md
+        - Subscription Based APIs: event-gateway/publish-apis/subscription-based-apis.md
+        - Subscription Less APIs: event-gateway/publish-apis/subscription-less-apis.md
+        - Lifecycle Management: event-gateway/publish-apis/lifecycle-management.md
+      - Troubleshooting: event-gateway/troubleshooting.md
   - API Gateway:
       # - Overview: api-platform-gateway/overview.md
       # - API Platform Cloud Gateway: api-platform-gateway/cloud-gateway.md
@@ -439,6 +449,9 @@ extra:
       level: 1
     AI Workspace:
       icon: octicons/project-roadmap-16
+      level: 1
+    Event Gateway:
+      icon: octicons/webhook-16
       level: 1
     API Gateway:
       icon: octicons/globe-16
