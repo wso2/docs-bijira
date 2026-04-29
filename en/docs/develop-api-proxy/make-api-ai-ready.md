@@ -17,8 +17,6 @@ The API description is the primary signal an AI agent uses to decide whether an 
 
 The description appears in `llms.txt` and in the agent-readable API catalog (`apis.md`), so it is often the first thing an agent reads about your API.
 
-<!-- Screenshot: API description field in the API Platform Console -->
-
 ## Use a Well-Structured API Specification
 
 Publishing a complete, accurate API specification is one of the most impactful things you can do for AI discoverability. 
@@ -45,8 +43,6 @@ Use documents to cover things the specification cannot express well:
 - Changelog and migration notes
 
 Well written prose documents reduce the chance that an agent will misinterpret the specification or hallucinate behavior that doesn't exist.
-
-<!-- Screenshot: Documents tab on the API detail page showing attached documents -->
 
 ## Control Agent Visibility
 

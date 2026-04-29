@@ -20,7 +20,7 @@ GET /{orgName}/views/{viewName}/llms.txt
 - A list of all agent visible APIs, each with its name, description, and a link to its Markdown documentation
 - A list of all published, agent visible API Workflows
 
-An agent or agentic framework that starts at `llms.txt` immediately understands the scope of available APIs and workflows without crawling the entire portal. This makes it the standard starting point for LLM-native API consumption.
+An agent or agentic framework that starts at `llms.txt` immediately understands the scope of available APIs and workflows without crawling the entire portal. This makes it the standard starting point for LLM native API consumption.
 
 !!! tip
     Portal admins can enrich `llms.txt` with high-level guidance for agents such as how APIs are organized, common authentication patterns, and recommended workflows using [LLM Instructions](../admin-settings/llm-instructions.md).
