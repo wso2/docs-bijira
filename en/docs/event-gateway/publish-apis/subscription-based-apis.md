@@ -58,7 +58,7 @@ For detailed steps and field behavior, see [Assign Subscription Plans to APIs](.
 
 2. Invoke the API.
 
-    #### Sample Request
+    **Sample Request**
 
     ```bash
     curl --request GET \

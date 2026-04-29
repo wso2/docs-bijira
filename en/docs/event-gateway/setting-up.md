@@ -39,7 +39,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command to create `event-gateway/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-event-gateway/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-event-gateway-0.5.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -51,7 +51,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway
+        cd wso2apip-event-gateway-0.5.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -119,7 +119,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway-1.0.0
+        cd wso2apip-event-gateway-0.5.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -158,6 +158,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     - Kubernetes 1.32+ cluster
     - Helm 3.18+ installed
     - Either permissions to install cert-manager in the cluster or an existing cert-manager installation
+    - Kafka as a Managed Service
 
     ### Install cert-manager (optional)
 
