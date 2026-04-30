@@ -13,7 +13,6 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 | Field | Description |
 |---|---|
 | **Name** | A short, task-oriented name (e.g., "Place an Order", "Register a Webhook") |
-| **Handle** | A URL-safe identifier used in API endpoints. Auto-generated from the name — edit if needed. |
 | **Description** | One to two sentences explaining the goal of the workflow and when to use it |
 | **Arazzo Specification** | The machine readable workflow definition in Arazzo format |
 | **Agent Prompt** | Natural language guidance for AI agents on when and how to invoke the workflow |
@@ -26,7 +25,7 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 
 ## Editing a Workflow
 
-1. Navigate to **API Workflows** in the admin console.
+1. Navigate to **API Workflows** in the admin settings.
 2. Select the workflow you want to edit.
 3. Make your changes in the editor.
 4. Click **Save** to update a published workflow, or **Save as Draft** to unpublish it while editing.
@@ -38,7 +37,7 @@ Workflows must be explicitly published to become visible to consumers. Draft wor
 
 To publish a workflow:
 
-1. Open the workflow in the admin console.
+1. Open the workflow in the admin settings console.
 2. Click **Publish**.
 
 To unpublish:
