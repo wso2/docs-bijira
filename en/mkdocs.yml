@@ -212,6 +212,11 @@ nav:
           - Overview: ai-workspace/mcp-proxies/overview.md
           - Configure Proxy: ai-workspace/mcp-proxies/configure-proxy.md
           - Apply Policies: ai-workspace/mcp-proxies/apply-policies.md
+      - MCP Registry:
+          - What is an MCP Registry?: mcp-servers/mcp-registry.md
+          - Publish MCP Proxies: mcp-servers/publish-mcp-proxies.md
+          - Browse the MCP Hub: mcp-servers/browse-mcp-hub.md
+          - Use the MCP Registry API: mcp-servers/mcp-registry-api.md
       - GenAI Applications: ai-workspace/genai-applications.md
       - Configure Inbound Auth: ai-workspace/configure-inbound-auth.md
       - Invoke via SDKs: ai-workspace/using-sdks.md
