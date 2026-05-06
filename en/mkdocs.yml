@@ -338,6 +338,41 @@ nav:
     - AI and MCP:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
+  - AI Gateway:
+    - LLM Proxy:
+        - Quick Start Guide: ai-gateway/llm-proxy/quick-start-guide.md
+        - LLM Provider Templates: ai-gateway/llm-proxy/llm-templates.md
+        - Guardrails:
+            - AWS Bedrock Guardrail: ai-gateway/llm-proxy/guardrails/aws-bedrock-guardrail.md
+            - Azure Content Safety: ai-gateway/llm-proxy/guardrails/azure-content-safety.md
+            - Content Length Guardrail: ai-gateway/llm-proxy/guardrails/content-length.md
+            - JSON Schema Guardrail: ai-gateway/llm-proxy/guardrails/json-schema.md
+            - PII Masking Regex Guardrail: ai-gateway/llm-proxy/guardrails/pii-masking-regex.md
+            - Regex Guardrail: ai-gateway/llm-proxy/guardrails/regex.md
+            - Semantic Prompt Guardrail: ai-gateway/llm-proxy/guardrails/semantic-prompt-guard.md
+            - Sentence Count Guardrail: ai-gateway/llm-proxy/guardrails/sentence-count.md
+            - URL Guardrail: ai-gateway/llm-proxy/guardrails/url.md
+            - Word Count Guardrail: ai-gateway/llm-proxy/guardrails/word-count.md
+        - Load Balancing:
+            - Model Round Robin: ai-gateway/llm-proxy/load-balancing/model-round-robin.md
+            - Model Weighted Round Robin: ai-gateway/llm-proxy/load-balancing/model-weighted-round-robin.md
+        - Prompt Management:
+            - Prompt Decorator: ai-gateway/llm-proxy/prompt-management/prompt-decorator.md
+            - Prompt Template: ai-gateway/llm-proxy/prompt-management/prompt-template.md
+        - Semantic Caching: ai-gateway/llm-proxy/semantic-caching.md
+    - MCP Proxy:
+        - Quick Start Guide: ai-gateway/mcp-proxy/quick-start-guide.md
+        - Policies:
+            - MCP Access Control List: ai-gateway/mcp-proxy/policies/mcp-acl-list.md
+            - MCP Authentication: ai-gateway/mcp-proxy/policies/mcp-authentication.md
+            - MCP Authorization: ai-gateway/mcp-proxy/policies/mcp-authorization.md
+            - MCP Rewrite: ai-gateway/mcp-proxy/policies/mcp-rewrite.md
+    - Observability:
+        - Logging: ai-gateway/observability/logging.md
+        - Tracing: ai-gateway/observability/tracing.md
+    - Analytics:
+        - Moesif Analytics: ai-gateway/analytics/moesif-analytics.md
+        - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
 
 # Extensions
 markdown_extensions:
