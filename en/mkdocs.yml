@@ -69,43 +69,6 @@ theme:
 strict: false
 # Navigation
 nav:
-  - API Manager: https://apim.docs.wso2.com/en/latest/
-  - API Gateway:
-    - Overview: api-gateway/overview.md
-    - Setup:
-      - Storage & Backends: api-gateway/setup/storage-and-backends.md
-      - Immutable Gateway: api-gateway/setup/immutable-gateway.md
-      - Artifact Templating: api-gateway/setup/artifact-templating.md 
-      - Upstream Timeouts: api-gateway/setup/upstream-timeouts.md 
-    - Quick Start Guide: api-gateway/quick-start-guide.md
-    - Policies:
-      - Overview: api-gateway/policies/overview.md
-      - Custom Policies:
-        - Writing a Custom Policy: api-gateway/policies/custom-policies/writing-a-custom-policy.md
-        - Building Gateway with Custom Policies: api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md
-    - Deploying APIs:
-      - Bottom-Up Deployment: api-gateway/deploying-apis/bottom-up-api-deployment.md 
-      - Gateway Operator: api-gateway/deploying-apis/gateway-operator.md
-    - Observability:
-      - Logging: api-gateway/observability/logging.md
-      - Tracing: api-gateway/observability/tracing.md
-      - Metrics: api-gateway/observability/metrics.md
-    - Analytics:
-      - Analytics Header Filter: api-gateway/analytics/analytics-header-filter.md
-      - Moesif Analytics: api-gateway/analytics/moesif-analytics.md
-    - Management API:
-      - Overview: api-gateway/gateway-controller-management-api/overview.md
-      - Authentication: api-gateway/gateway-controller-management-api/authentication.md
-      - Rest API Management: api-gateway/gateway-controller-management-api/rest-api-management.md
-      - MCP Proxy Management: api-gateway/gateway-controller-management-api/mcp-proxy-management.md
-      - Certificate Management: api-gateway/gateway-controller-management-api/certificate-management.md
-      - LLM Provider Template Management: api-gateway/gateway-controller-management-api/llm-provider-template-management.md
-      - LLM Provider Management: api-gateway/gateway-controller-management-api/llm-provider-management.md
-      - LLM Proxy Management: api-gateway/gateway-controller-management-api/llm-proxy-management.md
-      - Secrets Management: api-gateway/gateway-controller-management-api/secrets-management.md
-      - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
-      - Schemas: api-gateway/gateway-controller-management-api/schemas.md
-  
   # - Home: index.md
   - Cloud:
     - Introduction:
@@ -406,6 +369,43 @@ nav:
     - Analytics:
         - Moesif Analytics: ai-gateway/analytics/moesif-analytics.md
         - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
+  - API Manager: https://apim.docs.wso2.com/en/latest/
+  - API Gateway:
+    - Overview: api-gateway/overview.md
+    - Setup:
+      - Storage & Backends: api-gateway/setup/storage-and-backends.md
+      - Immutable Gateway: api-gateway/setup/immutable-gateway.md
+      - Artifact Templating: api-gateway/setup/artifact-templating.md 
+      - Upstream Timeouts: api-gateway/setup/upstream-timeouts.md 
+    - Quick Start Guide: api-gateway/quick-start-guide.md
+    - Policies:
+      - Overview: api-gateway/policies/overview.md
+      - Custom Policies:
+        - Writing a Custom Policy: api-gateway/policies/custom-policies/writing-a-custom-policy.md
+        - Building Gateway with Custom Policies: api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md
+    - Deploying APIs:
+      - Bottom-Up Deployment: api-gateway/deploying-apis/bottom-up-api-deployment.md 
+      - Gateway Operator: api-gateway/deploying-apis/gateway-operator.md
+    - Observability:
+      - Logging: api-gateway/observability/logging.md
+      - Tracing: api-gateway/observability/tracing.md
+      - Metrics: api-gateway/observability/metrics.md
+    - Analytics:
+      - Analytics Header Filter: api-gateway/analytics/analytics-header-filter.md
+      - Moesif Analytics: api-gateway/analytics/moesif-analytics.md
+    - Management API:
+      - Overview: api-gateway/gateway-controller-management-api/overview.md
+      - Authentication: api-gateway/gateway-controller-management-api/authentication.md
+      - Rest API Management: api-gateway/gateway-controller-management-api/rest-api-management.md
+      - MCP Proxy Management: api-gateway/gateway-controller-management-api/mcp-proxy-management.md
+      - Certificate Management: api-gateway/gateway-controller-management-api/certificate-management.md
+      - LLM Provider Template Management: api-gateway/gateway-controller-management-api/llm-provider-template-management.md
+      - LLM Provider Management: api-gateway/gateway-controller-management-api/llm-provider-management.md
+      - LLM Proxy Management: api-gateway/gateway-controller-management-api/llm-proxy-management.md
+      - Secrets Management: api-gateway/gateway-controller-management-api/secrets-management.md
+      - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
+      - Schemas: api-gateway/gateway-controller-management-api/schemas.md
+
   - Guides:
     - AI and MCP:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
