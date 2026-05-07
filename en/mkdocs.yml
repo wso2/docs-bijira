@@ -334,6 +334,42 @@ nav:
         - Admin Settings:
             - LLM Instructions: cloud/devportal/admin-settings/llm-instructions.md
             - Managing API Workflows: cloud/devportal/admin-settings/managing-api-workflows.md
+  - API Manager: https://apim.docs.wso2.com/en/latest/
+  - API Gateway:
+    - Overview: api-gateway/overview.md
+    - Setup:
+      - Storage & Backends: api-gateway/setup/storage-and-backends.md
+      - Immutable Gateway: api-gateway/setup/immutable-gateway.md
+      - Artifact Templating: api-gateway/setup/artifact-templating.md 
+      - Upstream Timeouts: api-gateway/setup/upstream-timeouts.md 
+    - Quick Start Guide: api-gateway/quick-start-guide.md
+    - Policies:
+      - Overview: api-gateway/policies/overview.md
+      - Custom Policies:
+        - Writing a Custom Policy: api-gateway/policies/custom-policies/writing-a-custom-policy.md
+        - Building Gateway with Custom Policies: api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md
+    - Deploying APIs:
+      - Bottom-Up Deployment: api-gateway/deploying-apis/bottom-up-api-deployment.md 
+      - Gateway Operator: api-gateway/deploying-apis/gateway-operator.md
+    - Observability:
+      - Logging: api-gateway/observability/logging.md
+      - Tracing: api-gateway/observability/tracing.md
+      - Metrics: api-gateway/observability/metrics.md
+    - Analytics:
+      - Analytics Header Filter: api-gateway/analytics/analytics-header-filter.md
+      - Moesif Analytics: api-gateway/analytics/moesif-analytics.md
+    - Management API:
+      - Overview: api-gateway/gateway-controller-management-api/overview.md
+      - Authentication: api-gateway/gateway-controller-management-api/authentication.md
+      - Rest API Management: api-gateway/gateway-controller-management-api/rest-api-management.md
+      - MCP Proxy Management: api-gateway/gateway-controller-management-api/mcp-proxy-management.md
+      - Certificate Management: api-gateway/gateway-controller-management-api/certificate-management.md
+      - LLM Provider Template Management: api-gateway/gateway-controller-management-api/llm-provider-template-management.md
+      - LLM Provider Management: api-gateway/gateway-controller-management-api/llm-provider-management.md
+      - LLM Proxy Management: api-gateway/gateway-controller-management-api/llm-proxy-management.md
+      - Secrets Management: api-gateway/gateway-controller-management-api/secrets-management.md
+      - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
+      - Schemas: api-gateway/gateway-controller-management-api/schemas.md
   - AI Gateway:
     - LLM Proxy:
         - Quick Start Guide: ai-gateway/llm-proxy/quick-start-guide.md
@@ -369,6 +405,7 @@ nav:
     - Analytics:
         - Moesif Analytics: ai-gateway/analytics/moesif-analytics.md
         - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
+  - Analytics & Monetization: https://www.moesif.com/docs
   - Guides:
     - AI and MCP:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
@@ -424,29 +461,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/wso2
   expanded_navs:
-    - title: Introduction
-      options:
-        - verticle-line
-    - title: Create API Proxy
+    - title: Cloud
       options:
         - verticle-line
         - divider
-    - title: Tutorials
-      options:
-        - verticle-line-only
-    - title: Develop API Proxy
-      options:
-        - verticle-line-only
-    - title: Test API Proxy
-      options:
-        - verticle-line-only
     - title: MCP Servers
-      options:
-        - verticle-line-only
-    - title: API Governance
-      options:
-        - verticle-line-only
-    - title: Gateway Federation
       options:
         - verticle-line-only
     - title: Monitor and Insights
@@ -459,9 +478,6 @@ extra:
       options:
         - verticle-line-only
     - title: Workflows
-      options:
-        - verticle-line-only
-    - title: API Platform Samples
       options:
         - verticle-line-only
     - title: Developer Portal
@@ -499,9 +515,6 @@ extra:
     MCP Servers:
       icon: octicons/server-16
       level: 1
-    API Governance:
-      icon: octicons/shield-16
-      level: 1
     AI Gateway:
       icon: octicons/cpu-16
       level: 1
@@ -532,4 +545,3 @@ extra:
 
 #site_version: 1.0.0
 # base_path: http://localhost:8000
-
