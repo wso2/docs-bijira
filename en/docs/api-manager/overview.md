@@ -2,7 +2,7 @@
 
 WSO2 API Manager is a complete platform for building, integrating, and exposing your digital services as managed APIs. Irrespective of cloud, on-premise, or hybrid architectures, API Manager provides the tools to drive your digital transformation strategy from design to deployment.
 
-Visit [the API Manager documentation website](https://apim.docs.wso2.com/en/latest/) to explore detailed guides, tutorials, and component references. 
+Visit [the API Manager documentation website](https://apim.docs.wso2.com/en/latest/) to explore detaiGled guides, tutorials, and component references. 
 
 This page provides a high-level map of the API Manager's capabilities to help you understand the ecosystem.
 
@@ -36,3 +36,6 @@ Oversee the security, usage, and automation of your API ecosystem.
 
 ### Administration
 Configure and manage the core system, users, and tenants. Manage system-wide policies (like rate limiting), register external Gateways and Key Managers, and oversee global configurations.
+
+## What's Next?
+Follow [the 15-minute quick start guide](https://apim.docs.wso2.com/en/4.7.0/get-started/api-manager-quick-start-guide/) to get started with API Manager.
