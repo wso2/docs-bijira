@@ -340,7 +340,6 @@ nav:
     - Overview: api-gateway/overview.md
     - Setup:
       - Storage & Backends: api-gateway/setup/storage-and-backends.md
-      - Immutable Gateway: api-gateway/setup/immutable-gateway.md
       - Artifact Templating: api-gateway/setup/artifact-templating.md 
       - Upstream Timeouts: api-gateway/setup/upstream-timeouts.md 
     - Quick Start Guide: api-gateway/quick-start-guide.md
@@ -349,9 +348,14 @@ nav:
       - Custom Policies:
         - Writing a Custom Policy: api-gateway/policies/custom-policies/writing-a-custom-policy.md
         - Building Gateway with Custom Policies: api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md
+    - Deployment Modes:
+      - Immutable Gateway: api-gateway/deployment-modes/immutable-gateway.md
+      - Kubernetes: 
+        - Overview: api-gateway/deployment-modes/kubernetes/overview.md
+        - Standalone Mode: api-gateway/deployment-modes/kubernetes/kubernetes-standalone.md
+        - Kubernetes Operator Mode: api-gateway/deployment-modes/kubernetes/gateway-operator.md
     - Deploying APIs:
       - Bottom-Up Deployment: api-gateway/deploying-apis/bottom-up-api-deployment.md 
-      - Gateway Operator: api-gateway/deploying-apis/gateway-operator.md
     - Observability:
       - Logging: api-gateway/observability/logging.md
       - Tracing: api-gateway/observability/tracing.md
@@ -400,6 +404,12 @@ nav:
             - MCP Authentication: ai-gateway/mcp-proxy/policies/mcp-authentication.md
             - MCP Authorization: ai-gateway/mcp-proxy/policies/mcp-authorization.md
             - MCP Rewrite: ai-gateway/mcp-proxy/policies/mcp-rewrite.md
+    - Deployment Modes:
+      - Immutable Gateway: ai-gateway/deployment-modes/immutable-gateway.md
+      - Kubernetes: 
+        - Overview: ai-gateway/deployment-modes/kubernetes/overview.md
+        - Standalone Mode: ai-gateway/deployment-modes/kubernetes/kubernetes-standalone.md
+        - Kubernetes Operator Mode: ai-gateway/deployment-modes/kubernetes/gateway-operator.md
     - Observability:
         - Logging: ai-gateway/observability/logging.md
         - Tracing: ai-gateway/observability/tracing.md
@@ -487,6 +497,14 @@ extra:
         - verticle-line
         - divider
     - title: API Manager
+      options:
+        - verticle-line
+        - divider
+    - title: API Gateway
+      options:
+        - verticle-line
+        - divider
+    - title: AI Gateway
       options:
         - verticle-line
         - divider
