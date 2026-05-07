@@ -418,6 +418,8 @@ nav:
         - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
   - Analytics & Monetization: 
     - Overview: analytics-and-monetization/overview.md
+  - Policy Hub:
+    - Overview: policy-hub/overview.md
   - Guides:
     - AI and MCP:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
@@ -512,6 +514,10 @@ extra:
       options:
         - verticle-line
         - divider
+    - title: Policy Hub
+      options:
+        - verticle-line
+        - divider
   nav_icons:
     Home:
       icon: octicons/home-16
@@ -575,6 +581,8 @@ extra:
         level: 1
     API Manager:
         icon: octicons/sliders-16
+    Policy Hub:
+        icon: octicons/package-16
 
 #site_version: 1.0.0
 # base_path: http://localhost:8000
