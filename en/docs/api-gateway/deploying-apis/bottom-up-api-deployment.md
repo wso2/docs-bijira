@@ -1541,5 +1541,3 @@ Expected response:
   "gatewayPath": "/internal/data/v1"
 }
 ```
-
----
