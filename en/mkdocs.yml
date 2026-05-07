@@ -334,7 +334,8 @@ nav:
         - Admin Settings:
             - LLM Instructions: cloud/devportal/admin-settings/llm-instructions.md
             - Managing API Workflows: cloud/devportal/admin-settings/managing-api-workflows.md
-  - API Manager: https://apim.docs.wso2.com/en/latest/
+  - API Manager: 
+    - Overview: api-manager/overview.md
   - API Gateway:
     - Overview: api-gateway/overview.md
     - Setup:
