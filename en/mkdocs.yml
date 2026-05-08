@@ -70,6 +70,8 @@ strict: false
 # Navigation
 nav:
   # - Home: index.md
+  - Overview: overview.md
+  - Get Started: get-started.md
   - Cloud:
     - Introduction:
         - What is API Platform?: cloud/introduction/what-is-bijira.md
@@ -521,6 +523,12 @@ extra:
   nav_icons:
     Home:
       icon: octicons/home-16
+      level: 1
+    Overview:
+      icon: octicons/info-16
+      level: 1
+    Get Started:
+      icon: octicons/rocket-16
       level: 1
     Cloud:
       icon: octicons/cloud-16
