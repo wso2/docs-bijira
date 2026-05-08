@@ -257,6 +257,7 @@ nav:
         # - Overview: cloud/api-platform-gateway/overview.md
         # - API Platform Cloud Gateway: cloud/api-platform-gateway/cloud-gateway.md
         - Self-Hosted Gateway:
+            - Architecture: cloud/api-platform-gateway/architecture.md
             - Getting Started: cloud/api-platform-gateway/getting-started.md
             - Setting Up: cloud/api-platform-gateway/setting-up.md
             - Adding and Managing Policies: cloud/api-platform-gateway/manage-policies.md
@@ -348,14 +349,17 @@ nav:
       - Custom Policies:
         - Writing a Custom Policy: api-gateway/policies/custom-policies/writing-a-custom-policy.md
         - Building Gateway with Custom Policies: api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md
-    - Deployment Modes:
-      - Immutable Gateway: api-gateway/deployment-modes/immutable-gateway.md
-      - Kubernetes: 
-        - Overview: api-gateway/deployment-modes/kubernetes/overview.md
-        - Standalone Mode: api-gateway/deployment-modes/kubernetes/kubernetes-standalone.md
-        - Kubernetes Operator Mode: api-gateway/deployment-modes/kubernetes/gateway-operator.md
-    - Deploying APIs:
-      - Bottom-Up Deployment: api-gateway/deploying-apis/bottom-up-api-deployment.md 
+    
+    - Deployment:
+      - Deployment Modes:
+        - Immutable Gateway: api-gateway/deployment/deployment-modes/immutable-gateway.md
+        - Kubernetes: 
+          - Overview: api-gateway/deployment/deployment-modes/kubernetes/overview.md
+          - Standalone Mode: api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
+          - Kubernetes Operator Mode: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator.md
+      - High-Availability Setup: api-gateway/deployment/high-availability-setup.md
+      - Deploying APIs:
+        - Bottom-Up Deployment: api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md 
     - Observability:
       - Logging: api-gateway/observability/logging.md
       - Tracing: api-gateway/observability/tracing.md
