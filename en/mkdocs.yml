@@ -256,7 +256,6 @@ nav:
       # - Overview: api-platform-gateway/overview.md
       # - API Platform Cloud Gateway: api-platform-gateway/cloud-gateway.md
       - Self-Hosted Gateway:
-          - Overview: api-platform-gateway/overview.md
           - Architecture: api-platform-gateway/architecture.md
           - Getting Started: api-platform-gateway/getting-started.md
           - Setting Up: api-platform-gateway/setting-up.md
