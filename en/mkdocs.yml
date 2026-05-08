@@ -424,6 +424,16 @@ nav:
     - AI and MCP:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
+  - Tools:
+    - API Platform CLI:
+        - Quick Start Guide: tools/cli/quick-start-guide.md
+        - Customizing Gateway Policies: tools/cli/customizing-gateway-policies.md
+        - Reference: tools/cli/reference.md
+    - VS Code for API Design:
+        - Getting Started: tools/vscode-api-design/getting-started.md
+        - Design APIs: tools/vscode-api-design/design-apis.md
+        - Govern APIs: tools/vscode-api-design/govern-apis.md
+        - End-to-End Tutorial: tools/vscode-api-design/end-to-end-tutorial.md
 
 # Extensions
 markdown_extensions:
@@ -518,6 +528,14 @@ extra:
       options:
         - verticle-line
         - divider
+    - title: Guides
+      options:
+        - verticle-line
+        - divider
+    - title: Tools
+      options:
+        - verticle-line
+        - divider
   nav_icons:
     Home:
       icon: octicons/home-16
@@ -527,6 +545,9 @@ extra:
       level: 1
     Guides:
       icon: octicons/repo-16
+      level: 1
+    Tools:
+      icon: octicons/terminal-16
       level: 1
     Introduction:
       icon: octicons/info-16
