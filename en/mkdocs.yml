@@ -256,6 +256,8 @@ nav:
       # - Overview: api-platform-gateway/overview.md
       # - API Platform Cloud Gateway: api-platform-gateway/cloud-gateway.md
       - Self-Hosted Gateway:
+          - Overview: api-platform-gateway/overview.md
+          - Architecture: api-platform-gateway/architecture.md
           - Getting Started: api-platform-gateway/getting-started.md
           - Setting Up: api-platform-gateway/setting-up.md
           - Adding and Managing Policies: api-platform-gateway/manage-policies.md
@@ -268,6 +270,7 @@ nav:
             - Subscription Based APIs: api-platform-gateway/publish-apis/subscription-based-apis.md
             - Subscription Less APIs: api-platform-gateway/publish-apis/subscription-less-apis.md
             - Lifecycle Management: api-platform-gateway/publish-apis/lifecycle-management.md
+          - High Availability: api-platform-gateway/high-availability.md
           # - Analytics: api-platform-gateway/analytics.md
           # - Troubleshooting: api-platform-gateway/troubleshooting.md
       - Third-Party Gateways:
