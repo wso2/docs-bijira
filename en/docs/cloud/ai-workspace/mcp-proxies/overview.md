@@ -26,4 +26,4 @@ MCP Proxy will address these challenges providing built-in security, governance,
 ## Next Steps
 
 - [Configure MCP Proxy](configure-proxy.md) — Step-by-step guide to create and deploy your first proxy
-- [Apply Policies](apply-policies) — Apply policies after deployment
+- [Apply Policies](apply-policies.md) — Apply policies after deployment

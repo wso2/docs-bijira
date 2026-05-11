@@ -330,4 +330,5 @@ Configure Fluent Bit to forward to Splunk HEC:
 - [Fluent Bit Documentation](https://docs.fluentbit.io/)
 - [OpenSearch Documentation](https://opensearch.org/docs/latest/)
 - [OpenSearch Dashboards User Guide](https://opensearch.org/docs/latest/dashboards/)
+- [Gateway Overview](../overview.md)
 - [Docker Compose Profiles](https://docs.docker.com/compose/profiles/)

@@ -33,7 +33,7 @@ To view audit logs, follow these steps:
 
     To view audit logs based on a specific time range and other requirements, you can apply the necessary filter criteria.
 
-    ![Audit logs](../../assets/img/monitoring-and-insights/logs/audit-logs.png)
+    ![Audit logs](../../../assets/img/monitoring-and-insights/logs/audit-logs.png)
 
 ## Audit log retention
 
@@ -53,12 +53,12 @@ Follow the steps given below to create a role with audit log access permission a
 3. On the **Access Control** tab, click **Roles** and then click **+ Create Role**.
 4. Enter a name and description for the role.
    
-     ![Create role](../../assets/img/monitoring-and-insights/logs/create-role-to-view-audit-logs.png){: style="width:700px"}
+     ![Create role](../../../assets/img/monitoring-and-insights/logs/create-role-to-view-audit-logs.png){: style="width:700px"}
 
 5. Click **Next**.
 6. In the **Create Role** dialog, select **LOG-MANAGEMENT** under **Permissions**.
 
-     ![Select log management permission](../../assets/img/monitoring-and-insights/logs/log-management-permission.png){: style="width:700px"}
+     ![Select log management permission](../../../assets/img/monitoring-and-insights/logs/log-management-permission.png){: style="width:700px"}
 
 7. Click **Create**.  
 

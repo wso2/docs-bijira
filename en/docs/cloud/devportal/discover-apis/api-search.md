@@ -4,7 +4,7 @@ You can search for APIs in the Developer Portal that have already been published
 
 1. Click **APIs** from the sidebar.APIs list can be seen
 
-    ![APIs List](../../assets/img/devportal/apis-list.png)
+    ![APIs List](../../../assets/img/devportal/apis-list.png)
 
 2. Use one of the following methods to search:
 
@@ -17,4 +17,4 @@ You can search for APIs in the Developer Portal that have already been published
 
     Example: Searching by API version.
 
-![API Search](../../assets/img/devportal/api-search.png)
+![API Search](../../../assets/img/devportal/api-search.png)

@@ -19,7 +19,7 @@ To create a new pipeline, follow the steps given below:
 5. Click **+ Add Environment** and add required environments for the pipeline according to the preferred environment sequence.
 6. Click **Create**.
 
-![Add new CD Pipeline](../../assets/img/administer/settings/add-cd-pipeline.png)
+![Add new CD Pipeline](../../../assets/img/administer/settings/add-cd-pipeline.png)
 
 ## Edit a continuous deployment pipeline
 
@@ -90,4 +90,4 @@ To change the default pipeline of a project, follow the steps given below:
 !!! info "Note"
     The **default** continuous deployment pipeline is configured separately at both the organization and project levels. When a project is created, it inherits the organization's **default** pipeline. The project's **default** pipeline then defines the default promotion order for its components on the Deploy page.
 
-![Update Default CD Pipeline](../../assets/img/administer/settings/update-proxy-default-pipeline.png)
+![Update Default CD Pipeline](../../../assets/img/administer/settings/update-proxy-default-pipeline.png)

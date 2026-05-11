@@ -12,7 +12,7 @@ For more information, refer to the official [specification](https://modelcontext
 
 API Platform now includes support for MCP servers. It provides a complete solution for transforming existing APIs into intelligent, AI-ready tools. With a centralized control plane, API Platform simplifies the entire lifecycle of MCP server management—from creation to discovery—delivering a seamless experience for both API developers and AI agent builders. Additionally, API Platform allows you to customize the developer portal to deliver a tailored, MCP-only experience for your consumers.
 
-![MCP Inspector](../assets/img/introduction/mcp/mcp-architecture.png)
+![MCP Inspector](../../assets/img/introduction/mcp/mcp-architecture.png)
 
 In summary, API Platform provides the following capabilities related to MCP.
 

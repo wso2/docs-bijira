@@ -31,4 +31,4 @@ At deployment time, all components in a project are deployed into a single names
 
 A project in API Platform is represented as a **cell** in the [Cell-based architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md), which enables modular, scalable, and secure application design.
 
-![Project](../assets/img/bijira-concepts/project.png){.cInlineImage-full}
+![Project](../../assets/img/bijira-concepts/project.png){.cInlineImage-full}

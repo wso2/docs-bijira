@@ -9,7 +9,7 @@ Follow these steps to test a WebSocket endpoint using the WebSocket Console:
 3. Click **Test** in the left navigation menu, then select **Console**. This will open the **WebSocket Console** pane.
 4. In the **Console** pane, select the desired environment from the drop-down menu.
 
-    ![WebSocket Console](../assets/img/test-api-proxy/websocket-console.png){.cInlineImage-full}
+    ![WebSocket Console](../../assets/img/test-api-proxy/websocket-console.png){.cInlineImage-full}
 
 5. Expand the topic you want to test.
 6. Provide values for any parameters, if applicable.

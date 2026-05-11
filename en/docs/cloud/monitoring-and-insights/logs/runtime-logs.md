@@ -11,7 +11,7 @@ To access runtime logs, follow the steps below:
 
     To view logs based on a specific time range and other requirements, you can apply the necessary filter criteria.
 
-    ![Runtime logs](../../assets/img/monitoring-and-insights/logs/runtime-logs.png)
+    ![Runtime logs](../../../assets/img/monitoring-and-insights/logs/runtime-logs.png)
 
 ## Searching through runtime logs
 
@@ -29,7 +29,7 @@ Pattern examples:
   - `.*(GET|POST).*&.*500.*` : Find logs of GET or POST request methods with HTTP 500 status code
   - `\"userId\":\"12345\"` : Find logs containing the userId "12345"
 
-![Search and filter interface](../../assets/img/monitoring-and-insights/logs/search-regex.png)
+![Search and filter interface](../../../assets/img/monitoring-and-insights/logs/search-regex.png)
 
 ## Understand runtime logs
 

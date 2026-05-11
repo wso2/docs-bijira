@@ -17,7 +17,7 @@ This dashboard is especially useful for answering broad questions such as:
 
 Every dashboard supports configurable refresh intervals and time-range filters, making it possible to use the same dashboards for both short-term operational monitoring and longer-term trend analysis. At the top of every Insights page you can filter data by **Environment** (e.g. Production, Development) and **Time range** (e.g. Day, Last 7 Days, or a custom range).
 
-![Insights Overview](../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
+![Insights Overview](../../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
 
 ### Summary Metrics
 
@@ -97,7 +97,7 @@ Cards for each protocol type let you quickly compare relative traffic volumes an
 
 **Error Rate Trend** — Shows how the error rate changes over time. This is especially useful for spotting regressions after deployments, validating fixes, and identifying intermittent issues that may not appear in aggregate metrics.
 
-![All APIs Analytics](../assets/img/monitoring-and-insights/insights-4.png){.cInlineImage-full}
+![All APIs Analytics](../../assets/img/monitoring-and-insights/insights-4.png){.cInlineImage-full}
 
 **Traffic Intensity (Day vs Hour)** — Highlights when demand is highest by showing request volume by day and hour. Use it to understand recurring demand patterns and to align scaling or maintenance activities with real usage behavior.
 
@@ -128,7 +128,7 @@ Because REST traffic often represents the largest share of gateway traffic, this
 
 **Error Rate Trend** — Shows how REST error levels change over time, making it easier to pinpoint when a problem started and whether it is improving or worsening.
 
-![REST API Analytics](../assets/img/monitoring-and-insights/insights-5.png){.cInlineImage-full}
+![REST API Analytics](../../assets/img/monitoring-and-insights/insights-5.png){.cInlineImage-full}
 
 **Traffic Intensity (Day vs Hour)** — Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
 

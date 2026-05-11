@@ -23,25 +23,25 @@ Follow the steps below to add a custom key manager in API Platform:
 3. In the header, click the **Organization** list. This will open the organization level settings page.
 4. On the **Key Managers** tab, click **+ Key Manager**.
 
-    ![Key Managers tab](../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 5. Select  **Custom** as the key manager.
 
-    ![Select Custom](../../assets/img/administer/settings/external-km/add_external_km_custom_select.png)
+    ![Select Custom](../../../assets/img/administer/settings/external-km/add_external_km_custom_select.png)
 
 6. Provide a name and a description for the key manager.
 7. Obtain the `Well-Known URL` of your key manager and Provide it under Well-Known URL.
 8. Leave the **Apply to all environments** checkbox selected. However, if you want to restrict the use of the external key manager to a certain environment, you can select them from the **Environments** list.
 
-    ![Custom key manager configuration page 1](../../assets/img/administer/settings/external-km/add_external_km_custom_page_1.png)
+    ![Custom key manager configuration page 1](../../../assets/img/administer/settings/external-km/add_external_km_custom_page_1.png)
 
 9. Click **Next**.
-    ![Custom key manager configuration page 2](../../assets/img/administer/settings/external-km/add_external_km_custom_page_2.png)
+    ![Custom key manager configuration page 2](../../../assets/img/administer/settings/external-km/add_external_km_custom_page_2.png)
 10. The next page will list all the relevant configurations extracted from the `Well-Known URL`. Review the configurations and click **Add**.
 
 Now you have configured your custom key manager as an external key manager in API Platform.
 
-![Add Key Manager button](../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
+![Add Key Manager button](../../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
 
 ## Step 2: Add the external key manager in API Platform Developer Portal
 
@@ -54,7 +54,7 @@ Once the key manager is configured as an external key manager in API Platform, i
 
 Now you have configured your key manager as an external key manager in API Platform Developer Portal as well.
 
-![Key Managers tab](../../assets/img/administer/settings/external-km/add_external_km_custom_devportal.png)
+![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km_custom_devportal.png)
 
 ## What Next?
 

@@ -471,9 +471,3 @@ The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-va
 | 8443 | Router | HTTPS traffic |
 | 9901 | Router | Envoy admin |
 | 9001 | Policy Engine | ext_proc gRPC |
-
-## See Also
-
-- [Gateway Quick Start (Docker Compose)](../quick-start-guide.md)
-- [Policies](../overview.md#policies)
-- [Gateway REST API](../../rest-apis/gateway/)

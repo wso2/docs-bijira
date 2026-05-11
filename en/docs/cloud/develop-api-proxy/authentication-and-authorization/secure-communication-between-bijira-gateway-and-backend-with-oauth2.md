@@ -43,7 +43,7 @@ To deploy the API, follow the steps given below:
 2. In the **Build Area** card, click **Configure & Deploy**.
 3. Once the mediation application generation phase is complete, verify the endpoint URL populated for the environment and then click **Save & Deploy**.
 
-Once the deployment is complete, you can [test the API](../test-api-proxy/openapi-console.md) to confirm that the Gateway successfully obtains and forwards OAuth2 tokens.
+Once the deployment is complete, you can [test the API](../../test-api-proxy/openapi-console.md) to confirm that the Gateway successfully obtains and forwards OAuth2 tokens.
 
 ### Step 3: Promote to higher environments
 

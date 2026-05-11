@@ -125,7 +125,7 @@ Before you proceed with the configuration, make sure you complete the following:
 4. In the **Access Control** tab, click **Groups**.
 
 5. Click **Manage IdP Group Mapping**.
-   ![Group mapping](../../assets/img/administer/settings/group-mapping.png)
+   ![Group mapping](../../../assets/img/administer/settings/group-mapping.png)
 
 
 6. Click the edit icon corresponding to the API Platform group you want to map to the enterprise IdP group.

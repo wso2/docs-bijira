@@ -13,7 +13,7 @@ API Platform AI Workspace supports the following LLM providers:
 
 | Provider | Description | Learn More |
 |----------|-------------|-----------|
-| ![OpenAI](https://raw.githubusercontent.com/nomadxd/openapi-connectors/main/openapi/openai/icon.png){: style="width:32px; vertical-align:middle"} **OpenAI** | Access GPT-4, GPT-3.5, and other OpenAI models | [Documentation](https://platform.openai.com/docs) |
+| ![OpenAI](https://raw.githubusercontent.com/nomadxd/openapi-connectors/main/openapi/openai/icon.png){: style="width:32px; vertical-align:middle"} **OpenAI** | Access GPT-4, GPT-3.5, and other OpenAI models | [Documentation](https://developers.openai.com/api/docs) |
 | ![Anthropic](https://raw.githubusercontent.com/nomadxd/openapi-connectors/main/openapi/anthropic.claude/icon.png){: style="width:32px; vertical-align:middle"} **Anthropic** | Integrate Claude models for advanced AI capabilities | [Documentation](https://docs.anthropic.com/) |
 | ![Azure OpenAI](https://raw.githubusercontent.com/nomadxd/openapi-connectors/main/openapi/azure.openai/icon.png){: style="width:32px; vertical-align:middle"} **Azure OpenAI** | Use OpenAI models hosted on Microsoft Azure | [Documentation](https://azure.microsoft.com/products/ai-services/openai-service) |
 | ![Azure AI Foundry](https://raw.githubusercontent.com/nomadxd/openapi-connectors/main/openapi/azure.openai/icon.png){: style="width:32px; vertical-align:middle"} **Azure AI Foundry** | Access models through Azure AI Foundry platform | [Documentation](https://azure.microsoft.com/products/ai-studio) |

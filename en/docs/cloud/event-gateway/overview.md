@@ -25,7 +25,7 @@ The Event Gateway consists of three components that work together in the mediati
 | **Policy Engine** | Enforces policies on inbound and outbound flows, including authentication, authorization, rate limiting, and delivery guarantees. |
 | **Broker Driver** | Bridges the Event Gateway and the backend message or event broker (e.g., Kafka, MQTT, Solace). Handles protocol translation to and from the broker. |
 
-![Event Gateway Architecture](../assets/img/event-gateway/event-gateway-architecture.png)
+![Event Gateway Architecture](../../assets/img/event-gateway/event-gateway-architecture.png)
 
 ### WebSub APIs
 

@@ -26,7 +26,7 @@ Follow these steps to create an API proxy for a third-party API available in the
     - Target
 2. Review and confirm the configuration settings.
 
-    ![Third-party API Proxy Details](../../assets/img/create-api-proxy/third-party-apis/marketplace/third-party-api-details.png)
+    ![Third-party API Proxy Details](../../../assets/img/create-api-proxy/third-party-apis/marketplace/third-party-api-details.png)
 
 3. Click **Create** to finalize the API proxy creation.
 
@@ -49,7 +49,7 @@ To integrate the `Currency API`, follow these steps:
 
 4. Click **Save** to apply the configuration.
 
-   ![Third-party API Backend Configuration](../../assets/img/create-api-proxy/third-party-apis/marketplace/third-party-api-backend-configuration.png)
+   ![Third-party API Backend Configuration](../../../assets/img/create-api-proxy/third-party-apis/marketplace/third-party-api-backend-configuration.png)
 
 ### Next Steps
 

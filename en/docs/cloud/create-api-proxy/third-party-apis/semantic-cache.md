@@ -7,15 +7,15 @@ AI services frequently involve repetitive queries, leading to unnecessary token 
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Semantic Cache Policy](../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy.png)  
+    ![Semantic Cache Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy.png)  
 
 2. Click Add Resource Level Policy --> Request flow --> Attach mediation policy --> Semantic Caching
 
-    ![Policy List](../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy-select.png)  
+    ![Policy List](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy-select.png)  
 
 3. Add the embedding provider and vector store configurations and click **Save**.
 
-     ![Semantic Cache Policy Configs](../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy-config.png)  
+     ![Semantic Cache Policy Configs](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/semantic-cache/semantic-cache-policy-config.png)  
 
 4. **Save** the API and **Deploy** the API to apply the policy to the gateway.
 

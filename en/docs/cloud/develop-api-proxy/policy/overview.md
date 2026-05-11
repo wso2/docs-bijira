@@ -9,13 +9,13 @@ You can intuitively map API proxies to service contracts with API Platform's int
 You can further redesign and customize your API proxy created from following the [Create API Proxy](../../create-api-proxy/overview.md) flow.
 
 1. You can add new resources and delete existing ones as necessary
-   ![Resource Addition and Deletion](../../assets/img/develop-api-proxy/overview/add_delete_resource.png)
+   ![Resource Addition and Deletion](../../../assets/img/develop-api-proxy/overview/add_delete_resource.png)
 
 2. You can delete existing resource mappings, with the option to delete the resources along with the mapping if you do not intend to map it to a different backend resource
-   ![Delete Existing Mapping](../../assets/img/develop-api-proxy/overview/delete_mapping.png)
+   ![Delete Existing Mapping](../../../assets/img/develop-api-proxy/overview/delete_mapping.png)
 
 3. You can create a new mapping for a new resource you created
-   ![New Mapping Creation](../../assets/img/develop-api-proxy/overview/new_mapping.png)
+   ![New Mapping Creation](../../../assets/img/develop-api-proxy/overview/new_mapping.png)
 
 !!! Info
     Each change made to proxy will be automatically saved as the `Latest saved` version in History. You can restore to the initial version or to an earlier version that has been deployed by clicking the `Restore` button in the History Pane.

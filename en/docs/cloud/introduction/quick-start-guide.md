@@ -40,7 +40,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
    ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
     /* replace this image with websocket option */
-    ![Create API Proxy from Contract](../assets/img/introduction/create-api-proxy-from-contract.png)
+    ![Create API Proxy from Contract](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
 
@@ -61,7 +61,7 @@ In this guide, you will use the OpenAPI Console.
 3. Expand the `GET /uuid` method and click **Try it Out** to test it.
 4. Click **Execute**. You will see a response similar to the following:
 
-    ![API proxy response](../assets/img/introduction/test-response.png)
+    ![API proxy response](../../assets/img/introduction/test-response.png)
 
     This indicates that your API proxy is working as expected.
 
@@ -96,7 +96,7 @@ You can observe that the API lifecycle stage has changed to **Published**. Now t
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.
 
 1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the API Platform Developer Portal.
-    ![Go to DevPortal](../assets/img/introduction/go-to-developer-portal.png)
+    ![Go to DevPortal](../../assets/img/introduction/go-to-developer-portal.png)
 2. Subscribe to the API and Generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications**.
     2. Click **Create**.
