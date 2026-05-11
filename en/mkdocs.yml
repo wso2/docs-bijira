@@ -182,6 +182,10 @@ nav:
           - Prompt Decorator: ai-gateway/llm/prompt-management/prompt-decorator.md
           - Prompt Template: ai-gateway/llm/prompt-management/prompt-template.md
         - Semantic Caching: ai-gateway/llm/semantic-caching.md
+        - AI Tools:
+          - Claude Code configuration with AI Gateway: ai-gateway/llm/ai-tools/claude-code-configuration-with-ai-gateway.md
+          - Google Gemini CLI configuration with AI Gateway: ai-gateway/llm/ai-tools/gemini-cli-configuration-with-ai-gateway.md
+          - OpenAI Codex CLI configuration with AI Gateway: ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway.md
       - MCP:
         - Quick Start Guide: ai-gateway/mcp/quick-start-guide.md
         - Policies:
