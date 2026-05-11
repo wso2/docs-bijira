@@ -1,4 +1,4 @@
-# Configuring OpenAI Codex with AI Gateway
+# Configuring OpenAI Codex CLI with AI Gateway
 
 This guide explains how to configure OpenAI Codex CLI to send requests through WSO2 API Platform using an AI Gateway, an OpenAI LLM provider, and an App LLM Proxy.
 
