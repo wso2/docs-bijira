@@ -4,10 +4,10 @@ Not sure where to begin? This page helps you find the right quick start guide ba
 
 ## What do you want to do?
 
-### I want to manage and govern APIs through a UI
+### I want to manage and govern APIs
 You want the full platform experience: a web console to create, deploy, test, and govern APIs visually.
 
-**If you want WSO2 to host it (Cloud):**
+**If you want WSO2 to host it:**
 
 | Guide | What you will do |
 | :--- | :--- |
@@ -20,8 +20,8 @@ You want the full platform experience: a web console to create, deploy, test, an
 
 | Guide | What you will do |
 | :--- | :--- |
-| [Install API Manager](api-manager/overview.md) | Download and set up API Manager on Docker or Kubernetes. |
-| [Publish your first API proxy](api-manager/overview.md) | Create and deploy an API through the self-managed Publisher UI. |
+| [Install API Manager](https://apim.docs.wso2.com/en/latest/install-and-setup/install-and-setup-overview/) | Download and set up API Manager on Docker or Kubernetes. |
+| [Publish your first API proxy](https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/) | Create and deploy an API through the self-managed Publisher UI. |
 
 ### I want to run a standalone gateway (no UI, YAML and CLI only)
 You want a lightweight gateway that you can download and run immediately. There is no control plane and no web console. Everything is configured through YAML files and CLI.
@@ -30,14 +30,12 @@ You want a lightweight gateway that you can download and run immediately. There 
 
 | Guide | What you will do |
 | :--- | :--- |
-| [API Gateway: Setting up](api-gateway/setup/storage-and-backends.md) | Install and configure the gateway runtime (Docker or binary). |
 | [API Gateway: Getting started](api-gateway/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
 
 **For AI traffic (LLMs and MCP):**
 
 | Guide | What you will do |
 | :--- | :--- |
-| [AI Gateway: Setting up](ai-gateway/deployment-modes/kubernetes/overview.md) | Install and configure the AI Gateway runtime (Docker or binary). |
 | [LLM Proxy: Quick start](ai-gateway/llm-proxy/quick-start-guide.md) | Configure an LLM provider, apply a guardrail, and route your first LLM request. |
 | [MCP Proxy: Quick start](ai-gateway/mcp-proxy/quick-start-guide.md) | Expose a REST API as an MCP tool and invoke it through an MCP client. |
 
