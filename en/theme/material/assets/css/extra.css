@@ -1,0 +1,14 @@
+/*
+Add a separator after the overview page. Since it's not a nested section, we 
+can't use Mkdocs to automatically generate it for us
+*/
+@media screen and (min-width: 76.25em) {
+    .md-nav--primary>.md-nav__list>.md-nav__item:nth-child(1)::after {
+        content: "";
+        display: block;
+        border-top: 2px solid var(--md-divider-color);
+        opacity: 0.3;
+        height: 1px;
+        margin: 8px 5px 18px 5px;
+    }
+}
