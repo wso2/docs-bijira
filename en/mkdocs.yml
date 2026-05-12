@@ -20,6 +20,7 @@ site_description: API Platform Documentation
 site_author: WSO2
 site_url: https://wso2.com/bijira/docs
 
+
 # Repository
 repo_name: wso2/docs-bijira
 repo_url: https://github.com/wso2/docs-bijira
@@ -476,6 +477,9 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: docs
   - attr_list
+hooks:
+  - hooks.py
+
 plugins:
   - search
   - include-markdown
@@ -491,6 +495,7 @@ extra_javascript:
   - assets/lib/highlightjs/highlight.min.js
   - assets/js/theme.js
 extra:
+  page_title_suffix: "API Platform Docs"
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/wso2
