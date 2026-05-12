@@ -276,6 +276,7 @@ nav:
               - Subscription Based APIs: cloud/api-platform-gateway/publish-apis/subscription-based-apis.md
               - Subscription Less APIs: cloud/api-platform-gateway/publish-apis/subscription-less-apis.md
               - Lifecycle Management: cloud/api-platform-gateway/publish-apis/lifecycle-management.md
+            - High Availability: cloud/api-platform-gateway/high-availability.md
             # - Analytics: cloud/api-platform-gateway/analytics.md
             # - Troubleshooting: cloud/api-platform-gateway/troubleshooting.md
         - Third-Party Gateways:
@@ -363,7 +364,6 @@ nav:
           - Overview: api-gateway/deployment/deployment-modes/kubernetes/overview.md
           - Standalone Mode: api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
           - Kubernetes Operator Mode: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator.md
-      - High-Availability Setup: api-gateway/deployment/high-availability-setup.md
       - Deploying APIs:
         - Bottom-Up Deployment: api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md 
     - Observability:
