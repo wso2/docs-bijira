@@ -69,8 +69,7 @@ theme:
 strict: false
 # Navigation
 nav:
-  # - Home: index.md
-  - Overview: overview.md
+  - Overview: index.md
   - Get Started: get-started.md
   - Cloud:
     - Introduction:
