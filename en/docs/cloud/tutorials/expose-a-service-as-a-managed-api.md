@@ -73,7 +73,7 @@ In this guide, you will use the OpenAPI Console.
 3. Expand the `GET /books` method and click **Try it Out** to test it.
 4. Click **Execute**. You will see a response similar to the following:
 
-   ![API proxy response](../assets/img/tutorials/api-proxy-response.png)
+   ![API proxy response](../../assets/img/tutorials/api-proxy-response.png)
 
    This indicates that your API proxy is working as expected.
 

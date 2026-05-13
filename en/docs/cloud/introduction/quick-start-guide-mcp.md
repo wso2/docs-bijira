@@ -40,7 +40,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
    ```
 3. The **Create MCP Server from Contract** page will be opened. Click **Create** to complete the MCP Server creation process.
 
-    ![Create MCP Server from Contract](../assets/img/introduction/mcp-create-server.png)
+    ![Create MCP Server from Contract](../../assets/img/introduction/mcp-create-server.png)
 
 ## Step 3: Test the MCP Server
 
@@ -60,7 +60,7 @@ In this guide, you will use the MCP Playground.
 
 5. Click **List Tools**, select a tool, and click **Run Tool**
 
-    ![MCP Inspector](../assets/img/introduction/mcp-inspector.png)
+    ![MCP Inspector](../../assets/img/introduction/mcp-inspector.png)
 
 ## Step 4: Promote and Publish the MCP Server
 
@@ -96,7 +96,7 @@ MCP Servers in API Platform are secured by OAuth2 by default. To access an MCP S
 
 1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the MCP Server published in the API Platform Developer Portal.
 
-    ![Go to DevPortal](../assets/img/introduction/mcp-go-to-developer-portal.png)
+    ![Go to DevPortal](../../assets/img/introduction/mcp-go-to-developer-portal.png)
 
 2. Subscribe to the MCP Server and generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications** and then click **Create**.
@@ -126,6 +126,6 @@ MCP Servers in API Platform are secured by OAuth2 by default. To access an MCP S
 
     6. Click **List Tools**, select a tool, and click **Run Tool**    
         
-        ![MCP Inspector Devportal](../assets/img/introduction/mcp-inspector-devportal.png)
+        ![MCP Inspector Devportal](../../assets/img/introduction/mcp-inspector-devportal.png)
 
 Now you have successfully created, deployed, tested, and published an MCP Server using API Platform.

@@ -16,4 +16,4 @@ Follow the steps below to test an API with API Chat:
     ```
 The resources are executed sequentially based on your query. Alternatively, you can use the sample queries available to try out API Chat.
 
-    ![API Chat Results](../assets/img/test-api-proxy/api-chat-result.png){.cInlineImage-full}
+    ![API Chat Results](../../assets/img/test-api-proxy/api-chat-result.png){.cInlineImage-full}

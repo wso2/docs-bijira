@@ -43,7 +43,7 @@ This tab will shows the reference to main CSS from the the organizational level 
 
 Here you can adjust appearance of the API Overview page by changing the css styles.
 
-![API Level CSS](../assets/img/devportal/api-level-css.png)
+![API Level CSS](../../assets/img/devportal/api-level-css.png)
 
 1. Replace the following sections in the CSS, You can see the changes in the preview.
 
@@ -64,7 +64,7 @@ Here you can adjust appearance of the API Overview page by changing the css styl
 
     ```
 
-    ![API Level CSS Preview](../assets/img/devportal/api-level-css-preview.png)
+    ![API Level CSS Preview](../../assets/img/devportal/api-level-css-preview.png)
 
 2. Click **Publish to Developer Portal** to publish the CSS changes.
 
@@ -75,7 +75,7 @@ To customize the content of an API go through the following steps.
 1. Select a **Project** in your organization.
 2. Select an **API** to do the customization.
 
-    ![Select an API](../assets/img/devportal/select-an-api.png)
+    ![Select an API](../../assets/img/devportal/select-an-api.png)
 
 3. Click **Documents** under **Develop** from the sidebar.
 4. Go to **API Landing Page** tab.
@@ -127,5 +127,5 @@ To customize the content of an API go through the following steps.
     </div>
     ```
 
-    ![API Level content changes](../assets/img/devportal/api-level-content-changes.png)
+    ![API Level content changes](../../assets/img/devportal/api-level-content-changes.png)
 

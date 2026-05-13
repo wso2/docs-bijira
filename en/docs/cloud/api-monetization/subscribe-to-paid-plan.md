@@ -19,11 +19,11 @@ Before you begin, ensure you have:
 2. In the Developer Portal sidebar, click **APIs** to open the API listing page.
 3. Locate the API you want to subscribe to and click **Subscribe** on the API card.
 
-    ![API Listing Page](../assets/img/api-monetization/devportal-api-list.png){ width="900" }
+    ![API Listing Page](../../assets/img/api-monetization/devportal-api-list.png){ width="900" }
 
 4. In the **Choose Your Subscription Plan** dialog, review the available plans. Select the **application** you want to subscribe with from the dropdown, and click **Subscribe** on the paid plan that fits your requirements.
 
-    ![Choose Subscription Plan](../assets/img/api-monetization/devportal-subscribe-api-paid.png){ width="800" }
+    ![Choose Subscription Plan](../../assets/img/api-monetization/devportal-subscribe-api-paid.png){ width="800" }
 
 5. A secure Stripe checkout window opens. Enter your payment details and complete the payment.
 

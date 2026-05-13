@@ -4,7 +4,7 @@ API Platform's developer portal can be configured in different modes based on yo
 
 You can find this under the **Configuration** tab in the **Developer Portal** section in your organization's settings pane.
 
-![Devportal Modes](../assets/img/devportal/devportal-mode.png)
+![Devportal Modes](../../assets/img/devportal/devportal-mode.png)
 
 Devportal configuration has 3 modes.
 

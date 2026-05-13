@@ -31,7 +31,7 @@ For the complete list of CLI commands and usage examples, see the [CLI Reference
 
 ## Architecture
 
-![Gateway Architecture](../assets/img/api-gateway/gateway-architecture.png)
+![Gateway Architecture](../../assets/img/api-gateway/gateway-architecture.png)
 <!-- image source: https://docs.google.com/drawings/d/1pgADdQNpNcvLrLVvV1fx2hxQOb3syoU0DEBhJd2N6Aw/edit?usp=sharing -->
 
 The API Gateway consists of two main components: **Gateway Controller** and **Gateway Runtime**.
@@ -71,5 +71,5 @@ In a production HA deployment:
 - **Gateway Controller** instances connect to a shared **PostgreSQL** database for persistent storage of API configurations, subscriptions, and other metadata.
 - **Gateway Runtime** instances connect to a shared **Redis** instance used for distributed rate limiting, ensuring rate limit counters are synchronized across all runtime instances.
 
-![Gateway High Availability Setup](../assets/img/api-gateway/gateway-ha-setup.png)
+![Gateway High Availability Setup](../../assets/img/api-gateway/gateway-ha-setup.png)
 <!-- image source: https://docs.google.com/drawings/d/1CIH3V8Uc2YxCWEGS7yUz3qyBfSpdLK1VpWK0NgmP4OQ/edit?usp=sharing -->

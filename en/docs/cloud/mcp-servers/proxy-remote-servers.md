@@ -6,7 +6,7 @@ API Platform allows you to proxy existing unsecured remote MCP servers by simply
 
 You can use the Start with MCP Server URL option to create a new MCP Server proxy using an existing MCP Server.
 
-![Create MCP from endpoint](../assets/img/introduction/mcp/mcp-create-url.png)
+![Create MCP from endpoint](../../assets/img/introduction/mcp/mcp-create-url.png)
 
 !!!important
     Make sure you provide the complete url ending with **/mcp** as this will be used to connect and fetch the tools in the creation step.
@@ -19,7 +19,7 @@ You can use the Start with MCP Server URL option to create a new MCP Server prox
 
 You can modify the details of the Tools of your MCP Server by navigating to the Policy section under the Develop menu. The default tool names, descriptions, and schemas are taken from the actual MCP Server.
 
-![Manage MCP Tools](../assets/img/introduction/mcp/mcp-tool-list-external.jpg)
+![Manage MCP Tools](../../assets/img/introduction/mcp/mcp-tool-list-external.jpg)
 
 The following options are supported when modifying the Tools
 
@@ -38,7 +38,7 @@ You can test the MCP Server in the development environment before promoting it t
 3. Click on **Get Test Key** if the test key is not populated
 4. Click on **Connect** to connect with your deployed MCP Server.
 
-![MCP Inspector](../assets/img/introduction/mcp/mcp-inspector-thirdparty.png)
+![MCP Inspector](../../assets/img/introduction/mcp/mcp-inspector-thirdparty.png)
 
 You can select and call individual tools by providing the parameters if necessary.
 
@@ -73,11 +73,11 @@ In the Lifecycle Management pane, click **Go to DevPortal**. This takes you to t
 !!!info
     If you need to do MCP specific customization to the Developer portal, please refer the [MCP Hub documentation](./devportal-mcp-hub.md).
 
-![MCP Devportal landing](../assets/img/introduction/mcp/mcp-devportal-landing.png)
+![MCP Devportal landing](../../assets/img/introduction/mcp/mcp-devportal-landing.png)
 
 Go to the MCP Server listing page using the left navigation menu and select your MCP Server
 
-![MCP in Devportal](../assets/img/introduction/mcp/mcp-devportal-thirdparty.png)
+![MCP in Devportal](../../assets/img/introduction/mcp/mcp-devportal-thirdparty.png)
 
 MCP consumers can discover the available tools through this view. Additionally, sample configurations for setting up the MCP Server with an MCP Client can also be obtained from here.
 

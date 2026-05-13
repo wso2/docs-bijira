@@ -18,13 +18,13 @@ For streamlined deployments, API Platform dissects two integral approaches that 
 
 A deployment track is linked to a particular branch within a GitHub repository. This connection is useful for handling deployments to various environments. On API Platform's Deploy page, you can easily visualize the deployments to specific environments associated with your selected deployment track. Moreover, the deployment track has a functionality that initiates automatic deployments for the linked branch. When activated, merging a pull request (PR) triggers a deployment to the development environment.
 
-![Deployment tracks - source repo](../assets/img/bijira-concepts/deployment-tracks-source-repo.png){.cInlineImage-half}
+![Deployment tracks - source repo](../../assets/img/bijira-concepts/deployment-tracks-source-repo.png){.cInlineImage-half}
 
 ### CD-Only strategy with Deployment Tracks
 
 If you're inclined to use your own Continuous Integration (CI) systems and want to harness the deployment track as a Continuous Deployment (CD) pipeline, you can seamlessly link deployment tracks to a container registry repository. This configuration empowers users to effortlessly deploy images sourced directly from the linked container registry repository.
 
-![Deployment tracks - container registry](../assets/img/bijira-concepts/deployment-tracks-container-registry.png){.cInlineImage-half}
+![Deployment tracks - container registry](../../assets/img/bijira-concepts/deployment-tracks-container-registry.png){.cInlineImage-half}
 
 ## Efficient API versioning
 
@@ -46,4 +46,4 @@ In compliance with SemVer, changes that don't introduce breaking or additive mod
 
 Therefore, in the context of deployment tracks, API developers only need to specify the major and minor versions being delivered from a particular deployment track. This information is treated as the API version attribute of a deployment track. If the publisher requires versioning for internal tracking purposes, this can be accomplished in Git through the use of Git tags, on GitHub with GitHub releases, and so forth.
 
-![Deployment tracks - api versioning](../assets/img/bijira-concepts/deployment-tracks-api-versioning.md.png){.cInlineImage-half}
+![Deployment tracks - api versioning](../../assets/img/bijira-concepts/deployment-tracks-api-versioning.md.png){.cInlineImage-half}
