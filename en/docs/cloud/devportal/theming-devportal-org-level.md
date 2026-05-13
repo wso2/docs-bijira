@@ -45,11 +45,11 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 5. If you want to save these changes as a draft, select  `Save As Draft`.
 
-6. If it perfectly aligns with your organization's unique identity, click `Publish to Devportal`.
+6. If it perfectly aligns with your organization's unique identity, click `Publish To Developer Portal`.
 
     ![Publish to Devportal](../assets/img/devportal/publish_to_devportal.png)
 
-7. Go to `Developer portal` to see the changes.
+7. Go to `Developer Portal` to see the changes.
 
     ![View Devportal](../assets/img/devportal/view_devportal.png)
 
