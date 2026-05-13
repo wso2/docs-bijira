@@ -39,3 +39,21 @@
 {% for path in config.extra_javascript %}
 <script src="{{ path | url }}"></script>
 {% endfor %}
+
+<script>
+  function trackEvent(eventName, properties) {
+    if (moesif) {
+      moesif.track(eventName, {
+        product: "api",
+        asset_type: "docs",
+        domain: window.location.hostname,
+        page_url: window.location.pathname,
+        ...properties,
+      });
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    trackEvent("Page-Viewed", { page_title: document.title });
+  });
+</script>
