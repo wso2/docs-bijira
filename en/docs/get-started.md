@@ -46,26 +46,19 @@ You already have gateways running and now want centralized management of LLM pro
 | :--- | :--- |
 | [AI Workspace: Getting started](cloud/ai-workspace/getting-started.md) | Set up an AI Workspace, connect it to an AI Gateway, and configure your first LLM provider with guardrails. |
 
-### I want to set up a developer portal
-You want external or internal developers to discover, subscribe to, and consume your APIs through a portal.
-
-| Guide | What you will do |
-| :--- | :--- |
-| [API Portal: Quick start](cloud/devportal/theming-devportal-with-ai.md) | Set up a developer portal, publish APIs for discovery, and configure developer self-service. |
-
 ### I want to monetize my APIs
 You want to track API usage, set up paid subscription plans, and implement usage-based billing.
 
 | Guide | What you will do |
 | :--- | :--- |
-| [Monetization: Getting started](cloud/api-monetization/getting-started.md) | Connect Moesif, create a paid subscription plan, and start tracking API revenue. |
+| [Monetization: Getting started](analytics-and-monetization/overview.md) | Connect Moesif, create a paid subscription plan, and start tracking API revenue. |
 
 ## After your first quick start
 Once you have completed a quick start guide, here is where to go next:
 
 | I want to... | Go here |
 | :--- | :--- |
-| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/overview.md) · [AI Gateway](ai-gateway/llm-proxy/quick-start-guide.md) |
+| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/overview.md) · [AI Gateway](ai-gateway/overview.md) |
 | Follow end-to-end scenarios spanning multiple components | [Guides](guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) |
 | Try runnable code samples | [Samples](cloud/samples/samples-overview.md) |
 | Understand platform concepts (organizations, projects, data planes) | [Concepts](cloud/bijira-concepts/organization.md) |

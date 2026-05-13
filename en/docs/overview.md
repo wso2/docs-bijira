@@ -95,7 +95,7 @@ There are two standalone gateways:
     For AI traffic. The AI Gateway provides two capabilities:
     * **LLM Proxy** routes traffic to LLM providers such as OpenAI, Anthropic, Azure OpenAI, Mistral, and AWS Bedrock. You can apply guardrails including PII masking, prompt injection protection, and content safety checks. It also supports multi-provider load balancing, failover, semantic caching, and token-based rate limiting.
     * **MCP Proxy** governs how AI agents access your services through the Model Context Protocol. You can generate MCP tools from REST APIs, aggregate tools from multiple servers, and enforce access control and authorization.
-    * [AI Gateway documentation](ai-gateway/llm-proxy/quick-start-guide.md)
+    * [AI Gateway documentation](ai-gateway/overview.md)
 
 ## What is the difference between platform gateways and standalone gateways?
 This is a common question for new users. The API Gateway and AI Gateway appear in both paths: inside the platform (Cloud, Hybrid, API Manager) and as standalone downloads.
@@ -145,7 +145,7 @@ The following is a complete view of all components and where to find their docum
 | Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](cloud/ai-workspace/overview.md) |
 | Set up a developer portal for API discovery | [API Portal](cloud/devportal/theming-devportal-with-ai.md) |
-| Monitor traffic and monetize my APIs | [Analytics and Monetization](cloud/api-monetization/overview.md) |
+| Monitor traffic and monetize my APIs | [Analytics and Monetization](analytics-and-monetization/overview.md) |
 | Follow end-to-end scenario walkthroughs | [Guides](guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) |
 
 ## Key concepts

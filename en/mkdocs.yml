@@ -330,7 +330,7 @@ nav:
             - Search APIs: cloud/devportal/discover-apis/api-search.md
             - Documentations: cloud/devportal/discover-apis/api-documentations.md
         - API Workflows:
-            - Consuming API Workflows: cloud/devportal/api-cloud/workflows/consuming-api-workflows.md
+            - Consuming API Workflows: cloud/devportal/api-workflows/consuming-api-workflows.md
         - Consume an API:
             - Consume an API Secured with OAuth2: cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2.md
             - Consume an API Secured with API Key: cloud/devportal/consuming-services/consume-an-api-secured-with-api-key.md
@@ -388,6 +388,7 @@ nav:
       - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
       - Schemas: api-gateway/gateway-controller-management-api/schemas.md
   - AI Gateway:
+    - Overview: ai-gateway/overview.md
     - LLM Proxy:
         - Quick Start Guide: ai-gateway/llm-proxy/quick-start-guide.md
         - LLM Provider Templates: ai-gateway/llm-proxy/llm-templates.md
