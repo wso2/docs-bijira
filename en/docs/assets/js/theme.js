@@ -72,13 +72,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Toggle active state of nested nav items
   const activeNavItems = document.querySelectorAll('.md-nav__list > .md-nav__item.md-nav__item--active.md-nav__item--nested');
-  
+
   if (activeNavItems) {
     activeNavItems.forEach((item) => {
       const checkbox = item.querySelector('input[type="checkbox"].md-nav__toggle.md-toggle');
-      
+
       if (checkbox) {
         checkbox.checked = true;
+      }
+    });
+  }
+
+  // On mobile, expanded sections all start with checked=true (for desktop accordion).
+  // This causes the mobile drill-down nav to always show the last expanded section ("Tools").
+  // Fix: uncheck all non-active top-level section toggles on mobile.
+  if (window.matchMedia('(max-width: 76.1875em)').matches) {
+    const topLevelItems = document.querySelectorAll('.md-nav--primary > .md-nav__list > .md-nav__item--nested');
+    topLevelItems.forEach(function(item) {
+      if (!item.classList.contains('md-nav__item--active')) {
+        const toggle = Array.from(item.children).find(function(el) {
+          return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
+        });
+        if (toggle) {
+          toggle.checked = false;
+        }
       }
     });
   }
