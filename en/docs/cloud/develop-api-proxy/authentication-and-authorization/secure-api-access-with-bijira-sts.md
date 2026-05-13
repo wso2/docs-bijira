@@ -14,11 +14,11 @@ This guide walks you through the following steps:
 
 To follow this guide, you need to satisfy the following prerequisites:
 
-- If you don't already have an API Proxy in API Platform, [create API Proxy](../../../create-api-proxy/overview/).
+- If you don't already have an API Proxy in API Platform, [create API Proxy](../../create-api-proxy/overview.md).
 - Deploy and publish your API. 
 
 !!! note
-    It is important to note that API Platform STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external key manager such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](../../authentication-and-authorization/secure-api-access-with-asgardeo/).
+    It is important to note that API Platform STS token can be only be used for client authentication. If you have a requirement for end user authentication, it is necessary to use external key manager such as Asgardeo. For more information about secure API access with Asgardeo, refer [Secure API Access with Asgardeo](secure-api-access-with-asgardeo.md).
 
 <!-- ## Step 1: Assign scopes to an API in API Platform
 
@@ -70,4 +70,4 @@ Follow the steps below to consume the API Platform API using API Platform STS.
 
 ## Step 2: Invoke the API Platform API
 
-1. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../../test-api-proxy/openapi-console/) in API Platform.
+1. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../test-api-proxy/openapi-console.md) in API Platform.

@@ -873,6 +873,5 @@ This provides complete observability:
 - [Jaeger Documentation](https://www.jaegertracing.io/docs/)
 - [OpenTelemetry Collector Documentation](https://opentelemetry.io/docs/collector/)
 - [W3C Trace Context Specification](https://www.w3.org/TR/trace-context/)
-- [Gateway README](README.md)
 - [Gateway Logging Guide](logging.md)
 - [Docker Compose Profiles](https://docs.docker.com/compose/profiles/)

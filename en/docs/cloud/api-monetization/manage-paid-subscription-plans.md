@@ -37,7 +37,7 @@ API Platform supports the following pricing models for paid subscription plans.
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Subscription Plans** tab.
 
-    ![Subscription Plans](../assets/img/api-monetization/add-paid-plan.png)
+    ![Subscription Plans](../../assets/img/api-monetization/add-paid-plan.png)
 
 5. Click **+ Create**.
 6. In the **Create Subscription Plan** pane, enter the plan details:
@@ -46,7 +46,7 @@ API Platform supports the following pricing models for paid subscription plans.
     - **Rate Limiting:** Set the **Request Count** (must be greater than 0) and the **Request Count Time Unit** (Minute, Hour, or Day). Enable **Burst Control** to protect your backend from sudden request spikes — the burst limit is enforced over a shorter time unit than the one you selected.
     - **Pricing:** Select a **Pricing Model** (Free, Flat, Unit, Volume, or Graduated), **Currency**, **Billing Period**, and the price amount.
 
-    ![Create Subscription Plan](../assets/img/api-monetization/add-paid-plan-form.png){ width="800" }
+    ![Create Subscription Plan](../../assets/img/api-monetization/add-paid-plan-form.png){ width="800" }
 
     !!! note
         The pricing fields vary by model. For example, Volume and Graduated models require defining price tiers instead of a single unit amount.
@@ -65,7 +65,7 @@ Once you have created paid subscription plans, you can enable them for specific 
 2. In the left navigation menu, click **Manage** and then click **Monetize**. This displays the subscription plans available for the API.
 3. Enable the toggle corresponding to the paid subscription plans you want to assign to the API.
 
-    ![Enable Paid Plan](../assets/img/api-monetization/enable-paid-plan.png)
+    ![Enable Paid Plan](../../assets/img/api-monetization/enable-paid-plan.png)
 
 4. Click **Save**.
 

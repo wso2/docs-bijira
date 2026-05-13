@@ -29,7 +29,7 @@ To generate an access token for **testing purposes**, follow these steps:
 
 7. Click **Generate** to generate an access token. You can add scopes through the Request Permission section in the Access Token dialog.
 
-    ![Scope List](../../assets/img/devportal/ScopeSection.png)
+    ![Scope List](../../../assets/img/devportal/ScopeSection.png)
 
     !!!info
         Currently, API Platform does not support configuring allowed scopes at the application level.

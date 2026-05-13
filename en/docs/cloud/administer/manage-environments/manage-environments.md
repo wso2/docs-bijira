@@ -22,7 +22,7 @@ To create a new environment, follow the steps given below:
    - **DNS Prefix**: A DNS prefix to identify the exposed APIs in the environment. Here, the base domain depends on the custom domain attached to the API gateways provisioned on the selected data plane.
    - **Mark environment as a Production environment**: Select if you want this environment to be a production environment.
 
-![Add new environment](../../assets/img/administer/settings/add-environment.png)
+![Add new environment](../../../assets/img/administer/settings/add-environment.png)
 
 !!!tip
      In API Platform, you can have multiple non-production and production environments. To work in a production environment, you must have privileged permissions to access and deploy to production environments.

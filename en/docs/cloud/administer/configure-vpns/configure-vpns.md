@@ -6,7 +6,7 @@ API Platform allows this secure connection using [Tailscale](https://tailscale.c
 
 The following diagram illustrates the high-level deployment architecture of the Tailscale pre-installed forward proxy:
 
-![Deployment architecture](../../assets/img/administer/tailscale/deployment-architecture.png)
+![Deployment architecture](../../../assets/img/administer/tailscale/deployment-architecture.png)
 
 Let's take a look at the specifics of each part to understand the deployment architecture.
 
@@ -55,7 +55,7 @@ This section walks you through the steps to create, configure, deploy, and use t
 3.  On the project home page, click **Admin** menu, and select the **Settings** sub menu.
 4.  Click on the VPN Configuration tab and then click the Create button
 
-![Create Tailscale view](../../assets/img/administer/tailscale/create-tailscale-view.png)
+![Create Tailscale view](../../../assets/img/administer/tailscale/create-tailscale-view.png)
 
 5.  Enter a name, identifier, and a description for the tailscale proxy. For this guide, let's enter the following values:
 
@@ -69,7 +69,7 @@ This section walks you through the steps to create, configure, deploy, and use t
 
 Now you have successfully created the Tailscale proxy. You can proceed to configure and deploy it.
 
-![Successful Tailscale created view](../../assets/img/administer/tailscale/tailscale-created-view.png)
+![Successful Tailscale created view](../../../assets/img/administer/tailscale/tailscale-created-view.png)
 
 ### Step 2: Configure and deploy the Tailscale proxy
 
@@ -123,7 +123,7 @@ To configure and deploy the tailscale proxy, follow the steps given below:
 
 7.  Click **Save & Deploy** to apply configurations and deploy the tailscale proxy.
 
-![Configure Tailscale proxy](../../assets/img/administer/tailscale/tailscale-configure.png)
+![Configure Tailscale proxy](../../../assets/img/administer/tailscale/tailscale-configure.png)
 
 !!! note
     When the Tailscale proxy is deployed, you can observe a new node connected to your Tailscale network. To view this, go to the [Tailscale machines](https://login.tailscale.com/admin/machines) page of your Tailscale coordination server.

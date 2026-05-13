@@ -13,7 +13,7 @@ To assign subscription plans to an API, follow the steps given below:
 3. In the left navigation menu, click **Manage** and then click **Monetize**. This displays the subscription plans available for the API.
 4. Enable the toggle corresponding to the subscription plans you want to assign to the API.
 
-    ![Subscription Plans](../assets/img/develop-api-proxy/subscription-plans.png)
+    ![Subscription Plans](../../assets/img/develop-api-proxy/subscription-plans.png)
 
 5. Click **Save**.
 

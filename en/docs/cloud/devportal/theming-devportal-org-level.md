@@ -37,21 +37,21 @@ Go through the following steps to customize the theme of the Devportal in the or
 4. Click on each color field to open the color selection interface and choose your desired colors.
 5. The preview panel on the right will show real-time changes as you modify the colors.
 
-    ![Customized theme preview](../assets/img/devportal/customized_theming.png)
+    ![Customized theme preview](../../assets/img/devportal/customized_theming.png)
 
 4. Expand the dropdown for `Typography` and select the font (e.g., Arial Black).
 
-    ![Customized font](../assets/img/devportal/customized_font.png)
+    ![Customized font](../../assets/img/devportal/customized_font.png)
 
 5. If you want to save these changes as a draft, select  `Save As Draft`.
 
 6. If it perfectly aligns with your organization's unique identity, click `Publish to Devportal`.
 
-    ![Publish to Devportal](../assets/img/devportal/publish_to_devportal.png)
+    ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
 
 7. Go to `Developer portal` to see the changes.
 
-    ![View Devportal](../assets/img/devportal/view_devportal.png)
+    ![View Devportal](../../assets/img/devportal/view_devportal.png)
 
 ### HTML
 
@@ -95,7 +95,7 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with HTML](../assets/img/devportal/change_with_html.png)
+    ![Change with HTML](../../assets/img/devportal/change_with_html.png)
 
 ### CSS
 
@@ -114,20 +114,20 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with CSS](../assets/img/devportal/change_with_css.png)
+    ![Change with CSS](../../assets/img/devportal/change_with_css.png)
 
 ### Referenced CSS
 
 This section shows the reference for the main CSS from the theme settings you assigned at the beginning.
 
-![Referenced CSS](../assets/img/devportal/referenced_css.png)
+![Referenced CSS](../../assets/img/devportal/referenced_css.png)
 
 ### Assets
 
 01. The Logo of the devportal can be changed by clicking `Choosing File` under Devportal Logo.
 
-    ![Upload Devportal Logo](../assets/img/devportal/devportal_logo_upload.png)
+    ![Upload Devportal Logo](../../assets/img/devportal/devportal_logo_upload.png)
 
 02. After adding the image you can see the finalized changes in the preview.
 
-    ![Uploaded Logo](../assets/img/devportal/uploaded_logo.png)
+    ![Uploaded Logo](../../assets/img/devportal/uploaded_logo.png)

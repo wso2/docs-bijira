@@ -24,23 +24,23 @@ This creates the organization and opens the **Project Home** page of the default
 3. Click **Applications** from the sidebar.
 4. Click **Create Application** card. If you already have one or more applications click **+ Create** button.
 
-    ![Create Application Card](../../assets/img/devportal/create-application-card.png){style="max-width:500px;"}
+    ![Create Application Card](../../../assets/img/devportal/create-application-card.png){style="max-width:500px;"}
 
 5. Enter application name and click **Create**.
 
-    ![Application Card Name](../../assets/img/devportal/name-application-card.png){style="max-width:500px;"}
+    ![Application Card Name](../../../assets/img/devportal/name-application-card.png){style="max-width:500px;"}
 
 6. You will find the created applications list.
 
-   ![Applications List](../../assets/img/devportal/applications-list.png)
+   ![Applications List](../../../assets/img/devportal/applications-list.png)
 
 ## Add Application Description
 
 1. Selected application.
 2. Click **+ Add description** to add the application's description.
 
-    ![Application Description](../../assets/img/devportal/application-description.png)
+    ![Application Description](../../../assets/img/devportal/application-description.png)
 
 3. Click **✔** to save the description.
 
-    ![Add application Description](../../assets/img/devportal/add-application-description.png)
+    ![Add application Description](../../../assets/img/devportal/add-application-description.png)

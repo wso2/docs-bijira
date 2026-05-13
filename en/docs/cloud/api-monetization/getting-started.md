@@ -56,7 +56,7 @@ Before you begin, ensure you have:
 4. Click the **Credentials** tab.
 5. Click the **Stripe Credentials** sub-tab.
 
-    ![Stripe Credentials](../assets/img/api-monetization/add-stripe-credentials.png)
+    ![Stripe Credentials](../../assets/img/api-monetization/add-stripe-credentials.png)
 
 6. Click **Add Stripe Credentials**.
 7. Enter the following details:

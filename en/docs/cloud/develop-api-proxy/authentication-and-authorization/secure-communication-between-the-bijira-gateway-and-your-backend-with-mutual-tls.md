@@ -20,7 +20,7 @@ To establish secure connectivity between the API Platform Gateway and your backe
 To configure the backend certificate, follow the steps given below:
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
-2. In the **Proxy Listing** pane, click on the API proxy for which you want to configure TLS. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
+2. In the **Proxy Listing** pane, click on the API proxy for which you want to configure TLS. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../create-api-proxy/my-apis/http/import-api-contract.md).
 3. In the left navigation menu, click **Develop** -> **Policy** and then click **Endpoint Configuration** in Service Contract Endpoint section
 4. On the **Endpoint Configuration** section, click **Configure** corresponding to the endpoint.
 5. Click **Upload Endpoint Certificate**, and select the certificate file that you extracted in the prerequisites section to add it. This adds the certificate to all the environments as the default certificate for the endpoint. You can override this certificate if necessary when you deploy or promote the API.
@@ -109,7 +109,7 @@ To deploy the API, follow the steps given below:
 2. In the **Build Area** card, click **Configure & Deploy**.
 3. Once the mediation application generation phase is complete, verify the endpoint URL populated for the environment and then click **Save & Deploy**.
 
-Once the deployment is complete, you can [test the API](../../../test-api-proxy/openapi-console). 
+Once the deployment is complete, you can [test the API](../../test-api-proxy/openapi-console.md). 
 
 ## Change the certificate for the production environment
 

@@ -46,7 +46,7 @@ To set up an approval process for a workflow, follow these steps:
 5. Turn on the workflow you want to enable by clicking the relevant status toggle.
 6. Configure roles and assignees to receive notifications, review and respond to workflow approval requests if needed and press **Save**.
 
-     ![Configure workflows](../assets/img/workflows/configure-workflow.png){: style="height:400px;width:400px"}
+     ![Configure workflows](../../assets/img/workflows/configure-workflow.png){: style="height:400px;width:400px"}
      
     - In the **Roles** field, select one or more roles depending on your preference. All users assigned to the selected roles will be eligible to receive notifications. Scope of notification delivery depends on the role assignment level when [configuring permissions](#permissions-to-review-and-respond-to-approval-requests):
          1. Project level roles-to-group assignment: Users in these groups will receive notifications only for approval requests raised within the specific project where the role is assigned.

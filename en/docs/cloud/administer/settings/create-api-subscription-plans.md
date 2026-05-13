@@ -14,7 +14,7 @@ To create an organization-level subscription plan, follow the steps given below:
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Subscription Plans** tab (here you can see the already available subscription plans).
 
-    ![Subscription plans listing](../../assets/img/administer/settings/subscription-plans-listing.png)
+    ![Subscription plans listing](../../../assets/img/administer/settings/subscription-plans-listing.png)
 
 5. Click **+ Create**.
 6. In the **Create Subscription Plan** pane, enter the plan details:
@@ -23,7 +23,7 @@ To create an organization-level subscription plan, follow the steps given below:
     - **Rate Limiting:** Set the **Request Count** (must be greater than 0) and the **Request Count Time Unit** (Minute, Hour, or Day). Enable **Burst Control** to protect your backend from sudden request spikes — the burst limit is enforced over a shorter time unit than the one you selected.
     - **Pricing:** Select a **Pricing Model** (Free, Flat, Unit, Volume, or Graduated), **Currency**, **Billing Period**, and the price amount.
 
-    ![Create subscription plan](../../assets/img/administer/settings/create-subscription-plan.png)
+    ![Create subscription plan](../../../assets/img/administer/settings/create-subscription-plan.png)
 
     !!! note
         The pricing fields vary by model. For example, Volume and Graduated models require defining price tiers instead of a single unit amount. For details on pricing models and monetization, see [API Monetization](../../api-monetization/overview.md).

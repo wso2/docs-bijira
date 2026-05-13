@@ -474,6 +474,6 @@ The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-va
 
 ## See Also
 
-- [Gateway Quick Start (Docker Compose)](../quick-start-guide.md)
-- [Policies](../overview.md#policies)
-- [Gateway REST API](../../rest-apis/gateway/)
+- [Gateway Quick Start (Docker Compose)](../../../quick-start-guide.md)
+- [Policies](../../../overview.md#policies)
+- [Gateway Controller Management API](../../../gateway-controller-management-api/overview.md)

@@ -12,7 +12,7 @@ Each workflow is listed with its name and a short description that explains the 
 - **Step-by-step instructions** — the ordered sequence of API calls, inputs, and expected outputs
 - **Arazzo specification** — the machine readable workflow definition, available to download or copy
 
-![View API Flow](../../assets/img/devportal/view-api-flow.png)
+![View API Flow](../../../assets/img/devportal/view-api-flow.png)
 
 ## How AI Agents Discover Workflows
 

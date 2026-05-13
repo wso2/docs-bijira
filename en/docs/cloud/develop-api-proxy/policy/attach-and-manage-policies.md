@@ -14,7 +14,7 @@ In API Platform, when you attach a mediation policy to a proxy, the deployment i
 
 When a mediation policy is attached to a specific flow, the API invocation undergoes the following behavioral modification:
 
- ![Request/Response flow](../../assets/img/develop-api-proxy/policy/request-response-flow.png)
+ ![Request/Response flow](../../../assets/img/develop-api-proxy/policy/request-response-flow.png)
 
 - In the request path, the requests that pass through the gateway reach the relevant component, and API Platform executes any attached policies to the resource's request path before sending it to the backend.
 
@@ -32,11 +32,11 @@ To attach an API level policy to the `Request` flow of a REST API proxy, follow 
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. Click the **Add API-level Policies** button in the **API Proxy Contract** component.
-    ![Add API-level Policies button](../../assets/img/develop-api-proxy/policy/click-add-api-level-policy-button.png)
+    ![Add API-level Policies button](../../../assets/img/develop-api-proxy/policy/click-add-api-level-policy-button.png)
 5. In the **API Policies** pane, click **Attach Mediation Policy** to view the applicable mediation policy list.
-    ![Policy list](../../assets/img/develop-api-proxy/policy/click-attach-policy-button.png)
+    ![Policy list](../../../assets/img/develop-api-proxy/policy/click-attach-policy-button.png)
 6. In the **Policy List** pane that opens, click on a policy to view its details and configure its parameters. To make a parameter a configurable variable, input the value in the `${<variableName>}` format. For example, you can use `${name}` as an example.
-    ![Configurable Parameters](../../assets/img/develop-api-proxy/policy/configure-policy-API-level.png)
+    ![Configurable Parameters](../../../assets/img/develop-api-proxy/policy/configure-policy-API-level.png)
 7. Click **Add** to attach the policy. Then, click **Save** to apply the configuration to the API.  
 
 ### Attach a Resource level Policy
@@ -47,12 +47,12 @@ To attach a resource level policy to the `Request`, `Response`, or `Error` flow 
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. From the list of resources, click the **Attach Policy Button** for the required policy.
-    ![Resource level policy button](../../assets/img/develop-api-proxy/policy/click-resource-level-policy-button.png)
+    ![Resource level policy button](../../../assets/img/develop-api-proxy/policy/click-resource-level-policy-button.png)
 5. In the **Edit Mediation Policies** pane, click **Attach Mediation Policy** in the respective flow where you want to attach a policy.  
-    ![Edit mediation policies pane](../../assets/img/develop-api-proxy/policy/edit-mediation-policies-pane.png)
+    ![Edit mediation policies pane](../../../assets/img/develop-api-proxy/policy/edit-mediation-policies-pane.png)
 6. In the **Policy List** pane that opens, click on a policy to view its details.
 7. If the attached policy requires parameter configuration, on the policy pane enter the appropriate values and configure the parameters. To make a parameter a configurable variable, input the value in the `${<variableName>}` format. For example, you can use `${name}` as an example.
-    ![Configure policy](../../assets/img/develop-api-proxy/policy/configure-policy.png)
+    ![Configure policy](../../../assets/img/develop-api-proxy/policy/configure-policy.png)
 8. Click **Add** to attach the policy to the selected flow. Then, click **Save** to apply the configuration to the API resource.  
 
 !!! Note
@@ -62,11 +62,11 @@ To deploy the API follow the steps below:
 
 1. In the left navigation menu, click **Deploy** and then click **Configure & Deploy**. API Platform performs the mediation application generation step and opens the **Configure & Deploy** pane.
     <!-- TODO: Add images to step 1 and 2 after they are done -->
-    <!-- ![Configure and deploy API](../../assets/img/develop-api-proxy/policy/configure-and-deploy-api.png)  -->
+    <!-- ![Configure and deploy API](../../../assets/img/develop-api-proxy/policy/configure-and-deploy-api.png)  -->
 
 2. In the **Configure & Deploy** pane, if you have any configurable variables that require values, specify appropriate values for them.
 
-    <!-- ![Save and deploy values](../../assets/img/develop-api-proxy/policy/save-and-deploy.png) -->
+    <!-- ![Save and deploy values](../../../assets/img/develop-api-proxy/policy/save-and-deploy.png) -->
 
 3. Click **Save & Deploy**.
 
@@ -126,7 +126,7 @@ To create a Ballerina project for the mediation policy using `mediation.template
 ```
  The Ballerina project that is created should have the following content: 
 
-![Ballerina project](../../assets/img/develop-api-proxy/policy/ballerina-project.png)
+![Ballerina project](../../../assets/img/develop-api-proxy/policy/ballerina-project.png)
 
 Depending on your requirement, you can modify the `Ballerina.toml` and the `Package.md` files of the generated project. For example, you can update the org, package, package version, API documentation content, keywords, etc.
 
@@ -270,7 +270,7 @@ To publish the policy, follow the steps given below:
 
 Once you publish the package, it will appear as follows in the policy list:
 
-![Published policy](../../assets/img/develop-api-proxy/policy/published-policy.png)
+![Published policy](../../../assets/img/develop-api-proxy/policy/published-policy.png)
 
 ### Write unit tests
 

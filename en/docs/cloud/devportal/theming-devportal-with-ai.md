@@ -26,25 +26,25 @@ Go through the following steps to customize the theme of the Devportal with AI.
 
 1. Click on `Theme with AI`.
 
-    ![Theme with AI button](../assets/img/devportal/theming_ai_button.png)
+    ![Theme with AI button](../../assets/img/devportal/theming_ai_button.png)
 
 2. Enter the website URL  you'd like to use as the basis for branding.
 
-    ![AI Theme URL](../assets/img/devportal/ai_theme_url.png)
+    ![AI Theme URL](../../assets/img/devportal/ai_theme_url.png)
 
 3. Click enter to automate branding for your organization based on the website you provided. The system will then process the website and start generating the branding theme. You can see the result in the preview section.
 
-    ![Devportal Preview](../assets/img/devportal/devportal_preview.png)
+    ![Devportal Preview](../../assets/img/devportal/devportal_preview.png)
 
 4. If you want to save those changes was a draft you can select `Save As Draft`.
 5. If it perfectly align with your organization's unique identity, you can click `Publish to Devportal`.
 
-    ![Publish to Devportal](../assets/img/devportal/publish_to_devportal.png)
+    ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
 
 6. Go to `Developer portal` to see the changes.
 
-    ![View Devportal](../assets/img/devportal/view_devportal.png)
+    ![View Devportal](../../assets/img/devportal/view_devportal.png)
 
     The finalized view will be as follows:
 
-    ![Finalized Devportal](../assets/img/devportal/finalized_preview.png)
+    ![Finalized Devportal](../../assets/img/devportal/finalized_preview.png)

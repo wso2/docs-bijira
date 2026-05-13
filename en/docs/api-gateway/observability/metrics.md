@@ -1101,7 +1101,7 @@ docker compose restart gateway-controller policy-engine router
 - [Prometheus Querying Guide](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - [Grafana Dashboard Tutorial](https://grafana.com/docs/grafana/latest/dashboards/)
 - [Prometheus Best Practices](https://prometheus.io/docs/practices/naming/)
-- [Gateway README](../README.md)
+- [Gateway Overview](../overview.md)
 - [Gateway Logging Guide](logging.md)
 - [Gateway Tracing Guide](tracing.md)
 - [Docker Compose Profiles](https://docs.docker.com/compose/profiles/)

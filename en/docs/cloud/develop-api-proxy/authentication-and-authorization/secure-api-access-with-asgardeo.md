@@ -17,7 +17,7 @@ This guide walks you through the following steps:
 To follow this guide, you need to satisfy the following prerequisites:
 
 - [Configured Asgardeo as an external key manager](../../administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md) 
-- If you don't already have an API Proxy in API Platform, [create API Proxy](../../../create-api-proxy/overview/).
+- If you don't already have an API Proxy in API Platform, [create API Proxy](../../create-api-proxy/overview.md).
 - Deploy and publish your API. 
 
 <!-- ## Step 1: Assign scopes to an API in API Platform
@@ -99,4 +99,4 @@ Follow the steps below to consume the API Platform API and use an external key m
             -d "scope=<REQUIRED_SCOPES>"
         ```
 
-5. Once you receive the access token, you can [test invoking the resource using cURL](../../../test-api-proxy/curl/) in API Platform.
+5. Once you receive the access token, you can [test invoking the resource using cURL](../../test-api-proxy/curl.md) in API Platform.

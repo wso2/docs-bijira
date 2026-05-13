@@ -59,7 +59,7 @@ All published APIs are agent visible by default. If an API should not be surface
 
 Once hidden, the API is excluded from `llms.txt`, `apis.md`, and all per API Markdown and specification endpoints. It remains visible to human users in the portal.
 
-![Publish dialog showing the Agent Visibility](../assets/img/develop-api-proxy/publish-with-ai-visibility.png)
+![Publish dialog showing the Agent Visibility](../../assets/img/develop-api-proxy/publish-with-ai-visibility.png)
 
 !!! note
     This setting applies per API. Hiding one API does not affect the visibility of others.

@@ -106,4 +106,4 @@ func (p *MyAIPolicy) OnResponseBody(
 
 ## Learn More
 
-- [Writing a Custom Policy for the Self-Hosted Gateway](../../../api-platform-gateway/writing-a-custom-policy.md)
+- [Writing a Custom Policy for the Self-Hosted Gateway](../../api-platform-gateway/writing-a-custom-policy.md)

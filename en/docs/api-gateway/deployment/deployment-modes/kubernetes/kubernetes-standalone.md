@@ -8,7 +8,7 @@ Standalone mode is recommended when you want:
 - A simpler footprint without operator-managed CRDs.
 - Explicit control over values and release upgrades.
 
-For mode selection and architecture context, see [`kubernetes-gateway-v2.md`](./kubernetes-gateway-v2.md).
+For mode selection and architecture context, see [API Platform Kubernetes Gateway deployment modes](./overview.md).
 
 ## What Gets Deployed
 

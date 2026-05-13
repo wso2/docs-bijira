@@ -17,7 +17,7 @@ This guide walks you through the following steps:
 To follow this guide, you need to satisfy the following prerequisites:
 
 -  [Configure Azure AD as an external key manager](../../administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md).
--  An API: If you don't already have a service in API Platform, [develop a service](../develop-components/develop-services/develop-a-service.md) or an [API Proxy](../develop-components/develop-an-api-proxy.md).
+-  An API: If you don't already have a service in API Platform, [create an API Proxy](../../create-api-proxy/overview.md).
 - Deploy and publish your API.
 - An Azure Active Directory account:  If you don’t already have one, set up an Azure Active Directory account at [https://azure.microsoft.com/en-gb/](https://azure.microsoft.com/en-gb/).
 - Administrator rights to your API Platform organization: You need this to configure the Azure AD account in your organization.
@@ -32,15 +32,15 @@ You can provide fine-grained access control to your API resources with Permissio
 2. In the left navigation menu, click **Develop**, then click **Policy**.
 3. From the list of resources, click the Attach Policy Button for the required resource.
 
-    ![Attach Policy Button](../../assets/img/authentication-and-authorization/attach_policy_btn.png){: style="width:200px"}
+    ![Attach Policy Button](../../../assets/img/authentication-and-authorization/attach_policy_btn.png){: style="width:200px"}
 
 4. In the **Edit Policies** pane, click **Attach Policy** in the respective flow where you want to attach a policy.
 
-    ![Attach Policy Button](../../assets/img/authentication-and-authorization/policy_edit_policies.png){: style="width:700px"}
+    ![Attach Policy Button](../../../assets/img/authentication-and-authorization/policy_edit_policies.png){: style="width:700px"}
 
 5. In the Policy List pane that opens, click the **Permissions (scope)** policy. This will show the policy configurations.
 
-    ![Attach Policy Button](../../assets/img/authentication-and-authorization/permissions_policy.png){: style="width:700px"}
+    ![Attach Policy Button](../../../assets/img/authentication-and-authorization/permissions_policy.png){: style="width:700px"}
 
 6. In the **Permissions List** field, add the permission value and click **Add New**.
 7. To attach a permission to a resource, select permissions from the **Permissions (Scopes)** list.

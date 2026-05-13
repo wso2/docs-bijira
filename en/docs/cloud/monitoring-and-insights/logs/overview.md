@@ -9,5 +9,5 @@ You also have the flexibility to define a required time range to view relevant l
 
 Below are the types of logs you can access.
 
-- **[Runtime logs](../runtime-logs)**: These logs capture the real-time execution details of your API proxies, helping you monitor performance and identify issues as they occur.
-- **[Audit logs](../audit-logs)**: These logs provide a record of user actions and system changes, ensuring accountability and traceability for compliance and security purposes.
+- **[Runtime logs](../logs/runtime-logs.md)**: These logs capture the real-time execution details of your API proxies, helping you monitor performance and identify issues as they occur.
+- **[Audit logs](../logs/audit-logs.md)**: These logs provide a record of user actions and system changes, ensuring accountability and traceability for compliance and security purposes.

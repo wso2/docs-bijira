@@ -18,7 +18,7 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 | **Agent Prompt** | Natural language guidance for AI agents on when and how to invoke the workflow |
 | **Agent Visibility** | Controls whether the workflow is surfaced to AI agents. Set to **Visible** to include it in `llms.txt` and `api-workflows.md`, or **Hidden** to exclude it from agent facing surfaces while keeping it accessible to human users in the portal |
 
-![API Workflow Creation](../../assets/img/devportal/api-workflow-creation.png)
+![API Workflow Creation](../../../assets/img/devportal/api-workflow-creation.png)
 
 5. Click **Save as Draft** to save without publishing, or **Publish** to make the workflow live immediately.
 
