@@ -16,7 +16,7 @@ user = "gateway"
 password = "your-postgres-password"
 ```
 
-For the full list of PostgreSQL configuration options, refer to the [config template](../../gateway/configs/config-template.toml).
+For the full list of PostgreSQL configuration options, refer to the [config template](https://github.com/wso2/api-platform/blob/main/gateway/configs/config-template.toml).
 
 ### Redis (Gateway Runtime — Distributed Rate Limiting)
 
@@ -33,4 +33,4 @@ port = 6379
 password = "your-redis-password"
 ```
 
-For the full list of Redis configuration options, refer to the [Advanced Rate Limiting documentation](https://github.com/wso2/gateway-controllers/blob/main/docs/advanced-ratelimit/v1.0/docs/advanced-ratelimit.md).
+For the full list of Redis configuration options, refer to the [Advanced Rate Limiting documentation](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit).
