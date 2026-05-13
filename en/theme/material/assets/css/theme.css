@@ -491,7 +491,11 @@
     border: 1px solid var(--md-divider-color);
     opacity: 0.3;
     height: 0;
-    margin: 8px 16px 18px 16px;
+     margin: 13px 16px 13px 16px;
+}
+
+.md-nav__list > hr + .md-nav__item {
+    margin-top: 0;
 }
 
 .md-nav__link .icon {
