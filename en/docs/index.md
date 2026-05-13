@@ -11,9 +11,11 @@ This page explains what the platform offers and helps you determine which path i
 
 There are two starting points depending on what you need:
 
-- [**I want a full, end-to-end platform for managing my APIs and AI services**](#i-want-a-full-end-to-end-platform-for-managing-my-apis-and-ai-services)
+1. [**I want a full, end-to-end platform for managing my APIs and AI services**](#i-want-a-full-end-to-end-platform-for-managing-my-apis-and-ai-services)
 
-- [**I only want an API or AI gateway (and have no need for a UI or full platform capabilities)**](#i-only-want-an-api-or-ai-gateway-and-have-no-need-for-a-ui-or-full-platform-capabilities)
+Or
+
+2. [**I only want an API or AI gateway (and have no need for a UI or full platform capabilities)**](#i-only-want-an-api-or-ai-gateway-and-have-no-need-for-a-ui-or-full-platform-capabilities)
 
 With WSO2’s API Platform, both of these needs can be easily served. Here is a deeper look at how users can get started with either scenario:
 
@@ -75,8 +77,7 @@ The next question is: **who runs the infrastructure?**
 | **Third-party gateway federation** | Yes | Yes | Yes |
 | **Air-gapped or fully offline** | No | No | Yes |
 
-!!! note
-    All three options use the same underlying gateway technology. You can start with Cloud and move to Hybrid or Self-Managed later without rearchitecting.
+> All three options use the same underlying gateway technology. You can start with Cloud and move to Hybrid or Self-Managed later without rearchitecting.
 
 ### I only want an API or AI gateway (and have no need for a UI or full platform capabilities)
 If you do not need a full management console and want a high-performance gateway that you configure using YAML files, CLI, or REST APIs, the standalone gateways are the right choice. There is no web UI, no control plane, and no portal. You download a lightweight binary and run it.
@@ -94,7 +95,7 @@ There are two standalone gateways:
     For AI traffic. The AI Gateway provides two capabilities:
     * **LLM Proxy** routes traffic to LLM providers such as OpenAI, Anthropic, Azure OpenAI, Mistral, and AWS Bedrock. You can apply guardrails including PII masking, prompt injection protection, and content safety checks. It also supports multi-provider load balancing, failover, semantic caching, and token-based rate limiting.
     * **MCP Proxy** governs how AI agents access your services through the Model Context Protocol. You can generate MCP tools from REST APIs, aggregate tools from multiple servers, and enforce access control and authorization.
-    * [AI Gateway documentation](ai-gateway/llm-proxy/quick-start-guide.md)
+    * [AI Gateway documentation](ai-gateway/overview.md)
 
 ## What is the difference between platform gateways and standalone gateways?
 This is a common question for new users. The API Gateway and AI Gateway appear in both paths: inside the platform (Cloud, Hybrid, API Manager) and as standalone downloads.
@@ -110,8 +111,7 @@ They are the same underlying technology, built on the same Go-based runtime and 
 | **Analytics and monetization** | Available (via Moesif) | Basic observability (logs, traces) |
 | **Best for** | Teams managing many APIs across the organization | Individual developers or small teams that want a lightweight gateway |
 
-!!! note
-    You can start with a standalone gateway and connect it to a control plane later. The standalone gateways can be attached to the Cloud control plane (making them hybrid gateways) or to the API Manager control plane when you need more governance. This is a common adoption path: a developer starts with a standalone gateway, and the organization later adds the control plane for unified governance.
+> You can start with a standalone gateway and connect it to a control plane later. The standalone gateways can be attached to the Cloud control plane (making them hybrid gateways) or to the API Manager control plane when you need more governance. This is a common adoption path: a developer starts with a standalone gateway, and the organization later adds the control plane for unified governance.
 
 ## Platform components
 The following is a complete view of all components and where to find their documentation.
@@ -145,7 +145,7 @@ The following is a complete view of all components and where to find their docum
 | Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](cloud/ai-workspace/overview.md) |
 | Set up a developer portal for API discovery | [API Portal](cloud/devportal/theming-devportal-with-ai.md) |
-| Monitor traffic and monetize my APIs | [Analytics and Monetization](cloud/api-monetization/overview.md) |
+| Monitor traffic and monetize my APIs | [Analytics and Monetization](analytics-and-monetization/overview.md) |
 | Follow end-to-end scenario walkthroughs | [Guides](guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) |
 
 ## Key concepts
