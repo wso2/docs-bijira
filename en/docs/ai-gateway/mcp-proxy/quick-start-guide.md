@@ -21,14 +21,14 @@ docker compose version
 
 ```bash
 # Download distribution.
-wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v0.5.0/ai-gateway-v0.5.0.zip
+wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
 
 # Unzip the downloaded distribution.
-unzip ai-gateway-v0.5.0.zip
+unzip wso2apip-ai-gateway-1.1.0.zip
 
 
 # Start the complete stack
-cd ai-gateway-v0.5.0/
+cd wso2apip-ai-gateway-1.1.0/
 docker compose up -d
 
 # Verify gateway controller is running
