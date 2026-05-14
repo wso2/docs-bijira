@@ -19,7 +19,7 @@ docker --version
 docker compose version
 ```
 
-Replace `${version}` with the API Platform AI Gateway release version you want to run.
+<!-- Replace `${version}` with the API Platform AI Gateway release version you want to run. -->
 
 ```bash
 # Download distribution.
