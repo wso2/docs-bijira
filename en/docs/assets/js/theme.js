@@ -83,22 +83,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // On mobile, expanded sections all start with checked=true (for desktop accordion).
-  // This causes the mobile drill-down nav to always show the last expanded section ("Tools").
-  // Fix: uncheck all non-active top-level section toggles on mobile.
-  if (window.matchMedia('(max-width: 76.1875em)').matches) {
-    const topLevelItems = document.querySelectorAll('.md-nav--primary > .md-nav__list > .md-nav__item--nested');
-    topLevelItems.forEach(function(item) {
-      if (!item.classList.contains('md-nav__item--active')) {
-        const toggle = Array.from(item.children).find(function(el) {
-          return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
-        });
-        if (toggle) {
-          toggle.checked = false;
-        }
+  // Expanded sections start with checked=true due to the vertical-line design.
+  // Fix: uncheck all non-active top-level section toggles on all screen sizes so only
+  // the section containing the current page stays expanded.
+  const topLevelItems = document.querySelectorAll('.md-nav--primary > .md-nav__list > .md-nav__item--nested');
+  topLevelItems.forEach(function(item) {
+    if (!item.classList.contains('md-nav__item--active')) {
+      const toggle = Array.from(item.children).find(function(el) {
+        return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
+      });
+      if (toggle) {
+        toggle.checked = false;
       }
-    });
-  }
+    }
+  });
 });
 
 /*
