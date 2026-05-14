@@ -111,7 +111,7 @@ When `redactPII` is `true`:
 Deploy an LLM provider with AWS Bedrock Guardrail validation:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -137,7 +137,7 @@ spec:
         methods: [POST]
   policies:
     - name: aws-bedrock-guardrail
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -193,7 +193,7 @@ Configure to redact PII:
 ```yaml
 policies:
   - name: aws-bedrock-guardrail
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]

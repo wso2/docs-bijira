@@ -102,7 +102,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 Deploy an LLM provider with Azure Content Safety validation:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -128,7 +128,7 @@ spec:
         methods: [POST]
   policies:
     - name: azure-content-safety-content-moderation
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -191,7 +191,7 @@ Configure strict moderation thresholds:
 ```yaml
 policies:
   - name: azure-content-safety-content-moderation
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]
@@ -220,7 +220,7 @@ Monitor only specific categories:
 ```yaml
 policies:
   - name: azure-content-safety-content-moderation
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]
@@ -240,7 +240,7 @@ Allow more content with higher thresholds:
 ```yaml
 policies:
   - name: azure-content-safety-content-moderation
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]

@@ -113,7 +113,7 @@ The guardrail supports JSONPath expressions to extract specific text from reques
 Deploy an LLM provider that blocks prompts similar to prohibited phrases:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -139,7 +139,7 @@ spec:
         methods: [POST]
   policies:
     - name: semantic-prompt-guard
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -193,7 +193,7 @@ curl -X POST http://openai:8080/chat/completions \
 Deploy an LLM provider that only allows prompts similar to approved phrases:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -219,7 +219,7 @@ spec:
         methods: [POST]
   policies:
     - name: semantic-prompt-guard
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -241,7 +241,7 @@ Use both allow and deny lists for comprehensive filtering:
 ```yaml
 policies:
   - name: semantic-prompt-guard
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]
@@ -267,7 +267,7 @@ Configure semantic prompt guardrail with Azure OpenAI and extended timeout:
 ```yaml
 policies:
   - name: semantic-prompt-guard
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]

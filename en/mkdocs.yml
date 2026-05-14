@@ -387,6 +387,7 @@ nav:
       - LLM Proxy Management: api-gateway/gateway-controller-management-api/llm-proxy-management.md
       - Secrets Management: api-gateway/gateway-controller-management-api/secrets-management.md
       - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
+      - WebBroker API Management: api-gateway/gateway-controller-management-api/webbroker-api-management.md
       - Schemas: api-gateway/gateway-controller-management-api/schemas.md
   - AI Gateway:
     - Overview: ai-gateway/overview.md
