@@ -97,6 +97,27 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+
+  // Accordion behavior: when any nested item is expanded, collapse all its siblings
+  // at the same level. Applies at every depth (top-level and sub-menus).
+  document.querySelectorAll('.md-nav--primary .md-nav__toggle').forEach(function(toggle) {
+    toggle.addEventListener('change', function() {
+      if (!this.checked) return;
+      const parentItem = this.closest('.md-nav__item--nested');
+      if (!parentItem) return;
+      const parentList = parentItem.parentElement;
+      if (!parentList) return;
+      parentList.querySelectorAll(':scope > .md-nav__item--nested').forEach(function(siblingItem) {
+        if (siblingItem === parentItem) return;
+        const siblingToggle = Array.from(siblingItem.children).find(function(el) {
+          return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
+        });
+        if (siblingToggle) {
+          siblingToggle.checked = false;
+        }
+      });
+    });
+  });
 });
 
 /*
