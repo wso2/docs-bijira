@@ -559,7 +559,7 @@ extra:
       icon: octicons/home-16
       level: 1
     Overview:
-      icon: octicons/info-16
+      icon: octicons/apps-16
       level: 1
     Get Started:
       icon: octicons/rocket-16
@@ -595,7 +595,7 @@ extra:
       icon: octicons/server-16
       level: 1
     AI Gateway:
-      icon: octicons/cpu-16
+      icon: material/creation
       level: 1
     AI Workspace:
       icon: octicons/project-roadmap-16
