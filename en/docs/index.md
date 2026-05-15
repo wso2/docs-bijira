@@ -138,6 +138,7 @@ The following is a complete view of all components and where to find their docum
 | Run a lightweight API gateway with no UI | [API Gateway](api-gateway/overview.md) |
 | Govern LLM traffic (rate limits, guardrails, cost control) | [AI Gateway LLM Proxy](ai-gateway/llm-proxy/quick-start-guide.md) |
 | Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
+| Govern MCP traffic (inbound + outbound) | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](cloud/ai-workspace/overview.md) |
 | Set up a developer portal for API discovery | [API Portal](cloud/devportal/theming-devportal-with-ai.md) |
 | Monitor traffic and monetize my APIs | [Analytics and Monetization](analytics-and-monetization/overview.md) |
