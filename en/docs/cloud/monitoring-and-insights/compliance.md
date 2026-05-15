@@ -52,6 +52,7 @@ The analysis runs asynchronously. While in progress, the page shows the current 
 
 ![AI Compliance Analysis in progress](../../assets/img/monitoring-and-insights/ai-compliance-progress.png)
 
+
 When complete, the **Project Summary** card displays:
 
 - An **overall rating** (for example, Good, Fair, Poor).
@@ -61,6 +62,7 @@ When complete, the **Project Summary** card displays:
 Below the Project Summary, each component is listed as an expandable card showing its individual analysis results.
 
 ![AI Compliance Analysis project result](../../assets/img/monitoring-and-insights/ai-compliance-project-result.png)
+
 
 To re-run the analysis at any time, click **Analyze** at the top of the page.
 
