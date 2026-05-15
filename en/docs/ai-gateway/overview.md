@@ -87,7 +87,7 @@ An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a prot
 
 AI Guardrails allow you to enforce safety, content, and compliance policies on AI traffic flowing through the AI Gateway. They can be applied at the LLM Provider level (organization-wide), at the LLM Proxy level (per-application), or on MCP Proxies.
 
-The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: https://github.com/wso2/gateway-controllers/blob/main/docs/README.md
+The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: [https://github.com/wso2/gateway-controllers/blob/main/docs/README.md](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md)
 
 You can extend the AI Gateway with custom guardrail policies by building a custom gateway image using the `ap` CLI. See [Customizing the Gateway by Adding and Removing Policies](../tools/cli/customizing-gateway-policies.md).
 
