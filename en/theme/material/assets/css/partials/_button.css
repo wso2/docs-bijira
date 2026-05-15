@@ -96,10 +96,10 @@
   border-color: #FF7300;
   color: #ffffff;
   border-radius: 5px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 5px 16px;
   transition: 0.2s;
   margin: 0;
+  font-size: 14px;
 }
 
 .md-button.md-button--try-bijira:hover {
