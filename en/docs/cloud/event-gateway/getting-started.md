@@ -49,8 +49,8 @@ Before you begin, ensure you have:
 Run this command in your terminal to download the gateway:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.5.0/wso2apip-event-gateway-0.5.0.zip && \
-unzip wso2apip-event-gateway-0.5.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.6.0/wso2apip-event-gateway-0.6.0.zip && \
+unzip wso2apip-event-gateway-0.6.0.zip
 ```
 
 ### Step 2: Configure the Gateway
@@ -58,20 +58,20 @@ unzip wso2apip-event-gateway-0.5.0.zip
 Run this command to create the gateway configuration with your environment variables:
 
 ```bash
-cat > wso2apip-event-gateway-0.5.0/configs/keys.env << 'ENVFILE'
+cat > wso2apip-event-gateway-0.6.0/configs/keys.env << 'ENVFILE'
 GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
 GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
 ENVFILE
 ```
 
-Once you copy the above command from the screen, the `<your-gateway-token>` placeholder will be populated and the `wso2apip-event-gateway-0.5.0/configs/keys.env` file will be created with these environment variables.
+Once you copy the above command from the screen, the `<your-gateway-token>` placeholder will be populated and the `wso2apip-event-gateway-0.6.0/configs/keys.env` file will be created with these environment variables.
 
 ### Step 3: Start the Gateway
 
 Navigate to the gateway directory and start it using Docker Compose:
 
 ```bash
-cd wso2apip-event-gateway-0.5.0
+cd wso2apip-event-gateway-0.6.0
 docker compose --env-file configs/keys.env up
 ```
 
