@@ -68,7 +68,7 @@ The weighted sequence would be: `[A, A, A, B, B, C]`, meaning:
 Deploy an LLM provider with weighted round-robin load balancing:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -94,7 +94,7 @@ spec:
         methods: [POST]
   policies:
     - name: model-weighted-round-robin
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]

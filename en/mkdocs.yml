@@ -366,6 +366,7 @@ nav:
           - Overview: api-gateway/deployment/deployment-modes/kubernetes/overview.md
           - Standalone Mode: api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
           - Kubernetes Operator Mode: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator.md
+          - Management CRDs: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator-management-crds.md
         - High-Availability Setup: api-gateway/deployment/high-availability-setup.md
       - Deploying APIs:
         - Bottom-Up Deployment: api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md 
@@ -387,6 +388,7 @@ nav:
       - LLM Proxy Management: api-gateway/gateway-controller-management-api/llm-proxy-management.md
       - Secrets Management: api-gateway/gateway-controller-management-api/secrets-management.md
       - WebSub API Management: api-gateway/gateway-controller-management-api/websub-api-management.md
+      - WebBroker API Management: api-gateway/gateway-controller-management-api/webbroker-api-management.md
       - Schemas: api-gateway/gateway-controller-management-api/schemas.md
   - AI Gateway:
     - Overview: ai-gateway/overview.md

@@ -64,7 +64,7 @@ If `jsonPath` is empty or not specified, the entire payload is processed as a st
 Deploy an LLM provider that masks email addresses and phone numbers in requests and restores them in responses:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -94,7 +94,7 @@ spec:
         methods: [GET]
   policies:
     - name: pii-masking-regex
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]

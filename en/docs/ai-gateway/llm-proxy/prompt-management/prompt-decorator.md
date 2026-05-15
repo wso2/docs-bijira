@@ -82,7 +82,7 @@ The decorator supports JSONPath expressions to target specific fields. Common ex
 Add a summarization instruction to user prompts:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -108,7 +108,7 @@ spec:
         methods: [POST]
   policies:
     - name: prompt-decorator
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -155,7 +155,7 @@ curl -X POST http://openai:8080/chat/completions \
 Add a system message to define AI behavior:
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -181,7 +181,7 @@ spec:
         methods: [POST]
   policies:
     - name: prompt-decorator
-      version: v0.1.0
+      version: v1
       paths:
         - path: /chat/completions
           methods: [POST]
@@ -232,7 +232,7 @@ Append instructions to the end of user messages:
 ```yaml
 policies:
   - name: prompt-decorator
-    version: v0.1.0
+    version: v1
     paths:
       - path: /chat/completions
         methods: [POST]

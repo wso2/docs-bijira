@@ -32,8 +32,8 @@ unzip wso2apip-ai-gateway-1.1.0.zip
 cd wso2apip-ai-gateway-1.1.0/
 docker compose up -d
 
-# Verify gateway controller is running
-curl http://localhost:9090/health
+# Verify gateway controller admin endpoint is running
+curl http://localhost:9094/health
 ```
 
 ## Deploy an OpenAI LLM provider configuration
@@ -41,7 +41,7 @@ curl http://localhost:9090/health
 The API Platform Gateway currently includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your openai API key and run the following command to deploy a sample OpenAI LLM provider.
 
 ```bash
-curl -X POST http://localhost:9090/llm-providers \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
@@ -53,12 +53,13 @@ spec:
   displayName: OpenAI Provider
   version: v1.0
   template: openai
+  context: /openai/latest
   upstream:
     url: https://api.openai.com/v1
     auth:
       type: api-key
       header: Authorization
-      value: Bearer <openai-apikey>
+      value: <openai-apikey>
   accessControl:
     mode: deny_all
     exceptions:
@@ -74,10 +75,10 @@ EOF
 To test LLM provider traffic routing through the gateway, invoke the following request.
 
 ```bash
-curl -X POST https://localhost:8443/chat/completions \
+curl -X POST https://localhost:8443/openai/latest/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gpt-4",
+    "model": "gpt-4o-mini",
     "messages": [
       {
         "role": "user",
@@ -92,19 +93,20 @@ curl -X POST https://localhost:8443/chat/completions \
 The API Platform Gateway provides first-class support for configuring and deploying LLM proxies. As an AI developer, run the following command to deploy a sample LLM proxy that consumes the OpenAI LLM provider previously deployed by the platform administrator.
 
 ```bash
-curl -X POST http://localhost:9090/llm-proxies \
+curl -X POST http://localhost:9090/api/management/v0.9/llm-proxies \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
 apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProxy
 metadata:
-  name: docs-assistant
+  name: openai-assistant
 spec:
-  displayName: Docs Assistant
+  displayName: OpenAI Assistant
   version: v1.0
   context: /assistant
-  provider: openai-provider
+  provider:
+    id: openai-provider
   policies: []
 EOF
 ```
@@ -115,7 +117,7 @@ To test LLM proxy traffic routing through the gateway and consume the LLM provid
 curl -X POST "https://localhost:8443/assistant/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gpt-4",
+    "model": "gpt-4o-mini",
     "messages": [
       {
         "role": "user",
@@ -138,6 +140,7 @@ docker compose down
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your API configurations will be restored.
 
 ### Option 2: Complete shutdown with data cleanup (fresh start)
+
 ```bash
 docker compose down -v
 ```
