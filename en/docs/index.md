@@ -94,10 +94,9 @@ There are two standalone gateways:
     * **MCP Proxy** governs how AI agents access your services through the Model Context Protocol. You can generate MCP tools from REST APIs, aggregate tools from multiple servers, and enforce access control and authorization.
     * [AI Gateway documentation](ai-gateway/overview.md)
 
-## What is the difference between platform gateways and standalone gateways?
-This is a common question for new users. The API Gateway and AI Gateway appear in both paths: inside the platform (Cloud, Hybrid, API Manager) and as standalone downloads.
-
-They are the same underlying technology, built on the same Go-based runtime and the same policy engine. The difference is entirely in how you configure and interact with them.
+## What is the difference between standalone mode and platform mode?
+The API Gateway and AI Gateway can run in two modes: as part of the platform (Cloud, Hybrid, or API Manager) or in standalone mode. These are not different products. They are the same gateway, built on the same Go-based runtime and the same policy engine. The difference is in how you configure and interact with them.
+In platform mode, the gateway is connected to a control plane and you manage everything through the web UI. In standalone mode, you run the gateway independently and configure it using YAML files, CLI, or REST APIs.
 
 | | Inside the platform (Cloud, Hybrid, or API Manager) | Standalone |
 | :--- | :--- | :--- |
@@ -125,8 +124,7 @@ The following is a complete view of all components and where to find their docum
 | Component | What it does | Docs |
 | :--- | :--- | :--- |
 | **API Gateway** | High-performance, Go-based gateway for API traffic. Handles authentication, rate limiting, transformations, and custom policies. | <ul><li>[Standalone docs](api-gateway/overview.md)</li><li>[Cloud-integrated docs](cloud/api-platform-gateway/getting-started.md)</li></ul> |
-| **AI Gateway (LLM Proxy)** | Route, secure, and govern outbound LLM traffic. Includes guardrails (PII masking, prompt injection, content safety), multi-provider load balancing, failover, semantic caching, and cost governance. | <ul><li>[Standalone docs](ai-gateway/llm-proxy/quick-start-guide.md)</li><li>[Cloud-integrated docs](cloud/ai-gateway/llm/quick-start-guide.md)</li></ul> |
-| **AI Gateway (MCP Proxy)** | Govern inbound MCP traffic from AI agents. Generate MCP tools from REST APIs, aggregate tools, and enforce access control and authorization. |<ul><li>[Standalone docs](ai-gateway/mcp-proxy/quick-start-guide.md)</li><li>[Cloud-integrated docs](cloud/ai-gateway/mcp/quick-start-guide.md)</li></ul> |
+| **AI Gateway** | Route, secure, and govern outbound LLM traffic. Includes guardrails (PII masking, prompt injection, content safety), multi-provider load balancing, failover, semantic caching, and cost governance (via LLM proxies).<br><br>Govern inbound MCP traffic from AI agents. Generate MCP tools from REST APIs, aggregate tools, and enforce access control and authorization (via MCP proxies). | <ul><li>[Standalone docs](ai-gateway/overview.md)</li><li>[Cloud-integrated docs](cloud/ai-gateway/overview.md)</li></ul> |
 | **Third-Party Gateways** | Federate existing gateways (AWS, Azure, Kong, and Envoy) into the WSO2 platform without replacing them. Discover and catalog APIs running on these gateways alongside your WSO2 managed APIs in a single developer portal. Gain unified observability across all gateway environments, and for supported gateways, publish and deploy API configurations directly from the control plane.|<ul><li>[Federation docs](cloud/federation/overview.md)</li></ul> |
 | **Policy Hub** | API policies and AI guardrails are distributed through the Policy Hub, an open source repository powered by [github.com/wso2/gateway-controllers](https://github.com/wso2/gateway-controllers). The Policy Hub is integrated into Cloud, API Manager (4.7 and above), and the standalone gateways. When a new policy or guardrail is released, it becomes instantly available to all users. |<ul><li>[Policy Hub docs](policy-hub/overview.md)</li></ul> |
 
@@ -140,6 +138,7 @@ The following is a complete view of all components and where to find their docum
 | Run a lightweight API gateway with no UI | [API Gateway](api-gateway/overview.md) |
 | Govern LLM traffic (rate limits, guardrails, cost control) | [AI Gateway LLM Proxy](ai-gateway/llm-proxy/quick-start-guide.md) |
 | Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
+| Govern MCP traffic (inbound + outbound) | [AI Gateway MCP Proxy](ai-gateway/mcp-proxy/quick-start-guide.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](cloud/ai-workspace/overview.md) |
 | Set up a developer portal for API discovery | [API Portal](cloud/devportal/theming-devportal-with-ai.md) |
 | Monitor traffic and monetize my APIs | [Analytics and Monetization](analytics-and-monetization/overview.md) |
