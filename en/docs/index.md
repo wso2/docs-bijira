@@ -11,10 +11,7 @@ This page explains what the platform offers and helps you determine which path i
 
 There are two starting points depending on what you need:
 
-1. [**I want a full, end-to-end platform for managing my APIs and AI services**](#i-want-a-full-end-to-end-platform-for-managing-my-apis-and-ai-services)
-
-Or
-
+1. [**I want a full, end-to-end platform for managing my APIs and AI services**](#i-want-a-full-end-to-end-platform-for-managing-my-apis-and-ai-services) or,
 2. [**I only want an API or AI gateway (and have no need for a UI or full platform capabilities)**](#i-only-want-an-api-or-ai-gateway-and-have-no-need-for-a-ui-or-full-platform-capabilities)
 
 With WSO2’s API Platform, both of these needs can be easily served. Here is a deeper look at how users can get started with either scenario:
