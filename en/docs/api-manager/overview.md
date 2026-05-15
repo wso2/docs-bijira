@@ -24,7 +24,7 @@ Explore and subscribe to APIs and MCP (Model Context Protocol) Servers.
 ### Run APIs
 Deploy and manage the runtime environment for your API traffic.
 
-* **API Gateway:** Secure, manage, and scale your standard API traffic (includes Universal and Federated Gateways).
+* **API Gateway:** Secure, manage, and scale your standard API traffic (includes Classic and Federated Gateways).
 * **AI Gateway:** An enterprise-grade gateway specifically for AI workloads. Secure, monitor, and control access to LLMs with multi-provider routing, cost controls, and centralized governance. 
 
 ### Govern APIs
