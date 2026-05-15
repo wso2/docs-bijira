@@ -288,6 +288,7 @@ nav:
           - Runtime Logs: cloud/monitoring-and-insights/logs/runtime-logs.md
           - Audit Logs: cloud/monitoring-and-insights/logs/audit-logs.md
         - Insights: cloud/monitoring-and-insights/insights.md
+        - Compliance Dashboard: cloud/monitoring-and-insights/compliance.md
         - Integrate API Platform with Moesif: cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
     - API Monetization:
         - Overview: cloud/api-monetization/overview.md

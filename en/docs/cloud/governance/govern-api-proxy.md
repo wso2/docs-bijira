@@ -1,70 +1,93 @@
 # Govern API Proxies
 
-To govern the API proxies, you can define rulesets/documents, and policies. These concepts help you enforce governance policies on APIs and ensure compliance with security, compliance, performance, and operational guidelines.
+API governance lets you enforce compliance standards on API proxies across your organization. You can define rulesets, attach them to policies, and monitor adherence through a compliance dashboard. You can also upload governance documents to run AI-powered compliance analysis against your APIs.
 
-To define the governance compliance standards for API proxies, you can either create Spectral rulesets or use the natural language specification to define the rules.
+The Governance page is organized into two main sections, toggled at the top:
 
-## Create a Ruleset
+- **Policies** - Manage governance policies and the rulesets that back them.
+- **Documents** - Manage PDF documents used as guidelines for AI compliance analysis.
+
+## Rulesets
+
+Rulesets are Spectral YAML-based rule definitions used to validate API artifacts. They are listed under the **Policies** tab in the **Rulesets** section. Once created, rulesets are attached to policies to enforce them on your API proxies.
+
+### Create a Ruleset
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Governance**. This opens the Governance page.
-4. From the Rulesets / Documents section, select Rulesets and click **Add Rulesets** button.
-5. Provide the following details
+4. Ensure the **Policies** tab is selected.
+5. Scroll to the **Rulesets** section and click **Add Ruleset**.
+6. Provide the following details:
 
-| Field Name | Description  | Mandatory | Options/Values |
-|------------|---------------------------------------|-----------|----------------|
-| Name | The name of the ruleset.  | Yes | - |
-| Description | A brief description of the ruleset.  | No | - |
-| Applies To | The Proxy component to which the ruleset is applied.| Yes | - |
-| Artifact Type | The type of the API.   | Yes | REST API, Async API |
-| Documentation Link | A link to the documentation of the ruleset.                                                                                                                                                                                                                                 | No | - |
-| Spectral Ruleset| Define the ruleset content using the **Spectral**. You can upload a pre-written ruleset file.  | Yes | - |
-| Provider Name| The name of the provider who created the ruleset.                                                                                                                                                                                                                           | Yes | - |
+    | Field Name | Description | Mandatory |
+    |---|---|---|
+    | Name | The name of the ruleset. | Yes |
+    | Description | A brief description of the ruleset. | No |
+    | Applies To | The scope to which the ruleset applies (fixed to API Definitions). | - |
+    | Artifact Type | The type of API artifact (fixed to HTTP API). | - |
+    | Spectral Ruleset | Upload a pre-written ruleset file in `.yaml`, `.yml`, or `.json` format. | Yes |
+    | Documentation Link | A link to the documentation for the ruleset. | No |
+    | Provider Name | The name of the provider who created the ruleset. | Yes |
 
-![Add Rulesets](../../assets/img/governance/add-rulesets.png)
+7. Click **Create**.
 
-## Add a Document
+![Add Ruleset](../../assets/img/governance/add-rulesets.png)
 
-1. From the Rulesets / Documents section, select Documents and click **Add Document** button.
-2. Provide the following details
+!!! note
+    The **Applies To** and **Artifact Type** fields are fixed and cannot be changed.
 
-| Field Name | Description                                          | Mandatory | Options/Values |
-|----------|------------------------------------------------------|-----------|----------------|
-| Name | The name of the document.                            | Yes       | -              |
-| Description | A brief description of the document.                 | No        | -              |
-| Applies To | The Proxy component to which the document is applied. | Yes       | API Definition |
-| Artifact Type | The type of the API.                                 | Yes       | HTTP API       |
-| Document | Select a file for the document.                      | Yes       | -              |
+## Policies
 
-![Add Document](../../assets/img/governance/add-document.png)
+Policies attach one or more rulesets to your organization's API proxies and define when and how they are enforced. You can use the default rulesets available in the catalog or create your own. Once created, a policy is automatically applied globally to all existing and newly created API proxies in the organization.
 
-## Policy
+### Create a Policy
 
-Policy will be used to enforce the rulesets and documents on the API proxies. A policy can only be have either rulesets or documents attached to it. To create a policy, follow the below steps.
+1. On the Governance page, ensure the **Policies** tab is selected.
+2. Click **Add Policy**.
+3. Provide the following details:
 
-1. From the Policies section, click **Add Policy** button.
-2. From the pop-up window, Select the source of the rules whether it is Using Rule Definition or Using Document.
-3. Based on the selection, fill in the required fields.
+    | Field Name | Description | Mandatory |
+    |---|---|---|
+    | Name | The name of the policy. | Yes |
+    | Description | A brief description of the policy. | No |
+    | Applicability | The scope of the policy. Currently fixed to **Global** (applies to all API proxies in the organization). | - |
+    | Enforcement Detail | Defines when the policy is evaluated and what happens on a violation. | Yes |
+    | Rulesets | The rulesets to attach to this policy. | Yes |
 
-| Field Name         | Description                                                  | Mandatory | Options/Values  |
-|--------------------|--------------------------------------------------------------|-----------|-----------------|
-| Name               | The name of the policy.                                      | Yes       | -               |
-| Description        | A brief description of the policy.                           | No        | -               |
-| Applicability      | The level of applicability of the policy.                    | Yes       | Global/ Specify |
-| Enforcement Detail | The detail of the policy enforcement criteria.               | Yes       |                 |
-| Ruleset/Document   | The rulesets or document that should attached to the policy. | Yes       | -               |
+4. Click **Create**.
 
 ![Add Policy](../../assets/img/governance/add-policy.png)
 
 ### Enforcement Detail
 
-| Field Name         | Description                                                                                  | Mandatory | Options/Values |
-|--------------------|----------------------------------------------------------------------------------------------|-----------|--------------|
-| Governed State     | The state of the API to which the policy is applied. (Currently only supports Update)        | Yes       | Update |
-| Severity Levels    | The severity level of the policy violation.                                                  | Yes       | Error, Warn, Info |
-| Actions            | The action to be taken when a policy violation is detected. (Currently only supports Notify) | Yes       | Notify  |
+| Field Name | Description | Mandatory | Options/Values |
+|---|---|---|---|
+| Governed State | The state of the API to which the policy is applied. (Currently only supports Update) | Yes | Update |
+| Severity Levels | The severity level of the policy violation. | Yes | Error, Warn, Info |
+| Actions | The action to be taken when a policy violation is detected. (Currently only supports Notify) | Yes | Notify |
 
 ![Enforcement Detail](../../assets/img/governance/enforcement-detail.png)
 
-By adding the policy, all the existing and newly created API proxies will be validated against the defined rulesets and documents.
+## Documents
+
+Documents are PDF files containing governance standards written in natural language. They are used as guidelines by the AI Compliance Analysis feature when evaluating your APIs.
+
+### Add a Document
+
+1. On the Governance page, select the **Documents** tab.
+2. Click **Add Document** and provide the following details:
+
+    | Field Name | Description | Mandatory |
+    |---|---|---|
+    | Name | The name of the document. | Yes |
+    | Description | A brief description of the document. | No |
+    | Document | Upload a PDF file containing your governance standards. | Yes |
+
+3. Click **Create**.
+
+![Add Document](../../assets/img/governance/add-document.png)
+
+## Monitoring Compliance
+
+Once policies are applied, compliance results are available through the Compliance Dashboard under **Insights > Compliance** at the organization, project, and component levels. For details on viewing compliance results and running AI compliance analysis, see [Compliance Dashboard](../monitoring-and-insights/compliance.md).

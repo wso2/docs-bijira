@@ -37,7 +37,7 @@ When defining a ruleset, the API type must be specified. Supported API types inc
 
 ### Documents
 
-Documents are used to feed specifications and guidelines to the API Platform AI engine for compliance validation. Documents can be in the form of natural language specifications or OpenAPI/AsyncAPI specifications.
+Documents are PDF files containing governance standards written in natural language. They are uploaded at the organization level and used as guidelines by the AI Compliance Analysis feature to evaluate APIs against your governance standards.
 
 ### Policy
 
