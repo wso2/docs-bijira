@@ -31,15 +31,15 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.5.0/wso2apip-event-gateway-0.5.0.zip && \
-    unzip wso2apip-event-gateway-0.5.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.6.0/wso2apip-event-gateway-0.6.0.zip && \
+    unzip wso2apip-event-gateway-0.6.0.zip
     ```
     ### Step 2: Configure the Gateway
 
-    Run this command to create `event-gateway/configs/keys.env` with the required environment variables:
+    Run this command to create `wso2apip-event-gateway-0.6.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-event-gateway-0.5.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-event-gateway-0.6.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -51,7 +51,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway-0.5.0
+        cd wso2apip-event-gateway-0.6.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -95,16 +95,16 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.5.0/wso2apip-event-gateway-0.5.0.zip && \
-    unzip wso2apip-event-gateway-0.5.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.6.0/wso2apip-event-gateway-0.6.0.zip && \
+    unzip wso2apip-event-gateway-0.6.0.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `wso2apip-event-gateway-0.5.0/configs/keys.env` with the required environment variables:
+    Run this command to create `wso2apip-event-gateway-0.6.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-event-gateway-0.5.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-event-gateway-0.6.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -119,7 +119,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway-0.5.0
+        cd wso2apip-event-gateway-0.6.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
