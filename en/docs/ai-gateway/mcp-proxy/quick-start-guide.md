@@ -19,8 +19,6 @@ docker --version
 docker compose version
 ```
 
-Replace `${version}` with the API Platform AI Gateway release version you want to run.
-
 ```bash
 # Download distribution.
 wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
