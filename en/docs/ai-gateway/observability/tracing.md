@@ -77,7 +77,7 @@ To run only the core gateway services without the demonstration tracing stack:
 docker compose up -d
 ```
 
-**Note:** If tracing is enabled in the configuration but the OTLP collector is not running, components will log warnings about failed trace exports. To completely disable tracing, set `enabled = false` in the configuration.
+**Note:** If tracing is enabled in the configuration but the OTLP collector is not running, components will log warnings about failed trace exports. To completely disable tracing, set `enabled: false` in the configuration.
 
 ### Stop Tracing Services
 
@@ -732,7 +732,7 @@ Choose sampling based on traffic volume:
 cat gateway/configs/config.toml | grep -A5 "tracing"
 ```
 
-Ensure `enabled = true`.
+Ensure `enabled: true`.
 
 **2. Check OTLP Collector is running:**
 ```bash
@@ -873,6 +873,5 @@ This provides complete observability:
 - [Jaeger Documentation](https://www.jaegertracing.io/docs/)
 - [OpenTelemetry Collector Documentation](https://opentelemetry.io/docs/collector/)
 - [W3C Trace Context Specification](https://www.w3.org/TR/trace-context/)
-- [Gateway README](README.md)
 - [Gateway Logging Guide](logging.md)
 - [Docker Compose Profiles](https://docs.docker.com/compose/profiles/)

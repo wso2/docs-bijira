@@ -33,6 +33,31 @@
   box-shadow: var(--md-header-box-shadow);
 }
 
+.md-header__logo-group {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  margin-right: var(--md-header-links-vertical-spacing);
+}
+
+.md-header__logo-group .md-header__button.md-logo {
+  margin-right: 0;
+}
+
+.md-header__docs-label {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--md-default-fg-color);
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-header__docs-label {
+    display: none;
+  }
+}
+
 .md-header__inner {
   padding: 0 1rem;
   min-height: var(--md-header-min-height);

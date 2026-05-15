@@ -72,16 +72,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Toggle active state of nested nav items
   const activeNavItems = document.querySelectorAll('.md-nav__list > .md-nav__item.md-nav__item--active.md-nav__item--nested');
-  
+
   if (activeNavItems) {
     activeNavItems.forEach((item) => {
       const checkbox = item.querySelector('input[type="checkbox"].md-nav__toggle.md-toggle');
-      
+
       if (checkbox) {
         checkbox.checked = true;
       }
     });
   }
+
+  // Expanded sections start with checked=true due to the vertical-line design.
+  // Fix: uncheck all non-active top-level section toggles on all screen sizes so only
+  // the section containing the current page stays expanded.
+  const topLevelItems = document.querySelectorAll('.md-nav--primary > .md-nav__list > .md-nav__item--nested');
+  topLevelItems.forEach(function(item) {
+    if (!item.classList.contains('md-nav__item--active')) {
+      const toggle = Array.from(item.children).find(function(el) {
+        return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
+      });
+      if (toggle) {
+        toggle.checked = false;
+      }
+    }
+  });
+
+  // Accordion behavior: when any nested item is expanded, collapse all its siblings
+  // at the same level. Applies at every depth (top-level and sub-menus).
+  document.querySelectorAll('.md-nav--primary .md-nav__toggle').forEach(function(toggle) {
+    toggle.addEventListener('change', function() {
+      if (!this.checked) return;
+      const parentItem = this.closest('.md-nav__item--nested');
+      if (!parentItem) return;
+      const parentList = parentItem.parentElement;
+      if (!parentList) return;
+      parentList.querySelectorAll(':scope > .md-nav__item--nested').forEach(function(siblingItem) {
+        if (siblingItem === parentItem) return;
+        const siblingToggle = Array.from(siblingItem.children).find(function(el) {
+          return el.tagName === 'INPUT' && el.type === 'checkbox' && el.classList.contains('md-nav__toggle');
+        });
+        if (siblingToggle) {
+          siblingToggle.checked = false;
+        }
+      });
+    });
+  });
 });
 
 /*

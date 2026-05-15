@@ -80,7 +80,7 @@ spec:
         methods: [POST]
         policies:
           - name: analytics-header-filter
-            version: v1
+            version: v0.1.0
             params:
               requestHeadersToFilter:
                 operation: deny

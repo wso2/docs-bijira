@@ -1,11 +1,11 @@
-# AI Gateway Overview
+# API Platform AI Gateway
 
-The AI Gateway is the standalone runtime plane for routing, securing, and observing AI traffic. It handles Large Language Model (LLM) APIs and Model Context Protocol (MCP) servers, and can run independently or connect to the AI Workspace control plane for centralized management.
+A gateway for managing and securing AI traffic, including Large Language Model (LLM) APIs and Model Context Protocol (MCP) servers.
 
 ## Quick Start
 
-- [LLM Quick Start Guide](llm/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
-- [MCP Quick Start Guide](mcp/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
+- [LLM Quick Start Guide](llm-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
+- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
 
 ## Key Concepts
 
@@ -24,7 +24,7 @@ Following templates are shipped out-of-the-box
 
 ### LLM Provider
 
-An LLM Provider represents a connection from the gateway runtime to an AI backend service such as OpenAI, Azure OpenAI, or other LLM APIs. Administrators configure LLM Providers to define:
+An LLM Provider represents a connection to an AI backend service such as OpenAI, Azure OpenAI, or other LLM APIs. Platform administrators configure LLM Providers to define:
 
 - The LLM Provider Template
 - The upstream LLM service URL
@@ -50,15 +50,6 @@ An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a prot
 - Expose MCP servers through a centralized gateway
 - Apply authentication and access control to MCP traffic
 - Manage multiple MCP servers from a single control plane
-
-## Control Plane Integration
-
-The AI Gateway can be managed in two ways:
-
-- Directly through the Gateway-Controller API for standalone deployments
-- Through the [AI Workspace](../ai-workspace/overview.md), which acts as the control plane for connected gateway runtimes
-
-Use AI Workspace when you want a UI-driven control plane for gateway registration, provider and proxy management, policy configuration, and deployment workflows.
 
 ## Default Ports
 
@@ -88,17 +79,25 @@ Use AI Workspace when you want a UI-driven control plane for gateway registratio
 
 **How it works:**
 
-1. Administrators verify the Gateway-Controller admin health endpoint and configure the gateway either through the Gateway-Controller API or through AI Workspace
+1. Administrators verify the Gateway-Controller admin health endpoint and configure LLM Providers and MCP Proxies via the Gateway-Controller API
 2. Developers create LLM Proxies to build AI applications on top of available providers
 3. The gateway routes traffic, applies policies, and manages authentication
+
+## AI Guardrails
+
+AI Guardrails allow you to enforce safety, content, and compliance policies on AI traffic flowing through the AI Gateway. They can be applied at the LLM Provider level (organization-wide), at the LLM Proxy level (per-application), or on MCP Proxies.
+
+The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: [https://github.com/wso2/gateway-controllers/blob/main/docs/README.md](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md)
+
+You can extend the AI Gateway with custom guardrail policies by building a custom gateway image using the `ap` CLI. See [Customizing the Gateway by Adding and Removing Policies](../tools/cli/customizing-gateway-policies.md).
 
 ## Documentation
 
 | Section | Description |
 |---------|-------------|
-| [llm/](llm/index.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
-| [mcp/](mcp/index.md) | MCP proxy setup and policies |
-| [observability/](observability/index.md) | Logging and tracing configuration |
-| [analytics/](analytics/index.md) | Analytics integrations (Moesif) |
-| [Gateway-Controller API](gateway-controller-api.md) | Standalone gateway REST API usage for providers and proxies |
-| [AI Workspace](../ai-workspace/overview.md) | Control plane for managing connected AI Gateway runtimes |
+| [LLM](llm-proxy/quick-start-guide.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
+| [MCP](mcp-proxy/quick-start-guide.md) | MCP proxy setup and policies |
+| [Observability](observability/logging.md) | Logging and tracing configuration |
+| [Analytics](analytics/moesif-analytics.md) | Analytics integrations (Moesif) |
+| [Policies and Guardrails](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md) | Gateway policies and guardrails for AI traffic control |
+| [REST APIs](ai-gateway-rest-api/authentication.md) | REST API authentication and usage |
