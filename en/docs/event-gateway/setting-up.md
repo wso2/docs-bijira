@@ -36,7 +36,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     ```
     ### Step 2: Configure the Gateway
 
-    Run this command to create `event-gateway/configs/keys.env` with the required environment variables:
+    Run this command to create `wso2apip-event-gateway-0.6.0/configs/keys.env` with the required environment variables:
 
     ```bash
     cat > wso2apip-event-gateway-0.6.0/configs/keys.env << 'ENVFILE'
