@@ -94,10 +94,9 @@ There are two standalone gateways:
     * **MCP Proxy** governs how AI agents access your services through the Model Context Protocol. You can generate MCP tools from REST APIs, aggregate tools from multiple servers, and enforce access control and authorization.
     * [AI Gateway documentation](ai-gateway/overview.md)
 
-## What is the difference between platform gateways and standalone gateways?
-This is a common question for new users. The API Gateway and AI Gateway appear in both paths: inside the platform (Cloud, Hybrid, API Manager) and as standalone downloads.
-
-They are the same underlying technology, built on the same Go-based runtime and the same policy engine. The difference is entirely in how you configure and interact with them.
+## What is the difference between standalone mode and platform mode?
+The API Gateway and AI Gateway can run in two modes: as part of the platform (Cloud, Hybrid, or API Manager) or in standalone mode. These are not different products. They are the same gateway, built on the same Go-based runtime and the same policy engine. The difference is in how you configure and interact with them.
+In platform mode, the gateway is connected to a control plane and you manage everything through the web UI. In standalone mode, you run the gateway independently and configure it using YAML files, CLI, or REST APIs.
 
 | | Inside the platform (Cloud, Hybrid, or API Manager) | Standalone |
 | :--- | :--- | :--- |
