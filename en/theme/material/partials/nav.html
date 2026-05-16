@@ -49,7 +49,7 @@
   </label>
 
   <!-- Repository information -->
-  {% if config.repo_url %}
+  {% if config.repo_url and config.extra.show_repo_in_nav %}
     <div class="md-nav__source">
       {% include "partials/source.html" %}
     </div>

@@ -501,6 +501,7 @@ extra_javascript:
   - assets/lib/highlightjs/highlight.min.js
   - assets/js/theme.js
 extra:
+  show_repo_in_nav: false
   page_title_suffix: "API Platform Docs"
   social:
     - icon: fontawesome/brands/github
