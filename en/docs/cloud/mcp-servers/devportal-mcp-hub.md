@@ -9,7 +9,7 @@ You can get an MCP Server only view by changing the **Devportal Mode** to **MCP 
 
 The default look of your MCP Hub will be as follows.
 
-![Defult MCP Hub](../../assets/img/introduction/mcp/mcp-devportal-default.png)
+![Default MCP Hub](../../assets/img/introduction/mcp/mcp-devportal-default.png)
 
 A themed MCP Hub could look something like the following. If you want to know more on how you can customize the devportal, please refer to our [manual theming guide](../devportal/theming-devportal-org-level.md) and [theming with AI guide](../devportal/theming-devportal-with-ai.md).
 
