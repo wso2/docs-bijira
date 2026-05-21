@@ -101,3 +101,23 @@ def on_post_page(output, page, config, **kwargs):
     full_title = f"{title} | {suffix}" if suffix else title
 
     return re.sub(r"<title>.*?</title>", f"<title>{full_title}</title>", output, count=1)
+
+def on_page_markdown(markdown, page, config, **kwargs):
+      """Write Markdown files to a parallel .md file in the build output.
+   
+      For example, it creates the file `https://wso2.com/api-platform/docs/get-started.md` 
+      alongside the HTML page.
+      """
+      import os
+
+      site_dir = config["site_dir"]
+      # page.url is like "cloud/ai-gateway/overview/" — strip trailing slash
+      # to produce "cloud/ai-gateway/overview.md"
+      url_path = page.url.rstrip("/")
+      if not url_path:
+          url_path = "index"
+      md_output_path = os.path.join(site_dir, url_path + ".md")
+      os.makedirs(os.path.dirname(md_output_path), exist_ok=True)
+      with open(md_output_path, "w", encoding="utf-8") as f:
+          f.write(markdown)
+      return markdown
