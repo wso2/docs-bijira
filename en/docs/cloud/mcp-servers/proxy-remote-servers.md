@@ -1,6 +1,6 @@
 # Proxy Remote MCP Servers
 
-API Platform allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, API Platform provides the capablity to manage the tools of your proxied MCP servers through the console.
+API Platform allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, API Platform provides the capability to manage the tools of your proxied MCP servers through the console.
 
 ## Create an MCP Server Proxy
 
@@ -45,7 +45,7 @@ You can select and call individual tools by providing the parameters if necessar
 ## Publish the MCP Server
 
 !!!important
-    If you already have a Devportal themed published, please republish the theme before publshing the MCP Servers to Devportal.
+    If you already have a Devportal themed published, please republish the theme before publishing the MCP Servers to Devportal.
 
 Once you verify that the MCP Server is working as expected in the development environment, you can promote it to production.
 

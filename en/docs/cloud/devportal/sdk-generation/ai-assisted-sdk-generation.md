@@ -12,7 +12,7 @@ Building applications with multiple APIs typically requires you to:
 
 AI-assisted SDK generation streamlines this process by:
 
-- Createing a single SDK from your selected APIs
+- Creating a single SDK from your selected APIs
 - Generating application code based on your use case
 - Providing you a ready starting point for development
 
