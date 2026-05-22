@@ -45,7 +45,7 @@ You can select and call individual tools by providing the parameters if necessar
 ## Publish the MCP Server
 
 !!!important
-    If you already have a Devportal themed published, please republish the theme before publishing the MCP Servers to Devportal.
+    If you already have a Devportal theme published, please republish the theme before publishing the MCP Servers to Devportal.
 
 Once you verify that the MCP Server is working as expected in the development environment, you can promote it to production.
 
