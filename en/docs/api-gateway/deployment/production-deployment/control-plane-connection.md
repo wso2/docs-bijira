@@ -84,8 +84,8 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
       namespace: ap-gateway  # adjust to match your deployment namespace
     type: Opaque
     stringData:
-      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__ID: "your-client-id"
-      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__SECRET: "your-client-secret"
+      APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_ID: "your-client-id"
+      APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET: "your-client-secret"
     ```
 
     Apply it:
@@ -114,7 +114,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
     ```
 
     !!! tip
-        If your organization uses the Resource Owner Password Credentials (ROPC) flow instead of client credentials, store `APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__USERNAME` and `APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__PASSWORD` in the secret using the same `extraEnvFrom` pattern.
+        If your organization uses the Resource Owner Password Credentials (ROPC) flow instead of client credentials, store `APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__USERNAME` and `APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__PASSWORD` in the secret using the same `extraEnvFrom` pattern.
 
 ---
 

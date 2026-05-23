@@ -43,7 +43,7 @@ kubectl get svc -n ap-gateway
 
 ```bash
 kubectl exec -n ap-gateway deploy/ap-gateway-controller -- \
-  wget -qO- http://localhost:9092/api/admin/v0.9/health
+  wget -qO- http://localhost:9094/api/admin/v0.9/health
 ```
 
 ## Upgrade Procedure
