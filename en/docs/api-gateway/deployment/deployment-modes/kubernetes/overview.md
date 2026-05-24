@@ -11,8 +11,8 @@ If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the succes
 - Unified API Platform gateway model for both standalone and operator-driven deployments.
 - Native support for Kubernetes Operator workflows and GitOps-style resource management.
 - Flexible API exposure model:
-  - API Platform CRDs (`APIGateway`, `RestApi`, and related CRDs)
-  - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
+    - API Platform CRDs (`APIGateway`, `RestApi`, and related CRDs)
+    - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
 - Improved extensibility for policies and secret/config-based parameter references.
 
 ## Deployment Modes
@@ -33,8 +33,8 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
 
 - Installs the Gateway Operator via Helm.
 - Supports:
-  - API Platform CRD path (`APIGateway` + `RestApi`)
-  - Kubernetes Gateway API path (`Gateway` + `HTTPRoute`)
+    - API Platform CRD path (`APIGateway` + `RestApi`)
+    - Kubernetes Gateway API path (`Gateway` + `HTTPRoute`)
 - Guide: [`gateway-operator.md`](./gateway-operator.md)
 
 ## How to Choose a Mode
