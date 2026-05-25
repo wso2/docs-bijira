@@ -35,8 +35,7 @@ In this guide, you will create an API proxy from the Scratch.
 
 ## Configure and Deploy the API Proxy
 
-!!! note
-    You can enable **Auto Deploy** using the toggle switch available on the API proxy. When enabled, the proxy is automatically deployed to a lower, non-critical environment once the proxy build completes successfully, without requiring manual intervention.
+
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click **Configure and Deploy** button.

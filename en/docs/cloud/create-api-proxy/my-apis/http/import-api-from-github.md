@@ -88,6 +88,9 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 
 ## Step 2: Build and Deploy the API proxy
 
+!!! note
+    You can enable **Auto Deploy** using the toggle switch available on the API proxy. When enabled, the proxy is automatically deployed to a lower, non-critical environment once the proxy build completes successfully, without requiring manual intervention.
+
 !!! info
     A build starts automatically when you create the API proxy, and you will be redirected to the **Overview** page.
 
