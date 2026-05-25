@@ -109,10 +109,10 @@ Before making any other changes, set the controller and runtime image tags to th
 gateway:
   controller:
     image:
-      tag: "v1.1.0"
+      tag: "1.1.0"
   gatewayRuntime:
     image:
-      tag: "v1.1.0"
+      tag: "1.1.0"
 ```
 
 !!! tip
