@@ -1,8 +1,8 @@
 # Customize Developer Portal Manually for your Organization
 
-Developer portal allows you to customize the user interfaces(UIs)in organization level as well as in API level. with this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
+Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
-Customization take place at two levels:
+Customization takes place at two levels:
 
 - Org Level : This functions as the default branding and applies to all APIs in an organization.
 - API Level : Each API can have its own branding. This overrides the organizational level branding applied by default to the organization.
@@ -19,7 +19,7 @@ This creates the organization and opens the **Project Home** page of the default
 
 ## Get into `Developer Portal` tab
 
-Go though the below steps to get the `Developer Portal` tab.
+Go through the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
 - In the left navigation menu, click `Admin` and then click `Settings`.
@@ -56,7 +56,7 @@ Go through the following steps to customize the theme of the Devportal in the or
 ### HTML
 
 1. Select `HTML` tab. You can edit the HTML structure of pages.
-2. paste the below html code for `hero-section` .
+2. Paste the below HTML code for `hero-section`.
 
     ``` html
     <section class="hero-section">

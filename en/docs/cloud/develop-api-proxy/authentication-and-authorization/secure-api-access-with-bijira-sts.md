@@ -59,7 +59,7 @@ You can provide fine-grained access control to your API resources with scopes. F
 Follow the steps below to consume the API Platform API using API Platform STS.
 
 1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.bijira.dev](https://devportal.bijira.dev).
-2. Click **Applications**. and then click **+Create**.
+2. Click **Applications**, and then click **+Create**.
 3. Enter a name for the application. 
 4. Click **Create**.
 5. Click on the newly created application.
