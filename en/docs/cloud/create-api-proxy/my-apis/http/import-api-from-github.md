@@ -96,6 +96,8 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 
 ![Create API from Github](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_build_page.png)
 
+!!! note
+    You can enable **Auto Build on Commit** using the toggle switch available on the API proxy. When enabled, any commit pushed to the connected GitHub branch automatically triggers a new build, keeping your proxy up to date without manual intervention.
 
  <!-- keep list -->
 3. Once the build is completed, in the deploy navigation menu, in the **Build Area** card, click **Configure & Deploy**. 
@@ -103,5 +105,8 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 4. Select **External** as the **API Access Mode** and click **Deploy**. The **Development** card indicates the **Deployment Status** as **Active** when the API proxy is successfully deployed.
 
 ![Create API from Github](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
+
+!!! note
+    You can enable **Auto Deploy** using the toggle switch available on the API proxy. When enabled, the proxy is automatically deployed to a lower, non-critical environment once the proxy build completes successfully, without requiring manual intervention.
 
 Now, you are ready to test the API proxy. You can test the API via the [OpenAPI Console](../../../test-api-proxy/openapi-console.md) provided in API Platform
