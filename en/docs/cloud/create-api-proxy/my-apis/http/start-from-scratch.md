@@ -35,8 +35,6 @@ In this guide, you will create an API proxy from the Scratch.
 
 ## Configure and Deploy the API Proxy
 
-
-
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click **Configure and Deploy** button.
 3. Select **External** as API Access Mode.
