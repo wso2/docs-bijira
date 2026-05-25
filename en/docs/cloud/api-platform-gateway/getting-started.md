@@ -1,6 +1,6 @@
 # Getting Started with Self-Hosted Gateway
 
-This guide walks you through setting up a API Platform Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.
+This guide walks you through setting up an API Platform Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.
 
 !!! note
     This feature is currently available in the **US region** only.

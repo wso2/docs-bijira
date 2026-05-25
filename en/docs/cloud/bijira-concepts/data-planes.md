@@ -22,7 +22,7 @@ API Platform supports two types of data planes.
 ### Infrastructure Compatibility
 API Platform private data planes can be deployed on most major cloud providers such as Azure, AWS, GCP, as well as on-premises environments.
 
-Minimum infrastructure requirements include,
+Minimum infrastructure requirements include:
 
 - Kubernetes clusters compatible with upstream distributions
 - Container registry
@@ -33,7 +33,7 @@ Minimum infrastructure requirements include,
 
 ### System components
 
-Setting up a API Platform PDP involves deploying components via Helm on the Kubernetes infrastructure. The installation include,
+Setting up an API Platform PDP involves deploying components via Helm on the Kubernetes infrastructure. The installation includes:
 
 - Cilium CNI
 - API Gateways and related components
@@ -67,7 +67,7 @@ All communications between the control plane and the private data plane are secu
 
 ### Observability Architecture
 
-The following diagram illustrates the log and observability architecture of a API Platform Azure PDP deployment.
+The following diagram illustrates the log and observability architecture of an API Platform Azure PDP deployment.
 
 ![Observability architecture](../../assets/img/bijira-concepts/observability-architecture.png)
 

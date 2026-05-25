@@ -14,7 +14,7 @@ This creates the organization and opens the **Project Home** page of the default
 
 ## Get into `Developer Portal` tab
 
-Go though the below steps to get the `Developer Portal` tab.
+Go through the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
 - In the left navigation menu, click `Admin` and then click `Settings`.
@@ -36,8 +36,8 @@ Go through the following steps to customize the theme of the Devportal with AI.
 
     ![Devportal Preview](../../assets/img/devportal/devportal_preview.png)
 
-4. If you want to save those changes was a draft you can select `Save As Draft`.
-5. If it perfectly align with your organization's unique identity, you can click `Publish to Devportal`.
+4. If you want to save those changes as a draft you can select `Save As Draft`.
+5. If it perfectly aligns with your organization's unique identity, you can click `Publish to Devportal`.
 
     ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
 

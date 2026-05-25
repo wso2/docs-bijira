@@ -1,8 +1,8 @@
 # Customize Developer Portal Manually for your Organization
 
-Developer portal allows you to customize the user interfaces(UIs)in organization level as well as in API level. with this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
+Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
-Customization take place at two levels:
+Customization takes place at two levels:
 
 - Org Level : This functions as the default branding and applies to all APIs in an organization.
 - API Level : Each API can have its own branding. This overrides the organizational level branding applied by default to the organization.
@@ -19,7 +19,7 @@ This creates the organization and opens the **Project Home** page of the default
 
 ## Get into `Developer Portal` tab
 
-Go though the below steps to get the `Developer Portal` tab.
+Go through the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
 - In the left navigation menu, click `Admin` and then click `Settings`.
@@ -33,11 +33,11 @@ Go through the following steps to customize the theme of the Devportal in the AP
 
 ### HTML
 
-The `HTML` tab will show the the read only view reference to the HTML structure of APIs in your organization. To edit the content of this page go to [Customize API Landing Page content](#customize-api-landing-page-content).
+The `HTML` tab will show the read only view reference to the HTML structure of APIs in your organization. To edit the content of this page go to [Customize API Landing Page content](#customize-api-landing-page-content).
 
 ### Org level CSS
 
-This tab will shows the reference to main CSS from the the organizational level theme settings.
+This tab will show the reference to the main CSS from the organizational level theme settings.
 
 ### CSS
 
