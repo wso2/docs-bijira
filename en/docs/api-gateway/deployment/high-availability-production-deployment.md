@@ -118,6 +118,42 @@ gateway:
 !!! tip
     Check the [gateway releases](https://github.com/wso2/api-platform/releases) page for the latest available version. Always align the image tag with the Helm chart version used during install.
 
+### WSO2 Subscription Users
+
+If you have a WSO2 Subscription, images are pulled from the WSO2 private registry (`registry.wso2.com`) instead of the public GHCR registry. A single Helm field activates this mode end-to-end.
+
+**Step 1 — Create the image pull secret**
+
+Create a `docker-registry` Secret in the namespace where the chart will be installed (replace `<namespace>`, `<wso2-email>`, and `<wso2-password-or-token>` with your values):
+
+```bash
+kubectl create secret docker-registry wso2-subscription-creds \
+  --namespace <namespace> \
+  --docker-server=registry.wso2.com \
+  --docker-username=<wso2-email> \
+  --docker-password=<wso2-password-or-token>
+```
+
+!!! note
+    Credentials are intentionally kept out of Helm release state. The chart only stores the **name** of the Secret.
+
+**Step 2 — Set `wso2.subscription.imagePullSecret` in `values.yaml`**
+
+```yaml
+wso2:
+  subscription:
+    imagePullSecret: wso2-subscription-creds
+```
+
+Setting this field causes the chart to:
+
+- Rewrite all default image repositories from `ghcr.io/wso2/api-platform/` to `registry.wso2.com/wso2-api-platform/` automatically.
+- Inject the named Secret into the `imagePullSecrets` block of every component.
+
+Any explicit `image.repository` override (for example, pointing to an internal mirror) is passed through unchanged, so the rewrite only applies to default images.
+
+When `wso2.subscription.imagePullSecret` is empty (the default), the chart renders identically to a non-subscription install and pulls from the public GHCR registry with no `imagePullSecrets` block.
+
 ## Setup Steps
 
 Complete the following steps to configure a production-ready deployment:
