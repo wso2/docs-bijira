@@ -6,7 +6,7 @@
 
     ```bash
     helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
-      --version 1.1.1 \
+      --version 1.1.2 \
       --namespace ap-gateway \
       --create-namespace \
       --values ./values.yaml \
