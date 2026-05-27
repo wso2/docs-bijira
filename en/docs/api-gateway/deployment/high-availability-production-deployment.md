@@ -103,7 +103,7 @@ curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tag
 
 ### Pin the Image Versions
 
-Before making any other changes, set the controller and runtime image tags to the release you want to deploy. The latest stable release is **v1.1.0**.
+Before making any other changes, set the controller and runtime image tags to the release you want to deploy. The latest stable release is **1.1.0**.
 
 ```yaml
 gateway:
@@ -117,6 +117,9 @@ gateway:
 
 !!! tip
     Check the [gateway releases](https://github.com/wso2/api-platform/releases) page for the latest available version. Always align the image tag with the Helm chart version used during install.
+
+!!! note "WSO2 Subscription Users"
+    If you have a WSO2 subscription, use image tag **`1.1.0.0`** instead of `1.1.0` to receive the latest updates and patches from the WSO2 private registry. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
 
 ### WSO2 Subscription Users
 
