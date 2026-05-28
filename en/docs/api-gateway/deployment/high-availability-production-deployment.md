@@ -124,7 +124,7 @@ gateway:
 !!! note "WSO2 Subscription Users"
     If you have a WSO2 subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.1`, instead of the base release `1.1.0`.
 
-    The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry.. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
+    The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
 
 ### WSO2 Subscription Users
 
