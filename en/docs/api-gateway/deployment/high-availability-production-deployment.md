@@ -116,10 +116,15 @@ gateway:
 ```
 
 !!! tip
-    Check the [gateway releases](https://github.com/wso2/api-platform/releases) page for the latest available version. Always align the image tag with the Helm chart major version used during install.
+    Check the [gateway releases](https://github.com/wso2/api-platform/releases) page for the latest available version. Always ensure that the major version of the image tag matches the major version of the Helm chart used during installation.
+
+!!! note
+    It is strongly recommended to use the same version tag for both the controller and runtime components to ensure compatibility and avoid unexpected behavior.
 
 !!! note "WSO2 Subscription Users"
-    If you have a WSO2 subscription, use image tag **`1.1.0.0`** instead of `1.1.0` to receive the latest updates and patches from the WSO2 private registry. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
+    If you have a WSO2 subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.1`, instead of the base release `1.1.0`.
+
+    The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry.. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
 
 ### WSO2 Subscription Users
 
