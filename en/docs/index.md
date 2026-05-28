@@ -85,7 +85,8 @@ If you do not need a full management console and want a high-performance gateway
 
 There are two standalone gateways:
 
-![Gateway Diagram](assets/img/overview/api-gateway-light.webp)
+![Gateway Diagram](assets/img/overview/api-gateway-light.webp#only-light)
+![Gateway Diagram](assets/img/overview/api-gateway-dark.webp#only-dark)
 
 
 * **API Gateway**
