@@ -53,28 +53,12 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 
 **This guide focuses on Bottom-Up deployment** with automatic sync to on-prem APIM.
 
----
-
-## Table of Contents
-
-1. [Prerequisites](#prerequisites)
-2. [Configuration](#configuration)
-3. [How It Works](#how-it-works)
-4. [REST API Deployment](#rest-api-deployment)
-5. [API Updates](#api-updates)
-6. [API Undeploy](#api-undeploy)
-7. [API Management Operations](#api-management-operations)
-8. [Sync Status Tracking](#sync-status-tracking)
-9. [Troubleshooting](#troubleshooting)
-
----
-
 ## Prerequisites
 
 ### Gateway Controller Requirements
 
 - Gateway controller running locally or remotely
-- Management API endpoint: `http://localhost:9090` (default)
+- Management API endpoint: `http://localhost:9090/api/management/v0.9` (default)
 
 ### Bottom-Up API Sync Requirements
 
@@ -362,7 +346,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
 ```
 
 !!! note
-    Check the gateway controller logs to confirm control plane sync status. Look for `"Bottom-up sync: starting"` and `"Bottom-up API sync completed successfully"` entries. If sync fails, the log will show the error detail and the gateway will retry automatically.
+    Check the gateway controller logs to confirm control plane sync status. Look for `"Bottom-up sync: starting"` and `"Bottom-up sync: API synced successfully"` entries. If sync fails, the log will show the error detail and the gateway will retry automatically.
 
 **Step 3: Test API on Gateway**
 
