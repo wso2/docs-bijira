@@ -2,7 +2,7 @@
 
 ## Overview
 
-When you deploy a REST API via the gateway controller's REST API endpoint, the gateway **automatically tracks it for bottom-up sync** to on-prem WSO2 APIM 4.7.x (if configured for on prem control plane mode).
+When you deploy a REST API via the gateway controller's REST API endpoint, the gateway **automatically tracks it for bottom-up sync** to on-prem WSO2 APIM 4.7.x (if configured for on-prem control plane mode).
 
 ### Understanding API Deployment Approaches
 
@@ -359,10 +359,16 @@ Save the API definition as `petstore-api.json`:
 
 **Step 2: Deploy to Gateway**
 
+!!! note
+    The examples below use a `BASE64_CREDENTIALS` environment variable for the Basic auth header. Set it before running any `curl` command:
+    ```bash
+    export BASE64_CREDENTIALS=$(echo -n "admin:admin" | base64)
+    ```
+
 ```bash
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
   -H "Content-Type: application/json" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
   -d @petstore-api.json
 ```
 
@@ -382,13 +388,13 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
 !!! note
     Check the gateway controller logs to confirm control plane sync status. Look for `"Bottom-up sync: starting"` and `"Bottom-up sync: success"` entries. If sync fails, the log will show the error detail and the gateway will retry automatically.
 
-**Step 4: Test API on Gateway**
+**Step 3: Test API on Gateway**
 
 ```bash
 # Get API key
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys \
   -H "Content-Type: application/json" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
   -d '{"name": "test-key"}'
 
 # Invoke API
@@ -396,7 +402,7 @@ curl http://localhost:8080/petstore/pet/123 \
   -H "X-API-Key: <api-key-from-step-above>"
 ```
 
-**Step 5: Verify in On-Prem APIM (Optional)**
+**Step 4: Verify in On-Prem APIM (Optional)**
 
 Once sync completes, API is available in APIM:
 
@@ -467,7 +473,7 @@ Update your API definition to add a rate limit policy:
 ```bash
 curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
   -H "Content-Type: application/json" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
   -d @petstore-api-updated.json
 ```
 
@@ -482,7 +488,7 @@ curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 
 ```bash
 curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" | jq '{cpSyncStatus, policies}'
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" | jq '{cpSyncStatus, policies}'
 ```
 
 ---
@@ -495,7 +501,7 @@ To undeploy an API, send a DELETE request with the API name:
 
 ```bash
 curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}"
 ```
 
 **Response:**
@@ -516,7 +522,7 @@ curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 ```bash
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys \
   -H "Content-Type: application/json" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
   -d '{
     "name": "my-api-key"
   }'
@@ -543,14 +549,14 @@ curl http://localhost:8080/petstore/pet/1 \
 
 ```bash
 curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}"
 ```
 
 ### Revoke API Key
 
 ```bash
 curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys/key-uuid-12345 \
-  -H "Authorization: Basic YWRtaW46YWRtaW4="
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}"
 ```
 
 ---
@@ -575,7 +581,7 @@ If sync fails, the gateway automatically retries up to 3 times. To manually trig
 ```bash
 curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
   -H "Content-Type: application/json" \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
   -d @petstore-api.json
 ```
 
@@ -636,7 +642,7 @@ curl -k https://192.168.0.102:9443/internal/gateway/.well-known
 
 ```bash
 curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Authorization: Basic YWRtaW46YWRtaW4=" | jq '.spec.upstream'
+  -H "Authorization: Basic ${BASE64_CREDENTIALS}" | jq '.spec.upstream'
 ```
 
 **Fix:** Ensure `upstream.main.url` is set to a valid backend service
@@ -658,7 +664,7 @@ export APIP_GW_LOG_LEVEL=debug
    ```bash
    curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
      -H "Content-Type: application/json" \
-     -H "Authorization: Basic YWRtaW46YWRtaW4=" \
+     -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
      -d @api-definition.json
    ```
 
