@@ -31,11 +31,10 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 - Gateway then syncs the API to on-prem APIM (if connected)
 
 **Characteristics:**
-- **Origin:** `gateway_api`
 - **Data flow:** Gateway → On-Prem APIM
 - **Use case:** On-prem APIM integration
 - **Sync:** Automatic and tracked (pending/success/failed)
-- **Status tracking:** Yes, visible via `cpSyncStatus` field
+- **Status tracking:** Yes, tracked internally and observable via gateway controller logs
 - **Continues working:** API remains available on gateway even if APIM is unavailable
 
 
@@ -247,22 +246,24 @@ spec:
         key: X-API-Key
         in: header
     
-    - name: rate-limit
+    - name: basic-ratelimit
       version: v1
       params:
-        limit: 1000
-        window: 3600
+        limits:
+          - requests: 1000
+            duration: 1h
   
   operations:
     - method: GET
       path: /pet/{petId}
       # Operation-level policies override API-level
       policies:
-        - name: rate-limit
+        - name: basic-ratelimit
           version: v1
           params:
-            limit: 100          # More restrictive per-operation
-            window: 60
+            limits:
+              - requests: 100
+                duration: 1m
     
     - method: POST
       path: /pet
@@ -293,68 +294,43 @@ spec:
 
 ### Deployment Steps
 
-**Step 1: Create API JSON**
+**Step 1: Create API YAML**
 
-Save the API definition as `petstore-api.json`:
+Save the API definition as `petstore-api.yaml`:
 
-```json
-{
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
-  "kind": "RestApi",
-  "metadata": {
-    "name": "PetStoreAPI"
-  },
-  "spec": {
-    "displayName": "PetStore API",
-    "version": "v1.0",
-    "context": "/petstore",
-    "upstream": {
-      "main": {
-        "url": "https://petstore.example.com"
-      }
-    },
-    "policies": [
-      {
-        "name": "api-key-auth",
-        "version": "v1",
-        "params": {
-          "key": "X-API-Key",
-          "in": "header"
-        }
-      }
-    ],
-    "operations": [
-      {
-        "method": "GET",
-        "path": "/pet/{petId}"
-      },
-      {
-        "method": "POST",
-        "path": "/pet"
-      },
-      {
-        "method": "PUT",
-        "path": "/pet"
-      },
-      {
-        "method": "DELETE",
-        "path": "/pet/{petId}"
-      },
-      {
-        "method": "GET",
-        "path": "/store/inventory"
-      },
-      {
-        "method": "POST",
-        "path": "/store/order"
-      },
-      {
-        "method": "GET",
-        "path": "/"
-      }
-    ]
-  }
-}
+```yaml
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
+kind: RestApi
+metadata:
+  name: PetStoreAPI
+spec:
+  displayName: PetStore API
+  version: v1.0
+  context: /petstore
+  upstream:
+    main:
+      url: https://petstore.example.com
+  policies:
+    - name: api-key-auth
+      version: v1
+      params:
+        key: X-API-Key
+        in: header
+  operations:
+    - method: GET
+      path: /pet/{petId}
+    - method: POST
+      path: /pet
+    - method: PUT
+      path: /pet
+    - method: DELETE
+      path: /pet/{petId}
+    - method: GET
+      path: /store/inventory
+    - method: POST
+      path: /store/order
+    - method: GET
+      path: /
 ```
 
 **Step 2: Deploy to Gateway**
@@ -367,9 +343,9 @@ Save the API definition as `petstore-api.json`:
 
 ```bash
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/yaml" \
   -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
-  -d @petstore-api.json
+  --data-binary @petstore-api.yaml
 ```
 
 **Response:**
@@ -386,7 +362,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
 ```
 
 !!! note
-    Check the gateway controller logs to confirm control plane sync status. Look for `"Bottom-up sync: starting"` and `"Bottom-up sync: success"` entries. If sync fails, the log will show the error detail and the gateway will retry automatically.
+    Check the gateway controller logs to confirm control plane sync status. Look for `"Bottom-up sync: starting"` and `"Bottom-up API sync completed successfully"` entries. If sync fails, the log will show the error detail and the gateway will retry automatically.
 
 **Step 3: Test API on Gateway**
 
@@ -422,73 +398,60 @@ When you update an API, it's automatically re-synced to on-prem APIM (if connect
 
 **Example: Add Rate Limiting Policy**
 
-Update your API definition to add a rate limit policy:
+Update your API definition to add a rate limit policy and save as `petstore-api-updated.yaml`:
 
-```json
-{
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
-  "kind": "RestApi",
-  "metadata": {
-    "name": "PetStoreAPI"
-  },
-  "spec": {
-    "displayName": "PetStore API",
-    "version": "v1.0",
-    "context": "/petstore",
-    "upstream": {
-      "main": {
-        "url": "https://petstore.example.com"
-      }
-    },
-    "policies": [
-      {
-        "name": "rate-limit",
-        "version": "v1",
-        "params": {
-          "limit": 1000,
-          "window": 3600
-        }
-      },
-      {
-        "name": "api-key-auth",
-        "version": "v1",
-        "params": {
-          "key": "X-API-Key",
-          "in": "header"
-        }
-      }
-    ],
-    "operations": [
-      {
-        "method": "GET",
-        "path": "/pet/{petId}"
-      }
-    ]
-  }
-}
+```yaml
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
+kind: RestApi
+metadata:
+  name: PetStoreAPI
+spec:
+  displayName: PetStore API
+  version: v1.0
+  context: /petstore
+  upstream:
+    main:
+      url: https://petstore.example.com
+  policies:
+    - name: basic-ratelimit
+      version: v1
+      params:
+        limits:
+          - requests: 1000
+            duration: 1h
+    - name: api-key-auth
+      version: v1
+      params:
+        key: X-API-Key
+        in: header
+  operations:
+    - method: GET
+      path: /pet/{petId}
 ```
 
 **Send Update Request:**
 
 ```bash
 curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/yaml" \
   -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
-  -d @petstore-api-updated.json
+  --data-binary @petstore-api-updated.yaml
 ```
 
 **What Happens:**
 
 1. API updated on gateway immediately
-2. `cpSyncStatus` reset to `pending`
+2. Sync status internally reset to `pending`
 3. Automatically re-synced to on-prem APIM
 4. Both gateway and APIM have the updated version
 
 **Check Updated Status:**
 
+Monitor gateway controller logs for the sync result:
+
 ```bash
-curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Authorization: Basic ${BASE64_CREDENTIALS}" | jq '{cpSyncStatus, policies}'
+# Watch for sync outcome after update
+./gateway-controller 2>&1 | grep "Bottom-up sync"
 ```
 
 ---
@@ -565,24 +528,26 @@ curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/a
 
 ### Understand Sync States
 
-| Status | Meaning | Action |
-|--------|---------|--------|
-| `pending` | Waiting to sync to APIM | Wait for automatic sync |
-| `success` | Successfully synced to APIM | No action needed |
-| `failed` | Sync failed after 3 retries | Check error details and retry |
+The gateway tracks the APIM sync state internally in its database. You can monitor it via the gateway controller logs.
+
+| Status | Meaning | Log signal |
+|--------|---------|------------|
+| `pending` | Waiting to sync to APIM | `"Bottom-up sync: starting"` |
+| `success` | Successfully synced to APIM | `"Bottom-up sync: API synced successfully"` |
+| `failed` | Sync failed after 3 retries | `"Bottom-up sync: all retries exhausted"` |
+
 
 ### Retry Failed Sync
 
-If sync fails, the gateway automatically retries up to 3 times. To manually trigger a retry:
+If sync fails, the gateway automatically retries up to 3 times per sync cycle. Sync is re-triggered on the next control plane reconnection, or immediately when you update the API.
 
-1. Update the API with the same definition
-2. Gateway will set status to `pending` and retry sync
+To manually trigger a retry, update the API with the same definition:
 
 ```bash
 curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/yaml" \
   -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
-  -d @petstore-api.json
+  --data-binary @petstore-api.yaml
 ```
 
 ---
@@ -591,7 +556,7 @@ curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 
 ### Issue: API Not Syncing to APIM
 
-**Symptom:** `cpSyncStatus` remains `pending` or shows `failed`
+**Symptom:** Gateway logs show `"Bottom-up sync: attempt failed"` or `"Bottom-up sync: all retries exhausted"`
 
 **Possible Causes & Solutions:**
 
@@ -663,9 +628,9 @@ export APIP_GW_LOG_LEVEL=debug
 2. Or manually trigger by updating the API:
    ```bash
    curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
-     -H "Content-Type: application/json" \
+     -H "Content-Type: application/yaml" \
      -H "Authorization: Basic ${BASE64_CREDENTIALS}" \
-     -d @api-definition.json
+     --data-binary @api-definition.yaml
    ```
 
 **View Gateway Connection Status:**
