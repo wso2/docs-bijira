@@ -101,3 +101,27 @@ def on_post_page(output, page, config, **kwargs):
     full_title = f"{title} | {suffix}" if suffix else title
 
     return re.sub(r"<title>.*?</title>", f"<title>{full_title}</title>", output, count=1)
+
+def on_page_markdown(markdown, page, config, **kwargs):
+    """Write Markdown files to a parallel .md file in the build output.
+
+    For example, it creates the file `SITE_DIR/cloud/ai-gateway/overview.md`
+    alongside the HTML page.
+    """
+    site_dir = config["site_dir"]
+    # page.url is like "cloud/ai-gateway/overview/" so strip trailing slash
+    # to produce "cloud/ai-gateway/overview.md".
+    # When use_directory_urls is false, page.url ends in .html so strip that too.
+    url_path = page.url.rstrip("/")
+    if url_path.endswith(".html"):
+        url_path = url_path[:-5]
+    # If page.url is the homepage, after the rstrip, it becomes ""
+    if not url_path:
+        url_path = "index"
+    md_output_path = os.path.join(site_dir, url_path + ".md")
+    parent_dir = os.path.dirname(md_output_path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
+    with open(md_output_path, "w", encoding="utf-8") as f:
+        f.write(markdown)
+    return markdown
