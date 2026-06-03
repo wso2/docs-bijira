@@ -260,7 +260,7 @@ This helps control token consumption and avoid unexpected costs.
 
 The following screenshot illustrates Gemini CLI operating under a minute-level token limit, where requests are delayed until the quota is refreshed.
 
-[![Gemini CLI terminal showing a response about WSO2 API Manager documentation repository contents](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/gemini-cli-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/gemini-cli-rate-limit.png)
+[![Gemini CLI terminal showing a response about WSO2 API Manager documentation repository contents](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/gemini-cli-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/gemini-cli-rate-limit-example.png)
 
 For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
 

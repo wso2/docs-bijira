@@ -59,7 +59,7 @@ Follow the steps below to create an AI API:
 
     ![Deploy page showing Build Area, Development environment with Active deployment status, and Production not yet deployed](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-dev.png)
 
-2. Once it is deploy to development you can test it from Test Console.
+2. Once it is deployed to development, you can test it from Test Console.
 
 3. When you need to promote to production environment you have to provide endponit credentials for production setup.
 

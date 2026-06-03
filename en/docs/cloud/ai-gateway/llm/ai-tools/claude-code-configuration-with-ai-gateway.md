@@ -263,7 +263,7 @@ For example, you can create an AI subscription policy with a limited request cou
 
 This helps control token consumption and avoid unexpected costs.
 
-[![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit.png)
+[![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)
 
 For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
 

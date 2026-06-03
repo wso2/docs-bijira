@@ -46,4 +46,4 @@ In compliance with SemVer, changes that don't introduce breaking or additive mod
 
 Therefore, in the context of deployment tracks, API developers only need to specify the major and minor versions being delivered from a particular deployment track. This information is treated as the API version attribute of a deployment track. If the publisher requires versioning for internal tracking purposes, this can be accomplished in Git through the use of Git tags, on GitHub with GitHub releases, and so forth.
 
-![Two deployment tracks with API versions v1.1 and v1.2 deployed to development and production environments](../../assets/img/bijira-concepts/deployment-tracks-api-versioning.md.png){.cInlineImage-half}
+![Two deployment tracks with API versions v1.1 and v1.2 deployed to development and production environments](../../assets/img/bijira-concepts/deployment-tracks-api-versioning.png){.cInlineImage-half}
