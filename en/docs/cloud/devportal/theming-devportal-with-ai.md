@@ -26,25 +26,25 @@ Go through the following steps to customize the theme of the Devportal with AI.
 
 1. Click on `Theme with AI`.
 
-    ![Theme with AI button](../../assets/img/devportal/theming_ai_button.png)
+    ![Theming page under Developer Portal settings tab showing Theme your Devportal with AI card and Theme with AI button](../../assets/img/devportal/theming_ai_button.png)
 
 2. Enter the website URL  you'd like to use as the basis for branding.
 
-    ![AI Theme URL](../../assets/img/devportal/ai_theme_url.png)
+    ![Configure theming with AI panel showing URL input field with a sample website URL and submit arrow button](../../assets/img/devportal/ai_theme_url.png)
 
 3. Click enter to automate branding for your organization based on the website you provided. The system will then process the website and start generating the branding theme. You can see the result in the preview section.
 
-    ![Devportal Preview](../../assets/img/devportal/devportal_preview.png)
+    ![Theme Settings panel with AI-generated blue color palette and live developer portal preview on the right](../../assets/img/devportal/devportal_preview.png)
 
 4. If you want to save those changes as a draft you can select `Save As Draft`.
 5. If it perfectly aligns with your organization's unique identity, you can click `Publish to Devportal`.
 
-    ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
+    ![Theming header bar showing Save As Draft and Publish To Developer Portal buttons with Org Level tab active](../../assets/img/devportal/publish_to_devportal.png)
 
 6. Go to `Developer portal` to see the changes.
 
-    ![View Devportal](../../assets/img/devportal/view_devportal.png)
+    ![API Platform console header showing the Developer Portal button highlighted next to the Upgrade button](../../assets/img/devportal/view_devportal.png)
 
     The finalized view will be as follows:
 
-    ![Finalized Devportal](../../assets/img/devportal/finalized_preview.png)
+    ![Published developer portal homepage with AI-generated dark blue theme, hero banner, and feature cards](../../assets/img/devportal/finalized_preview.png)

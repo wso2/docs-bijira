@@ -15,19 +15,19 @@ To add policies to an API deployed on your Self-Hosted Gateway:
 3. Navigate to the API proxy you want to configure.
 4. Click **Develop** in the left navigation, then select **Policies**.
 
-    ![Policy Page](../../assets/img/api-platform-gateway/gateway/policy-page.png)
+    ![API proxy contract mapping view showing API Proxy Contract and Service Contract with /books resource rows](../../assets/img/api-platform-gateway/gateway/policy-page.png)
 
 5. Choose the policy flow for API level or Resource Level:
 
-    ![Policy Flow](../../assets/img/api-platform-gateway/gateway/policy-flow.png)
+    ![API Policies panel showing API-Level Policies section with Add Policy button and no policies attached message](../../assets/img/api-platform-gateway/gateway/policy-flow.png)
 
 6. Click **+ Add Policy** and select the policy type.
 
-    ![Policy Flow](../../assets/img/api-platform-gateway/gateway/policy-select.png)
+    ![Attach Policy dialog with Search Policies field, category filters, and policy list including Set Headers, JWT Auth, CORS, Rate Limit, and API Key Auth](../../assets/img/api-platform-gateway/gateway/policy-select.png)
 
 7. Configure the policy parameters.
 
-    ![Policy Flow](../../assets/img/api-platform-gateway/gateway/policy-configure.png)
+    ![Configure Policy dialog for API Key Auth showing key and in parameter fields with header value selected](../../assets/img/api-platform-gateway/gateway/policy-configure.png)
 
 8. Click **Add** to apply the policy.
 9. Then **Save** the API.

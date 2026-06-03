@@ -32,7 +32,7 @@ Rulesets are Spectral YAML-based rule definitions used to validate API artifacts
 
 7. Click **Create**.
 
-![Add Ruleset](../../assets/img/governance/add-rulesets.png)
+![Create Spectral Ruleset form showing name, Applies To API Definitions, Artifact Type HTTP API, description, uploaded YAML file, document link, and provider name fields with Cancel and Create buttons](../../assets/img/governance/add-rulesets.png)
 
 !!! note
     The **Applies To** and **Artifact Type** fields are fixed and cannot be changed.
@@ -57,7 +57,7 @@ Policies attach one or more rulesets to your organization's API proxies and defi
 
 4. Click **Create**.
 
-![Add Policy](../../assets/img/governance/add-policy.png)
+![Create Policy form showing name, description, Global applicability, Enforcement Details table with Update state and Notify buttons for On Error, On Warning, and On Info, plus selectable ruleset cards including Sample Ruleset, WSO2 API Design Guidelines, WSO2 Style Guidelines, and OWASP Top 10](../../assets/img/governance/add-policy.png)
 
 ### Enforcement Detail
 
@@ -67,7 +67,7 @@ Policies attach one or more rulesets to your organization's API proxies and defi
 | Severity Levels | The severity level of the policy violation. | Yes | Error, Warn, Info |
 | Actions | The action to be taken when a policy violation is detected. (Currently only supports Notify) | Yes | Notify |
 
-![Enforcement Detail](../../assets/img/governance/enforcement-detail.png)
+![Enforcement Details table showing Update state with red Notify button under On Error, orange Notify button under On Warning, and blue Notify button under On Info](../../assets/img/governance/enforcement-detail.png)
 
 ## Documents
 
@@ -86,7 +86,7 @@ Documents are PDF files containing governance standards written in natural langu
 
 3. Click **Create**.
 
-![Add Document](../../assets/img/governance/add-document.png)
+![Create Document form with name field showing Sample Document, selected PDF file for Best Practices Guidelines for REST API Design in the Banking Sector, and description field with Cancel and Create buttons](../../assets/img/governance/add-document.png)
 
 ## Monitoring Compliance
 

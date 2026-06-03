@@ -33,7 +33,7 @@ Now that you have your AWS credentials ready, configure the external gateway con
 1. Navigate to **Organization Level** in API Platform.  
 2. Click **Add External Gateway**.
 
-      ![Add External Gateway](../../assets/img/gateway-federation/add-external-gateway.png)
+      ![External Gateway empty state page with Add Gateway button and API gateway icon, shown under Admin > External Gateway menu](../../assets/img/gateway-federation/add-external-gateway.png)
 
 3. Enter the gateway configuration details:
       - **Gateway Name:** A descriptive name for this gateway (e.g., `Production AWS API Gateway`)
@@ -43,7 +43,7 @@ Now that you have your AWS credentials ready, configure the external gateway con
       - **Secret Key:** The Secret Key from Step 1
 4. Click **Save**
    
-   ![Add External Gateway Details](../../assets/img/gateway-federation/add-external-gateway-form.png){ width="800" }
+   ![Add External Gateway form with AWS vendor selected, display name, description, AWS region us-east-1, stage name dev, access key, and secret key fields](../../assets/img/gateway-federation/add-external-gateway-form.png){ width="800" }
 
 The external gateway is now connected to API Platform and ready for API discovery.
 
@@ -57,18 +57,18 @@ Once the external gateway is configured, you can discover and federate APIs into
 2. Click **Create** in the project overview.
 3. Click on **Discover APIs**.
 
-     ![Federate APIs](../../assets/img/gateway-federation/federate-apis.png){ width="1000" }
+     ![Create New page showing My APIs Ingress options including Import API Contract and Third Party APIs Egress options, with Discover APIs banner at the bottom](../../assets/img/gateway-federation/federate-apis.png){ width="1000" }
 
 3. Select the external gateway(s) from which you want to discover APIs and proceed with discovery.
 
 4. Click **Discover APIs from Gateways**.
 
-      ![Select Gateways for API Discovery](../../assets/img/gateway-federation/select-gateways.png){ width="1000" }
+      ![Select Gateways for API Discovery page listing devgateway and prodgateway both checked, with Discover APIs from 2 Gateways button](../../assets/img/gateway-federation/select-gateways.png){ width="1000" }
       
 
 5. View the list of discovered APIs from the selected gateway(s).
 
-      ![Select Gateways for API Discovery](../../assets/img/gateway-federation/create-discovered-apis.png){ width="1000" } 
+      ![Discovered APIs table listing School Management System API and Construction Company Management API from devgateway and prodgateway, each with a Create button](../../assets/img/gateway-federation/create-discovered-apis.png){ width="1000" } 
   
 !!! Note
         Only [REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html) are supported for discovery from AWS API Gateway.
@@ -78,4 +78,4 @@ Once the external gateway is configured, you can discover and federate APIs into
    - Navigate to the project **Overview** page to view all federated APIs.
 7. You can view the federated API overview by navigating to the API overview page
 
-      ![Select Gateways for API Discovery](../../assets/img/gateway-federation/federated-api-overview.png){ width="900" } 
+      ![School Management System API overview showing AWS gateway name, region us-east-1, stage dev, production URL, and GET PUT DELETE OPTIONS endpoints for /students/{studentId}](../../assets/img/gateway-federation/federated-api-overview.png){ width="900" } 

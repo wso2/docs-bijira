@@ -35,7 +35,7 @@ If you are a new user, follow the steps below to register an organization and ge
 7. From the WSO2 integration options, select **WSO2 Bijira**.
 8. Copy the **Application Id**. 
     
-     ![First Time user API Key](../../assets/img/monitoring-and-insights/first_time_key_moesif.png)
+     ![Moesif Quick Install page showing WSO2 Bijira integration with Application Id to copy](../../assets/img/monitoring-and-insights/first_time_key_moesif.png)
      
 
 ### Step 1.2: Access the API key in Moesif as an existing user
@@ -76,7 +76,7 @@ You have configured API Platform to publish data to Moesif. Let's see how you ca
 
 2. Once you publish data, your Moesif dashboard will receive events. Once Moesif receives events, you will see a notification on Moesif confirming that it received data. 
 
-    ![Data Received Moesif Notification](../../assets/img/monitoring-and-insights/data_recieved_moesif_notification.png){.cInlineImage-full}
+    ![Moesif notification confirming that API event data has been received from API Platform](../../assets/img/monitoring-and-insights/data_recieved_moesif_notification.png){.cInlineImage-full}
 
 3. Click **Next** on the notification. This will take you to the final step, where you can opt to add team members. In this guide, let's skip this step. 
 4. Click **Finish**.

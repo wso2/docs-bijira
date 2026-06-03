@@ -15,7 +15,7 @@ API Platform supports two types of data planes.
 - **Cloud Data Planes (CDP):** Use a multi-tenant infrastructure to deploy API Proxies, offering a shared yet secure runtime environment.
 - **Private Data Planes (PDP):** Offer dedicated infrastructure for a single organization, providing enhanced privacy and control to meet specific compliance or security requirements.
 
-![API Platform high-level view](../../assets/img/bijira-concepts/high-level-view.png)
+![Bijira high-level architecture with control plane, cloud data plane, and private data plane](../../assets/img/bijira-concepts/high-level-view.png)
 
 ## Private Data Planes
 
@@ -29,7 +29,7 @@ Minimum infrastructure requirements include:
 - Key vault (secret store)
 - Logging service or log storage
 
-![Private data plane architecture](../../assets/img/bijira-concepts/private-data-plane-architecture.png)
+![Bijira private data plane architecture showing firewall, load balancer, system components, project, and infrastructure](../../assets/img/bijira-concepts/private-data-plane-architecture.png)
 
 ### System components
 
@@ -69,7 +69,7 @@ All communications between the control plane and the private data plane are secu
 
 The following diagram illustrates the log and observability architecture of an API Platform Azure PDP deployment.
 
-![Observability architecture](../../assets/img/bijira-concepts/observability-architecture.png)
+![Browser connecting directly to logging and observability APIs in Bijira cloud and private data planes](../../assets/img/bijira-concepts/observability-architecture.png)
 
 ---
 

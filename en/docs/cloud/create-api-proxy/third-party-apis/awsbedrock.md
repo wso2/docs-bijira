@@ -17,7 +17,7 @@ Follow the steps below to create an AI API:
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **AI APIs**.  
 3. Select the **AWS Bedrock Provider**. 
 
-    ![Open-AI](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-create.png)  
+    ![Create AI API Proxy page showing AWS Bedrock, Azure OpenAI, Anthropic Claude, Mistral, and OpenAI provider cards](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-create.png)  
 
 4. Configure the AI API details, such as:  
     - API Name  
@@ -26,7 +26,7 @@ Follow the steps below to create an AI API:
     - AI Provider  
     - Target Endpoint  
 
-    ![AI API Details](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-details.png)  
+    ![Create AI API Proxy form with AWS Bedrock API name, identifier, version, base path, description, type, network visibility, and target fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-details.png)  
 
 5. Click **Create** to finalize the AI API creation.  
 
@@ -38,10 +38,10 @@ Follow the steps below to create an AI API:
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-polocy.png)  
+    ![Policy page showing API Proxy Contract with POST endpoints and Service Contract with AWS Bedrock endpoint](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-polocy.png)  
 
 2. Click endpoint **Endpoint Configurations**
-    ![Endpoint-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-endpoint.png)
+    ![Policy page with Endpoint Configuration tooltip highlighted on the Service Contract endpoint](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-endpoint.png)
 
 3. Configure **Endpoint Configurations** to handle backend security authentication and authorization. 
 
@@ -50,20 +50,20 @@ Follow the steps below to create an AI API:
     | Authorization |  Bearer xxxxxxxxxxxxxxxxx    |
    
 
-    ![Endpoint-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-key.png)
+    ![Endpoint Configuration dialog showing AWS Configurations with Region, Access Key, and Secret Key fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-key.png)
 
 
 ## 4. Deploy to development and Production Environments
 
 1. In the left navigation menu, click **Deploy**, Deploy to Development environment
 
-    ![Dev-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-dev.png)
+    ![Deploy page showing Build Area, Development environment with Active deployment status, and Production not yet deployed](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-dev.png)
 
 2. Once it is deploy to development you can test it from Test Console.
 
 3. When you need to promote to production environment you have to provide endponit credentials for production setup.
 
-    ![Prod-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-prod.png)
+    ![Deploy page with Development and Production Active, and Configurations panel showing AWS Region, Access Key, and Secret Key fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/aws-deploy.png)
 
 ---
 

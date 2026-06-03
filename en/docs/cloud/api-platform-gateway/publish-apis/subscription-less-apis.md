@@ -18,7 +18,7 @@ Subscription-less behavior applies when no subscription plans are active for the
 3. In the left navigation menu, click **Manage** and then **Monetize**.
 4. Ensure **Subscription Plan Status** is **disabled** (off) for all plans. For background on plans, see [Assign Subscription Plans to APIs](../../develop-api-proxy/subscription-plans.md).
 
-    ![Disable Subscription Plans](../../../assets/img/api-platform-gateway/subscriptions/subscription-plan-disabled.png)
+    ![Subscription Plans page listing 3PerMin, Bronze, Gold, Silver, and Unlimited plans with all Enabled toggles turned off](../../../assets/img/api-platform-gateway/subscriptions/subscription-plan-disabled.png)
 
 If any plan is enabled for the API, consumers may be guided through subscription and plan selection for that API; that pattern is described in [Subscription-based APIs](subscription-based-apis.md).
 
@@ -26,26 +26,26 @@ If any plan is enabled for the API, consumers may be guided through subscription
 
 1. In the left navigation menu, click **Manage** and then **Lifecycle**.
 
-    ![LifeCycle Created](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-created.png)
+    ![Lifecycle Management page showing API in Created state with Pre-release and Publish action buttons and state transition diagram](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-created.png)
 
 2. When the API is ready for external consumers, click **Publish**.
 3. In the publish dialog, confirm the display name and click **Confirm**. The lifecycle state becomes **Published**.
 
-    ![LifeCycle Published](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-published.png)
+    ![Lifecycle Management page showing API in Published state with Pre-release, Demote to Created, and Deprecate action buttons](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-published.png)
 
 ## Invoke the API
 
 1. Navigate to Developer Portal by clicking **Developer Portal**.
 
-    ![Navigate to Devportal](../../../assets/img/api-platform-gateway/subscriptions/navigate-devportal.png)
+    ![API Platform Console header showing AI Workspace and Developer Portal navigation buttons](../../../assets/img/api-platform-gateway/subscriptions/navigate-devportal.png)
 
 2. Consumers can find the API in the Developer Portal by going to **APIs**.
 
-    ![Select API](../../../assets/img/api-platform-gateway/subscriptions/api-no-sub.png)
+    ![Developer Portal API card for ReadingSelfRC NoSub v1.0 REST API with no subscription plans or Subscribe button](../../../assets/img/api-platform-gateway/subscriptions/api-no-sub.png)
 
 3. Receive the **cURL** to invoke the API by navigating to the **Documentation**.
 
-    ![Document API](../../../assets/img/api-platform-gateway/subscriptions/doc-api-sub-less.png)
+    ![API documentation page for GET /books endpoint showing cURL sample without Subscription-Key header](../../../assets/img/api-platform-gateway/subscriptions/doc-api-sub-less.png)
 
 4. Invoke API.
 

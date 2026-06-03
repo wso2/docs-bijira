@@ -25,7 +25,7 @@ Before you begin, ensure you have:
 2. Go to **Organization Level** in API Platform.
 3. From the left navigation, select **Admin** → **Gateways**.
 
-    ![Gateway List Empty](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
+    ![Gateways page showing API Platform tab with one WSO2-Managed gateway listed and Add Self-Hosted Gateway button](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
 
 4. Select the **API Platform** tab.
 5. Click **+ Add Self-Hosted Gateway**.
@@ -36,7 +36,7 @@ Before you begin, ensure you have:
     - **URL**: The URL where your gateway will be accessible (e.g., `https://localhost:8443`)
     - **Associated Environment**: Select the environment for this gateway
 
-    ![Gateway Add](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
+    ![Add Self-Hosted Gateway form with API Gateway type selected, name, description, URL, and Associated Environment fields](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
 
 7. Click **Add** and you will be navigated to the Gateway View Page.
 
@@ -47,8 +47,8 @@ Before you begin, ensure you have:
     !!! note
         Be sure to copy the commands from the Quick Start section, since the keys are auto-generated for you.
 
-    ![Gateway View1](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
-    ![Gateway View2](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
+    ![Gateway detail page showing Configurations tab with Quick Start, Virtual Machine, Docker, and Kubernetes tabs and Step 1 download command](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
+    ![Gateway setup steps 2 and 3 showing configure keys.env and docker compose start commands](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)
 
 
     ### Step 1: Download the Gateway
@@ -111,16 +111,16 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 1. Navigate to **projects**.
 
 
-    ![Navigate Project](../../assets/img/api-platform-gateway/gateway/navigate-project.png)
+    ![WSO2 API Platform header showing Organization dropdown with jamesdoe selected and Select Project button](../../assets/img/api-platform-gateway/gateway/navigate-project.png)
 
 
 2. To create a new project for your APIs, click **+ Create Project** and follow the setup steps. Otherwise, select **Default** to continue with the default project.
 
-    ![Select Project](../../assets/img/api-platform-gateway/gateway/select-project.png)
+    ![Project dropdown showing Search field, Create Project option, and Default project listed under All Projects](../../assets/img/api-platform-gateway/gateway/select-project.png)
 
 3. Select **Import API Contract**.
 
-    ![Select Import API Contract](../../assets/img/api-platform-gateway/gateway/select-import-api-flow.png)
+    ![Default project welcome page showing API Proxy and MCP Server creation options with Import API Contract, Start with Endpoint, and other tiles](../../assets/img/api-platform-gateway/gateway/select-import-api-flow.png)
 
 4. Select **URL** option and provide the following URL to import the API contract:
 
@@ -130,15 +130,15 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
 
-    ![Import API Contract](../../assets/img/api-platform-gateway/gateway/create-api-contract-url.png)
+    ![Create API Proxy from Contract page with URL tab selected, URL input field, and fetched OAS definition showing /books endpoints](../../assets/img/api-platform-gateway/gateway/create-api-contract-url.png)
 
 6. Select the **Gateway Type** as the **Self-Hosted Gateway**
 
-    ![API Add](../../assets/img/api-platform-gateway/gateway/add-api.png)
+    ![Create API Proxy form showing name, identifier, version, type fields, and Gateway Type set to Self-Hosted Gateway](../../assets/img/api-platform-gateway/gateway/add-api.png)
 
 6. Click **Create** to create the API Proxy. Wait for the setup to complete and you will be navigated to the API Overview Page.
 
-    ![API Overview](../../assets/img/api-platform-gateway/gateway/api-overview.png)
+    ![Reading List API Local overview page showing HTTP Self Hosted Gateway badge, Created lifecycle status, and /books API endpoints list](../../assets/img/api-platform-gateway/gateway/api-overview.png)
 
 ### Step 2: Deploy the API Proxy (Optional)
 
@@ -149,7 +149,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
 1. Navigate to the **Deploy** page of the API Proxy. 
 
-    ![API Deploy](../../assets/img/api-platform-gateway/gateway/api-deploy.png)
+    ![Deploy page showing Self Hosted GW Local gateway with Active deployment status and API Deployment History panel](../../assets/img/api-platform-gateway/gateway/api-deploy.png)
 
 2. Click **Deploy**.
 
@@ -157,7 +157,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
 1. Navigate to the **Test --> cURL** page of the API Proxy.
 
-    ![API Test](../../assets/img/api-platform-gateway/gateway/api-try-out.png)
+    ![API test page showing resource list with GET /books selected and generated cURL command for the endpoint](../../assets/img/api-platform-gateway/gateway/api-try-out.png)
 
 2. Use the **cURL** for relevant resource to test the API Proxy.
 

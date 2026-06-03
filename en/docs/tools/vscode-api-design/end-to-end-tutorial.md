@@ -28,7 +28,7 @@ Note: If Copilot prompts you to open the specification in API Designer, confirm 
 
 1. With the openapi spec file (e.g: `orders-api.yaml`) focused, open API Designer using one of these options:
     - Copilot Chat: Confirm the prompt to open in API Designer (uses the `openInApiDesigner` tool).
-      ![Copilot Chat Open In API Designer prompt](./images/open-in-api-designer-chat.png)
+      ![Copilot Chat message asking "Would you like me to open this in API Designer?" with saved file name and input box below](./images/open-in-api-designer-chat.png)
     - CodeLens: Open in API Designer.
     - Title bar: Open in API Designer.
     - Command Palette: API Designer: Open in API Designer.
@@ -45,7 +45,7 @@ Outcome: You get a structured view of paths, operations, and components.
 
       > Add `limit` and `offset` query parameters with defaults documented in the parameter descriptions.
 
-      ![Edit with AI](./images/ai-based-editor.png)
+      ![Edit with AI inline prompt bar on GET /order-management/v1.0/orders with text to add limit and offset query parameters](./images/ai-based-editor.png)
 
    This will open up the copilot chat in agent mode and run the prompt with the provided scope.
 
@@ -58,7 +58,7 @@ Outcome: Fast updates for larger or repetitive changes.
 1. In the designer, open the Edit form for a specific operation or schema.
 2. Adjust a response code, update an operation summary/description, mark a schema field as required, or refine a parameter type and constraints.
 
-   ![Edit with Forms](./images/form-based-editor.png)
+   ![Form-based editor modal for GET /order-management/v1.0/orders showing endpoint info, operation details fields for summary, description, and operation ID](./images/form-based-editor.png)
 
 Outcome: Safe and precise structural edits.
 
@@ -70,7 +70,7 @@ Outcome: Safe and precise structural edits.
    - OWASP API Security Top 10
 2. Click any report card to open the full report and review its score and issue list.
 
-![Governance Report](./images/analyze-view.png)
+![AI Readiness full report for Leave Management API showing 78% score, 33/64 passed checks, 19 affected endpoints, 20 errors, 293 warnings, and AI readiness breakdown by dimension](./images/analyze-view.png)
 
 Outcome: You can prioritize issues by impact and severity.
 
