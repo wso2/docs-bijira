@@ -63,4 +63,4 @@ Once you have completed a quick start guide, here is where to go next:
 | Try runnable code samples | [Samples](cloud/samples/samples-overview.md) |
 | Understand platform concepts (organizations, projects, data planes) | [Concepts](cloud/bijira-concepts/organization.md) |
 | Browse reusable policies and guardrails | [Policy Hub](policy-hub/overview.md) |
-| Not sure which product is right for me | [Platform overview](overview.md) |
+| Not sure which product is right for me | [Platform overview](index.md) |

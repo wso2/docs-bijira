@@ -38,7 +38,7 @@ Follow the step-by-step instructions below depending on how you want to establis
     When you follow these steps, API Platform generates a key pair with a self-signed certificate. You can attach this key pair to any API proxy created within the same project.
 
     1. Sign in to the [API Platform Console](https://console.bijira.dev/).
-    2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
+    2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../create-api-proxy/my-apis/http/import-api-contract.md).
     3. In the left navigation menu, click **Develop** and then click **Endpoints**.
     4. On the **Endpoints** page, click **Configure** corresponding to the endpoint.    
     5. If your backend does not use a CA-signed certificate and you have not already added the backend certificate, click **Upload Endpoint Certificate** and add the backend certificate.
@@ -66,7 +66,7 @@ Follow the step-by-step instructions below depending on how you want to establis
     Here, you can use your own public certificate and private certificate as client certificates.
 
     1. Sign in to the [API Platform Console](https://console.bijira.dev/).
-    2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../../create-api-proxy/my-apis/http/import-api-contract/).
+    2. In the **Proxy Listing** pane, click on the API proxy for which you want to generate a key pair. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../create-api-proxy/my-apis/http/import-api-contract.md).
     3. In the left navigation menu, click **Develop** and then click **Endpoints**.
     4. On the **Endpoints** page, click **Configure** corresponding to the endpoint.  
     5. If your backend does not use a CA-signed certificate and you have not already added the backend certificate, click **Upload Endpoint Certificate** and add the backend certificate.

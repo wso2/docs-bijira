@@ -51,7 +51,7 @@ In this deployment model, API deployments are received by one of the Gateway Con
 
 This ensures that all Gateway Controller replicas operate with a consistent deployment state and that each runtime environment receives the latest API configuration.
 
-![HA deployment with two Gateway Controller replicas in MZ zone syncing via PostgreSQL, serving Runtime replicas in DMZ and Environment 01 zones](../../../assets/img/api-gateway/high-availability-deployment-example.png)
+![HA deployment with two Gateway Controller replicas in MZ zone syncing via PostgreSQL, serving Runtime replicas in DMZ and Environment 01 zones](../../assets/img/api-gateway/high-availability-deployment-example.png)
 
 ### Architecture Overview
 
