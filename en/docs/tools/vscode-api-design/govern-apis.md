@@ -2,7 +2,7 @@
 
 You can use API Designer to assess and improve your OpenAPI 3.x specification for AI readiness, design quality, and secure production use.
 
-![Governance Report](./images/analyze-view.png)
+![AI Readiness full report for Leave Management API showing 78% score, 33/64 passed checks, 19 affected endpoints, 20 errors, 293 warnings, and AI readiness breakdown by dimension](./images/analyze-view.png)
 
 ## Why this matters
 

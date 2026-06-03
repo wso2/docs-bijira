@@ -6,7 +6,7 @@ In this deployment model, API deployments are received by one of the Gateway Con
 
 This ensures that all Gateway Controller replicas operate with a consistent deployment state and that each runtime environment receives the latest API configuration.
 
-![High-availability setup example](../../assets/img/api-platform-gateway/gateway/high-availability.png)
+![High-availability diagram showing two Gateway Controller replicas in MZ sharing a PostgreSQL database and routing to multiple Gateway Runtime replicas in DMZ and Environment 01](../../assets/img/api-platform-gateway/gateway/high-availability.png)
 
 ## Architecture Overview
 

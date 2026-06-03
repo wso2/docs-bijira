@@ -19,11 +19,11 @@ Follow the steps below to add Azure AD as a key manager in API Platform:
 4. On the **Key Managers** tab, click **+ Key Manager**.
 5. Select  **Microsoft Entra ID (Azure AD)** as the key manager.
 
-    ![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers page listing Bijira Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 6. Click **Microsoft Entra ID (Azure AD)**.
 
-    ![Select Azure AD](../../../assets/img/administer/settings/external-km/add_external_km_azure_select.png)
+    ![Key manager provider selection with Microsoft Entra ID (Azure AD) tile highlighted](../../../assets/img/administer/settings/external-km/add_external_km_azure_select.png)
 
 7. In the Azure AD dialog that opens, specify a name and a description for the key manager.
 8. To obtain the `Well-Known URL` of your Azure AD instance, on your Azure account, under **Azure Active Directory** go to **App registrations**, and then **Endpoints**. Copy the URI under`OpenID Connect metadata document`.
@@ -35,17 +35,17 @@ Follow the steps below to add Azure AD as a key manager in API Platform:
 
 9. Leave the **Apply to all environments** checkbox selected. This allows you to use the tokens generated via this key manager to invoke APIs across all environments.
 
-    ![Azure AD configuration page 1](../../../assets/img/administer/settings/external-km/add_external_km_azure_page_1.png)
+    ![Azure AD key manager dialog with Name, Description, Well-Known URL, and Environments fields](../../../assets/img/administer/settings/external-km/add_external_km_azure_page_1.png)
 
 10. Click **Next**. This displays the server endpoints that are useful to implement and configure authentication for your application.
 
-    ![Azure AD configuration page 2](../../../assets/img/administer/settings/external-km/add_external_km_azure_page_2.png)
+    ![Azure AD key manager step 2 showing Issuer, Token, Authorization, JWKS, Revoke, and OIDC Logout endpoints](../../../assets/img/administer/settings/external-km/add_external_km_azure_page_2.png)
 
 11. Click **Add**.
 
 Now you have configured Azure AD as an external key manager in API Platform.
 
-![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km_azure_list.png)
+![Key Managers list showing Bijira Built-in STS and newly added external-azure-km entries](../../../assets/img/administer/settings/external-km/add_external_km_azure_list.png)
 
 ## Step 2: Add Azure AD as an external key manager in API Platform Developer Portal
 
@@ -58,4 +58,4 @@ Once the Azure AD is configured as an external key manager in API Platform, it i
 
 Now you have configured Azure AD as an external key manager in API Platform Developer Portal as well.
 
-![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km_azure_devportal.png)
+![Developer Portal Key Managers tab with external-azure-km selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_azure_devportal.png)

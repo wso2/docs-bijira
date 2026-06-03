@@ -11,7 +11,7 @@ The MCP Hub is the visual catalog for your organization's MCP registry. Use it t
 1. Navigate to the [MCP Hub](https://devportal.bijira.dev).
 2. In the left navigation, select **MCP Servers**.
 
-![MCP Hub](../../assets/img/ai-gateway/ai-workspace/mcp-proxies/mcphub.png)
+![MCP Hub Developer Portal page with a banner promoting MCP-powered tools and an Everything MCP server card showing version 1.0 and MCP tag](../../assets/img/ai-gateway/ai-workspace/mcp-proxies/mcphub.png)
 
 The Hub displays the list of all MCP servers registered in your organization's registry. Each card shows the server name, version, description, and any tags.
 
@@ -19,7 +19,7 @@ The Hub displays the list of all MCP servers registered in your organization's r
 
 Click a server card to open its detail page. You can view the MCP server details, including its tools, resources, prompts, and connection configuration.
 
-![MCP Server Overview](../../assets/img/ai-gateway/ai-workspace/mcp-proxies/mcphub-mcp-overview.png)
+![Everything MCP Server detail page showing MCP Server URL, expandable tools list with echo, add, viewPizzaMenu, and orderPizza, and MCP Server Configuration JSON snippet](../../assets/img/ai-gateway/ai-workspace/mcp-proxies/mcphub-mcp-overview.png)
 
 ## Step 3: Explore Capabilities
 

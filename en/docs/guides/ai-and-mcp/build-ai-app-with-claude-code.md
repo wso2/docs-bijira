@@ -110,7 +110,7 @@ The WSO2 Reading List API is a sample REST API that manages a list of books. You
 
 **Expected result:** The Reading List API proxy is created and deployed to the Development environment automatically.
 
-![Create API proxy from contract](../../assets/img/guides/ai-and-mcp/s2/create-api-proxy-from-contract.png){.cInlineImage-full}
+![Create API Proxy from Contract page showing Reading List API created and deployed to Development](../../assets/img/guides/ai-and-mcp/s2/create-api-proxy-from-contract.png){.cInlineImage-full}
 
 Promote it to production and publish it:
 
@@ -120,14 +120,14 @@ Promote it to production and publish it:
 
 **Expected result:** The **Production** card shows **Deployment Status** as **Active**.
 
-![Deployment status active](../../assets/img/guides/ai-and-mcp/s2/deployment-status.png){.cInlineImage-full}
+![Deploy page showing Production card with Deployment Status as Active after promotion](../../assets/img/guides/ai-and-mcp/s2/deployment-status.png){.cInlineImage-full}
 
 7. In the left navigation menu, click **Develop**, then click **Lifecycle**.
 8. Click **Publish**, confirm the display name, and click **Confirm**.
 
 **Expected result:** The lifecycle state changes to **Published**, and the API is visible in the Developer Portal.
 
-![Lifecycle state published](../../assets/img/guides/ai-and-mcp/s2/lifecycle-update.png){.cInlineImage-full}
+![Lifecycle page showing API lifecycle state changed to Published](../../assets/img/guides/ai-and-mcp/s2/lifecycle-update.png){.cInlineImage-full}
 
 ---
 
@@ -146,7 +146,7 @@ An application gives Claude Code a dedicated identity in WSO2 API Platform. Keep
 
 **Expected result:** Claude Code Dev appears in the application's Subscriptions list with an active subscription to the Reading List API.
 
-![Create Claude Code Dev application and subscribe](../../assets/img/guides/ai-and-mcp/s2/create-claude-code-dev.gif){.cInlineImage-full}
+![Animation showing creation of Claude Code Dev application and subscribing to the Reading List API](../../assets/img/guides/ai-and-mcp/s2/create-claude-code-dev.gif){.cInlineImage-full}
 
 ---
 
@@ -202,7 +202,7 @@ In the left navigation menu, click **APIs**, open the Reading List API, and copy
 
 **Expected result:** `.claude/settings.json` contains the necessary API credentials and endpoint URLs.
 
-![Configure settings.json with credentials](../../assets/img/guides/ai-and-mcp/s2/claude-settings-file-creation.gif){.cInlineImage-full}
+![Animation showing .claude/settings.json file being created with API credentials and endpoint URLs](../../assets/img/guides/ai-and-mcp/s2/claude-settings-file-creation.gif){.cInlineImage-full}
 
 !!! warning
     Treat the Consumer Key and Consumer Secret like passwords. Don't share them or commit them to version control.
@@ -315,7 +315,7 @@ after one second. Don't loop without delays.
 
 **Expected result:** `CLAUDE.md` is saved in the project root.
 
-![Claude Code project completion](../../assets/img/guides/ai-and-mcp/s2/claude-project-completion.gif){.cInlineImage-full}
+![Animation showing CLAUDE.md briefing file created with API access rules and usage instructions](../../assets/img/guides/ai-and-mcp/s2/claude-project-completion.gif){.cInlineImage-full}
 
 !!! note
     `CLAUDE.md` is not required for Claude Code to run, but without it Claude Code doesn't know to use `api_client.py`. It may call the API directly and bypass the WSO2 gateway entirely.
@@ -376,7 +376,7 @@ Claude Code asks for your approval before executing any code. Review what it pla
 3. Makes a `GET /books` request to the Reading List API
 4. Prints the result with a count of books
 
-![Claude Code running against the governed API](../../assets/img/guides/ai-and-mcp/s2/run-claude.gif){.cInlineImage-full}
+![Animation showing Claude Code fetching book list from Reading List API via OAuth2 gateway](../../assets/img/guides/ai-and-mcp/s2/run-claude.gif){.cInlineImage-full}
 
 ---
 

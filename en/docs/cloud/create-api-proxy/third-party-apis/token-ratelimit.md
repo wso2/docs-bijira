@@ -7,12 +7,12 @@ API Platform’s AI Gateway introduces token-based rate limiting that can be app
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/azure-policy.png)  
+    ![Policy page showing API Proxy Contract routes and Service Contract with Azure OpenAI endpoint](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/azure-policy.png)  
 
 2. Click a Add API Level Policy --> Request flow --> Attached mediation policy
 
-    ![Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/api-level-policy.png)  
+    ![Mediation Policy List panel showing Token Based Rate Limiting option](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/api-level-policy.png)  
 
 3. Add the ratelimit information and click save.
 
-     ![Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/token-ratelimit.png)  
+     ![Configure Token Based Rate Limiting Policy dialog with Max Prompt Token Count, Max Completion Token Count, Max Total Token Count, and Time Limit fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/token-ratelimit.png)  

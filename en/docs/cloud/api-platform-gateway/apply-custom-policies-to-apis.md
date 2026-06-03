@@ -23,7 +23,7 @@ The console fetches the manifest from the gateway and displays a table of all po
 | **Policy Type** | `Policy Hub` for policy hub managed policies, `Custom` for your own policies |
 | **Sync Status** | Whether the policy is synced to the organization — shows a **Sync** button if not yet synced or a newer version is available, or **Latest Version Available** if already up to date |
 
-![Gateway Policies Tab](../../assets/img/api-platform-gateway/gateway/sync-option.png)
+![Policy list with Custom type showing Sync button in the Sync Status column](../../assets/img/api-platform-gateway/gateway/sync-option.png)
 
 ## Step 2: Sync the Custom Policy to the Organization
 
@@ -39,7 +39,7 @@ In the **Sync Status** column, each custom policy shows one of the following:
 
 Once synced, the custom policy is available organization-wide and can be applied to APIs.
 
-![Synced Policy](../../assets/img/api-platform-gateway/gateway/synced-policy.png)
+![Policy list showing Custom type with Latest Version Available status in Sync Status column](../../assets/img/api-platform-gateway/gateway/synced-policy.png)
 
 !!! note
     - Each major version of a custom policy is maintained as a separate policy entry with the same name.

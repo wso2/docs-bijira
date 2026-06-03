@@ -68,7 +68,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     | **API Directory**      | /reading-list-api |
 
 
-    ![Create API from Github](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_select_repo.png)
+    ![Create API Proxy from Contract form with GitHub tab showing organization, repository, branch, and API directory fields](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_select_repo.png)
 
     !!! note
         To select the relevant directory, click on the **Edit** action next to the **API Directory** input field. Then, enter `reading-list-api` as the directory name to quickly search and locate the correct directory.
@@ -94,7 +94,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 1. In the left navigation menu, click **Deploy**.
 2. If the build is in progress, you can view the Build information.
 
-![Create API from Github](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_build_page.png)
+![API proxy builds list showing build IDs, commit references, success status, and Auto update on Commit toggle](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_build_page.png)
 
 !!! note
     You can enable **Auto Build on Commit** using the toggle switch available on the API proxy. When enabled, any commit pushed to the connected GitHub branch automatically triggers a new build, keeping your proxy up to date without manual intervention.
@@ -104,7 +104,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
    This opens the **Configure & Deploy** pane. <br><br>
 4. Select **External** as the **API Access Mode** and click **Deploy**. The **Development** card indicates the **Deployment Status** as **Active** when the API proxy is successfully deployed.
 
-![Create API from Github](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
+![Deploy page showing Build Area, Development environment with Active status, Sandbox, and Production cards](../../../../assets/img/create-api-proxy/import-from-github/api_from_github_deploy_page.png)
 
 !!! note
     You can enable **Auto Deploy** using the toggle switch available on the API proxy. When enabled, the proxy is automatically deployed to a lower, non-critical environment once the proxy build completes successfully, without requiring manual intervention.

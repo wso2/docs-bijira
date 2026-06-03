@@ -32,7 +32,7 @@ To consume an API secured with an API key, ensure that the desired API has API K
 
 8. In the **API Keys** section, locate the API Key enabled API that you subscribed to and click **Generate Key** beside it.
 
-    ![API Keys section in Manage Keys page](../../../assets/img/devportal/api-keys-section.png)
+    ![Manage Keys page showing OAuth2 Keys and API Keys sections with Generate Key buttons](../../../assets/img/devportal/api-keys-section.png)
 
 9. In the **Generate API Key** dialog that opens, enter an API Key name.
 

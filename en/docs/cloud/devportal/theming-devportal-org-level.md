@@ -37,21 +37,21 @@ Go through the following steps to customize the theme of the Devportal in the or
 4. Click on each color field to open the color selection interface and choose your desired colors.
 5. The preview panel on the right will show real-time changes as you modify the colors.
 
-    ![Customized theme preview](../../assets/img/devportal/customized_theming.png)
+    ![Org Level Theme Settings showing Color Palette fields for Background, Primary, Secondary, Text, and Gradient with live portal preview](../../assets/img/devportal/customized_theming.png)
 
 4. Expand the dropdown for `Typography` and select the font (e.g., Arial Black).
 
-    ![Customized font](../../assets/img/devportal/customized_font.png)
+    ![Theme Settings page with Typography section expanded and Arial Black selected in the Font dropdown](../../assets/img/devportal/customized_font.png)
 
 5. If you want to save these changes as a draft, select  `Save As Draft`.
 
 6. If it perfectly aligns with your organization's unique identity, click `Publish To Developer Portal`.
 
-    ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
+    ![Theming header bar showing Save As Draft and Publish To Developer Portal buttons with Org Level tab active](../../assets/img/devportal/publish_to_devportal.png)
 
 7. Go to `Developer Portal` to see the changes.
 
-    ![View Devportal](../../assets/img/devportal/view_devportal.png)
+    ![API Platform console header showing the Developer Portal button highlighted next to the Upgrade button](../../assets/img/devportal/view_devportal.png)
 
 ### HTML
 
@@ -95,7 +95,7 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with HTML](../../assets/img/devportal/change_with_html.png)
+    ![HTML editor with hero section code and preview showing sample heading and Browse our APIs button](../../assets/img/devportal/change_with_html.png)
 
 ### CSS
 
@@ -114,20 +114,20 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with CSS](../../assets/img/devportal/change_with_css.png)
+    ![CSS editor with hero-title rule highlighted and preview showing large bold Empower your development heading](../../assets/img/devportal/change_with_css.png)
 
 ### Referenced CSS
 
 This section shows the reference for the main CSS from the theme settings you assigned at the beginning.
 
-![Referenced CSS](../../assets/img/devportal/referenced_css.png)
+![Referenced CSS tab showing read-only stylesheet with imported CSS files and CSS variable declarations](../../assets/img/devportal/referenced_css.png)
 
 ### Assets
 
 01. The Logo of the devportal can be changed by clicking `Choosing File` under Devportal Logo.
 
-    ![Upload Devportal Logo](../../assets/img/devportal/devportal_logo_upload.png)
+    ![Assets tab showing Devportal Logo section with Choose File button and current logo thumbnail in preview](../../assets/img/devportal/devportal_logo_upload.png)
 
 02. After adding the image you can see the finalized changes in the preview.
 
-    ![Uploaded Logo](../../assets/img/devportal/uploaded_logo.png)
+    ![Assets tab showing uploaded flower logo thumbnail and portal preview with new logo in the header](../../assets/img/devportal/uploaded_logo.png)

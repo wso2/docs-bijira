@@ -57,7 +57,7 @@ The API Platform Cloud Gateway is ideal for:
 
 ## Limitations
 
-Consider using a [Self-Hosted Gateway](prerequisites.md) instead if you require:
+Consider using a [Self-Hosted Gateway](getting-started.md) instead if you require:
 
 - **Data residency**: Keeping API traffic within specific geographic boundaries
 - **Private backends**: Connecting to services not accessible from the public internet
@@ -100,5 +100,5 @@ All features of the API Platform platform are available with the Cloud Gateway:
 
 ## What's Next?
 
-- [Self-Hosted Gateway](prerequisites.md): Deploy a gateway in your own environment
+- [Self-Hosted Gateway](getting-started.md): Deploy a gateway in your own environment
 - [Third-Party Gateways](../federation/overview.md): Federate external gateways like AWS API Gateway

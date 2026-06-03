@@ -111,5 +111,5 @@ Start with the default of `0.65` and adjust based on observed behavior. Enabling
 ## Related
 
 - [Guardrails Overview](overview.md)
-- [Semantic Cache](semantic-cache.md) — Cache LLM responses using the same embedding infrastructure
+- [Semantic Cache](../other-policies/semantic-cache.md) — Cache LLM responses using the same embedding infrastructure
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

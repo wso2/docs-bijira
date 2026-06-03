@@ -24,30 +24,30 @@ Follow the steps below to add Asgardeo as an external key manager in API Platfor
 4. Click the **Key Managers** tab.
 5. To add a key manager, click **+ Key Manager**.
 
-    ![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers page listing Bijira Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 6. Click **Asgardeo**.
 
-    ![Select Asgardeo](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_select.png)
+    ![Key manager provider selection showing Asgardeo, Microsoft Entra ID, and Custom tiles](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_select.png)
 
 7. In the Asgardeo dialog that opens, specify a name and a description for the key manager.
 8. In the **Well-Known URL** field, paste the well-known URL that you copied from your Asgardeo instance by following the prerequisites.
 9. Leave the **Apply to all environments** checkbox selected. This allows you to use the tokens generated via this key manager to invoke APIs across all environments.
 
-    ![Asgardeo configuration page 1](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_page_1.png)
+    ![Asgardeo key manager dialog with Name, Description, Well-Known URL, and Environments fields](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_page_1.png)
 
 <!-- !!! note
      If you want to restrict the use of tokens generated via this key manager to invoke APIs in specific environments, clear the **Apply to all environments** checkbox and select the necessary environments from the **Environments** list. -->
 
 10. Click **Next**. This displays the server endpoints that are useful to implement and configure authentication for your application.
 
-    ![Asgardeo configuration page 2](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_page_2.png)
+    ![Asgardeo key manager step 2 showing Issuer, Token, Authorization, JWKS, Revoke, and OIDC Logout endpoints](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_page_2.png)
 
 11. Click **Add**.
 
 Now you have configured Asgardeo as an external key manager in API Platform.
 
-![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
+![Key Managers list showing Bijira Built-in STS and newly added external-asgardeo-km entries](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
 
 ## Step 2: Add Asgardeo as an external key manager in API Platform Developer Portal
 
@@ -61,7 +61,7 @@ Once the Asgardeo is configured as an external key manager in API Platform, it i
 
 Now you have configured Asgardeo as an external key manager in API Platform Developer Portal as well.
 
-![Key Managers tab](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_devportal.png)
+![Developer Portal Key Managers tab with external-asgardeo-km selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_devportal.png)
 
 ## What Next?
 

@@ -25,13 +25,13 @@ API Designer is a Visual Studio Code extension for building and improving OpenAP
     - Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`): API Designer: Open in API Designer
     - Open-file notification (when `apiDesigner.notifyOnOpen` is enabled)
 
-    ![Options: Open in API Designer](./images/options.png)
+    ![VS Code editor open on a YAML file with CodeLens link at top, a notification prompt at bottom-right, and callout arrows labeling CodeLens and Notification entry points](./images/options.png)
 
 4. Use AI-assisted editing to improve operations, descriptions, and examples in your spec.
-   ![Design View](./images/design-view.png)
+   ![API Designer Design view for Order Management API showing AI Readiness, Security, and REST Compliance score cards, paths list, and Edit with AI button](./images/design-view.png)
 
 5. Open report cards and review AI readiness and governance findings.
-   ![Governance Report](./images/analyze-view.png)
+   ![AI Readiness full report for Leave Management API showing 78% score, 33/64 passed checks, 19 affected endpoints, 20 errors, 293 warnings, and AI readiness breakdown by dimension](./images/analyze-view.png)
 
 ## Next steps
 
