@@ -1,4 +1,4 @@
-# LLM Proxy — API Key Auth and Token-Based Rate Limiting Sample
+# LLM Proxy - Token Based Rate Limiting Sample
 
 > **Sample source:** [wso2/api-platform — samples/ai-gw-llm-proxy](https://github.com/wso2/api-platform/tree/main/samples/ai-gw-llm-proxy)
 >
@@ -9,28 +9,42 @@
 
 ## Overview
 
-This guide is for platform engineers and API developers who want to control access to LLM APIs and enforce usage quotas.
+This guide is for platform engineers and API developers who want to understand how the WSO2 AI Gateway enforces token based rate limiting on LLM traffic.
 
-When your application routes LLM traffic through the WSO2 AI Gateway, you can attach policies that enforce API key authentication and cap token consumption at the gateway layer. This sample sets up a local Docker stack that demonstrates both policies working together against a mock OpenAI compatible endpoint, giving you a reproducible environment to understand and test each behavior before deploying to production.
-
-No real OpenAI API key or cloud account is required. All LLM traffic is handled by a local WireMock container that returns a fixed mock response.
+This sample sets up a local Docker stack that demonstrates how the gateway tracks token usage per response and blocks further requests once the quota is exhausted. A WireMock container stands in for the OpenAI backend, so no real API key or cloud account is required.
 
 ---
 
 ## What You Will Learn
 
-By working through this sample you will understand how to:
+By working through this sample you will understand:
 
-- Configure **API key authentication** — enforce that every request carries a valid API key before it reaches the upstream LLM provider
-- Apply **token-based rate limiting** — cap the number of tokens a caller can consume within a time window, and return a `429 Too Many Requests` when the quota is exhausted
+- How ** based rate limiting** works - how the gateway tracks token consumption per response and enforces a quota, returning `429 Too Many Requests` when exhausted
 
 ---
 
-## Scenario — API Key Auth and Token-Based Rate Limiting
+## Scenario - Token Based Rate Limiting on an LLM Proxy
 
 **Problem:** An unprotected LLM proxy allows any caller to send unlimited requests, risking abuse, runaway costs, and provider rate limit violations.
 
 **What this scenario does:** The gateway sits in front of a mock OpenAI backend. Every incoming request must carry a valid `api_key` header — invalid keys are rejected with `401 Unauthorized`. For authenticated requests, the gateway tracks the number of tokens returned by the upstream provider and enforces a quota of 30 total tokens per minute. The mock always returns exactly 30 tokens, so the first request exhausts the quota and the second request within the same window is rejected with `429 Too Many Requests`.
+
+**How the rate limit is configured** — in `provider.yaml`, the `token-based-ratelimit` policy uses path-scoped params:
+
+```yaml
+policies:
+  - name: token-based-ratelimit
+    version: v1
+    paths:
+      - path: /chat/completions
+        methods: [POST]
+        params:
+          totalTokenLimits:
+            - count: 30
+              duration: "1m"
+```
+
+`count: 30` sets the token quota per window. `duration: "1m"` sets a fixed 1-minute window. The policy reads token usage from `$.usage.total_tokens` in the upstream response.
 
 ---
 
@@ -38,7 +52,7 @@ By working through this sample you will understand how to:
 
 After running `sh test.sh` you should observe the following.
 
-### API Key Auth and Rate Limiting
+### Token Based Rate Limiting
 
 Two requests are sent back to back using the registered API key. The first request succeeds and the second is rate limited.
 
@@ -78,10 +92,10 @@ No API keys or cloud accounts are required.
 
 ```
 setup.sh                        Automated setup (download → start → register resources → wait for readiness)
-test.sh                         Policy verification (auth + rate limiting)
+test.sh                         Verifies rate limiting behavior end to end
 teardown.sh                     Automated teardown (stop stack → remove containers and volumes)
 inject-mock.sh                  Registers the LLM provider, proxy, and API key via the management API
-provider.yaml                   LLM provider definition (mock upstream, token-based rate limit policy)
+provider.yaml                   LLM provider definition (mock upstream, token based rate limit policy)
 proxy.yaml                      LLM proxy definition (API key auth policy)
 wiremock/mappings/
   openai-mock.json              Fixed mock LLM response returning 30 total tokens
@@ -105,7 +119,7 @@ The script performs these steps in order:
 4. Starts the WSO2 AI Gateway stack via Docker Compose
 5. Waits for the gateway controller to return HTTP `200` on the health endpoint
 6. Registers the LLM provider, LLM proxy, and inbound API key via the management API
-7. Polls the traffic endpoint until routes are live and the auth policy is enforcing
+7. Polls the traffic endpoint until routes are live
 
 ### Endpoints After Setup
 
