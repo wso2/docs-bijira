@@ -49,7 +49,7 @@ By working through this sample you will understand how to:
 
 ## Expected Results
 
-After running `./test.sh` you should observe the following for each scenario.
+After running the test scripts you should observe the following for each scenario.
 
 ### Scenario 1 — Round-Robin
 
@@ -135,7 +135,9 @@ redis-service.yaml      Redis Stack service, merged into docker-compose at setup
 additional-config.toml  Embedding + vector DB config, appended to gateway config.toml
 setup.sh                Automated setup (download → configure → start → deploy)
 teardown.sh             Automated teardown (delete resources → stop stack)
-test.sh                 Policy verification tests (round-robin, cache, PII masking)
+test-round-robin.sh     Verifies model round-robin across the configured pool
+test-semantic-cache.sh  Verifies semantic cache hits via Redis + Mistral embeddings
+test-pii-masking.sh     Verifies email/phone redaction before requests reach OpenAI
 ```
 
 ---
@@ -171,11 +173,26 @@ All steps are idempotent — re-running the script on an already-configured envi
 
 ## Running the Tests
 
+Each policy has its own script so you can run them independently. All scripts require `jq` and call the gateway proxy directly — no API key is needed at test time (the gateway uses its stored credentials).
+
 ```bash
-./test.sh
+# Scenario 1 — model round-robin
+./test-round-robin.sh
+
+# Scenario 2 — semantic cache
+./test-semantic-cache.sh
+
+# Scenario 3 — PII masking
+./test-pii-masking.sh
 ```
 
-Requires `jq`. The test script calls the gateway proxy directly — no API key is needed at test time (the gateway uses its stored credentials).
+### Customising the PII test
+
+`test-pii-masking.sh` prompts for an email and phone number, or you can pass them via environment variables to run non-interactively:
+
+```bash
+TEST_EMAIL="you@example.com" TEST_PHONE="+15551234567" ./test-pii-masking.sh
+```
 
 ---
 
