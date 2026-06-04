@@ -19,7 +19,7 @@ This sample sets up a local Docker stack that demonstrates how the gateway track
 
 By working through this sample you will understand:
 
-- How ** based rate limiting** works - how the gateway tracks token consumption per response and enforces a quota, returning `429 Too Many Requests` when exhausted
+- How **Token based rate limiting** works - how the gateway tracks token consumption per response and enforces a quota, returning `429 Too Many Requests` when exhausted
 
 ---
 
