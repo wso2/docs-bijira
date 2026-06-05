@@ -49,7 +49,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
 
 === "Bottom-Up (Gateway → On-Prem APIM)"
 
-    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises WSO2 APIM instance. A control plane WebSocket connection is also required alongside the bottom-up sync — API key events, subscription changes, and other lifecycle events are initiated from the control plane devportal and must reach the gateway over this channel.
+    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises WSO2 APIM instance. A control plane WebSocket connection is also required alongside the bottom-up sync. API key events, subscription changes, and other lifecycle events are initiated from the control plane devportal and must reach the gateway over this channel.
 
     !!! note
         Bottom-up sync is only supported with APIM 4.7.x. Cloud control plane does not support this flow.
