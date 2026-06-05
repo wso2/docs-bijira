@@ -25,34 +25,46 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
     **Configure the chart:**
 
     ```yaml
-    gateway:
-      controller:
-        controlPlane:
-          host: apim.example.com  # connect.bijira.dev
-          port: 8443
-          token:
-            secretName: gateway-cp-token
-            key: token
-
+     gateway:
       config:
         controller:
+          gateway_name: "prod-gateway"
+          server:
+            gateway_id: "prod-gateway"
           controlplane:
+            insecure_skip_verify: true
             reconnect_initial: 1s
             reconnect_max: 5m
             polling_interval: 15m
-            deployment_push_enabled: false
             sync_batch_size: 50
-            gateway_name: "prod-gateway"  # must match the gateway name registered in the control plane
+            gateway_name: "prod-gateway" # must match the gateway name registered in the controlplane
+      controller:
+        controlPlane:
+          host: "apim-wso2am.example.com"
+          port: 9443
+          token:
+            secretName: "gateway-cp-token"
+            key: token
     ```
 
 === "Bottom-Up (Gateway → On-Prem APIM)"
 
-    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises WSO2 APIM instance.
+    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises WSO2 APIM instance. A control plane WebSocket connection is also required alongside the bottom-up sync. API key events, subscription changes, and other lifecycle events are initiated from the control plane devportal and must reach the gateway over this channel.
 
     !!! note
-        Bottom-up sync is only supported with the on-premises control plane type. Cloud control plane does not support this flow.
+        Bottom-up sync is only supported with APIM 4.7.x. Cloud control plane does not support this flow.
 
-    **Step 1: Generate OAuth2 client credentials**
+    **Step 1: Create a secret for the registration token**
+
+    The registration token is generated when you register the gateway with your control plane. Refer to the [WSO2 APIM control plane setup guide](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) to obtain it.
+
+    ```bash
+    kubectl create secret generic gateway-cp-token \
+      --namespace <your-namespace> \
+      --from-literal=token='your-registration-token'
+    ```
+
+    **Step 2: Generate OAuth2 client credentials**
 
     Register a DCR client against your APIM instance to obtain the client ID and secret:
 
@@ -70,7 +82,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
 
     The response contains `clientId` and `clientSecret`. Use these in the next step.
 
-    **Step 2: Store the credentials in a Kubernetes secret**
+    **Step 3: Store the OAuth2 credentials in a Kubernetes secret**
 
     Never place OAuth2 credentials directly in Helm values. Create a secret and inject it via `extraEnvFrom` instead.
 
@@ -94,19 +106,35 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
     kubectl apply -f apim-oauth-secret.yaml
     ```
 
-    **Step 3: Configure the chart**
+    **Step 4: Configure the chart**
 
-    Reference the secret via `extraEnvFrom` and set the gateway identity:
+    Reference both secrets and configure the control plane connection alongside the bottom-up sync settings:
 
     ```yaml
     gateway:
       config:
         controller:
+          gateway_name: "prod-gateway"
           server:
             gateway_id: "prod-gateway"
-          gateway_name: "prod-gateway"
-
+          controlplane:
+            insecure_skip_verify: true
+            reconnect_initial: 1s
+            reconnect_max: 5m
+            polling_interval: 15m
+            sync_batch_size: 50
+            gateway_name: "prod-gateway" # must match the gateway name registered in the controlplane
+            # apim_oauth2_client_id and apim_oauth2_client_secret are injected via
+            # the apim-oauth-client-secret-secret Kubernetes Secret (see extraEnvFrom below).
+            # Expected env var names: APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_ID
+            #                         APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET
       controller:
+        controlPlane:
+          host: "apim-wso2am.example.com"
+          port: 9443
+          token:
+            secretName: "gateway-cp-token"         # created in Step 1
+            key: token
         deployment:
           extraEnvFrom:
             - secretRef:
