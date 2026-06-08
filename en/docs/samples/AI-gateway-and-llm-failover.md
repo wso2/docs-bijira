@@ -4,7 +4,7 @@
 >
 > ```bash
 > git clone https://github.com/wso2/api-platform.git
-> cd api-platform/samples/llm-failover
+> cd api-platform/samples/llm-cost-control-and-privacy-control
 > ```
 
 ## Overview
