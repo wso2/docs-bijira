@@ -448,7 +448,7 @@ nav:
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
   - Samples: 
     - LLM Proxy - Token Based Rate Limiting: samples/ai-gw-llm-proxy-sample-overview.md
-    - LLM Provider and Proxy - Failover and AI Policies: samples/AI-gateway-and-llm-failover.md
+    - LLM Provider and Proxy - AI Policies for privacy and cost control: samples/AI-gateway-and-llm-failover.md
   - Tools:
     - API Platform CLI:
         - Quick Start Guide: tools/cli/quick-start-guide.md

@@ -1,4 +1,4 @@
-# LLM Provider and Proxy - Failover and AI Policies
+# LLM Provider and Proxy - AI Policies for privacy and cost control
 
 > **Sample source:** [wso2/api-platform — samples/llm-failover](https://github.com/wso2/api-platform/tree/main/samples/llm-failover)
 >
