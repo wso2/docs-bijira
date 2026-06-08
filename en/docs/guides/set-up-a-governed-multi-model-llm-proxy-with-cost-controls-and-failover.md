@@ -131,9 +131,12 @@ vector_db_provider_password = "default"
 vector_db_provider_ttl = 3600
 ```
 
-https://drive.google.com/file/d/1YJ-21jPG3L6T-R0czwW0k7ZYylCQorTA/view?usp=drive_link
-
 **Expected result:** The console displays `Your gateway is connected successfully.` and the gateway status changes from **Inactive** to **Active**. Return here to continue.
+
+<video controls width="100%">
+  <source src="../../assets/clips/ai_gateway.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ## Step 3: Add Azure OpenAI as an LLM provider
@@ -156,6 +159,11 @@ On the API Platform landing page, click **AI Workspace**.
 
 
 **Expected result:** Azure OpenAI appears in the providers list.
+
+<video controls width="100%">
+  <source src="../../assets/clips/azure_open_ai_provider.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ## Step 4: Create the LLM proxy
@@ -180,6 +188,11 @@ The LLM proxy is the single endpoint all three teams will call. It abstracts pro
 
 **Expected result:** The `Enterprise LLM Proxy` is created, and the gateway card shows Deployment Status as Active. The Get Started panel shows the proxy's invoke URL.
 
+<video controls width="100%">
+  <source src="../../assets/clips/create_llm_proxy.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Step 5: Configure model round-robin distribution
 
@@ -196,6 +209,10 @@ This guardrail distributes requests across models in round-robin order to balanc
 
 **Expected result:** The Model Round Robin guardrail appears in the Guardrails tab as active. Requests are distributed across the models you configured in rotation.
 
+<video controls width="100%">
+  <source src="../../assets/clips/model_rr.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 !!! tip
     To automatically skip a model when it returns errors or rate limit responses, expand Advanced Settings and set a Suspend Duration in seconds before clicking Add.
@@ -217,6 +234,12 @@ PII masking strips sensitive data from prompts before they are forwarded to any 
 
 **Expected result:** PII Masking appears in the Guardrails tab as active. Prompts containing any enabled category will have those values masked before leaving your network.
 
+<video controls width="100%">
+  <source src="../../assets/clips/pii_masking.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Step 7: Enable semantic caching
 
 Semantic caching returns a stored response when an incoming prompt is similar enough to a previously answered one. This reduces redundant provider calls and lowers cost — useful when teams frequently ask similar questions.
@@ -228,6 +251,11 @@ Semantic caching returns a stored response when an incoming prompt is similar en
 5. Click **Save** to save the changes.
 
 **Expected result:** Semantic Cache appears in the **Guardrails** tab as active. Requests with a semantic similarity score above 0.92 to a cached prompt will receive the cached response without calling the provider.
+
+<video controls width="100%">
+  <source src="../../assets/clips/semantic_caching.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Step 8: Deploy the proxy to the gateway
 
@@ -274,6 +302,11 @@ curl -k -v -X POST \
   }'
 ```
 
+<video controls width="100%">
+  <source src="../../assets/clips/run_claude.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 **Expected response: ** HTTP `200` with a response object. The answer appears in `output[0].content[0].text`. The proxy distributes the request to the next model in the rotation.
 
@@ -305,7 +338,9 @@ curl -k -v -X POST https://<YOUR-GATEWAY-HOST>/openai/responses \
 
 2. Resend the same request and check the http response headers
 
-**Expected result :**
+**Expected result :** The second response is served from the cache, indicated by the `X-Cache-Status: HIT` header.
+
+![HTTP response headers showing X-Cache-Status: HIT for a semantically cached request](../assets/img/cache_hit.png)
 
 
 **Confirm PII masking is active:**
@@ -323,6 +358,11 @@ curl -k -v -X POST https://<YOUR-GATEWAY-HOST>/openai/responses \
 ```
 
 **Expected result:** The response refers to a masked placeholder rather than the original email address.
+
+<video controls width="100%">
+  <source src="../../assets/clips/pii_error.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 **View analytics:**
 
