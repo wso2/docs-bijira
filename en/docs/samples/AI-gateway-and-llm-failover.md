@@ -1,6 +1,6 @@
 # LLM Provider and Proxy - AI Policies for privacy and cost control
 
-> **Sample source:** [wso2/api-platform — samples/llm-failover](https://github.com/wso2/api-platform/tree/main/samples/llm-failover)
+> **Sample source:** [wso2/api-platform-samples/llm-cost-control-and-privacy-control](https://github.com/wso2/api-platform/tree/24298f4d07768e664ee16c5c38f96b9d1b89889e/samples/llm-cost-control-and-privacy-control)
 >
 > ```bash
 > git clone https://github.com/wso2/api-platform.git
