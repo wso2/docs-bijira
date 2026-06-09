@@ -40,8 +40,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
             gateway_name: "prod-gateway" # must match the gateway name registered in the controlplane
       controller:
         controlPlane:
-          host: "apim-wso2am.example.com"
-          port: 9443
+          host: "apim-wso2am.example.com:9443"
           token:
             secretName: "gateway-cp-token"
             key: token
@@ -130,8 +129,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
             #                         APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET
       controller:
         controlPlane:
-          host: "apim-wso2am.example.com"
-          port: 9443
+          host: "apim-wso2am.example.com:9443"
           token:
             secretName: "gateway-cp-token"         # created in Step 1
             key: token
