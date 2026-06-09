@@ -245,6 +245,8 @@
 - [Expose a Service as a Managed API](https://wso2.com/bijira/docs/cloud/tutorials/expose-a-service-as-a-managed-api.md): End-to-end tutorial — expose a backend service as a managed REST API
 - [Secure an API with RBAC](https://wso2.com/bijira/docs/cloud/tutorials/secure-an-api-with-role-based-access-control.md): End-to-end tutorial — implement role-based access control on a REST API
 - [API Platform Samples Overview](https://wso2.com/bijira/docs/cloud/samples/samples-overview.md): Index of runnable code samples for common platform use cases
+- [Sample: LLM Proxy Token-Based Rate Limiting](https://wso2.com/bijira/docs/samples/ai-gw-llm-proxy-sample-overview.md): Runnable local Docker sample — demonstrates how the AI Gateway tracks token usage per response and blocks requests once the quota is exhausted, using a WireMock backend (no real API key required)
+- [Sample: AI Policies for Privacy and Cost Control](https://wso2.com/bijira/docs/samples/AI-gateway-and-llm-failover.md): Runnable local Docker sample — attach failover, semantic caching, and PII masking policies to an LLM proxy at the gateway layer without changing application code
 
 ## API Manager
 
@@ -332,6 +334,7 @@
 
 - [Convert a REST API into an MCP Tool](https://wso2.com/bijira/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md): End-to-end walkthrough — expose a REST API as a governed MCP server, enforce OAuth2, and connect it to Claude Desktop
 - [Build an AI App with Claude Code](https://wso2.com/bijira/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md): End-to-end walkthrough — build an AI application with Claude Code that calls backend APIs governed by WSO2 API Platform
+- [Governed Multi-Model LLM Proxy with Cost Controls and Failover](https://wso2.com/bijira/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): End-to-end walkthrough — set up a single governed LLM proxy that round-robins across multiple models for failover, enforces per-team token budgets, masks PII before requests leave your network, caches semantically similar prompts, and attributes cost per team via Moesif
 
 ## Tools
 
