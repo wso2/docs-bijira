@@ -96,8 +96,8 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
       namespace: ap-gateway  # adjust to match your deployment namespace
     type: Opaque
     stringData:
-      APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_ID: "your-client-id"
-      APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET: "your-client-secret"
+      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__ID: "your-client-id"
+      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__SECRET: "your-client-secret"
     ```
 
     Apply it:
