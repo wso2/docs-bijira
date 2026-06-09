@@ -134,7 +134,7 @@ vector_db_provider_ttl = 3600
 **Expected result:** The console displays `Your gateway is connected successfully.` and the gateway status changes from **Inactive** to **Active**. Return here to continue.
 
 <video controls width="100%">
-  <source src="../../assets/clips/ai_gateway.mp4" type="video/mp4">
+  <source src="../../../assets/clips/ai_gateway.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -161,7 +161,7 @@ On the API Platform landing page, click **AI Workspace**.
 **Expected result:** Azure OpenAI appears in the providers list.
 
 <video controls width="100%">
-  <source src="../../assets/clips/azure_open_ai_provider.mp4" type="video/mp4">
+  <source src="../../../assets/clips/azure_open_ai_provider.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -189,7 +189,7 @@ The LLM proxy is the single endpoint all three teams will call. It abstracts pro
 **Expected result:** The `Enterprise LLM Proxy` is created, and the gateway card shows Deployment Status as Active. The Get Started panel shows the proxy's invoke URL.
 
 <video controls width="100%">
-  <source src="../../assets/clips/create_llm_proxy.mp4" type="video/mp4">
+  <source src="../../../assets/clips/create_llm_proxy.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -210,7 +210,7 @@ This guardrail distributes requests across models in round-robin order to balanc
 **Expected result:** The Model Round Robin guardrail appears in the Guardrails tab as active. Requests are distributed across the models you configured in rotation.
 
 <video controls width="100%">
-  <source src="../../assets/clips/model_rr.mp4" type="video/mp4">
+  <source src="../../../assets/clips/model_rr.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -235,7 +235,7 @@ PII masking strips sensitive data from prompts before they are forwarded to any 
 **Expected result:** PII Masking appears in the Guardrails tab as active. Prompts containing any enabled category will have those values masked before leaving your network.
 
 <video controls width="100%">
-  <source src="../../assets/clips/pii_masking.mp4" type="video/mp4">
+  <source src="../../../assets/clips/pii_masking.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -253,7 +253,7 @@ Semantic caching returns a stored response when an incoming prompt is similar en
 **Expected result:** Semantic Cache appears in the **Guardrails** tab as active. Requests with a semantic similarity score above 0.92 to a cached prompt will receive the cached response without calling the provider.
 
 <video controls width="100%">
-  <source src="../../assets/clips/semantic_caching.mp4" type="video/mp4">
+  <source src="../../../assets/clips/semantic_caching.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -303,7 +303,7 @@ curl -k -v -X POST \
 ```
 
 <video controls width="100%">
-  <source src="../../assets/clips/run_claude.mp4" type="video/mp4">
+  <source src="../../../assets/clips/run_claude.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -340,7 +340,7 @@ curl -k -v -X POST https://<YOUR-GATEWAY-HOST>/openai/responses \
 
 **Expected result:** The second response is served from the cache, indicated by the `X-Cache-Status: HIT` header.
 
-![HTTP response headers showing X-Cache-Status: HIT for a semantically cached request](../assets/img/cache_hit.png)
+![HTTP response headers showing X-Cache-Status: HIT for a semantically cached request](../../assets/img/cache_hit.png)
 
 
 **Confirm PII masking is active:**
@@ -360,7 +360,7 @@ curl -k -v -X POST https://<YOUR-GATEWAY-HOST>/openai/responses \
 **Expected result:** The response refers to a masked placeholder rather than the original email address.
 
 <video controls width="100%">
-  <source src="../../assets/clips/pii_error.mp4" type="video/mp4">
+  <source src="../../../assets/clips/pii_error.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
