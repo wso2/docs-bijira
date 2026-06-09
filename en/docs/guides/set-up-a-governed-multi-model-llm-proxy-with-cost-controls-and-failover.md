@@ -182,7 +182,7 @@ The LLM proxy is the single endpoint all three teams will call. It abstracts pro
 | Version | v1.0 |
 | Context | enterprise-llm-proxy |
 
-4. Under Provider Configuration Select **Azure OpenAI** Provider as the LLM Service Provider and Generate an **API Key** to attach the provider
+4. Under **Provider Configuration**, select **Azure OpenAI** as the LLM Service Provider and click **Generate API Key** to create a platform-issued key that the proxy uses to invoke this registered LLM provider. (This is separate from the vendor API key entered in Step 3 and the proxy API key you will generate in Step 9.)
 5. Click **Create Proxy**.
 
 
