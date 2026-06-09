@@ -91,6 +91,14 @@ The PostgreSQL database is the central synchronization point between Gateway Con
 
 Gateway Runtime replicas do not directly read from the database. Instead, they receive the required runtime configuration from their connected Gateway Controller. This keeps the runtime layer lightweight and allows the controller layer to manage configuration generation and synchronization.
 
+### Ingress Configuration
+
+The Helm chart deploys Kubernetes `Service` objects for the Gateway Runtime and the Controller REST API, but does not provision an Ingress Controller or Ingress resources. You are responsible for configuring external access to these services using the ingress solution of your choice.
+
+At a minimum, expose the Gateway Runtime service on port **8443** (HTTPS) to route inbound API traffic.
+
+If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deployment.md) approach, also expose the Controller REST API service on port **9090** so that the control plane can reach the gateway controller.
+
 ## Before You Begin
 
 ### Start with the Base Values File
