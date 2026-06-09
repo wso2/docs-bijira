@@ -97,7 +97,7 @@ The Helm chart deploys Kubernetes `Service` objects for the Gateway Runtime and 
 
 At a minimum, expose the Gateway Runtime service on port **8443** (HTTPS) to route inbound API traffic.
 
-If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deployment.md) approach, also expose the Controller REST API service on port **9090** so that developers can deploy APIs directly to the gateway.
+If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deployment.md) approach or running the gateway in standalone mode, also expose the Controller REST API service on port **9090** so that developers can deploy APIs directly to the gateway.
 
 ## Before You Begin
 
