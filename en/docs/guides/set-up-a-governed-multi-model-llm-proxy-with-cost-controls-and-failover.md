@@ -10,7 +10,7 @@ This guide shows you how to set up a single governed LLM proxy that distributes 
 
 Before you start, here are the WSO2 API Platform terms this guide uses:
 
-**AI Workspace** is the section of the API Platform Console where you manage AI-specific resources — LLM providers, LLM proxies, , MCP proxies and policies.
+**AI Workspace** is the section of the API Platform Console where you manage AI-specific resources — LLM providers, LLM proxies, MCP proxies and policies.
 
 **LLM provider** is a connection to an external AI service such as OpenAI, Azure OpenAI, or Anthropic. You configure credentials once, and the AI Workspace manages authentication from that point on. Providers can also enforce guardrails and AI policies at the organization level, giving administrators centralized control.
 
@@ -32,7 +32,7 @@ Before you start, here are the WSO2 API Platform terms this guide uses:
 
 ## Prerequisites
 
-- A WSO2 API Platform account. Sign up for free
+- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev)
 - An `OpenAI API` key
 - Docker compose
 - `curl` for testing
@@ -84,7 +84,7 @@ Once you're on the organization home page, create a project:
 
 ## Step 2: Create and start an AI gateway
 
-The AI gateway is the runtime that hosts your proxy and makes it reachable. If you already have a gateway running and it shows an Active status in the console, skip to Step 8.
+The AI gateway is the runtime that hosts your proxy and makes it reachable. If you already have a gateway running and it is shown as Active in the console, skip the remaining steps and proceed directly to Step 8.
 
 **Create the gateway in the console:**
 
@@ -202,7 +202,7 @@ This guardrail distributes requests across models in round-robin order to balanc
 2. Click **+ Add Guardrail** and select Model Round Robin.
 3. Under models, click **+ Add Item**. An Item 1 entry appears with a model text field.
 4. Type the name of the first model. You can find the available model names under the Models section of your connected **Azure OpenAI provider** in LLM Providers.
-5. Click **+ Add Item** again for each additional model and enter its name. Repeat until you've added all the models you want to 6. include in the rotation.
+5. Click **+ Add Item** again for each additional model and enter its name. Repeat until you've added all the models you want to include in the rotation.
 6. Click **Add to attach the guardrail**.
 7. Click **Save** to save the changes.
 
@@ -282,7 +282,7 @@ Now that all guardrails are configured, deploy the proxy once. Every configurati
 
 ## Verify
 
-Use the API key and invoke URL from [Step 8](#step-8-deploy-the-proxy-to-the-gateway) for all requests below.
+Use the API key and invoke URL from [Step 9](`#step-9-generate-an-api-key`) for all requests below.
 
 !!! note
     Your Azure model name can be found under the Models section of your Azure OpenAI provider in LLM Providers.
@@ -308,7 +308,7 @@ curl -k -v -X POST \
 </video>
 
 
-**Expected response: ** HTTP `200` with a response object. The answer appears in `output[0].content[0].text`. The proxy distributes the request to the next model in the rotation.
+**Expected response:** HTTP `200` with a response object. The answer appears in `output[0].content[0].text`. The proxy distributes the request to the next model in the rotation.
 
 **Confirm unauthenticated requests are rejected:**
 
@@ -338,7 +338,7 @@ curl -k -v -X POST https://<YOUR-GATEWAY-HOST>/openai/responses \
 
 2. Resend the same request and check the http response headers
 
-**Expected result :** The second response is served from the cache, indicated by the `X-Cache-Status: HIT` header.
+**Expected result:** The second response is served from the cache, indicated by the `X-Cache-Status: HIT` header.
 
 ![HTTP response headers showing X-Cache-Status: HIT for a semantically cached request](../assets/img/cache_hit.png)
 
@@ -378,7 +378,7 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 |401 with `Access denied due to invalid subscription key or wrong API endpoint` | Redeploy the provider to the gateway. Navigate to LLM Providers, click on Azure OpenAI Provider, click Deploy to Gateway, and click Deploy again. |
 | HTTP `503 Service Unavailable` | All models in the round-robin list are suspended. Wait for the suspend duration to expire or check provider status. | 
 | Proxy not reachable after deployment | Confirm the gateway card shows Deployment Status as Active on the Deploy to Gateway page.|
-| PII not being masked | Confirm PII Masking is in the Guardrails tab re deploy proxy if any modification is performed.|
+| PII not being masked | Confirm PII Masking is in the Guardrails tab redeploy proxy if any modification is performed.|
 | Provider connection failing | Confirm the provider's API key is valid. Navigate to LLM Providers and check the provider's connection status. |
 
 
@@ -389,7 +389,7 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 
 - Set up a single governed LLM proxy so applications never call the provider directly
 - Distributed requests across Azure OpenAI models in round-robin order to balance traffic and reduce overloading on any single model
-- Masked PII from prompts before they leave your network using at least five detection categories
+- Masked PII from prompts before they leave your network using email, phone, and SSN detection categories
 - Reduced redundant provider calls with semantic caching at a 0.92 similarity threshold, verified using the `X-Cache-Status: HIT` header
 - Monitored token consumption and request analytics using the built-in dashboard in **Monitor and Insights**
 
