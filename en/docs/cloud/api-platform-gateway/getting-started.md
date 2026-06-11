@@ -1,3 +1,17 @@
+---
+title: "Getting Started with Self-Hosted Gateway"
+description: "Set up an API Platform Self-Hosted Gateway in your own infrastructure and connect it to the API Platform Cloud control plane."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started.md
+tags:
+  - cloud
+  - api-gateway
+  - hybrid-deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 # Getting Started with Self-Hosted Gateway
 
 This guide walks you through setting up an API Platform Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.

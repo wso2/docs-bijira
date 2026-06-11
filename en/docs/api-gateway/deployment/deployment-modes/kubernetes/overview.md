@@ -1,3 +1,17 @@
+---
+title: "API Platform Kubernetes Gateway (V2.0.0)"
+description: "Overview of API Platform Kubernetes Gateway V2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview.md
+tags:
+  - api-gateway
+  - kubernetes
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "overview"
+---
+
 # API Platform Kubernetes Gateway (V2.0.0)
 
 API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway experience.  

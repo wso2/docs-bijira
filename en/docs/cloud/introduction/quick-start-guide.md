@@ -1,3 +1,17 @@
+---
+title: "Quick Start Guide - API Proxy"
+description: "Expose a service as an API proxy with WSO2 API Platform and publish it to the Developer Portal for application developers to consume."
+canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide.md
+tags:
+  - cloud
+  - api-proxy
+  - quickstart
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 # Quick Start Guide - API Proxy
 
 WSO2 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
