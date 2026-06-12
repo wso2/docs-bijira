@@ -460,6 +460,11 @@ nav:
         - Design APIs: tools/vscode-api-design/design-apis.md
         - Govern APIs: tools/vscode-api-design/govern-apis.md
         - End-to-End Tutorial: tools/vscode-api-design/end-to-end-tutorial.md
+    - Arazzo MCP Generator CLI:
+        - Quick Start Guide: tools/arazzo-mcp-gen-cli/quick-start-guide.md
+        - Reference: tools/arazzo-mcp-gen-cli/reference.md
+    - VS Code Arazzo Visualizer:
+        - Getting Started: tools/vscode-arazzo-visualizer/getting-started.md
 
 # Extensions
 markdown_extensions:
