@@ -210,6 +210,7 @@
 - [Runtime Logs](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/logs/runtime-logs.md): View and filter real-time API traffic logs
 - [Audit Logs](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/logs/audit-logs.md): Review audit trails for configuration and administrative changes
 - [Insights](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/insights.md): API traffic analytics — latency, error rates, LLM usage, and MCP activity
+- [API Platform Status Page](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/status-page.md): Public status page (https://status.bijira.dev) showing real-time service availability, incidents, and uptime history
 - [Compliance Dashboard](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/compliance.md): Monitor API governance compliance across your organization
 - [Integrate with Moesif](https://wso2.com/bijira/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md): Connect API Platform to Moesif for advanced analytics and monetization
 

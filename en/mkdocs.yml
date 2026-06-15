@@ -290,6 +290,7 @@ nav:
         - Insights: cloud/monitoring-and-insights/insights.md
         - Compliance Dashboard: cloud/monitoring-and-insights/compliance.md
         - Integrate API Platform with Moesif: cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
+        - API Platform Status Page: cloud/monitoring-and-insights/status-page.md
     - API Monetization:
         - Overview: cloud/api-monetization/overview.md
         - Monetizing APIs:
