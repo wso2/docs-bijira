@@ -8,10 +8,10 @@ You can access the status page at **[https://status.bijira.dev](https://status.b
 
 The status page reports the current state of each platform service and region, along with historical uptime and incident information. At a glance you can see:
 
-- **Service availability** — the current status of each component and region, reported as **Operational**, **Maintenance**, **Degraded**, or **Outage**.
-- **Active incidents** — details of any ongoing incidents, including affected services and the latest updates from the operations team.
-- **Scheduled maintenance** — planned maintenance windows that may temporarily affect availability.
-- **Uptime history** — historical availability and a timeline of past incidents, so you can review reliability over time.
+- **Service availability** : the current status of each component and region, reported as **Operational**, **Maintenance**, **Degraded**, or **Outage**.
+- **Active incidents** : details of any ongoing incidents, including affected services and the latest updates from the operations team.
+- **Scheduled maintenance** : planned maintenance windows that may temporarily affect availability.
+- **Uptime history** : historical availability and a timeline of past incidents, so you can review reliability over time.
 
 ## When to use it
 
