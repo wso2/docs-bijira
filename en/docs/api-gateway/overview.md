@@ -1,3 +1,17 @@
+---
+title: "API Platform Gateway Overview"
+description: "Learn the architecture and components of API Platform Gateway: Gateway Controller, Gateway Runtime, Policy Engine, default ports, and the ap CLI."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/overview.md
+tags:
+  - api-gateway
+  - architecture
+  - api-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "concept"
+---
+
 # API Platform Gateway Overview
 
 API Platform Gateway is the complete API gateway system for managing, securing, and routing API traffic to your backend services.

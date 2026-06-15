@@ -1,3 +1,17 @@
+---
+title: "API Platform Gateway Quick Start Guide"
+description: "Run API Platform Gateway with Docker Compose, deploy your first REST API configuration, and invoke it through the gateway in minutes."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide.md
+tags:
+  - api-gateway
+  - quickstart
+  - docker
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 # Quick Start Guide
 
 ### Using Docker Compose (Recommended)

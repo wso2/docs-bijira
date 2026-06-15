@@ -1,3 +1,17 @@
+---
+title: "LLM Proxy Quick Start Guide"
+description: "Run API Platform AI Gateway with Docker Compose, configure an LLM provider, and route your first LLM request through a managed proxy."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/quick-start-guide.md
+tags:
+  - ai-gateway
+  - llm
+  - quickstart
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 ## Quick Start
 
 ### Using Docker Compose (Recommended)

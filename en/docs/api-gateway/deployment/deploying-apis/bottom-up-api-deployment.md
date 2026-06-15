@@ -1,3 +1,17 @@
+---
+title: "Bottom-Up API Deployment Guide"
+description: "Deploy REST APIs directly to API Platform Gateway and automatically sync them to on-prem WSO2 API Manager using bottom-up deployment."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deploying-apis/bottom-up-api-deployment/
+md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md
+tags:
+  - api-gateway
+  - deployment
+  - api-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "how-to"
+---
+
 # Bottom-Up API Deployment Guide
 
 ## Overview

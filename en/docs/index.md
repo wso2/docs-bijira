@@ -1,3 +1,17 @@
+---
+title: "WSO2 API Platform Overview"
+description: "Overview of documentation for WSO2 API Platform, the open platform to control APIs, AI, and MCP."
+canonical_url: https://wso2.com/api-platform/docs/
+md_url: https://wso2.com/api-platform/docs/index.md
+tags:
+  - api-management
+  - ai-gateway
+  - platform-overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "overview"
+---
+
 # Overview
 
 ![WSO2 API Platform diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](assets/img/overview/platform-overview-light.webp#only-light)

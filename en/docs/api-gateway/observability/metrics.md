@@ -1,3 +1,17 @@
+---
+title: "Gateway Metrics"
+description: "Configure metrics collection for API Platform Gateway components using Prometheus and Grafana, with reference dashboards and alerting."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics.md
+tags:
+  - api-gateway
+  - observability
+  - devops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "how-to"
+---
+
 # Gateway Metrics
 
 This guide explains how to implement and configure metrics collection for the API Platform Gateway components.

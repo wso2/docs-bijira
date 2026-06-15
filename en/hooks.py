@@ -102,6 +102,23 @@ def on_post_page(output, page, config, **kwargs):
 
     return re.sub(r"<title>.*?</title>", f"<title>{full_title}</title>", output, count=1)
 
+# Matches a YAML frontmatter block at the start of a file.
+FRONTMATTER_RE = re.compile(r"\A-{3}[ \t]*\n.*?\n(?:-{3}|\.{3})[ \t]*\n", re.DOTALL)
+
+
+def _raw_frontmatter(src_path: str) -> str:
+    """
+    Return the page's frontmatter block as written in the source file.
+    """
+    try:
+        with open(src_path, encoding="utf-8-sig") as f:
+            source = f.read()
+    except OSError:
+        return ""
+    match = FRONTMATTER_RE.match(source)
+    return match.group(0) if match else ""
+
+
 def on_page_markdown(markdown, page, config, **kwargs):
     """Write Markdown files to a parallel .md file in the build output.
 
@@ -123,5 +140,10 @@ def on_page_markdown(markdown, page, config, **kwargs):
     if parent_dir:
         os.makedirs(parent_dir, exist_ok=True)
     with open(md_output_path, "w", encoding="utf-8") as f:
+        frontmatter = _raw_frontmatter(page.file.abs_src_path)
+        if frontmatter:
+            f.write(frontmatter)
+            if not markdown.startswith("\n"):
+                f.write("\n")
         f.write(markdown)
     return markdown

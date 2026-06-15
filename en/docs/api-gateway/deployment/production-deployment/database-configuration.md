@@ -1,3 +1,18 @@
+---
+title: "Database Configuration"
+description: "Configure PostgreSQL as the shared database for Gateway Controller replicas in high-availability production deployments."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/database-configuration/
+md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/database-configuration.md
+tags:
+  - api-gateway
+  - deployment
+  - postgresql
+  - devops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "how-to"
+---
+
 # Database Configuration
 
 PostgreSQL is required for high-availability production deployments. It removes the single-replica constraint of the default SQLite backend and acts as the shared source of truth across all Gateway Controller replicas. See [Architecture](../high-availability-production-deployment.md#architecture) for how replicas coordinate via the shared database.

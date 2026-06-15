@@ -1,3 +1,17 @@
+---
+title: "Get Started with WSO2 API Platform"
+description: "Find the right quick start guide based on your goal: manage and govern APIs, run a standalone gateway, govern AI services, or monetize APIs."
+canonical_url: https://wso2.com/api-platform/docs/get-started/
+md_url: https://wso2.com/api-platform/docs/get-started.md
+tags:
+  - getting-started
+  - api-management
+  - ai-gateway
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 # Get Started
 
 Not sure where to begin? This page helps you find the right quick start guide based on what you are trying to do.
