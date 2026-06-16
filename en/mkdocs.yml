@@ -379,8 +379,22 @@ nav:
         - Bottom-Up Deployment: api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md 
     - Observability:
       - Logging: api-gateway/observability/logging.md
-      - Tracing: api-gateway/observability/tracing.md
-      - Metrics: api-gateway/observability/metrics.md
+      - Tracing:
+        - Overview: api-gateway/observability/tracing/overview.md
+        - Enabling and Disabling Tracing: api-gateway/observability/tracing/enabling-tracing.md
+        - Viewing Traces in Jaeger: api-gateway/observability/tracing/viewing-traces-in-jaeger.md
+        - Tracing Configuration: api-gateway/observability/tracing/configuration.md
+        - Alternative Tracing Backends: api-gateway/observability/tracing/alternative-backends.md
+        - Best Practices and Troubleshooting: api-gateway/observability/tracing/best-practices-and-troubleshooting.md
+      - Metrics:
+        - Overview: api-gateway/observability/metrics/overview.md
+        - Enabling and Disabling Metrics: api-gateway/observability/metrics/enabling-metrics.md
+        - Viewing Metrics in Grafana: api-gateway/observability/metrics/viewing-metrics-in-grafana.md
+        - Prometheus Queries: api-gateway/observability/metrics/prometheus-queries.md
+        - Configuration Options: api-gateway/observability/metrics/configuration.md
+        - Alternative Metrics Backends: api-gateway/observability/metrics/alternative-backends.md
+        - Metric Reference: api-gateway/observability/metrics/metric-reference.md
+        - Best Practices and Troubleshooting: api-gateway/observability/metrics/best-practices-and-troubleshooting.md
     - Analytics:
       - Analytics Header Filter: api-gateway/analytics/analytics-header-filter.md
       - Moesif Analytics: api-gateway/analytics/moesif-analytics.md

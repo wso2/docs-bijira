@@ -275,8 +275,8 @@
 - [Control Plane Connection](https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/control-plane-connection.md): Connect the standalone gateway to the API Platform control plane
 - [Bottom-Up API Deployment](https://wso2.com/api-platform/docs/api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md): Deploy REST APIs directly to API Platform Gateway and automatically sync them to on-prem WSO2 API Manager
 - [API Gateway Logging](https://wso2.com/api-platform/docs/api-gateway/observability/logging.md): Set up the logging stack for the standalone gateway using Fluent Bit for collection, OpenSearch for storage, and OpenSearch Dashboards for visualization
-- [API Gateway Tracing](https://wso2.com/api-platform/docs/api-gateway/observability/tracing.md): Set up distributed tracing for the standalone gateway using an OpenTelemetry Collector and Jaeger
-- [API Gateway Metrics](https://wso2.com/api-platform/docs/api-gateway/observability/metrics.md): Configure Prometheus metrics collection for API Platform Gateway components, with Grafana dashboards and alerting
+- [API Gateway Tracing](https://wso2.com/api-platform/docs/api-gateway/observability/tracing/overview.md): Set up distributed tracing for the standalone gateway using an OpenTelemetry Collector and Jaeger
+- [API Gateway Metrics](https://wso2.com/api-platform/docs/api-gateway/observability/metrics/overview.md): Expose Prometheus metrics from the gateway
 - [API Gateway Moesif Analytics](https://wso2.com/api-platform/docs/api-gateway/analytics/moesif-analytics.md): Integrate the standalone gateway with Moesif
 - [API Gateway Analytics Header Filter](https://wso2.com/api-platform/docs/api-gateway/analytics/analytics-header-filter.md): Control which request headers are captured in analytics
 - [Management API Overview](https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/overview.md): REST API for programmatic management of the standalone gateway
