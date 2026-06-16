@@ -1,3 +1,17 @@
+---
+title: "Model Round Robin"
+description: "Distribute LLM requests evenly across multiple AI models in a cyclic round-robin pattern with automatic failure suspension."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/load-balancing/model-round-robin/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/load-balancing/model-round-robin.md
+tags:
+  - ai-gateway
+  - llm
+  - load-balancing
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # Model Round Robin
 
 ## Overview

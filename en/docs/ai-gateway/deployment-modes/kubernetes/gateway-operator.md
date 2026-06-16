@@ -1,3 +1,17 @@
+---
+title: "Kubernetes Operator for API Platform Gateway"
+description: "Deploy API Platform AI Gateway on Kubernetes using the Gateway Operator with platform CRDs or the Kubernetes Gateway API."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/gateway-operator/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/gateway-operator.md
+tags:
+  - ai-gateway
+  - kubernetes
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # Kubernetes Operator for API Platform Gateway
 
 The WSO2 API Platform Gateway Operator enables native Kubernetes deployment using a GitOps-friendly, operator-based model. It manages the full lifecycle of API gateways and REST APIs. You can use **either** platform CRDs **or** the **Kubernetes Gateway API** on the same operator build.

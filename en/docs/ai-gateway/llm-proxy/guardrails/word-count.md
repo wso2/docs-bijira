@@ -1,3 +1,17 @@
+---
+title: "Word Count Guardrail"
+description: "Enforce minimum and maximum word count limits on LLM request and response content using the Word Count guardrail."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/word-count/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/word-count.md
+tags:
+  - ai-gateway
+  - guardrails
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # Word Count Guardrail
 
 ## Overview

@@ -1,3 +1,17 @@
+---
+title: "PII Masking Regex Guardrail"
+description: "Mask or redact personally identifiable information from LLM request and response bodies using configurable regex patterns."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/pii-masking-regex/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/pii-masking-regex.md
+tags:
+  - ai-gateway
+  - guardrails
+  - security
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # PII Masking Regex Guardrail
 
 ## Overview

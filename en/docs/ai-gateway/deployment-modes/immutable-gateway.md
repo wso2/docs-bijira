@@ -1,3 +1,17 @@
+---
+title: "Immutable Gateway"
+description: "Run API Platform AI Gateway in immutable mode, loading LLM and MCP configurations from files at startup for GitOps workflows."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/immutable-gateway/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/immutable-gateway.md
+tags:
+  - ai-gateway
+  - deployment
+  - gitops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # Immutable Gateway
 
 This guide explains how to run the API Platform Gateway in **immutable mode**, where API configurations are loaded from files at startup instead of being managed through the REST API.
