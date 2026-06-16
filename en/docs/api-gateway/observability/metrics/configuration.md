@@ -1,6 +1,6 @@
 # Configuration Options
 
-### Adjusting Scrape Interval
+## Adjusting Scrape Interval
 
 To reduce metrics collection overhead or increase granularity, adjust the Prometheus scrape interval:
 
@@ -17,7 +17,7 @@ Restart Prometheus after changes:
 docker compose restart prometheus
 ```
 
-### Custom Metrics Endpoints
+## Custom Metrics Endpoints
 
 You can add additional metrics endpoints to scrape from:
 
@@ -30,7 +30,7 @@ scrape_configs:
     scrape_interval: 30s
 ```
 
-### Metric Retention
+## Metric Retention
 
 Configure how long Prometheus retains metrics:
 
@@ -43,7 +43,7 @@ command:
   - '--storage.tsdb.retention.size=10GB'  # Keep up to 10GB of metrics
 ```
 
-### Custom Bucket Configuration
+## Custom Bucket Configuration
 
 Gateway components use optimized bucket configurations for histograms:
 

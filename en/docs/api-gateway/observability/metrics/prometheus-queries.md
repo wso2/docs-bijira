@@ -2,9 +2,9 @@
 
 You can query Prometheus directly at <http://localhost:9092> to create custom visualizations or debug issues.
 
-### Useful Queries
+## Useful Queries
 
-#### Gateway Controller
+### Gateway Controller
 
 **Total API Operations**:
 ```promql
@@ -41,7 +41,7 @@ gateway_controller_memory_bytes
 histogram_quantile(0.99, rate(gateway_controller_http_request_duration_seconds_bucket[5m]))
 ```
 
-#### Policy Engine
+### Policy Engine
 
 **Request Rate**:
 ```promql
@@ -75,7 +75,7 @@ policy_engine_active_streams
 rate(policy_engine_request_errors_total[5m])
 ```
 
-#### Router (Envoy)
+### Router (Envoy)
 
 **Request Rate**:
 ```promql

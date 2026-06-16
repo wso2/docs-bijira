@@ -103,7 +103,7 @@ To completely disable metrics:
 1. **Update configuration** in `gateway/configs/config.toml`:
 
 ```toml
-[gateway_controller.metrics]
+[controller.metrics]
 enabled = false
 
 [policy_engine.metrics]

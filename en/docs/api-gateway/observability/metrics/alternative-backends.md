@@ -2,7 +2,7 @@
 
 While the default setup uses Prometheus and Grafana, the gateway components expose standard Prometheus metrics and can integrate with any Prometheus-compatible system.
 
-### AWS CloudWatch
+## AWS CloudWatch
 
 Use AWS Distro for OpenTelemetry (ADOT) to export metrics to CloudWatch:
 
@@ -16,7 +16,7 @@ adot-collector:
 
 Configure ADOT collector to scrape Prometheus metrics and export to CloudWatch.
 
-### Datadog
+## Datadog
 
 Use Datadog Agent to scrape Prometheus metrics:
 
@@ -46,7 +46,7 @@ instances:
       - policy_engine_*
 ```
 
-### New Relic
+## New Relic
 
 Use New Relic's Prometheus remote write integration:
 
@@ -59,7 +59,7 @@ prometheus:
     - '--remote.write.headers=X-Api-Key:YOUR_API_KEY'
 ```
 
-### InfluxDB
+## InfluxDB
 
 Use Prometheus remote write to send metrics to InfluxDB:
 
@@ -71,7 +71,7 @@ prometheus:
     - '--remote.write.url=http://influxdb:8086/api/v1/prom/write?db=prometheus'
 ```
 
-### Elasticsearch
+## Elasticsearch
 
 Use Metricbeat to ship Prometheus metrics to Elasticsearch:
 
@@ -86,7 +86,7 @@ metricbeat:
 
 Configure Metricbeat to scrape Prometheus endpoints.
 
-### Azure Monitor
+## Azure Monitor
 
 Use Azure Monitor Agent with Prometheus scraping:
 
@@ -99,7 +99,7 @@ azuremonitor-agent:
     - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET}
 ```
 
-### Google Cloud Monitoring
+## Google Cloud Monitoring
 
 Use Cloud Monitoring Prometheus sidecar:
 
@@ -112,7 +112,7 @@ prometheus-to-monitoring:
     - ./key.json:/var/secrets/google/key.json:ro
 ```
 
-### Grafana Cloud
+## Grafana Cloud
 
 Use Prometheus remote write to Grafana Cloud:
 
@@ -125,7 +125,7 @@ prometheus:
     - '--remote.write.headers=Authorization:Bearer YOUR-API-KEY'
 ```
 
-### VictoriaMetrics
+## VictoriaMetrics
 
 VictoriaMetrics is a Prometheus-compatible time-series database:
 
@@ -147,7 +147,7 @@ prometheus:
     - '--remote.write.url=http://victoriametrics:8428/api/v1/write'
 ```
 
-### Thanos
+## Thanos
 
 Thanos provides long-term storage and global query view for Prometheus:
 

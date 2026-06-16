@@ -626,6 +626,9 @@ plugins:
         api-gateway/deployment-modes/kubernetes/kubernetes-standalone.md: api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
         api-gateway/deployment-modes/kubernetes/overview.md: api-gateway/deployment/deployment-modes/kubernetes/overview.md
         api-gateway/setup/immutable-gateway.md: ai-gateway/deployment-modes/immutable-gateway.md
+        # API Gateway observability split (single pages -> section overview)
+        api-gateway/observability/tracing.md: api-gateway/observability/tracing/overview.md
+        api-gateway/observability/metrics.md: api-gateway/observability/metrics/overview.md
         # Bijira Concepts
         bijira-concepts/data-planes.md: cloud/bijira-concepts/data-planes.md
         bijira-concepts/deployment-tracks.md: cloud/bijira-concepts/deployment-tracks.md

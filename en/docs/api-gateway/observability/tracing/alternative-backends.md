@@ -2,13 +2,13 @@
 
 While the default setup uses Jaeger, the gateway components use OpenTelemetry and can export to any OTLP-compatible backend.
 
-### Moesif
+## Moesif
 
 Moesif provides API analytics and monitoring with support for OpenTelemetry traces. It treats each HTTP request/response span as an API event for detailed analytics.
 
 **No additional Docker services required** - Moesif is a cloud-based SaaS platform. You only need to configure the OTLP Collector to export traces to Moesif's API.
 
-#### Configuration
+### Configuration
 
 Update the OTLP Collector configuration (`gateway/observability/otel-collector/config.yaml`) to export to Moesif:
 
@@ -33,7 +33,7 @@ service:
 - Use the `otlphttp` exporter (not `otlp` which uses gRPC)
 - The `X-Moesif-Application-Id` header is required for authentication
 
-#### Obtaining Your Moesif Application ID
+### Obtaining Your Moesif Application ID
 
 1. Sign up for a Moesif account at [moesif.com](https://www.moesif.com)
 2. Log in to your Moesif dashboard
@@ -41,7 +41,7 @@ service:
 4. Locate the **Collector Application ID** field
 5. Copy your unique Application ID
 
-#### Using Environment Variables
+### Using Environment Variables
 
 For better security, use environment variables for the Application ID:
 
@@ -70,7 +70,7 @@ export MOESIF_APPLICATION_ID=your-moesif-application-id
 docker compose --profile tracing up -d
 ```
 
-#### Accessing Moesif Dashboard
+### Accessing Moesif Dashboard
 
 After configuring and starting the gateway:
 
@@ -80,7 +80,7 @@ After configuring and starting the gateway:
 4. Use **Time Series** to analyze API usage trends
 5. Set up **Alerts** for error rates, latency, or custom conditions
 
-#### Moesif Features
+### Moesif Features
 
 - **API Analytics**: Request volume, response times, error rates
 - **User Tracking**: Identify and track API users across requests
@@ -89,7 +89,7 @@ After configuring and starting the gateway:
 - **Custom Dashboards**: Build visualizations for your specific KPIs
 - **Alerting**: Get notified of anomalies or threshold breaches
 
-#### Sending to Both Jaeger and Moesif
+### Sending to Both Jaeger and Moesif
 
 You can send traces to both Jaeger (for development) and Moesif (for analytics):
 
@@ -115,7 +115,7 @@ service:
       exporters: [otlp/jaeger, otlphttp/moesif]
 ```
 
-### Zipkin
+## Zipkin
 
 Replace Jaeger with Zipkin:
 
@@ -138,7 +138,7 @@ exporters:
 
 Access Zipkin UI at `http://localhost:9411`
 
-### Grafana Tempo
+## Grafana Tempo
 
 For a Prometheus-style tracing backend:
 
@@ -176,9 +176,9 @@ tracing:
   endpoint: tempo:4317
 ```
 
-### Cloud-Native Tracing Solutions
+## Cloud-Native Tracing Solutions
 
-#### AWS X-Ray
+### AWS X-Ray
 
 Configure OTLP Collector to export to AWS X-Ray:
 
@@ -199,7 +199,7 @@ otel-collector:
     - AWS_REGION=us-east-1
 ```
 
-#### Google Cloud Trace
+### Google Cloud Trace
 
 Configure OTLP Collector to export to Google Cloud:
 
@@ -210,7 +210,7 @@ exporters:
     use_insecure: false
 ```
 
-#### Azure Monitor
+### Azure Monitor
 
 Use Azure Monitor exporter:
 
@@ -220,7 +220,7 @@ exporters:
     instrumentation_key: "your-instrumentation-key"
 ```
 
-#### Datadog APM
+### Datadog APM
 
 Configure OTLP Collector to export to Datadog:
 
@@ -254,7 +254,7 @@ tracing:
   endpoint: datadog-agent:4317
 ```
 
-#### New Relic
+### New Relic
 
 Configure OTLP Collector to export to New Relic:
 
@@ -266,7 +266,7 @@ exporters:
       api-key: ${NEW_RELIC_LICENSE_KEY}
 ```
 
-#### Honeycomb
+### Honeycomb
 
 ```yaml
 exporters:
@@ -276,7 +276,7 @@ exporters:
       x-honeycomb-team: ${HONEYCOMB_API_KEY}
 ```
 
-#### Lightstep
+### Lightstep
 
 ```yaml
 exporters:
@@ -286,11 +286,11 @@ exporters:
       lightstep-access-token: ${LIGHTSTEP_ACCESS_TOKEN}
 ```
 
-### Service Mesh Integration
+## Service Mesh Integration
 
 If using a service mesh like Istio or Linkerd:
 
-#### Istio
+### Istio
 
 Istio automatically generates traces for service-to-service communication. Configure gateway components to propagate trace context:
 
@@ -300,7 +300,7 @@ tracing:
   endpoint: istio-telemetry.istio-system:4317
 ```
 
-#### Linkerd
+### Linkerd
 
 Linkerd integrates with Jaeger via OpenTelemetry:
 
