@@ -2,7 +2,7 @@
 title: "Gateway Metrics"
 description: "Configure metrics collection for API Platform Gateway components using Prometheus and Grafana, with reference dashboards and alerting."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/
-md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics.md
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/overview.md
 tags:
   - api-gateway
   - observability

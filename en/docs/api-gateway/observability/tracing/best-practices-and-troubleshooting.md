@@ -53,7 +53,7 @@ Choose sampling based on traffic volume:
 cat gateway/configs/config.toml | grep -A5 "tracing"
 ```
 
-Ensure `enabled: true`.
+Ensure `enabled = true`.
 
 **2. Check OTLP Collector is running:**
 ```bash

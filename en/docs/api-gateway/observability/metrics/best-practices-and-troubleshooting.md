@@ -134,7 +134,7 @@ rate(gateway_controller_http_request_duration_seconds_sum[5m])
 grep -A5 "metrics" gateway/configs/config.toml
 ```
 
-Ensure `enabled: true`.
+Ensure `enabled = true`.
 
 **2. Check Prometheus is running:**
 ```bash
