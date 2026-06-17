@@ -1,3 +1,17 @@
+---
+title: "URL Guardrail"
+description: "Validate URLs found in LLM request and response content by checking reachability through DNS resolution or HTTP HEAD requests."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/url/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/url.md
+tags:
+  - ai-gateway
+  - guardrails
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # URL Guardrail
 
 ## Overview

@@ -1,3 +1,17 @@
+---
+title: "Moesif Analytics"
+description: "Configure Moesif in API Platform AI Gateway to capture and publish API request and response data."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/moesif-analytics/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/moesif-analytics.md
+tags:
+  - ai-gateway
+  - analytics
+  - observability
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # Analytics
 
 ## Overview

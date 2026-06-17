@@ -1,3 +1,17 @@
+---
+title: "MCP ACL List"
+description: "Control access to MCP tools, resources, and prompts using allow or deny mode with exceptions in API Platform AI Gateway."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-acl-list/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-acl-list.md
+tags:
+  - ai-gateway
+  - mcp
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # MCP ACL List
 
 ## Overview

@@ -1,3 +1,17 @@
+---
+title: "Gateway Logging"
+description: "Configure centralized log collection for API Platform AI Gateway using Fluent Bit, OpenSearch, and alternative logging stacks."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/observability/logging/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/observability/logging.md
+tags:
+  - ai-gateway
+  - observability
+  - devops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # Gateway Logging
 
 This guide explains how to implement and configure logging for the API Platform Gateway components.

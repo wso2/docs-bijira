@@ -1,3 +1,17 @@
+---
+title: "AI Gateway Kubernetes Deployment Modes"
+description: "Choose between standalone and operator-managed Kubernetes deployment modes for API Platform AI Gateway."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/overview/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/overview.md
+tags:
+  - ai-gateway
+  - kubernetes
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "overview"
+---
+
 # API Platform Kubernetes Gateway (V2.0.0)
 
 API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway(APK) experience.  

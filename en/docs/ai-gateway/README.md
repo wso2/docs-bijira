@@ -1,3 +1,17 @@
+---
+title: "API Platform AI Gateway"
+description: "Overview of API Platform AI Gateway for managing LLM and MCP traffic, covering key concepts, architecture, and quick start links."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/
+md_url: https://wso2.com/api-platform/docs/ai-gateway.md
+tags:
+  - ai-gateway
+  - llm
+  - mcp
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "overview"
+---
+
 # API Platform AI Gateway
 
 A gateway for managing and securing AI traffic, including Large Language Model (LLM) APIs and Model Context Protocol (MCP) servers.
