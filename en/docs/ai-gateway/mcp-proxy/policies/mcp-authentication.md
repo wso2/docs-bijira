@@ -1,3 +1,17 @@
+---
+title: "MCP Authentication"
+description: "Secure MCP server traffic by validating JWT access tokens and serving OAuth protected resource metadata in AI Gateway."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authentication/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authentication.md
+tags:
+  - ai-gateway
+  - mcp
+  - security
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # MCP Authentication
 
 ## Overview

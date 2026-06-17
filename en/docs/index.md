@@ -1,6 +1,21 @@
+---
+title: "WSO2 API Platform Overview"
+description: "Overview of documentation for WSO2 API Platform, the open platform to control APIs, AI, and MCP."
+canonical_url: https://wso2.com/api-platform/docs/
+md_url: https://wso2.com/api-platform/docs/index.md
+tags:
+  - api-management
+  - ai-gateway
+  - platform-overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "overview"
+---
+
 # Overview
 
-![Platform Overview Diagram](assets/img/overview/platform-overview.png)
+![WSO2 API Platform diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](assets/img/overview/platform-overview-light.webp#only-light)
+![WSO2 API Platform diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](assets/img/overview/platform-overview-dark.webp#only-dark)
 
 ## What is the WSO2 API Platform?
 The WSO2 API Platform helps you manage, secure, and govern your APIs and AI services. Whether you need to proxy REST APIs, route traffic to LLM providers such as OpenAI or Anthropic, or expose your services as MCP tools for AI agents, the platform provides the tools and controls to do so.
@@ -24,7 +39,8 @@ The next question is: **who runs the infrastructure?**
 
 * **Option A: Cloud (WSO2 hosts everything)**
     
-    ![Option A Diagram](assets/img/overview/option-a.png)
+    ![Option A: WSO2 Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](assets/img/overview/option-a-cloud-light.webp#only-light)
+    ![Option A: WSO2 Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](assets/img/overview/option-a-cloud-dark.webp#only-dark)
 
     The fastest way to get started. WSO2 runs the control plane (where you design and manage APIs) and the data plane (the gateways, where traffic flows). Sign up and start creating APIs within minutes. There is no infrastructure to manage.
 
@@ -36,7 +52,8 @@ The next question is: **who runs the infrastructure?**
 
 * **Option B: Hybrid (WSO2 hosts the control plane, you host the gateways)**
     
-    ![Option B Diagram](assets/img/overview/option-b.png)
+    ![Option B: WSO2 Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](assets/img/overview/option-b-hybird-light.webp#only-light)
+    ![Option B: WSO2 Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](assets/img/overview/option-b-hybird-dark.webp#only-dark)
 
     You get the convenience of a cloud managed control plane (the UI where you design and govern APIs), but the gateways run in your own data center or cloud account. API traffic never leaves the infrastructure that you manage. This satisfies the majority of data residency requirements globally.
 
@@ -48,7 +65,8 @@ The next question is: **who runs the infrastructure?**
 
 * **Option C: Self-managed (API Manager)**
     
-    ![Option C Diagram](assets/img/overview/option-c.png)
+    ![Option C: self-hosted APIM control plane with Publisher and Dev Portal, and self-hosted APIM gateway with API Gateway and AI Gateway](assets/img/overview/option-c-self-managed-light.webp#only-light)
+    ![Option C: self-hosted APIM control plane with Publisher and Dev Portal, and self-hosted APIM gateway with API Gateway and AI Gateway](assets/img/overview/option-c-self-managed-dark.webp#only-dark)
 
     You download and run the entire stack on your own infrastructure, including the control plane, gateways, portal, and everything else. You have full control over where your software and data resides. The platform is built on an open source foundation for maximum customization.
     
@@ -81,7 +99,8 @@ If you do not need a full management console and want a high-performance gateway
 
 There are two standalone gateways:
 
-![Gateway Diagram](assets/img/overview/gateway.png)
+![Standalone WSO2 API Gateway routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](assets/img/overview/api-gateway-light.webp#only-light)
+![Standalone WSO2 API Gateway routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](assets/img/overview/api-gateway-dark.webp#only-dark)
 
 
 * **API Gateway**

@@ -1,3 +1,17 @@
+---
+title: "Quick Start Guide - API Proxy"
+description: "Expose a service as an API proxy with WSO2 API Platform and publish it to the Developer Portal for application developers to consume."
+canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide.md
+tags:
+  - cloud
+  - api-proxy
+  - quickstart
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "quickstart"
+---
+
 # Quick Start Guide - API Proxy
 
 WSO2 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
@@ -39,8 +53,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
-    /* replace this image with websocket option */
-    ![Create API Proxy from Contract](../../assets/img/introduction/create-api-proxy-from-contract.png)
+    ![Create API Proxy from Contract form with HTTP type, name Sample API, identifier, version, base path, description, target URL, and External and Internal access mode options](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
 
@@ -61,7 +74,7 @@ In this guide, you will use the OpenAPI Console.
 3. Expand the `GET /uuid` method and click **Try it Out** to test it.
 4. Click **Execute**. You will see a response similar to the following:
 
-    ![API proxy response](../../assets/img/introduction/test-response.png)
+    ![OpenAPI Console showing GET /uuid expanded with HTTP 200 server response, curl command, request URL, and UUID JSON response body](../../assets/img/introduction/test-response.png)
 
     This indicates that your API proxy is working as expected.
 
@@ -96,7 +109,7 @@ You can observe that the API lifecycle stage has changed to **Published**. Now t
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.
 
 1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the API Platform Developer Portal.
-    ![Go to DevPortal](../../assets/img/introduction/go-to-developer-portal.png)
+    ![Lifecycle page showing API in Published state with lifecycle flow diagram including Created, Pre-released, Published, Deprecated, Blocked, and Retired stages, and Go to Devportal button highlighted](../../assets/img/introduction/go-to-developer-portal.png)
 2. Subscribe to the API and Generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications**.
     2. Click **Create**.

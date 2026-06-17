@@ -42,7 +42,7 @@ The full Moesif-powered dashboard embedded in the Insights page provides deeper 
 
 ## Using Insights for Cost and Rate Limit Management
 
-The Insights dashboard is particularly useful for tuning your [token-based rate limits](policies/guardrails/token-based-rate-limit.md):
+The Insights dashboard is particularly useful for tuning your [token-based rate limits](policies/rate-limit/token-based-rate-limit.md):
 
 1. Use **token usage trends** to understand actual consumption patterns before setting rate limits.
 2. Check **per-consumer traffic** to determine appropriate per-consumer limits.
@@ -60,6 +60,6 @@ See [Guardrails Overview](policies/guardrails/overview.md) for more on configuri
 
 ## Related
 
-- [Token-Based Rate Limiting](policies/guardrails/token-based-rate-limit.md) — Set token limits and use Insights to monitor usage
+- [Token-Based Rate Limiting](policies/rate-limit/token-based-rate-limit.md) — Set token limits and use Insights to monitor usage
 - [Guardrails Overview](policies/guardrails/overview.md) — Monitor guardrail interventions through Insights
-- [Integrate API Platform with Moesif](../../monitoring-and-insights/integrate-bijira-with-moesif.md) — Advanced Moesif integration options for the broader API Platform platform
+- [Integrate API Platform with Moesif](../monitoring-and-insights/integrate-bijira-with-moesif.md) — Advanced Moesif integration options for the broader API Platform platform

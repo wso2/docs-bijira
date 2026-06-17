@@ -1,3 +1,17 @@
+---
+title: "Kubernetes Standalone Mode"
+description: "Install and manage API Platform AI Gateway on Kubernetes using the standalone Helm chart without the Gateway Operator."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/kubernetes-standalone/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/kubernetes-standalone.md
+tags:
+  - ai-gateway
+  - kubernetes
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # API Platform Gateway - Kubernetes Standalone Mode
 
 This guide explains how to run API Platform Gateway in **Standalone Mode** using the gateway Helm chart only (without the Gateway Operator).
@@ -255,4 +269,4 @@ curl -k https://localhost:8443/reading-list/v1.0/books
 ## Next Steps
 
 - For operator-managed lifecycle and CRDs, see [Kubernetes Operator deployment mode](./gateway-operator.md).
-- For mode comparison and migration context from APK 1.3.0, see the [deployment modes overview page](./overview.md).
+- For mode comparison and migration context from Kubernetes Gateway 1.3.0, see the [deployment modes overview page](./overview.md).

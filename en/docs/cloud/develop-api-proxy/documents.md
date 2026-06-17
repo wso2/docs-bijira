@@ -25,7 +25,7 @@ To add documentation for an API, follow the steps given below.
 
 6. Click **Create** to save the document.
 
-    ![Documents](../../assets/img/develop-api-proxy/documents.png)
+    ![Documents page showing Developer Documents tab with a document list and content preview panel](../../assets/img/develop-api-proxy/documents.png)
 
 Depending on the information you need to add to the API, you can add one or more documents.
 

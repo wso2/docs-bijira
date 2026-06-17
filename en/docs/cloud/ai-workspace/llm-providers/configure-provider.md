@@ -17,13 +17,13 @@ LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, 
 2. Select **Service Providers** from the menu.
 3. Click **+ Add New Provider** and choose your provider type (e.g., **OpenAI**, **Anthropic**).
 
-   ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/llm-provider/select-llm-provider-type.png)
+   ![Add LLM Service Provider panel showing selectable tiles for OpenAI, Mistral, Gemini, Azure OpenAI, Azure AI Foundry, AWS Bedrock, and Anthropic](../../../assets/img/ai-gateway/ai-workspace/llm-provider/select-llm-provider-type.png)
 
 ## Configure Provider Details
 
 After selecting your provider type, fill in the provider configuration form:
 
-   ![Select LLM Provider](../../../assets/img/ai-gateway/ai-workspace/llm-provider/llm-provider-details.png)
+   ![Add LLM Service Provider form with OpenAI selected, showing Name, Version, Description, Context, API Key, and Guardrails fields](../../../assets/img/ai-gateway/ai-workspace/llm-provider/llm-provider-details.png)
 
 ### Basic Information
 

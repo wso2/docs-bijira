@@ -17,7 +17,7 @@ Follow the steps below to create an AI API:
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **AI APIs**.  
 3. Select the **OpenAI Provider**. 
 
-    ![Open-AI](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/create-open-ai.png)  
+    ![Create AI API Proxy page with OpenAI API card highlighted among available provider options](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/create-open-ai.png)  
 
 4. Configure the AI API details, such as:  
     - API Name  
@@ -26,7 +26,7 @@ Follow the steps below to create an AI API:
     - AI Provider  
     - Target Endpoint  
 
-    ![AI API Details](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/configure-ai-api-details.png)  
+    ![Create AI API Proxy from Marketplace form showing OpenAI API name, identifier, version, base path, description, target, and access mode fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/configure-ai-api-details.png)  
 
 5. Click **Create** to finalize the AI API creation.  
 
@@ -38,10 +38,10 @@ Follow the steps below to create an AI API:
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
-    ![Policy](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-policy-view.png)  
+    ![Policy page showing API Proxy Contract routes and Service Contract with OpenAI endpoint](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-policy-view.png)  
 
 2. Click endpoint **Endpoint Configurations**
-    ![Endpoint-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-policy.png)
+    ![Policy page with Endpoint Configuration tooltip highlighted on the OpenAI Service Contract endpoint](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-policy.png)
 
 3. Configure **Endpoint Configurations** to handle backend security authentication and authorization. 
 
@@ -50,20 +50,20 @@ Follow the steps below to create an AI API:
     | Authorization | Bearer xxxxxxxxxxxxxxxxx    |
    
 
-    ![Endpoint-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-config.png)
+    ![Endpoint Configuration dialog showing OpenAI endpoint URL with empty API Key Header and API Key input fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-config.png)
 
 
 ## 4. Deploy to development and Production Environments
 
 1. In the left navigation menu, click **Deploy**, Deploy to Development environment
 
-    ![Dev-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-dev.png)
+    ![Deploy page showing Build Area, Development environment with Active deployment status, and Production not yet deployed](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-dev.png)
 
 2. Once it is deploy to development you can test it from Test Console.
 
 3. When you need to promote to production environment you have to provide endponit credentials for production setup.
 
-    ![Prod-config](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-prod.png)
+    ![Deploy page with Development and Production both Active, and Configurations panel showing Authorization header and Bearer token API key fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/deploy-prod.png)
 
 ---
 

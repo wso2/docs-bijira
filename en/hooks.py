@@ -101,3 +101,49 @@ def on_post_page(output, page, config, **kwargs):
     full_title = f"{title} | {suffix}" if suffix else title
 
     return re.sub(r"<title>.*?</title>", f"<title>{full_title}</title>", output, count=1)
+
+# Matches a YAML frontmatter block at the start of a file.
+FRONTMATTER_RE = re.compile(r"\A-{3}[ \t]*\n.*?\n(?:-{3}|\.{3})[ \t]*\n", re.DOTALL)
+
+
+def _raw_frontmatter(src_path: str) -> str:
+    """
+    Return the page's frontmatter block as written in the source file.
+    """
+    try:
+        with open(src_path, encoding="utf-8-sig") as f:
+            source = f.read()
+    except OSError:
+        return ""
+    match = FRONTMATTER_RE.match(source)
+    return match.group(0) if match else ""
+
+
+def on_page_markdown(markdown, page, config, **kwargs):
+    """Write Markdown files to a parallel .md file in the build output.
+
+    For example, it creates the file `SITE_DIR/cloud/ai-gateway/overview.md`
+    alongside the HTML page.
+    """
+    site_dir = config["site_dir"]
+    # page.url is like "cloud/ai-gateway/overview/" so strip trailing slash
+    # to produce "cloud/ai-gateway/overview.md".
+    # When use_directory_urls is false, page.url ends in .html so strip that too.
+    url_path = page.url.rstrip("/")
+    if url_path.endswith(".html"):
+        url_path = url_path[:-5]
+    # If page.url is the homepage, after the rstrip, it becomes ""
+    if not url_path:
+        url_path = "index"
+    md_output_path = os.path.join(site_dir, url_path + ".md")
+    parent_dir = os.path.dirname(md_output_path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
+    with open(md_output_path, "w", encoding="utf-8") as f:
+        frontmatter = _raw_frontmatter(page.file.abs_src_path)
+        if frontmatter:
+            f.write(frontmatter)
+            if not markdown.startswith("\n"):
+                f.write("\n")
+        f.write(markdown)
+    return markdown

@@ -1,8 +1,8 @@
 # Customize Developer Portal Manually for your Organization
 
-Developer portal allows you to customize the user interfaces(UIs)in organization level as well as in API level. with this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
+Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
-Customization take place at two levels:
+Customization takes place at two levels:
 
 - Org Level : This functions as the default branding and applies to all APIs in an organization.
 - API Level : Each API can have its own branding. This overrides the organizational level branding applied by default to the organization.
@@ -19,7 +19,7 @@ This creates the organization and opens the **Project Home** page of the default
 
 ## Get into `Developer Portal` tab
 
-Go though the below steps to get the `Developer Portal` tab.
+Go through the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
 - In the left navigation menu, click `Admin` and then click `Settings`.
@@ -33,17 +33,17 @@ Go through the following steps to customize the theme of the Devportal in the AP
 
 ### HTML
 
-The `HTML` tab will show the the read only view reference to the HTML structure of APIs in your organization. To edit the content of this page go to [Customize API Landing Page content](#customize-api-landing-page-content).
+The `HTML` tab will show the read only view reference to the HTML structure of APIs in your organization. To edit the content of this page go to [Customize API Landing Page content](#customize-api-landing-page-content).
 
 ### Org level CSS
 
-This tab will shows the reference to main CSS from the the organizational level theme settings.
+This tab will show the reference to the main CSS from the organizational level theme settings.
 
 ### CSS
 
 Here you can adjust appearance of the API Overview page by changing the css styles.
 
-![API Level CSS](../../assets/img/devportal/api-level-css.png)
+![API Level CSS editor showing stylesheet rules alongside a developer portal preview panel](../../assets/img/devportal/api-level-css.png)
 
 1. Replace the following sections in the CSS, You can see the changes in the preview.
 
@@ -64,7 +64,7 @@ Here you can adjust appearance of the API Overview page by changing the css styl
 
     ```
 
-    ![API Level CSS Preview](../../assets/img/devportal/api-level-css-preview.png)
+    ![CSS editor with highlighted key-benefit-item rules and preview showing updated heading and paragraph styles](../../assets/img/devportal/api-level-css-preview.png)
 
 2. Click **Publish to Developer Portal** to publish the CSS changes.
 
@@ -75,7 +75,7 @@ To customize the content of an API go through the following steps.
 1. Select a **Project** in your organization.
 2. Select an **API** to do the customization.
 
-    ![Select an API](../../assets/img/devportal/select-an-api.png)
+    ![Breadcrumb navigation showing Organization org01, Project Default, and API Proxies Reading List API selected](../../assets/img/devportal/select-an-api.png)
 
 3. Click **Documents** under **Develop** from the sidebar.
 4. Go to **API Landing Page** tab.
@@ -127,5 +127,5 @@ To customize the content of an API go through the following steps.
     </div>
     ```
 
-    ![API Level content changes](../../assets/img/devportal/api-level-content-changes.png)
+    ![HTML editor with API landing page code and preview showing Overview, Key Capabilities, and Use this API sections](../../assets/img/devportal/api-level-content-changes.png)
 

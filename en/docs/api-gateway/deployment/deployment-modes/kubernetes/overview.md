@@ -1,18 +1,32 @@
-# API Platform Kubernetes Gateway (V2)
+---
+title: "API Platform Kubernetes Gateway (V2.0.0)"
+description: "Overview of API Platform Kubernetes Gateway V2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview.md
+tags:
+  - api-gateway
+  - kubernetes
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "overview"
+---
 
-API Platform Kubernetes Gateway (V2) is the latest evolution of the WSO2 APK Kubernetes gateway experience.  
-If you are coming from WSO2 APK `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
+# API Platform Kubernetes Gateway (V2.0.0)
+
+API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway experience.  
+If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
 
 - Previous generation (reference): [WSO2 APK 1.3.0 docs](https://apk.docs.wso2.com/en/latest/)
-- Current generation: API Platform Kubernetes Gateway V2 (this documentation set)
+- Current generation: API Platform Kubernetes Gateway V2.0.0 (this documentation set)
 
-## What Is New in V2
+## What Is New in V2.0.0
 
 - Unified API Platform gateway model for both standalone and operator-driven deployments.
 - Native support for Kubernetes Operator workflows and GitOps-style resource management.
 - Flexible API exposure model:
-  - API Platform CRDs (`APIGateway`, `RestApi`, and related CRDs)
-  - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
+    - API Platform CRDs (`APIGateway`, `RestApi`, and related CRDs)
+    - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
 - Improved extensibility for policies and secret/config-based parameter references.
 
 ## Deployment Modes
@@ -33,8 +47,8 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
 
 - Installs the Gateway Operator via Helm.
 - Supports:
-  - API Platform CRD path (`APIGateway` + `RestApi`)
-  - Kubernetes Gateway API path (`Gateway` + `HTTPRoute`)
+    - API Platform CRD path (`APIGateway` + `RestApi`)
+    - Kubernetes Gateway API path (`Gateway` + `HTTPRoute`)
 - Guide: [`gateway-operator.md`](./gateway-operator.md)
 
 ## How to Choose a Mode

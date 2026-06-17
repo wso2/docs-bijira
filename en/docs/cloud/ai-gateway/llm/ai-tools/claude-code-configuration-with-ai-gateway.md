@@ -231,7 +231,7 @@ WSO2 provides integrated analytics, powered by Moesif, and also supports integra
 
 The following example shows Moesif being used to view analytics.  
 
-[![analytics token usage example](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)
+[![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)
 
 For more information on Analytics, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/monitoring-and-insights/integrate-bijira-with-moesif/)
 
@@ -249,7 +249,7 @@ By applying guardrails, you can enforce security and compliance policies such as
 
 For example, a **PII Masking Regex Guardrail** can be configured in the request flow to prevent Personally Identifiable Information (PII) from reaching Anthropic API. If a user submits a prompt containing PII, the guardrail evaluates the request against defined patterns and redacts them before they reach Anthropic API.
 
-[![claude code guardrail example](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-guardrail-redacted-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-guardrail-redacted-example.png)
+[![Claude Code terminal showing phone number redacted as asterisks after PII masking guardrail intercepts prompt](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-guardrail-redacted-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-guardrail-redacted-example.png)
 
 For more information on AI Guardrails, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/guardrails/pii-masking-regex/)
 
@@ -263,7 +263,7 @@ For example, you can create an AI subscription policy with a limited request cou
 
 This helps control token consumption and avoid unexpected costs.
 
-[![claude code rate limit example](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit.png)
+[![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-rate-limit-example.png)
 
 For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
 
@@ -277,10 +277,10 @@ As a simple example, you can configure a Prompt Decorator in the request flow to
 
 The following screenshot shows Claude Code responding to a simple prompt with no Prompt Decorator.
 
-[![claude code prompt decorator example](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example.png)
+[![Claude Code terminal showing lengthy capability list response to "Hello! What can you do?" prompt](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example.png)
 
 The following screenshot shows Claude Code responding to that same prompt with a Prompt Decorator configured to append the following decoration: "Be very concise. Use as little words as possible when answering."
 
-[![claude code prompt decorator example](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example-2.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example-2.png)
+[![Claude Code terminal showing short bulleted response after brevity Prompt Decorator is applied](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example-2.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/claude-code-prompt-decorator-example-2.png)
 
 For more information on Prompt Management, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/prompt-management/prompt-decorator/)

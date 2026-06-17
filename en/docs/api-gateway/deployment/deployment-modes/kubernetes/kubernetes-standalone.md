@@ -255,4 +255,4 @@ curl -k https://localhost:8443/reading-list/v1.0/books
 ## Next Steps
 
 - For operator-managed lifecycle and CRDs, see [Kubernetes Operator deployment mode](./gateway-operator.md).
-- For mode comparison and migration context from APK 1.3.0, see the [deployment modes overview page](./overview.md).
+- For mode comparison and migration context from Kubernetes Gateway 1.3.0, see the [deployment modes overview page](./overview.md).

@@ -16,7 +16,7 @@ This model fits APIs where you need tiered access, usage limits, or clear commer
 3. Go to **Manage** → **Monetize**.
 4. Enable the **Subscription Plan Status** toggle for each plan you want to offer for this API by toggling **Enabled** field.
 
-    ![Enable Subscription Plans](../../../assets/img/api-platform-gateway/subscriptions/subscription-plan-enable.png)
+    ![Subscription Plans page listing 3PerMin, Bronze, Gold, Silver, and Unlimited plans with all Enabled toggles turned on](../../../assets/img/api-platform-gateway/subscriptions/subscription-plan-enable.png)
 
 For detailed steps and field behavior, see [Assign Subscription Plans to APIs](../../develop-api-proxy/subscription-plans.md).
 
@@ -24,63 +24,63 @@ For detailed steps and field behavior, see [Assign Subscription Plans to APIs](.
 
 1. Go to **Develop** → **Policies**.
 
-    ![Policies Overview](../../../assets/img/api-platform-gateway/subscriptions/policies-overview.png)
+    ![Policies page showing Global Policies API Level section with available policy list including API Key Auth, Basic Auth, CORS, and JWT Auth](../../../assets/img/api-platform-gateway/subscriptions/policies-overview.png)
 
 2. Select **Subscription Validation** policy.
 
-    ![Select Sub Val Policy](../../../assets/img/api-platform-gateway/subscriptions/select-sub-val-policy.png)
+    ![Configure Policy dialog showing Subscription Validation policy with description and Advanced Settings section](../../../assets/img/api-platform-gateway/subscriptions/select-sub-val-policy.png)
 
 3. (Optional) Configure Subscription Header/Cookie value in the policy Advanced Section.
 
-    ![Select Sub Val Policy Advanced](../../../assets/img/api-platform-gateway/subscriptions/select-sub-val-policy-advanced.png)
+    ![Subscription Validation Configure Policy dialog with Advanced Settings expanded showing subscriptionKeyHeader and subscriptionKeyCookie input fields](../../../assets/img/api-platform-gateway/subscriptions/select-sub-val-policy-advanced.png)
 
 4. Click **Add** to attach the policy to API level policy.
 
 5. Click **Save** to save the API.
 
-    ![Policies Save](../../../assets/img/api-platform-gateway/subscriptions/policy-save.png)
+    ![Policies page showing Subscription Validation added to Global Policies API Level section with unsaved changes warning and Save button](../../../assets/img/api-platform-gateway/subscriptions/policy-save.png)
 
 ## Deploy the API
 
 1. Go to **Deploy** and click **Deploy**.
 
-    ![Deploy API](../../../assets/img/api-platform-gateway/subscriptions/deploy-api.png)
+    ![Deploy page showing Self Local Dev GW GA gateway with Active deployment status and Deploy button](../../../assets/img/api-platform-gateway/subscriptions/deploy-api.png)
 
 ## Publish the API
 
 1. Go to **Manage** → **Lifecycle**.
 
-    ![LifeCycle Created](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-created.png)
+    ![Lifecycle Management page showing API in Created state with Pre-release and Publish action buttons and state transition diagram](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-created.png)
 
 2. Click **Publish**.
 3. In the publish dialog, confirm the display name and production endpoint and click **Confirm**. The lifecycle state becomes **Published**.
 
-    ![LifeCycle Published](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-published.png)
+    ![Lifecycle Management page showing API in Published state with Pre-release, Demote to Created, and Deprecate action buttons](../../../assets/img/api-platform-gateway/subscriptions/lifecycle-published.png)
 
 ## Subscribe to the API
 
 1. Navigate to Developer Portal by clicking **Developer Portal**.
 
-    ![Navigate to Devportal](../../../assets/img/api-platform-gateway/subscriptions/navigate-devportal.png)
+    ![API Platform Console header showing AI Workspace and Developer Portal navigation buttons](../../../assets/img/api-platform-gateway/subscriptions/navigate-devportal.png)
 
 2. Consumers can find the API in the Developer Portal by going to **APIs**.
 3. Select the API and click **Subscribe**.
 
-    ![Select API to Subscribe](../../../assets/img/api-platform-gateway/subscriptions/select-api-to-subscribe.png)
+    ![Developer Portal API card for Reading List v1.0 REST API showing Plans count and Subscribe button](../../../assets/img/api-platform-gateway/subscriptions/select-api-to-subscribe.png)
 
 4. Pick a Subscription plan and click **Subscribe**.
 
-    ![Select Plan to Subscribe](../../../assets/img/api-platform-gateway/subscriptions/select-plan-to-subscribe.png)
+    ![Choose Your Subscription Plan dialog showing Bronze, Gold, Silver, Unlimited, and 3PerMin plans with pricing and rate limits](../../../assets/img/api-platform-gateway/subscriptions/select-plan-to-subscribe.png)
 
 5. You will receive a Subscription Token.
 
-    ![Receive Subscription Token](../../../assets/img/api-platform-gateway/subscriptions/recieve-sub-token.png)
+    ![Subscription Created dialog showing generated subscription token value and Subscription-Key usage instruction](../../../assets/img/api-platform-gateway/subscriptions/recieve-sub-token.png)
 
 ## Invoke the API
 
 1. Receive the **cURL** to invoke the API using the Subscription Token by navigating to the **Documentation**.
 
-    ![Document API](../../../assets/img/api-platform-gateway/subscriptions/document-api.png)
+    ![API documentation page for GET /books endpoint showing Subscription-Key header field and cURL sample request with Subscription-Key](../../../assets/img/api-platform-gateway/subscriptions/document-api.png)
 
 2. Invoke the API.
 
@@ -95,7 +95,7 @@ For detailed steps and field behavior, see [Assign Subscription Plans to APIs](.
 
     #### Sample Response
 
-    ![Invoke API](../../../assets/img/api-platform-gateway/subscriptions/invoke-api.png)
+    ![Terminal output of curl command returning JSON array of book objects from the reading list API](../../../assets/img/api-platform-gateway/subscriptions/invoke-api.png)
 
 
 

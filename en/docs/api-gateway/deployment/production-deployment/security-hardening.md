@@ -1,3 +1,17 @@
+---
+title: "Security Hardening"
+description: "Configure the necessary security areas before deploying API Platform Gateway to production."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening/
+md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening.md
+tags:
+  - security
+  - api-management
+  - devops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "how-to"
+---
+
 # Security Hardening
 
 This page covers the three security areas that must be configured before a production deployment: encryption keys for data at rest, TLS for data in transit, and authentication for access control.

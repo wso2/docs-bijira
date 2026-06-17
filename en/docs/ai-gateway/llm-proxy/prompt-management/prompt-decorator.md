@@ -1,3 +1,17 @@
+---
+title: "Prompt Decorator"
+description: "Prepend or append custom content to LLM prompts, injecting system messages or standard instructions before requests reach the model."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-decorator/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-decorator.md
+tags:
+  - ai-gateway
+  - llm
+  - prompt-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # Prompt Decorator
 
 ## Overview

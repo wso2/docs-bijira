@@ -39,13 +39,13 @@ Follow these steps to generate a custom SDK and sample application code.
     !!! note
         The **Generate SDK** button activates when you select at least one API.
 
-    ![Select APIs](../../../assets/img/devportal/ai_sdk_gen_button.png)
+    ![Subscribed API Proxies table with two APIs checked and Generate SDK button highlighted](../../../assets/img/devportal/ai_sdk_gen_button.png)
 
 ### Step 2: Generate SDK
 
 1. Click **Generate SDK** to open the SDK generation panel.
 
-    ![SDK Drawer](../../../assets/img/devportal/sdk_drawer.png)
+    ![Generate SDK side panel with Java and Javascript language options and SDK Requirement text field](../../../assets/img/devportal/sdk_drawer.png)
 
 2. Select your preferred programming language from the dropdown (for example, Java).
 3. Describe your use case to help the AI generate relevant code.
@@ -56,7 +56,7 @@ Follow these steps to generate a custom SDK and sample application code.
 4. Click the **Arrow** button to start generation.
 5. The system generates your custom SDK and sample code. When complete, it downloads a ZIP file containing both the SDK and sample application code.
 
-![SDK Download](../../../assets/img/devportal/sdk_generation_in_progress.png)
+![Generate SDK panel showing Generating SDK progress bar at 40 percent with in-progress status message](../../../assets/img/devportal/sdk_generation_in_progress.png)
 
 ## Important Notes
 

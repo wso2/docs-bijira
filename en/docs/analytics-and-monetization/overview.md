@@ -1,3 +1,17 @@
+---
+title: "Analytics and Monetization with Moesif"
+description: "Use the Moesif integration in WSO2 API Platform for API analytics, usage-based billing, governance, and proactive monitoring of APIs and AI endpoints."
+canonical_url: https://wso2.com/api-platform/docs/analytics-and-monetization/overview/
+md_url: https://wso2.com/api-platform/docs/analytics-and-monetization/overview.md
+tags:
+  - analytics
+  - monetization
+  - api-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "concept"
+---
+
 # Analytics and Monetization with Moesif
 
 To provide enterprise-grade observability and usage-based billing, WSO2 API Platform integrates directly with Moesif, a leading analytics and monetization platform for AI and API products. 

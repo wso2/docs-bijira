@@ -1,8 +1,8 @@
 # Customize Developer Portal Manually for your Organization
 
-Developer portal allows you to customize the user interfaces(UIs)in organization level as well as in API level. with this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
+Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
-Customization take place at two levels:
+Customization takes place at two levels:
 
 - Org Level : This functions as the default branding and applies to all APIs in an organization.
 - API Level : Each API can have its own branding. This overrides the organizational level branding applied by default to the organization.
@@ -19,7 +19,7 @@ This creates the organization and opens the **Project Home** page of the default
 
 ## Get into `Developer Portal` tab
 
-Go though the below steps to get the `Developer Portal` tab.
+Go through the below steps to get the `Developer Portal` tab.
 
 - Close the project tab selected by default. Then the `Organization` tab will be selected.
 - In the left navigation menu, click `Admin` and then click `Settings`.
@@ -37,26 +37,26 @@ Go through the following steps to customize the theme of the Devportal in the or
 4. Click on each color field to open the color selection interface and choose your desired colors.
 5. The preview panel on the right will show real-time changes as you modify the colors.
 
-    ![Customized theme preview](../../assets/img/devportal/customized_theming.png)
+    ![Org Level Theme Settings showing Color Palette fields for Background, Primary, Secondary, Text, and Gradient with live portal preview](../../assets/img/devportal/customized_theming.png)
 
 4. Expand the dropdown for `Typography` and select the font (e.g., Arial Black).
 
-    ![Customized font](../../assets/img/devportal/customized_font.png)
+    ![Theme Settings page with Typography section expanded and Arial Black selected in the Font dropdown](../../assets/img/devportal/customized_font.png)
 
 5. If you want to save these changes as a draft, select  `Save As Draft`.
 
 6. If it perfectly aligns with your organization's unique identity, click `Publish To Developer Portal`.
 
-    ![Publish to Devportal](../../assets/img/devportal/publish_to_devportal.png)
+    ![Theming header bar showing Save As Draft and Publish To Developer Portal buttons with Org Level tab active](../../assets/img/devportal/publish_to_devportal.png)
 
 7. Go to `Developer Portal` to see the changes.
 
-    ![View Devportal](../../assets/img/devportal/view_devportal.png)
+    ![API Platform console header showing the Developer Portal button highlighted next to the Upgrade button](../../assets/img/devportal/view_devportal.png)
 
 ### HTML
 
 1. Select `HTML` tab. You can edit the HTML structure of pages.
-2. paste the below html code for `hero-section` .
+2. Paste the below HTML code for `hero-section`.
 
     ``` html
     <section class="hero-section">
@@ -95,7 +95,7 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with HTML](../../assets/img/devportal/change_with_html.png)
+    ![HTML editor with hero section code and preview showing sample heading and Browse our APIs button](../../assets/img/devportal/change_with_html.png)
 
 ### CSS
 
@@ -114,20 +114,20 @@ Go through the following steps to customize the theme of the Devportal in the or
 
 3. The changes can be seen in the preview section.
 
-    ![Change with CSS](../../assets/img/devportal/change_with_css.png)
+    ![CSS editor with hero-title rule highlighted and preview showing large bold Empower your development heading](../../assets/img/devportal/change_with_css.png)
 
 ### Referenced CSS
 
 This section shows the reference for the main CSS from the theme settings you assigned at the beginning.
 
-![Referenced CSS](../../assets/img/devportal/referenced_css.png)
+![Referenced CSS tab showing read-only stylesheet with imported CSS files and CSS variable declarations](../../assets/img/devportal/referenced_css.png)
 
 ### Assets
 
 01. The Logo of the devportal can be changed by clicking `Choosing File` under Devportal Logo.
 
-    ![Upload Devportal Logo](../../assets/img/devportal/devportal_logo_upload.png)
+    ![Assets tab showing Devportal Logo section with Choose File button and current logo thumbnail in preview](../../assets/img/devportal/devportal_logo_upload.png)
 
 02. After adding the image you can see the finalized changes in the preview.
 
-    ![Uploaded Logo](../../assets/img/devportal/uploaded_logo.png)
+    ![Assets tab showing uploaded flower logo thumbnail and portal preview with new logo in the header](../../assets/img/devportal/uploaded_logo.png)

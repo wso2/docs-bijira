@@ -1,3 +1,17 @@
+---
+title: "Prompt Template"
+description: "Replace 'template://' URI patterns in LLM request payloads with predefined, parameterized prompt templates."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-template/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-template.md
+tags:
+  - ai-gateway
+  - llm
+  - prompt-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # Prompt Template
 
 ## Overview

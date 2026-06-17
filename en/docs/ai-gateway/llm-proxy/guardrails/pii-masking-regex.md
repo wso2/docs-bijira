@@ -1,3 +1,17 @@
+---
+title: "PII Masking Regex Guardrail"
+description: "Mask or redact personally identifiable information from LLM request and response bodies using configurable regex patterns."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/pii-masking-regex/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/pii-masking-regex.md
+tags:
+  - ai-gateway
+  - guardrails
+  - security
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # PII Masking Regex Guardrail
 
 ## Overview
@@ -111,7 +125,7 @@ EOF
 
 **Test the guardrail:**
 
-**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file. or remove the vhost from the llm provider configuration and use localhost to invoke.
+**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the llm provider configuration and use localhost to invoke.
 
 ```bash
 # Request with PII (should be masked)

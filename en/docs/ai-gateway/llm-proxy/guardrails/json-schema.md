@@ -1,3 +1,17 @@
+---
+title: "JSON Schema Guardrail"
+description: "Validate LLM request and response body content against a JSON Schema definition to enforce structured data formats."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/json-schema/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/json-schema.md
+tags:
+  - ai-gateway
+  - guardrails
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "reference"
+---
+
 # JSON Schema Guardrail
 
 ## Overview
@@ -114,7 +128,7 @@ EOF
 
 **Test the guardrail:**
 
-**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file. or remove the vhost from the llm provider configuration and use localhost to invoke.
+**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the llm provider configuration and use localhost to invoke.
 
 ```bash
 # Valid request (should pass)

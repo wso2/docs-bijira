@@ -1,3 +1,17 @@
+---
+title: "WSO2 API Manager Overview"
+description: "A high-level map of WSO2 API Manager's capabilities for designing, governing, and monetizing APIs across cloud, on-premise, and hybrid architectures."
+canonical_url: https://wso2.com/api-platform/docs/api-manager/overview/
+md_url: https://wso2.com/api-platform/docs/api-manager/overview.md
+tags:
+  - api-manager
+  - api-management
+  - governance
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-11
+content_type: "concept"
+---
+
 # WSO2 API Manager Overview
 
 WSO2 API Manager is a complete platform for building, integrating, and exposing your digital services as managed APIs. Irrespective of cloud, on-premise, or hybrid architectures, API Manager provides the tools to drive your digital transformation strategy from design to deployment.

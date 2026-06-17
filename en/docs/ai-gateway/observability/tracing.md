@@ -1,3 +1,17 @@
+---
+title: "Gateway Tracing"
+description: "Configure distributed tracing for API Platform AI Gateway using OpenTelemetry and Jaeger, with support for cloud-native tracing backends."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/observability/tracing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/observability/tracing.md
+tags:
+  - ai-gateway
+  - observability
+  - devops
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-16
+content_type: "how-to"
+---
+
 # Gateway Tracing
 
 This guide explains how to implement and configure distributed tracing for the API Platform Gateway components.
