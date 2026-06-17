@@ -1,3 +1,16 @@
+---
+title: "Gateway Controller Management API"
+description: "Overview of the API Platform Gateway Controller REST API for managing REST APIs, MCP proxies, LLM providers, certificates, and secrets."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/overview.md
+tags:
+  - api-gateway
+  - management-api
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "overview"
+---
+
 # Gateway Controller Management API v0.9.0
 
 The Gateway Controller Management API is a RESTful API for managing configurations in the WSO2 API Platform Gateway.

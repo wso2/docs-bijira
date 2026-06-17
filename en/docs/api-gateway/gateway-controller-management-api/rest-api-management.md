@@ -1,4 +1,18 @@
-<h1 id="gateway-controller-management-api-rest-api-management">Rest API Management</h1>
+---
+title: "Management API: REST API Management"
+description: "REST API reference for creating, listing, updating, and deleting REST API configurations, API keys, and subscriptions via the Gateway Controller."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/rest-api-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/rest-api-management.md
+tags:
+  - api-gateway
+  - management-api
+  - rest-api
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
+# Rest API Management
 
 CRUD operations for Rest APIs
 

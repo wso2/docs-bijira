@@ -1,3 +1,18 @@
+---
+title: "View Traces in Jaeger"
+description: "Access the Jaeger UI and search for distributed traces from API Platform Gateway components."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/viewing-traces-in-jaeger/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/viewing-traces-in-jaeger.md
+tags:
+  - api-gateway
+  - observability
+  - tracing
+  - jaeger
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Viewing Traces in Jaeger
 
 Once you've started the gateway with the tracing profile, follow these steps to view distributed traces:

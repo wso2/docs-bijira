@@ -1,3 +1,17 @@
+---
+title: "Analytics Header Filter Policy"
+description: "Control which request and response headers are captured in analytics using allow or deny mode in API Platform Gateway."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/analytics/analytics-header-filter/
+md_url: https://wso2.com/api-platform/docs/api-gateway/analytics/analytics-header-filter.md
+tags:
+  - api-gateway
+  - analytics
+  - observability
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
 # Analytics Header Filter
 
 ## Overview

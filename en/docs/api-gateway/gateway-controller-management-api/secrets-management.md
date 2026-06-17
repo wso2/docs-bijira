@@ -1,4 +1,18 @@
-<h1 id="gateway-controller-management-api-secrets-management">Secrets Management</h1>
+---
+title: "Management API: Secrets Management"
+description: "REST API reference for creating, listing, retrieving, updating, and deleting secrets in API Platform Gateway."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/secrets-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/secrets-management.md
+tags:
+  - api-gateway
+  - management-api
+  - security
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
+# Secrets Management
 
 CRUD operations for Secrets
 

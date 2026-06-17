@@ -1,3 +1,17 @@
+---
+title: "Export Traces to Alternative Backends"
+description: "Configure API Platform Gateway to export OpenTelemetry traces to alternative backends including Moesif, Datadog, and New Relic."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/alternative-backends/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/alternative-backends.md
+tags:
+  - api-gateway
+  - observability
+  - tracing
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Alternative Tracing Backends
 
 While the default setup uses Jaeger, the gateway components use OpenTelemetry and can export to any OTLP-compatible backend.

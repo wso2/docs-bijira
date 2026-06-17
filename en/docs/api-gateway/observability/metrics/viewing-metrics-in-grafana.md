@@ -1,3 +1,18 @@
+---
+title: "View Metrics in Grafana"
+description: "Access pre-built Grafana dashboards to view and explore API Platform Gateway component metrics."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/viewing-metrics-in-grafana/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/viewing-metrics-in-grafana.md
+tags:
+  - api-gateway
+  - observability
+  - metrics
+  - grafana
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Viewing Metrics in Grafana
 
 Once you've started the gateway with the metrics profile, follow these steps to view component metrics:
