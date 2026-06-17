@@ -66,7 +66,7 @@ In this deployment model, API deployments are received by one of the Gateway Con
 
 This ensures that all Gateway Controller replicas operate with a consistent deployment state and that each runtime environment receives the latest API configuration.
 
-![HA deployment with two Gateway Controller replicas in MZ zone syncing via PostgreSQL, serving Runtime replicas in DMZ and Environment 01 zones](../../assets/img/api-gateway/high-availability-deployment-example.png)
+![High-availability setup example](../../assets/img/api-platform-gateway/gateway/high-availability-architecture.png)
 
 ### Architecture Overview
 
@@ -95,6 +95,8 @@ Each Gateway Controller replica can manage one or more Gateway Runtime replicas.
 High availability is achieved by removing dependency on a single controller instance.
 
 If an API deployment request is received by **Gateway Controller Replica 01**, that replica stores the deployment state in PostgreSQL. **Gateway Controller Replica 02** can then read the same deployment state from the database and synchronize it with the Gateway Runtime replicas connected to it.
+
+![High-availability behavior](../../../assets/img/api-gateway/high-availability-deployment-example.png)
 
 If one Gateway Controller replica becomes unavailable, another replica can continue to process deployment requests and synchronize runtime configuration based on the state stored in the database.
 
