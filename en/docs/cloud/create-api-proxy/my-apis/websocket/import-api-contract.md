@@ -13,7 +13,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Import API Contract
+# Import API contract
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.
 
@@ -35,7 +35,7 @@ In this guide, you will:
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-## Create an API Proxy
+## Create an API proxy
 
 In this guide, you will specify a URL to an AsyncAPI definition of a sample API to create a WebSocket API proxy.
 
@@ -52,19 +52,19 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
 6. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-## Configure and Deploy the API Proxy
+## Configure and deploy the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click it.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> Console** page of the API Proxy.
 2. Use the Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API Proxy
+## Promote the API proxy to production and publish the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.
@@ -72,6 +72,6 @@ In this guide, you will specify a URL to an AsyncAPI definition of a sample API 
 4. Click **Publish**.
 5. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
 
-## API Proxy Behavior
+## API proxy behavior
 
 This Chat Service API Proxy enables clients to establish persistent connections with the server, allowing multiple users to connect simultaneously and exchange real-time messages. It also supports broadcasting messages to all users participating in the chat.

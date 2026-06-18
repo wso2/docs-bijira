@@ -1,6 +1,6 @@
-# MCP Proxies Overview
+# MCP proxies overview
 
-## What is Model Context Protocol?
+## What is model context protocol?
 
 MCP is a JSON-RPC–based protocol designed to standardize how applications interact with large language models (LLMs). It enables sharing of contextual information—such as local files, databases, or APIs—with LLMs, while also allowing applications to expose tools and capabilities for AI-driven workflows and integrations.
 
@@ -8,12 +8,12 @@ MCP follows a host–client–server architecture and supports two primary trans
 
 For more information, refer to the official [specification](https://modelcontextprotocol.io/introduction).
 
-## What is an MCP Proxy?
+## What is an MCP proxy?
 
 An MCP Proxy lets you connect the gateway to an upstream MCP Server. The MCP Clients can connect to the dedicated endpoint provided by the gateway to connect to your upstream MCP Server.
 The proxy allows you to apply various policies which allow you to control the MCP traffic through the gateway.
 
-## What does an MCP Proxy offer?
+## What does an MCP proxy offer?
 
 While MCP defines an RPC-based communication model between agents and tools, it does not fully address the complexities of real-world enterprise environments.
 
@@ -23,7 +23,7 @@ While MCP defines an RPC-based communication model between agents and tools, it 
 
 MCP Proxy will address these challenges providing built-in security, governance, and observability for all MCP communication.
 
-## Next Steps
+## Next steps
 
 - [Configure MCP Proxy](configure-proxy.md) — Step-by-step guide to create and deploy your first proxy
 - [Apply Policies](apply-policies.md) — Apply policies after deployment

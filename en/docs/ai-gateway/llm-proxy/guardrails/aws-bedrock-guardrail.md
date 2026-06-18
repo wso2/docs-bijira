@@ -1,5 +1,5 @@
 ---
-title: "AWS Bedrock Guardrail"
+title: "AWS Bedrock guardrail"
 description: "Validate LLM request and response content against AWS Bedrock Guardrails for content filtering, topic detection, and PII masking."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/aws-bedrock-guardrail/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/aws-bedrock-guardrail.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# AWS Bedrock Guardrail
+# AWS Bedrock guardrail
 
 ## Overview
 
@@ -37,7 +37,7 @@ The policy supports multiple authentication modes including AWS IAM role assumpt
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -46,7 +46,7 @@ The policy supports multiple authentication modes including AWS IAM role assumpt
 | `passthroughOnError` | boolean | No | `false` | If `true`, allows requests to proceed if AWS Bedrock Guardrail API call fails. If `false`, blocks requests on API errors. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information from AWS Bedrock Guardrail in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -54,7 +54,7 @@ The policy supports multiple authentication modes including AWS IAM role assumpt
 | `passthroughOnError` | boolean | No | `false` | If `true`, allows requests to proceed if AWS Bedrock Guardrail API call fails. If `false`, blocks requests on API errors. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information from AWS Bedrock Guardrail in error responses. |
 
-### System Parameters (Required)
+### System parameters (required)
 
 These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
 
@@ -71,7 +71,7 @@ These parameters are typically configured at the gateway level and automatically
 | `awsRoleExternalID` | string | No | External ID for role assumption (optional, for cross-account access security). |
 
 
-### Configuring System Parameters in config.toml
+### Configuring system parameters in config.toml
 
 System parameters can be configured globally in the gateway's `config.toml` file. These values serve as defaults for all AWS Bedrock Guardrail policy instances and can be overridden per-policy in the API configuration if needed.
 
@@ -91,7 +91,7 @@ awsbedrock_role_region = ""
 awsbedrock_role_external_id = ""
 ```
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -103,15 +103,15 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## PII Handling
+## PII handling
 
-### Masking Mode (redactPII: false)
+### Masking mode (redactpii: false)
 
 When `redactPII` is `false`:
 - **Request phase**: PII entities are masked with placeholders like `EMAIL_0001`, `PHONE_0002`, etc.
 - Use this mode when you need PII to flow through the system but want it masked during processing
 
-### Redaction Mode (redactPII: true)
+### Redaction mode (redactpii: true)
 
 When `redactPII` is `true`:
 - PII entities are permanently replaced with `*****`
@@ -120,7 +120,7 @@ When `redactPII` is `true`:
 
 ## Examples
 
-### Example 1: Basic Guardrail with Static Credentials
+### Example 1: basic guardrail with static credentials
 
 Deploy an LLM provider with AWS Bedrock Guardrail validation:
 
@@ -200,7 +200,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 2: PII Redaction Mode
+### Example 2: PII redaction mode
 
 Configure to redact PII:
 
@@ -220,7 +220,7 @@ policies:
             jsonPath: "$.choices[0].message.content"
 ```
 
-## Use Cases
+## Use cases
 
 1. **Content Safety**: Enforce enterprise content policies to prevent inappropriate or harmful content from being processed or returned.
 
@@ -236,7 +236,7 @@ policies:
 
 7. **Audit and Monitoring**: Use detailed assessment information to audit content violations and improve policies.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

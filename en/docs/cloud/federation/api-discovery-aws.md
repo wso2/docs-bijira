@@ -14,7 +14,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 1: Configure User Credentials in AWS API Gateway
+## Step 1: configure user credentials in AWS API Gateway
 
 1. Login to your AWS account and navigate to Console Home. Search for "IAM" in the search bar.
 2. Click on the IAM service. Navigate to Users under Access Management.
@@ -26,7 +26,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 2: Add an External Gateway in API Platform
+## Step 2: add an external gateway in API Platform
 
 Now that you have your AWS credentials ready, configure the external gateway connection in API Platform.
 
@@ -49,7 +49,7 @@ The external gateway is now connected to API Platform and ready for API discover
 
 ---
 
-## Step 3: Discover APIs from the Gateway
+## Step 3: discover APIs from the gateway
 
 Once the external gateway is configured, you can discover and federate APIs into API Platform.
 

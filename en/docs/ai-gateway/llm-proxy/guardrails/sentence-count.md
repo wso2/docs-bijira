@@ -1,5 +1,5 @@
 ---
-title: "Sentence Count Guardrail"
+title: "Sentence count guardrail"
 description: "Enforce minimum and maximum sentence count limits on LLM request and response content using the Sentence Count guardrail."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/sentence-count/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/sentence-count.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Sentence Count Guardrail
+# Sentence count guardrail
 
 ## Overview
 
@@ -30,7 +30,7 @@ The Sentence Count Guardrail validates the sentence count of request or response
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -40,7 +40,7 @@ The Sentence Count Guardrail validates the sentence count of request or response
 | `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is NOT within the min-max range. If `false`, validation passes when sentence count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -50,7 +50,7 @@ The Sentence Count Guardrail validates the sentence count of request or response
 | `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is NOT within the min-max range. If `false`, validation passes when sentence count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -61,7 +61,7 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## Sentence Detection
+## Sentence detection
 
 Sentences are detected based on standard sentence-ending punctuation marks:
 - Period (.)
@@ -72,7 +72,7 @@ The guardrail counts sequences of characters ending with these punctuation marks
 
 ## Examples
 
-### Example 1: Basic Sentence Count Validation
+### Example 1: basic sentence count validation
 
 Deploy an LLM provider that ensures requests contain between 1 and 10 sentences:
 
@@ -153,7 +153,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -165,7 +165,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
 1. **Content Quality Assurance**: Ensure responses meet minimum sentence requirements for completeness and clarity.
 
@@ -177,7 +177,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Cost Management**: Control response length to manage token usage and associated costs.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

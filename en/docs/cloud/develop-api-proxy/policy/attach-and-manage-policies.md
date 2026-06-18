@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Attach and Manage Policies
+# Attach and manage policies
 
 You can easily attach one or more policies to an API proxy component implementation via the API Platform Console. If necessary, you can also rearrange or swap the policies you attach.
 
@@ -36,9 +36,9 @@ When a mediation policy is attached to a specific flow, the API invocation under
 
 - If an error occurs during the execution of policies or due to an internal error, API Platform executes the `Error` flow and sends an error response to the client.
 
-## Attach a Policy
+## Attach a policy
 
-### Attach an API level Policy
+### Attach an API level policy
 
 To attach an API level policy to the `Request` flow of a REST API proxy, follow the steps given below:
 
@@ -53,7 +53,7 @@ To attach an API level policy to the `Request` flow of a REST API proxy, follow 
     ![Configure Pass User Context to Backend policy panel with End User Token Audiences input field](../../../assets/img/develop-api-proxy/policy/configure-policy-API-level.png)
 7. Click **Add** to attach the policy. Then, click **Save** to apply the configuration to the API.  
 
-### Attach a Resource level Policy
+### Attach a resource level policy
 
 To attach a resource level policy to the `Request`, `Response`, or `Error` flow of a REST API proxy, follow the steps given below:
 
@@ -84,7 +84,7 @@ To deploy the API follow the steps below:
 
 3. Click **Save & Deploy**.
 
-## Refresh Mediation Policies
+## Refresh mediation policies
 
 API Platform selectively generates and builds the mediation application code during component deployment depending on specific changes. These changes include:
 
@@ -121,7 +121,7 @@ Alternatively, you can set the access token via the `BALLERINA_CENTRAL_ACCESS_TO
 export BALLERINA_CENTRAL_ACCESS_TOKEN=<access-token> 
 ```
 
-### Step 1: Initialize a Ballerina project
+### Step 1: initialize a ballerina project
 
 API Platform provides a template to initialize a mediation policy project with all the required configurations. The mediation policy project will be created as a Ballerina project.
 
@@ -157,7 +157,7 @@ Depending on your requirement, you can modify the `Ballerina.toml` and the `Pack
         keywords = ["choreo-apim-mediation-policy","choreo-apim-mediation-request-flow","choreo-apim-mediation-response-flow","choreo-apim-mediation-fault-flow"]
 ```
 
-### Step 2: Implement the policy
+### Step 2: implement the policy
 
 In this step, you will implement the policy. 
 
@@ -264,7 +264,7 @@ When implementing a policy, it is essential to follow best practices to ensure e
     - **error** - Returns an error if you want to terminate the mediation flow and transfer control to the fault flow. The fault flow would then construct an error response and send it to the client.
     - **()** - Returns () to signal the successful completion of the policy. Once the proxy has completed executing the policy, it starts to execute the next policy in the sequence.
 
-### Step 3: Publish the policy
+### Step 3: publish the policy
 
 Once you implement a policy, you must publish it to Ballerina Central. 
 

@@ -1,4 +1,4 @@
-# Govern APIs using API Designer
+# Govern APIs using API designer
 
 You can use API Designer to assess and improve your OpenAPI 3.x specification for AI readiness, design quality, and secure production use.
 
@@ -17,7 +17,7 @@ API Designer applies governance checks using Spectral rulesets and AI. You can r
 - Category-level breakdown to quickly identify weak areas.
 - Violations grouped by rule, severity, or area of the specification.
 
-## Reports in API Designer
+## Reports in API designer
 
 API Designer includes the following reports:
 

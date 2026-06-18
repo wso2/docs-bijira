@@ -1,4 +1,4 @@
-# Content Length Guardrail
+# Content length guardrail
 
 ## Overview
 
@@ -16,7 +16,7 @@ The Content Length Guardrail validates the byte length of request or response bo
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -26,7 +26,7 @@ The Content Length Guardrail validates the byte length of request or response bo
 | `invert` | boolean | No | `false` | If `true`, validation passes when content length is NOT within the min-max range. If `false`, validation passes when content length is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -36,7 +36,7 @@ The Content Length Guardrail validates the byte length of request or response bo
 | `invert` | boolean | No | `false` | If `true`, validation passes when content length is NOT within the min-max range. If `false`, validation passes when content length is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -49,7 +49,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: Basic Content Length Validation
+### Example 1: basic content length validation
 
 Deploy an LLM provider that limits request payloads to between 100 bytes and 1MB:
 
@@ -131,7 +131,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -143,7 +143,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
 1. **Resource Protection**: Prevent excessively large payloads that could exhaust system resources or cause performance degradation.
 
@@ -155,7 +155,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Quality Assurance**: Ensure responses meet minimum size requirements for completeness.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

@@ -1,4 +1,4 @@
-# Customize Developer Portal Manually for your Organization
+# Customize Developer Portal manually for your organization
 
 Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
@@ -25,11 +25,11 @@ Go through the below steps to get the `Developer Portal` tab.
 - In the left navigation menu, click `Admin` and then click `Settings`.
 - Select `Developer Portal` tab.
 
-## Theme your Devportal in Org Level
+## Theme your Devportal in org level
 
 Go through the following steps to customize the theme of the Devportal in the organization level.
 
-### Theme Settings
+### Theme settings
 
 1. Select `Org Level` tab.
 2. Select `Theme Settings` tab. Here, you can manage and customize theme colors for your organization.

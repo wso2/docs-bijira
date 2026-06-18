@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure API Access with API Platform STS
+# Secure API access with API Platform STS
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. APIs are essential for enabling communication and data exchange between different software applications and services, making them a critical component in modern software development. However, their openness and accessibility can also make them targets for various security risks. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions. 
 
@@ -68,7 +68,7 @@ You can provide fine-grained access control to your API resources with scopes. F
         - Select the appropriate grant types.
         - Copy the client ID and client secret of the application for future reference. -->
 
-## Step 1: Create an application and enable API Platform STS authentication
+## Step 1: create an application and enable API Platform STS authentication
 
 Follow the steps below to consume the API Platform API using API Platform STS.
 
@@ -82,6 +82,6 @@ Follow the steps below to consume the API Platform API using API Platform STS.
 8. Click on the **Generate Token** button to generate an access token. Please make sure to copy the access token to use in step 2.
 9. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
-## Step 2: Invoke the API Platform API
+## Step 2: invoke the API Platform API
 
 1. Once you receive the access token, you can [test invoking the resource using the OpenAPI console](../../test-api-proxy/openapi-console.md) in API Platform.

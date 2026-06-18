@@ -1,19 +1,19 @@
-# Arazzo Visualizer for VS Code
+# Arazzo visualizer for VS Code
 
 Arazzo Visualizer helps you understand, edit, and run Arazzo Specification workflows directly inside VS Code.
 
 It turns Arazzo files into interactive diagrams, keeps the diagram in sync with your code, and includes a built-in runner engine so you can try workflows against real APIs without leaving the editor.
 
-## Quick Start
+## Quick start
 
 - Install the extension from the VS Code Marketplace.
 - Open an Arazzo file, such as .arazzo.yaml, .arazzo.yml, or .arazzo.json.
 - Click the Arazzo Overview icon in the editor toolbar, or open the Command Palette (Ctrl+Shift+P / Cmd+Shift+P) and run ArazzoDesigner: Open Arazzo Visualizer.
 - The visualizer opens beside your file and updates as you edit.
 
-## Main Features
+## Main features
 
-### Visualize Workflows
+### Visualize workflows
 
 Read complex API flows as a clear diagram instead of scanning long YAML or JSON files.
 
@@ -22,7 +22,7 @@ Read complex API flows as a clear diagram instead of scanning long YAML or JSON 
 - Inspect details: Select a step to understand the request, response, inputs, outputs, and success checks.
 - Stay in sync: Update the file and the diagram refreshes automatically.
 
-### CodeLens and Quick Actions
+### CodeLens and quick actions
 
 The extension adds helpful actions above workflow definitions.
 
@@ -30,7 +30,7 @@ The extension adds helpful actions above workflow definitions.
 - ▶ Try with curl: Execute the workflow directly from the editor and see the result in a terminal. If the workflow has input fields, a panel opens so you can fill them in before running.
 - ▶ Try with AI: Hand the workflow off to GitHub Copilot and run it through a natural language conversation.
 
-### GitHub Copilot Support
+### GitHub Copilot support
 
 Arazzo Visualizer works with GitHub Copilot so you can create, change, and run workflows using plain English.
 
@@ -68,7 +68,7 @@ Copilot can also control the runner engine for you. Ask it to start the server, 
 
 ![Sample Demo](./images/v3_visualizer_demo.gif)
 
-### Run Workflows
+### Run workflows
 
 The visualizer shows how a workflow is designed. The built-in Runner Engine helps you prove that the workflow actually works.
 
@@ -96,7 +96,7 @@ When you click it, the extension builds the curl request for you, displays the r
 
 ![Try with curl Demo](./images/v3_curl_demo.gif)
 
-### Execution Logs
+### Execution logs
 
 When a workflow runs, the extension shows what happened step by step.
 
@@ -104,7 +104,7 @@ When a workflow runs, the extension shows what happened step by step.
 - Clear results: See which steps passed, which failed, and why.
 - Trace details: Review timing and request flow information when you need to troubleshoot a slow or failing workflow.
 
-### Smart Editing Support
+### Smart editing support
 
 The extension also improves the normal editing experience for Arazzo files.
 

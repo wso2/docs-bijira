@@ -2,7 +2,7 @@
 
 `ap` is a command-line tool for managing and interacting with the WSO2 API Platform.
 
-## Supported Short Flags
+## Supported short flags
 
 | Flag             | Short Flag |
 |------------------|------------|
@@ -12,11 +12,11 @@
 | `--file`         | `-f`       |
 | `--version`      | `-v`       |
 
-## Gateway Sub Commands
+## Gateway sub commands
 
 > **Note:** Each command supports the `--help` flag for detailed usage information.
 
-## Prerequisites for Gateway Controller Commands
+## Prerequisites for gateway controller commands
 
 - You must first add and/or select a gateway in the CLI using the appropriate gateway-related commands.
 - Credentials for a gateway can come from either the gateway configuration (when you add the gateway) or from environment variables. **Environment variables take precedence** over configuration and will override credentials stored in the config when present.
@@ -27,15 +27,15 @@
 
 ---
 
-### 1. Add a Gateway
+### 1. Add a gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway add --display-name <name> --server <server> [--auth <none|basic|bearer>]
 ```
 
-#### Sample Commands
+#### Sample commands
 
 ```shell
 # Add a gateway with no authentication (default)
@@ -48,7 +48,7 @@ ap gateway add --display-name dev --server http://localhost:9090 --auth basic
 ap gateway add --display-name prod --server https://api.example.com --auth bearer
 ```
 
-#### Authentication Setup
+#### Authentication setup
 
 For **basic** authentication, export these environment variables (replace the placeholders with your values):
 ```shell
@@ -65,15 +65,15 @@ export WSO2AP_GW_TOKEN=<token>
 
 ---
 
-### 2. List Gateways
+### 2. List gateways
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway list
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway list
@@ -81,15 +81,15 @@ ap gateway list
 
 ---
 
-### 3. Remove a Gateway
+### 3. Remove a gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway remove --display-name <name>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway remove --display-name dev
@@ -97,15 +97,15 @@ ap gateway remove --display-name dev
 
 ---
 
-### 4. Change the Gateway
+### 4. Change the gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway use --display-name <name>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway use --display-name dev
@@ -113,15 +113,15 @@ ap gateway use --display-name dev
 
 ---
 
-### 5. Check the current Gateway
+### 5. Check the current gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway current
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway current
@@ -129,15 +129,15 @@ ap gateway current
 
 ---
 
-### 6. Returns the health status of the Gateway
+### 6. Returns the health status of the gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway health
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway health
@@ -145,15 +145,15 @@ ap gateway health
 
 ---
 
-### 7. Apply a Resource
+### 7. Apply a resource
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway apply --file <path>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway apply --file petstore-api.yaml
@@ -163,13 +163,13 @@ ap gateway apply --file petstore-api.yaml
 
 ### 8. List all APIs
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway api list
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway api list
@@ -179,14 +179,14 @@ ap gateway api list
 
 ### 9. Get a specific API by name and version or id
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway api get --display-name <name> --version <version> --format <json|yaml>
 ap gateway api get --id <id> --format <json|yaml>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway api get --display-name "PetStore API" --version v1.0 --format yaml
@@ -197,13 +197,13 @@ ap gateway api get --id sample-1 --format yaml
 
 ### 10. Delete an API 
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway api delete --id <id> 
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway api delete --id <id>
@@ -213,7 +213,7 @@ ap gateway api delete --id <id>
 
 ### 11. Build a gateway
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway image build \
@@ -231,25 +231,25 @@ ap gateway image build \
   [--output-dir <output_dir>]
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway image build
 ```
 
-#### Additional Note for Users
+#### Additional note for users
 
 Refer to [this document](customizing-gateway-policies.md) for more information.
 
 ### 12. List all MCPs
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway mcp list
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway mcp list
@@ -259,14 +259,14 @@ ap gateway mcp list
 
 ### 13. Retrieves a specific MCP 
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway mcp get --display-name <name> --version <version> --format <json|yaml>
 ap gateway mcp get --id <id> --format <json|yaml>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway mcp get --display-name my-mcp --version 1.0.0 --format json
@@ -277,13 +277,13 @@ ap gateway mcp get --id sample-id --format json
 
 ### 14. Permanently deletes a MCP
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway mcp delete --id <id> 
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway mcp delete --id sample-id
@@ -293,13 +293,13 @@ ap gateway mcp delete --id sample-id
 
 ### 15. Generate MCP 
 
-#### CLI Command
+#### CLI command
 
 ```shell
 ap gateway mcp generate --server <server> --output <path>
 ```
 
-#### Sample Command
+#### Sample command
 
 ```shell
 ap gateway mcp generate --server http://localhost:3001/mcp --output target

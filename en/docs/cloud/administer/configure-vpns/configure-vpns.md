@@ -1,4 +1,4 @@
-# Configure VPNs on the API Platform Cloud Data Plane
+# Configure VPNs on the API Platform Cloud data plane
 
 Secure access to private networks from the API Platform cloud data plane is an essential use case for cloud data plane users.
 
@@ -38,7 +38,7 @@ Let's take a look at the specifics of each part to understand the deployment arc
 
 Now that you understand the deployment architecture, let’s explore how you can use Tailscale to secure connections to your private networks.
 
-## Configure and use Tailscale to access private network endpoints
+## Configure and use tailscale to access private network endpoints
 
 This section walks you through the steps to create, configure, deploy, and use the Tailscale proxy component.
 
@@ -48,7 +48,7 @@ This section walks you through the steps to create, configure, deploy, and use t
 - Have a Tailscale account (Tailnet). There are multiple plans available for you to set up your Tailscale network. For details, see [Tailscale plans](https://tailscale.com/pricing).
 - Install Tailscale and connect your private data center or server to it, so that your private services are accessible via your Tailscale network. To quickly get started with Tailscale, see the [Tailscale quickstart](https://tailscale.com/kb/1017/install).
 
-### Step 1: Create the Tailscale proxy component
+### Step 1: create the tailscale proxy component
 
 1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
 2.  In the API Platform Console top navigation menu, select the **Organization**, and then the **Project**.
@@ -71,14 +71,14 @@ Now you have successfully created the Tailscale proxy. You can proceed to config
 
 ![Tailscale proxy detail page showing name, Tailscale Auth Key field, Endpoint Configurations section, and Save and Deploy button](../../../assets/img/administer/tailscale/tailscale-created-view.png)
 
-### Step 2: Configure and deploy the Tailscale proxy
+### Step 2: configure and deploy the tailscale proxy
 
 Here, you will set the Tailscale authentication key, configure endpoints, and deploy the Tailscale proxy.
 
 Follow the steps given below:
 
 
-#### Step 2.1: Configure and deploy the Tailscale proxy
+#### Step 2.1: configure and deploy the tailscale proxy
 
 To configure and deploy the tailscale proxy, follow the steps given below:
 
@@ -131,7 +131,7 @@ To configure and deploy the tailscale proxy, follow the steps given below:
 !!! note
      You can configure multiple endpoints and port mappings on the same Tailscale device, and also across multiple Tailscale devices. This allows you to forward traffic from different ports to different external devices as needed.
 
-### Step 3: Configure API Proxy to forward traffic to Tailscale proxy
+### Step 3: configure API proxy to forward traffic to tailscale proxy
 
 After the deployment is complete, the Tailscale proxy URL will be displayed in the environment view.
 
@@ -158,7 +158,7 @@ If you want to add a new private endpoint to your network and access it via the 
 ## Best practices
 
 
-### Use Tailscale ACLs
+### Use tailscale acls
 
 You can use [Tailscale ACLs](https://tailscale.com/kb/1018/acls) to precisely manage permission for users and devices on your Tailnet.
 

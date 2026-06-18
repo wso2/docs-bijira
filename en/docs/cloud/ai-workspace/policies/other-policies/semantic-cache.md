@@ -1,4 +1,4 @@
-# Semantic Cache
+# Semantic cache
 
 The Semantic Cache policy caches LLM responses and serves them for semantically similar future requests — without calling the upstream LLM. Unlike exact-match caching, it uses vector embeddings and cosine similarity to recognize requests that ask essentially the same question with different wording.
 
@@ -7,7 +7,7 @@ The Semantic Cache policy caches LLM responses and serves them for semantically 
 
     See [Gateway Configuration](#gateway-configuration) below for the required `config.toml` settings.
 
-## How It Works
+## How it works
 
 1. An incoming request arrives. The policy extracts the relevant text (full payload or a JSONPath-specified field).
 2. The embedding provider converts the text into a vector.
@@ -17,7 +17,7 @@ The Semantic Cache policy caches LLM responses and serves them for semantically 
 
 If the embedding service or vector database is unreachable, the policy fails open — the request proceeds to the upstream LLM as normal.
 
-## Configuration Parameters
+## Configuration parameters
 
 These are the parameters configurable from the policy UI when adding the guardrail:
 
@@ -26,7 +26,7 @@ These are the parameters configurable from the policy UI when adding the guardra
 | **Similarity Threshold** | Yes | Cosine similarity score (0.0–1.0) above which a cached response is returned. Recommended starting value: `0.85`. |
 | **JSON Path** | No | A JSONPath expression to extract the text to embed from the request body (e.g., `$.messages[0].content`). If not set, the entire request payload is embedded. |
 
-## Gateway Configuration
+## Gateway configuration
 
 The embedding provider and vector database are configured in the gateway's `config.toml` file. These settings apply as defaults to all Semantic Cache policy instances.
 
@@ -46,7 +46,7 @@ vector_db_provider_password = "default"
 vector_db_provider_ttl = 3600
 ```
 
-### Supported Embedding Providers
+### Supported embedding providers
 
 | Provider | `embedding_provider` value | Example endpoint | Dimension |
 |----------|---------------------------|-----------------|-----------|
@@ -54,14 +54,14 @@ vector_db_provider_ttl = 3600
 | Mistral AI | `MISTRAL` | `https://api.mistral.ai/v1/embeddings` | `1024` (`mistral-embed`) |
 | Azure OpenAI | `AZURE_OPENAI` | Your Azure OpenAI endpoint URL | Depends on deployment |
 
-### Supported Vector Databases
+### Supported vector databases
 
 | Provider | `vector_db_provider` value | Notes |
 |----------|---------------------------|-------|
 | Redis | `REDIS` | Requires [Redis Search](https://redis.io/docs/latest/develop/ai/search-and-query/) module |
 | Milvus | `MILVUS` | Better suited for large-scale deployments (>1M vectors) |
 
-## Add This Policy
+## Add this policy
 
 1. Configure the embedding provider and vector database in `config.toml` and restart the gateway.
 2. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
@@ -73,7 +73,7 @@ vector_db_provider_ttl = 3600
 8. Click **Add** (for providers) or **Submit** (for proxies).
 9. Deploy the provider or proxy to apply the changes.
 
-## Choosing a Similarity Threshold
+## Choosing a similarity threshold
 
 | Threshold | Effect |
 |-----------|--------|
@@ -84,7 +84,7 @@ vector_db_provider_ttl = 3600
 
 Start at `0.85` and adjust based on observed cache hit rates and response relevance.
 
-## Performance Notes
+## Performance notes
 
 - Embedding generation adds approximately 100–500ms to each request. This is typically offset by the 1–5 second savings on cache hits.
 - Redis (with RediSearch) is suited for smaller datasets (under 1M cached vectors). Milvus is optimized for larger-scale deployments.

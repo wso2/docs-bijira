@@ -13,12 +13,12 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Semantic Caching
+# Semantic caching
 
 AI services frequently involve repetitive queries, leading to unnecessary token usage and increased latency. API Platform’s AI Gateway introduces semantic caching, allowing responses to similar requests to be cached and reused intelligently, minimizing redundant processing, improving response times, and reducing overall costs.
 
 
-## Configure Semantic Caching Policy
+## Configure semantic caching policy
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
@@ -52,7 +52,7 @@ The configurable fields of the above policy have been described below.
 | `Password`               | Password for the specified database user.                          | `securepassword123`         |
 | `Database`               | Index of the vector database to connect to.                         | `0`             |
 
-## Sample Payloads and Responses
+## Sample payloads and responses
 
 First Request:
 
@@ -115,7 +115,7 @@ Second Request:
 </html>
 
   
-## Next Steps
+## Next steps
 
 - **Verify** it is properly redeployed to ensure the policy and the configurations are properly applied.  
 

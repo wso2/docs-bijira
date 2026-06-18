@@ -1,5 +1,5 @@
 ---
-title: "Prompt Template"
+title: "Prompt template"
 description: "Replace 'template://' URI patterns in LLM request payloads with predefined, parameterized prompt templates."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-template/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/prompt-management/prompt-template.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Prompt Template
+# Prompt template
 
 ## Overview
 
@@ -34,7 +34,7 @@ The Prompt Template policy enables dynamic prompt transformation by replacing `t
 |-----------|------|----------|---------|-------------|
 | `promptTemplateConfig` | string | Yes | - | JSON string containing an array of template objects. Each template must have a `name` and `prompt` field. Example: `[{"name": "translate", "prompt": "Translate from [[from]] to [[to]]: [[text]]"}]` |
 
-### Template Configuration Format
+### Template configuration format
 
 The `promptTemplateConfig` must be a JSON array of template objects:
 
@@ -51,9 +51,9 @@ Each template object contains:
 - **name**: Unique identifier for the template (used in `template://` URIs)
 - **prompt**: The template string with `[[parameter-name]]` placeholders that will be replaced
 
-## Template Syntax
+## Template syntax
 
-### Template URI Format
+### Template URI format
 
 Templates are referenced in JSON payloads using the following URI format:
 
@@ -66,7 +66,7 @@ Example:
 template://translate?from=english&to=spanish&text=Hello world
 ```
 
-### Placeholder Syntax
+### Placeholder syntax
 
 Within template prompts, use double square brackets to define placeholders:
 
@@ -88,7 +88,7 @@ Translate the following text from english to spanish: Hello
 
 ## Examples
 
-### Example 1: Translation Template
+### Example 1: translation template
 
 Deploy an LLM provider with a translation prompt template:
 
@@ -161,7 +161,7 @@ The policy will transform the request to:
 }
 ```
 
-### Example 2: Summarization Template
+### Example 2: summarization template
 
 Create a template for summarizing content with configurable length:
 
@@ -218,7 +218,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 3: Multiple Templates
+### Example 3: multiple templates
 
 Configure multiple templates in a single policy:
 
@@ -247,7 +247,7 @@ policies:
             ]
 ```
 
-## Use Cases
+## Use cases
 
 1. **Standardized Prompts**: Ensure consistent prompt formatting across different API consumers by centralizing prompt definitions.
 
@@ -259,7 +259,7 @@ policies:
 
 5. **Prompt Versioning**: Update prompt templates centrally without requiring changes to client applications.
 
-## Template Pattern Matching
+## Template pattern matching
 
 The policy uses regex pattern matching to find `template://` URIs in the JSON payload:
 
@@ -267,14 +267,14 @@ The policy uses regex pattern matching to find `template://` URIs in the JSON pa
 - **Location**: Searches the entire JSON payload as a string
 - **Replacement**: Each matched pattern is replaced with the resolved template string (JSON-escaped)
 
-### Pattern Details
+### Pattern details
 
 - Template names can contain letters, numbers, underscores, and hyphens
 - Query parameters can contain any characters except spaces, quotes, or single quotes
 - Multiple template:// patterns can exist in a single payload
 - Each pattern is resolved independently
 
-## Error Handling
+## Error handling
 
 If a template:// pattern references a template name that doesn't exist in the configuration, the pattern is left unchanged (no replacement occurs). This allows for graceful handling of missing templates.
 

@@ -1,5 +1,5 @@
 ---
-title: "Management API: WebBroker API Management"
+title: "Management API: WebBroker API management"
 description: "REST API reference for creating, listing, retrieving, and deleting WebBroker API configurations in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/webbroker-api-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/webbroker-api-management.md
@@ -11,9 +11,9 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# WebBroker API Management
+# WebBroker API management
 
-## Create a new WebBrokerAPI
+## Create a new webbrokerapi
 
 <a id="opIdcreateWebBrokerApi"></a>
 
@@ -188,7 +188,7 @@ Required roles: `admin`, `developer`
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Conflict - WebBroker API with same name and version already exists|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## List all WebBrokerAPIs
+## List all webbrokerapis
 
 <a id="opIdlistWebBrokerApis"></a>
 
@@ -223,7 +223,7 @@ Required roles: `admin`, `developer`
 |version|query|string|false|Filter by WebBroker API version|
 |status|query|string|false|Filter by deployment status|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|
@@ -383,7 +383,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -394,7 +394,7 @@ Status Code **200**
 |state|deployed|
 |state|undeployed|
 
-## Get WebBrokerAPI by id
+## Get webbrokerapi by id
 
 <a id="opIdgetWebBrokerApiById"></a>
 
@@ -509,7 +509,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WebBrokerAPI not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Delete a WebBrokerAPI
+## Delete a webbrokerapi
 
 <a id="opIddeleteWebBrokerApiById"></a>
 

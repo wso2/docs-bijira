@@ -12,11 +12,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Regex Guardrail
+# Regex guardrail
 
 This policy provides the capability to perform regular expression-based validation on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce specific security or compliance rules based on configurable regex patterns and JSON path expressions.
 
-## Configure Regex Guardrail
+## Configure regex guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -36,7 +36,7 @@ This policy provides the capability to perform regular expression-based validati
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample Regex Guardrail Configuration
+### Sample regex guardrail configuration
 
 - Guardrail Name: `Regex Guardrail`
 - Regex Pattern: `(?i)ignore\s+all\s+.*instructions\s+and\s+do\s+.*now`
@@ -44,7 +44,7 @@ This policy provides the capability to perform regular expression-based validati
 - Invert the Guardrail Decision: `true`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the Regex Guardrail
+### Sample payload to be intervened from the regex guardrail
 
 ```json
 {
@@ -57,7 +57,7 @@ This policy provides the capability to perform regular expression-based validati
 }
 ```
 
-### Sample Response after Regex Guardrail Intervention
+### Sample response after regex guardrail intervention
 
 ```json
 {

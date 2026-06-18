@@ -1,10 +1,10 @@
-# View Billing and Usage
+# View billing and usage
 
 The Developer Portal provides a consolidated **Billing & Usage** view where API consumers can monitor usage, review invoices, and manage their paid subscriptions across all subscribed APIs.
 
 ---
 
-## Access the Billing Page
+## Access the billing page
 
 1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev/) and sign in to your organization.
 2. Click your profile icon in the top right corner.
@@ -14,7 +14,7 @@ The Developer Portal provides a consolidated **Billing & Usage** view where API 
 
 ---
 
-## Usage Summary
+## Usage summary
 
 The **Usage Summary** tab displays an **API Usage Overview** for a selected period (e.g., Current Month). This includes:
 
@@ -39,7 +39,7 @@ Invoices are generated and issued by Stripe based on your subscription's billing
 
 ---
 
-## Billed Subscriptions
+## Billed subscriptions
 
 The **Billed Subscriptions** tab shows all paid subscriptions associated with your account. For each subscription you can see the API, application, plan, billing cycle, amount, next billing date, and status. Use the **Filter by Status** dropdown to narrow the list, and click **Manage** to update or cancel a subscription.
 

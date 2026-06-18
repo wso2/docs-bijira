@@ -1,4 +1,4 @@
-# Configure Azure Active Directory (Azure AD) as an External Key Manager
+# Configure Azure active directory (Azure AD) as an external key manager
 
 In organizations leveraging Microsoft Azure Active Directory (Azure AD) as a key manager, integrating it with API Platform offers powerful API access control. This control hinges on the use of API scopes. That is, it enables the restriction of access to a designated group of users. This document guide you step-by-step to configure Azure AD as your external key manager.
 
@@ -9,7 +9,7 @@ Before you try out this guide, be sure you have the following:
 - An Azure Active Directory account:  If you don’t already have one,  setup an Azure Active Directory account at [https://azure.microsoft.com/en-gb/](https://azure.microsoft.com/en-gb/).
 - Administrator rights to your API Platform organization: You need this to configure the Azure AD account in your organization.
 
-## Step 1: Add Azure Active Directory as an external key manager in API Platform
+## Step 1: add Azure active directory as an external key manager in API Platform
 
 Follow the steps below to add Azure AD as a key manager in API Platform:
 
@@ -47,7 +47,7 @@ Now you have configured Azure AD as an external key manager in API Platform.
 
 ![Key Managers list showing Bijira Built-in STS and newly added external-azure-km entries](../../../assets/img/administer/settings/external-km/add_external_km_azure_list.png)
 
-## Step 2: Add Azure AD as an external key manager in API Platform Developer Portal
+## Step 2: add Azure AD as an external key manager in API Platform Developer Portal
 
 Once the Azure AD is configured as an external key manager in API Platform, it is necessary to configure it in the API Platform Developer Portal as well. For that, follow the steps below.
 

@@ -1,4 +1,4 @@
-# Review Workflow Approval Requests
+# Review workflow approval requests
 
 In API Platform, administrators can [configure approvals for workflows](./configure-workflow-approvals.md) and assign specific users as approvers.
 

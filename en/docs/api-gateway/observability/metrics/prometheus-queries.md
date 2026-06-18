@@ -1,5 +1,5 @@
 ---
-title: "Prometheus Queries"
+title: "Prometheus queries"
 description: "Useful PromQL queries for monitoring API Platform Gateway controller, router, and policy engine metrics."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/prometheus-queries/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/prometheus-queries.md
@@ -13,13 +13,13 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Prometheus Queries
+# Prometheus queries
 
 You can query Prometheus directly at <http://localhost:9092> to create custom visualizations or debug issues.
 
-## Useful Queries
+## Useful queries
 
-### Gateway Controller
+### Gateway controller
 
 **Total API Operations**:
 ```promql
@@ -56,7 +56,7 @@ gateway_controller_memory_bytes
 histogram_quantile(0.99, rate(gateway_controller_http_request_duration_seconds_bucket[5m]))
 ```
 
-### Policy Engine
+### Policy engine
 
 **Request Rate**:
 ```promql
@@ -90,7 +90,7 @@ policy_engine_active_streams
 rate(policy_engine_request_errors_total[5m])
 ```
 
-### Router (Envoy)
+### Router (envoy)
 
 **Request Rate**:
 ```promql

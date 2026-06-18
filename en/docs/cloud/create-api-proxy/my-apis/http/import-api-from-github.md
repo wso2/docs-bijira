@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Create an API Proxy from a GitHub Repository Source
+# Create an API proxy from a GitHub repository source
 
 An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API. It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
 
@@ -32,7 +32,7 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 
 When creating an API proxy from a GitHub repository, you must include a `component.yaml` configuration file in your repository. This file must be located at `.choreo/component.yaml` within your API directory.
 
-### Required Configuration
+### Required configuration
 
 The `component.yaml` file for API proxies must include the following structure:
 
@@ -42,7 +42,7 @@ proxy:
   schemaFilePath: openapi.yaml
 ```
 
-### Configuration Fields
+### Configuration fields
 
 | **Field** | **Required** | **Description** |
 |-----------|--------------|-----------------|
@@ -52,7 +52,7 @@ proxy:
 !!! note
     The `component.yaml` file must be present in the `.choreo` directory within your API directory for API Platform to successfully build and deploy your API proxy from GitHub.
 
-## Step 1: Create an API proxy
+## Step 1: create an API proxy
 
 You can create an API proxy either by selecting the source from a GitHub repository, uploading an OpenAPI specification file, or providing an OpenAPI specification URL. This guide demonstrates how to create an API proxy using a GitHub repository as the source.
 
@@ -100,7 +100,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 !!! note
     The API contract cannot be modified after proxy creation. Therefore, any changes to the API contract in the GitHub repository will not apply to the created proxy.
 
-## Step 2: Build and Deploy the API proxy
+## Step 2: build and deploy the API proxy
 
 !!! info
     A build starts automatically when you create the API proxy, and you will be redirected to the **Overview** page.

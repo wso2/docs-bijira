@@ -1,5 +1,5 @@
 ---
-title: "WSO2 API Platform Overview"
+title: "WSO2 API Platform overview"
 description: "Overview of documentation for WSO2 API Platform, the open platform to control APIs, AI, and MCP."
 canonical_url: https://wso2.com/api-platform/docs/
 md_url: https://wso2.com/api-platform/docs/index.md

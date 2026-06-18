@@ -1,5 +1,5 @@
 ---
-title: "Gateway Metrics"
+title: "Gateway metrics"
 description: "Configure metrics collection for API Platform Gateway components using Prometheus and Grafana, with reference dashboards and alerting."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/overview.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Gateway Metrics
+# Gateway metrics
 
 This guide explains how to implement and configure metrics collection for the API Platform Gateway components.
 
@@ -22,14 +22,14 @@ The default metrics services included in the Docker Compose configuration are **
 
 **Important**: You are free to choose any metrics or observability strategy that suits your environment and requirements. The provided setup is just one of many possible configurations.
 
-## Metrics Architecture
+## Metrics architecture
 
 The default metrics stack consists of:
 
 - **Prometheus**: Scrapes, stores, and queries metrics from gateway components
 - **Grafana**: Visualizes metrics through dashboards with alerts and notifications
 
-### How It Works
+### How it works
 
 1. Gateway components (gateway-controller, policy-engine, router) expose metrics via Prometheus HTTP endpoints
 2. Prometheus scrapes these endpoints at regular intervals (default: 15s)
@@ -37,7 +37,7 @@ The default metrics stack consists of:
 4. Grafana queries Prometheus to visualize metrics through pre-built dashboards
 5. Users can view real-time metrics, historical trends, and set up alerts
 
-### What are Metrics?
+### What are metrics?
 
 Metrics are numerical measurements tracked over time:
 
@@ -45,7 +45,7 @@ Metrics are numerical measurements tracked over time:
 - **Gauges**: Current values that can go up or down (e.g., active connections, memory usage)
 - **Histograms**: Sample observations with configurable buckets (e.g., request duration)
 
-## In This Section
+## In this section
 
 - [Enabling and Disabling Metrics](enabling-metrics.md) — Turn metrics on or off and run the demonstration metrics services
 - [Viewing Metrics in Grafana](viewing-metrics-in-grafana.md) — Explore pre-built dashboards, create custom dashboards, and set up alerts
@@ -55,7 +55,7 @@ Metrics are numerical measurements tracked over time:
 - [Metric Reference](metric-reference.md) — Full list of metrics exposed by each gateway component
 - [Best Practices and Troubleshooting](best-practices-and-troubleshooting.md) — Recommendations, common issues, and integration with logging and tracing
 
-## Additional Resources
+## Additional resources
 
 - [Prometheus Documentation](https://prometheus.io/docs/)
 - [Grafana Documentation](https://grafana.com/docs/)

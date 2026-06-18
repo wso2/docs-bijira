@@ -1,21 +1,21 @@
-# Event Gateway Overview
+# Event Gateway overview
 
 The Event Gateway is a self-hosted runtime that performs **Protocol Mediation** — acting as the bridge between web-friendly protocols (WebSocket, WebHook, SSE) and message brokers (Kafka, MQTT, Solace). It enables you to expose event brokers as subscribable APIs while enforcing policies such as authentication, authorization, and rate limiting through the centralized API Platform’s Policy Hub.
 
 
-## Quick Start
+## Quick start
 
 - [Getting Started](getting-started.md) - Create an event gateway in the API Platform Console, download and start the gateway, and deploy a WEBSUB API proxy
 
-## What is Protocol Mediation?
+## What is protocol mediation?
 
 Traditional API gateways are designed for request-response traffic. Event-driven architectures, however, use message brokers such as Kafka and MQTT, which communicate over broker-specific protocols that are not directly accessible to web clients.
 
 Protocol Mediation solves this by placing the Event Gateway between the broker and web clients, translating between broker protocols and web-friendly protocols such as WebSocket, WebHook, and Server-Sent Events (SSE). This means external clients can consume from or produce messages to an event broker using standard web protocols, without needing native broker client support.
 
-## Key Concepts
+## Key concepts
 
-### Event Gateway Architecture
+### Event Gateway architecture
 
 The Event Gateway consists of three components that work together in the mediation flow:
 

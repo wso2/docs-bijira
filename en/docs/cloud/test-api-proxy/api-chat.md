@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Test APIs with API Platform API Chat
+# Test APIs with API Platform API chat
 
 Testing APIs is an essential step in the API development process. API Platform simplifies the testing task by allowing you to engage with your APIs using natural language through API Platform API Chat. It eliminates manual test scenario creation and JSON payload accuracy concerns. It enables easy API communication using human language and requires no coding for handling sequences with multiple resource calls. This makes your API testing efficient and user-friendly.
 

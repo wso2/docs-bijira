@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Test REST Endpoints via the OpenAPI Console
+# Test REST endpoints via the openapi console
 
 API Platform offers an integrated OpenAPI Console to test REST endpoints for the API proxies you create and deploy. Since API Platform secures REST APIs with OAuth 2.0 authentication, the OpenAPI Console generates test keys to help you test your APIs.
 

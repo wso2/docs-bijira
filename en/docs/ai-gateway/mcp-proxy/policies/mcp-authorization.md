@@ -1,5 +1,5 @@
 ---
-title: "MCP Authorization"
+title: "MCP authorization"
 description: "Define fine-grained access control rules for MCP tools, resources, and prompts based on JWT claims and scopes."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authorization/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authorization.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# MCP Authorization
+# MCP authorization
 
 ## Overview
 
@@ -35,7 +35,7 @@ The MCP Authorization policy provides fine-grained access control for Model Cont
 
 The MCP Authorization policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -48,9 +48,9 @@ These parameters are configured per MCP Proxy by the API developer:
 | `rules[].requiredScopes` | array | No | - | List of OAuth scopes required to access this resource. The token must contain all of the specified scopes. |
 | `rules[].requiredClaims` | object | No | - | Map of claim names to expected values. All specified claims must be present in the token with matching values. |
 
-## MCP Proxy Definition Examples
+## MCP proxy definition examples
 
-### Example 1: Basic Tool Access Control
+### Example 1: basic tool access control
 
 Restrict access to specific tools based on scopes:
 
@@ -95,7 +95,7 @@ spec:
     ...
 ```
 
-### Example 2: Claim-Based Resource Access
+### Example 2: Claim-based resource access
 
 Control resource access based on user claims:
 
@@ -137,7 +137,7 @@ spec:
     ...
 ```
 
-### Example 3: Role-Based Prompt Access
+### Example 3: Role-based prompt access
 
 Restrict prompt access based on user roles:
 
@@ -179,7 +179,7 @@ spec:
     ...
 ```
 
-### Example 4: Multi-Level Authorization
+### Example 4: Multi-level authorization
 
 Combine different resource types with varying access requirements:
 
@@ -240,7 +240,7 @@ spec:
     ...
 ```
 
-## Authorization Decision Examples
+## Authorization decision examples
 
 **Scenario 1**: User with scope `mcp:tool:read` attempts to call `list_files` tool
 - Rule: `attribute.type="tool", attribute.name="list_files", requiredScopes=["mcp:tool:read"]`
@@ -258,14 +258,14 @@ spec:
 - Rule: `attribute.type="resource", attribute.name="file:///private/code", requiredClaims={department="engineering"}`
 - Result: ❌ Access Denied (claim mismatch)
 
-## Error Handling
+## Error handling
 
 When authorization fails, the policy returns:
 - **HTTP Status**: `403 Forbidden`
 - **Response Body**: JSON error response with a reason message
 - **WWW-Authenticate Header**: Contains information about required scopes for the denied resource
 
-## Related Policies
+## Related policies
 
 - [MCP Authentication Policy](./mcp-authentication.md) - Validates JWT tokens and is a prerequisite for MCP Authorization
 - [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) - Base JWT token validation mechanism

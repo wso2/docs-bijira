@@ -1,4 +1,4 @@
-# Gateway Tracing
+# Gateway tracing
 
 This guide explains how to implement and configure distributed tracing for the API Platform Gateway components.
 
@@ -8,14 +8,14 @@ The default tracing services included in the Docker Compose configuration are **
 
 **Important**: You are free to choose any tracing or observability strategy that suits your environment and requirements. The provided setup is just one of many possible configurations.
 
-## Tracing Architecture
+## Tracing architecture
 
 The default tracing stack consists of:
 
 - **OpenTelemetry (OTLP) Collector**: Receives, processes, and exports trace data from gateway components
 - **Jaeger**: Stores and visualizes distributed traces with a web UI for trace exploration and analysis
 
-### How It Works
+### How it works
 
 1. Gateway components (gateway-controller, policy-engine, router) are configured to export traces via OTLP (OpenTelemetry Protocol)
 2. Components send trace spans to the OpenTelemetry Collector via gRPC (port 4317) or HTTP (port 4318)
@@ -23,22 +23,22 @@ The default tracing stack consists of:
 4. The OTLP Collector forwards traces to Jaeger for storage and visualization
 5. Users can view and analyze traces through the Jaeger UI
 
-### What is Distributed Tracing?
+### What is distributed tracing?
 
 Distributed tracing tracks a request as it flows through multiple components:
 - **Trace**: Represents the entire journey of a request through the system
 - **Span**: Represents a single operation within a trace (e.g., policy execution, upstream call)
 - **Context Propagation**: Traces are correlated across components using trace IDs and span IDs in headers
 
-## Enabling Tracing
+## Enabling tracing
 
-### Configuration Required
+### Configuration required
 
 You need to enable tracing in the gateway configuration file and point it to your OTLP collector endpoint.
 
 The tracing configuration is located in `gateway/configs/config.toml`:
 
-#### Policy Engine Tracing Configuration
+#### Policy engine tracing configuration
 
 ```toml
 [tracing]
@@ -50,13 +50,13 @@ max_export_batch_size = 512             # Maximum spans per batch
 sampling_rate = 1.0                     # Sample rate (1.0 = 100%, 0.5 = 50%)
 ```
 
-### Demonstrated Tracing Services
+### Demonstrated tracing services
 
 The tracing services included in the Docker Compose file (Jaeger and OpenTelemetry Collector) are provided as **demonstration services** to show one possible way to collect and visualize traces. You can use them as-is for development/testing, or replace them with your own tracing solution.
 
 The gateway uses Docker Compose profiles to optionally enable these demonstration tracing services.
 
-### Start Gateway with Demonstrated Tracing Services
+### Start gateway with demonstrated tracing services
 
 To start the gateway with the demonstration tracing services enabled:
 
@@ -69,7 +69,7 @@ This starts:
 - OpenTelemetry Collector - *receives and processes traces*
 - Jaeger - *stores and visualizes traces*
 
-### Start Gateway without Tracing Services
+### Start gateway without tracing services
 
 To run only the core gateway services without the demonstration tracing stack:
 
@@ -79,7 +79,7 @@ docker compose up -d
 
 **Note:** If tracing is enabled in the configuration but the OTLP collector is not running, components will log warnings about failed trace exports. To completely disable tracing, set `enabled = false` in the configuration.
 
-### Stop Tracing Services
+### Stop tracing services
 
 To stop all services including the tracing stack:
 
@@ -89,18 +89,18 @@ docker compose --profile tracing down
 
 **Note:** Jaeger stores traces in memory by default. Stopping the service will lose all trace data. For persistent storage, configure Jaeger with a backend database (see Jaeger documentation).
 
-## Viewing Traces in Jaeger
+## Viewing traces in Jaeger
 
 Once you've started the gateway with the tracing profile, follow these steps to view distributed traces:
 
-### Step 1: Access Jaeger UI
+### Step 1: access Jaeger UI
 
 Open your browser and navigate to:
 ```
 http://localhost:16686
 ```
 
-### Step 2: Search for Traces
+### Step 2: search for traces
 
 The Jaeger UI provides several ways to search for traces:
 
@@ -123,17 +123,17 @@ The Jaeger UI provides several ways to search for traces:
 
 5. Click **Find Traces**
 
-### Step 3: Analyze Trace Details
+### Step 3: analyze trace details
 
 Click on any trace in the results to view detailed information:
 
-#### Trace Timeline
+#### Trace timeline
 - **Visual timeline** showing all spans in the trace
 - **Duration bars** showing relative time spent in each operation
 - **Parent-child relationships** between spans
 - **Color coding** by service
 
-#### Span Details
+#### Span details
 Click on any span to see:
 - **Operation name**: What operation was performed
 - **Duration**: How long it took
@@ -141,7 +141,7 @@ Click on any span to see:
 - **Logs**: Events logged during the span (errors, warnings, etc.)
 - **Process**: Service name, version, and host information
 
-#### Common Use Cases
+#### Common use cases
 
 **Finding Slow Requests:**
 1. Set Min Duration filter (e.g., 1000ms)
@@ -158,23 +158,23 @@ Click on any span to see:
 2. View the complete request path through all components
 3. Identify which component handled which part of the request
 
-### Step 4: Trace Comparison
+### Step 4: trace comparison
 
 You can compare multiple traces to identify patterns:
 1. Select multiple traces using checkboxes
 2. Click **Compare Traces** button
 3. View side-by-side comparison of trace structure and timings
 
-### Step 5: Service Dependency Graph
+### Step 5: service dependency graph
 
 View how services interact:
 1. Click **Dependencies** in the top navigation
 2. Select time range
 3. View graph showing service-to-service communication patterns
 
-## Configuration Options
+## Configuration options
 
-### Adjusting Sampling Rate
+### Adjusting sampling rate
 
 To reduce trace volume in high-traffic environments, adjust the sampling rate:
 
@@ -192,7 +192,7 @@ Sampling strategies:
 **Note:** Lower sampling rates reduce overhead but may miss important traces.
 
 
-### Custom Service Names
+### Custom service names
 
 Customize service names for better identification:
 
@@ -201,7 +201,7 @@ Customize service names for better identification:
 service_name = "policy-engine-prod-us-east-1"
 ```
 
-### Batch Configuration
+### Batch configuration
 
 Optimize batch settings for your environment:
 
@@ -214,7 +214,7 @@ max_export_batch_size = 1024    # Export up to 1024 spans per batch
 **Lower timeout**: Faster trace visibility, more network overhead
 **Higher timeout**: Better batching efficiency, slower trace visibility
 
-## Alternative Tracing Backends
+## Alternative tracing backends
 
 While the default setup uses Jaeger, the gateway components use OpenTelemetry and can export to any OTLP-compatible backend.
 
@@ -249,7 +249,7 @@ service:
 - Use the `otlphttp` exporter (not `otlp` which uses gRPC)
 - The `X-Moesif-Application-Id` header is required for authentication
 
-#### Obtaining Your Moesif Application ID
+#### Obtaining your Moesif application ID
 
 1. Sign up for a Moesif account at [moesif.com](https://www.moesif.com)
 2. Log in to your Moesif dashboard
@@ -257,7 +257,7 @@ service:
 4. Locate the **Collector Application ID** field
 5. Copy your unique Application ID
 
-#### Using Environment Variables
+#### Using environment variables
 
 For better security, use environment variables for the Application ID:
 
@@ -286,7 +286,7 @@ export MOESIF_APPLICATION_ID=your-moesif-application-id
 docker compose --profile tracing up -d
 ```
 
-#### Accessing Moesif Dashboard
+#### Accessing Moesif dashboard
 
 After configuring and starting the gateway:
 
@@ -296,7 +296,7 @@ After configuring and starting the gateway:
 4. Use **Time Series** to analyze API usage trends
 5. Set up **Alerts** for error rates, latency, or custom conditions
 
-#### Moesif Features
+#### Moesif features
 
 - **API Analytics**: Request volume, response times, error rates
 - **User Tracking**: Identify and track API users across requests
@@ -305,7 +305,7 @@ After configuring and starting the gateway:
 - **Custom Dashboards**: Build visualizations for your specific KPIs
 - **Alerting**: Get notified of anomalies or threshold breaches
 
-#### Sending to Both Jaeger and Moesif
+#### Sending to both Jaeger and Moesif
 
 You can send traces to both Jaeger (for development) and Moesif (for analytics):
 
@@ -354,7 +354,7 @@ exporters:
 
 Access Zipkin UI at `http://localhost:9411`
 
-### Grafana Tempo
+### Grafana tempo
 
 For a Prometheus-style tracing backend:
 
@@ -392,9 +392,9 @@ tracing:
   endpoint: tempo:4317
 ```
 
-### Cloud-Native Tracing Solutions
+### Cloud-native tracing solutions
 
-#### AWS X-Ray
+#### AWS X-ray
 
 Configure OTLP Collector to export to AWS X-Ray:
 
@@ -415,7 +415,7 @@ otel-collector:
     - AWS_REGION=us-east-1
 ```
 
-#### Google Cloud Trace
+#### Google cloud trace
 
 Configure OTLP Collector to export to Google Cloud:
 
@@ -426,7 +426,7 @@ exporters:
     use_insecure: false
 ```
 
-#### Azure Monitor
+#### Azure monitor
 
 Use Azure Monitor exporter:
 
@@ -470,7 +470,7 @@ tracing:
   endpoint: datadog-agent:4317
 ```
 
-#### New Relic
+#### New relic
 
 Configure OTLP Collector to export to New Relic:
 
@@ -502,7 +502,7 @@ exporters:
       lightstep-access-token: ${LIGHTSTEP_ACCESS_TOKEN}
 ```
 
-### Service Mesh Integration
+### Service mesh integration
 
 If using a service mesh like Istio or Linkerd:
 
@@ -526,14 +526,14 @@ tracing:
   endpoint: linkerd-collector.linkerd:4317
 ```
 
-## Customizing OpenTelemetry Collector
+## Customizing opentelemetry collector
 
 The OTLP Collector configuration is located at:
 ```
 gateway/observability/otel-collector/config.yaml
 ```
 
-### Configuration Structure
+### Configuration structure
 
 The configuration consists of three main sections:
 
@@ -598,7 +598,7 @@ exporters:
     sampling_thereafter: 200
 ```
 
-#### Service Pipeline
+#### Service pipeline
 Connect receivers, processors, and exporters:
 
 ```yaml
@@ -610,7 +610,7 @@ service:
       exporters: [otlp, debug]
 ```
 
-### Example: Multi-Backend Export
+### Example: Multi-backend export
 
 Send traces to multiple backends simultaneously:
 
@@ -638,7 +638,7 @@ service:
       exporters: [otlp/jaeger, otlp/tempo, datadog]
 ```
 
-### Example: Tail-Based Sampling
+### Example: Tail-based sampling
 
 Keep all error traces but sample successful traces:
 
@@ -660,7 +660,7 @@ processors:
           sampling_percentage: 10
 ```
 
-## Trace Context Propagation
+## Trace context propagation
 
 The gateway components automatically propagate trace context using standard W3C Trace Context headers:
 
@@ -679,7 +679,7 @@ curl http://localhost:8080/weather/v1.0/us/seattle \
 
 This allows you to trace requests across your entire system, including services before and after the gateway.
 
-## Best Practices
+## Best practices
 
 ### Development
 - Use 100% sampling rate (`sampling_rate: 1.0`)
@@ -710,7 +710,7 @@ This allows you to trace requests across your entire system, including services 
 - Use asynchronous trace export (default with OTLP)
 - Consider using tail-based sampling for high-volume environments
 
-### Sampling Strategy
+### Sampling strategy
 
 Choose sampling based on traffic volume:
 
@@ -725,7 +725,7 @@ Choose sampling based on traffic volume:
 
 ## Troubleshooting
 
-### Traces Not Appearing in Jaeger
+### Traces not appearing in Jaeger
 
 **1. Verify tracing is enabled in configuration:**
 ```bash
@@ -764,14 +764,14 @@ docker logs policy-engine | grep -i trace
 docker logs gateway-controller | grep -i trace
 ```
 
-### Traces Are Incomplete or Missing Spans
+### Traces are incomplete or missing spans
 
 **1. Check sampling rate** - ensure it's not too low
 **2. Verify all components are configured** to export traces
 **3. Check for trace context propagation issues** - ensure headers are preserved
 **4. Look for timeout errors** in OTLP collector logs
 
-### High Trace Export Overhead
+### High trace export overhead
 
 **1. Reduce sampling rate:**
 ```toml
@@ -788,13 +788,13 @@ max_export_batch_size = 2048
 
 **3. Use tail-based sampling** in OTLP collector to sample only important traces
 
-### Traces Have Incorrect Timing
+### Traces have incorrect timing
 
 - **Ensure system clocks are synchronized** across all containers (use NTP)
 - **Check for clock skew** in trace timeline view
 - **Verify trace context propagation** is working correctly
 
-### Cannot Access Jaeger UI
+### Cannot access Jaeger UI
 
 **1. Verify Jaeger is running:**
 ```bash
@@ -811,7 +811,7 @@ docker logs jaeger
 curl http://localhost:16686/
 ```
 
-## Disabling Tracing
+## Disabling tracing
 
 To completely disable tracing:
 
@@ -833,11 +833,11 @@ docker compose restart gateway-controller policy-engine router
 
 **Note:** The router (Envoy) tracing is controlled by the gateway-controller configuration and will be disabled when the configuration is updated.
 
-## Integration with Logging
+## Integration with logging
 
 Traces and logs work together for comprehensive observability:
 
-### Correlating Traces and Logs
+### Correlating traces and logs
 
 1. **Trace ID in Logs**: Gateway components include trace IDs in log entries
 2. **Find Trace from Log**: Copy trace ID from log entry and search in Jaeger
@@ -855,7 +855,7 @@ Example log entry with trace ID:
 }
 ```
 
-### Using Both Stacks
+### Using both stacks
 
 Enable both logging and tracing profiles:
 
@@ -867,7 +867,7 @@ This provides complete observability:
 - **Traces**: Request flow and performance
 - **Logs**: Detailed event information and debugging
 
-## Additional Resources
+## Additional resources
 
 - [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
 - [Jaeger Documentation](https://www.jaegertracing.io/docs/)

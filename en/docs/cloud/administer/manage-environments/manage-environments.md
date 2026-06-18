@@ -1,4 +1,4 @@
-# Manage Environments
+# Manage environments
 
 By default, all projects created in the cloud data planes (irrespective of the data plane region) are provisioned with two environments (i.e., development and production).
 

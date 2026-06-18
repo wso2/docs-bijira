@@ -13,11 +13,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Azure Content Safety Content Moderation
+# Azure Content Safety content moderation
 
 This policy provides the capability to integrate [Azure Content Safety Content Moderation Service](https://learn.microsoft.com/en-us/rest/api/contentsafety/text-operations/analyze-text?view=rest-contentsafety-2024-09-01&tabs=HTTP) to filter out harmful content in request bodies and AI-generated responses. This guardrail checks for hate speech, sexual content, self-harm, and violence, and can be applied to both requests and responses.
 
-## Configure Azure Content Safety Content Moderation
+## Configure Azure Content Safety content moderation
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -42,7 +42,7 @@ This policy provides the capability to integrate [Azure Content Safety Content M
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample Azure Content Safety Content Moderation Configuration
+### Sample Azure Content Safety content moderation configuration
 
 - Guardrail Name: `Azure Content Safety Guardrail`
 - Azure Content Safety Endpoint: `https://<your-endpoint>.cognitiveservices.azure.com`
@@ -55,7 +55,7 @@ This policy provides the capability to integrate [Azure Content Safety Content M
 - Passthrough On Error: `false`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the Azure Content Safety Content Moderation
+### Sample payload to be intervened from the Azure Content Safety content moderation
 
 ```json
 {
@@ -68,7 +68,7 @@ This policy provides the capability to integrate [Azure Content Safety Content M
 }
 ```
 
-### Sample Response after Azure Content Safety Content Moderation Intervention
+### Sample response after Azure Content Safety content moderation intervention
 
 ```json
 {

@@ -11,7 +11,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Govern API Proxies
+# Govern API proxies
 
 API governance lets you enforce compliance standards on API proxies across your organization. You can define rulesets, attach them to policies, and monitor adherence through a compliance dashboard. You can also upload governance documents to run AI-powered compliance analysis against your APIs.
 
@@ -24,7 +24,7 @@ The Governance page is organized into two main sections, toggled at the top:
 
 Rulesets are Spectral YAML-based rule definitions used to validate API artifacts. They are listed under the **Policies** tab in the **Rulesets** section. Once created, rulesets are attached to policies to enforce them on your API proxies.
 
-### Create a Ruleset
+### Create a ruleset
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
@@ -54,7 +54,7 @@ Rulesets are Spectral YAML-based rule definitions used to validate API artifacts
 
 Policies attach one or more rulesets to your organization's API proxies and define when and how they are enforced. You can use the default rulesets available in the catalog or create your own. Once created, a policy is automatically applied globally to all existing and newly created API proxies in the organization.
 
-### Create a Policy
+### Create a policy
 
 1. On the Governance page, ensure the **Policies** tab is selected.
 2. Click **Add Policy**.
@@ -72,7 +72,7 @@ Policies attach one or more rulesets to your organization's API proxies and defi
 
 ![Create Policy form showing name, description, Global applicability, Enforcement Details table with Update state and Notify buttons for On Error, On Warning, and On Info, plus selectable ruleset cards including Sample Ruleset, WSO2 API Design Guidelines, WSO2 Style Guidelines, and OWASP Top 10](../../assets/img/governance/add-policy.png)
 
-### Enforcement Detail
+### Enforcement detail
 
 | Field Name | Description | Mandatory | Options/Values |
 |---|---|---|---|
@@ -86,7 +86,7 @@ Policies attach one or more rulesets to your organization's API proxies and defi
 
 Documents are PDF files containing governance standards written in natural language. They are used as guidelines by the AI Compliance Analysis feature when evaluating your APIs.
 
-### Add a Document
+### Add a document
 
 1. On the Governance page, select the **Documents** tab.
 2. Click **Add Document** and provide the following details:
@@ -101,6 +101,6 @@ Documents are PDF files containing governance standards written in natural langu
 
 ![Create Document form with name field showing Sample Document, selected PDF file for Best Practices Guidelines for REST API Design in the Banking Sector, and description field with Cancel and Create buttons](../../assets/img/governance/add-document.png)
 
-## Monitoring Compliance
+## Monitoring compliance
 
 Once policies are applied, compliance results are available through the Compliance Dashboard under **Insights > Compliance** at the organization, project, and component levels. For details on viewing compliance results and running AI compliance analysis, see [Compliance Dashboard](../monitoring-and-insights/compliance.md).

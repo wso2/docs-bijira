@@ -1,14 +1,14 @@
-# Prompt Template
+# Prompt template
 
 The Prompt Template policy applies reusable, parameterized prompt templates to requests. Instead of sending a raw prompt, clients send a template reference (`template://<name>?param=value`) and the gateway substitutes the parameters into the configured template before forwarding the request to the LLM.
 
-## Configuration Parameters
+## Configuration parameters
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
 | **Templates** | Yes | A list of named templates. Each template has a **name** (identifier) and a **prompt** string containing placeholders in the format `[[parameter-name]]`. |
 
-### Template Placeholder Syntax
+### Template placeholder syntax
 
 Use `[[parameter-name]]` inside the prompt string to mark substitution points:
 
@@ -18,7 +18,7 @@ Translate the following text from [[from]] to [[to]]: [[text]]
 
 When a client calls `template://translate?from=English&to=Spanish&text=Hello`, the policy replaces each placeholder with the corresponding query parameter value.
 
-## Advanced Settings
+## Advanced settings
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
@@ -26,7 +26,7 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 | **On Missing Template** | `error` | Behavior when a referenced template name is not found. `error` returns an immediate error response; `passthrough` leaves the original template reference unchanged. |
 | **On Unresolved Placeholder** | `keep` | Behavior when a placeholder has no matching query parameter. `keep` leaves the placeholder as-is; `empty` replaces it with an empty string; `error` returns an immediate error response. |
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -37,7 +37,7 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 7. Click **Add** (for providers) or **Submit** (for proxies).
 8. Deploy the provider or proxy to apply the changes.
 
-## Example: Translation Template
+## Example: translation template
 
 **Configured template:**
 

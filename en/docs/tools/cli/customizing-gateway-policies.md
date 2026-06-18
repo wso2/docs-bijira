@@ -1,6 +1,6 @@
-# Customizing the Gateway by Adding and Removing Policies
+# Customizing the gateway by adding and removing policies
 
-## CLI Command
+## CLI command
 
 ```shell
 ap gateway image build \
@@ -13,13 +13,13 @@ ap gateway image build \
   [--output-dir <output_dir>]
 ```
 
-## Sample Command
+## Sample command
 
 ```shell
 ap gateway image build
 ```
 
-## Additional Notes for Users
+## Additional notes for users
 
 Use `ap gateway image build --help` to view detailed usage information for this command.
 
@@ -54,7 +54,7 @@ All other policies are treated as **PolicyHub policies**:
 
 Even an output directory is not explicitly specified, the built images are cached by default. On subsequent executions, the cache is cleared and replaced with newly built images. The cache location is displayed in the command output.
 
-### Non-Self-Explanatory Flags
+### Non-self-explanatory flags
 
 - `--name` (`-n`): Sets the gateway name. If not provided, the current directory name is used by default.
 - `--path`: Specifies the directory containing `build.yaml`. By default, this is the current working directory.

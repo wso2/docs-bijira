@@ -18,7 +18,7 @@ content_type: "how-to"
 AI services often incur costs on a per-token basis, making usage control critical.
 API Platform’s AI Gateway introduces token-based rate limiting that can be applied at the API level.
 
-## Configure Token Based Ratelimit Policy
+## Configure token based ratelimit policy
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 

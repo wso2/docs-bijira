@@ -1,5 +1,5 @@
 ---
-title: "Quick Start Guide - API Proxy"
+title: "Quick start guide - API proxy"
 description: "Expose a service as an API proxy with WSO2 API Platform and publish it to the Developer Portal for application developers to consume."
 canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-11
 content_type: "quickstart"
 ---
 
-# Quick Start Guide - API Proxy
+# Quick start guide - API proxy
 
 WSO2 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 
@@ -28,7 +28,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 
     This creates the organization and opens the organization home page.
 
-## Step 1: Create a Project
+## Step 1: create a project
 
 1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
@@ -45,7 +45,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 
 4. Click **Create**. This creates the project and takes you to the project home page.
 
-## Step 2: Create an API Proxy
+## Step 2: create an API proxy
 
 1. On the project home page, click **Import API Contract** under **My APIs (Ingress)**.
 2. Click **URL for API Contract**, enter the following URL, and then click **Next**:
@@ -55,7 +55,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
     ![Create API Proxy from Contract form with HTTP type, name Sample API, identifier, version, base path, description, target URL, and External and Internal access mode options](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
-## Step 3: Test the API Proxy
+## Step 3: test the API proxy
 
 You can test the API proxy in the development environment before promoting it to production. API Platform provides the following options to test your API proxy:
 
@@ -78,7 +78,7 @@ In this guide, you will use the OpenAPI Console.
 
     This indicates that your API proxy is working as expected.
 
-## Step 4: Promote the API Proxy to Production
+## Step 4: promote the API proxy to production
 
 Once you verify that the API proxy is working as expected in the development environment, you can promote it to production.
 
@@ -95,7 +95,7 @@ Once you verify that the API proxy is working as expected in the development env
 
 Now that your API is deployed in both development and production environments and can be invoked, the next step is to publish it so that consumers can discover and subscribe to it.
 
-## Step 5: Publish the API Proxy
+## Step 5: publish the API proxy
 
 1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the API. The current lifecycle stage is **Created**.
 2. Click **Publish**.
@@ -103,7 +103,7 @@ Now that your API is deployed in both development and production environments an
 
 You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the API Platform Developer Portal.
 
-## Step 6: Invoke the API
+## Step 6: invoke the API
 
 <!-- TODO: Need to improve the documentation after devportal is refined with snaps and steps -->
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.

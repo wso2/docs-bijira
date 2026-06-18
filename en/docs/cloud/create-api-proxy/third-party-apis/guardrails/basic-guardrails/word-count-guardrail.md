@@ -12,11 +12,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Word Count Guardrail
+# Word count guardrail
 
 This policy provides the capability to perform word count-based validation on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce specific content moderation rules based on configurable minimum and maximum word counts and JSON path expressions.
 
-## Configure Word Count Guardrail
+## Configure word count guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -37,7 +37,7 @@ This policy provides the capability to perform word count-based validation on in
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample Word Count Guardrail Configuration
+### Sample word count guardrail configuration
 
 - Guardrail Name: `Word Count Guardrail`
 - Minimum Word Count: `2`
@@ -46,7 +46,7 @@ This policy provides the capability to perform word count-based validation on in
 - Invert the Guardrail Decision: `false`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the Word Count Guardrail
+### Sample payload to be intervened from the word count guardrail
 
 ```json
 {
@@ -59,7 +59,7 @@ This policy provides the capability to perform word count-based validation on in
 }
 ```
 
-### Sample Response after Word Count Guardrail Intervention
+### Sample response after word count guardrail intervention
 
 ```json
 {

@@ -62,7 +62,7 @@ GET /v0.1/servers/{serverName}/versions/{version}
 
 Use the special version value `latest` to resolve the most recently published version.
 
-## Response Shape
+## Response shape
 
 The response from `GET /v0.1/servers` and the version endpoints follows this structure:
 
@@ -103,7 +103,7 @@ curl "https://mcphub.bijira.dev/<org_handle>/registry/v0.1/servers?cursor=<nextC
 
 Continue until `metadata.nextCursor` is absent or empty, which indicates the last page.
 
-## Related Topics
+## Related topics
 
 - [What is an MCP Registry?](./mcp-registry.md)
 - [Publish MCP Proxies from the AI Workspace](./publish-mcp-proxies.md)

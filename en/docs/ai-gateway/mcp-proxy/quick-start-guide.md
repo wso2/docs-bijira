@@ -1,5 +1,5 @@
 ---
-title: "MCP Proxy Quick Start Guide"
+title: "MCP proxy quick start guide"
 description: "Run API Platform AI Gateway with Docker Compose, configure an MCP proxy, and route your first MCP traffic through the gateway."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/quick-start-guide.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-16
 content_type: "quickstart"
 ---
 
-## Quick Start
+## Quick start
 
-### Using Docker Compose (Recommended)
+### Using Docker compose (recommended)
 
 
 ### Prerequisites
@@ -86,7 +86,7 @@ To test MCP traffic routing through the gateway, add the following URL to your M
 http://localhost:8080/everything/mcp
 ```
 
-## Stopping the Gateway
+## Stopping the gateway
 
 Stop and remove the MCP backend first.
 
@@ -97,7 +97,7 @@ docker rm everything
 
 When stopping the gateway, you have two options:
 
-### Option 1: Stop runtime, keep data (persisted proxies and configuration)
+### Option 1: stop runtime, keep data (persisted proxies and configuration)
 
 ```bash
 docker compose -p ai-gateway down
@@ -105,7 +105,7 @@ docker compose -p ai-gateway down
 
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose -p ai-gateway up`, all your API configurations will be restored.
 
-### Option 2: Complete shutdown with data cleanup (fresh start)
+### Option 2: complete shutdown with data cleanup (fresh start)
 
 ```bash
 docker compose -p ai-gateway down -v

@@ -1,4 +1,4 @@
-## High Availability Deployment with Multiple Gateway Controllers and Runtimes
+## High availability deployment with multiple gateway controllers and runtimes
 
 The self-hosted gateway can be deployed in a highly available manner by running multiple **Gateway Controller** replicas and multiple **Gateway Runtime** replicas across different network zones or environments.
 
@@ -8,7 +8,7 @@ This ensures that all Gateway Controller replicas operate with a consistent depl
 
 ![High-availability setup example](../../assets/img/api-platform-gateway/gateway/high-availability-architecture.png)
 
-## Architecture Overview
+## Architecture overview
 
 The deployment consists of the following main components:
 
@@ -18,7 +18,7 @@ The deployment consists of the following main components:
 | **PostgreSQL Database** | Acts as the shared source of truth for API metadata, deployment state, and gateway configuration. |
 | **Gateway Runtime** | Receives configuration from its connected Gateway Controller and enforces API gateway policies at runtime. |
 
-## Deployment Synchronization Flow
+## Deployment synchronization flow
 
 When an API deployment request is received, it is handled by one of the available Gateway Controller replicas.
 
@@ -30,7 +30,7 @@ Each Gateway Runtime then applies the received configuration and starts serving 
 
 Each Gateway Controller replica can manage one or more Gateway Runtime replicas.
 
-## High Availability Behavior
+## High availability behavior
 
 High availability is achieved by removing dependency on a single controller instance.
 
@@ -40,7 +40,7 @@ If one Gateway Controller replica becomes unavailable, another replica can conti
 
 Similarly, multiple Gateway Runtime replicas can be deployed in each environment to ensure API traffic continues to be served even if one runtime replica becomes unavailable.
 
-## Configuration Synchronization
+## Configuration synchronization
 
 The PostgreSQL database is the central synchronization point between Gateway Controller replicas. It maintains the latest API deployment state and allows all controller replicas to operate consistently.
 

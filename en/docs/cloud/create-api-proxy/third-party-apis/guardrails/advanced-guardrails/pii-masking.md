@@ -13,11 +13,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# PII Masking (using Guardrails AI)
+# PII masking (using guardrails AI)
 
 The PII Masking policy allows you to mask Personally Identifiable Information (PII) in the request and response payloads using an fine-tuned Guardrails AI model. This policy is particularly useful for ensuring that sensitive information is not exposed in AI-generated content, thereby enhancing security and compliance with data protection regulations.
 
-## Configure PII Masking
+## Configure PII masking
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -40,14 +40,14 @@ The PII Masking policy allows you to mask Personally Identifiable Information (P
 !!! note "PII Unmasking with PII Masking"
     If you want to use the PII Masking for PII unmasking, you must attach the policy to both the request and response flows. This allows the policy to mask PII in the request and unmask it in the response. Moreover, the `Redact PII` option should be disabled in both flows to allow the PII to be restored in the response. If you enable `Redact PII` in the response flow, the PII will be permanently redacted and not restored.
 
-### Sample PII Masking Configuration
+### Sample PII masking configuration
 
 - Guardrail Name: `PII Masking`
 - PII Entities: `EMAIL,URL`
 - JSON Path: `$.messages[0].content`
 - Redact PII: `true`
 
-### Sample Payload to be intervened from the PII Masking
+### Sample payload to be intervened from the PII masking
 
 ```json
 {
@@ -60,7 +60,7 @@ The PII Masking policy allows you to mask Personally Identifiable Information (P
 }
 ```
 
-### Sample Payload after intervention from PII Masking
+### Sample payload after intervention from PII masking
 
 ```json
 {

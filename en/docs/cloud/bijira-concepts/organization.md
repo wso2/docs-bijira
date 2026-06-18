@@ -4,7 +4,7 @@ Organizations are the foundational building blocks in API Platform, providing a 
 
 ---
 
-## What is an Organization?
+## What is an organization?
 
 An **organization** in API Platform is a logical container for users and their resources. Every user must belong to an organization to use API Platform. Organizations help isolate resources, manage access, and enable collaboration within a defined boundary.
 
@@ -14,7 +14,7 @@ An **organization** in API Platform is a logical container for users and their r
 
 ---
 
-## Switching between Organizations
+## Switching between organizations
 
 If you are a member of multiple organizations, you can easily switch between them by following steps below.
 
@@ -23,13 +23,13 @@ If you are a member of multiple organizations, you can easily switch between the
 
 ---
 
-## Inviting Members to Your Organization
+## Inviting members to your organization
 
 To collaborate, you can invite new members to your organization. (See the [Inviting Members](../administer/inviting-members.md) guide for step-by-step instructions.)
 
 ---
 
-## Managing User Permissions
+## Managing user permissions
 
 API Platform uses a combination of **groups** and **roles** to manage user permissions efficiently.
 
@@ -37,7 +37,7 @@ API Platform uses a combination of **groups** and **roles** to manage user permi
 
 A **group** is a collection of users with one or more roles assigned. Users inherit all permissions associated with the group's roles. For example, adding a user to the `API Publisher` group automatically grants them the `API Publisher` role.
 
-#### Predefined Groups
+#### Predefined groups
 
 API Platform provides several predefined groups, each mapped to specific roles.
 
@@ -61,7 +61,7 @@ Roles define what actions a user can perform within an organization. The main ro
 
 ---
 
-## Organization Identifiers
+## Organization identifiers
 
 API Platform uses two unique identifiers for organizations, the **Organization ID** and the **Organization Handle**.
 
@@ -75,7 +75,7 @@ A unique, system-generated identifier for each organization. To find your Organi
 4. In the header, click the **Organization** list to open organization-level settings.
 5. Under **Organization**, click **Copy ID**.
 
-### Organization Handle
+### Organization handle
 
 A unique, human-readable string that corresponds to your organization's name. To find your Organization Handle:
 
@@ -86,7 +86,7 @@ A unique, human-readable string that corresponds to your organization's name. To
 
 ---
 
-## Best Practices for Organization Management
+## Best practices for organization management
 
 - **Assign roles carefully**: Only grant users the permissions they need.
 - **Use groups for easier management**: Assign roles to groups and add users to groups for scalable permission management.

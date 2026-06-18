@@ -2,16 +2,16 @@
 
 The AI Workspace provides a built-in **Insights** page that gives you real-time visibility into traffic, usage patterns, and performance across your LLM Providers and Proxies. Insights are powered by [Moesif](https://www.moesif.com/), an AI-native API analytics platform, and are available directly within the AI Workspace — no separate Moesif setup is required.
 
-## Accessing Insights
+## Accessing insights
 
 1. Navigate to **AI Workspace** in your API Platform dashboard.
 2. Click **Insights** in the left navigation sidebar.
 
 The Insights page loads an embedded analytics dashboard scoped to your AI Workspace activity.
 
-## What You Can See
+## What you can see
 
-### Overview Summary
+### Overview summary
 
 The overview panel at the top shows key metrics at a glance:
 
@@ -21,15 +21,15 @@ The overview panel at the top shows key metrics at a glance:
 | **Avg Latency** | The average end-to-end response latency across all requests. |
 | **Success Rate** | The percentage of requests that completed successfully (non-error responses). |
 
-### Request Trend
+### Request trend
 
 A time-series chart showing the volume of requests over time. Use this to identify traffic spikes, usage patterns, and the impact of configuration changes on request volume.
 
-### Traffic Split
+### Traffic split
 
 A breakdown of traffic distribution across your App LLM Proxies or providers. Use this to understand which app proxies or providers are handling the most load and whether traffic is distributed as expected.
 
-### Full Analytics Dashboard
+### Full analytics dashboard
 
 The full Moesif-powered dashboard embedded in the Insights page provides deeper analytics, including:
 
@@ -40,7 +40,7 @@ The full Moesif-powered dashboard embedded in the Insights page provides deeper 
 - **Error analysis** — Identify error patterns and guardrail interventions.
 - **Consumer activity** — Monitor which applications or consumers are generating the most traffic.
 
-## Using Insights for Cost and Rate Limit Management
+## Using insights for cost and rate limit management
 
 The Insights dashboard is particularly useful for tuning your [token-based rate limits](policies/rate-limit/token-based-rate-limit.md):
 
@@ -48,7 +48,7 @@ The Insights dashboard is particularly useful for tuning your [token-based rate 
 2. Check **per-consumer traffic** to determine appropriate per-consumer limits.
 3. Monitor **error rates** to detect rate limit violations (`429 Too Many Requests` responses) and adjust limits accordingly.
 
-## Using Insights for Guardrail Monitoring
+## Using insights for guardrail monitoring
 
 When guardrails are active, you can use Insights to:
 

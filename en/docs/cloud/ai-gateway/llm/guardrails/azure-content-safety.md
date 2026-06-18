@@ -21,7 +21,7 @@ The policy uses Azure Content Safety's text analysis API to evaluate content and
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -33,7 +33,7 @@ The policy uses Azure Content Safety's text analysis API to evaluate content and
 | `selfHarmCategory` | integer | No | `-1` | Severity threshold for self-harm category (0-7). `-1` disables this category. Content with severity >= threshold will be blocked. |
 | `violenceCategory` | integer | No | `-1` | Severity threshold for violence category (0-7). `-1` disables this category. Content with severity >= threshold will be blocked. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -45,7 +45,7 @@ The policy uses Azure Content Safety's text analysis API to evaluate content and
 | `selfHarmCategory` | integer | No | `-1` | Severity threshold for self-harm category (0-7). `-1` disables this category. Content with severity >= threshold will be blocked. |
 | `violenceCategory` | integer | No | `-1` | Severity threshold for violence category (0-7). `-1` disables this category. Content with severity >= threshold will be blocked. |
 
-### System Parameters (Required)
+### System parameters (required)
 
 These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
 
@@ -54,7 +54,7 @@ These parameters are typically configured at the gateway level and automatically
 | `azureContentSafetyEndpoint` | string | Yes | Azure Content Safety API endpoint URL (without trailing slash). Example: `https://your-resource.cognitiveservices.azure.com` |
 | `azureContentSafetyKey` | string | Yes | Azure Content Safety API subscription key for authentication. Found in Azure Portal under your Content Safety resource's "Keys and Endpoint" section. |
 
-### Configuring System Parameters in config.toml
+### Configuring system parameters in config.toml
 
 System parameters can be configured globally in the gateway's `config.toml` file. These values serve as defaults for all Azure Content Safety guardrail policy instances and can be overridden per-policy in the API configuration if needed.
 
@@ -67,7 +67,7 @@ azurecontentsafety_endpoint = "https://your-resource.cognitiveservices.azure.com
 azurecontentsafety_key = "<your-azure-content-safety-key>"
 ```
 
-## Severity Levels
+## Severity levels
 
 Azure Content Safety uses an 8-level severity scale (0-7):
 
@@ -82,7 +82,7 @@ Azure Content Safety uses an 8-level severity scale (0-7):
 - Set to `-1` to disable monitoring for that category
 - Example: `hateCategory: 3` blocks content with hate severity >= 3
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -97,7 +97,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: Basic Content Moderation
+### Example 1: basic content moderation
 
 Deploy an LLM provider with Azure Content Safety validation:
 
@@ -186,7 +186,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 2: Strict Moderation with All Categories
+### Example 2: strict moderation with all categories
 
 Configure strict moderation thresholds:
 
@@ -215,7 +215,7 @@ policies:
             showAssessment: true
 ```
 
-### Example 3: Selective Category Monitoring
+### Example 3: selective category monitoring
 
 Monitor only specific categories:
 
@@ -235,7 +235,7 @@ policies:
             violenceCategory: -1  # Disabled
 ```
 
-### Example 4: Lenient Moderation
+### Example 4: lenient moderation
 
 Allow more content with higher thresholds:
 
@@ -256,7 +256,7 @@ policies:
             passthroughOnError: true
 ```
 
-## Use Cases
+## Use cases
 
 1. **Content Safety**: Protect users from harmful, offensive, or inappropriate content in LLM interactions.
 
@@ -274,7 +274,7 @@ policies:
 
 8. **Audit and Analytics**: Use detailed assessment information to analyze content patterns and refine policies.
 
-## Severity Threshold Guidelines
+## Severity threshold guidelines
 
 **Recommended thresholds by use case**:
 
@@ -290,7 +290,7 @@ policies:
 - **Self-harm**: Often set lower (1-2) due to safety concerns
 - **Violence**: Depends on context (1-2 for general use, higher for educational/historical content)
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

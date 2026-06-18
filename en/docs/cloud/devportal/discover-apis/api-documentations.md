@@ -1,8 +1,8 @@
-# API Documentation
+# API documentation
 
 The API documentation page provides essential information such as endpoints, schemas, security mechanisms, and the base URL.
 
-## View API Documentation
+## View API documentation
 
 1. Go to **APIs** in the sidebar.
 2. Select an API to view the documentation.

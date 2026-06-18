@@ -1,6 +1,6 @@
-## Quick Start
+## Quick start
 
-### Using Docker Compose (Recommended)
+### Using Docker compose (recommended)
 
 
 ### Prerequisites
@@ -129,11 +129,11 @@ curl -X POST "https://localhost:8443/assistant/chat/completions" \
   }' -k
 ```
 
-## Stopping the Gateway
+## Stopping the gateway
 
 When stopping the gateway, you have two options:
 
-### Option 1: Stop runtime, keep data (persisted proxies and configuration)
+### Option 1: stop runtime, keep data (persisted proxies and configuration)
 
 ```bash
 docker compose down
@@ -141,7 +141,7 @@ docker compose down
 
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your API configurations will be restored.
 
-### Option 2: Complete shutdown with data cleanup (fresh start)
+### Option 2: complete shutdown with data cleanup (fresh start)
 ```bash
 docker compose down -v
 ```

@@ -1,4 +1,4 @@
-# API Designer
+# API designer
 
 API Designer is a Visual Studio Code extension for building and improving OpenAPI specifications. It helps you use AI to design APIs faster, assess AI readiness, and fix governance issues.
 

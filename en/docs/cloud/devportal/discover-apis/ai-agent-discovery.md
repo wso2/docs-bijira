@@ -1,10 +1,10 @@
-# AI Agent API Discovery
+# AI agent API discovery
 
 API Platform's Developer Portal has built-in support for AI agent discoverability. Every published API is automatically exposed through a set of machine readable endpoints that AI agents, LLM powered assistants, and agentic frameworks can use to discover, understand, and invoke APIs without human assistance.
 
 This page explains how those endpoints work and how agents navigate the portal.
 
-## `llms.txt`: The Entry Point for Agents
+## `llms.txt`: the entry point for agents
 
 The portal dynamically generates an `llms.txt` file — a plain-text Markdown index designed as the entry point for AI agents. It provides a structured overview of everything the portal exposes for AI consumption.
 
@@ -27,18 +27,18 @@ An agent or agentic framework that starts at `llms.txt` immediately understands 
 
 ---
 
-## Machine Readable API Endpoints
+## Machine readable API endpoints
 
 Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw specification files. These endpoints require no authentication, no JavaScript rendering, and no browser. Therefore, agents can fetch them reliably as plain text.
 
-### API Catalog and Per API Documentation
+### API catalog and per API documentation
 
 | Endpoint | Description |
 |---|---|
 | `/{orgName}/views/{viewName}/apis.md` | All agent-visible APIs as a single Markdown document |
 | `/{orgName}/views/{viewName}/api/{apiHandle}.md` | Full documentation for a specific API in Markdown, including description, documents, and a link to the specification |
 
-### API Specifications
+### API specifications
 
 | Endpoint | Description |
 |---|---|
@@ -46,7 +46,7 @@ Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw spec
 | `/{orgName}/views/{viewName}/api/{apiHandle}/docs/specification.graphql` | GraphQL schema |
 | `/{orgName}/views/{viewName}/api/{apiHandle}/docs/specification.xml` | SOAP specification (WSDL/XML) |
 
-### MCP Server Catalog
+### MCP server catalog
 
 | Endpoint | Description |
 |---|---|
@@ -54,7 +54,7 @@ Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw spec
 | `/{orgName}/views/{viewName}/mcp/{apiHandle}.md` | Full documentation for a specific MCP server in Markdown |
 | `/{orgName}/views/{viewName}/mcp/{apiHandle}/docs/specification.json` | MCP server specification |
 
-### API Workflows
+### API workflows
 
 | Endpoint | Description |
 |---|---|
@@ -62,7 +62,7 @@ Beyond `llms.txt`, the portal exposes all content as clean Markdown and raw spec
 | `/{orgName}/views/{viewName}/api-workflows/{handle}/arazzo.json` | Machine readable Arazzo specification for a specific workflow |
 
 
-## How Agents Navigate the Portal
+## How agents navigate the portal
 
 A typical agent discovery flow looks like this:
 
@@ -73,7 +73,7 @@ A typical agent discovery flow looks like this:
 5. **Follow a workflow** — if a published workflow matches the task, the agent retrieves the Arazzo specification and agent prompt to follow a vetted, step-by-step call sequence rather than reasoning from scratch.
 
 
-## Visibility Controls
+## Visibility controls
 
 By default, all published APIs and MCP servers are agent-visible. API publishers can hide specific APIs from agent-facing surfaces without affecting their visibility to human users in the portal. Portal admins can also disable AI discoverability across the entire portal.
 

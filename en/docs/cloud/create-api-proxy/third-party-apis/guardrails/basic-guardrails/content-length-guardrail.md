@@ -12,11 +12,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Content Length Guardrail
+# Content length guardrail
 
 This policy provides the capability to perform content-byte-length validation on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce specific content moderation rules based on configurable minimum and maximum byte sizes and JSONPath expressions.
 
-## Configure Content Length Guardrail
+## Configure content length guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -37,7 +37,7 @@ This policy provides the capability to perform content-byte-length validation on
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample Content Length Guardrail Configuration
+### Sample content length guardrail configuration
 
 - Guardrail Name: `Content Length Guardrail`
 - Minimum Content Length: `10`
@@ -46,7 +46,7 @@ This policy provides the capability to perform content-byte-length validation on
 - Invert the Guardrail Decision: `false`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the Content Length Guardrail
+### Sample payload to be intervened from the content length guardrail
 
 ```json
 {
@@ -59,7 +59,7 @@ This policy provides the capability to perform content-byte-length validation on
 }
 ```
 
-### Sample Response after Content Length Guardrail Intervention
+### Sample response after content length guardrail intervention
 
 ```json
 {

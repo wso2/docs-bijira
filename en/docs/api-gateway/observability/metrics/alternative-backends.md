@@ -1,5 +1,5 @@
 ---
-title: "Export Metrics to Alternative Backends"
+title: "Export metrics to alternative backends"
 description: "Export API Platform Gateway metrics to alternative backends including AWS CloudWatch, Datadog, and other Prometheus-compatible systems."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/alternative-backends/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/alternative-backends.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Alternative Metrics Backends
+# Alternative metrics backends
 
 While the default setup uses Prometheus and Grafana, the gateway components expose standard Prometheus metrics and can integrate with any Prometheus-compatible system.
 
-## AWS CloudWatch
+## AWS cloudwatch
 
 Use AWS Distro for OpenTelemetry (ADOT) to export metrics to CloudWatch:
 
@@ -60,7 +60,7 @@ instances:
       - policy_engine_*
 ```
 
-## New Relic
+## New relic
 
 Use New Relic's Prometheus remote write integration:
 
@@ -100,7 +100,7 @@ metricbeat:
 
 Configure Metricbeat to scrape Prometheus endpoints.
 
-## Azure Monitor
+## Azure monitor
 
 Use Azure Monitor Agent with Prometheus scraping:
 
@@ -113,7 +113,7 @@ azuremonitor-agent:
     - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET}
 ```
 
-## Google Cloud Monitoring
+## Google cloud monitoring
 
 Use Cloud Monitoring Prometheus sidecar:
 
@@ -126,7 +126,7 @@ prometheus-to-monitoring:
     - ./key.json:/var/secrets/google/key.json:ro
 ```
 
-## Grafana Cloud
+## Grafana cloud
 
 Use Prometheus remote write to Grafana Cloud:
 

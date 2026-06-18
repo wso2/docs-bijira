@@ -11,7 +11,7 @@ last_updated: 2026-06-18
 content_type: "concept"
 ---
 
-# API Platform API Management Governance
+# API Platform API management governance
 
 API Management Governance consists of a set of processes, practices, roles, and responsibilities designed to ensure the effective and efficient management of APIs throughout their lifecycle. Establishing a governance strategy is essential for maintaining consistency, security, and compliance in API development, management, and consumption.
 
@@ -29,7 +29,7 @@ API Platform API Management provides a comprehensive governance capabilities tha
 
 This section outlines the governance concepts available in API Platform.
 
-## Governance Concepts
+## Governance concepts
 
 API Management Governance build on the following concepts
 
@@ -58,19 +58,19 @@ A **policy** is a set of rulesets that define governance policies to be enforced
 
 Each policy must have a **unique name** and may include a **description** to provide additional context.
 
-#### Policy Attachment and Labeling
+#### Policy attachment and labeling
 
 Policies can be attached to one or more **labels** to categorize them effectively. Labels serve as a link between policies and APIs when a policy is assigned to a label, it is automatically applied to all APIs associated with that label.
 
-#### Policy Enforcement
+#### Policy enforcement
 
 Policy enforcement is an integral part of policy definition and can be categorized into three types:
 
-#### 1. Policy Enforcement on APIs
+#### 1. Policy enforcement on APIs
 
 All the policies will be enforced on the API proxies when the proxies are updated.
 
-#### 2. Rule Violation Level
+#### 2. Rule violation level
 
 Policies can be enforced based on the severity of rule violations. The supported levels include:
 
@@ -78,7 +78,7 @@ Policies can be enforced based on the severity of rule violations. The supported
 - **Warn** – Indicates a warning that requires attention.
 - **Info** – Provides informational messages about compliance.
 
-#### 3. Rule Violation Action
+#### 3. Rule violation action
 
 Policies define actions to be taken when a rule violation is detected. The supported actions include:
 

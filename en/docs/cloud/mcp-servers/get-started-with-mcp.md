@@ -14,7 +14,7 @@ content_type: "overview"
 
 # Overview
 
-## What is Model Context Protocol?
+## What is model context protocol?
 
 MCP is a JSON-RPC–based protocol designed to standardize how applications interact with large language models (LLMs). It enables sharing of contextual information—such as local files, databases, or APIs—with LLMs, while also allowing applications to expose tools and capabilities for AI-driven workflows and integrations.
 
@@ -22,7 +22,7 @@ MCP follows a host–client–server architecture and supports two primary trans
 
 For more information, refer to the official [specification](https://modelcontextprotocol.io/introduction).
 
-## Remote MCP Servers with API Platform
+## Remote MCP servers with API Platform
 
 API Platform now includes support for MCP servers. It provides a complete solution for transforming existing APIs into intelligent, AI-ready tools. With a centralized control plane, API Platform simplifies the entire lifecycle of MCP server management—from creation to discovery—delivering a seamless experience for both API developers and AI agent builders. Additionally, API Platform allows you to customize the developer portal to deliver a tailored, MCP-only experience for your consumers.
 
@@ -35,7 +35,7 @@ In summary, API Platform provides the following capabilities related to MCP.
 3. Secure the MCP Servers with OAuth2 security.
 4. Customize the Developer portal into an MCP Hub.
 
-## MCP Use Cases with API Platform
+## MCP use cases with API Platform
 
 - [Design and Publish MCP Servers for your APIs](design-mcp-servers.md)
 - [Proxy Remote MCP Servers](proxy-remote-servers.md)

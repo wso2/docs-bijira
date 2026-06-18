@@ -16,7 +16,7 @@ The MCP registry is surfaced in two ways:
 
 
 
-## Related Topics
+## Related topics
 
 - [Publish MCP Proxies from the AI Workspace](./publish-mcp-proxies.md)
 - [Browse the MCP Hub](./browse-mcp-hub.md)

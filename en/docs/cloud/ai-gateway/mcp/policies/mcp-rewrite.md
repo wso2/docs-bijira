@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 ---
-# MCP Rewrite
+# MCP rewrite
 
 ## Overview
 
@@ -21,7 +21,7 @@ When a list is provided for a capability type, only the configured capabilities 
 
 The MCP Rewrite policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -33,7 +33,7 @@ These parameters are configured per MCP Proxy by the API developer:
 
 > **Note**: At least one of `tools`, `resources`, or `prompts` must be specified.
 
-### ToolRewriteConfig Configuration
+### ToolRewriteConfig configuration
 
 Each `ToolRewriteConfig` object supports the following fields:
 
@@ -45,7 +45,7 @@ Each `ToolRewriteConfig` object supports the following fields:
 | `outputSchema` | string | No | - | Tool output schema returned in `tools/list`. |
 | `target` | string | No | - | Backend tool name to use when forwarding requests. If omitted, `name` is used. |
 
-### ResourceRewriteConfig Configuration
+### ResourceRewriteConfig configuration
 
 Each `ResourceRewriteConfig` object supports the following fields:
 
@@ -56,7 +56,7 @@ Each `ResourceRewriteConfig` object supports the following fields:
 | `description` | string | No | - | User-facing resource description returned in `resources/list`. |
 | `target` | string | No | - | Backend resource identifier (URI) to use when forwarding requests. If omitted, `uri` is used. |
 
-### PromptRewriteConfig Configuration
+### PromptRewriteConfig configuration
 
 Each `PromptRewriteConfig` object supports the following fields:
 
@@ -77,9 +77,9 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
   gomodule: github.com/wso2/gateway-controllers/policies/mcp-rewrite@v0
 ```
 
-## Reference Scenarios
+## Reference scenarios
 
-### Example 1: Basic Tool Rewriting
+### Example 1: basic tool rewriting
 
 Expose tools with different names than the backend:
 
@@ -111,7 +111,7 @@ spec:
     ...
 ```
 
-### Example 2: Resource Rewriting with URI Mapping
+### Example 2: resource rewriting with URI mapping
 
 Expose resources with user-friendly URIs mapped to backend resources:
 
@@ -143,7 +143,7 @@ spec:
     ...
 ```
 
-### Example 3: Prompt and Tool Rewriting Combined
+### Example 3: prompt and tool rewriting combined
 
 Rewrite prompts and tools with metadata:
 

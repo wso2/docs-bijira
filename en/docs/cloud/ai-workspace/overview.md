@@ -1,10 +1,10 @@
-# AI Workspace Overview
+# AI Workspace overview
 
 The AI Workspace is the control plane for AI Gateway runtimes. It gives platform teams a centralized interface to register gateways, configure providers and application-facing proxies, apply policies, and manage deployments without working directly with the Gateway-Controller API.
 
-## What AI Workspace Manages
+## What AI Workspace manages
 
-### AI Gateways
+### AI gateways
 
 Register and manage AI Gateway runtimes that process AI traffic.
 
@@ -14,7 +14,7 @@ Register and manage AI Gateway runtimes that process AI traffic.
 
 Learn more in [AI Gateways](ai-gateways/setting-up.md).
 
-### LLM Providers
+### LLM providers
 
 Define reusable connections to upstream AI services such as OpenAI, Anthropic, Azure OpenAI, Gemini, and Mistral.
 
@@ -24,7 +24,7 @@ Define reusable connections to upstream AI services such as OpenAI, Anthropic, A
 
 Learn more in [LLM Providers](llm-providers/overview.md).
 
-### App LLM Proxies
+### App LLM proxies
 
 Create optional, application-facing endpoints for Gen AI applications and agents when they need controls that differ from the underlying provider.
 
@@ -34,7 +34,7 @@ Create optional, application-facing endpoints for Gen AI applications and agents
 
 Learn more in [App LLM Proxies](llm-proxies/overview.md).
 
-### GenAI Applications
+### GenAI applications
 
 Represent the actual AI applications/Agents in your project and map existing API keys to them for application-level visibility.
 
@@ -44,7 +44,7 @@ Represent the actual AI applications/Agents in your project and map existing API
 
 Learn more in [GenAI Applications](genai-applications.md).
 
-### MCP Proxies
+### MCP proxies
 
 Expose and govern Model Context Protocol servers through connected gateways.
 
@@ -54,7 +54,7 @@ Expose and govern Model Context Protocol servers through connected gateways.
 
 Learn more in [MCP Proxies](mcp-proxies/overview.md).
 
-### Policies and Guardrails
+### Policies and guardrails
 
 Configure AI-specific governance controls for providers and proxies.
 
@@ -64,7 +64,7 @@ Configure AI-specific governance controls for providers and proxies.
 
 Learn more in [Policies](policies/overview.md).
 
-## How It Works
+## How it works
 
 1. Create an AI Gateway entry in AI Workspace.
 2. Start the gateway runtime and register it with the generated token.
@@ -79,6 +79,6 @@ AI Workspace is the control plane. The [AI Gateway](../ai-gateway/overview.md) i
 - Use AI Gateway docs when you want to work directly with the runtime, Gateway-Controller API, or standalone deployment model.
 - Use AI Workspace docs when you want centralized lifecycle management for connected gateways and their AI assets.
 
-## Getting Started
+## Getting started
 
 To start using the control plane, follow the [Getting Started](getting-started.md) guide.

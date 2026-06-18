@@ -1,4 +1,4 @@
-# API Platform Status Page
+# API Platform status page
 
 The **API Platform Status Page** is the official, public source of truth for the real-time operational health of WSO2 API Platform Cloud. It provides live availability information for the platform's services across all regions, so you can quickly confirm whether an issue you are seeing is caused by an ongoing platform incident.
 

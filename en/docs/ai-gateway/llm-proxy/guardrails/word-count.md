@@ -1,5 +1,5 @@
 ---
-title: "Word Count Guardrail"
+title: "Word count guardrail"
 description: "Enforce minimum and maximum word count limits on LLM request and response content using the Word Count guardrail."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/word-count/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/word-count.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Word Count Guardrail
+# Word count guardrail
 
 ## Overview
 
@@ -30,7 +30,7 @@ The Word Count Guardrail validates the word count of request or response body co
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -40,7 +40,7 @@ The Word Count Guardrail validates the word count of request or response body co
 | `invert` | boolean | No | `false` | If `true`, validation passes when word count is NOT within the min-max range. If `false`, validation passes when word count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -50,7 +50,7 @@ The Word Count Guardrail validates the word count of request or response body co
 | `invert` | boolean | No | `false` | If `true`, validation passes when word count is NOT within the min-max range. If `false`, validation passes when word count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -63,7 +63,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: Basic Word Count Validation
+### Example 1: basic word count validation
 
 Deploy an LLM provider that validates request messages contain between 10 and 500 words:
 
@@ -144,7 +144,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -157,7 +157,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 
-## Use Cases
+## Use cases
 
 1. **Input Length Control**: Prevent users from submitting extremely long prompts that could impact system performance or costs.
 
@@ -167,7 +167,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 4. **Content Filtering**: Use inverted logic to block content that falls outside acceptable word count ranges.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

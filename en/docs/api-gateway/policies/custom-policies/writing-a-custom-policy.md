@@ -1,5 +1,5 @@
 ---
-title: "Write a Custom Gateway Policy"
+title: "Write a custom gateway policy"
 description: "Write a custom policy for API Platform Gateway using the Go SDK: implement request and response hooks in the policy chain."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/policies/custom-policies/writing-a-custom-policy/
 md_url: https://wso2.com/api-platform/docs/api-gateway/policies/custom-policies/writing-a-custom-policy.md
@@ -12,13 +12,13 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Writing a Custom Policy
+# Writing a custom policy
 
 This guide shows how to write a custom policy in API Platform Gateway.
 
 For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
 
-## How It Works
+## How it works
 
 Every request and response that flows through the gateway passes through a **policy chain**. Each policy in the chain declares which phases it participates in, and the kernel calls the appropriate hook for each phase:
 
@@ -50,9 +50,9 @@ Incoming Request
 
 A policy only participates in the phases it implements. For example, a policy that only inspects request headers does not implement the response interfaces.
 
-## How to Write a Policy
+## How to write a policy
 
-### Step 1: Create the Policy
+### Step 1: create the policy
 
 Each policy lives in its own Go module. Create a "policies" directory inside your gateway:
 
@@ -63,7 +63,7 @@ Each policy lives in its own Go module. Create a "policies" directory inside you
  └── policy-definition.yaml
 ```
 
-### Step 2: Implement the Base Policy Interface
+### Step 2: implement the base policy interface
 
 ```go
 package mypolicy
@@ -91,7 +91,7 @@ func (p *MyPolicy) Mode() policy.ProcessingMode {
 }
 ```
 
-#### How to Choose Modes
+#### How to choose modes
 
 | Setting | When to Use |
 |---------|-------------|
@@ -101,11 +101,11 @@ func (p *MyPolicy) Mode() policy.ProcessingMode {
 !!! tip
     If you do not want your policy to process a specific phase, explicitly set it to `Skip`.
 
-### Step 3: Implement Phase Interfaces
+### Step 3: implement phase interfaces
 
 Implement only the interfaces for phases you declared in `Mode()` in step 2.
 
-#### Request Flow
+#### Request flow
 
 **Request Header Phase**
 
@@ -148,7 +148,7 @@ func (p *MyPolicy) OnRequestBody(
 !!! note
     Even if your policy is designed for streaming, you must still implement `OnRequestBody`. This acts as a fallback when the policy chain does not run in streaming mode.
 
-#### Response Flow
+#### Response flow
 
 **Response Header Phase**
 
@@ -191,11 +191,11 @@ func (p *MyPolicy) OnResponseBody(
 !!! note
     Even if your policy is designed for streaming, you must still implement `OnResponseBody`. This acts as a fallback when the policy chain does not run in streaming mode.
 
-### Step 4: Enable Streaming
+### Step 4: enable streaming
 
 Use streaming when processing SSE (Server-Sent Events) responses or large chunked transfers where you cannot or should not buffer the full body. Set `ResponseBodyMode: policy.BodyModeStream` (and/or `RequestBodyMode: policy.BodyModeStream`) in your `Mode()`, then implement the streaming interfaces.
 
-#### Streaming Request
+#### Streaming request
 
 Implement `StreamingRequestPolicy` to process request chunks:
 
@@ -233,7 +233,7 @@ func (p *MyPolicy) OnRequestBody(
 }
 ```
 
-#### Streaming Response
+#### Streaming response
 
 Implement `StreamingResponsePolicy` to process responses chunk by chunk:
 
@@ -285,7 +285,7 @@ func (p *MyPolicy) OnResponseBody(
 }
 ```
 
-#### Gate-then-Stream Pattern
+#### Gate-then-stream pattern
 
 A common pattern for guardrail policies is to accumulate chunks until you have enough data to make a decision, then switch to pass-through:
 
@@ -297,7 +297,7 @@ func (p *MyPolicy) NeedsMoreResponseData(accumulated []byte) bool {
 }
 ```
 
-### Step 5: Factory Function
+### Step 5: factory function
 
 Initialize your policy and validate parameters:
 
@@ -316,7 +316,7 @@ func GetPolicy(
 }
 ```
 
-### Step 6: Define Parameters
+### Step 6: define parameters
 
 Create a `policy-definition.yaml` in your policy directory:
 
@@ -333,7 +333,7 @@ parameters:
       default: 1048576
 ```
 
-### Step 7: Share Data Between Phases
+### Step 7: share data between phases
 
 Use the `Metadata` map to pass data between request and response phases:
 
@@ -345,7 +345,7 @@ reqCtx.Metadata["clientID"] = clientID
 clientID := respCtx.Metadata["clientID"]
 ```
 
-### Step 8: Register and Build
+### Step 8: register and build
 
 Add your policy to gateway folder's `build.yaml` under `policies:` using `filePath` for local development:
 
@@ -363,6 +363,6 @@ policies:
     gomodule: github.com/abc/policy-repo/policies/my-policy@v1
 ```
 
-## What's Next?
+## What's next?
 
 - [Building the Gateway with Custom Policies](building-gateway-with-custom-policies.md): Build a gateway image that includes your custom policy

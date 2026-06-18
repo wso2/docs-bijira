@@ -46,7 +46,7 @@ Follow the steps given below to create a role with audit log access permission a
 !!! info "Note"
         You must be the organization administrator to perform this action.
 
-### Step 1: Create a role with audit log access permission
+### Step 1: create a role with audit log access permission
 
 1. In the API Platform Console, go to the top navigation menu and click **Organization**.
 2. In the left navigation menu, click **Admin** and then click **Settings**.
@@ -63,7 +63,7 @@ Follow the steps given below to create a role with audit log access permission a
 7. Click **Create**.  
 
 
-### Step 2: Assign the created role to an organization member
+### Step 2: assign the created role to an organization member
 
 1. On the **Access Control** tab, click **Groups**. This lists the groups of the organization with their respective details.
 2. Select the group that you want to assign the role to and click Edit button.

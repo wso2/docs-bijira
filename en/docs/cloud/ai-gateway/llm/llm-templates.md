@@ -1,4 +1,4 @@
-# LLM Provider Templates
+# LLM provider templates
 
 ## Overview
 
@@ -8,7 +8,7 @@ LLM Provider Templates define the characteristics and behaviors specific to an A
 - **Model Information**: Request and response model identifiers
 - **Rate Limiting Data**: Remaining token allowances from response
 
-## Out-of-the-Box Supported Templates
+## Out-of-the-box supported templates
 
 The API Platform Gateway ships with the following pre-configured LLM provider templates that platform administrators can use immediately without any additional configuration:
 
@@ -24,7 +24,7 @@ The API Platform Gateway ships with the following pre-configured LLM provider te
 
 These templates are automatically loaded when the gateway starts and are immediately available for use when creating LLM providers.
 
-## Template Structure
+## Template structure
 
 Each LLM provider template follows a standard YAML structure:
 
@@ -56,7 +56,7 @@ spec:
     identifier: <extraction-pattern>
 ```
 
-### Metadata Extraction Patterns
+### Metadata extraction patterns
 
 Templates support three types of extraction locations:
 
@@ -64,7 +64,7 @@ Templates support three types of extraction locations:
 - **`header`**: Extract from HTTP response headers using header name (e.g., `x-ratelimit-remaining-tokens`)
 - **`pathParam`**: Extract from URL path using regular expressions (e.g., `(?<=models/)[a-zA-Z0-9.\-]+`)
 
-## Template Details
+## Template details
 
 ### OpenAI
 
@@ -246,7 +246,7 @@ spec:
     identifier: (?<=model/)[a-zA-Z0-9.:-]+(?=/)
 ```
 
-### Azure AI Foundry
+### Azure AI foundry
 
 The Azure AI Foundry template supports Microsoft's Azure AI Foundry platform.
 
@@ -277,7 +277,7 @@ spec:
     identifier: $.model
 ```
 
-## Creating an LLM Provider with a Template
+## Creating an LLM provider with a template
 
 To create an LLM provider using any of the out-of-the-box templates:
 
@@ -327,9 +327,9 @@ The gateway automatically uses the template's metadata extraction patterns to:
 - Enable token-based rate limiting policies
 - Provide consistent monitoring across different LLM providers
 
-## Managing Templates
+## Managing templates
 
-### Listing Available Templates
+### Listing available templates
 
 To list all available LLM provider templates:
 
@@ -338,7 +338,7 @@ curl -X GET http://localhost:9090/llm-provider-templates \
   -H "Authorization: Basic <BASE64_CREDENTIAL>"
 ```
 
-### Retrieving a Specific Template
+### Retrieving a specific template
 
 To retrieve details of a specific template:
 
@@ -347,7 +347,7 @@ curl -X GET http://localhost:9090/llm-provider-templates/openai \
   -H "Authorization: Basic <BASE64_CREDENTIAL>"
 ```
 
-### Creating Custom Templates
+### Creating custom templates
 
 Platform administrators can create custom templates for LLM providers not covered by the out-of-the-box templates:
 
@@ -368,7 +368,7 @@ spec:
 EOF
 ```
 
-### Updating Templates
+### Updating templates
 
 To update an existing custom template:
 
@@ -390,7 +390,7 @@ spec:
 EOF
 ```
 
-### Deleting Custom Templates
+### Deleting custom templates
 
 To delete a custom template:
 
@@ -401,7 +401,7 @@ curl -X DELETE http://localhost:9090/llm-provider-templates/custom-provider \
 
 **Note**: Out-of-the-box templates cannot be deleted or modified. Only custom templates created by platform administrators can be updated or deleted.
 
-## Template Field Reference
+## Template field reference
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -416,7 +416,7 @@ curl -X DELETE http://localhost:9090/llm-provider-templates/custom-provider \
 | `spec.requestModel` | object | No | Configuration for extracting request model identifier |
 | `spec.responseModel` | object | No | Configuration for extracting response model identifier |
 
-### Extraction Configuration Object
+### Extraction configuration object
 
 Each extraction configuration object has the following structure:
 

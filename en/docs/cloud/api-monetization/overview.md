@@ -1,10 +1,10 @@
-# API Monetization
+# API monetization
 
-## What is API Monetization?
+## What is API monetization?
 
 API monetization allows organizations to generate revenue from their APIs by offering paid subscription plans to API consumers. By integrating with Stripe as a payment provider, API Platform enables organizations to define flexible pricing models and manage billing for API usage directly from the console.
 
-## API Monetization Overview
+## API monetization overview
 
 With API monetization in API Platform, organizations can seamlessly monetize their APIs by creating paid subscription plans with various pricing models. This allows you to:
 
@@ -15,7 +15,7 @@ With API monetization in API Platform, organizations can seamlessly monetize the
 
 By monetizing APIs through API Platform, organizations gain a streamlined way to offer tiered access, manage billing, and grow API-driven revenue.
 
-## Getting Started
+## Getting started
 
 1. **Configure Stripe:** Add your Stripe credentials at the organization level to enable payment processing.
 2. **Create Paid Subscription Plans:** Define subscription plans with the appropriate pricing model for your APIs.

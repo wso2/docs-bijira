@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure Communication Between the API Platform Gateway and Your Backend with OAuth2
+# Secure communication between the API Platform gateway and your backend with OAuth2
 
 OAuth2 is an industry-standard authorization framework that enables secure, delegated access to protected resources without exposing user credentials. By issuing scoped access tokens, OAuth2 ensures that clients can authenticate to backend services in a controlled, auditable manner.
 
@@ -29,7 +29,7 @@ When you need the API Platform Gateway to call your backend over OAuth2, use the
 !!! note
     Only the client-credentials grant type is currently supported.
 
-### Step 1: Configure the OAuth2 policy
+### Step 1: configure the OAuth2 policy
 
 To configure the OAuth2 policy, follow the steps given below:
 
@@ -47,7 +47,7 @@ To configure the OAuth2 policy, follow the steps given below:
 !!! note
     By default, the token is set to the Authorization header. However, it is possible to set the token to any preferred header through the given input field.
 
-### Step 2: Deploy the API
+### Step 2: deploy the API
 
 Once your OAuth2 policy is in place, deploy your API proxy so the changes take effect.
 
@@ -59,7 +59,7 @@ To deploy the API, follow the steps given below:
 
 Once the deployment is complete, you can [test the API](../../test-api-proxy/openapi-console.md) to confirm that the Gateway successfully obtains and forwards OAuth2 tokens.
 
-### Step 3: Promote to higher environments
+### Step 3: promote to higher environments
 
 To promote the proxy to higher environments, use the **Promote** button.
 

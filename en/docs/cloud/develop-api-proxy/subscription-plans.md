@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Assign Subscription Plans to APIs
+# Assign subscription plans to APIs
 
 API subscription plans allow API publishers to control and manage access to APIs. These plans define the rules, limitations, and pricing for how clients can interact with APIs, ensuring efficient resource utilization and robust security.
 

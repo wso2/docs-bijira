@@ -1,6 +1,6 @@
-# Building the Gateway with Custom Policies
+# Building the gateway with custom policies
 
-## Install the AP CLI Tool
+## Install the AP CLI tool
 
 The `ap` CLI tool is used to build a custom gateway image with your own policies. Download the binary for your platform from the [AP CLI releases page](https://github.com/wso2/api-platform/releases/tag/ap%2Fv0.7.0) and follow the steps below to install it.
 
@@ -76,7 +76,7 @@ The `ap` CLI tool is used to build a custom gateway image with your own policies
     ap --version
     ```
 
-## Configure the Build File
+## Configure the build file
 
 The `build.yaml` file is already included in the unzipped gateway package. It declares the gateway version and the list of policies to include. Edit this file to add your custom policies before building the gateway image.
 
@@ -103,7 +103,7 @@ Each policy entry uses one of two source types:
 | `gomodule` | Go module reference for policy hub managed policies (e.g., `github.com/wso2/gateway-controllers/policies/cors@v1`) |
 | `filePath` | Relative path from `build.yaml` to a local custom policy directory |
 
-### Adding a Custom Policy
+### Adding a custom policy
 
 Your custom policy can reside anywhere on the filesystem. Use a relative path from the `build.yaml` file to point to it.
 
@@ -128,7 +128,7 @@ policies:
 !!! note
     The path in `filePath` is always relative to the location of `build.yaml`, not the directory from which you run the `ap` command.
 
-## Build the Gateway Image
+## Build the gateway image
 
 Once `build.yaml` is ready, run the following command from the directory containing `build.yaml` to build the custom gateway image:
 
@@ -148,7 +148,7 @@ Once the build completes, the output lists the two image names produced. For exa
 
 A `build-manifest.yaml` file is also written alongside `build.yaml`, recording the resolved versions of all policies included in the build.
 
-## Update the Docker Compose File
+## Update the Docker compose file
 
 After building, update the `image:` fields in your `docker-compose.yaml` to use the newly built images.
 
@@ -172,6 +172,6 @@ Once updated, start the gateway as usual:
 docker compose --env-file configs/keys.env up
 ```
 
-## What's Next?
+## What's next?
 
 - [Apply Custom Policies to APIs](apply-custom-policies-to-apis.md): Sync your custom policy to the organization and apply it to APIs

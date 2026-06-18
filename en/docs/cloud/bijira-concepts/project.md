@@ -4,13 +4,13 @@ Projects are a core organizational unit in API Platform, designed to group relat
 
 ---
 
-## What is a Project?
+## What is a project?
 
 A **project** in API Platform is a logical grouping of API Proxies that typically work together to deliver a business capability. Projects help organize development, deployment, and management workflows for cloud-native applications. Each project is isolated from others, ensuring clear boundaries for resources, permissions, and deployments.
 
 ---
 
-## Project Structure and Components
+## Project structure and components
 
 A project may include:
 
@@ -21,7 +21,7 @@ All components within a project can be managed together, versioned, and deployed
 
 ---
 
-## Deployment Model
+## Deployment model
 
 At deployment time, all components in a project are deployed into a single namespace within a Kubernetes cluster. This provides:
 

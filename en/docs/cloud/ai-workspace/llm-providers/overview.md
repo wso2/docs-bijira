@@ -1,4 +1,4 @@
-# LLM Providers Overview
+# LLM providers overview
 
 LLM Providers are integrations with AI service platforms that offer language models. By configuring providers in the AI Workspace, you can:
 
@@ -7,7 +7,7 @@ LLM Providers are integrations with AI service platforms that offer language mod
 - **Monitor provider status**: Track availability and health of connected services
 - **Simplify configuration**: Use providers across multiple proxies without duplicating credentials
 
-## Supported Providers
+## Supported providers
 
 API Platform AI Workspace supports the following LLM providers:
 

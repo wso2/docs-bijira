@@ -1,5 +1,5 @@
 ---
-title: "Security Hardening"
+title: "Security hardening"
 description: "Configure the necessary security areas before deploying API Platform Gateway to production."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Security Hardening
+# Security hardening
 
 This page covers the three security areas that must be configured before a production deployment: encryption keys for data at rest, TLS for data in transit, and authentication for access control.
 
-## Encryption Keys
+## Encryption keys
 
 The controller uses AES-GCM 256-bit keys to encrypt sensitive data at rest. Providing at least one encryption key is required when `developmentMode` is set to `false`.
 
@@ -80,7 +80,7 @@ The `version` field must match the filename stem of the secret key (`default-aes
 
 ---
 
-## TLS Configuration
+## TLS configuration
 
 TLS must be configured before exposing the gateway externally. Choose one of the options below based on how certificates are managed in your environment.
 
@@ -154,7 +154,7 @@ TLS must be configured before exposing the gateway externally. Choose one of the
             keyKey: tls.key
     ```
 
-### Upstream Custom CA Certificates
+### Upstream custom CA certificates
 
 If backend services use certificates signed by a private CA, mount the CA bundle into the controller so it can verify upstream TLS connections.
 

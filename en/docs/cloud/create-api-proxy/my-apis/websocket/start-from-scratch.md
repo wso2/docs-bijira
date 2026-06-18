@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Create API Proxy from Scratch
+# Create API proxy from scratch
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.
 
@@ -28,7 +28,7 @@ The WebSocket connection begins with an initial handshake that leverages the HTT
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-## Create an API Proxy
+## Create an API proxy
 
   In this guide, you will create a WebSocket API proxy from the Scratch.
 
@@ -50,19 +50,19 @@ The WebSocket connection begins with an initial handshake that leverages the HTT
 
 5. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-## Configure and Deploy the API Proxy
+## Configure and deploy the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click **Configure and Deploy** button.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> Console** page of the API Proxy.
 2. Use the OpenAPI Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API Proxy
+## Promote the API proxy to production and publish the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.

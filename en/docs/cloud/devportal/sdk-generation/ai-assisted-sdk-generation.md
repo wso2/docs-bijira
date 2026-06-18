@@ -1,8 +1,8 @@
-# AI-Assisted SDK Generation
+# AI-assisted SDK generation
 
 AI-assisted SDK generation creates custom SDKs and sample application code based on your selected APIs. Instead of manually integrating multiple SDKs, you generate a single SDK with working code examples tailored to your specific requirements.
 
-## What is AI-assisted SDK Generation?
+## What is AI-assisted SDK generation?
 
 Building applications with multiple APIs typically requires you to:
 
@@ -29,7 +29,7 @@ Before proceeding, ensure you have [Created an Application](../manage-applicatio
 
 Follow these steps to generate a custom SDK and sample application code.
 
-### Step 1: Select APIs for SDK Generation
+### Step 1: select APIs for SDK generation
 
 1. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
 2. Click on **Applications** in the Developer Portal sidebar.
@@ -41,7 +41,7 @@ Follow these steps to generate a custom SDK and sample application code.
 
     ![Subscribed API Proxies table with two APIs checked and Generate SDK button highlighted](../../../assets/img/devportal/ai_sdk_gen_button.png)
 
-### Step 2: Generate SDK
+### Step 2: generate SDK
 
 1. Click **Generate SDK** to open the SDK generation panel.
 
@@ -58,7 +58,7 @@ Follow these steps to generate a custom SDK and sample application code.
 
 ![Generate SDK panel showing Generating SDK progress bar at 40 percent with in-progress status message](../../../assets/img/devportal/sdk_generation_in_progress.png)
 
-## Important Notes
+## Important notes
 
 - AI services require valid configuration and active subscriptions.
 - Generated code serves as a starting point and may need customization.

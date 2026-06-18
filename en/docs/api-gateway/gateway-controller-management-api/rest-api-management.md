@@ -1,5 +1,5 @@
 ---
-title: "Management API: REST API Management"
+title: "Management API: REST API management"
 description: "REST API reference for creating, listing, updating, and deleting REST API configurations, API keys, and subscriptions via the Gateway Controller."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/rest-api-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/rest-api-management.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Rest API Management
+# Rest API management
 
 CRUD operations for Rest APIs
 
-## Create a new RestAPI
+## Create a new restapi
 
 <a id="opIdcreateRestAPI"></a>
 
@@ -205,7 +205,7 @@ Required roles: `admin`, `developer`
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Conflict - API with same name and version already exists|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## List all RestAPIs
+## List all restapis
 
 <a id="opIdlistRestAPIs"></a>
 
@@ -241,7 +241,7 @@ Required roles: `admin`, `developer`
 |context|query|string|false|Filter by API context/path|
 |status|query|string|false|Filter by deployment status|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|
@@ -423,7 +423,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -443,7 +443,7 @@ Status Code **200**
 |state|deployed|
 |state|undeployed|
 
-## Get RestAPI by id
+## Get restapi by id
 
 <a id="opIdgetRestAPIById"></a>
 
@@ -565,7 +565,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|RestAPI not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Update an existing RestAPI
+## Update an existing restapi
 
 <a id="opIdupdateRestAPI"></a>
 
@@ -759,7 +759,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|RestAPI not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Delete a RestAPI
+## Delete a restapi
 
 <a id="opIddeleteRestAPI"></a>
 
@@ -1646,7 +1646,7 @@ Required roles: `admin`, `developer`
 |applicationId|query|string|false|none|
 |status|query|string|false|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|

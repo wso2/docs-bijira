@@ -1,17 +1,17 @@
-# Consume an API Secured with API Key
+# Consume an API secured with API key
 
 ## Prerequisites
 
 Before proceeding, ensure you have [Created an Application](../manage-applications/create-an-application.md) and [Subscribed to an API](../manage-subscriptions/subscribe-to-an-api.md) to consume.
 
 
-## Creating an API Key
+## Creating an API key
 
 To consume an API secured with an API key, ensure that the desired API has API Key authentication enabled. Then create an application in the API Platform Developer Portal and subscribe it to the API under a defined usage policy. The API key will then be associated with that specific application.
 
 ---
 
-### Steps to Create an API Key
+### Steps to create an API key
 
 1. Ensure the desired API has API Key authentication enabled.
 

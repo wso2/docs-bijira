@@ -1,4 +1,4 @@
-# Configure App LLM Proxy
+# Configure app LLM proxy
 
 An App LLM Proxy exposes a managed endpoint that your Gen AI applications or agents use to reach an LLM Provider. Once deployed, the proxy handles authentication and enforces any guardrails you configure. While the provider can be called directly, the proxy lets you create specialized endpoints for different applications, agents, or environments with independent keys, guardrails, and access controls on top of the same provider.
 
@@ -12,7 +12,7 @@ This guide walks you through creating an App LLM Proxy, optionally attaching gua
 
 ---
 
-## Create a New App LLM Proxy
+## Create a new app LLM proxy
 
 1. Navigate to **LLM** > **Proxies** in the left navigation menu.
 
@@ -34,7 +34,7 @@ This guide walks you through creating an App LLM Proxy, optionally attaching gua
 
 ---
 
-## Add Guardrails (Optional)
+## Add guardrails (optional)
 
 You can attach policies and guardrails to your proxy that apply to all requests:
 
@@ -54,7 +54,7 @@ You can attach policies and guardrails to your proxy that apply to all requests:
 
 ---
 
-## Deploy Proxy to Gateway
+## Deploy proxy to gateway
 
 After creating your proxy, you must deploy it to a gateway before it can be used.
 
@@ -95,7 +95,7 @@ Click **Back to App LLM Proxy** to return to the proxy details page.
 
 ---
 
-## Get Started
+## Get started
 
 Once the proxy is deployed, the proxy details page shows the **Get Started** panel on the right.
 
@@ -115,7 +115,7 @@ To call a specific resource, append the resource path:
 https://{gateway-host}/{proxy-name}/chat/completions
 ```
 
-### App LLM Proxy Keys
+### App LLM proxy keys
 
 Generate an API key to authenticate requests to the deployed gateway.
 
@@ -125,13 +125,13 @@ Generate an API key to authenticate requests to the deployed gateway.
 !!! danger "Important"
     API keys are only displayed once. Store it in a secure location immediately — you will not be able to retrieve it again.
 
-### Deployed Gateways
+### Deployed gateways
 
 The **Deployed Gateways** section lists all gateways this proxy is deployed to, along with the deployment status.
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Invoke via SDKs](../using-sdks.md) - Connect to your proxy from Python using provider-native SDKs
 - [Manage Your App LLM Proxy](manage-proxy.md) - Configure provider, resources, security, and guardrails

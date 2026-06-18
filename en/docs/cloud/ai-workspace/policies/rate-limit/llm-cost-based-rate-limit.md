@@ -1,11 +1,11 @@
-# LLM Cost-Based Rate Limit
+# LLM Cost-based rate limit
 
 The LLM Cost-Based Rate Limit policy enforces monetary spending limits on LLM traffic. It reads the cost of each API call calculated by the [LLM Cost](llm-cost.md) policy and blocks requests once a configured budget is exceeded within a time window.
 
 !!! info "Prerequisites"
     The **LLM Cost** policy must be added to the same provider or proxy **after** this policy in the policy list. The gateway evaluates response-phase policies in reverse order, so the cost is calculated before the budget is checked. Without the LLM Cost, no cost data is available and budget enforcement is skipped.
 
-## Configuration Parameters
+## Configuration parameters
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
@@ -15,7 +15,7 @@ The LLM Cost-Based Rate Limit policy enforces monetary spending limits on LLM tr
 
 When multiple budget limits are configured, all of them are enforced — the most restrictive active limit applies.
 
-## Add This Policy
+## Add this policy
 
 1. Add this policy first, then add the **LLM Cost** policy after it in the policy list.
 2. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
@@ -41,7 +41,7 @@ When multiple budget limits are configured, all of them are enforced — the mos
 | `x-ratelimit-cost-limit-dollars` | Budget limit in USD (e.g., `10.000000`) |
 | `x-ratelimit-cost-remaining-dollars` | Remaining budget in USD (e.g., `7.432100`) |
 
-## Example: $10/hour and $100/day Budget
+## Example: $10/hour and $100/day budget
 
 The following configuration enforces two simultaneous spending limits. Both must be satisfied for requests to proceed — once either limit is reached, requests are blocked until that window resets.
 

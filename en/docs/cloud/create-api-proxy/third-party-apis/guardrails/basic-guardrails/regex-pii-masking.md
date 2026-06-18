@@ -13,11 +13,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Regex PII Masking
+# Regex PII masking
 
 This policy provides the capability to perform regular expression-based validation on incoming or outgoing JSON payloads specifically for Personally Identifiable Information (PII) masking. This component acts as a guardrail to enforce specific security or compliance rules based on configurable regex patterns and JSON path expressions.
 
-## Configure Regex PII Masking
+## Configure regex PII masking
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -40,7 +40,7 @@ This policy provides the capability to perform regular expression-based validati
 !!! note "PII Unmasking with Regex PII Masking"
     If you want to use the Regex PII Masking for PII unmasking, you must attach the policy to both the request and response flows. This allows the policy to mask PII in the request and unmask it in the response. Moreover, the `Redact PII` option should be disabled in both flows to allow the PII to be restored in the response. If you enable `Redact PII` in the response flow, the PII will be permanently redacted and not restored.
 
-### Sample Regex PII Masking Configuration
+### Sample regex PII masking configuration
 
 - Guardrail Name: `Regex Guardrail`
 - PII Entities:
@@ -55,7 +55,7 @@ This policy provides the capability to perform regular expression-based validati
 - JSON Path: `$.messages[0].content`
 - Redact PII: `true`
 
-### Sample Payload to be intervened from the Regex PII Masking
+### Sample payload to be intervened from the regex PII masking
 
 ```json
 {
@@ -68,7 +68,7 @@ This policy provides the capability to perform regular expression-based validati
 }
 ```
 
-### Sample Payload after intervention from Regex PII Masking
+### Sample payload after intervention from regex PII masking
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: "Export Traces to Alternative Backends"
+title: "Export traces to alternative backends"
 description: "Configure API Platform Gateway to export OpenTelemetry traces to alternative backends including Moesif, Datadog, and New Relic."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/alternative-backends/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/alternative-backends.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Alternative Tracing Backends
+# Alternative tracing backends
 
 While the default setup uses Jaeger, the gateway components use OpenTelemetry and can export to any OTLP-compatible backend.
 
@@ -47,7 +47,7 @@ service:
 - Use the `otlphttp` exporter (not `otlp` which uses gRPC)
 - The `X-Moesif-Application-Id` header is required for authentication
 
-### Obtaining Your Moesif Application ID
+### Obtaining your Moesif application ID
 
 1. Sign up for a Moesif account at [moesif.com](https://www.moesif.com)
 2. Log in to your Moesif dashboard
@@ -55,7 +55,7 @@ service:
 4. Locate the **Collector Application ID** field
 5. Copy your unique Application ID
 
-### Using Environment Variables
+### Using environment variables
 
 For better security, use environment variables for the Application ID:
 
@@ -84,7 +84,7 @@ export MOESIF_APPLICATION_ID=your-moesif-application-id
 docker compose --profile tracing up -d
 ```
 
-### Accessing Moesif Dashboard
+### Accessing Moesif dashboard
 
 After configuring and starting the gateway:
 
@@ -94,7 +94,7 @@ After configuring and starting the gateway:
 4. Use **Time Series** to analyze API usage trends
 5. Set up **Alerts** for error rates, latency, or custom conditions
 
-### Moesif Features
+### Moesif features
 
 - **API Analytics**: Request volume, response times, error rates
 - **User Tracking**: Identify and track API users across requests
@@ -103,7 +103,7 @@ After configuring and starting the gateway:
 - **Custom Dashboards**: Build visualizations for your specific KPIs
 - **Alerting**: Get notified of anomalies or threshold breaches
 
-### Sending to Both Jaeger and Moesif
+### Sending to both Jaeger and Moesif
 
 You can send traces to both Jaeger (for development) and Moesif (for analytics):
 
@@ -152,7 +152,7 @@ exporters:
 
 Access Zipkin UI at `http://localhost:9411`
 
-## Grafana Tempo
+## Grafana tempo
 
 For a Prometheus-style tracing backend:
 
@@ -190,9 +190,9 @@ tracing:
   endpoint: tempo:4317
 ```
 
-## Cloud-Native Tracing Solutions
+## Cloud-native tracing solutions
 
-### AWS X-Ray
+### AWS X-ray
 
 Configure OTLP Collector to export to AWS X-Ray:
 
@@ -213,7 +213,7 @@ otel-collector:
     - AWS_REGION=us-east-1
 ```
 
-### Google Cloud Trace
+### Google cloud trace
 
 Configure OTLP Collector to export to Google Cloud:
 
@@ -224,7 +224,7 @@ exporters:
     use_insecure: false
 ```
 
-### Azure Monitor
+### Azure monitor
 
 Use Azure Monitor exporter:
 
@@ -268,7 +268,7 @@ tracing:
   endpoint: datadog-agent:4317
 ```
 
-### New Relic
+### New relic
 
 Configure OTLP Collector to export to New Relic:
 
@@ -300,7 +300,7 @@ exporters:
       lightstep-access-token: ${LIGHTSTEP_ACCESS_TOKEN}
 ```
 
-## Service Mesh Integration
+## Service mesh integration
 
 If using a service mesh like Istio or Linkerd:
 

@@ -9,7 +9,7 @@ In this tutorial, you will:
 - Review governance reports.
 - Fix findings using Chat.
 
-## Step 1: Draft the spec with Copilot
+## Step 1: draft the spec with Copilot
 
 1. Open GitHub Copilot Chat with agent mode.
 2. Ask Copilot to scaffold a complete OpenAPI specification for an Orders API.
@@ -24,7 +24,7 @@ Outcome: A working OpenAPI draft on workspace.
 
 Note: If Copilot prompts you to open the specification in API Designer, confirm the prompt.
 
-## Step 2: Open API Designer
+## Step 2: open API designer
 
 1. With the openapi spec file (e.g: `orders-api.yaml`) focused, open API Designer using one of these options:
     - Copilot Chat: Confirm the prompt to open in API Designer (uses the `openInApiDesigner` tool).
@@ -36,7 +36,7 @@ Note: If Copilot prompts you to open the specification in API Designer, confirm 
 
 Outcome: You get a structured view of paths, operations, and components.
 
-## Step 3: Edit with AI
+## Step 3: edit with AI
 
 1. Stay in the designer (or use the AI entry point your build provides for "edit with AI").
 2. Prompt with scope, for example:
@@ -53,7 +53,7 @@ Outcome: You get a structured view of paths, operations, and components.
 
 Outcome: Fast updates for larger or repetitive changes.
 
-## Step 4: Use form-based edits
+## Step 4: use form-based edits
 
 1. In the designer, open the Edit form for a specific operation or schema.
 2. Adjust a response code, update an operation summary/description, mark a schema field as required, or refine a parameter type and constraints.
@@ -62,7 +62,7 @@ Outcome: Fast updates for larger or repetitive changes.
 
 Outcome: Safe and precise structural edits.
 
-## Step 5: Open a governance report and review findings
+## Step 5: open a governance report and review findings
 
 1. In the designer, report cards are available for the following:
    - WSO2 REST API AI Readiness Guidelines
@@ -74,7 +74,7 @@ Outcome: Safe and precise structural edits.
 
 Outcome: You can prioritize issues by impact and severity.
 
-## Step 6: Triage findings
+## Step 6: triage findings
 
 1. Quick wins: missing `operationId`, obvious response gaps, and thin descriptions.
 2. Design consistency: naming, pagination envelope, and error model alignment.
@@ -82,7 +82,7 @@ Outcome: You can prioritize issues by impact and severity.
 
 Outcome: A practical fix backlog.
 
-## Step 7: Fix with AI (Chat + `api-design` skill)
+## Step 7: fix with AI (chat + `api-design` skill)
 
 1. Open **Chat** with the spec available (open editor or `@` file reference, depending on product).
 2. Ask for a bounded fix tied to the report, for example:

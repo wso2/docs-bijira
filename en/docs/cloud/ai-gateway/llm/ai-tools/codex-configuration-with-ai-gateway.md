@@ -17,7 +17,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: Start an AI Gateway on WSO2 API Platform
+## Step 1: start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
@@ -49,13 +49,13 @@ Once the AI Gateway is active, you can continue to create the OpenAI LLM provide
 
 ---
 
-## Step 2: Create and Deploy an OpenAI LLM Provider
+## Step 2: create and deploy an OpenAI LLM provider
 
 1. **Log in to the WSO2 API Platform Console** as an admin.  
 
 2. Click **AI Workspace** at the top of the page.
 
-### Create an OpenAI LLM Provider
+### Create an OpenAI LLM provider
 
 1. In the left navigation panel of the AI Workspace Console, navigate to **LLM → LLM Providers**.
 
@@ -69,7 +69,7 @@ Once the AI Gateway is active, you can continue to create the OpenAI LLM provide
 
 6. Click **Add Provider**.
 
-### Deploy the OpenAI Provider to the AI Gateway
+### Deploy the OpenAI provider to the AI Gateway
 
 1. On the page that opens after creating the provider, click **Deploy to Gateway**.
 
@@ -81,7 +81,7 @@ The OpenAI LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: Create and Deploy an App LLM Proxy
+## Step 3: create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Codex CLI invokes through WSO2 API Platform.
 
@@ -115,7 +115,7 @@ The App LLM Proxy is the endpoint that Codex CLI invokes through WSO2 API Platfo
 
 12. Click **Create Proxy**.
 
-### Deploy the App LLM Proxy to the AI Gateway
+### Deploy the app LLM proxy to the AI Gateway
 
 1. Click **Deploy to Gateway**.
 
@@ -125,7 +125,7 @@ The App LLM Proxy is the endpoint that Codex CLI invokes through WSO2 API Platfo
 
 The App LLM Proxy is now deployed to the selected AI Gateway.
 
-### Generate an API Key for Codex CLI
+### Generate an API key for Codex CLI
 
 Codex CLI needs an API key from WSO2 API Platform to invoke the deployed App LLM Proxy.
 
@@ -147,7 +147,7 @@ You will use these values when configuring Codex CLI.
 
 ---
 
-## Step 4: Configure Codex CLI to Use the App LLM Proxy
+## Step 4: configure Codex CLI to use the app LLM proxy
 
 Codex CLI can be configured to use a custom OpenAI-compatible provider by updating its `config.toml` file.
 
@@ -181,7 +181,7 @@ Codex CLI can be configured to use a custom OpenAI-compatible provider by updati
     The configuration above instructs Codex CLI to use the WSO2 API Platform App LLM Proxy endpoint and send the WSO2 API Platform API key using the `X-API-Key` header.
 
 
-### Configure Environment Variables for Codex CLI
+### Configure environment variables for Codex CLI
 
 1. Open a terminal session where you want to run Codex CLI.
 
@@ -198,7 +198,7 @@ Codex CLI can be configured to use a custom OpenAI-compatible provider by updati
 
 ---
 
-## Step 5: Configure the Gateway Certificate for Codex CLI
+## Step 5: configure the gateway certificate for Codex CLI
 
 When using a local WSO2 API Platform AI Gateway over HTTPS, Codex CLI must be able to trust the certificate presented by the Gateway.
 
@@ -230,7 +230,7 @@ export SSL_CERT_FILE="<PATH TO CERTIFICATE>/gateway_certificate.pem"
 
 ---
 
-## Step 6: Run the Codex CLI Client
+## Step 6: run the Codex CLI client
 
 Execute Codex CLI:
 
@@ -244,7 +244,7 @@ Requests will now be routed through WSO2 API Platform.
 
 ## Use case examples
 
-### View API Analytics and Insights
+### View API analytics and insights
 
 By routing Codex CLI requests through the WSO2 API Manager AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
 
@@ -258,7 +258,7 @@ For more information on Analytics, refer to the official [WSO2 API Platform Docu
 
 ---
 
-### Implement WSO2 AI Gateway Guardrails for Enhanced Control
+### Implement WSO2 AI Gateway guardrails for enhanced control
 
 WSO2 API Manager AI Gateway guardrails enable granular control over the data exchanged between Codex CLI and the OpenAI API.
 
@@ -272,7 +272,7 @@ For more information on AI Guardrails, refer to the official [WSO2 API Platform 
 
 ---
 
-### Rate Limiting at AI Gateway
+### Rate limiting at AI Gateway
 
 WSO2 API Manager AI Gateway supports request-based and token-based rate limiting for AI APIs. This allows you to control Codex CLI usage when requests are routed through the Gateway.
 
@@ -288,7 +288,7 @@ For more information on Rate Limiting and other policies, refer to the official 
 
 ---
 
-### Prompt Decorator
+### Prompt decorator
 
 WSO2 API Manager AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 

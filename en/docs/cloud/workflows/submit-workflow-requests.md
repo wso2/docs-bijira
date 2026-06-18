@@ -1,4 +1,4 @@
-# Submit Workflow Approval Requests
+# Submit workflow approval requests
 
 In API Platform, if an administrator [configures a workflow to require approval](./configure-workflow-approvals.md), you must submit a request to obtain approval to perform the task.
 

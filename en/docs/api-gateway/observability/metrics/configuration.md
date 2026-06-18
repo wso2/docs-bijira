@@ -1,5 +1,5 @@
 ---
-title: "Metrics Configuration Options"
+title: "Metrics configuration options"
 description: "Configure Prometheus scrape intervals and custom metrics endpoints for API Platform Gateway components."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/configuration/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/configuration.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Configuration Options
+# Configuration options
 
-## Adjusting Scrape Interval
+## Adjusting scrape interval
 
 To reduce metrics collection overhead or increase granularity, adjust the Prometheus scrape interval:
 
@@ -31,7 +31,7 @@ Restart Prometheus after changes:
 docker compose restart prometheus
 ```
 
-## Custom Metrics Endpoints
+## Custom metrics endpoints
 
 You can add additional metrics endpoints to scrape from:
 
@@ -44,7 +44,7 @@ scrape_configs:
     scrape_interval: 30s
 ```
 
-## Metric Retention
+## Metric retention
 
 Configure how long Prometheus retains metrics:
 
@@ -57,7 +57,7 @@ command:
   - '--storage.tsdb.retention.size=10GB'  # Keep up to 10GB of metrics
 ```
 
-## Custom Bucket Configuration
+## Custom bucket configuration
 
 Gateway components use optimized bucket configurations for histograms:
 

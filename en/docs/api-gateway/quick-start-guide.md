@@ -1,5 +1,5 @@
 ---
-title: "API Platform Gateway Quick Start Guide"
+title: "API Platform gateway quick start guide"
 description: "Run API Platform Gateway with Docker Compose, deploy your first REST API configuration, and invoke it through the gateway in minutes."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-11
 content_type: "quickstart"
 ---
 
-# Quick Start Guide
+# Quick start guide
 
-### Using Docker Compose (Recommended)
+### Using Docker compose (recommended)
 
 ### Prerequisites
 
@@ -96,7 +96,7 @@ curl -i http://localhost:8080/reading-list/v1.0/books
 curl -ik https://localhost:8443/reading-list/v1.0/books
 ```
 
-### Stopping the Gateway
+### Stopping the gateway
 
 When stopping the gateway, you have two options:
 

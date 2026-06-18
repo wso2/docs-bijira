@@ -1,5 +1,5 @@
 ---
-title: "Metric Reference"
+title: "Metric reference"
 description: "Complete reference for all Prometheus metrics exposed by API Platform Gateway controller, router, and policy engine components."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/metric-reference/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/metric-reference.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Metric Reference
+# Metric reference
 
-## Gateway Controller Metrics
+## Gateway controller metrics
 
-### API Management
+### API management
 - `gateway_controller_api_operations_total`: Counter of API operations
   - Labels: `operation`, `status`, `api_type`
 - `gateway_controller_api_operation_duration_seconds`: Histogram of operation duration
@@ -27,7 +27,7 @@ content_type: "reference"
   - Labels: `operation`, `error_type`
 - `gateway_controller_deployment_latency_seconds`: Histogram of deployment latency
 
-### xDS Metrics
+### xDS metrics
 - `gateway_controller_xds_clients_connected`: Gauge of connected xDS clients
   - Labels: `server`, `node_id`
 - `gateway_controller_snapshot_generation_duration_seconds`: Histogram of snapshot generation time
@@ -41,7 +41,7 @@ content_type: "reference"
 - `gateway_controller_xds_snapshot_ack_total`: Counter of snapshot ACK/NACK
   - Labels: `server`, `node_id`, `status`
 
-### Database Metrics
+### Database metrics
 - `gateway_controller_database_operations_total`: Counter of database operations
   - Labels: `operation`, `table`, `status`
 - `gateway_controller_database_operation_duration_seconds`: Histogram of operation duration
@@ -51,7 +51,7 @@ content_type: "reference"
 - `gateway_controller_config_store_size`: Gauge of config store items
   - Labels: `type`
 
-### HTTP API Metrics
+### HTTP API metrics
 - `gateway_controller_http_requests_total`: Counter of HTTP requests
   - Labels: `method`, `endpoint`, `status_code`
 - `gateway_controller_http_request_duration_seconds`: Histogram of request duration
@@ -62,7 +62,7 @@ content_type: "reference"
   - Labels: `endpoint`
 - `gateway_controller_concurrent_requests`: Gauge of concurrent requests
 
-### System Metrics
+### System metrics
 - `gateway_controller_up`: Gauge of component liveness (1=up, 0=down)
 - `gateway_controller_info`: Gauge of build information
   - Labels: `version`, `storage_type`, `build_date`
@@ -70,7 +70,7 @@ content_type: "reference"
 - `gateway_controller_memory_bytes`: Gauge of memory usage
   - Labels: `type` (heap_alloc, heap_sys, stack_inuse)
 
-### Error Metrics
+### Error metrics
 - `gateway_controller_errors_total`: Counter of errors
   - Labels: `component`, `error_type`
 - `gateway_controller_panic_recoveries_total`: Counter of panic recoveries
@@ -80,7 +80,7 @@ content_type: "reference"
 - `gateway_controller_translation_errors_total`: Counter of translation errors
   - Labels: `error_type`
 
-### Certificate Metrics
+### Certificate metrics
 - `gateway_controller_certificates_total`: Gauge of certificates
   - Labels: `type`
 - `gateway_controller_certificate_operations_total`: Counter of certificate operations
@@ -88,7 +88,7 @@ content_type: "reference"
 - `gateway_controller_certificate_expiry_seconds`: Gauge of certificate expiry
   - Labels: `cert_id`, `cert_name`
 
-### Policy Metrics
+### Policy metrics
 - `gateway_controller_policies_total`: Gauge of policies
   - Labels: `api_id`, `route`
 - `gateway_controller_policy_chain_length`: Histogram of policy chain length
@@ -98,9 +98,9 @@ content_type: "reference"
 - `gateway_controller_policy_validation_errors_total`: Counter of validation errors
   - Labels: `error_type`
 
-## Policy Engine Metrics
+## Policy engine metrics
 
-### Request Processing
+### Request processing
 - `policy_engine_requests_total`: Counter of processed requests
   - Labels: `phase` (request, response), `route`, `api_name`, `api_version`
 - `policy_engine_request_duration_seconds`: Histogram of request duration
@@ -110,7 +110,7 @@ content_type: "reference"
 - `policy_engine_short_circuits_total`: Counter of short-circuited requests
   - Labels: `route`, `policy_name`
 
-### Policy Execution
+### Policy execution
 - `policy_engine_policy_executions_total`: Counter of policy executions
   - Labels: `policy_name`, `policy_version`, `api`, `route`, `status`
 - `policy_engine_policy_duration_seconds`: Histogram of policy execution duration
@@ -139,13 +139,13 @@ content_type: "reference"
 - `policy_engine_grpc_connections_active`: Gauge of active gRPC connections
   - Labels: `type`
 
-### System Metrics
+### System metrics
 - `policy_engine_up`: Gauge of component liveness (1=up, 0=down)
 - `policy_engine_goroutines`: Gauge of current goroutines
 - `policy_engine_memory_bytes`: Gauge of memory usage
   - Labels: `type` (heap_alloc, heap_sys, stack)
 
-### Error Metrics
+### Error metrics
 - `policy_engine_policy_errors_total`: Counter of policy errors
   - Labels: `policy_name`, `error_type`
 - `policy_engine_stream_errors_total`: Counter of stream errors
@@ -154,29 +154,29 @@ content_type: "reference"
 - `policy_engine_panic_recoveries_total`: Counter of panic recoveries
   - Labels: `component`
 
-## Router (Envoy) Metrics
+## Router (envoy) metrics
 
 Envoy exposes built-in Prometheus metrics. Key metrics include:
 
-### HTTP Metrics
+### HTTP metrics
 - `envoy_http_internal_requests_total`: Counter of HTTP requests
   - Labels: `virtual_cluster`, `virtual_host`, `response_code`
 - `envoy_http_request_duration_seconds`: Histogram of request duration
 - `envoy_http_downstream_cx_active`: Gauge of active connections
 - `envoy_http_downstream_cx_total`: Counter of connections
 
-### Upstream Metrics
+### Upstream metrics
 - `envoy_http_upstream_rq_total`: Counter of upstream requests
   - Labels: `upstream_cluster`, `response_code`
 - `envoy_http_upstream_rq_xx`: Counter of upstream requests by status
   - Labels: `upstream_cluster`, `envoy_response_flags`
 
-### Cluster Metrics
+### Cluster metrics
 - `envoy_cluster_upstream_cx_active`: Gauge of active upstream connections
 - `envoy_cluster_upstream_rq_retry_total`: Counter of retry requests
 - `envoy_cluster_membership_healthy`: Gauge of healthy endpoints
 
-### Listener Metrics
+### Listener metrics
 - `envoy_listener_downstream_cx_active`: Gauge of active downstream connections
 - `envoy_listener_downstream_cx_total`: Counter of downstream connections
 

@@ -1,4 +1,4 @@
-# Manage Paid Subscription Plans
+# Manage paid subscription plans
 
 Paid subscription plans allow organizations to monetize their APIs by charging API consumers based on usage or access. API Platform supports multiple pricing models, enabling you to tailor plans to different business requirements. Once created, you can assign these plans to specific APIs.
 
@@ -13,7 +13,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Pricing Models
+## Pricing models
 
 API Platform supports the following pricing models for paid subscription plans.
 
@@ -30,7 +30,7 @@ API Platform supports the following pricing models for paid subscription plans.
 
 ---
 
-## Step 1: Create a Paid Subscription Plan
+## Step 1: create a paid subscription plan
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
@@ -57,7 +57,7 @@ The paid subscription plan is now created and listed under **Subscription Plans*
 
 ---
 
-## Step 2: Assign Paid Plans to an API
+## Step 2: assign paid plans to an API
 
 Once you have created paid subscription plans, you can enable them for specific APIs. This allows API consumers to discover and subscribe to paid plans through the Developer Portal.
 
@@ -74,7 +74,7 @@ Once you have created paid subscription plans, you can enable them for specific 
 
 ---
 
-## Step 3: Publish the API to the Developer Portal
+## Step 3: publish the API to the Developer Portal
 
 After assigning paid plans, publish the API so that consumers can discover and subscribe to it via the Developer Portal.
 

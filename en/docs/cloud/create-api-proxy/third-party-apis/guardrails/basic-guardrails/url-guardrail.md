@@ -12,11 +12,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# URL Guardrail
+# URL guardrail
 
 This policy provides the capability to perform URL validity checks on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce content safety by validating embedded URLs for accessibility or DNS resolution.
 
-## Configure URL Guardrail
+## Configure URL guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -36,7 +36,7 @@ The following table lists and describes the configuration parameters available f
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample URL Guardrail Configuration
+### Sample URL guardrail configuration
 
 - Guardrail Name: `URL Guardrail`
 - Perform DNS Lookup: `false`
@@ -44,7 +44,7 @@ The following table lists and describes the configuration parameters available f
 - JSON Path: `$.messages[0].content`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the URL Guardrail
+### Sample payload to be intervened from the URL guardrail
 
 ```json
 {
@@ -57,7 +57,7 @@ The following table lists and describes the configuration parameters available f
 }
 ```
 
-### Sample Response after URL Guardrail Intervention
+### Sample response after URL guardrail intervention
 
 ```json
 {

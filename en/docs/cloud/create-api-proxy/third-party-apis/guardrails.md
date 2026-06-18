@@ -13,7 +13,7 @@ last_updated: 2026-06-18
 content_type: "overview"
 ---
 
-# AI Guardrails
+# AI guardrails
 
 Guardrails are a set of guidelines and best practices designed to ensure the safe and effective use of AI systems. They help mitigate risks and promote responsible AI usage. API Platform provides 3 types of guardrails to enhance the security and reliability of AI APIs:
 

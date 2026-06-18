@@ -1,11 +1,11 @@
-# Rate Limit - Basic
+# Rate limit - basic
 
 The Rate Limit - Basic policy enforces a simple request count limit on an LLM Provider or Proxy. Use it to cap the total number of requests allowed within a time window, regardless of token consumption.
 
 !!! info "Built-in Rate Limiting vs. Rate Limit - Basic Policy"
     The AI Workspace also has a first-class **Rate Limiting** tab on LLM Providers that provides request count and token count limits on the Backend scope (Per Consumer coming soon). The Rate Limit - Basic policy is a lightweight alternative that can be attached through the Guardrails interface when you need a simple per-route request cap.
 
-## Configuration Parameters
+## Configuration parameters
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
@@ -13,7 +13,7 @@ The Rate Limit - Basic policy enforces a simple request count limit on an LLM Pr
 | **Limits[].Count** | Yes | The maximum number of requests allowed within the duration. |
 | **Limits[].Duration** | Yes | The time window for the limit (e.g., `60s`, `1m`, `1h`). |
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.

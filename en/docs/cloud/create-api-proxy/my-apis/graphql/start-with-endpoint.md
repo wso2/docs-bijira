@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Create API proxy from Start with Endpoint
+# Create API proxy from start with endpoint
 
 A GraphQL API proxy operates based on the GraphQL query language specification. GraphQL provides a flexible and efficient approach to API development by allowing clients to request exactly the data they need, nothing more and nothing less.
 
@@ -28,7 +28,7 @@ Unlike traditional REST APIs that require multiple endpoints for different resou
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-## Create an API Proxy
+## Create an API proxy
 
 In this guide, you will create a GraphQL API proxy using an endpoint.
 
@@ -45,19 +45,19 @@ In this guide, you will create a GraphQL API proxy using an endpoint.
 
 9. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-## Configure and Deploy the API Proxy
+## Configure and deploy the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click it.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> Console** page of the API Proxy.
 2. Use the GraphQL Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API Proxy
+## Promote the API proxy to production and publish the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.

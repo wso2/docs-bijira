@@ -1,4 +1,4 @@
-# Configure Custom External Key Manager
+# Configure custom external key manager
 
 If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) as a key manager follow the platform-specific guides below to add them as an external key manager in API Platform.
 
@@ -14,7 +14,7 @@ Before you try out this guide, be sure you have the following:
 - The key manager's `Well‑Known URL` (to import configuration automatically).
 - Administrator access to your API Platform organization and to the key manager.
 
-## Step 1: Add custom external key manager in API Platform
+## Step 1: add custom external key manager in API Platform
 
 Follow the steps below to add a custom key manager in API Platform:
 
@@ -43,7 +43,7 @@ Now you have configured your custom key manager as an external key manager in AP
 
 ![Key Managers list showing Bijira Built-in STS and newly added custom-key-manager entries](../../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
 
-## Step 2: Add the external key manager in API Platform Developer Portal
+## Step 2: add the external key manager in API Platform Developer Portal
 
 Once the key manager is configured as an external key manager in API Platform, it is necessary to configure it in the API Platform Developer Portal as well. For that, follow the steps below.
 
@@ -56,6 +56,6 @@ Now you have configured your key manager as an external key manager in API Platf
 
 ![Developer Portal Key Managers tab with custom-key-manager selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_custom_devportal.png)
 
-## What Next?
+## What next?
 
 To secure API access with the above-configured key manager follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md).

@@ -1,5 +1,5 @@
 ---
-title: "Regex Guardrail"
+title: "Regex guardrail"
 description: "Validate LLM request and response content against regular expression patterns to enforce formats or detect prohibited content."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/regex/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/regex.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Regex Guardrail
+# Regex guardrail
 
 ## Overview
 
@@ -30,7 +30,7 @@ The Regex Guardrail validates request or response body content against regular e
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -39,7 +39,7 @@ The Regex Guardrail validates request or response body content against regular e
 | `invert` | boolean | No | `false` | If `true`, validation passes when regex does NOT match. If `false`, validation passes when regex matches. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -48,7 +48,7 @@ The Regex Guardrail validates request or response body content against regular e
 | `invert` | boolean | No | `false` | If `true`, validation passes when regex does NOT match. If `false`, validation passes when regex matches. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -59,7 +59,7 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## Regular Expression Syntax
+## Regular expression syntax
 
 The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key features:
 
@@ -72,7 +72,7 @@ The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key 
 
 ## Examples
 
-### Example 1: Email Validation
+### Example 1: email validation
 
 Deploy an LLM provider that protects against sensitive data leaks by blocking any payloads that mention the word "password" (case-insensitive) in either the user’s message or the LLM’s response. This is achieved by using the regex policy to validate both request and response payloads:
 
@@ -153,7 +153,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -165,7 +165,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
 1. **Format Validation**: Ensure user inputs match expected formats (emails, phone numbers, IDs).
 
@@ -177,7 +177,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Compliance**: Enforce patterns required by regulatory standards or business rules.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

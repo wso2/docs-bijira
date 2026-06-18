@@ -1,4 +1,4 @@
-# Manage LLM Provider
+# Manage LLM provider
 
 After deploying your LLM Provider, manage its configuration through the provider details page. This guide covers all management operations organized by tab.
 
@@ -19,7 +19,7 @@ After deploying your LLM Provider, manage its configuration through the provider
 
 ---
 
-## Access Provider Details
+## Access provider details
 
 1. Navigate to **AI Workspace** > **LLM Providers**.
 
@@ -40,7 +40,7 @@ Manage upstream endpoint configuration and authentication credentials for the LL
 
 </div>
 
-### Provider Endpoint
+### Provider endpoint
 
 **Upstream URL** - Where API requests are forwarded to:
 
@@ -63,7 +63,7 @@ Configure how the gateway authenticates with the upstream provider:
     - Click the 👁️ icon to show/hide the value
     - Update and click **Save** to change credentials
 
-### OpenAPI Specification
+### OpenAPI specification
 
 **Spec URL** - The OpenAPI specification for importing API resources:
 
@@ -73,7 +73,7 @@ Configure how the gateway authenticates with the upstream provider:
 
 ---
 
-## Access Control
+## Access control
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 16px; margin-bottom: 24px;">
 
@@ -97,7 +97,7 @@ Use the arrow buttons between the two panels to move resources:
 - **`<`** — Move selected resource(s) back
 - **`<<`** — Move all resources back
 
-### Import Resources
+### Import resources
 
 Click **Import resources from specification** to load or refresh the resource list from the provider's OpenAPI specification.
 
@@ -111,7 +111,7 @@ Configure how applications authenticate when accessing this provider through the
 
 </div>
 
-### API Key Authentication
+### API key authentication
 
 Set up the API key that client applications must provide:
 
@@ -132,7 +132,7 @@ Set up the API key that client applications must provide:
 
 ---
 
-## Rate Limiting
+## Rate limiting
 
 <div style="border-left: 4px solid #9C27B0; padding-left: 16px; margin-bottom: 24px;">
 
@@ -158,7 +158,7 @@ Both sections support two configuration modes:
 !!! note
     Provider-wide and Per Resource modes are mutually exclusive per section. Clear existing limits before switching modes.
 
-### Limit Criteria
+### Limit criteria
 
 Each section lets you configure:
 
@@ -170,14 +170,14 @@ Each section lets you configure:
 
 For each enabled criterion, set the **Quota** and **Reset Duration** (`second`, `minute`, or `hour`).
 
-### Provider-wide Configuration
+### Provider-wide configuration
 
 1. Select **Provider-wide** in the Backend section.
 2. Enable **Request Count** and/or **Token Count**.
 3. Enter the **Quota** and select the **Reset Duration** for each criterion.
 4. Click **Save**.
 
-### Per Resource Configuration
+### Per resource configuration
 
 1. Select **Per Resource** in the Backend section.
 2. Expand **Limit per Resource** to set default limits for all endpoints:
@@ -200,7 +200,7 @@ Attach guardrails to enforce content safety, compliance, and quality standards. 
 
 </div>
 
-### View Attached Guardrails
+### View attached guardrails
 
 The tab displays all guardrails currently attached to the provider:
 
@@ -208,7 +208,7 @@ The tab displays all guardrails currently attached to the provider:
 - **Configuration status** and parameters
 - **Enable/disable toggles** for quick activation control
 
-### Add a Guardrail
+### Add a guardrail
 
 Guardrails can be added globally (applying to all endpoints) or per resource (applying to a specific endpoint).
 
@@ -228,7 +228,7 @@ Guardrails can be added globally (applying to all endpoints) or per resource (ap
 3. Select and configure the guardrail (same process as global guardrails).
 4. Click **Add** to attach it to the resource.
 
-### Configure Guardrails
+### Configure guardrails
 
 Guardrail parameters cannot be edited in place. To change a guardrail's configuration, you must delete it and add it again with the updated settings.
 
@@ -256,7 +256,7 @@ Configure which AI models are accessible through this provider.
 
 </div>
 
-### Add Models
+### Add models
 
 **To add new models:**
 
@@ -265,7 +265,7 @@ Configure which AI models are accessible through this provider.
 3. Click **Add**
 4. The models are added and enabled by default
 
-### Enable/Disable Models
+### Enable/Disable models
 
 Control which models applications can access:
 
@@ -275,11 +275,11 @@ Control which models applications can access:
 
 ---
 
-## Lifecycle Operations
+## Lifecycle operations
 
 ---
 
-### Redeploy Provider
+### Redeploy provider
 
 Push configuration changes to deployed gateways.
 
@@ -301,7 +301,7 @@ Push configuration changes to deployed gateways.
 
 ---
 
-### Delete Provider
+### Delete provider
 
 Permanently remove the provider and all its configurations.
 
@@ -325,7 +325,7 @@ Permanently remove the provider and all its configurations.
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Configure App LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy specialized proxy endpoints for Gen AI applications or agents using your provider
 - [Policies Overview](../policies/overview.md) - Explore all available guardrails and policies

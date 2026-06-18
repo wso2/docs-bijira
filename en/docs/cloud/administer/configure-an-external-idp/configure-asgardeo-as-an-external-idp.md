@@ -1,4 +1,4 @@
-# Configure Asgardeo as an External Key Manager
+# Configure Asgardeo as an external key manager
 
 Asgardeo is an identity-as-a-service (IDaaS) solution designed to create seamless login experiences for your applications. Asgardeo seamlessly integrates with API Platform, providing powerful API access control through the use of API scopes. This enables restricting API access to designated user groups. By configuring Asgardeo as an external key manager in API Platform, you can leverage your Asgardeo user stores to manage API access control effectively. This guide walks you through the steps to set up Asgardeo as your external key manager.
 
@@ -14,7 +14,7 @@ Before you proceed, be sure to complete the following:
 - Find the Client ID:
   Go to the **Protocol** tab of the Asgardeo application and copy the **Client ID**.
 
-## Step 1: Add Asgardeo as an external key manager in API Platform
+## Step 1: add Asgardeo as an external key manager in API Platform
 
 Follow the steps below to add Asgardeo as an external key manager in API Platform:
 
@@ -49,7 +49,7 @@ Now you have configured Asgardeo as an external key manager in API Platform.
 
 ![Key Managers list showing Bijira Built-in STS and newly added external-asgardeo-km entries](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
 
-## Step 2: Add Asgardeo as an external key manager in API Platform Developer Portal
+## Step 2: add Asgardeo as an external key manager in API Platform Developer Portal
 
 Once the Asgardeo is configured as an external key manager in API Platform, it is necessary to configure it in the API Platform Developer Portal as well. For that, follow the steps below.
 
@@ -63,6 +63,6 @@ Now you have configured Asgardeo as an external key manager in API Platform Deve
 
 ![Developer Portal Key Managers tab with external-asgardeo-km selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_devportal.png)
 
-## What Next?
+## What next?
 
 To secure API access with the above-configured Asgardeo as key manager, follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md).

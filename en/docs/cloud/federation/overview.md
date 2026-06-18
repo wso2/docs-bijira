@@ -1,8 +1,8 @@
-# Gateway Federation in API Platform
+# Gateway federation in API Platform
 
-## What is Gateway Federation?
+## What is gateway federation?
 
-## Gateway Federation Overview
+## Gateway federation overview
 
 Gateway federation in API Platform empowers organizations to seamlessly manage, govern, and expose APIs deployed on external gateways, all from a single, unified control plane. Instead of manually tracking APIs across different platforms, API Platform enables you to:
 
@@ -13,7 +13,7 @@ Gateway federation in API Platform empowers organizations to seamlessly manage, 
 
 By federating gateways with API Platform, you gain complete visibility and control over your API landscape, reduce operational complexity, and accelerate secure API delivery to consumers and partners.
 
-## Getting Started
+## Getting started
 
 1. **Register External Gateway:** Add the external gateway configuration in API Platform.
 2. **Discover APIs:** Discover APIs from the external gateway and create them in the API Platform control plane.

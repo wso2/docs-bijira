@@ -1,5 +1,5 @@
 ---
-title: "MCP ACL List"
+title: "MCP ACL list"
 description: "Control access to MCP tools, resources, and prompts using allow or deny mode with exceptions in API Platform AI Gateway."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-acl-list/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-acl-list.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# MCP ACL List
+# MCP ACL list
 
 ## Overview
 
@@ -33,7 +33,7 @@ The policy operates on three types of MCP capabilities: tools, resources, and pr
 
 The MCP ACL List policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -49,7 +49,7 @@ These parameters are configured per MCP Proxy by the API developer:
 | `prompts.mode` | string | Yes | ACL mode for prompts: "allow" (allow all except exceptions) or "deny" (deny all except exceptions). |
 | `prompts.exceptions` | array | No | List of prompt names that are exceptions to the mode (1-256 characters each). |
 
-## Access Control Logic
+## Access control logic
 
 For each capability type (tools, resources, prompts):
 
@@ -57,9 +57,9 @@ For each capability type (tools, resources, prompts):
 - **mode: allow, exceptions: [...]**: Allow all capabilities except those listed in exceptions.
 - **mode: deny, exceptions: [...]**: Deny all capabilities except those listed in exceptions.
 
-## MCP Proxy Definition Examples
+## MCP proxy definition examples
 
-### Example 1: Deny Specific Tools
+### Example 1: deny specific tools
 
 Deny access to certain tools while allowing all others:
 
@@ -87,7 +87,7 @@ spec:
     ...
 ```
 
-### Example 2: Allow Only Specific Resources
+### Example 2: allow only specific resources
 
 Allow access to only whitelisted resources:
 
@@ -115,7 +115,7 @@ spec:
     ...
 ```
 
-### Example 3: Mixed Access Control
+### Example 3: mixed access control
 
 Apply different access control rules to different capability types:
 
@@ -152,7 +152,7 @@ spec:
     ...
 ```
 
-## Use Cases
+## Use cases
 
 1. **Sensitive Operation Blocking**: Deny access to tools or resources that perform sensitive operations (e.g., delete, modify system configuration).
 2. **Public API Restriction**: Allow only specific public resources while denying access to internal resources.
@@ -161,7 +161,7 @@ spec:
 5. **Compliance and Security**: Enforce compliance policies by denying access to resources or tools that are not approved for a specific tenant or environment.
 6. **Cost Control**: Deny access to expensive or resource-intensive operations.
 
-## Comparison with MCP Rewrite Policy
+## Comparison with MCP rewrite policy
 
 | Aspect | MCP ACL List | MCP Rewrite |
 |--------|--------------|-------------|

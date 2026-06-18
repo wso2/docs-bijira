@@ -1,5 +1,5 @@
 ---
-title: "URL Guardrail"
+title: "URL guardrail"
 description: "Validate URLs found in LLM request and response content by checking reachability through DNS resolution or HTTP HEAD requests."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/url/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/url.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# URL Guardrail
+# URL guardrail
 
 ## Overview
 
@@ -30,7 +30,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -39,7 +39,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 | `timeout` | integer | No | `3000` | Timeout in milliseconds for DNS lookup or HTTP HEAD request. Default is 3000ms (3 seconds). |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information including invalid URLs in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -48,7 +48,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 | `timeout` | integer | No | `3000` | Timeout in milliseconds for DNS lookup or HTTP HEAD request. Default is 3000ms (3 seconds). |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information including invalid URLs in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -59,9 +59,9 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## URL Validation Modes
+## URL validation modes
 
-### DNS-Only Validation (`onlyDNS: true`)
+### DNS-only validation (`onlydns: true`)
 
 - Faster validation method
 - Only checks if the domain name resolves via DNS
@@ -69,7 +69,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 - Less reliable for detecting broken links
 - Suitable for quick validation when HTTP checks are not necessary
 
-### HTTP HEAD Request Validation (`onlyDNS: false`)
+### HTTP HEAD request validation (`onlydns: false`)
 
 - More thorough validation method
 - Performs DNS lookup and HTTP HEAD request
@@ -80,7 +80,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: Basic URL Validation
+### Example 1: basic URL validation
 
 Deploy an LLM provider that validates URLs in request content using HTTP HEAD requests:
 
@@ -161,7 +161,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -177,7 +177,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate URLs from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
 1. **Link Validation**: Ensure all URLs in AI-generated content are valid and accessible.
 
@@ -189,7 +189,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Resource Verification**: Ensure referenced resources are available before processing.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

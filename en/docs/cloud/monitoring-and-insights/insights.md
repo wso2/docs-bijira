@@ -19,7 +19,7 @@ Every dashboard supports configurable refresh intervals and time-range filters, 
 
 ![Insights Overview dashboard showing summary metrics for total requests, errors, LLM traffic, MCP traffic, and API traffic](../../assets/img/monitoring-and-insights/insights-1.png){.cInlineImage-full}
 
-### Summary Metrics
+### Summary metrics
 
 | Metric | Description |
 |---|---|
@@ -30,7 +30,7 @@ Every dashboard supports configurable refresh intervals and time-range filters, 
 | **MCP Traffic** | Total number of MCP tool call events in the selected time range. This is useful for tracking agent-initiated activity across MCP servers and tools. Click **View Details** to drill down. |
 | **API Traffic** | Total number of API calls processed across all supported API types. Compare this with LLM and MCP activity to understand the dominant traffic pattern on the platform. Click **View Details** to drill down. |
 
-### Charts and Visualizations
+### Charts and visualizations
 
 **Overall Platform Metrics** — Shows traffic, errors, and throttled requests over time. Use it to see whether spikes in traffic align with failures or throttling, and to distinguish between demand-related issues and more isolated failures.
 
@@ -58,7 +58,7 @@ Every dashboard supports configurable refresh intervals and time-range filters, 
 
 The APIs section provides analytics by API type, covering REST, Async, GraphQL, gRPC, and SOAP traffic. These dashboards help you understand not just how much API traffic the platform is handling, but also which protocol types are most active, where errors are concentrated, and how performance changes across different API styles.
 
-### All APIs Analytics
+### All APIs analytics
 
 The All APIs Analytics dashboard combines traffic from every API type into a single view. It is the right dashboard to use when you want to compare traffic behavior across protocols before drilling into a specific API style such as REST or GraphQL.
 
@@ -68,7 +68,7 @@ This dashboard is useful for questions such as:
 - Is an increase in latency affecting all API traffic or only a subset?
 - Are failures spread across the platform or concentrated in one type of API?
 
-#### Summary Metrics
+#### Summary metrics
 
 | Metric | Description |
 |---|---|
@@ -77,7 +77,7 @@ This dashboard is useful for questions such as:
 | **Error Rate** | Percentage of API requests that resulted in an error. This helps you determine whether failures are isolated or widespread across API traffic. |
 | **Unique Consumers** | Number of distinct users or applications making API calls. This indicates how broadly the APIs are being used across your consumer base. |
 
-#### API Type Breakdown
+#### API type breakdown
 
 Cards for each protocol type let you quickly compare relative traffic volumes and navigate to the corresponding drill-down views:
 
@@ -89,7 +89,7 @@ Cards for each protocol type let you quickly compare relative traffic volumes an
 | **gRPC API Traffic** | Number of gRPC remote procedure calls. |
 | **SOAP API Traffic** | Number of SOAP/XML web service calls. |
 
-#### Charts and Visualizations
+#### Charts and visualizations
 
 **Traffic Volume over Time** — Shows request count and average latency on the same chart, making it easier to correlate traffic growth with performance changes. It is especially helpful for checking whether rising usage is contributing to slower responses.
 
@@ -105,13 +105,13 @@ Cards for each protocol type let you quickly compare relative traffic volumes an
 
 **Top User Agents** — A pie chart showing the distribution of API calls by user agent.
 
-### REST API Analytics
+### REST API analytics
 
 The REST API Analytics dashboard is a protocol-specific drill-down for REST traffic. You can open this dashboard by clicking the **REST API Traffic** card in the **All APIs Analytics** dashboard. It includes API-level filtering, HTTP status analysis, cache performance metrics, and geographic usage patterns so you can understand how REST APIs are being consumed and where operational issues may be emerging.
 
 Because REST traffic often represents the largest share of gateway traffic, this dashboard is particularly useful for day-to-day operational monitoring, troubleshooting client-facing issues, and identifying optimization opportunities.
 
-#### Summary Metrics
+#### Summary metrics
 
 | Metric | Description |
 |---|---|
@@ -120,7 +120,7 @@ Because REST traffic often represents the largest share of gateway traffic, this
 | **Error Rate** | Percentage of REST requests that returned an error. This helps you quickly determine whether consumers are experiencing failures at a significant rate. |
 | **Unique Consumers** | Number of distinct consumers calling REST APIs. This reflects how widely REST APIs are being adopted across applications and users. |
 
-#### Charts and Visualizations
+#### Charts and visualizations
 
 **Traffic Volume over Time** — Shows REST request volume together with latency so you can spot periods where rising demand may be affecting performance. This is one of the quickest ways to identify whether slowdowns are traffic-related.
 
@@ -153,13 +153,13 @@ Because REST traffic often represents the largest share of gateway traffic, this
 
 ---
 
-## LLM APIs Analytics
+## LLM APIs analytics
 
 The LLM APIs Analytics dashboard provides observability for LLM usage on API Platform. It helps you track provider and model adoption, token consumption, estimated cost, latency, guardrail activity, and semantic cache performance.
 
 This dashboard is especially useful for teams building AI-powered experiences because it combines operational insight with cost visibility. Instead of looking only at traffic volume, you can also understand how requests are distributed across providers and models, how much those requests are costing, and whether safeguards such as guardrails or semantic caching are working as expected.
 
-### Summary Metrics
+### Summary metrics
 
 | Metric | Description |
 |---|---|
@@ -170,7 +170,7 @@ This dashboard is especially useful for teams building AI-powered experiences be
 | **Estimated Cost** | Approximate cost of token usage based on provider pricing. This helps you connect usage growth to financial impact. |
 | **Average Latency** | Mean end-to-end response time for LLM requests. This is important for understanding user-perceived responsiveness in AI-assisted features. |
 
-### Charts and Visualizations
+### Charts and visualizations
 
 **Requests by Provider** — Shows request volume by LLM provider so you can understand provider distribution and traffic share. This is useful when comparing vendor usage, planning failover strategies, or managing commercial dependencies.
 
@@ -196,13 +196,13 @@ This dashboard is especially useful for teams building AI-powered experiences be
 
 ---
 
-## MCP Analytics
+## MCP analytics
 
 The MCP Analytics dashboard provides visibility into Model Context Protocol server activity. It helps you monitor tool call volume, consumer sessions, error rates, and traffic distribution across MCP servers and clients.
 
 This dashboard is useful when AI agents or MCP-enabled clients are interacting with tools exposed through your platform. It helps you understand which tools are being used most often, whether agents are succeeding or failing, and how activity is distributed across MCP servers and client environments.
 
-### Summary Metrics
+### Summary metrics
 
 | Metric | Description |
 |---|---|
@@ -211,7 +211,7 @@ This dashboard is useful when AI agents or MCP-enabled clients are interacting w
 | **Error Rate** | Percentage of MCP tool calls that resulted in an error. Use this to monitor the reliability of tool execution across MCP interactions. |
 | **Unique Sessions** | Number of distinct MCP sessions, typically representing individual agent or client interactions. This helps you estimate how many separate MCP conversations or runs are taking place. |
 
-### Charts and Visualizations
+### Charts and visualizations
 
 **Traffic Volume over Time** — Shows MCP event count together with latency so you can identify spikes in activity or slower tool execution. This is useful when diagnosing whether increased tool usage is affecting response time.
 

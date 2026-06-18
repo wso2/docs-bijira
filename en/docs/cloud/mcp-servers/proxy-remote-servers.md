@@ -11,11 +11,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Proxy Remote MCP Servers
+# Proxy remote MCP servers
 
 API Platform allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, API Platform provides the capability to manage the tools of your proxied MCP servers through the console.
 
-## Create an MCP Server Proxy
+## Create an MCP server proxy
 
 You can use the Start with MCP Server URL option to create a new MCP Server proxy using an existing MCP Server.
 
@@ -28,7 +28,7 @@ You can use the Start with MCP Server URL option to create a new MCP Server prox
     compatible with this specification version.
     
 
-## Manage Tools of your MCP Server
+## Manage tools of your MCP server
 
 You can modify the details of the Tools of your MCP Server by navigating to the Policy section under the Develop menu. The default tool names, descriptions, and schemas are taken from the actual MCP Server.
 
@@ -42,7 +42,7 @@ The following options are supported when modifying the Tools
 
 You have to **redeploy** the MCP Server after saving for the new changes to be reflected in the gateway.
 
-## Test the MCP Server
+## Test the MCP server
 
 You can test the MCP Server in the development environment before promoting it to production. API Platform provides an **MCP Playground** for this purpose.
 
@@ -55,7 +55,7 @@ You can test the MCP Server in the development environment before promoting it t
 
 You can select and call individual tools by providing the parameters if necessary.
 
-## Publish the MCP Server
+## Publish the MCP server
 
 !!!important
     If you already have a Devportal theme published, please republish the theme before publishing the MCP Servers to Devportal.
@@ -77,7 +77,7 @@ Now that your MCP Server is deployed in both development and production environm
 2. Click **Publish**.
 3. In the Publish MCP Server dialog, click Confirm to proceed with publishing the MCP Server with the specified display name. If you want to change the display name, make the necessary changes and then click Confirm. This changes the lifecycle state to **Published**.
 
-## Discover MCP Servers through Developer Portal
+## Discover MCP servers through Developer Portal
 
 You can view the published MCP Server via the Developer Portal.
 
@@ -94,7 +94,7 @@ Go to the MCP Server listing page using the left navigation menu and select your
 
 MCP consumers can discover the available tools through this view. Additionally, sample configurations for setting up the MCP Server with an MCP Client can also be obtained from here.
 
-## Connect the MCP Server with MCP Clients / AI Agents
+## Connect the MCP server with MCP clients / AI agents
 
 MCP Servers in API Platform are secured by default. To access them, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
 

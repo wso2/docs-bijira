@@ -1,5 +1,5 @@
 ---
-title: "Configure Resources and Scaling"
+title: "Configure resources and scaling"
 description: "Set CPU and memory resource limits, pod anti-affinity rules, Horizontal Pod Autoscaler, and Pod Disruption Budget for API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/resources-and-scaling/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/resources-and-scaling.md
@@ -14,9 +14,9 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Resources & Scaling
+# Resources & scaling
 
-## Resource Limits
+## Resource limits
 
 !!! note
     Always set resource limits in production to prevent runaway resource consumption from affecting other workloads on the node.
@@ -53,7 +53,7 @@ gateway:
           memory: 2Gi
 ```
 
-## Pod Anti-Affinity
+## Pod Anti-affinity
 
 Pod anti-affinity rules control how replicas are spread across your cluster. Two topology keys are most relevant for production:
 
@@ -101,9 +101,9 @@ affinity:
 
 Apply the same anti-affinity configuration to `gateway.gatewayRuntime` to spread runtime replicas across nodes and zones as well.
 
-## Horizontal Pod Autoscaler & Pod Disruption Budget
+## Horizontal pod autoscaler & pod disruption budget
 
-### Horizontal Pod Autoscaler
+### Horizontal pod autoscaler
 
 HPA automatically adjusts the number of replicas based on CPU and memory utilization. Apply the following configuration to both `gateway.controller` and `gateway.gatewayRuntime`:
 
@@ -121,7 +121,7 @@ hpa:
 !!! note
     Setting `minReplicas: 2` ensures at least two replicas are always running, which is required for high availability. Do not set this to `1` in production.
 
-### Pod Disruption Budget
+### Pod disruption budget
 
 A PDB guarantees that a minimum number of replicas remain available during voluntary disruptions:
 

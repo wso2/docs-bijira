@@ -1,4 +1,4 @@
-# Customize Developer Portal Manually for your Organization
+# Customize Developer Portal manually for your organization
 
 Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
@@ -25,7 +25,7 @@ Go through the below steps to get the `Developer Portal` tab.
 - In the left navigation menu, click `Admin` and then click `Settings`.
 - Select `Developer Portal` tab.
 
-## Theme your Devportal in API Level
+## Theme your Devportal in API level
 
 Go through the following steps to customize the theme of the Devportal in the API level.
 
@@ -68,7 +68,7 @@ Here you can adjust appearance of the API Overview page by changing the css styl
 
 2. Click **Publish to Developer Portal** to publish the CSS changes.
 
-### Customize API Landing Page content
+### Customize API landing page content
 
 To customize the content of an API go through the following steps.
 

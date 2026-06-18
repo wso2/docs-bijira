@@ -1,5 +1,5 @@
 ---
-title: "Deploy with the Kubernetes Gateway Operator"
+title: "Deploy with the Kubernetes gateway operator"
 description: "Deploy API Platform Gateway on Kubernetes using the operator with APIGateway and RestApi CRDs, or using the standard Kubernetes Gateway API with HTTPRoute."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/gateway-operator/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/gateway-operator.md
@@ -13,7 +13,7 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Kubernetes Operator for API Platform Gateway
+# Kubernetes operator for API Platform gateway
 
 The WSO2 API Platform Gateway Operator enables native Kubernetes deployment using a GitOps-friendly, operator-based model. It manages the full lifecycle of API gateways and REST APIs. You can use **either** platform CRDs **or** the **Kubernetes Gateway API** on the same operator build.
 
@@ -27,7 +27,7 @@ For mode comparison and overall context, see [API Platform Kubernetes Gateway ov
 
 ## Overview
 
-### Path A — Platform CRDs (`APIGateway` + `RestApi`)
+### Path a — platform CRDs (`apigateway` + `restapi`)
 
 | CRD | Purpose |
 |-----|---------|
@@ -36,7 +36,7 @@ For mode comparison and overall context, see [API Platform Kubernetes Gateway ov
 
 The operator watches these CRs, runs Helm for the gateway runtime, and deploys APIs through gateway-controller’s management REST API.
 
-### Path B — Kubernetes Gateway API (`Gateway` + `HTTPRoute`)
+### Path b — Kubernetes gateway API (`Gateway` + `httproute`)
 
 | Resource | Purpose |
 |----------|---------|
@@ -56,7 +56,7 @@ The operator watches these CRs, runs Helm for the gateway runtime, and deploys A
 
 ## Installation
 
-### 1. Install Cert-Manager
+### 1. Install Cert-manager
 
 The operator requires cert-manager for TLS certificate management:
 
@@ -70,7 +70,7 @@ helm install cert-manager jetstack/cert-manager \
   --set crds.enabled=true
 ```
 
-### 2. Install Gateway Operator
+### 2. Install gateway operator
 
 ```sh
 helm install my-gateway-operator oci://ghcr.io/wso2/api-platform/helm-charts/gateway-operator --version 0.8.0 --set image.tag=0.8.1
@@ -203,7 +203,7 @@ curl --request GET \
   --header 'Accept: application/json' -k
 ```
 
-## Management CRDs (LLM, MCP, API Key, Subscription)
+## Management CRDs (LLM, MCP, API key, subscription)
 
 For complete documentation on optional management-API-backed CRDs (`LlmProviderTemplate`, `LlmProvider`, `LlmProxy`, `Mcp`, `ApiKey`, `SubscriptionPlan`, `Subscription`, `Certificate`), see [gateway-operator-management-crds.md](./gateway-operator-management-crds.md).
 
@@ -217,7 +217,7 @@ That guide covers:
 - valueFrom pattern for Kubernetes-native secret resolution
 - Complete sample invocations and test endpoints
 
-## Kubernetes Gateway API path
+## Kubernetes gateway API path
 
 Use this when you prefer standard Gateway API resources instead of `APIGateway` / `RestApi`. The manifests below match the **`gateway-api-demo`** demo in this repository (`kubernetes/helm/resources/gateway-api-operator-demo/`). Apply them **in order**, or concatenate and `kubectl apply -f -`.
 
@@ -304,7 +304,7 @@ EOF
 kubectl get gateway -n gateway-api-demo
 ```
 
-### 4. Sample backend (Deployment + Service)
+### 4. Sample backend (deployment + service)
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -415,7 +415,7 @@ curl --request GET \
   -k
 ```
 
-### 6. Optional: second HTTPRoute (`hello-api-2`)
+### 6. Optional: second httproute (`hello-api-2`)
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -467,11 +467,11 @@ Verify: `kubectl get gateway,httproute -n gateway-api-demo`, wait for parent con
 
 Common annotations on `HTTPRoute` are copied into the **`api.yaml`** payload (for example **`gateway.api-platform.wso2.com/context`**, **`api-version`**, **`api-handle`**, **`display-name`**, **`project-id`**). If **`context`** is omitted or only whitespace, it defaults to **`/`**. If a rule **`match`** omits **`method`**, the operator emits all RestApi-supported verbs for that path: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS.
 
-### Mixed clusters (`RestApi` + `Gateway`)
+### Mixed clusters (`restapi` + `gateway`)
 
 If you run **both** `APIGateway`-selected **`RestApi`** resources and **Gateway API** routes, keep the **`gateway.api-platform.wso2.com/api-selector`** annotation on the **`Gateway`** (as in the YAML above) so this gateway does not select `RestApi` CRs meant for another `APIGateway`.
 
-### Test API Endpoints
+### Test API endpoints
 
 **Kubernetes Gateway API** — HTTPRoute **`hello-api`** from [above](#5-httproute-hello-api): API **`context`** `/hello-context`, route match path prefix **`/hello`** (hits Envoy HTTPS on the forwarded router port):
 
@@ -484,14 +484,14 @@ curl --request GET \
 
 Use **`NS=gateway-api-demo`** in the port-forward snippet when testing that demo. The sample backend may respond with a short plain-text body (e.g. `hello from gateway api demo`) depending on chart and image version.
 
-### 7. HTTPRoute with Policies (APIPolicy CR)
+### 7. HTTPRoute with policies (apipolicy CR)
 
 Attach policies to HTTPRoutes using the `APIPolicy` CR (`gateway.api-platform.wso2.com/v1alpha1`). Two attachment modes:
 
 - **API-level** — set `spec.targetRef` to the HTTPRoute; entries in `spec.policies` are merged into `APIConfigData.policies`.
 - **Rule-scoped** — omit `spec.targetRef`; reference the `APIPolicy` from an HTTPRoute rule via `filters[].type: ExtensionRef`.
 
-#### 7.1 APIPolicy CRs (API-level + rule-scoped)
+#### 7.1 apipolicy crs (API-level + rule-scoped)
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -538,7 +538,7 @@ EOF
 kubectl get apipolicy -n gateway-api-demo
 ```
 
-#### 7.2 HTTPRoute with ExtensionRef
+#### 7.2 httproute with extensionref
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -611,7 +611,7 @@ curl --request GET \
   --header 'Accept: application/json' -k
 ```
 
-#### 7.3 Secret-backed APIPolicy with `valueFrom`
+#### 7.3 Secret-backed apipolicy with `valuefrom`
 
 The operator resolves `params.valueFrom.secretKeyRef` (or `configMapKeyRef`) to a plain string before calling gateway-controller, and re-reconciles the HTTPRoute whenever the referenced Secret/ConfigMap changes.
 
@@ -652,7 +652,7 @@ EOF
 kubectl get secret,apipolicy -n gateway-api-demo
 ```
 
-#### 7.4 HTTPRoute referencing the secret-backed APIPolicy
+#### 7.4 httproute referencing the secret-backed apipolicy
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -711,18 +711,18 @@ kubectl patch secret httproute-demo-policy-credentials -n gateway-api-demo \
 ```
 
 
-## Adding Backend Certificates
+## Adding backend certificates
 
 For APIs connecting to backends with self-signed certificates:
 
-### 1. Download the Certificate
+### 1. Download the certificate
 
 ```sh
 curl -X GET "https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/gateway/resources/secure-backend/test-backend-certs/test-backend.crt" \
   -o /tmp/test-backend.crt
 ```
 
-### 2. Add Certificate to Gateway
+### 2. Add certificate to gateway
 
 ```sh
 cert_path="/tmp/test-backend.crt"
@@ -731,11 +731,11 @@ curl -X POST http://localhost:9090/api/management/v0.9/certificates -u "admin:ad
   -d "{\"certificate\":$(jq -Rs . < $cert_path),\"filename\":\"my-cert.pem\", \"name\":\"test\"}"
 ```
 
-## Custom Configuration
+## Custom configuration
 
 Per-gateway Helm values are supplied as a **ConfigMap** whose data includes **`values.yaml`** (partial YAML is fine; the operator **deep-merges** it onto the operator’s default gateway values file loaded from **`gateway.helm.valuesFilePath`**).
 
-### `APIGateway` (`spec.configRef`)
+### `APIGateway` (`spec.configref`)
 
 Create the ConfigMap:
 
@@ -764,7 +764,7 @@ spec:
     name: gateway-custom-config
 ```
 
-### Kubernetes Gateway API (`Gateway`)
+### Kubernetes gateway API (`Gateway`)
 
 Use the **same ConfigMap** shape (`data.values.yaml`). Put the ConfigMap in the **same namespace** as the **`Gateway`**, then point the **`Gateway`** at it with this annotation (not a field on **`spec`**):
 
@@ -807,7 +807,7 @@ The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-va
 - **CRD path:** `APIGateway` drives Helm; `RestApi` drives management REST deploys.
 - **Gateway API path:** `Gateway` drives the same Helm install pattern; `HTTPRoute` is translated to the same management REST payload shape as `RestApi`.
 
-## Default Ports
+## Default ports
 
 | Port | Component | Description |
 |------|-----------|-------------|
@@ -819,7 +819,7 @@ The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-va
 | 9901 | Router | Envoy admin |
 | 9001 | Policy Engine | ext_proc gRPC |
 
-## See Also
+## See also
 
 - [Gateway Quick Start (Docker Compose)](../../../quick-start-guide.md)
 - [Policies](../../../overview.md#policies)

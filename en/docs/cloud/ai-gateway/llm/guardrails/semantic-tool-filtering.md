@@ -2,7 +2,7 @@
 title: "Overview"
 ---
 
-# Semantic Tool Filtering policy
+# Semantic tool filtering policy
 
 ## Overview
 The **Semantic Tool Filtering** policy dynamically filters the tools provided within an API request based on their semantic relevance to the user query. This policy extracts both the query and the tool definitions from the incoming payload, generates embeddings for the query, and performs a similarity search against the provided tools. It then replaces the original tools array with a filtered subset, optimizing the request before it reaches the LLM.
@@ -19,7 +19,7 @@ This policy helps reduce token consumption and improve LLM response quality by s
 
 ## Configuration
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -31,7 +31,7 @@ This policy helps reduce token consumption and improve LLM response quality by s
 | userQueryIsJson | boolean | Yes | `true` | Specifies format of user query. `true`: use `queryJSONPath`. `false`: extract from text using `<userq>` tags. |
 | toolsIsJson | boolean | Yes | `true` | Specifies format of tools definition. `true`: use `toolsJSONPath`. `false`: extract from text using `<toolname>`/`<tooldescription>` tags. |
 
-### System Parameters (From config.toml)
+### System parameters (from config.toml)
 
 These parameters are configured in the gateway's `config.toml` to set up the embedding provider.
 
@@ -42,7 +42,7 @@ These parameters are configured in the gateway's `config.toml` to set up the emb
 | embeddingModel | string | Conditional | - | Model name (e.g., `text-embedding-3-small` or `mistral-embed`). Required for `OPENAI` and `MISTRAL`; optional for `AZURE_OPENAI` (deployment name is derived from the endpoint). |
 | apiKey | string | Yes | - | API key for the embedding service. |
 
-#### Sample System Configuration
+#### Sample system configuration
 
 Add the following configuration section under the root level in your `config.toml` file:
 
@@ -63,9 +63,9 @@ Add the following entry to the `policies` section in `/gateway/build.yaml`:
   gomodule: github.com/wso2/gateway-controllers/policies/semantic-tool-filtering@v0
 ```
 
-## Reference Scenarios
+## Reference scenarios
 
-### Scenario 1: Filtering Tools by Rank (JSON Format)
+### Scenario 1: filtering tools by rank (JSON format)
 
 This scenario demonstrates filtering tools to select the top 3 most relevant ones based on a user query in a JSON payload.
 
@@ -124,7 +124,7 @@ policies:
 
 The policy will interpret the request, calculate embeddings, and filter the `tools` array to include only the top 3 matches (e.g., `get_weather`, `book_venue`, `send_email`).
 
-### Scenario 1b: OpenAI/Mistral-style Function Wrappers
+### Scenario 1b: OpenAI/Mistral-style function wrappers
 
 If the request wraps each tool as an object with a nested `function`, configure the iterator path so the policy reads `name` and `description` from the nested object while still filtering the parent `tools` array.
 
@@ -172,7 +172,7 @@ policies:
 }
 ```
 
-### Scenario 2: Filtering Tools by Threshold
+### Scenario 2: filtering tools by threshold
 
 In this scenario, only tools with a semantic similarity score of 0.7 or higher are included.
 
@@ -188,7 +188,7 @@ policies:
         # Rest of the parameters
 ```
 
-### Scenario 3: Text Format (XML-like Tags)
+### Scenario 3: text format (XML-like tags)
 
 This scenario handles cases where the user query and tool definitions are embedded in a text payload using custom tags.
 

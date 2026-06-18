@@ -1,4 +1,4 @@
-# Build an AI App with Claude Code that Calls Governed Backend APIs
+# Build an AI app with Claude Code that calls governed backend APIs
 
 ## Overview
 
@@ -6,7 +6,7 @@ This guide shows you how to put a governed API perimeter in front of Claude Code
 
 ---
 
-## Key Concepts
+## Key concepts
 
 Before you start, here are the WSO2 API Platform terms this guide uses:
 
@@ -68,7 +68,7 @@ Claude Code generates Python code that calls `api_client.py` for every API reque
 
 ---
 
-## Step 1: Create an Organization and Project
+## Step 1: create an organization and project
 
 Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
 
@@ -95,7 +95,7 @@ Once you're on the organization home page, create a project:
 
 ---
 
-## Step 2: Create and Publish the Reading List API Proxy
+## Step 2: create and publish the reading list API proxy
 
 The WSO2 Reading List API is a sample REST API that manages a list of books. You'll expose it as a managed API proxy so WSO2 API Platform can enforce authentication and rate limits on every request.
 
@@ -131,7 +131,7 @@ Promote it to production and publish it:
 
 ---
 
-## Step 3: Add a Subscription in the Developer Portal
+## Step 3: add a subscription in the Developer Portal
 
 An application gives Claude Code a dedicated identity in WSO2 API Platform. Keeping it separate from your other applications means you can revoke Claude Code's access instantly without affecting anything else.
 
@@ -150,7 +150,7 @@ An application gives Claude Code a dedicated identity in WSO2 API Platform. Keep
 
 ---
 
-## Step 4: Create the Project Directory
+## Step 4: create the project directory
 
 Create the directory structure Claude Code will work in. Claude Code picks up `CLAUDE.md` and `.claude/settings.json` automatically when you run `claude` from inside the project directory.
 
@@ -164,7 +164,7 @@ mkdir .claude
 
 ---
 
-## Step 5: Configure .claude/settings.json
+## Step 5: configure .claude/settings.json
 
 The `.claude/settings.json` file injects API credentials and endpoint URLs into every Claude Code session as environment variables. Claude Code reads this file automatically on startup when you run `claude` from the project directory.
 
@@ -209,7 +209,7 @@ In the left navigation menu, click **APIs**, open the Reading List API, and copy
 
 ---
 
-## Step 6: Write api_client.py
+## Step 6: write api_client.py
 
 `api_client.py` fetches OAuth2 bearer tokens from the WSO2 API Gateway and attaches them to every request. It caches the token and refreshes it automatically before it expires, so Claude Code never has to manage tokens manually.
 
@@ -261,7 +261,7 @@ def delete(path, **kwargs):
 
 ---
 
-## Step 7: Write CLAUDE.md
+## Step 7: write CLAUDE.md
 
 `CLAUDE.md` is the briefing file Claude Code reads at the start of every session. It instructs the agent to always use `api_client.py` for API calls — never to call the API directly or construct `Authorization` headers manually.
 
@@ -332,7 +332,7 @@ reading-list-agent/
 
 ---
 
-## Step 8: Run Claude Code
+## Step 8: run Claude Code
 
 `api_client.py` uses the `requests` library. Install it before running Claude Code:
 
@@ -422,7 +422,7 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 ---
 
-## What You Learned
+## What you learned
 
 - Put a governed API perimeter in front of Claude Code so every request is authenticated, rate-limited, and audited by WSO2 API Platform
 - Gave Claude Code a dedicated application identity that you can revoke instantly without affecting any other application
@@ -431,7 +431,7 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 ---
 
-## Next Steps
+## Next steps
 
 - **[Convert a REST API into an MCP tool and use it in Claude Desktop](convert-rest-api-to-mcp-server.md)** — expose the same Reading List API as an MCP server so Claude Code can use native tool calling instead of the Python helper
 - **Apply rate limiting to API traffic** — configure per-application and per-subscription rate limits on the Reading List API

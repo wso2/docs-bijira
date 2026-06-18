@@ -1,5 +1,5 @@
 ---
-title: "Tracing Best Practices and Troubleshooting"
+title: "Tracing best practices and troubleshooting"
 description: "Best practices for distributed tracing in API Platform Gateway: sampling strategies, production recommendations, and troubleshooting guidance."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/best-practices-and-troubleshooting/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/best-practices-and-troubleshooting.md
@@ -13,9 +13,9 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Best Practices and Troubleshooting
+# Best practices and troubleshooting
 
-## Best Practices
+## Best practices
 
 ### Development
 - Use 100% sampling rate (`sampling_rate: 1.0`)
@@ -46,7 +46,7 @@ content_type: "how-to"
 - Use asynchronous trace export (default with OTLP)
 - Consider using tail-based sampling for high-volume environments
 
-### Sampling Strategy
+### Sampling strategy
 
 Choose sampling based on traffic volume:
 
@@ -61,7 +61,7 @@ Choose sampling based on traffic volume:
 
 ## Troubleshooting
 
-### Traces Not Appearing in Jaeger
+### Traces not appearing in Jaeger
 
 **1. Verify tracing is enabled in configuration:**
 ```bash
@@ -100,14 +100,14 @@ docker logs policy-engine | grep -i trace
 docker logs gateway-controller | grep -i trace
 ```
 
-### Traces Are Incomplete or Missing Spans
+### Traces are incomplete or missing spans
 
 **1. Check sampling rate** - ensure it's not too low
 **2. Verify all components are configured** to export traces
 **3. Check for trace context propagation issues** - ensure headers are preserved
 **4. Look for timeout errors** in OTLP collector logs
 
-### High Trace Export Overhead
+### High trace export overhead
 
 **1. Reduce sampling rate:**
 ```toml
@@ -124,13 +124,13 @@ max_export_batch_size = 2048
 
 **3. Use tail-based sampling** in OTLP collector to sample only important traces
 
-### Traces Have Incorrect Timing
+### Traces have incorrect timing
 
 - **Ensure system clocks are synchronized** across all containers (use NTP)
 - **Check for clock skew** in trace timeline view
 - **Verify trace context propagation** is working correctly
 
-### Cannot Access Jaeger UI
+### Cannot access Jaeger UI
 
 **1. Verify Jaeger is running:**
 ```bash
@@ -147,11 +147,11 @@ docker logs jaeger
 curl http://localhost:16686/
 ```
 
-## Integration with Logging
+## Integration with logging
 
 Traces and logs work together for comprehensive observability:
 
-### Correlating Traces and Logs
+### Correlating traces and logs
 
 1. **Trace ID in Logs**: Gateway components include trace IDs in log entries
 2. **Find Trace from Log**: Copy trace ID from log entry and search in Jaeger
@@ -169,7 +169,7 @@ Example log entry with trace ID:
 }
 ```
 
-### Using Both Stacks
+### Using both stacks
 
 Enable both logging and tracing profiles:
 

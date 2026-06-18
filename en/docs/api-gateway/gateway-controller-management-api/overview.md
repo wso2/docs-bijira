@@ -1,5 +1,5 @@
 ---
-title: "Gateway Controller Management API"
+title: "Gateway controller management API"
 description: "Overview of the API Platform Gateway Controller REST API for managing REST APIs, MCP proxies, LLM providers, certificates, and secrets."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/overview/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/overview.md
@@ -11,7 +11,7 @@ last_updated: 2026-06-17
 content_type: "overview"
 ---
 
-# Gateway Controller Management API v0.9.0
+# Gateway controller management API v0.9.0
 
 The Gateway Controller Management API is a RESTful API for managing configurations in the WSO2 API Platform Gateway.
 
@@ -20,7 +20,7 @@ The API exposes the following endpoints:
 * `http://localhost:9090/api/management/v0.9`
 * `http://gateway-controller:9090/api/management/v0.9`
 
-## Table of Contents
+## Table of contents
 
 ### [Authentication](authentication.md)
 
@@ -54,7 +54,7 @@ The API exposes the following endpoints:
 - [Update a subscription](rest-api-management.md#update-a-subscription)
 - [Delete a subscription](rest-api-management.md#delete-a-subscription)
 
-### [MCP Proxy Management](mcp-proxy-management.md)
+### [MCP proxy Management](mcp-proxy-management.md)
 
 - [Create a new MCPProxy](mcp-proxy-management.md#create-a-new-mcpproxy)
 - [List all MCPProxies](mcp-proxy-management.md#list-all-mcpproxies)
@@ -69,7 +69,7 @@ The API exposes the following endpoints:
 - [Delete a certificate](certificate-management.md#delete-a-certificate)
 - [Manually reload certificates](certificate-management.md#manually-reload-certificates)
 
-### [LLM Provider Template Management](llm-provider-template-management.md)
+### [LLM provider template Management](llm-provider-template-management.md)
 
 - [Create a new LLM provider template](llm-provider-template-management.md#create-a-new-llm-provider-template)
 - [List all LLM provider templates](llm-provider-template-management.md#list-all-llm-provider-templates)
@@ -77,7 +77,7 @@ The API exposes the following endpoints:
 - [Update an existing LLM provider template](llm-provider-template-management.md#update-an-existing-llm-provider-template)
 - [Delete an LLM provider template](llm-provider-template-management.md#delete-an-llm-provider-template)
 
-### [LLM Provider Management](llm-provider-management.md)
+### [LLM provider Management](llm-provider-management.md)
 
 - [Create a new LLM provider](llm-provider-management.md#create-a-new-llm-provider)
 - [List all LLM providers](llm-provider-management.md#list-all-llm-providers)
@@ -90,7 +90,7 @@ The API exposes the following endpoints:
 - [Update an API key for an LLM provider](llm-provider-management.md#update-an-api-key-for-an-llm-provider)
 - [Revoke an API key for an LLM provider](llm-provider-management.md#revoke-an-api-key-for-an-llm-provider)
 
-### [LLM Proxy Management](llm-proxy-management.md)
+### [LLM proxy Management](llm-proxy-management.md)
 
 - [Create a new LLM proxy](llm-proxy-management.md#create-a-new-llm-proxy)
 - [List all LLM proxies](llm-proxy-management.md#list-all-llm-proxies)

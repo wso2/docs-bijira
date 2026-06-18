@@ -1,5 +1,5 @@
 ---
-title: "JSON Schema Guardrail"
+title: "JSON schema guardrail"
 description: "Validate LLM request and response body content against a JSON Schema definition to enforce structured data formats."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/json-schema/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/json-schema.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# JSON Schema Guardrail
+# JSON schema guardrail
 
 ## Overview
 
@@ -30,7 +30,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -39,7 +39,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 | `invert` | boolean | No | `false` | If `true`, validation passes when schema validation FAILS. If `false`, validation passes when schema validation succeeds. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed validation error information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -48,7 +48,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 | `invert` | boolean | No | `false` | If `true`, validation passes when schema validation FAILS. If `false`, validation passes when schema validation succeeds. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed validation error information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -59,7 +59,7 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is validated against the schema.
 
-## JSON Schema Features
+## JSON schema features
 
 The guardrail supports JSON Schema Draft 7, including:
 
@@ -72,7 +72,7 @@ The guardrail supports JSON Schema Draft 7, including:
 
 ## Examples
 
-### Example 1: Basic Object Validation
+### Example 1: basic object validation
 
 Deploy an LLM provider that validates that request contains a user object with required fields:
 
@@ -163,7 +163,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
@@ -175,7 +175,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 - **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0]"` for message objects or `"$.results"` for response arrays).
 
-## Use Cases
+## Use cases
 
 1. **API Contract Enforcement**: Ensure requests and responses conform to API specifications.
 
@@ -187,7 +187,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Compliance**: Enforce data formats required by regulatory standards.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

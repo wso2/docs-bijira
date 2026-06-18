@@ -1,4 +1,4 @@
-# Writing an AI Policy for the Self-Hosted Gateway
+# Writing an AI policy for the Self-hosted gateway
 
 AI policies allow you to inspect, control, and modify traffic going to and from Large Language Models (LLMs), such as OpenAI, Anthropic, or other providers.
 
@@ -9,7 +9,7 @@ The key difference is how you handle LLM request and response bodies, especially
 - JSON responses
 - Streaming responses (SSE)
 
-## Key Idea
+## Key idea
 
 LLM responses come in two formats:
 
@@ -20,7 +20,7 @@ LLM responses come in two formats:
 
 Your policy must be implemented to handle **both formats**.
 
-## Which Interfaces to Implement
+## Which interfaces to implement
 
 Choose based on what your policy needs to do:
 
@@ -31,7 +31,7 @@ Choose based on what your policy needs to do:
 | Inspect or modify buffered (in-memory) response | `ResponsePolicy` | `ResponseBodyMode: BodyModeBuffer` |
 | Inspect or modify streaming response | `StreamingResponsePolicy` (embeds `ResponsePolicy`) | `ResponseBodyMode: BodyModeStream` |
 
-## Recommended Pattern
+## Recommended pattern
 
 For most AI policies, implement both:
 
@@ -41,7 +41,7 @@ For most AI policies, implement both:
 !!! tip
     The gateway automatically chooses which handler to call. `OnResponseBodyChunk` is invoked only if the entire policy chain is streaming-compatible. If any policy in the chain does not support streaming, `OnResponseBody` is used as a fallback.
 
-## Minimal AI Policy Example
+## Minimal AI policy example
 
 ```go
 package myaipolicy
@@ -98,12 +98,12 @@ func (p *MyAIPolicy) OnResponseBody(
 }
 ```
 
-## Best Practices
+## Best practices
 
 - **Always handle both streaming and non-streaming** - The gateway may fall back to buffered mode if any policy in the chain does not support streaming.
 - **Use Metadata to share state** - Pass data between request and response phases using the `Metadata` map.
 - **Implement streaming + fallback for compatibility** - Ensure your policy works correctly regardless of whether the chain runs in streaming or buffered mode.
 
-## Learn More
+## Learn more
 
 - [Writing a Custom Policy for the Self-Hosted Gateway](../../api-platform-gateway/writing-a-custom-policy.md)

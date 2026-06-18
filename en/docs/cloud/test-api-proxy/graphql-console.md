@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Test GraphQL APIs via the GraphQL Console
+# Test GraphQL APIs via the GraphQL console
 
 API Platform offers an integrated GraphQL Console to test GraphQL API proxies that you create and deploy. Since API Platform secures APIs with OAuth 2.0 authentication, the GraphQL Console generates test keys to help you invoke your GraphQL operations.
 

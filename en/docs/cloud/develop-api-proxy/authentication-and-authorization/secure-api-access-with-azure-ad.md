@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure API Access with Microsoft Azure Active Directory (Azure AD)
+# Secure API access with microsoft Azure active directory (Azure AD)
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions.
 
@@ -38,7 +38,7 @@ To follow this guide, you need to satisfy the following prerequisites:
 - To create applications, the `Application Developer` role is required. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-developer)
 
 
-## Step 1: Assign scopes to an API in API Platform
+## Step 1: assign scopes to an API in API Platform
 
 You can provide fine-grained access control to your API resources with Permissions (scopes) policy. Follow the steps below to assign a Permission (scope) to the resources in the API.
 
@@ -63,7 +63,7 @@ You can provide fine-grained access control to your API resources with Permissio
 10. In the left navigation menu, click **Develop** and then **Lifecycle**.
 11. Click **Publish** and continue to publish your API to the API Platform Developer Portal.
 
-## Step 2: Create a web API on Azure AD
+## Step 2: create a web API on Azure AD
 
 To enable external key manager authentication for APIs,  create an API on Azure AD that represents the API on API Platform. Follow the steps below:
 
@@ -81,7 +81,7 @@ For more information, refer to the Azure documentation:
 - [Quickstart: Register an application with the Microsoft identity platform](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 
-### Step 2.1: Assign users to the web API
+### Step 2.1: assign users to the web API
 
 You can restrict users to the API as follows:
 
@@ -93,11 +93,11 @@ You can restrict users to the API as follows:
 
 For more information, refer to the Azure documentation: [Assign the app to users and groups to restrict access](Assign the app to users and groups to restrict access)
 
-## Step 3: Create a client application on Azure AD and invoke the Azure web API
+## Step 3: create a client application on Azure AD and invoke the Azure web API
 
 To expose the API to application developers, create an application in Azure AD. This application provides you with a client-id and client-secret that your application needs to use to invoke the API.
 
-### Step 3.1: Create a client application
+### Step 3.1: create a client application
 
 Follow the steps below to create the application:
 
@@ -107,7 +107,7 @@ Follow the steps below to create the application:
     !!! note
          OAuth2 Authorization Grant flow applies to Web Applications.
 
-### Step 3.2: Consume the Azure AD web API from the Azure AD application
+### Step 3.2: consume the Azure AD web API from the Azure AD application
 
 Once you create the application, select the API and the scopes you want the application to consume. Follow the steps below:
 
@@ -121,7 +121,7 @@ Once you create the application, select the API and the scopes you want the appl
 For more information, refer to the Azure documentation: [Add permissions to access your web API](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis)
 
 
-### Step 3.3: Create secrets for the Azure web application
+### Step 3.3: create secrets for the Azure web application
 
 To invoke the application, provide client secrets to the consuming application. Follow the steps below to generate the credentials:
 
@@ -135,10 +135,10 @@ To invoke the application, provide client secrets to the consuming application. 
 
 For more information, refer to the Azure documentation: [Add a Client Secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
 
-## Step 4: Enable external key manager authentication
+## Step 4: enable external key manager authentication
 1. Select Azure Active Directory (Azure AD) as an external key manager
 
-## Step 5: Create an application in API Platform Devportal
+## Step 5: create an application in API Platform Devportal
 Follow the steps below to consume the API Platform API through external key manager for authentication:
 
 1. Sign in to the [API Platform Developer Portal](https://devportal.bijira.dev/).
@@ -146,7 +146,7 @@ Follow the steps below to consume the API Platform API through external key mana
 3. Enter a name for the application.
 4. Click **Create** and **Subscribe** to the API you assigned scopes.
 
-## Step 6: Invoke the API with scopes
+## Step 6: invoke the API with scopes
 
 You can now invoke the API Platform API using the authorization code grant. API Platform will authenticate the user with Azure AD and provide access to the resource.
 

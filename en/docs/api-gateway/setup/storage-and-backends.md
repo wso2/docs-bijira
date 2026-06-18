@@ -1,5 +1,5 @@
 ---
-title: "Configuring External Storage and Backends"
+title: "Configuring external storage and backends"
 description: "Configure PostgreSQL as the Gateway Controller storage backend and Redis for distributed rate limiting in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/setup/storage-and-backends/
 md_url: https://wso2.com/api-platform/docs/api-gateway/setup/storage-and-backends.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Configuring External Storage and Backends
+# Configuring external storage and backends
 
-### PostgreSQL (Gateway Controller)
+### PostgreSQL (gateway controller)
 
 To use PostgreSQL as the storage backend for the Gateway Controller, update the `config.toml`:
 
@@ -32,7 +32,7 @@ password = "your-postgres-password"
 
 For the full list of PostgreSQL configuration options, refer to the [config template](https://github.com/wso2/api-platform/blob/main/gateway/configs/config-template.toml).
 
-### Redis (Gateway Runtime — Distributed Rate Limiting)
+### Redis (gateway runtime — distributed rate limiting)
 
 To enable distributed rate limiting across multiple Gateway Runtime instances, configure the rate limiting policy to use Redis as the backend in `config.toml`:
 

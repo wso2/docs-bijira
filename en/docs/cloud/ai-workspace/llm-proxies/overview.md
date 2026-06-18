@@ -1,12 +1,12 @@
-# App LLM Proxies Overview
+# App LLM proxies overview
 
-## Why a Proxy on Top of a Provider?
+## Why a proxy on top of a provider?
 
 An **LLM Provider** connects the gateway to an upstream LLM service and can be called directly. An **App LLM Proxy** adds an optional, application-facing endpoint on top when you need controls that are specific to a Gen AI application or agent.
 
 The main benefit is specialization and isolation. A single provider can be used directly, or it can back multiple App LLM Proxies: one for a customer-facing chatbot with strict guardrails, another for an internal agent with relaxed settings, and another for a workflow-specific Gen AI assistant. Each proxy is independently configured, and swapping the underlying provider doesn't require any changes to the applications or agents calling the proxy.
 
-## What You Can Do with an App LLM Proxy
+## What you can do with an app LLM proxy
 
 **Expose a controlled API endpoint**
 The proxy gives you a stable URL your Gen AI application or agent calls. You control which resources (API paths) are exposed, and can enable or disable them without touching the upstream provider.
@@ -26,7 +26,7 @@ Create separate proxies for different Gen AI applications, agents, teams, or env
 **Switch providers without client changes**
 Because applications and agents call the proxy URL rather than the provider directly, you can swap the underlying LLM Provider (e.g., from OpenAI to Azure OpenAI) without any changes on the client side.
 
-## Next Steps
+## Next steps
 
 - [Configure App LLM Proxy](configure-proxy.md) — Step-by-step guide to create and deploy your first specialized proxy
 - [Manage App LLM Proxy](manage-proxy.md) — Update configuration, guardrails, and resources after deployment

@@ -1,4 +1,4 @@
-# Token-Based Rate Limiting
+# Token-based rate limiting
 
 AI services bill on a per-token basis, so uncontrolled usage can lead to unexpected costs. The AI Workspace provides two ways to apply token-based rate limits:
 
@@ -9,7 +9,7 @@ AI services bill on a per-token basis, so uncontrolled usage can lead to unexpec
 
 ---
 
-## Built-in Rate Limiting
+## Built-in rate limiting
 
 Configured through the **Rate Limiting** tab on an LLM Provider. Supports limiting by request count and token count.
 
@@ -23,7 +23,7 @@ Configured through the **Rate Limiting** tab on an LLM Provider. Supports limiti
 !!! info "Per Consumer Rate Limiting — Coming Soon"
     Only the **Backend** scope is currently configurable.
 
-### Configuration Modes
+### Configuration modes
 
 - **Provider-wide** — A single limit across all API endpoints.
 - **Per Resource** — Individual limits per API endpoint.
@@ -31,7 +31,7 @@ Configured through the **Rate Limiting** tab on an LLM Provider. Supports limiti
 !!! note
     Provider-wide and Per Resource modes are mutually exclusive. Clear existing limits before switching.
 
-### Limit Criteria
+### Limit criteria
 
 | Criterion | Description |
 |-----------|-------------|
@@ -52,11 +52,11 @@ For each criterion, set a **Quota** and a **Reset Duration** (`second`, `minute`
 
 ---
 
-## Token Based Rate Limit Policy
+## Token based rate limit policy
 
 A policy attached via the **Guardrails** tab. Tracks prompt tokens, completion tokens, and total tokens separately — giving finer control than the built-in Rate Limiting tab. Can be applied to both LLM Providers and App LLM Proxies.
 
-### Configuration Parameters
+### Configuration parameters
 
 Configure limits for any combination of the three token categories. At least one must be specified.
 
@@ -67,7 +67,7 @@ Configure limits for any combination of the three token categories. At least one
 | **Total Token Count** | Conditional | Maximum combined prompt + completion tokens within the duration. |
 | **Duration** | Yes | Time window for the limit (e.g., `60s`, `1m`, `1h`). |
 
-### Add This Policy
+### Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name and go to the **Guardrails** tab.

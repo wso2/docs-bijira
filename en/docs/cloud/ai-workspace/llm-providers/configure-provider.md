@@ -1,4 +1,4 @@
-# Configure LLM Provider
+# Configure LLM provider
 
 LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, and others to the AI Workspace. Once configured, providers can be deployed and used directly through the managed gateway.
 
@@ -11,7 +11,7 @@ LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, 
 - At least one [AI Gateway created and set up](../ai-gateways/setting-up.md)
 - API credentials for your LLM provider (API key, access tokens, etc.)
 
-## Add a New Provider
+## Add a new provider
 
 1. Navigate to **AI Workspace** in your API Platform dashboard.
 2. Select **Service Providers** from the menu.
@@ -19,13 +19,13 @@ LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, 
 
    ![Add LLM Service Provider panel showing selectable tiles for OpenAI, Mistral, Gemini, Azure OpenAI, Azure AI Foundry, AWS Bedrock, and Anthropic](../../../assets/img/ai-gateway/ai-workspace/llm-provider/select-llm-provider-type.png)
 
-## Configure Provider Details
+## Configure provider details
 
 After selecting your provider type, fill in the provider configuration form:
 
    ![Add LLM Service Provider form with OpenAI selected, showing Name, Version, Description, Context, API Key, and Guardrails fields](../../../assets/img/ai-gateway/ai-workspace/llm-provider/llm-provider-details.png)
 
-### Basic Information
+### Basic information
 
 1. **Name*** (Required): Enter a unique name for the provider (e.g., `openai-production`, `anthropic-dev`).
 
@@ -71,7 +71,7 @@ The authentication fields vary depending on the provider you selected:
     1. **Upstream URL*** (Required): Enter your Azure AI Foundry endpoint URL.
     2. **API Key*** (Required): Enter your Azure AI Foundry API key.
 
-### Add Guardrails (Optional)
+### Add guardrails (optional)
 
 You can attach policies and guardrails to your provider that apply to all requests:
 
@@ -89,7 +89,7 @@ You can attach policies and guardrails to your provider that apply to all reques
 !!! info
     Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
-## Save Provider
+## Save provider
 
 1. After configuring all settings and adding guardrails (if needed), click **Add Provider**.
 
@@ -97,7 +97,7 @@ You can attach policies and guardrails to your provider that apply to all reques
 
 3. The provider will appear in the providers list.
 
-## Deploy Provider to Gateway
+## Deploy provider to gateway
 
 After creating your provider, you must deploy it to a gateway before it can be used.
 
@@ -110,7 +110,7 @@ After creating your provider, you must deploy it to a gateway before it can be u
 
 3. Wait for the deployment to complete. The status will change to **Deployed**.
 
-## Get Started
+## Get started
 
 Once the provider is deployed, the provider details page shows the Invoke URL on the left and a **Get Started** panel on the right.
 
@@ -118,7 +118,7 @@ Once the provider is deployed, the provider details page shows the Invoke URL on
 
 Select a gateway from the **Gateways** dropdown to see the base URL for accessing this provider through that gateway.
 
-### API Keys
+### API keys
 
 Generate an API key to authenticate requests to the deployed gateway.
 
@@ -128,13 +128,13 @@ Generate an API key to authenticate requests to the deployed gateway.
 !!! danger "Important"
     API keys are only displayed once. Store it in a secure location immediately — you will not be able to retrieve it again.
 
-### Deployed Gateways
+### Deployed gateways
 
 The **Deployed Gateways** section lists all gateways this provider is deployed to, along with the host address and deployment status.
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Configure App LLM Proxy](../llm-proxies/configure-proxy.md) - Configure and deploy a specialized proxy endpoint for a Gen AI application or agent using your provider
 - [Manage Provider](manage-provider.md) - Configure access control, security, rate limiting, and more

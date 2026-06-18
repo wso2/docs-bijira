@@ -1,5 +1,5 @@
 ---
-title: "Analytics Header Filter"
+title: "Analytics header filter"
 description: "Control which request and response headers are sent to analytics backends using allow or deny mode in API Platform AI Gateway."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/analytics-header-filter/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/analytics-header-filter.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Analytics Header Filter
+# Analytics header filter
 
 ## Overview
 
@@ -45,7 +45,7 @@ Request and response headers can have different operation modes, allowing for fl
 | `requestHeadersToFilter`  | object | No       | -       | Configuration for filtering request headers. Contains `operation` and `headers` properties.              |
 | `responseHeadersToFilter` | object | No       | -       | Configuration for filtering response headers. Contains `operation` and `headers` properties.              |
 
-### Parameter Structure
+### Parameter structure
 
 Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) is an object with the following properties:
 
@@ -57,14 +57,14 @@ Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) i
 > **Note**: This policy only affects analytics data collection. It does not remove or modify headers sent to upstream services or returned to clients.
 
 
-## System Requirements
+## System requirements
 
 * Analytics must be enabled globally via `config.yaml` (`analytics.enabled: true`)
 * The policy must be explicitly applied to the API policy chain
 * If analytics is disabled at the system level, this policy has no effect
 
 
-## API Definition Example
+## API definition example
 
 The following example demonstrates how to apply the Analytics Header Filter policy to a LlmProvider:
 
@@ -112,7 +112,7 @@ spec:
 EOF
 ```
 
-## Use Cases
+## Use cases
 
 -  **Sensitive Data Protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
 

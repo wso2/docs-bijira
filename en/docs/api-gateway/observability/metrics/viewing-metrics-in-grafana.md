@@ -1,5 +1,5 @@
 ---
-title: "View Metrics in Grafana"
+title: "View metrics in Grafana"
 description: "Access pre-built Grafana dashboards to view and explore API Platform Gateway component metrics."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/viewing-metrics-in-grafana/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/viewing-metrics-in-grafana.md
@@ -13,22 +13,22 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Viewing Metrics in Grafana
+# Viewing metrics in Grafana
 
 Once you've started the gateway with the metrics profile, follow these steps to view component metrics:
 
-## Step 1: Access Grafana
+## Step 1: access Grafana
 
 Open your browser and navigate to: <http://localhost:3000>
 
-## Step 2: Log in to Grafana
+## Step 2: log in to Grafana
 
 1. Username: `admin`
 2. Password: `admin`
 
 **Note**: You'll be prompted to change the password on first login.
 
-## Step 3: Navigate to Dashboards
+## Step 3: navigate to dashboards
 
 1. Click on the **hamburger menu (☰)** in the top-left corner
 2. Navigate to **Dashboards** → **Browse**
@@ -37,33 +37,33 @@ Open your browser and navigate to: <http://localhost:3000>
    - **Gateway Controller**: Detailed gateway-controller metrics
    - **Policy Engine**: Detailed policy-engine metrics
 
-## Step 4: View Infrastructure Overview
+## Step 4: view infrastructure overview
 
 The Infrastructure Overview dashboard provides a comprehensive view:
 
-### Gateway Controller Section
+### Gateway controller section
 - **API Operations**: Total operations and operation rate
 - **Deployment Latency**: End-to-end deployment time
 - **xDS Clients**: Number of connected Envoy routers
 - **Database Operations**: Database operation metrics
 - **HTTP Requests**: REST API request metrics
 
-### Policy Engine Section
+### Policy engine section
 - **Request Processing**: Total requests and request rate
 - **Policy Executions**: Policy execution metrics
 - **Active Streams**: Current ext_proc streams
 - **Errors**: Error rate and types
 
-### System Resources
+### System resources
 - **Memory Usage**: Heap, system memory across components
 - **Goroutines**: Go runtime goroutines count
 - **Uptime**: Component availability
 
-## Step 5: View Gateway Controller Dashboard
+## Step 5: view gateway controller dashboard
 
 The Gateway Controller dashboard provides detailed metrics:
 
-### API Management
+### API management
 - **API Operations Total**: Counter for all API operations with labels for:
   - `operation`: create, update, delete, get
   - `status`: success, failure
@@ -71,27 +71,27 @@ The Gateway Controller dashboard provides detailed metrics:
 - **APIs Total**: Gauge showing deployed APIs by type and status
 - **Deployment Latency Seconds**: Histogram of deployment times
 
-### xDS Metrics
+### xDS metrics
 - **xDS Clients Connected**: Gauge of connected Envoy instances
 - **Snapshot Generation Duration**: Time to generate configuration snapshots
 - **XDS Stream Requests**: Counter for xDS requests by type
 - **Snapshot Size**: Size of generated configuration snapshots
 
-### Database Metrics
+### Database metrics
 - **Database Operations Total**: Counter for database operations
 - **Database Operation Duration**: Histogram of operation times
 - **Database Size Bytes**: Current database size
 
-### HTTP API Metrics
+### HTTP API metrics
 - **HTTP Requests Total**: Counter for REST API requests
 - **HTTP Request Duration**: Histogram of API response times
 - **Concurrent Requests**: Current concurrent API requests
 
-## Step 6: View Policy Engine Dashboard
+## Step 6: view policy engine dashboard
 
 The Policy Engine dashboard provides detailed metrics:
 
-### Request Processing
+### Request processing
 - **Requests Total**: Counter for all processed requests with labels:
   - `phase`: request, response
   - `route`: route name
@@ -100,7 +100,7 @@ The Policy Engine dashboard provides detailed metrics:
 - **Request Duration Seconds**: Histogram of request processing times
 - **Request Errors Total**: Counter for errors by type
 
-### Policy Execution
+### Policy execution
 - **Policy Executions Total**: Counter for policy executions with labels:
   - `policy_name`: Name of executed policy
   - `policy_version`: Policy version
@@ -115,12 +115,12 @@ The Policy Engine dashboard provides detailed metrics:
 - **XDS Updates Total**: Counter for configuration updates
 - **Body Bytes Processed**: Counter for body processing
 
-### System Resources
+### System resources
 - **Memory Usage**: Memory consumption metrics
 - **Goroutines**: Current goroutines count
 - **GRPC Connections**: Active gRPC connections
 
-## Step 7: Create Custom Dashboards
+## Step 7: create custom dashboards
 
 You can create custom dashboards in Grafana:
 
@@ -131,7 +131,7 @@ You can create custom dashboards in Grafana:
 5. Configure visualization (graphs, tables, gauges, etc.)
 6. Save the dashboard
 
-## Step 8: Set Up Alerts
+## Step 8: set up alerts
 
 Create alerts to be notified of issues:
 

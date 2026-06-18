@@ -1,5 +1,5 @@
 ---
-title: "Control Plane Connection"
+title: "Control plane connection"
 description: "Connect API Platform Gateway to a WSO2 APIM or API Platform Cloud control plane for top-down or bottom-up API synchronization."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/control-plane-connection/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/control-plane-connection.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Control Plane Connection
+# Control plane connection
 
 !!! note
     This step is optional. Configure it only if the gateway needs to sync API artifacts from the [WSO2 APIM control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) or [API Platform Cloud control plane](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/).

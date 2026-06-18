@@ -2,9 +2,9 @@
 
 This guide covers common issues you may encounter when deploying and operating the API Platform Self-Hosted Gateway, along with their solutions.
 
-## Connection Issues
+## Connection issues
 
-### Gateway Not Connecting to Control Plane
+### Gateway not connecting to control plane
 
 **Symptoms:**
 
@@ -46,7 +46,7 @@ This guide covers common issues you may encounter when deploying and operating t
      noProxy: "localhost,127.0.0.1,.internal.example.com"
    ```
 
-### Intermittent Disconnections
+### Intermittent disconnections
 
 **Symptoms:**
 
@@ -77,9 +77,9 @@ This guide covers common issues you may encounter when deploying and operating t
 
    Ensure load balancers or firewalls don't have aggressive idle timeouts.
 
-## Registration Issues
+## Registration issues
 
-### Invalid Gateway Token
+### Invalid gateway token
 
 **Symptoms:**
 
@@ -113,7 +113,7 @@ This guide covers common issues you may encounter when deploying and operating t
    cat /etc/bijira/env | grep BIJIRA_GATEWAY_TOKEN
    ```
 
-### Token Revoked
+### Token revoked
 
 **Symptoms:**
 
@@ -126,9 +126,9 @@ This guide covers common issues you may encounter when deploying and operating t
 2. Update the gateway configuration.
 3. Restart the gateway.
 
-## Startup Issues
+## Startup issues
 
-### Gateway Pod/Container Not Starting
+### Gateway pod/container not starting
 
 **Symptoms:**
 
@@ -175,7 +175,7 @@ This guide covers common issues you may encounter when deploying and operating t
    bijira-gateway --config /etc/bijira/gateway.yaml --validate
    ```
 
-### Port Already in Use
+### Port already in use
 
 **Symptoms:**
 
@@ -199,9 +199,9 @@ This guide covers common issues you may encounter when deploying and operating t
        port: 8443  # Use alternative port
    ```
 
-## TLS/Certificate Issues
+## TLS/Certificate issues
 
-### Certificate Not Valid
+### Certificate not valid
 
 **Symptoms:**
 
@@ -232,7 +232,7 @@ This guide covers common issues you may encounter when deploying and operating t
    openssl rsa -noout -modulus -in private.key | openssl md5
    ```
 
-### Certificate Expired
+### Certificate expired
 
 **Symptoms:**
 
@@ -256,9 +256,9 @@ This guide covers common issues you may encounter when deploying and operating t
    sudo systemctl reload bijira-gateway
    ```
 
-## Policy Issues
+## Policy issues
 
-### Policies Not Applied
+### Policies not applied
 
 **Symptoms:**
 
@@ -284,7 +284,7 @@ This guide covers common issues you may encounter when deploying and operating t
    grep -i "policy" /var/log/bijira/gateway.log
    ```
 
-### Policy Conflicts
+### Policy conflicts
 
 **Symptoms:**
 
@@ -301,9 +301,9 @@ This guide covers common issues you may encounter when deploying and operating t
 
 3. Use the policy simulation tool in API Platform Console.
 
-## Performance Issues
+## Performance issues
 
-### High Latency
+### High latency
 
 **Symptoms:**
 
@@ -345,7 +345,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    Ensure the gateway has low-latency access to backend services.
 
-### High Memory Usage
+### High memory usage
 
 **Symptoms:**
 
@@ -379,9 +379,9 @@ This guide covers common issues you may encounter when deploying and operating t
      ttl: 300s
    ```
 
-## API Routing Issues
+## API routing issues
 
-### 404 Not Found Errors
+### 404 not found errors
 
 **Symptoms:**
 
@@ -402,7 +402,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
 3. **Verify the request path matches the API configuration.**
 
-### 502 Bad Gateway Errors
+### 502 bad gateway errors
 
 **Symptoms:**
 
@@ -432,9 +432,9 @@ This guide covers common issues you may encounter when deploying and operating t
      readTimeout: 60s
    ```
 
-## Logging and Diagnostics
+## Logging and diagnostics
 
-### Enable Debug Logging
+### Enable debug logging
 
 Temporarily enable debug logging for troubleshooting:
 
@@ -446,7 +446,7 @@ logging:
 !!! warning
     Debug logging can generate large volumes of logs and impact performance. Disable after troubleshooting.
 
-### Collect Diagnostic Information
+### Collect diagnostic information
 
 When opening a support request, collect:
 
@@ -479,7 +479,7 @@ When opening a support request, collect:
    df -h
    ```
 
-## Getting Help
+## Getting help
 
 If you cannot resolve an issue using this guide:
 
@@ -487,7 +487,7 @@ If you cannot resolve an issue using this guide:
 2. **Search known issues:** Check the API Platform status page and release notes.
 3. **Contact support:** Open a support ticket with diagnostic information.
 
-## What's Next?
+## What's next?
 
 - [Overview](overview.md): Self-Hosted Gateway overview
 - [Getting Started](getting-started.md): Quick start guide

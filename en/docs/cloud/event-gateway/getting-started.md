@@ -1,4 +1,4 @@
-# Getting Started with Event Gateway
+# Getting started with Event Gateway
 
 This guide walks you through setting up an API Platform Event Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.
 
@@ -19,7 +19,7 @@ Before you begin, ensure you have:
 - **Docker** installed and running (for Quick Start)
 - **Docker Compose** installed
 
-## Create an Event Gateway in API Platform Console
+## Create an Event Gateway in API Platform console
 
 1. Sign in to [API Platform Console](https://console.bijira.dev).
 2. Go to **Organization Level** in API Platform.
@@ -37,14 +37,14 @@ Before you begin, ensure you have:
 
 8. Click **Add** and you will be navigated to the Gateway View Page.
 
-## Setup Gateway
+## Setup gateway
 
 1. Next, download, set up, and start the gateway on your machine by following the steps in the **Quick Start** section or the detailed instructions below (Steps 1–4).
 
     !!! note
         Be sure to copy the commands from the Quick Start section, since the keys are auto-generated for you.
 
-### Step 1: Download the Gateway
+### Step 1: download the gateway
 
 Run this command in your terminal to download the gateway:
 
@@ -53,7 +53,7 @@ curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v
 unzip wso2apip-event-gateway-0.8.0.zip
 ```
 
-### Step 2: Configure the Gateway
+### Step 2: configure the gateway
 
 Run this command to create the gateway configuration with your environment variables:
 
@@ -66,7 +66,7 @@ ENVFILE
 
 Once you copy the above command from the screen, the `<your-gateway-token>` placeholder will be populated and the `wso2apip-event-gateway-0.8.0/configs/keys.env` file will be created with these environment variables.
 
-### Step 3: Start the Gateway
+### Step 3: start the gateway
 
 Navigate to the gateway directory and start it using Docker Compose:
 
@@ -75,7 +75,7 @@ cd wso2apip-event-gateway-0.8.0
 docker compose --env-file configs/keys.env up
 ```
 
-### Step 4: Verify the Gateway
+### Step 4: verify the gateway
 
 Check that the gateway is running and connected:
 
@@ -89,12 +89,12 @@ curl http://localhost:9002/health
 
 The gateway should show as **Active** in the API Platform Console under **Gateways**.
 
-## Add API and Invoke
+## Add API and invoke
 
 !!! note
     This feature is currently available only for **WEBSUB** API proxies.
 
-### Step 1: Create an API Proxy.
+### Step 1: create an API proxy.
 
 In this guide, you will create a WEBSUB API proxy to route through the Event Gateway.
 
@@ -110,7 +110,7 @@ In this guide, you will create a WEBSUB API proxy to route through the Event Gat
 
 6. Click **Create** to create the API Proxy. Wait for the setup to complete and you will be navigated to the API Overview Page.
 
-### Step 2: Deploy the API Proxy (Optional)
+### Step 2: deploy the API proxy (optional)
 
 !!! note
     This step is **optional** at this stage, as the API is deployed to the gateway by default. However, if you make any changes to the API, you must redeploy it.
@@ -121,17 +121,17 @@ In this guide, you will create a WEBSUB API proxy to route through the Event Gat
 
 2. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test** page of the API Proxy.
 
 2. Use the available test client for the relevant resource to test the API Proxy.
 
-## Next Steps
+## Next steps
 
 Your Event Gateway is now running! Here's what to do next:
 
-## Alternative Deployment Options
+## Alternative deployment options
 
 For production environments or specific infrastructure requirements, see the detailed configuration guide:
 

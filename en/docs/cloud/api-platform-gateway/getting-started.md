@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with Self-Hosted Gateway"
+title: "Getting started with Self-hosted gateway"
 description: "Set up an API Platform Self-Hosted Gateway in your own infrastructure and connect it to the API Platform Cloud control plane."
 canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/
 md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-11
 content_type: "quickstart"
 ---
 
-# Getting Started with Self-Hosted Gateway
+# Getting started with Self-hosted gateway
 
 This guide walks you through setting up an API Platform Self-Hosted Gateway in your environment. Follow these quick steps to get your gateway running and connected to API Platform's control plane.
 
@@ -33,7 +33,7 @@ Before you begin, ensure you have:
 - **Docker** installed and running (for Quick Start)
 - **Docker Compose** installed
 
-## Create a Self-Hosted Gateway in API Platform Console
+## Create a Self-hosted gateway in API Platform console
 
 1. Sign in to [API Platform Console](https://console.bijira.dev).
 2. Go to **Organization Level** in API Platform.
@@ -54,7 +54,7 @@ Before you begin, ensure you have:
 
 7. Click **Add** and you will be navigated to the Gateway View Page.
 
-## Setup Gateway
+## Setup gateway
 
 1. Next, download, set up, and start the gateway on your machine by following the steps in the **Quick Start** section or the detailed instructions below (Steps 1–4).
 
@@ -111,14 +111,14 @@ Before you begin, ensure you have:
 
     The gateway should show as **Active** in the API Platform Console under **Gateways**.
 
-## Add API and Invoke
+## Add API and invoke
 
 !!! note
     This feature is currently available only for **REST API** proxies that are created from **scratch**, by **importing from OpenAPI**, or by specifying an **endpoint**.
 
     This feature is not currently available for **REST API** proxies created by importing an API contract from **GitHub**, or for **WebSocket**, **GraphQL**, **MCP**, or **Egress** APIs.
 
-### Step 1: Create an API Proxy.
+### Step 1: create an API proxy.
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
@@ -154,7 +154,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
     ![Reading List API Local overview page showing HTTP Self Hosted Gateway badge, Created lifecycle status, and /books API endpoints list](../../assets/img/api-platform-gateway/gateway/api-overview.png)
 
-### Step 2: Deploy the API Proxy (Optional)
+### Step 2: deploy the API proxy (optional)
 
 !!! note
     This step is **optional** at this stage, as the API is deployed to the gateway by default. However, if you make any changes to the API, you must redeploy it.
@@ -167,7 +167,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
 2. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> cURL** page of the API Proxy.
 
@@ -175,14 +175,14 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
 2. Use the **cURL** for relevant resource to test the API Proxy.
 
-## Next Steps
+## Next steps
 
 Your Self-Hosted Gateway is now running! Here's what to do next:
 
 - **Configure Policies**: Apply policies through the [Adding and Managing Policies](manage-policies.md) guide
 - **Monitor**: View gateway health and metrics using [Analytics](analytics.md)
 
-## Alternative Deployment Options
+## Alternative deployment options
 
 For production environments or specific infrastructure requirements, see the detailed configuration guide:
 

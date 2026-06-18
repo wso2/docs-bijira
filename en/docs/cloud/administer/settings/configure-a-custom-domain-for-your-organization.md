@@ -1,4 +1,4 @@
-# Configure a Custom Domain for Your Organization
+# Configure a custom domain for your organization
 
 A custom domain is essential for effective branding, discoverability, and credibility of a website. API Platform allows you to easily configure custom domains for your organization, enabling developers to utilize it to configure custom URLs for their API proxies.
 

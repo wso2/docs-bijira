@@ -1,4 +1,4 @@
-# Configure Approvals for API Platform Workflows
+# Configure approvals for API Platform workflows
 
 API Platform allows you to configure approval processes for specific workflows within the platform. An approval process for a workflow ensures that critical or sensitive changes are properly managed and controlled.
 

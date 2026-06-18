@@ -1,5 +1,5 @@
 ---
-title: "Database Configuration"
+title: "Database configuration"
 description: "Configure PostgreSQL as the shared database for Gateway Controller replicas in high-availability production deployments."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/database-configuration/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/database-configuration.md
@@ -13,11 +13,11 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Database Configuration
+# Database configuration
 
 PostgreSQL is required for high-availability production deployments. It removes the single-replica constraint of the default SQLite backend and acts as the shared source of truth across all Gateway Controller replicas. See [Architecture](../high-availability-production-deployment.md#architecture) for how replicas coordinate via the shared database.
 
-## Create the Database
+## Create the database
 
 Connect to your PostgreSQL instance:
 
@@ -37,7 +37,7 @@ CREATE USER gateway WITH PASSWORD 'your-db-password';
 GRANT ALL PRIVILEGES ON DATABASE gateway_controller TO gateway;
 ```
 
-## Store the Password in a Kubernetes Secret
+## Store the password in a Kubernetes secret
 
 ```bash
 kubectl create secret generic gateway-postgres-password \
@@ -45,7 +45,7 @@ kubectl create secret generic gateway-postgres-password \
   --from-literal=password='your-db-password'
 ```
 
-## Configure the Chart
+## Configure the chart
 
 ```yaml
 gateway:
@@ -78,7 +78,7 @@ gateway:
       enabled: false
 ```
 
-## DSN Alternative
+## DSN alternative
 
 If your PostgreSQL connection string is managed externally (for example, from a secrets manager), you can supply a full DSN instead of individual fields.
 
@@ -110,7 +110,7 @@ gateway:
 !!! note
     When `dsn` is set, it takes precedence over all individual connection fields. The password environment variable is still injected from the referenced secret.
 
-## Connection Pool Tuning
+## Connection pool tuning
 
 | Parameter | Default | When to Adjust |
 |-----------|---------|----------------|

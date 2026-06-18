@@ -1,4 +1,4 @@
-# Secure an API with Role-Based Access Control
+# Secure an API with Role-based access control
 
 Role-based access control (RBAC) is a flexible and scalable approach to manage access to API resources. In this approach, each user or group is assigned a specific role that determines the permissions granted to perform operations on an API resource.
 
@@ -32,7 +32,7 @@ Let’s take a look at the steps to implement the scenario described above using
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-### Step 1: Create an API proxy component and deploy it
+### Step 1: create an API proxy component and deploy it
 
 1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. To create an API proxy component, follow the instructions in [Start with Endpoint](../create-api-proxy/my-apis/http/start-with-endpoint.md).
@@ -47,7 +47,7 @@ Let’s take a look at the steps to implement the scenario described above using
 7. In the **Configure API Access Mode** pane, select **External** to make the API publicly accessible.
 8. Click **Deploy**.
 
-### Step 2: Apply permissions to resources and publish the API
+### Step 2: apply permissions to resources and publish the API
 
 1. On the **Deploy** page, go to the **Build Area** card and click **Security Settings**.
 2. In the **Security Settings** pane, go to the **Permissions List** section and click **+ Add Permission(Scope)**.
@@ -79,7 +79,7 @@ Let’s take a look at the steps to implement the scenario described above using
 
 Now, application developers can discover the API, subscribe to it, and invoke it.
 
-### Step 3: Subscribe to the published API
+### Step 3: subscribe to the published API
 
 1. Go to the [API Developer Portal](https://devportal.choreo.dev/) and click **Applications** on the top menu.
 2. Click **+Create**.
@@ -94,7 +94,7 @@ Now, application developers can discover the API, subscribe to it, and invoke it
     2. In the **Subscription Management** pane, click **Add APIs**.
     3. In the **Add APIs** list, go to the API you created and click **Add**.
 
-### Step 4: Define roles and assign them to groups
+### Step 4: define roles and assign them to groups
 
 1. In the Developer Portal left navigation menu, click **Production** under **Credentials**.
 2. In the **Permissions** section, click **Manage Permissions**. This takes you to the **Roles** tab of the `User Management App` application in Asgardeo.
@@ -105,12 +105,12 @@ Now, application developers can discover the API, subscribe to it, and invoke it
     - **HR-Manager**: Assign the **admin** role.
     - **HR-Officer**: Assign the **user** role.
 
-### Step 5: Define users and assign them to groups
+### Step 5: define users and assign them to groups
 
 1. Define two users: `Cameron` and `Alex`. For instructions, see [Manage Users](https://wso2.com/asgardeo/docs/guides/users/manage-customers/#onboard-a-user) in the Asgardeo documentation.
 2. Assign `Cameron` to the **HR-Manager** group and `Alex` to the **HR-Officer** group. For instructions, see [Assign Groups](https://wso2.com/asgardeo/docs/guides/users/manage-customers/#assign-groups).
 
-### Step 6: Obtain an access token and try out the API
+### Step 6: obtain an access token and try out the API
 
 1. Construct the authorization URL as follows:
 

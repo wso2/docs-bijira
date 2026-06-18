@@ -12,11 +12,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Sentence Count Guardrail
+# Sentence count guardrail
 
 This policy provides the capability to perform sentence count-based validation on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce specific content moderation rules based on configurable minimum and maximum sentence counts and JSON path expressions.
 
-## Configure Sentence Count Guardrail
+## Configure sentence count guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -37,7 +37,7 @@ This policy provides the capability to perform sentence count-based validation o
 
 4. Save the API and Deploy the API to apply the policy to the gateway.
 
-### Sample Sentence Count Guardrail Configuration
+### Sample sentence count guardrail configuration
 
 - Guardrail Name: `Sentence Count Guardrail`
 - Minimum Sentence Count: `1`
@@ -46,7 +46,7 @@ This policy provides the capability to perform sentence count-based validation o
 - Invert the Guardrail Decision: `false`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the Sentence Count Guardrail
+### Sample payload to be intervened from the sentence count guardrail
 
 ```json
 {
@@ -59,7 +59,7 @@ This policy provides the capability to perform sentence count-based validation o
 }
 ```
 
-### Sample Response after Sentence Count Guardrail Intervention
+### Sample response after sentence count guardrail intervention
 
 ```json
 {

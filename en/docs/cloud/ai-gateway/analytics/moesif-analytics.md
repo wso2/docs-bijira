@@ -32,7 +32,7 @@ This capability allows platform administrators and business stakeholders to gain
 
 Analytics is configured entirely through the gateway `config.toml` file and is enabled at a system level.
 
-### System Parameters (`config.toml`)
+### System parameters (`config.toml`)
 
 #### Analytics
 
@@ -48,7 +48,7 @@ Analytics is configured entirely through the gateway `config.toml` file and is e
 | `enabled`              | boolean | Yes      | Enables the publisher                     |
 | `settings`             | object | Yes       | Map of Publisher specific attributes required for configuring the publisher client                     |
 
-#### gRPC Event Server
+#### gRPC event server
 
 This section configures both the Envoy access log streaming settings and the ALS (Access Log Service) server that receives those logs. The ALS server runs within the policy-engine component.
 
@@ -68,9 +68,9 @@ This section configures both the Envoy access log streaming settings and the ALS
 **Note:** The hostname for the ALS connection is automatically derived from the policy-engine configuration. The internal log name identifier is set to `"envoy_access_log"` and is not configurable.
 
 
-## Configuration Examples
+## Configuration examples
 
-#### Integrate Moesif Publisher
+#### Integrate Moesif publisher
 
 For Moesif analytics integration, the following publisher-specific attributes must be configured under the `settings` section. These parameters control authentication, batching behavior, and publish intervals for efficient analytics delivery. The required attributes are as follows.
 
@@ -110,7 +110,7 @@ max_header_limit = 8192
 ```
 
 
-## Use Cases
+## Use cases
 
 * **API Usage Visibility** – Understand how APIs are consumed across tenants and applications.
 * **Operational Insights** – Observe traffic volume, response behavior, and latency trends.

@@ -1,4 +1,4 @@
-# Word Count Guardrail
+# Word count guardrail
 
 The Word Count Guardrail validates the number of words in a request or response. Use it to enforce content length policies — for example, limiting how long a user's prompt can be, or ensuring responses meet a minimum length requirement.
 
@@ -6,7 +6,7 @@ The Word Count Guardrail validates the number of words in a request or response.
 
 All parameters are under **Advanced Settings**. Configure a **request** section, a **response** section, or both.
 
-### Request / Response Parameters
+### Request / response parameters
 
 Each section (request and response) has the following parameters:
 
@@ -18,7 +18,7 @@ Each section (request and response) has the following parameters:
 | **invert** | No | `false` | When `true`, the guardrail intervenes when the word count **is within** the configured range instead of outside it. |
 | **showAssessment** | No | `false` | When `true`, the intervention response includes details about the violation. |
 
-## Add This Guardrail
+## Add this guardrail
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -28,7 +28,7 @@ Each section (request and response) has the following parameters:
 6. Click **Add** (for providers) or **Submit** (for proxies).
 7. Deploy the provider or proxy to apply the changes.
 
-## Example: Limit Prompt Length
+## Example: limit prompt length
 
 The following configuration blocks requests where the user message exceeds 50 words.
 

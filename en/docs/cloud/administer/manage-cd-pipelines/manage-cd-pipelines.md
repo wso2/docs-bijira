@@ -1,4 +1,4 @@
-# Manage Continuous Deployment Pipelines
+# Manage continuous deployment pipelines
 
 By default, all the organizations in API Platform are provisioned with a default continuous deployment pipeline.
 

@@ -1,4 +1,4 @@
-# Developer Portal Mode
+# Developer Portal mode
 
 API Platform's developer portal can be configured in different modes based on your requirements.
 

@@ -1,4 +1,4 @@
-# Create Applications
+# Create applications
 
 An application is a logical representation of a physical application such as a mobile app, webapp, device, etc. If an application needs to consume an API, it should subscribe to the required API over a selected business plan, which determines the usage quota the application is allowed. A single application can have multiple API subscriptions.
 
@@ -34,7 +34,7 @@ This creates the organization and opens the **Project Home** page of the default
 
    ![Applications list showing DemoBookingApp, Testapp01, and SampleIntegrationApp cards with subscription counts](../../../assets/img/devportal/applications-list.png)
 
-## Add Application Description
+## Add application description
 
 1. Selected application.
 2. Click **+ Add description** to add the application's description.

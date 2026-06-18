@@ -13,13 +13,13 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Create an API Proxy for an Open AI API  
+# Create an API proxy for an Open AI API  
 
 Follow the steps below to create an AI API:  
 
 ---
 
-## 1. Access the API Platform Console
+## 1. Access the API Platform console
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.  
 
@@ -49,7 +49,7 @@ Follow the steps below to create an AI API:
 
 ---
 
-## 3. Configure Backend Settings
+## 3. Configure backend settings
 
 1. In the left navigation menu, click **Develop**, then select **Policy**. 
 
@@ -68,7 +68,7 @@ Follow the steps below to create an AI API:
     ![Endpoint Configuration dialog showing OpenAI endpoint URL with empty API Key Header and API Key input fields](../../../assets/img/create-api-proxy/third-party-apis/ai-apis/openai-endpoint-config.png)
 
 
-## 4. Deploy to development and Production Environments
+## 4. Deploy to development and production environments
 
 1. In the left navigation menu, click **Deploy**, Deploy to Development environment
 
@@ -82,7 +82,7 @@ Follow the steps below to create an AI API:
 
 ---
 
-## Next Steps
+## Next steps
 
 - **Test the AI API** to ensure it correctly forwards requests to the AI service. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).  
 

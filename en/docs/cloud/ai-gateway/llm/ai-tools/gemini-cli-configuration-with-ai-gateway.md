@@ -16,7 +16,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: Start an AI Gateway on WSO2 API Platform
+## Step 1: start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
@@ -47,7 +47,7 @@ Once the AI Gateway is active, you can continue to create the Gemini LLM provide
 
 ---
 
-## Step 2: Create and Deploy a Gemini LLM Provider in AI Workspace Console
+## Step 2: create and deploy a Gemini LLM provider in AI Workspace console
 
 1. Log in to the WSO2 API Platform Console as an admin.
 
@@ -55,7 +55,7 @@ Once the AI Gateway is active, you can continue to create the Gemini LLM provide
 
 This opens the **AI Workspace Console**.
 
-### Create a Gemini LLM Provider
+### Create a Gemini LLM provider
 
 1. In the left navigation panel of the AI Workspace Console, navigate to **LLM → LLM Providers**.
 
@@ -69,7 +69,7 @@ This opens the **AI Workspace Console**.
 
 6. Click **Add Provider**.
 
-### Deploy the Gemini Provider to the AI Gateway
+### Deploy the Gemini provider to the AI Gateway
 
 1. On the page that opens after creating the provider, click **Deploy to Gateway**.
 
@@ -81,7 +81,7 @@ The Gemini LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: Create and Deploy an App LLM Proxy
+## Step 3: create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Google Gemini CLI will invoke through WSO2 API Platform.
 
@@ -117,7 +117,7 @@ The App LLM Proxy is the endpoint that Google Gemini CLI will invoke through WSO
 
 12. Click **Create Proxy**.
 
-### Configure the API Key Header for Google Gemini CLI
+### Configure the API key header for Google Gemini CLI
 
 Google Gemini CLI sends its API key in a header named `x-goog-api-key`. The App LLM Proxy must be configured to accept this header.
 
@@ -133,7 +133,7 @@ Google Gemini CLI sends its API key in a header named `x-goog-api-key`. The App 
     x-goog-api-key
     ```
 
-### Deploy the App LLM Proxy to the AI Gateway
+### Deploy the app LLM proxy to the AI Gateway
 
 1. Click **Deploy to Gateway**.
 
@@ -143,7 +143,7 @@ Google Gemini CLI sends its API key in a header named `x-goog-api-key`. The App 
 
 The App LLM Proxy is now deployed to the selected AI Gateway.
 
-### Generate an API Key for Gemini CLI
+### Generate an API key for Gemini CLI
 
 Google Gemini CLI needs an API key from WSO2 API Platform to invoke the deployed App LLM Proxy.
 
@@ -165,7 +165,7 @@ You will use these values when configuring Gemini CLI.
 
 ---
 
-## Step 4: Configure Gemini CLI Environment Variables
+## Step 4: configure Gemini CLI environment variables
 
 Open a terminal session where you want to run Google Gemini CLI.
 
@@ -189,7 +189,7 @@ Replace:
 !!! note
     These environment variables must be set in the same terminal session where Gemini CLI is executed. Alternatively, they can be configured as permanent environment variables.
 
-### Configure SSL Certificate Trust
+### Configure SSL certificate trust
 
 When using a local WSO2 API Platform AI Gateway over HTTPS, Gemini CLI must be able to trust the certificate presented by the Gateway.
 
@@ -208,7 +208,7 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 ---
 
-## Step 5: Run Google Gemini CLI
+## Step 5: run Google Gemini CLI
 
 After setting the required environment variables, run Gemini CLI:
 
@@ -220,9 +220,9 @@ Google Gemini CLI will now send requests through WSO2 API Platform instead of di
 
 ---
 
-## Use case Examples
+## Use case examples
 
-### View API Analytics and Insights
+### View API analytics and insights
 
 By routing Gemini CLI requests through the WSO2 API Manager AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
 
@@ -236,7 +236,7 @@ For more information on Analytics, refer to the official [WSO2 API Platform Docu
 
 ---
 
-### Implement WSO2 AI Gateway Guardrails for Enhanced Control
+### Implement WSO2 AI Gateway guardrails for enhanced control
 
 WSO2 API Manager AI Gateway guardrails enable granular control over the data exchanged between Gemini CLI and the Google Gemini API.
 
@@ -266,7 +266,7 @@ For more information on Rate Limiting and other policies, refer to the official 
 
 ---
 
-### Multi-Model Routing
+### Multi-model routing
 
 WSO2 API Manager AI Gateway supports multi-model routing, allowing you to dynamically route requests to different AI models based on defined conditions or strategies.
 
@@ -286,7 +286,7 @@ For more information on Multi-Model Routing, refer to the official [WSO2 API Pla
 
 ---
 
-### Prompt Decorator
+### Prompt decorator
 
 WSO2 API Manager AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 

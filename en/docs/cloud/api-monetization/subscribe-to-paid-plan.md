@@ -1,4 +1,4 @@
-# Subscribe to a Paid Plan
+# Subscribe to a paid plan
 
 API consumers can browse monetized APIs on the Developer Portal and subscribe to a paid subscription plan using a secure Stripe-powered checkout. Once the payment is successful, the application is subscribed to the API and can be used to invoke it.
 
@@ -13,7 +13,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Subscribe to an API with a Paid Plan
+## Subscribe to an API with a paid plan
 
 1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev/) and sign in to your organization.
 2. In the Developer Portal sidebar, click **APIs** to open the API listing page.
@@ -43,6 +43,6 @@ After subscribing, generate application keys and invoke the API using the creden
 
 ---
 
-## Next Steps
+## Next steps
 
 - [View Billing and Usage](view-billing-and-usage.md)

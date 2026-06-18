@@ -1,4 +1,4 @@
-# Pass End-User Attributes to Upstream Services
+# Pass End-user attributes to upstream services
 
 There are scenarios where a backend service needs to apply specific logic or make decisions depending on the user consuming an API. In such scenarios, you must pass end-user attributes to the backend during an API call.
 

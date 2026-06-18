@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure Communication Between the API Platform Gateway and Your Backend with Mutual TLS
+# Secure communication between the API Platform gateway and your backend with mutual TLS
 
 To establish secure communication between the API Platform Gateway and your backend, you can configure mutual TLS.
 
@@ -24,7 +24,7 @@ Mutual TLS authentication involves both the client and server validating each ot
 
 To establish secure connectivity between the API Platform Gateway and your backend using mutual TLS, you must add the certificate of the backend (server certificate) to API Platform and add the certificate of API Platform (client certificate) as a trusted certificate in the backend.
 
-### Step 1: Configure the backend certificate 
+### Step 1: configure the backend certificate 
 
 #### Prerequisites
 
@@ -39,7 +39,7 @@ To configure the backend certificate, follow the steps given below:
 4. On the **Endpoint Configuration** section, click **Configure** corresponding to the endpoint.
 5. Click **Upload Endpoint Certificate**, and select the certificate file that you extracted in the prerequisites section to add it. This adds the certificate to all the environments as the default certificate for the endpoint. You can override this certificate if necessary when you deploy or promote the API.
 
-### Step 2: Configure mutual TLS with the backend service
+### Step 2: configure mutual TLS with the backend service
 
 There are two approaches you can take to configure mutual TLS.
 
@@ -104,7 +104,7 @@ Follow the step-by-step instructions below depending on how you want to establis
    
     Now you can associate the certificate with the API and deploy the API.
 
-### Step 3: Associate the certificate with the API
+### Step 3: associate the certificate with the API
 
 To associate a certificate with the API, follow the steps given below:
 
@@ -115,7 +115,7 @@ To associate a certificate with the API, follow the steps given below:
 
 3. Click **Save**.
    
-### Step 4: Deploy the API 
+### Step 4: deploy the API 
 
 To deploy the API, follow the steps given below:
 
