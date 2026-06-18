@@ -31,7 +31,7 @@ The API description is the primary signal an AI agent uses to decide whether an 
 
 The description appears in `llms.txt` and in the agent-readable API catalog (`apis.md`), so it is often the first thing an agent reads about your API.
 
-## Use a Well-structured API specification
+## Use a well-structured API specification
 
 Publishing a complete, accurate API specification is one of the most impactful things you can do for AI discoverability. 
 

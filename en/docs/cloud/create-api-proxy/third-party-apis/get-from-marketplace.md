@@ -24,7 +24,7 @@ Follow these steps to create an API proxy for a third-party API available in the
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.
 
-### 2. Select a Third-party API
+### 2. Select a third-party API
 
 1. Click **+Create**.
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **Get From Marketplace**.

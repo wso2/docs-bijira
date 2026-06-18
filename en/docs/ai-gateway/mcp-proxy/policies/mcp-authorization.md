@@ -95,7 +95,7 @@ spec:
     ...
 ```
 
-### Example 2: Claim-based resource access
+### Example 2: claim-based resource access
 
 Control resource access based on user claims:
 
@@ -137,7 +137,7 @@ spec:
     ...
 ```
 
-### Example 3: Role-based prompt access
+### Example 3: role-based prompt access
 
 Restrict prompt access based on user roles:
 
@@ -179,7 +179,7 @@ spec:
     ...
 ```
 
-### Example 4: Multi-level authorization
+### Example 4: multi-level authorization
 
 Combine different resource types with varying access requirements:
 

@@ -61,7 +61,7 @@ embedding_provider_api_key = ""
 8. Click **Add** (for providers) or **Submit** (for proxies).
 9. Deploy the provider or proxy to apply the changes.
 
-## Example: block Off-topic prompts
+## Example: block off-topic prompts
 
 The following configuration uses an allow list to ensure only coding-related prompts are forwarded to the LLM.
 

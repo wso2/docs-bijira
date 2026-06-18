@@ -47,7 +47,7 @@ Once synced, the custom policy is available organization-wide and can be applied
     - Patch version updates are not supported.
     - Version downgrades are not allowed.
 
-## Step 3: view Organization-level custom policies
+## Step 3: view organization-level custom policies
 
 After syncing, the custom policy appears in the **Custom Policies** section on the main Gateways page. To view it:
 

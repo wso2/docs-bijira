@@ -53,7 +53,7 @@ gateway:
           memory: 2Gi
 ```
 
-## Pod Anti-affinity
+## Pod anti-affinity
 
 Pod anti-affinity rules control how replicas are spread across your cluster. Two topology keys are most relevant for production:
 

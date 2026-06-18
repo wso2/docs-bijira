@@ -77,7 +77,7 @@ The weighted sequence would be: `[A, A, A, B, B, C]`, meaning:
 
 ## Examples
 
-### Example 1: basic weighted round robin with Payload-based model
+### Example 1: basic weighted round robin with payload-based model
 
 Deploy an LLM provider with weighted round-robin load balancing:
 

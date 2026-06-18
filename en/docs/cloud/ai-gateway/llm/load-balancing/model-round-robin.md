@@ -48,7 +48,7 @@ The policy requires `requestModel` configuration from the LLM provider template 
 
 ## Examples
 
-### Example 1: basic round robin with Payload-based model
+### Example 1: basic round robin with payload-based model
 
 Deploy an LLM provider with round-robin load balancing across multiple models:
 

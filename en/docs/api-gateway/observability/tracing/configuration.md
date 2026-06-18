@@ -140,7 +140,7 @@ service:
       exporters: [otlp, debug]
 ```
 
-### Example: Multi-backend export
+### Example: multi-backend export
 
 Send traces to multiple backends simultaneously:
 
@@ -168,7 +168,7 @@ service:
       exporters: [otlp/jaeger, otlp/tempo, datadog]
 ```
 
-### Example: Tail-based sampling
+### Example: tail-based sampling
 
 Keep all error traces but sample successful traces:
 

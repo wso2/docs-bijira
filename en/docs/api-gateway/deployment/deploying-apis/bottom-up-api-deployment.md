@@ -390,7 +390,7 @@ curl -X GET https://192.168.0.102:9443/api/am/publisher/v4/apis \
 
 ## API updates
 
-### Automatic Re-sync on update
+### Automatic re-sync on update
 
 When you update an API, it's automatically re-synced to on-prem APIM (if connected).
 
