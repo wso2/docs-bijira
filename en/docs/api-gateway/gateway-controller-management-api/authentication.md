@@ -1,3 +1,18 @@
+---
+title: "Authenticate to the Management API"
+description: "Configure Basic Auth or JWT/IDP authentication and role-based authorization for the API Platform Gateway Controller management REST API."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/authentication/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/authentication.md
+tags:
+  - api-gateway
+  - authentication
+  - security
+  - management-api
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Authentication & Authorization in Gateway Controller
 
 ## Overview

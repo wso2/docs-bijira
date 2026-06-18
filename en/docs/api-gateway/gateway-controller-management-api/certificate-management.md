@@ -1,4 +1,19 @@
-<h1 id="gateway-controller-management-api-certificate-management">Certificate Management</h1>
+---
+title: "Management API: Certificate Management"
+description: "REST API reference for managing custom TLS certificates in API Platform Gateway: list, upload, delete, and reload certificates dynamically."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/certificate-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/certificate-management.md
+tags:
+  - api-gateway
+  - management-api
+  - certificates
+  - tls
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
+# Certificate Management
 
 Manage custom TLS certificates for HTTPS upstream verification
 

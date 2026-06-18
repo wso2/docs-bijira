@@ -1,3 +1,18 @@
+---
+title: "Tracing Best Practices and Troubleshooting"
+description: "Best practices for distributed tracing in API Platform Gateway: sampling strategies, production recommendations, and troubleshooting guidance."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/best-practices-and-troubleshooting/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/best-practices-and-troubleshooting.md
+tags:
+  - api-gateway
+  - observability
+  - tracing
+  - troubleshooting
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Best Practices and Troubleshooting
 
 ## Best Practices

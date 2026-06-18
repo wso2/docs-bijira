@@ -1,4 +1,18 @@
-<h1 id="gateway-controller-management-api-llm-provider-template-management">LLM Provider Template Management</h1>
+---
+title: "Management API: LLM Provider Template Management"
+description: "REST API reference for creating, listing, updating, and deleting LLM provider templates in API Platform Gateway."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-template-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-template-management.md
+tags:
+  - api-gateway
+  - management-api
+  - llm
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
+# LLM Provider Template Management
 
 CRUD operations for LLM Provider Template configurations
 

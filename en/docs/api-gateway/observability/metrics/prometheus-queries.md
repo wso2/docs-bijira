@@ -1,3 +1,18 @@
+---
+title: "Prometheus Queries"
+description: "Useful PromQL queries for monitoring API Platform Gateway controller, router, and policy engine metrics."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/prometheus-queries/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/prometheus-queries.md
+tags:
+  - api-gateway
+  - observability
+  - metrics
+  - prometheus
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
 # Prometheus Queries
 
 You can query Prometheus directly at <http://localhost:9092> to create custom visualizations or debug issues.

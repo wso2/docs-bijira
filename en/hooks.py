@@ -88,10 +88,13 @@ def on_post_page(output, page, config, **kwargs):
         return output
 
     first = next(iter(page.toc), None)
-    if first:
-        title = re.sub(r"<[^>]+>", "", first.title).strip()
-    elif page.meta and page.meta.get("title"):
+    # we want the page's title to be derived from the frontmatter's title key.
+    # if frontmatter or title key is unavailable, we fall back to the page's H1
+    # heading
+    if page.meta and page.meta.get("title"):
         title = page.meta["title"]
+    elif first and first.level == 1:
+        title = re.sub(r"<[^>]+>", "", first.title).strip()
     elif page.title:
         title = re.sub(r"<[^>]+>", "", page.title).strip()
     else:

@@ -1,3 +1,17 @@
+---
+title: "Enable Distributed Tracing"
+description: "Enable and configure distributed tracing for API Platform Gateway in config.toml by pointing to an OTLP collector endpoint."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/enabling-tracing/
+md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/enabling-tracing.md
+tags:
+  - api-gateway
+  - observability
+  - tracing
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "how-to"
+---
+
 # Enabling and Disabling Tracing
 
 ## Enabling Tracing

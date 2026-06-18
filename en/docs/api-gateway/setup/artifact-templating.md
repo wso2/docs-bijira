@@ -1,3 +1,17 @@
+---
+title: "Artifact Templating"
+description: "Use Go text template expressions in API Platform Gateway YAML artifacts to inject environment variables and dynamic values at startup."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/setup/artifact-templating/
+md_url: https://wso2.com/api-platform/docs/api-gateway/setup/artifact-templating.md
+tags:
+  - api-gateway
+  - configuration
+  - templating
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-17
+content_type: "reference"
+---
+
 # Gateway Artifact Templating
 
 
