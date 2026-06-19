@@ -353,6 +353,7 @@ nav:
       - Storage & Backends: api-gateway/setup/storage-and-backends.md
       - Artifact Templating: api-gateway/setup/artifact-templating.md 
       - Upstream Timeouts: api-gateway/setup/upstream-timeouts.md 
+      - JWT Key Managers: api-gateway/setup/jwt-key-managers.md
     - Quick Start Guide: api-gateway/quick-start-guide.md
     - Policies:
       - Overview: api-gateway/policies/overview.md
