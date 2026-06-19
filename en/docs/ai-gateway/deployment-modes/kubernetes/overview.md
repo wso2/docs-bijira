@@ -8,7 +8,7 @@ tags:
   - kubernetes
   - deployment
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-16
+last_updated: 2026-06-19
 content_type: "overview"
 ---
 
@@ -56,7 +56,14 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
 - Choose **Standalone Mode** if your priority is a lightweight gateway runtime install with Helm-managed values.
 - Choose **Operator Mode** if your priority is Kubernetes-native reconciliation, GitOps workflows, multi-resource lifecycle automation, and CRD-based API management.
 
+## Policy Configuration
+
+API Platform Kubernetes Gateway V2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
+
+For a full reference on available policies and how to configure them, see [Policy Configuration Overview](https://wso2.com/api-platform/docs/api-gateway/policies/overview/).
+
 ## Next Steps
+
 Learn more about the deployment modes:
 
 - [Standalone mode](./kubernetes-standalone.md)
