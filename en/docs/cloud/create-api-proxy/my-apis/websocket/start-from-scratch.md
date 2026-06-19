@@ -1,3 +1,17 @@
+---
+title: "Create WebSocket API Proxy from Scratch"
+description: "Create a WebSocket API proxy from scratch by manually specifying API proxy details in WSO2 API Platform, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/start-from-scratch/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/start-from-scratch.md
+tags:
+  - cloud
+  - api-proxy
+  - websocket
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create API Proxy from Scratch
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.

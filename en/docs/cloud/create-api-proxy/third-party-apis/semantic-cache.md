@@ -1,3 +1,18 @@
+---
+title: "Semantic Caching for AI APIs"
+description: "Configure semantic caching on AI API proxies in WSO2 API Platform to reuse responses to similar requests and reduce latency and cost."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/semantic-cache/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/semantic-cache.md
+tags:
+  - cloud
+  - api-proxy
+  - ai-gateway
+  - semantic-cache
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Semantic Caching
 
 AI services frequently involve repetitive queries, leading to unnecessary token usage and increased latency. API Platform’s AI Gateway introduces semantic caching, allowing responses to similar requests to be cached and reused intelligently, minimizing redundant processing, improving response times, and reducing overall costs.

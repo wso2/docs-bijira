@@ -1,3 +1,16 @@
+---
+title: "Govern API Proxies"
+description: "Create rulesets and policies, upload governance documents, and monitor API proxy compliance in WSO2 API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/governance/govern-api-proxy/
+md_url: https://wso2.com/api-platform/docs/cloud/governance/govern-api-proxy.md
+tags:
+  - cloud
+  - governance
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Govern API Proxies
 
 API governance lets you enforce compliance standards on API proxies across your organization. You can define rulesets, attach them to policies, and monitor adherence through a compliance dashboard. You can also upload governance documents to run AI-powered compliance analysis against your APIs.

@@ -1,3 +1,18 @@
+---
+title: "Create WebSocket API Proxy with GenAI"
+description: "Create a WebSocket API proxy using GenAI prompts in WSO2 API Platform, then configure, deploy, test, and publish it to the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/create-with-genai/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/create-with-genai.md
+tags:
+  - cloud
+  - api-proxy
+  - websocket
+  - genai
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create a WebSocket API with Generative AI
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.

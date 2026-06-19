@@ -1,3 +1,17 @@
+---
+title: "Attach and Manage Policies"
+description: "Attach, rearrange, and refresh mediation policies on API proxies in WSO2 API Platform, and implement custom policies as Ballerina projects."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/attach-and-manage-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/attach-and-manage-policies.md
+tags:
+  - cloud
+  - api-proxy
+  - policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Attach and Manage Policies
 
 You can easily attach one or more policies to an API proxy component implementation via the API Platform Console. If necessary, you can also rearrange or swap the policies you attach.

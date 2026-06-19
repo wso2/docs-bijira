@@ -1,3 +1,17 @@
+---
+title: "What Is API Platform Cloud?"
+description: "AI-native SaaS solution for full-lifecycle API management: design, secure, govern, and monitor APIs across hybrid and multi-cloud environments."
+canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/what-is-bijira/
+md_url: https://wso2.com/api-platform/docs/cloud/introduction/what-is-bijira.md
+tags:
+  - cloud
+  - overview
+  - api-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "overview"
+---
+
 # What is API Platform Cloud?
 
 API Platform Cloud is next-generation, AI-native SaaS solution for full lifecycle API management, built to meet the demands of cloud-native and AI-driven ecosystems. Designed to simplify and accelerate API development, deployment, security, and monitoring, API Platform Cloud offers a unified control plane to manage all your APIs, whether they’re internal, external, or AI-powered, across hybrid and multi-cloud environments.

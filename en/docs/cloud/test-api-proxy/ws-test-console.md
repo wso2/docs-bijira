@@ -1,3 +1,17 @@
+---
+title: "Test WebSocket Endpoints via the WebSocket Console"
+description: "Test WebSocket API proxy endpoints in WSO2 API Platform using the built-in WebSocket Console with auto-generated test keys."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/ws-test-console/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/ws-test-console.md
+tags:
+  - cloud
+  - testing
+  - websocket
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Test WebSocket Endpoints via the WebSocket Console
 
 API Platform offers an integrated WebSocket Console to test WebSocket endpoints for the API proxies you create and deploy. Since API Platform secures WebSocket APIs with OAuth 2.0 authentication, the WebSocket Console generates test keys to help you test your APIs.

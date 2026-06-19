@@ -1,3 +1,16 @@
+---
+title: "Design and Publish MCP Servers"
+description: "Create an MCP Server from an HTTP backend or existing API proxy in WSO2 API Platform, customize tools, test, and publish it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers.md
+tags:
+  - cloud
+  - mcp
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Design and Publish MCP Servers
 
 ## Prerequisites

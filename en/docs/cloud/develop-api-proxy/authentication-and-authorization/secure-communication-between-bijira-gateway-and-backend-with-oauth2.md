@@ -1,3 +1,17 @@
+---
+title: "Secure Gateway-to-Backend Communication with OAuth2"
+description: "Configure the Outbound OAuth2 policy so the WSO2 API Platform Gateway obtains and forwards access tokens to your backend."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
+tags:
+  - cloud
+  - authentication
+  - oauth2
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Secure Communication Between the API Platform Gateway and Your Backend with OAuth2
 
 OAuth2 is an industry-standard authorization framework that enables secure, delegated access to protected resources without exposing user credentials. By issuing scoped access tokens, OAuth2 ensures that clients can authenticate to backend services in a controlled, auditable manner.

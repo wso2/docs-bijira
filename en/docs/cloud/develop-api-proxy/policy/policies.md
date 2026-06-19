@@ -1,3 +1,17 @@
+---
+title: "API Proxy Mediation Policies"
+description: "Reference for WSO2 API Platform inbuilt API- and resource-level mediation policies: OAuth2, rate limiting, CORS, and payload transforms."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/policies/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/policies.md
+tags:
+  - cloud
+  - api-proxy
+  - policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "reference"
+---
+
 # Policies
 
 Policies are units of business logic that you can apply to modify the flow of API invocations.

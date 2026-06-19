@@ -1,3 +1,18 @@
+---
+title: "Create WebSocket API Proxy from an Endpoint"
+description: "Create a WebSocket API proxy by specifying a backend endpoint URL directly in WSO2 API Platform, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/start-with-endpoint/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/start-with-endpoint.md
+tags:
+  - cloud
+  - api-proxy
+  - websocket
+  - endpoint
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create API proxy from Start with Endpoint
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.

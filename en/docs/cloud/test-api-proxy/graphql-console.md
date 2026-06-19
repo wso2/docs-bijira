@@ -1,3 +1,17 @@
+---
+title: "Test GraphQL APIs via the GraphQL Console"
+description: "Test GraphQL API proxy operations in WSO2 API Platform using the built-in GraphQL Console with auto-generated test keys."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/graphql-console/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/graphql-console.md
+tags:
+  - cloud
+  - testing
+  - graphql
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Test GraphQL APIs via the GraphQL Console
 
 API Platform offers an integrated GraphQL Console to test GraphQL API proxies that you create and deploy. Since API Platform secures APIs with OAuth 2.0 authentication, the GraphQL Console generates test keys to help you invoke your GraphQL operations.

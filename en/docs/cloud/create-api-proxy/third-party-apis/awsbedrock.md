@@ -1,3 +1,18 @@
+---
+title: "Create API Proxy for AWS Bedrock"
+description: "Create and deploy an API proxy for the AWS Bedrock provider in WSO2 API Platform, configure backend authentication, and publish it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/awsbedrock/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/awsbedrock.md
+tags:
+  - cloud
+  - api-proxy
+  - ai-gateway
+  - aws-bedrock
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create an API Proxy for an AWS Bedrock AI API  
 
 Follow the steps below to create an AI API:  

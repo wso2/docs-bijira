@@ -1,3 +1,18 @@
+---
+title: "AI Guardrails Overview"
+description: "Overview of basic, advanced, and third-party AI guardrails available in WSO2 API Platform to secure and govern AI API proxies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails.md
+tags:
+  - cloud
+  - api-proxy
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "overview"
+---
+
 # AI Guardrails
 
 Guardrails are a set of guidelines and best practices designed to ensure the safe and effective use of AI systems. They help mitigate risks and promote responsible AI usage. API Platform provides 3 types of guardrails to enhance the security and reliability of AI APIs:

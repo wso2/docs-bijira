@@ -1,3 +1,17 @@
+---
+title: "Create API Proxy Overview"
+description: "Learn the ways to create an API proxy in WSO2 API Platform: front your own APIs (ingress) or third-party APIs (egress) using several methods."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/overview.md
+tags:
+  - cloud
+  - api-proxy
+  - overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "overview"
+---
+
 # Overview
 
 API Platform API Manager allows you to create API proxies that can be used to secure, protect, and manage access to your APIs. You can create an API proxy by defining a set of policies and behaviors that control how the API proxy interacts with the backend service.

@@ -1,3 +1,18 @@
+---
+title: "AWS Bedrock Guardrail for AI APIs"
+description: "Integrate AWS Bedrock Guardrails with AI API proxies in WSO2 API Platform for real-time content safety validation and PII protection."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+  - aws
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # AWS Bedrock Guardrail
 
 This policy provides the capability to integrate with [AWS Bedrock Guardrails](https://aws.amazon.com/bedrock/guardrails/) to enable real-time content safety validation and PII protection for AI applications. Through the configured Bedrock Guardrail, it can detect and block harmful content (hate speech, sexual content, self-harm, violence) and mask or redact Personally Identifiable Information (PII) in both request and response payloads. This integration helps ensure AI applications meet safety standards and compliance requirements while protecting against malicious prompt injection attacks.

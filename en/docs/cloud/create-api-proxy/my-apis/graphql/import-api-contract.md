@@ -1,3 +1,17 @@
+---
+title: "Import GraphQL API Contract"
+description: "Create a GraphQL API proxy by importing a schema definition URL in WSO2 API Platform, then configure, deploy, test, and publish it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/import-api-contract/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/import-api-contract.md
+tags:
+  - cloud
+  - api-proxy
+  - graphql
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Import API Contract
 
 A GraphQL API proxy operates based on the GraphQL query language specification. GraphQL provides a flexible and efficient approach to API development by allowing clients to request exactly the data they need, nothing more and nothing less.

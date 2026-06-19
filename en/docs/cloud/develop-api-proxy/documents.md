@@ -1,3 +1,17 @@
+---
+title: "Add Documents to an API Proxy"
+description: "Add supporting documentation, usage guides, and version history to an API proxy before publishing it to the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/documents/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/documents.md
+tags:
+  - cloud
+  - api-proxy
+  - documentation
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Documents
 
 When an API consumer signs in to the API Platform Developer Portal to browse APIs, it is not sufficient to just have an API thumbnail along with the name and version of the API. An API consumer would expect to see more details about the API, such as the following:

@@ -1,3 +1,18 @@
+---
+title: "Regex PII Masking for AI APIs"
+description: "Configure a regex-based PII masking guardrail on AI API proxies in WSO2 API Platform to detect and mask sensitive data using custom patterns."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+  - pii
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Regex PII Masking
 
 This policy provides the capability to perform regular expression-based validation on incoming or outgoing JSON payloads specifically for Personally Identifiable Information (PII) masking. This component acts as a guardrail to enforce specific security or compliance rules based on configurable regex patterns and JSON path expressions.

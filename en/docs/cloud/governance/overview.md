@@ -1,3 +1,16 @@
+---
+title: "API Governance Overview"
+description: "Understand WSO2 API Platform's governance concepts: rulesets, policies, and documents for enforcing API compliance at scale."
+canonical_url: https://wso2.com/api-platform/docs/cloud/governance/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/governance/overview.md
+tags:
+  - cloud
+  - governance
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "concept"
+---
+
 # API Platform API Management Governance
 
 API Management Governance consists of a set of processes, practices, roles, and responsibilities designed to ensure the effective and efficient management of APIs throughout their lifecycle. Establishing a governance strategy is essential for maintaining consistency, security, and compliance in API development, management, and consumption.

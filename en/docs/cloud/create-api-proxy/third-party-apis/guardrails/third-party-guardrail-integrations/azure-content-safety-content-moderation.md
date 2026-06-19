@@ -1,3 +1,18 @@
+---
+title: "Azure Content Safety Content Moderation for AI APIs"
+description: "Integrate Azure Content Safety with AI API proxies in WSO2 API Platform to filter hate speech, sexual content, self-harm, and violence."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/azure-content-safety-content-moderation.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+  - azure
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Azure Content Safety Content Moderation
 
 This policy provides the capability to integrate [Azure Content Safety Content Moderation Service](https://learn.microsoft.com/en-us/rest/api/contentsafety/text-operations/analyze-text?view=rest-contentsafety-2024-09-01&tabs=HTTP) to filter out harmful content in request bodies and AI-generated responses. This guardrail checks for hate speech, sexual content, self-harm, and violence, and can be applied to both requests and responses.
