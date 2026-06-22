@@ -12,9 +12,15 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Immutable Gateway
+# Immutable Gateway (V4.0.0)
 
 This guide explains how to run the API Platform Gateway in **immutable mode**, where API configurations are loaded from files at startup instead of being managed through the REST API.
+
+Immutable Gateway is the latest evolution of the WSO2 Micro Gateway experience.  
+If you are coming from WSO2 Micro Gateway `3.2.x`, treat this as the successor track with enhanced API Platform integration, cloud-native deployment patterns, and improved artifact management workflows.
+
+- Previous generation (reference): [WSO2 Micro Gateway 3.2.x docs](https://mg.docs.wso2.com/en/latest/)
+- Current generation: Immutable Gateway V4.0.0 (this documentation set)
 
 ## Overview
 
