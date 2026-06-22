@@ -407,4 +407,4 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 
 The companion sample runs this setup end to end using Docker, demonstrating model round-robin, PII masking, and semantic caching against an OpenAI-compatible endpoint.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/492207cd5d6c11337d068822b3eef19c5b668aa0/samples/llm-cost-control-and-privacy-control).
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/llm-cost-control-and-privacy-control).
