@@ -462,6 +462,9 @@ nav:
         - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
         - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
+        - Find and Connect to an Enterprise MCP Server from the MCP Hub: guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+    - Developer Portal:
+        - Go from Zero to a Working API Call Using the Developer Portal: guides/developer-portal/api-discovery-and-tryout.md
   - Samples:
     - LLM Proxy - Token Based Rate Limiting: samples/ai-gw-llm-proxy-sample-overview.md
     - LLM Provider and Proxy - AI Policies for Privacy and Cost Control: samples/AI-gateway-and-llm-failover.md
