@@ -329,3 +329,11 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 - **Aggregate MCP tools from multiple APIs** — combine this MCP server with others into a single endpoint so AI agents can query across systems in one call
 - **Connect your MCP server to VS Code Copilot** — use the same deployed MCP server with VS Code Copilot using the Developer Portal's native configuration snippet
 - **Monitor MCP tool usage with runtime logs** — track which tools are being called, by which clients, and where errors occur
+
+---
+
+## Try the sample
+
+The companion sample runs this setup locally using a self-hosted gateway, so you can try the full guide without a cloud account.
+
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-gw-mcp-claude-desktop)

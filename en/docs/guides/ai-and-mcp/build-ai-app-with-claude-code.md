@@ -435,3 +435,11 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 - **[Convert a REST API into an MCP tool and use it in Claude Desktop](convert-rest-api-to-mcp-server.md)** — expose the same Reading List API as an MCP server so Claude Code can use native tool calling instead of the Python helper
 - **Apply rate limiting to API traffic** — configure per-application and per-subscription rate limits on the Reading List API
+
+---
+
+## Try the sample
+
+The companion sample runs this setup locally using a self-hosted gateway, so you can configure Claude Code against a governed API without a cloud account.
+
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-app-claude-code)
