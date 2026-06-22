@@ -1,3 +1,17 @@
+---
+title: "Create REST API Proxy with GenAI"
+description: "Create a REST API proxy using GenAI prompts in WSO2 API Platform, then configure, deploy, test, and publish it to the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/create-with-genai/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/create-with-genai.md
+tags:
+  - cloud
+  - api-proxy
+  - genai
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create API with Generative AI
 
 An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.

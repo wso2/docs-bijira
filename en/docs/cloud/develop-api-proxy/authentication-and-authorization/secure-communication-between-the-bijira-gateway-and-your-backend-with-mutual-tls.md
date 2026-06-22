@@ -1,3 +1,17 @@
+---
+title: "Secure Gateway-to-Backend Communication with Mutual TLS"
+description: "Configure mutual TLS between the WSO2 API Platform Gateway and your backend by exchanging client and server certificates."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-the-bijira-gateway-and-your-backend-with-mutual-tls.md
+tags:
+  - cloud
+  - authentication
+  - mutual-tls
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Secure Communication Between the API Platform Gateway and Your Backend with Mutual TLS
 
 To establish secure communication between the API Platform Gateway and your backend, you can configure mutual TLS.

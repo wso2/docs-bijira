@@ -1,3 +1,17 @@
+---
+title: "API Proxy Lifecycle Management"
+description: "Manage the lifecycle states of an API proxy in WSO2 API Platform: created, pre-released, published, deprecated, and retired."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management.md
+tags:
+  - cloud
+  - api-proxy
+  - lifecycle
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Lifecycle Management
 
 API lifecycle management is an important aspect of API management. The API lifecycle consists of various states that an API passes through, from creation to retirement. In API Platform, there are six distinct lifecycle states: created, pre-released, published, deprecated, and retired.

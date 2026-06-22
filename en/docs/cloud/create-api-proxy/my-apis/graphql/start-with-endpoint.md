@@ -1,3 +1,17 @@
+---
+title: "Create GraphQL API Proxy from an Endpoint"
+description: "Create a GraphQL API proxy from an endpoint URL in WSO2 API Platform using schema introspection, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint.md
+tags:
+  - cloud
+  - api-proxy
+  - graphql
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create API proxy from Start with Endpoint
 
 A GraphQL API proxy operates based on the GraphQL query language specification. GraphQL provides a flexible and efficient approach to API development by allowing clients to request exactly the data they need, nothing more and nothing less.

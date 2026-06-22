@@ -1,3 +1,17 @@
+---
+title: "Test REST Endpoints via the OpenAPI Console"
+description: "Test REST API proxy endpoints in WSO2 API Platform using the built-in OpenAPI Console with auto-generated test keys."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/openapi-console/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/openapi-console.md
+tags:
+  - cloud
+  - testing
+  - openapi
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Test REST Endpoints via the OpenAPI Console
 
 API Platform offers an integrated OpenAPI Console to test REST endpoints for the API proxies you create and deploy. Since API Platform secures REST APIs with OAuth 2.0 authentication, the OpenAPI Console generates test keys to help you test your APIs.

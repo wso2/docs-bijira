@@ -1,3 +1,18 @@
+---
+title: "Create API Proxy for Azure OpenAI"
+description: "Create and deploy an API proxy for the Azure OpenAI provider in WSO2 API Platform, configure backend authentication, and publish it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/azure-ai/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/azure-ai.md
+tags:
+  - cloud
+  - api-proxy
+  - ai-gateway
+  - azure
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create an API Proxy for an Azure Open AI API  
 
 Follow the steps below to create an AI API:  

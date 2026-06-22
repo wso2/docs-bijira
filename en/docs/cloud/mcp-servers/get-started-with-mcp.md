@@ -1,3 +1,17 @@
+---
+title: "MCP Servers Overview"
+description: "Learn how WSO2 API Platform turns existing APIs into MCP servers with a centralized control plane, tool generation, and OAuth2 security."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/get-started-with-mcp/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/get-started-with-mcp.md
+tags:
+  - cloud
+  - mcp
+  - overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "overview"
+---
+
 # Overview
 
 ## What is Model Context Protocol?

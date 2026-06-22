@@ -54,12 +54,12 @@
 
 ## Develop API Proxies
 
-- [Policy Overview](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview.md): Overview of the policy model for API proxies: request, response, and fault flows
+- [Policy Overview](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview.md): Customize an API proxy in the interactive UI: add or remove resources and map resources to backend routes
 - [Available Policies](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/policies.md): Reference list of all built-in policies for API proxies
 - [Attach and Manage Policies](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/attach-and-manage-policies.md): Attach, configure, reorder, and remove policies on an API Proxy
 - [API Documents](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/documents.md): Attach prose documentation to an API for display in the Developer Portal
 - [Make an API AI-Ready](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/make-api-ai-ready.md): How to write effective API descriptions, structure OpenAPI specs, and control agent visibility so AI agents can discover and correctly invoke your API
-- [API Lifecycle Management](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management.md): Manage API Proxy states: Created, Deployed, Published, Deprecated, Retired
+- [API Lifecycle Management](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management.md): Manage API Proxy lifecycle states: Created, Pre-Released, Published, Deprecated, Retired
 - [Subscription Plans](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/subscription-plans.md): Assign subscription plans to APIs to control access and enforce quotas
 - [Secure API Access with Asgardeo](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md): Configure OAuth2/OIDC using Asgardeo as the identity provider
 - [Secure API Access with API Platform STS](https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md): Use the built-in API Platform security token service for API authentication
@@ -79,7 +79,7 @@
 ## MCP Servers
 
 - [MCP Servers Overview](https://wso2.com/api-platform/docs/cloud/mcp-servers/get-started-with-mcp.md): What MCP is, how the platform supports it, and the three main use cases: design, proxy, and hub
-- [Design MCP Servers](https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers.md): Create MCP servers from REST API proxies: tool schemas are auto-generated from OpenAPI specs
+- [Design MCP Servers](https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers.md): Create MCP servers from HTTP backends or existing API proxies, with auto-generated tool schemas, in-console testing, and publishing
 - [Proxy Remote MCP Servers](https://wso2.com/api-platform/docs/cloud/mcp-servers/proxy-remote-servers.md): Route and govern traffic to existing remote MCP servers through the platform gateway
 - [Customize Developer Portal as MCP Hub](https://wso2.com/api-platform/docs/cloud/mcp-servers/devportal-mcp-hub.md): Configure the Developer Portal to present a dedicated MCP server discovery experience
 - [MCP Registry](https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry.md): Centralized catalog for publishing and discovering MCP servers across your organization

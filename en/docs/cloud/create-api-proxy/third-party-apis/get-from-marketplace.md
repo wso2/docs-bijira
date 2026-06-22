@@ -1,3 +1,17 @@
+---
+title: "Create API Proxy from Marketplace"
+description: "Create and publish an API proxy for a third-party API available in the WSO2 API Platform Marketplace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/get-from-marketplace/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/get-from-marketplace.md
+tags:
+  - cloud
+  - api-proxy
+  - marketplace
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Creating an API Proxy from Marketplace
 
 API Platform provides built-in support for multiple well-known third-party APIs through the API Platform Marketplace. The marketplace contains API contracts for these third-party services, allowing you to create and publish API proxies effortlessly.

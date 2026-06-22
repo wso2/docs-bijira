@@ -1,3 +1,17 @@
+---
+title: "Secure API Access with Azure AD"
+description: "Configure WSO2 API Platform to authenticate API requests through Microsoft Azure AD as an external key manager with scoped access."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
+tags:
+  - cloud
+  - authentication
+  - azure-ad
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Secure API Access with Microsoft Azure Active Directory (Azure AD)
 
 API security refers to the measures and practices used to protect Application Programming Interfaces (APIs) from potential threats and vulnerabilities. Authentication and authorization are key aspects of API security. Authentication is ensuring that only authorized users or applications can access the API. This can involve using API keys, tokens, or more advanced authentication methods like OAuth 2.0. Authorization is controlling what authenticated users or applications are allowed to do within the API. Authorization mechanisms restrict access to specific resources and actions based on user roles or permissions.

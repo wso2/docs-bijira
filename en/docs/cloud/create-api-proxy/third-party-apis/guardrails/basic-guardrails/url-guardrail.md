@@ -1,3 +1,17 @@
+---
+title: "URL Guardrail for AI APIs"
+description: "Configure a URL guardrail on AI API proxies in WSO2 API Platform to validate embedded URLs via DNS lookup or connection checks."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # URL Guardrail
 
 This policy provides the capability to perform URL validity checks on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce content safety by validating embedded URLs for accessibility or DNS resolution.

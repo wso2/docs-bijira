@@ -1,3 +1,17 @@
+---
+title: "Test APIs with API Chat"
+description: "Test REST API proxies in WSO2 API Platform using natural-language queries via API Chat, without writing JSON payloads or scripts."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/api-chat/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/api-chat.md
+tags:
+  - cloud
+  - testing
+  - api-chat
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Test APIs with API Platform API Chat
 
 Testing APIs is an essential step in the API development process. API Platform simplifies the testing task by allowing you to engage with your APIs using natural language through API Platform API Chat. It eliminates manual test scenario creation and JSON payload accuracy concerns. It enables easy API communication using human language and requires no coding for handling sequences with multiple resource calls. This makes your API testing efficient and user-friendly.

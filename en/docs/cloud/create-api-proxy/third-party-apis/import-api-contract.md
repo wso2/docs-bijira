@@ -1,3 +1,16 @@
+---
+title: "Import Third-Party API Contract"
+description: "Create an API proxy for a third-party API not in the WSO2 API Platform Marketplace by importing its API contract."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/import-api-contract/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/import-api-contract.md
+tags:
+  - cloud
+  - api-proxy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Import a Third-Party API Contract
 
 API Platform provides built-in support for multiple well-known third-party APIs through the **API Platform Marketplace**. However, if you need to create an API proxy for a third-party API that is not available in the API Platform Marketplace, you can do so by importing its API contract.  

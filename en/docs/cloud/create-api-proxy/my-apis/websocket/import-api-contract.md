@@ -1,3 +1,18 @@
+---
+title: "Import WebSocket API Contract"
+description: "Create a WebSocket API proxy by importing an AsyncAPI contract URL in WSO2 API Platform, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/import-api-contract/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/import-api-contract.md
+tags:
+  - cloud
+  - api-proxy
+  - websocket
+  - asyncapi
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Import API Contract
 
 A WebSocket API proxy operates based on the WebSocket protocol specification (RFC 6455). This protocol is designed to overcome the limitations of the traditional HTTP request-response model by establishing a single, persistent TCP connection between the client and the server.

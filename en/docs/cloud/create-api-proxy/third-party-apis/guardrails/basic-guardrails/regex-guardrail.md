@@ -1,3 +1,17 @@
+---
+title: "Regex Guardrail for AI APIs"
+description: "Configure a regex-based guardrail on AI API proxies in WSO2 API Platform to validate or block payload content using configurable patterns."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-guardrail.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Regex Guardrail
 
 This policy provides the capability to perform regular expression-based validation on incoming or outgoing JSON payloads. This component acts as a guardrail to enforce specific security or compliance rules based on configurable regex patterns and JSON path expressions.

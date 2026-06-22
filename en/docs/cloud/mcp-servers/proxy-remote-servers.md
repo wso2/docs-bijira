@@ -1,3 +1,16 @@
+---
+title: "Proxy Remote MCP Servers"
+description: "Secure and manage an existing remote MCP server by proxying it through WSO2 API Platform with rate limiting and tool management."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/proxy-remote-servers/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/proxy-remote-servers.md
+tags:
+  - cloud
+  - mcp
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Proxy Remote MCP Servers
 
 API Platform allows you to proxy existing unsecured remote MCP servers by simply providing their URL. These proxied servers are automatically secured through the gateway, with quality-of-service features like rate limiting applied by default. Additionally, API Platform provides the capability to manage the tools of your proxied MCP servers through the console.

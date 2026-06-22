@@ -1,3 +1,17 @@
+---
+title: "Assign Subscription Plans to APIs"
+description: "Assign existing subscription plans to an API proxy in WSO2 API Platform to control access levels and pricing tiers for consumers."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/subscription-plans/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/subscription-plans.md
+tags:
+  - cloud
+  - api-proxy
+  - monetization
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Assign Subscription Plans to APIs
 
 API subscription plans allow API publishers to control and manage access to APIs. These plans define the rules, limitations, and pricing for how clients can interact with APIs, ensuring efficient resource utilization and robust security.

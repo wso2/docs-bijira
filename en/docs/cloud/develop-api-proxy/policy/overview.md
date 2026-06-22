@@ -1,3 +1,17 @@
+---
+title: "Design and Customize API Proxies"
+description: "Customize an API proxy in WSO2 API Platform's interactive UI: add or remove resources, map resources, and manage policies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview.md
+tags:
+  - cloud
+  - api-proxy
+  - policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "overview"
+---
+
 # Overview
 
 API Platform simplifies the design, management, and mediation of API proxies with its interactive UI. It enables seamless API proxy customization within its unified UI, allowing you to add or remove resources, map resources, and apply policies at both the API and resource levels—all from the same interface.

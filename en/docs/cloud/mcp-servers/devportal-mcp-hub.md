@@ -1,3 +1,17 @@
+---
+title: "Customize Developer Portal as an MCP Hub"
+description: "Switch the WSO2 API Platform Developer Portal to MCP Hub mode for a streamlined, MCP-only browsing and theming experience."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/devportal-mcp-hub/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/devportal-mcp-hub.md
+tags:
+  - cloud
+  - mcp
+  - devportal
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Customize Developer Portal as an MCP Hub
 
 API Platform’s developer portal is fully themeable to suit your needs. If you primarily work with MCP Servers, API Platform offers the flexibility to tailor the developer portal for a streamlined, MCP-centric experience. This curated view allows you to hide unrelated features, simplify navigation, and highlight only the tools, documentation, and Servers relevant to MCP use cases. Whether you're building integrations, exposing tools to LLMs, or managing contextual data sources, this focused setup helps reduce clutter and improves developer efficiency by surfacing only what matters most for MCP workflows.

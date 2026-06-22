@@ -1,3 +1,17 @@
+---
+title: "Create REST API Proxy from an Endpoint"
+description: "Create a REST API proxy by specifying a backend endpoint URL directly in WSO2 API Platform, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/start-with-endpoint/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/start-with-endpoint.md
+tags:
+  - cloud
+  - api-proxy
+  - endpoint
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Create API proxy from Start with Endpoint
 
 An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.

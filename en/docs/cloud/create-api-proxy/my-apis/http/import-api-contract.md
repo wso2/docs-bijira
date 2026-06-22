@@ -1,3 +1,17 @@
+---
+title: "Import REST API Contract"
+description: "Create a REST API proxy by importing an OpenAPI contract URL in WSO2 API Platform, then configure, deploy, test, and publish it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-contract/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-contract.md
+tags:
+  - cloud
+  - api-proxy
+  - openapi
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-18
+content_type: "how-to"
+---
+
 # Import API Contract
 
 An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
