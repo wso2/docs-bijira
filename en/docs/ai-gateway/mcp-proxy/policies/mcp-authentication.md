@@ -20,18 +20,18 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
-- **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
-- **Standardized Error Handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
-- **Configurable Validation**: Supports issuer, audience, scope, and custom claim validation.
-- **Claim Mapping**: Maps token claims to downstream headers.
+- **Access token validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
+- **Protected resource metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
+- **Standardized error handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
+- **Configurable validation**: Supports issuer, audience, scope, and custom claim validation.
+- **Claim mapping**: Maps token claims to downstream headers.
 
 ## Configuration
 
 The MCP Authentication policy uses a two-level configuration model:
 
-- **System Parameters**: Configured by the administrator in `config.toml` under `policy_configurations.mcpauth_v0` or `policy_configurations.jwtauth_v0` depending on the parameter.
-- **User Parameters**: Configured per MCP proxy in the configuration yaml.
+- **System parameters**: Configured by the administrator in `config.toml` under `policy_configurations.mcpauth_v0` or `policy_configurations.jwtauth_v0` depending on the parameter.
+- **User parameters**: Configured per MCP proxy in the configuration yaml.
 
 ### System parameters (config.toml)
 
@@ -111,7 +111,7 @@ skipTlsVerify = false
 
 ## MCP proxy definition examples
 
-### Example 1: basic MCP authentication
+### Example 1: Basic MCP authentication
 
 Apply MCP authentication to an API using a specific key manager:
 
@@ -137,7 +137,7 @@ spec:
     ...
 ```
 
-### Example 2: scope and audience validation
+### Example 2: Scope and audience validation
 
 Require specific scopes and audiences:
 
@@ -170,6 +170,6 @@ spec:
 
 ## Use cases
 
-1.  **MCP Server Security**: Protect Model Context Protocol servers by requiring valid access tokens from trusted identity providers.
-2.  **Resource Discovery**: Enable MCP clients to discover authorization requirements (authorization servers and scopes) via the standard `.well-known/oauth-protected-resource` endpoint.
-3.  **Multi-Provider Support**: Allow MCP clients to authenticate using tokens from different identity providers (e.g., different organizations or tenants).
+1.  **MCP server security**: Protect Model Context Protocol servers by requiring valid access tokens from trusted identity providers.
+2.  **Resource discovery**: Enable MCP clients to discover authorization requirements (authorization servers and scopes) via the standard `.well-known/oauth-protected-resource` endpoint.
+3.  **Multi-provider support**: Allow MCP clients to authenticate using tokens from different identity providers (e.g., different organizations or tenants).

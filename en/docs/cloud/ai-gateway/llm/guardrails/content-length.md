@@ -49,7 +49,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: basic content length validation
+### Example 1: Basic content length validation
 
 Deploy an LLM provider that limits request payloads to between 100 bytes and 1MB:
 
@@ -135,25 +135,25 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate byte lengths in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate byte lengths in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content *outside* the specified byte range. This is useful for blocking content that falls within a prohibited size range.
+- **Inverted logic**: Set `invert: true` to allow only content *outside* the specified byte range. This is useful for blocking content that falls within a prohibited size range.
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 ## Use cases
 
-1. **Resource Protection**: Prevent excessively large payloads that could exhaust system resources or cause performance degradation.
+1. **Resource protection**: Prevent excessively large payloads that could exhaust system resources or cause performance degradation.
 
-2. **Network Optimization**: Control payload sizes to optimize network transfer times and reduce bandwidth costs.
+2. **Network optimization**: Control payload sizes to optimize network transfer times and reduce bandwidth costs.
 
-3. **Storage Management**: Limit content sizes to manage storage requirements effectively.
+3. **Storage management**: Limit content sizes to manage storage requirements effectively.
 
-4. **API Rate Limiting**: Enforce size constraints as part of rate limiting strategies.
+4. **API rate limiting**: Enforce size constraints as part of rate limiting strategies.
 
-5. **Quality Assurance**: Ensure responses meet minimum size requirements for completeness.
+5. **Quality assurance**: Ensure responses meet minimum size requirements for completeness.
 
 ## Error response
 

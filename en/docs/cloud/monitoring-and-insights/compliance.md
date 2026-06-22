@@ -66,7 +66,7 @@ Below the Project Summary, each component is listed as an expandable card showin
 
 To re-run the analysis at any time, click **Analyze** at the top of the page.
 
-### View Component-level results
+### View component-level results
 
 After a project-level analysis completes, you can drill down into per-component results. Go to the component and open **Insights > Compliance > AI Compliance**. There is no separate trigger at the component level.
 

@@ -27,7 +27,7 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 An LLM Provider Template defines the characteristics and behaviors specific to an AI service provider, such as OpenAI, Azure OpenAI, or other LLM platforms. It describes how the gateway should interpret and extract usage and operational metadata, including prompt, completion, total, and remaining token information, as well as request and response model metadata.
 
-Following templates are shipped out-of-the-box
+The following templates are shipped out-of-the-box:
 
 - OpenAI
 - Azure OpenAI
@@ -51,7 +51,7 @@ Once configured, the LLM Provider allows traffic to flow through the gateway to 
 
 ### LLM proxy
 
-An LLM Proxy allows developers to create custom API endpoints that consume an LLM Provider, while inheriting administrator-enforced access control, budgeting and organization-wide policies defined at the provider level. Each proxy gets its own URL context (e.g., `/assistant`) and can have its own policies applied. This enables:
+An LLM Proxy allows developers to create custom API endpoints that consume an LLM Provider, while inheriting administrator-enforced access control, budgeting, and organization-wide policies defined at the provider level. Each proxy gets its own URL context (e.g., `/assistant`) and can have its own policies applied. This enables:
 
 - Multiple AI applications to share a single LLM Provider
 - Per-application policies such as prompt management and guardrails

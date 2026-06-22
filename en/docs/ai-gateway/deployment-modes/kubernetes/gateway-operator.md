@@ -18,7 +18,7 @@ The WSO2 API Platform Gateway Operator enables native Kubernetes deployment usin
 
 ## Overview
 
-### Path a — platform CRDs (`apigateway` + `restapi`)
+### Path A — platform CRDs (`apigateway` + `restapi`)
 
 | CRD | Purpose |
 |-----|---------|
@@ -27,7 +27,7 @@ The WSO2 API Platform Gateway Operator enables native Kubernetes deployment usin
 
 The operator watches these CRs, runs Helm for the gateway runtime, and deploys APIs through gateway-controller’s management REST API.
 
-### Path b — Kubernetes gateway API (`Gateway` + `httproute`)
+### Path B — Kubernetes Gateway API (`Gateway` + `httproute`)
 
 | Resource | Purpose |
 |----------|---------|
@@ -153,7 +153,7 @@ kubectl get restapi -n default -o json | jq '.items[0].status'
 curl https://localhost:8443/test/info -vk
 ```
 
-## Kubernetes gateway API path
+## Kubernetes Gateway API path
 
 Use this when you prefer standard Gateway API resources instead of `APIGateway` / `RestApi`. The manifests below match the **`gateway-api-demo`** demo in this repository (`kubernetes/helm/resources/gateway-api-operator-demo/`). Apply them **in order**, or concatenate and `kubectl apply -f -`.
 
@@ -322,7 +322,7 @@ spec:
           weight: 1
 ```
 
-### 6. Optional: second httproute (`hello-api-2`)
+### 6. Optional: Second HTTPRoute (`hello-api-2`)
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -402,7 +402,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/certificates -u "admin:ad
 
 Per-gateway Helm values are supplied as a **ConfigMap** whose data includes **`values.yaml`** (partial YAML is fine; the operator **deep-merges** it onto the operator’s default gateway values file loaded from **`gateway.helm.valuesFilePath`**).
 
-### `APIGateway` (`spec.configref`)
+### `APIGateway` (`spec.configRef`)
 
 Create the ConfigMap:
 
@@ -431,7 +431,7 @@ spec:
     name: gateway-custom-config
 ```
 
-### Kubernetes gateway API (`Gateway`)
+### Kubernetes Gateway API (`Gateway`)
 
 Use the **same ConfigMap** shape (`data.values.yaml`). Put the ConfigMap in the **same namespace** as the **`Gateway`**, then point the **`Gateway`** at it with this annotation (not a field on **`spec`**):
 

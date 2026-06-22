@@ -22,14 +22,14 @@ The MCP Authorization policy provides fine-grained access control for Model Cont
 
 ## Features
 
-- **Tool-Level Access Control**: Restrict access to specific MCP tools based on user claims and scopes
-- **Resource-Level Access Control**: Control access to specific MCP resources based on authorization rules
-- **Prompt-Level Access Control**: Manage access to specific MCP prompts
-- **JSON-RPC Method-Level Access Control**: Apply authorization rules at the JSON-RPC method level (e.g., `tools/call`, `resources/read`, `prompts/get`) for fine-grained control. Only methods under `tools/`, `resources/`, and `prompts/` are evaluated.
-- **Flexible Rule-Based Authorization**: Define multiple authorization rules with attribute matching (exact or wildcard)
-- **Claim-Based Validation**: Validate custom claims (e.g., department, role, team) in user tokens
-- **Scope-Based Validation**: Require specific OAuth scopes for accessing protected resources
-- **Wildcard Matching**: Use wildcard patterns ("*") to create default rules for all resources of a type
+- **Tool-level access control**: Restrict access to specific MCP tools based on user claims and scopes
+- **Resource-level access control**: Control access to specific MCP resources based on authorization rules
+- **Prompt-level access control**: Manage access to specific MCP prompts
+- **JSON-RPC method-level access control**: Apply authorization rules at the JSON-RPC method level (e.g., `tools/call`, `resources/read`, `prompts/get`) for fine-grained control. Only methods under `tools/`, `resources/`, and `prompts/` are evaluated.
+- **Flexible rule-based authorization**: Define multiple authorization rules with attribute matching (exact or wildcard)
+- **Claim-based validation**: Validate custom claims (e.g., department, role, team) in user tokens
+- **Scope-based validation**: Require specific OAuth scopes for accessing protected resources
+- **Wildcard matching**: Use wildcard patterns ("*") to create default rules for all resources of a type
 
 ## Configuration
 
@@ -50,7 +50,7 @@ These parameters are configured per MCP Proxy by the API developer:
 
 ## MCP proxy definition examples
 
-### Example 1: basic tool access control
+### Example 1: Basic tool access control
 
 Restrict access to specific tools based on scopes:
 
@@ -95,7 +95,7 @@ spec:
     ...
 ```
 
-### Example 2: claim-based resource access
+### Example 2: Claim-based resource access
 
 Control resource access based on user claims:
 
@@ -137,7 +137,7 @@ spec:
     ...
 ```
 
-### Example 3: role-based prompt access
+### Example 3: Role-based prompt access
 
 Restrict prompt access based on user roles:
 
@@ -179,7 +179,7 @@ spec:
     ...
 ```
 
-### Example 4: multi-level authorization
+### Example 4: Multi-level authorization
 
 Combine different resource types with varying access requirements:
 
@@ -261,9 +261,9 @@ spec:
 ## Error handling
 
 When authorization fails, the policy returns:
-- **HTTP Status**: `403 Forbidden`
-- **Response Body**: JSON error response with a reason message
-- **WWW-Authenticate Header**: Contains information about required scopes for the denied resource
+- **HTTP status**: `403 Forbidden`
+- **Response body**: JSON error response with a reason message
+- **WWW-Authenticate header**: Contains information about required scopes for the denied resource
 
 ## Related policies
 

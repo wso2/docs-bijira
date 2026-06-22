@@ -2,7 +2,7 @@
 
 After [building the gateway with your custom policies](build-gateway-with-custom-policies.md) and starting it, the gateway automatically sends its policy manifest to the control plane on connection. You can then sync your custom policies to the organization and apply them to your APIs.
 
-## Step 1: view the gateway policies
+## Step 1: View the gateway policies
 
 1. Sign in to [API Platform Console](https://console.bijira.dev).
 2. Go to **Organization Level** in API Platform.
@@ -25,7 +25,7 @@ The console fetches the manifest from the gateway and displays a table of all po
 
 ![Policy list with Custom type showing Sync button in the Sync Status column](../../assets/img/api-platform-gateway/gateway/sync-option.png)
 
-## Step 2: sync the custom policy to the organization
+## Step 2: Sync the custom policy to the organization
 
 Custom policies must be synced to the organization before they can be applied to APIs.
 
@@ -47,7 +47,7 @@ Once synced, the custom policy is available organization-wide and can be applied
     - Patch version updates are not supported.
     - Version downgrades are not allowed.
 
-## Step 3: view organization-level custom policies
+## Step 3: View organization-level custom policies
 
 After syncing, the custom policy appears in the **Custom Policies** section on the main Gateways page. To view it:
 
@@ -68,7 +68,7 @@ This section lists all custom policies available in the organization with the fo
 !!! note
     To delete a synced custom policy, none of the APIs in the organization should be using it.
 
-## Step 4: apply the custom policy to an API
+## Step 4: Apply the custom policy to an API
 
 After syncing, the custom policy appears in the policy list when configuring an API proxy. To apply it:
 

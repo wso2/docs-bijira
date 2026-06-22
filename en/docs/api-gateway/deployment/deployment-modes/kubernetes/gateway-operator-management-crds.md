@@ -114,7 +114,7 @@ EOF
 kubectl get apikey
 ```
 
-## Deploy llmprovidertemplate, llmprovider, llmproxy
+## Deploy LLMProviderTemplate, LLMProvider, LLMProxy
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -429,7 +429,7 @@ kubectl get deploy,svc -n default
 
 Wait for the Deployment to be `Ready` before proceeding.
 
-## Deploy RESTAPI with API key
+## Deploy RestAPI with API key
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -614,7 +614,7 @@ The `valueFrom` pattern is supported in:
 
 The `valueFrom` pattern supports two variants depending on the resource type:
 
-**Variant 1: Policy Parameters** (RestApi, LlmProvider, LlmProxy)
+**Variant 1: Policy parameters** (RestApi, LlmProvider, LlmProxy)
 
 Policy parameters use `valueFrom.secretKeyRef` for nested secret references:
 ```yaml
@@ -626,7 +626,7 @@ params:
         key: subscription-key
 ```
 
-**Variant 2: Direct Fields** (ApiKey, Subscription, Upstream Auth)
+**Variant 2: Direct fields** (ApiKey, Subscription, Upstream Auth)
 
 Resource-level secrets use `valueFrom` directly with `name` and `key`:
 ```yaml
@@ -653,7 +653,7 @@ apiKey:
 
 The operator computes a fingerprint of all referenced Secret `resourceVersion` fields. When a Secret changes, affected CRs are automatically re-reconciled, ensuring credentials stay synchronized without manual intervention.
 
-### Example: restapi with policy parameter from secret
+### Example: RestAPI with policy parameter from secret
 
 Create the Secret:
 ```yaml
@@ -700,7 +700,7 @@ policies:
 
 Update the Secret anytime; the operator automatically redeploys with the new value.
 
-### Example 2: apikey with direct valuefrom
+### Example 2: API key with direct valuefrom
 
 Reference in ApiKey (using `name` and `key` directly):
 ```yaml
@@ -721,6 +721,6 @@ spec:
     unit: days
 ```
 
-**Key Difference:**
+**Key difference:**
 - RestApi policy params use nested `secretKeyRef` structure
 - ApiKey, Subscription, and upstream auth use flat `name`/`key` under `valueFrom`

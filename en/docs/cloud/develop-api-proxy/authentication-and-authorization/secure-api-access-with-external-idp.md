@@ -32,7 +32,7 @@ To follow this guide, you need to satisfy the following prerequisites:
 - Deploy and publish your API. 
 - Create an OAuth2 application in your external key manager.
 
-## Step 1: create an application in API Platform and enable external key manager authentication
+## Step 1: Create an application in API Platform and enable external key manager authentication
 
 Follow the steps below to consume the API Platform API and use an external key manager for authentication:
 
@@ -53,7 +53,7 @@ Follow the steps below to consume the API Platform API and use an external key m
 10. You can click on the **Instructions** to view instructions to generate an access token.
 11. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
-## Step 2: invoke the API Platform API
+## Step 2: Invoke the API Platform API
 
 1. On the API Platform Developer Portal, go to your application. 
 2. On the top of the page, under **OAuth2**, click **View** to see the **Token Endpoint** URL.

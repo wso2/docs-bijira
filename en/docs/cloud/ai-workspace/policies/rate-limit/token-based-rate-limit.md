@@ -45,7 +45,7 @@ When multiple limits are configured within a category, the most restrictive limi
 | `X-RateLimit-Reset` | Time (epoch seconds) when the window resets |
 | `RateLimit-*` | IETF equivalents of the above |
 
-## Example: cap total tokens per minute
+## Example: Cap total tokens per minute
 
 Block requests once 100,000 total tokens have been consumed in a 1-minute window.
 
@@ -54,7 +54,7 @@ Block requests once 100,000 total tokens have been consumed in a 1-minute window
 | Total Token Limits — count | `100000` |
 | Total Token Limits — duration | `1m` |
 
-## Example: separate prompt and completion limits
+## Example: Separate prompt and completion limits
 
 Limit prompt tokens to 50,000 per hour and completion tokens to 20,000 per hour independently.
 

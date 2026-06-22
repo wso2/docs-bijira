@@ -17,18 +17,18 @@ content_type: "how-to"
 
 Once you've started the gateway with the metrics profile, follow these steps to view component metrics:
 
-## Step 1: access Grafana
+## Step 1: Access Grafana
 
 Open your browser and navigate to: <http://localhost:3000>
 
-## Step 2: log in to Grafana
+## Step 2: Log in to Grafana
 
 1. Username: `admin`
 2. Password: `admin`
 
 **Note**: You'll be prompted to change the password on first login.
 
-## Step 3: navigate to dashboards
+## Step 3: Navigate to dashboards
 
 1. Click on the **hamburger menu (☰)** in the top-left corner
 2. Navigate to **Dashboards** → **Browse**
@@ -37,7 +37,7 @@ Open your browser and navigate to: <http://localhost:3000>
    - **Gateway Controller**: Detailed gateway-controller metrics
    - **Policy Engine**: Detailed policy-engine metrics
 
-## Step 4: view infrastructure overview
+## Step 4: View infrastructure overview
 
 The Infrastructure Overview dashboard provides a comprehensive view:
 
@@ -59,7 +59,7 @@ The Infrastructure Overview dashboard provides a comprehensive view:
 - **Goroutines**: Go runtime goroutines count
 - **Uptime**: Component availability
 
-## Step 5: view gateway controller dashboard
+## Step 5: View gateway controller dashboard
 
 The Gateway Controller dashboard provides detailed metrics:
 
@@ -87,7 +87,7 @@ The Gateway Controller dashboard provides detailed metrics:
 - **HTTP Request Duration**: Histogram of API response times
 - **Concurrent Requests**: Current concurrent API requests
 
-## Step 6: view policy engine dashboard
+## Step 6: View policy engine dashboard
 
 The Policy Engine dashboard provides detailed metrics:
 
@@ -120,7 +120,7 @@ The Policy Engine dashboard provides detailed metrics:
 - **Goroutines**: Current goroutines count
 - **GRPC Connections**: Active gRPC connections
 
-## Step 7: create custom dashboards
+## Step 7: Create custom dashboards
 
 You can create custom dashboards in Grafana:
 
@@ -131,7 +131,7 @@ You can create custom dashboards in Grafana:
 5. Configure visualization (graphs, tables, gauges, etc.)
 6. Save the dashboard
 
-## Step 8: set up alerts
+## Step 8: Set up alerts
 
 Create alerts to be notified of issues:
 

@@ -1,6 +1,6 @@
 # Theming Developer Portal with AI for your organization
 
-AI-powered branding simplifies the process of customizing your organization's Developer portal. By leveraging AI Branding, you can ensure that your pages not only look great but also align perfectly with your brand's identity.
+AI-powered branding simplifies the process of customizing your organization's Developer portal. By leveraging AI branding, you can ensure that your pages not only look great but also align perfectly with your brand's identity.
 
 ## Prerequisites
 

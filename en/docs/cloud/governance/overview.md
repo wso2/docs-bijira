@@ -17,13 +17,13 @@ API Management Governance consists of a set of processes, practices, roles, and 
 
 Implementing API governance provides the following benefits:
 
-- **Security and Compliance** – Enforces authentication, authorization, and regulatory compliance requirements.
+- **Security and compliance** – Enforces authentication, authorization, and regulatory compliance requirements.
 - **Consistency** – Standardizes API design, documentation, and versioning to maintain uniformity.
-- **Performance and Reliability** – Enables monitoring, rate limiting, and policy enforcement to ensure optimal API performance.
-- **Lifecycle Management** – Supports structured API development, deployment, deprecation, and retirement processes.
+- **Performance and reliability** – Enables monitoring, rate limiting, and policy enforcement to ensure optimal API performance.
+- **Lifecycle management** – Supports structured API development, deployment, deprecation, and retirement processes.
 - **Collaboration** – Defines clear roles and responsibilities for API stakeholders, improving coordination.
-- **Discoverability and Reusability** – Facilitates API cataloging and reuse to minimize redundant development efforts.
-- **Business Agility** – Accelerates API delivery, helping organizations meet customer and partner needs efficiently.
+- **Discoverability and reusability** – Facilitates API cataloging and reuse to minimize redundant development efforts.
+- **Business agility** – Accelerates API delivery, helping organizations meet customer and partner needs efficiently.
 
 API Platform API Management provides a comprehensive governance capabilities that powered by AI to evaluate API compliance with governance standards given in a form of natural language specification, and also spectral based compliance validation for rules defined in OpenAPI and AsyncAPI specifications.
 
@@ -39,9 +39,9 @@ A ruleset is a collection of rules that define governance policies to be enforce
 
 Each ruleset must have a unique name and may include a description to provide additional context. Rulesets are used to validate specific aspects of an API, including:
 
-- **API Definition** – The OpenAPI or AsyncAPI definition that establishes the API contract.
-- **API Metadata** – Information about the API, such as name, version, context, and other details.
-- **API Documentation** – Documentation that provides usage guidelines and other relevant information about the API.
+- **API definition** – The OpenAPI or AsyncAPI definition that establishes the API contract.
+- **API metadata** – Information about the API, such as name, version, context, and other details.
+- **API documentation** – Documentation that provides usage guidelines and other relevant information about the API.
 
 When defining a ruleset, the API type must be specified. Supported API types include:
 

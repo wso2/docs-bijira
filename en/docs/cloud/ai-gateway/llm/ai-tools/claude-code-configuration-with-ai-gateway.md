@@ -17,7 +17,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: start an AI Gateway on WSO2 API Platform
+## Step 1: Start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
@@ -49,7 +49,7 @@ Once the AI Gateway is active, you can continue to create the Anthropic LLM prov
 
 ---
 
-## Step 2: create and deploy an Anthropic LLM provider
+## Step 2: Create and deploy an Anthropic LLM provider
 
 1. **Log in to the WSO2 API Platform Console** as an admin.
 
@@ -81,7 +81,7 @@ The Anthropic LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: create and deploy an app LLM proxy
+## Step 3: Create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Claude Code invokes through WSO2 API Platform.
 
@@ -147,7 +147,7 @@ You will use these values when configuring Claude Code.
 
 ---
 
-## Step 4: configure Claude Code to use the app LLM proxy
+## Step 4: Configure Claude Code to use the app LLM proxy
 
 Claude Code can be configured using environment variables or through Claude Code's `settings.json` file.
 
@@ -171,7 +171,7 @@ Replace:
 !!! note
     These environment variables apply only to the current terminal session. If you open a new terminal session, you must export them again.
 
-!!! note "Persistent Configuration"
+!!! note "Persistent configuration"
 
     To make the configuration permanent, add the environment variables to Claude Code's `settings.json` file.
 
@@ -209,7 +209,7 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 ---
 
-## Step 5: run Claude Code
+## Step 5: Run Claude Code
 
 After setting the required environment variables, run Claude Code:
 

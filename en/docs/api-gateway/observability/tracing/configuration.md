@@ -56,7 +56,7 @@ max_export_batch_size = 1024    # Export up to 1024 spans per batch
 **Lower timeout**: Faster trace visibility, more network overhead
 **Higher timeout**: Better batching efficiency, slower trace visibility
 
-## Customizing opentelemetry collector
+## Customizing OpenTelemetry Collector
 
 The OTLP Collector configuration is located at:
 ```
@@ -140,7 +140,7 @@ service:
       exporters: [otlp, debug]
 ```
 
-### Example: multi-backend export
+### Example: Multi-backend export
 
 Send traces to multiple backends simultaneously:
 
@@ -168,7 +168,7 @@ service:
       exporters: [otlp/jaeger, otlp/tempo, datadog]
 ```
 
-### Example: tail-based sampling
+### Example: Tail-based sampling
 
 Keep all error traces but sample successful traces:
 

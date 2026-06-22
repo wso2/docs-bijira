@@ -14,7 +14,7 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Resources & scaling
+# Resources and scaling
 
 ## Resource limits
 
@@ -101,7 +101,7 @@ affinity:
 
 Apply the same anti-affinity configuration to `gateway.gatewayRuntime` to spread runtime replicas across nodes and zones as well.
 
-## Horizontal pod autoscaler & pod disruption budget
+## Horizontal pod autoscaler and pod disruption budget
 
 ### Horizontal pod autoscaler
 

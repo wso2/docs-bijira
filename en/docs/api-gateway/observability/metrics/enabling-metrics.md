@@ -55,7 +55,7 @@ The gateway uses Docker Compose profiles to optionally enable these demonstratio
 
 #### Setting up Grafana image
 
-**Important Note:** The Grafana image in the `docker-compose.yaml` file is intentionally left empty due to licensing considerations. Before you can use the demonstration dashboards, you must specify a valid Grafana image.
+**Important note:** The Grafana image in the `docker-compose.yaml` file is intentionally left empty due to licensing considerations. Before you can use the demonstration dashboards, you must specify a valid Grafana image.
 
 To add the Grafana image:
 

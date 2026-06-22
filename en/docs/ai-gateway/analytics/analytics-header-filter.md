@@ -21,19 +21,19 @@ The Analytics Header Filter policy allows you to control which request and respo
 The policy is only effective when analytics is enabled at the system level and must be explicitly added to the API’s policy chain.
 
 **Operation modes:**
-- **"allow"**: Only the specified headers will be included in analytics (whitelist mode)
-- **"deny"**: All headers except the specified ones will be included in analytics (blacklist mode)
+- **"allow"**: Only the specified headers will be included in analytics (whitelist mode).
+- **"deny"**: All headers except the specified ones will be included in analytics (blacklist mode).
 
 Request and response headers can have different operation modes, allowing for flexible filtering strategies.
 
 
 ## Features
 
-* Filters request and response headers from analytics data collection using allow or deny modes
-* Case-insensitive header matching
-* Supports independent configuration with flexible filtering strategies with whitelist (allow) and blacklist (deny) modes
-* Operates transparently without affecting request or response processing
-* Helps protect sensitive information from being exposed in analytics systems
+* Filters request and response headers from analytics data collection using allow or deny modes.
+* Case-insensitive header matching.
+* Supports independent configuration with flexible filtering strategies with whitelist (allow) and blacklist (deny) modes.
+* Operates transparently without affecting request or response processing.
+* Helps protect sensitive information from being exposed in analytics systems.
 
 
 ## Configuration
@@ -59,14 +59,14 @@ Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) i
 
 ## System requirements
 
-* Analytics must be enabled globally via `config.yaml` (`analytics.enabled: true`)
-* The policy must be explicitly applied to the API policy chain
-* If analytics is disabled at the system level, this policy has no effect
+* Analytics must be enabled globally via `config.yaml` (`analytics.enabled: true`).
+* The policy must be explicitly applied to the API policy chain.
+* If analytics is disabled at the system level, this policy has no effect.
 
 
 ## API definition example
 
-The following example demonstrates how to apply the Analytics Header Filter policy to a LlmProvider:
+The following example demonstrates how to apply the Analytics Header Filter policy to an `LlmProvider`:
 
 ```bash
 curl -X POST http://localhost:9090/llm-providers \
@@ -114,20 +114,20 @@ EOF
 
 ## Use cases
 
--  **Sensitive Data Protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
+- **Sensitive data protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
 
-- **Noise Reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
+- **Noise reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
 
-- **Compliance and Governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
+- **Compliance and governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
 
-- **Cost and Storage Optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
+- **Cost and storage optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
 
 
 ## Notes
 
 * Header name matching is case-insensitive.
 * The `operation` field is required and must be either `"allow"` or `"deny"`.
-* The `headers` array is required but can be empty. When the array is empty, all original headers are included(if allowed explicitly) in analytics for both `"allow"` and `"deny"` modes (safe fallback behavior).
+* The `headers` array is required but can be empty. When the array is empty, all original headers are included (if allowed explicitly) in analytics for both `"allow"` and `"deny"` modes (safe fallback behavior).
 * Request and response headers can use different operation modes independently.
 * This policy does not block requests or responses.
 * Filtering applies only to analytics collection, not to runtime request handling.

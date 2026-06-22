@@ -106,13 +106,13 @@ EOF
 
 ## Use cases
 
--  **Sensitive Data Protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
+-  **Sensitive data protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
 
-- **Noise Reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
+- **Noise reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
 
-- **Compliance and Governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
+- **Compliance and governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
 
-- **Cost and Storage Optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
+- **Cost and storage optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
 
 
 ## Notes

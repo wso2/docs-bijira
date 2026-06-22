@@ -37,7 +37,7 @@ The Sentence Count Guardrail validates the sentence count of request or response
 | `min` | integer | Yes | - | Minimum allowed sentence count (inclusive). Must be >= 0. |
 | `max` | integer | Yes | - | Maximum allowed sentence count (inclusive). Must be >= 1. |
 | `jsonPath` | string | No | `""` | JSONPath expression to extract a specific value from JSON payload. If empty, validates the entire payload as a string. |
-| `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is NOT within the min-max range. If `false`, validation passes when sentence count is within the range. |
+| `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is not within the min-max range. If `false`, validation passes when sentence count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
 #### Response phase
@@ -47,7 +47,7 @@ The Sentence Count Guardrail validates the sentence count of request or response
 | `min` | integer | Yes | - | Minimum allowed sentence count (inclusive). Must be >= 0. |
 | `max` | integer | Yes | - | Maximum allowed sentence count (inclusive). Must be >= 1. |
 | `jsonPath` | string | No | `""` | JSONPath expression to extract a specific value from JSON payload. If empty, validates the entire payload as a string. |
-| `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is NOT within the min-max range. If `false`, validation passes when sentence count is within the range. |
+| `invert` | boolean | No | `false` | If `true`, validation passes when sentence count is not within the min-max range. If `false`, validation passes when sentence count is within the range. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
 ## JSONPath support
@@ -72,7 +72,7 @@ The guardrail counts sequences of characters ending with these punctuation marks
 
 ## Examples
 
-### Example 1: basic sentence count validation
+### Example 1: Basic sentence count validation
 
 Deploy an LLM provider that ensures requests contain between 1 and 10 sentences:
 
@@ -121,7 +121,7 @@ EOF
 
 **Test the guardrail:**
 
-**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the llm provider configuration and use localhost to invoke.
+**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the LLM provider configuration and use localhost to invoke.
 
 ```bash
 # Valid request (should pass)
@@ -157,25 +157,25 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate sentence counts in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate sentence counts in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content *outside* the specified sentence range. This is useful for blocking content that falls within a prohibited sentence count range.
+- **Inverted logic**: Set `invert: true` to allow only content *outside* the specified sentence range. This is useful for blocking content that falls within a prohibited sentence count range.
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 ## Use cases
 
-1. **Content Quality Assurance**: Ensure responses meet minimum sentence requirements for completeness and clarity.
+1. **Content quality assurance**: Ensure responses meet minimum sentence requirements for completeness and clarity.
 
-2. **Response Length Control**: Limit verbosity to maintain concise communication standards.
+2. **Response length control**: Limit verbosity to maintain concise communication standards.
 
-3. **Input Validation**: Ensure user prompts contain sufficient context (minimum sentences) without being excessive.
+3. **Input validation**: Ensure user prompts contain sufficient context (minimum sentences) without being excessive.
 
-4. **Consistency Enforcement**: Maintain consistent response formats across different AI interactions.
+4. **Consistency enforcement**: Maintain consistent response formats across different AI interactions.
 
-5. **Cost Management**: Control response length to manage token usage and associated costs.
+5. **Cost management**: Control response length to manage token usage and associated costs.
 
 ## Error response
 

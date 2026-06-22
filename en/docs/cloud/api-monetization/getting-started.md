@@ -17,7 +17,7 @@ Before you begin, ensure you have:
     - A **Standard secret key**, which has full access to your Stripe account, or
     - A **Restricted secret key**, which scopes access to only the permissions you grant. If you choose this option, make sure the key is granted the permissions listed below.
 
-        ??? info "Permissions for Restricted Secret Keys"
+        ??? info "Permissions for restricted secret keys"
 
             Grant the following minimum permissions when creating the restricted secret key in the Stripe Dashboard:
 
@@ -60,8 +60,8 @@ Before you begin, ensure you have:
 
 6. Click **Add Stripe Credentials**.
 7. Enter the following details:
-    - **Secret Key:** The secret key from your Stripe account.
-    - **Publishable Key:** The publishable key from your Stripe account.
+    - **Secret key:** The secret key from your Stripe account.
+    - **Publishable key:** The publishable key from your Stripe account.
 
 8. Click **Save**.
 

@@ -42,7 +42,7 @@ service:
       exporters: [otlphttp]  # Send to Moesif
 ```
 
-**Important Notes:**
+**Important notes:**
 - The endpoint uses HTTPS (not HTTP)
 - Use the `otlphttp` exporter (not `otlp` which uses gRPC)
 - The `X-Moesif-Application-Id` header is required for authentication
@@ -97,10 +97,10 @@ After configuring and starting the gateway:
 ### Moesif features
 
 - **API Analytics**: Request volume, response times, error rates
-- **User Tracking**: Identify and track API users across requests
-- **Error Analysis**: Detailed error tracking with request/response bodies
-- **Behavioral Cohorts**: Group users by API usage patterns
-- **Custom Dashboards**: Build visualizations for your specific KPIs
+- **User tracking**: Identify and track API users across requests
+- **Error analysis**: Detailed error tracking with request/response bodies
+- **Behavioral cohorts**: Group users by API usage patterns
+- **Custom dashboards**: Build visualizations for your specific KPIs
 - **Alerting**: Get notified of anomalies or threshold breaches
 
 ### Sending to both Jaeger and Moesif
@@ -192,7 +192,7 @@ tracing:
 
 ## Cloud-native tracing solutions
 
-### AWS X-ray
+### AWS X-Ray
 
 Configure OTLP Collector to export to AWS X-Ray:
 

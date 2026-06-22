@@ -30,7 +30,7 @@ API Platform supports the following pricing models for paid subscription plans.
 
 ---
 
-## Step 1: create a paid subscription plan
+## Step 1: Create a paid subscription plan
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
@@ -43,7 +43,7 @@ API Platform supports the following pricing models for paid subscription plans.
 6. In the **Create Subscription Plan** pane, enter the plan details:
 
     - **Name** and **Description** for the plan. The name is unique and cannot be changed after creation.
-    - **Rate Limiting:** Set the **Request Count** (must be greater than 0) and the **Request Count Time Unit** (Minute, Hour, or Day). Enable **Burst Control** to protect your backend from sudden request spikes — the burst limit is enforced over a shorter time unit than the one you selected.
+    - **Rate limiting:** Set the **Request Count** (must be greater than 0) and the **Request Count Time Unit** (Minute, Hour, or Day). Enable **Burst Control** to protect your backend from sudden request spikes — the burst limit is enforced over a shorter time unit than the one you selected.
     - **Pricing:** Select a **Pricing Model** (Free, Flat, Unit, Volume, or Graduated), **Currency**, **Billing Period**, and the price amount.
 
     ![Create Subscription Plan form showing Name, Description, Rate Limiting section with request count and time unit, and Pricing section with Per Unit model and USD monthly billing](../../assets/img/api-monetization/add-paid-plan-form.png){ width="800" }
@@ -57,7 +57,7 @@ The paid subscription plan is now created and listed under **Subscription Plans*
 
 ---
 
-## Step 2: assign paid plans to an API
+## Step 2: Assign paid plans to an API
 
 Once you have created paid subscription plans, you can enable them for specific APIs. This allows API consumers to discover and subscribe to paid plans through the Developer Portal.
 
@@ -74,7 +74,7 @@ Once you have created paid subscription plans, you can enable them for specific 
 
 ---
 
-## Step 3: publish the API to the Developer Portal
+## Step 3: Publish the API to the Developer Portal
 
 After assigning paid plans, publish the API so that consumers can discover and subscribe to it via the Developer Portal.
 

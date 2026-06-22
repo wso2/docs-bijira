@@ -43,7 +43,7 @@ Distributed tracing tracks a request as it flows through multiple components, us
 
 - **Trace**: Represents the entire journey of a request through the system
 - **Span**: Represents a single operation within a trace (e.g., policy execution, upstream call)
-- **Context Propagation**: Traces are correlated across components using trace IDs and span IDs in headers
+- **Context propagation**: Traces are correlated across components using trace IDs and span IDs in headers
 
 ## In this section
 

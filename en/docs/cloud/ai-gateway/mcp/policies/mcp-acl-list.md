@@ -11,12 +11,12 @@ The policy operates on three types of MCP capabilities: tools, resources, and pr
 
 ## Features
 
-- **Tool-Level Access Control**: Allow or deny access to specific tools using allow/deny mode with exceptions.
-- **Resource-Level Access Control**: Control access to specific resources (identified by URI) using flexible ACL rules.
-- **Prompt-Level Access Control**: Manage access to specific prompts using configurable access modes.
-- **Flexible ACL Modes**: Support both allow-with-exceptions and deny-with-exceptions patterns.
-- **List Filtering**: Filter list responses to only include capabilities that match the access control rules.
-- **Request Path Enforcement**: Enforce the same allow/deny rules on request paths, rejecting access to denied capabilities.
+- **Tool-level access control**: Allow or deny access to specific tools using allow/deny mode with exceptions.
+- **Resource-level access control**: Control access to specific resources (identified by URI) using flexible ACL rules.
+- **Prompt-level access control**: Manage access to specific prompts using configurable access modes.
+- **Flexible ACL modes**: Support both allow-with-exceptions and deny-with-exceptions patterns.
+- **List filtering**: Filter list responses to only include capabilities that match the access control rules.
+- **Request path enforcement**: Enforce the same allow/deny rules on request paths, rejecting access to denied capabilities.
 
 ## Configuration
 
@@ -80,7 +80,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ## Reference scenarios
 
-### Example 1: deny specific tools
+### Example 1: Deny specific tools
 
 Deny access to certain tools while allowing all others:
 
@@ -108,7 +108,7 @@ spec:
     ...
 ```
 
-### Example 2: allow only specific resources
+### Example 2: Allow only specific resources
 
 Allow access to only whitelisted resources:
 
@@ -136,7 +136,7 @@ spec:
     ...
 ```
 
-### Example 3: mixed access control
+### Example 3: Mixed access control
 
 Apply different access control rules to different capability types:
 

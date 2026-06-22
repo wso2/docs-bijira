@@ -118,7 +118,7 @@ Before you begin, ensure you have:
 
     This feature is not currently available for **REST API** proxies created by importing an API contract from **GitHub**, or for **WebSocket**, **GraphQL**, **MCP**, or **Egress** APIs.
 
-### Step 1: create an API proxy.
+### Step 1: Create an API proxy.
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
@@ -154,7 +154,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 
     ![Reading List API Local overview page showing HTTP Self Hosted Gateway badge, Created lifecycle status, and /books API endpoints list](../../assets/img/api-platform-gateway/gateway/api-overview.png)
 
-### Step 2: deploy the API proxy (optional)
+### Step 2: Deploy the API proxy (optional)
 
 !!! note
     This step is **optional** at this stage, as the API is deployed to the gateway by default. However, if you make any changes to the API, you must redeploy it.

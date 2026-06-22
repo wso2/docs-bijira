@@ -12,7 +12,7 @@ This policy helps reduce token consumption and improve LLM response quality by s
 ## Features
 - **Semantic similarity-based filtering** of tools using embedding vectors.
 - **Two selection modes**: "By Rank" (top-K) and "By Threshold".
-- **Flexible Format Support**: Supports both JSON and text-based tool/query extraction.
+- **Flexible format support**: Supports both JSON and text-based tool/query extraction.
 - **Embedding cache** with LRU eviction to minimize redundant API calls.
 - **Configurable JSONPath expressions** for payload extraction.
 - **Mixed mode support** (extract query from JSON and tools from text, or vice versa).
@@ -65,7 +65,7 @@ Add the following entry to the `policies` section in `/gateway/build.yaml`:
 
 ## Reference scenarios
 
-### Scenario 1: filtering tools by rank (JSON format)
+### Scenario 1: Filtering tools by rank (JSON format)
 
 This scenario demonstrates filtering tools to select the top 3 most relevant ones based on a user query in a JSON payload.
 
@@ -172,7 +172,7 @@ policies:
 }
 ```
 
-### Scenario 2: filtering tools by threshold
+### Scenario 2: Filtering tools by threshold
 
 In this scenario, only tools with a semantic similarity score of 0.7 or higher are included.
 
@@ -188,7 +188,7 @@ policies:
         # Rest of the parameters
 ```
 
-### Scenario 3: text format (XML-like tags)
+### Scenario 3: Text format (XML-like tags)
 
 This scenario handles cases where the user query and tool definitions are embedded in a text payload using custom tags.
 

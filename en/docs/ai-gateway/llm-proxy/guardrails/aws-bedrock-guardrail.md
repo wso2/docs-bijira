@@ -56,7 +56,7 @@ The policy supports multiple authentication modes including AWS IAM role assumpt
 
 ### System parameters (required)
 
-These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
+These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the API artifact definition file:
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -81,7 +81,7 @@ Add the following configuration section to your `config.toml` file:
 
 ```toml
 awsbedrock_guardrail_region = "us-east-1" 
-awsbedrock_guardrail_id = "your-guardrail-id"
+awsbedrock_guardrail_id = "<guardrail-id>"
 awsbedrock_guardrail_version = "DRAFT"
 awsbedrock_access_key_id = ""
 awsbedrock_secret_access_key = "" 
@@ -105,13 +105,13 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## PII handling
 
-### Masking mode (redactpii: false)
+### Masking mode (redactPII: false)
 
 When `redactPII` is `false`:
 - **Request phase**: PII entities are masked with placeholders like `EMAIL_0001`, `PHONE_0002`, etc.
 - Use this mode when you need PII to flow through the system but want it masked during processing
 
-### Redaction mode (redactpii: true)
+### Redaction mode (redactPII: true)
 
 When `redactPII` is `true`:
 - PII entities are permanently replaced with `*****`
@@ -120,7 +120,7 @@ When `redactPII` is `true`:
 
 ## Examples
 
-### Example 1: basic guardrail with static credentials
+### Example 1: Basic guardrail with static credentials
 
 Deploy an LLM provider with AWS Bedrock Guardrail validation:
 
@@ -222,19 +222,19 @@ policies:
 
 ## Use cases
 
-1. **Content Safety**: Enforce enterprise content policies to prevent inappropriate or harmful content from being processed or returned.
+1. **Content safety**: Enforce enterprise content policies to prevent inappropriate or harmful content from being processed or returned.
 
 2. **Compliance**: Meet regulatory requirements (HIPAA, GDPR, etc.) by detecting and masking PII in LLM interactions.
 
-3. **Topic Control**: Restrict LLM usage to approved topics only, preventing misuse or access to sensitive domains.
+3. **Topic control**: Restrict LLM usage to approved topics only, preventing misuse or access to sensitive domains.
 
-4. **Data Privacy**: Mask sensitive information during processing while maintaining the ability to restore it in responses when needed.
+4. **Data privacy**: Mask sensitive information during processing while maintaining the ability to restore it in responses when needed.
 
-5. **Prohibited Word Filtering**: Block content containing prohibited words, phrases, or patterns defined in your guardrail.
+5. **Prohibited word filtering**: Block content containing prohibited words, phrases, or patterns defined in your guardrail.
 
-6. **Multi-tenant Security**: Isolate content policies per tenant or application using different guardrail configurations.
+6. **Multi-tenant security**: Isolate content policies per tenant or application using different guardrail configurations.
 
-7. **Audit and Monitoring**: Use detailed assessment information to audit content violations and improve policies.
+7. **Audit and monitoring**: Use detailed assessment information to audit content violations and improve policies.
 
 ## Error response
 

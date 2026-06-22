@@ -61,7 +61,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## URL validation modes
 
-### DNS-only validation (`onlydns: true`)
+### DNS-only validation (`onlyDNS: true`)
 
 - Faster validation method
 - Only checks if the domain name resolves via DNS
@@ -69,7 +69,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 - Less reliable for detecting broken links
 - Suitable for quick validation when HTTP checks are not necessary
 
-### HTTP HEAD request validation (`onlydns: false`)
+### HTTP HEAD request validation (`onlyDNS: false`)
 
 - More thorough validation method
 - Performs DNS lookup and HTTP HEAD request
@@ -80,7 +80,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: basic URL validation
+### Example 1: Basic URL validation
 
 Deploy an LLM provider that validates URLs in request content using HTTP HEAD requests:
 
@@ -129,7 +129,7 @@ EOF
 
 **Test the guardrail:**
 
-**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the llm provider configuration and use localhost to invoke.
+**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the LLM provider configuration and use localhost to invoke.
 
 ```bash
 # Valid request (should pass)
@@ -165,29 +165,29 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate URLs in both directions. Use `showAssessment: true` to include detailed assessment information including invalid URLs in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate URLs in both directions. Use `showAssessment: true` to include detailed assessment information including invalid URLs in error responses.
 
-- **DNS-Only Validation**: Set `onlyDNS: true` for faster validation that only checks DNS resolution. This is less reliable but faster than HTTP HEAD validation.
+- **DNS-only validation**: Set `onlyDNS: true` for faster validation that only checks DNS resolution. This is less reliable but faster than HTTP HEAD validation.
 
-- **HTTP HEAD Validation**: Set `onlyDNS: false` (default) for more thorough validation that performs both DNS lookup and HTTP HEAD request to verify URL reachability.
+- **HTTP HEAD validation**: Set `onlyDNS: false` (default) for more thorough validation that performs both DNS lookup and HTTP HEAD request to verify URL reachability.
 
-- **Timeout Configuration**: Adjust the `timeout` parameter (in milliseconds) based on network conditions and acceptable latency. Default is 3000ms (3 seconds).
+- **Timeout configuration**: Adjust the `timeout` parameter (in milliseconds) based on network conditions and acceptable latency. Default is 3000ms (3 seconds).
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate URLs in the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate URLs in the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate URLs from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate URLs from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 ## Use cases
 
-1. **Link Validation**: Ensure all URLs in AI-generated content are valid and accessible.
+1. **Link validation**: Ensure all URLs in AI-generated content are valid and accessible.
 
 2. **Security**: Detect and block potentially malicious or suspicious URLs.
 
-3. **Quality Assurance**: Prevent broken links from being included in responses.
+3. **Quality assurance**: Prevent broken links from being included in responses.
 
-4. **Content Moderation**: Validate URLs before allowing them in user-generated content.
+4. **Content moderation**: Validate URLs before allowing them in user-generated content.
 
-5. **Resource Verification**: Ensure referenced resources are available before processing.
+5. **Resource verification**: Ensure referenced resources are available before processing.
 
 ## Error response
 

@@ -52,7 +52,7 @@ proxy:
 !!! note
     The `component.yaml` file must be present in the `.choreo` directory within your API directory for API Platform to successfully build and deploy your API proxy from GitHub.
 
-## Step 1: create an API proxy
+## Step 1: Create an API proxy
 
 You can create an API proxy either by selecting the source from a GitHub repository, uploading an OpenAPI specification file, or providing an OpenAPI specification URL. This guide demonstrates how to create an API proxy using a GitHub repository as the source.
 
@@ -100,7 +100,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 !!! note
     The API contract cannot be modified after proxy creation. Therefore, any changes to the API contract in the GitHub repository will not apply to the created proxy.
 
-## Step 2: build and deploy the API proxy
+## Step 2: Build and deploy the API proxy
 
 !!! info
     A build starts automatically when you create the API proxy, and you will be redirected to the **Overview** page.

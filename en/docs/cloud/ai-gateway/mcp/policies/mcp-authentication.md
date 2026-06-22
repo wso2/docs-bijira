@@ -9,9 +9,9 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
-- **Resource-Specific Security**: Configure authentication independently for tools, resources, prompts, and JSON-RPC methods.
-- **Exception Lists**: Exclude specific resources from authentication using exception lists.
+- **Access token validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
+- **Resource-specific security**: Configure authentication independently for tools, resources, prompts, and JSON-RPC methods.
+- **Exception lists**: Exclude specific resources from authentication using exception lists.
 - **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
 - **Standardized Error Handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
 - **Claim Mapping**: Maps token claims to downstream headers for use by backend services.
@@ -131,7 +131,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ## Reference scenarios
 
-### Example 1: basic MCP authentication
+### Example 1: Basic MCP authentication
 
 Apply MCP authentication to an API using a specific key manager:
 
@@ -157,7 +157,7 @@ spec:
     ...
 ```
 
-### Example 2: disable security for specific tools
+### Example 2: Disable security for specific tools
 
 Disable authentication for specific tools while keeping it enabled for others:
 
@@ -194,7 +194,7 @@ spec:
     ...
 ```
 
-### Example 3: scope advertisement in protected resource metadata
+### Example 3: Scope advertisement in protected resource metadata
 
 Advertise required scopes in the protected resource metadata (scopes are not enforced by this policy):
 
@@ -223,7 +223,7 @@ spec:
     ...
 ```
 
-### Example 4: claim mapping for downstream services
+### Example 4: Claim mapping for downstream services
 
 Map JWT claims to downstream headers for use by backend services:
 
@@ -253,7 +253,7 @@ spec:
     ...
 ```
 
-### Example 5: disable authentication for resources
+### Example 5: Disable authentication for resources
 
 Completely disable authentication for MCP resources while keeping it for tools:
 

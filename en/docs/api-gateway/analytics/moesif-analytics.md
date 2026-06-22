@@ -37,8 +37,8 @@ This capability allows platform administrators and business stakeholders to gain
 - Active Moesif Account and an Application ID.
     For obtaining the Application ID, follow these steps:
     - Step 1: Sign up in [Moesif](https://www.moesif.com/)
-    - Sept 2: Follow the onboarding wizard.
-    - Sept 3: During the sign up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
+    - Step 2: Follow the onboarding wizard.
+    - Step 3: During the sign up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
 
 !!! note
     For more detailed instructions and advanced configuration options, refer to the [official Moesif Documentation](https://www.moesif.com/docs).
@@ -128,9 +128,9 @@ max_header_limit = 8192
 
 ## Use cases
 
-* **API Usage Visibility** – Understand how APIs are consumed across tenants and applications.
-* **Operational Insights** – Observe traffic volume, response behavior, and latency trends.
-* **Business Intelligence** – Support product and business decisions using API analytics data.
-* **Platform Monitoring** – Gain observability into API behavior without impacting performance.
+* **API usage visibility** – Understand how APIs are consumed across tenants and applications.
+* **Operational insights** – Observe traffic volume, response behavior, and latency trends.
+* **Business intelligence** – Support product and business decisions using API analytics data.
+* **Platform monitoring** – Gain observability into API behavior without impacting performance.
 
 

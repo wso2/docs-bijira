@@ -58,10 +58,10 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 |--------|----------|-----------|
 | **Initiation** | Control plane (platform-API) | Gateway (REST API) |
 | **Direction** | Platform-API → Gateway | Gateway → On-Prem APIM |
-| **Source of Truth** | Central control plane | Local gateway |
-| **APIM Integration** | Not applicable | Syncs to on-prem APIM |
-| **Status Tracking** | Managed by platform-API | Tracked in gateway DB |
-| **Failure Handling** | Depends on platform-API | API works, sync retries |
+| **Source of truth** | Central control plane | Local gateway |
+| **APIM integration** | Not applicable | Syncs to on-prem APIM |
+| **Status tracking** | Managed by platform-API | Tracked in gateway DB |
+| **Failure handling** | Depends on platform-API | API works, sync retries |
 
 ---
 
@@ -282,7 +282,7 @@ spec:
       path: /
 ```
 
-**Important Notes:**
+**Important notes:**
 
 - `metadata.name` must be unique per API
 - `context` becomes the URL path prefix on the gateway
@@ -436,14 +436,14 @@ curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
   --data-binary @petstore-api-updated.yaml
 ```
 
-**What Happens:**
+**What happens:**
 
 1. API updated on gateway immediately
 2. Sync status internally reset to `pending`
 3. Automatically re-synced to on-prem APIM
 4. Both gateway and APIM have the updated version
 
-**Check Updated Status:**
+**Check updated status:**
 
 Monitor gateway controller logs for the sync result:
 
@@ -631,7 +631,7 @@ export APIP_GW_LOG_LEVEL=debug
      --data-binary @api-definition.yaml
    ```
 
-**View Gateway Connection Status:**
+**View Gateway connection status:**
 
 Check gateway controller logs for:
 - `"Connected to control plane"` - Connected to APIM

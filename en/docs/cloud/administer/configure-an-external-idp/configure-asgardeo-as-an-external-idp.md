@@ -14,7 +14,7 @@ Before you proceed, be sure to complete the following:
 - Find the Client ID:
   Go to the **Protocol** tab of the Asgardeo application and copy the **Client ID**.
 
-## Step 1: add Asgardeo as an external key manager in API Platform
+## Step 1: Add Asgardeo as an external key manager in API Platform
 
 Follow the steps below to add Asgardeo as an external key manager in API Platform:
 
@@ -49,7 +49,7 @@ Now you have configured Asgardeo as an external key manager in API Platform.
 
 ![Key Managers list showing Bijira Built-in STS and newly added external-asgardeo-km entries](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
 
-## Step 2: add Asgardeo as an external key manager in API Platform Developer Portal
+## Step 2: Add Asgardeo as an external key manager in API Platform Developer Portal
 
 Once the Asgardeo is configured as an external key manager in API Platform, it is necessary to configure it in the API Platform Developer Portal as well. For that, follow the steps below.
 

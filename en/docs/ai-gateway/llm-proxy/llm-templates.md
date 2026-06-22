@@ -18,9 +18,9 @@ content_type: "reference"
 
 LLM Provider Templates define the characteristics and behaviors specific to an AI service provider, such as OpenAI, Azure OpenAI, Anthropic, or other LLM platforms. These templates describe how the gateway should interpret and extract usage and operational metadata from LLM provider responses, including:
 
-- **Token Usage Metrics**: Prompt tokens, completion tokens, total tokens, and remaining tokens
-- **Model Information**: Request and response model identifiers
-- **Rate Limiting Data**: Remaining token allowances from response
+- **Token usage metrics**: Prompt tokens, completion tokens, total tokens, and remaining tokens
+- **Model information**: Request and response model identifiers
+- **Rate limiting data**: Remaining token allowances from response
 
 ## Out-of-the-box supported templates
 
@@ -260,7 +260,7 @@ spec:
     identifier: (?<=model/)[a-zA-Z0-9.:-]+(?=/)
 ```
 
-### Azure AI foundry
+### Azure AI Foundry
 
 The Azure AI Foundry template supports Microsoft's Azure AI Foundry platform.
 

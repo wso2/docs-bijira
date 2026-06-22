@@ -4,7 +4,7 @@ API Designer is a Visual Studio Code extension for building and improving OpenAP
 
 ## What you can do
 
-- Design APIs with **Github Copilot** using the built-in **API Design Skill**, with guided recommendations and faster fixes.
+- Design APIs with **GitHub Copilot** using the built-in **API Design Skill**, with guided recommendations and faster fixes.
 - Design and edit OpenAPI specs visually inside VS Code with GitHub Copilot Assistance
 - Validate APIs against governance and best-practice rulesets
 - Analyze **AI readiness** and identify improvement areas

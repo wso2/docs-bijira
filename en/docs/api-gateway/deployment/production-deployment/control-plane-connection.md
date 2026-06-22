@@ -33,7 +33,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
     ```bash
     kubectl create secret generic gateway-cp-token \
       --namespace <your-namespace> \
-      --from-literal=token='your-registration-token'
+      --from-literal=token='<your-registration-token>'
     ```
 
     **Configure the chart:**
@@ -74,7 +74,7 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
     ```bash
     kubectl create secret generic gateway-cp-token \
       --namespace <your-namespace> \
-      --from-literal=token='your-registration-token'
+      --from-literal=token='<your-registration-token>'
     ```
 
     **Step 2: Generate OAuth2 client credentials**
@@ -109,8 +109,8 @@ The WSO2 API Platform gateway supports two fundamentally different deployment ap
       namespace: ap-gateway  # adjust to match your deployment namespace
     type: Opaque
     stringData:
-      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__ID: "your-client-id"
-      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__SECRET: "your-client-secret"
+      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__ID: "<your-client-id>"
+      APIP_GW_CONTROLLER_CONTROLPLANE_APIM__OAUTH2__CLIENT__SECRET: "<your-client-secret>"
     ```
 
     Apply it:

@@ -28,7 +28,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 
     This creates the organization and opens the organization home page.
 
-## Step 1: create a project
+## Step 1: Create a project
 
 1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
@@ -45,7 +45,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 
 4. Click **Create**. This creates the project and takes you to the project home page.
 
-## Step 2: create an MCP server
+## Step 2: Create an MCP server
 
 1. On the project home page, select **MCP Server** and click **Import API Contract** under **Expose APIs as MCP Servers**.
 2. Click **URL for API Contract**, enter the following URL, and then click **Next**:
@@ -56,7 +56,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 
     ![Create MCP Server from Contract form with name Reading List API, identifier, version, base path, description, HTTP type, WSO2 Managed Gateway selected, and target URL fields](../../assets/img/introduction/mcp-create-server.png)
 
-## Step 3: test the MCP server
+## Step 3: Test the MCP server
 
 API Platform automatically generates tool schemas based on the information available in your API contract.
 
@@ -76,7 +76,7 @@ In this guide, you will use the MCP Playground.
 
     ![MCP Playground in Development environment showing Connected status, five tools listed including listBooks selected, and successful JSON tool result with book records](../../assets/img/introduction/mcp-inspector.png)
 
-## Step 4: promote and publish the MCP server
+## Step 4: Promote and publish the MCP server
 
 Once you verify the MCP Server is working as expected in development, promote it to production and publish it for consumers.
 
@@ -93,18 +93,18 @@ Once you verify the MCP Server is working as expected in development, promote it
 
 Now that your MCP Server is deployed in both development and production environments and can be invoked, the next step is to publish it so that consumers can discover and subscribe to it.
 
-## Step 5: publish the MCP server
+## Step 5: Publish the MCP server
 
 1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the MCP Server. The current lifecycle stage is **Created**.
 2. Click **Publish**.
 3. In the **Publish MCP Server** dialog, click **Confirm** to publish the MCP Server with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the lifecycle state to **Published**.
     
-    !!! Info
+    !!! info
         If you want to configure the Developer Portal as an MCP Hub, follow the [Developer Portal Mode](../devportal/developer-portal-mode.md) documentation.
 
 The MCP Server is now available for consumers to discover and subscribe to via the API Platform Developer Portal.
 
-## Step 6: connect with an MCP client
+## Step 6: Connect with an MCP client
 
 MCP Servers in API Platform are secured by OAuth2 by default. To access an MCP Server, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
 

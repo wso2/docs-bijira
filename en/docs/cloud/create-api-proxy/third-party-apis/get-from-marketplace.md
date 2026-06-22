@@ -51,7 +51,7 @@ Follow these steps to create an API proxy for a third-party API available in the
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 2. Depending on the third-party API requirements, configure **Endpoint Configurations** or set up an **API-level mediation policy** to handle authentication and authorization.
 
-#### Example: configuring the `currency API`
+#### Example: Configuring the `currency API`
 
 To integrate the `Currency API`, follow these steps:
 

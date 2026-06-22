@@ -35,18 +35,18 @@ The policy uses embedding models to convert request text into high-dimensional v
 
 ### Request phase
 
-1. **Text Extraction**: Extracts text from the request body using JSONPath (if configured) or uses the entire request body
-2. **Embedding Generation**: Generates a vector embedding from the extracted text using the configured embedding provider
-3. **Cache Lookup**: Searches the vector database for semantically similar cached responses using cosine similarity
-4. **Threshold Check**: If a similar embedding is found with similarity >= similarityThreshold, returns the cached response immediately
-5. **Cache Miss**: If no similar response is found, the request proceeds to the upstream service
+1. **Text extraction**: Extracts text from the request body using JSONPath (if configured) or uses the entire request body
+2. **Embedding generation**: Generates a vector embedding from the extracted text using the configured embedding provider
+3. **Cache lookup**: Searches the vector database for semantically similar cached responses using cosine similarity
+4. **Threshold check**: If a similar embedding is found with similarity >= similarityThreshold, returns the cached response immediately
+5. **Cache miss**: If no similar response is found, the request proceeds to the upstream service
 
 ### Response phase
 
-1. **Success Check**: Only processes responses with 200 status codes
-2. **Embedding Retrieval**: Retrieves the embedding generated during the request phase from metadata
-3. **Response Storage**: Stores the response payload along with its embedding in the vector database
-4. **TTL Application**: Applies the configured TTL to the cache entry
+1. **Success check**: Only processes responses with 200 status codes
+2. **Embedding retrieval**: Retrieves the embedding generated during the request phase from metadata
+3. **Response storage**: Stores the response payload along with its embedding in the vector database
+4. **TTL application**: Applies the configured TTL to the cache entry
 
 ## Configuration
 
@@ -59,7 +59,7 @@ The policy uses embedding models to convert request text into high-dimensional v
 
 ### System parameters (required)
 
-These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
+These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the API artifact definition file:
 
 #### Embedding provider configuration
 
@@ -115,7 +115,7 @@ The policy supports JSONPath expressions to extract specific text from request b
 - Focusing on specific prompt fields while ignoring metadata
 - Handling structured JSON payloads
 
-### Common jsonpath examples
+### Common JSONPath examples
 
 - `$.messages[0].content` - First message's content in chat completions
 - `$.messages[-1].content` - Last message's content
@@ -203,21 +203,21 @@ curl -X POST http://openai:8080/chat/completions \
 
 ## Use cases
 
-1. **Cost Reduction**: Reduce API costs by serving cached responses for similar queries, especially valuable for expensive LLM API calls.
+1. **Cost reduction**: Reduce API costs by serving cached responses for similar queries, especially valuable for expensive LLM API calls.
 
-2. **Latency Improvement**: Return cached responses in milliseconds instead of waiting for LLM processing (typically 1-5 seconds), significantly improving user experience.
+2. **Latency improvement**: Return cached responses in milliseconds instead of waiting for LLM processing (typically 1-5 seconds), significantly improving user experience.
 
-3. **Rate Limit Management**: Reduce the number of upstream API calls, helping stay within rate limits and avoiding throttling.
+3. **Rate limit management**: Reduce the number of upstream API calls, helping stay within rate limits and avoiding throttling.
 
 4. **Consistency**: Ensure users receive consistent responses for semantically equivalent queries, improving predictability.
 
-5. **Offline Resilience**: Serve cached responses even when upstream services experience temporary outages.
+5. **Offline resilience**: Serve cached responses even when upstream services experience temporary outages.
 
-6. **A/B Testing**: Compare cached vs. fresh responses to evaluate prompt engineering improvements.
+6. **A/B testing**: Compare cached vs. fresh responses to evaluate prompt engineering improvements.
 
-7. **Development/Testing**: Speed up development cycles by reusing cached responses during testing.
+7. **Development/testing**: Speed up development cycles by reusing cached responses during testing.
 
-8. **High-Traffic Applications**: Handle high volumes of similar queries efficiently without overwhelming upstream services.
+8. **High-traffic applications**: Handle high volumes of similar queries efficiently without overwhelming upstream services.
 
 ## Similarity threshold guidelines
 
@@ -259,26 +259,26 @@ When no similar request is found:
 
 The policy is designed to be resilient:
 
-- **Embedding Generation Failure**: If embedding generation fails, the request proceeds to upstream (cache is skipped)
-- **Vector Database Unavailable**: If the vector database is unreachable, requests proceed to upstream
-- **Cache Storage Failure**: If storing a response fails, the response is still returned to the client (cache operation is non-blocking)
+- **Embedding generation failure**: If embedding generation fails, the request proceeds to upstream (cache is skipped)
+- **Vector database unavailable**: If the vector database is unreachable, requests proceed to upstream
+- **Cache storage failure**: If storing a response fails, the response is still returned to the client (cache operation is non-blocking)
 - **Invalid JSONPath**: If JSONPath extraction fails, the entire request body is used for embedding generation
 
 These behaviors ensure that caching failures do not block legitimate requests. The system gracefully degrades to direct upstream calls when caching is unavailable.
 
 ## Performance considerations
 
-1. **Embedding Generation Latency**: Generating embeddings adds ~100-500ms to request processing. This is offset by cache hits that save 1-5 seconds.
+1. **Embedding generation latency**: Generating embeddings adds ~100-500ms to request processing. This is offset by cache hits that save 1-5 seconds.
 
-2. **Vector Database Performance**: 
+2. **Vector database performance**: 
    - Redis with RedisSearch: Fast queries, good for smaller datasets (< 1M vectors)
    - Milvus: Optimized for large-scale vector search, better for > 1M vectors
 
-3. **Cache Hit Rate**: Aim for 20-40% cache hit rate for cost-effective caching. Below 10% may not justify the overhead.
+3. **Cache hit rate**: Aim for 20-40% cache hit rate for cost-effective caching. Below 10% may not justify the overhead.
 
-4. **Embedding Dimension**: Higher dimensions (e.g., 1536) provide better accuracy but increase storage and search time. Choose based on your quality requirements.
+4. **Embedding dimension**: Higher dimensions (e.g., 1536) provide better accuracy but increase storage and search time. Choose based on your quality requirements.
 
-5. **Index Creation**: Vector database indexes are created automatically on first use. This may take a few seconds for large datasets.
+5. **Index creation**: Vector database indexes are created automatically on first use. This may take a few seconds for large datasets.
 
 ## Notes
 

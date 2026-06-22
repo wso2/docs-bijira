@@ -61,7 +61,7 @@ Your applications (engineering / product / sales teams)
 All three teams use the same proxy endpoint. The proxy enforces each team's token budget, strips PII from prompts before they reach the provider, serves cached responses when available, and distributes requests across models in round-robin order. Every request is logged to Moesif with the team's API key identity attached.
 
 ---
-## Step 1: create an organization and project
+## Step 1: Create an organization and project
 
 Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
 
@@ -82,7 +82,7 @@ Once you're on the organization home page, create a project:
 
 **Expected result:** The project home page opens.
 
-## Step 2: create and start an AI gateway
+## Step 2: Create and start an AI gateway
 
 The AI gateway is the runtime that hosts your proxy and makes it reachable. If you already have a gateway running and it is shown as Active in the console, skip the remaining steps and proceed directly to Step 8.
 
@@ -139,7 +139,7 @@ vector_db_provider_ttl = 3600
 </video>
 
 
-## Step 3: add Azure OpenAI as an LLM provider
+## Step 3: Add Azure OpenAI as an LLM provider
 
 Before creating the proxy, you must register each provider's credentials in the AI Workspace. The proxy uses these credentials to authenticate with providers — your applications should never handle provider API keys directly.
 
@@ -166,7 +166,7 @@ On the API Platform landing page, click **AI Workspace**.
 </video>
 
 
-## Step 4: create the LLM proxy
+## Step 4: Create the LLM proxy
 
 The LLM proxy is the single endpoint all three teams will call. It abstracts provider details and is where you'll attach all governance policies.
 
@@ -194,7 +194,7 @@ The LLM proxy is the single endpoint all three teams will call. It abstracts pro
 </video>
 
 
-## Step 5: configure model round-robin distribution
+## Step 5: Configure model round-robin distribution
 
 This guardrail distributes requests across models in round-robin order to balance traffic and reduce overloading on any single model.
 
@@ -217,7 +217,7 @@ This guardrail distributes requests across models in round-robin order to balanc
 !!! tip
     To automatically skip a model when it returns errors or rate limit responses, expand Advanced Settings and set a Suspend Duration in seconds before clicking Add.
 
-## Step 6: enable PII masking
+## Step 6: Enable PII masking
 
 PII masking strips sensitive data from prompts before they are forwarded to any provider. Names, email addresses, phone numbers, and other identifiers are replaced with anonymized placeholders — providers never see the original data.
 
@@ -240,7 +240,7 @@ PII masking strips sensitive data from prompts before they are forwarded to any 
 </video>
 
 
-## Step 7: enable semantic caching
+## Step 7: Enable semantic caching
 
 Semantic caching returns a stored response when an incoming prompt is similar enough to a previously answered one. This reduces redundant provider calls and lowers cost — useful when teams frequently ask similar questions.
 
@@ -257,7 +257,7 @@ Semantic caching returns a stored response when an incoming prompt is similar en
   Your browser does not support the video tag.
 </video>
 
-## Step 8: deploy the proxy to the gateway
+## Step 8: Deploy the proxy to the gateway
 
 Now that all guardrails are configured, deploy the proxy once. Every configuration change requires a redeploy — deploying at the end means you only need one deploy and your API key won't be invalidated by a subsequent redeploy.
 
@@ -270,7 +270,7 @@ Now that all guardrails are configured, deploy the proxy once. Every configurati
     Every time you redeploy the proxy, all existing API keys are invalidated. Always generate your API key after the final redeploy.
 
 
-## Step 9: generate an API key
+## Step 9: Generate an API key
 
 1. On the proxy detail page, open the **Get Started** panel.
 2. Click **Generate API Key**, enter a name of at least 3 characters (for example `test-key`), and click **Generate**.

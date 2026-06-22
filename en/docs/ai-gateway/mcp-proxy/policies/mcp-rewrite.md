@@ -22,11 +22,11 @@ When a list is provided for a capability type, only the configured capabilities 
 
 ## Features
 
-- **Tool Rewriting**: Define user-facing tool names and map them to backend tool names with custom schemas and descriptions.
-- **Resource Rewriting**: Define user-facing resource identifiers and map them to backend resource identifiers with custom descriptions.
-- **Prompt Rewriting**: Define user-facing prompt names and map them to backend prompt names with custom metadata.
-- **Flexible Metadata**: Include additional fields (beyond `name`, `description`, `target`, etc.) in capability definitions for custom metadata in list responses.
-- **Optional Mapping**: Omit the `target` field to expose capabilities as-is without mapping to a different backend name.
+- **Tool rewriting**: Define user-facing tool names and map them to backend tool names with custom schemas and descriptions.
+- **Resource rewriting**: Define user-facing resource identifiers and map them to backend resource identifiers with custom descriptions.
+- **Prompt rewriting**: Define user-facing prompt names and map them to backend prompt names with custom metadata.
+- **Flexible metadata**: Include additional fields (beyond `name`, `description`, `target`, etc.) in capability definitions for custom metadata in list responses.
+- **Optional mapping**: Omit the `target` field to expose capabilities as-is without mapping to a different backend name.
 
 ## Configuration
 
@@ -58,7 +58,7 @@ These parameters are configured per MCP Proxy by the API developer:
 
 ## MCP proxy definition examples
 
-### Example 1: basic tool rewriting
+### Example 1: Basic tool rewriting
 
 Expose tools with different names than the backend:
 
@@ -90,7 +90,7 @@ spec:
     ...
 ```
 
-### Example 2: resource rewriting with URI mapping
+### Example 2: Resource rewriting with URI mapping
 
 Expose resources with user-friendly URIs mapped to backend resources:
 
@@ -122,7 +122,7 @@ spec:
     ...
 ```
 
-### Example 3: prompt and tool rewriting combined
+### Example 3: Prompt and tool rewriting combined
 
 Rewrite prompts and tools with metadata:
 
@@ -157,5 +157,5 @@ spec:
 
 ## Use cases
 
-1. **Semantic Naming**: Use user-friendly names in the API while keeping backend names internal or legacy.
-2. **AI Readiness**: Redefine name, description, input schema, etc. in a way that is friendly to the AI agents.
+1. **Semantic naming**: Use user-friendly names in the API while keeping backend names internal or legacy.
+2. **AI readiness**: Redefine name, description, input schema, etc. in a way that is friendly to the AI agents.

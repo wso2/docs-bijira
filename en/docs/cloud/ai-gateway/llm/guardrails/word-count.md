@@ -49,7 +49,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: basic word count validation
+### Example 1: Basic word count validation
 
 Deploy an LLM provider that validates request messages contain between 10 and 500 words:
 
@@ -136,24 +136,24 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate word counts in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate word counts in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content *outside* the specified word range. This is useful for blocking content that falls within a prohibited range.
+- **Inverted logic**: Set `invert: true` to allow only content *outside* the specified word range. This is useful for blocking content that falls within a prohibited range.
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 
 ## Use cases
 
-1. **Input Length Control**: Prevent users from submitting extremely long prompts that could impact system performance or costs.
+1. **Input length control**: Prevent users from submitting extremely long prompts that could impact system performance or costs.
 
-2. **Response Quality Assurance**: Ensure AI-generated responses meet minimum length requirements for completeness.
+2. **Response quality assurance**: Ensure AI-generated responses meet minimum length requirements for completeness.
 
-3. **Cost Management**: Limit response lengths to control token usage and associated costs.
+3. **Cost management**: Limit response lengths to control token usage and associated costs.
 
-4. **Content Filtering**: Use inverted logic to block content that falls outside acceptable word count ranges.
+4. **Content filtering**: Use inverted logic to block content that falls outside acceptable word count ranges.
 
 ## Error response
 

@@ -25,7 +25,7 @@ The default look of your MCP Hub will be as follows.
 
 ![MCP Hub theming editor showing color palette fields for background, primary, secondary, text, and gradient colors alongside a preview of the MCP-focused Developer Portal landing page](../../assets/img/introduction/mcp/mcp-devportal-default.png)
 
-A themed MCP Hub could look something like the following. If you want to know more on how you can customize the devportal, please refer to our [manual theming guide](../devportal/theming-devportal-org-level.md) and [theming with AI guide](../devportal/theming-devportal-with-ai.md).
+A themed MCP Hub could look something like the following. If you want to know more on how you can customize the devportal, see our [manual theming guide](../devportal/theming-devportal-org-level.md) and [theming with AI guide](../devportal/theming-devportal-with-ai.md).
 
 ![Themed MCP Hub theming editor showing purple primary color and preview of Developer Portal with purple hero banner saying Empower your development with our MCP Servers for your AI agents and a Product feature section](../../assets/img/introduction/mcp/mcp-devportal-themed.png)
 

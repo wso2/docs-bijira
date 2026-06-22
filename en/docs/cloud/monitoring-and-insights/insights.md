@@ -32,25 +32,25 @@ Every dashboard supports configurable refresh intervals and time-range filters, 
 
 ### Charts and visualizations
 
-**Overall Platform Metrics** — Shows traffic, errors, and throttled requests over time. Use it to see whether spikes in traffic align with failures or throttling, and to distinguish between demand-related issues and more isolated failures.
+**Overall platform metrics** — Shows traffic, errors, and throttled requests over time. Use it to see whether spikes in traffic align with failures or throttling, and to distinguish between demand-related issues and more isolated failures.
 
-**Consumer Onboarding Trend** — Tracks new consumer registrations over time. This is useful for understanding growth, measuring the effect of onboarding or product changes, and identifying whether increased traffic is being driven by new adoption.
+**Consumer onboarding trend** — Tracks new consumer registrations over time. This is useful for understanding growth, measuring the effect of onboarding or product changes, and identifying whether increased traffic is being driven by new adoption.
 
-**Top Applications** — Ranks applications by traffic volume so you can identify the consumers generating the most load. This is particularly helpful when planning capacity, investigating noisy consumers, or prioritizing customer-facing support.
+**Top applications** — Ranks applications by traffic volume so you can identify the consumers generating the most load. This is particularly helpful when planning capacity, investigating noisy consumers, or prioritizing customer-facing support.
 
-**Top APIs Across Platform** — Highlights the most frequently called APIs across all traffic types. This helps you identify which APIs are most critical to day-to-day traffic and therefore most important for reliability, optimization, and incident response.
+**Top APIs across platform** — Highlights the most frequently called APIs across all traffic types. This helps you identify which APIs are most critical to day-to-day traffic and therefore most important for reliability, optimization, and incident response.
 
-**Traffic Breakdown** — A pie chart showing the proportion of total traffic by gateway type — LLM, MCP, and API. Use this to understand how traffic is distributed across your platform.
+**Traffic breakdown** — A pie chart showing the proportion of total traffic by gateway type — LLM, MCP, and API. Use this to understand how traffic is distributed across your platform.
 
-**Traffic Intensity (Day vs Hour)** — Displays request volume by day of week and hour of day. Use it to spot recurring usage patterns, plan maintenance windows, and prepare infrastructure for predictable peak periods.
+**Traffic intensity (day vs hour)** — Displays request volume by day of week and hour of day. Use it to spot recurring usage patterns, plan maintenance windows, and prepare infrastructure for predictable peak periods.
 
-**Top Platforms** — Shows the distribution of operating systems used by consumers. This helps you understand the client environments accessing your platform and can inform client compatibility or support decisions.
+**Top platforms** — Shows the distribution of operating systems used by consumers. This helps you understand the client environments accessing your platform and can inform client compatibility or support decisions.
 
-**Top User Agents** — Breaks down request traffic by HTTP user agent so you can distinguish browser, SDK, and automated traffic. It is useful when you want to understand how users and integrations are interacting with your platform.
+**Top user agents** — Breaks down request traffic by HTTP user agent so you can distinguish browser, SDK, and automated traffic. It is useful when you want to understand how users and integrations are interacting with your platform.
 
-**Average Latency over Time** — Tracks average response latency across the platform. Sustained increases can point to backend degradation, upstream issues, or load-related performance problems that require deeper investigation.
+**Average latency over time** — Tracks average response latency across the platform. Sustained increases can point to backend degradation, upstream issues, or load-related performance problems that require deeper investigation.
 
-**Geo Map** — Shows where requests originate geographically. Switch between **Density Heatmap** and **Metric Heatmap** views. This can help with decisions around regional deployments, CDN placement, compliance planning, and understanding where user demand is concentrated.
+**Geo map** — Shows where requests originate geographically. Switch between **Density Heatmap** and **Metric Heatmap** views. This can help with decisions around regional deployments, CDN placement, compliance planning, and understanding where user demand is concentrated.
 
 ---
 
@@ -91,19 +91,19 @@ Cards for each protocol type let you quickly compare relative traffic volumes an
 
 #### Charts and visualizations
 
-**Traffic Volume over Time** — Shows request count and average latency on the same chart, making it easier to correlate traffic growth with performance changes. It is especially helpful for checking whether rising usage is contributing to slower responses.
+**Traffic volume over time** — Shows request count and average latency on the same chart, making it easier to correlate traffic growth with performance changes. It is especially helpful for checking whether rising usage is contributing to slower responses.
 
-**Error Type Breakdown** — Breaks errors into categories so you can quickly identify the most common failure type. This gives you an immediate sense of whether issues are mostly related to authentication, client behavior, backend systems, or other causes.
+**Error type breakdown** — Breaks errors into categories so you can quickly identify the most common failure type. This gives you an immediate sense of whether issues are mostly related to authentication, client behavior, backend systems, or other causes.
 
-**Error Rate Trend** — Shows how the error rate changes over time. This is especially useful for spotting regressions after deployments, validating fixes, and identifying intermittent issues that may not appear in aggregate metrics.
+**Error rate trend** — Shows how the error rate changes over time. This is especially useful for spotting regressions after deployments, validating fixes, and identifying intermittent issues that may not appear in aggregate metrics.
 
 ![All APIs Analytics dashboard showing traffic volume, error type breakdown, and error rate trend charts](../../assets/img/monitoring-and-insights/insights-4.png){.cInlineImage-full}
 
-**Traffic Intensity (Day vs Hour)** — Highlights when demand is highest by showing request volume by day and hour. Use it to understand recurring demand patterns and to align scaling or maintenance activities with real usage behavior.
+**Traffic intensity (day vs hour)** — Highlights when demand is highest by showing request volume by day and hour. Use it to understand recurring demand patterns and to align scaling or maintenance activities with real usage behavior.
 
-**Top Platforms** — A pie chart showing the distribution of API calls by client platform.
+**Top platforms** — A pie chart showing the distribution of API calls by client platform.
 
-**Top User Agents** — A pie chart showing the distribution of API calls by user agent.
+**Top user agents** — A pie chart showing the distribution of API calls by user agent.
 
 ### REST API analytics
 
@@ -122,31 +122,31 @@ Because REST traffic often represents the largest share of gateway traffic, this
 
 #### Charts and visualizations
 
-**Traffic Volume over Time** — Shows REST request volume together with latency so you can spot periods where rising demand may be affecting performance. This is one of the quickest ways to identify whether slowdowns are traffic-related.
+**Traffic volume over time** — Shows REST request volume together with latency so you can spot periods where rising demand may be affecting performance. This is one of the quickest ways to identify whether slowdowns are traffic-related.
 
-**Error Type Breakdown** — Categorizes REST errors to help determine whether failures are caused by authentication issues, invalid requests, rate limiting, or server-side problems.
+**Error type breakdown** — Categorizes REST errors to help determine whether failures are caused by authentication issues, invalid requests, rate limiting, or server-side problems.
 
-**Error Rate Trend** — Shows how REST error levels change over time, making it easier to pinpoint when a problem started and whether it is improving or worsening.
+**Error rate trend** — Shows how REST error levels change over time, making it easier to pinpoint when a problem started and whether it is improving or worsening.
 
 ![REST API Analytics dashboard showing traffic volume, error rate trend, and HTTP status code breakdown](../../assets/img/monitoring-and-insights/insights-5.png){.cInlineImage-full}
 
-**Traffic Intensity (Day vs Hour)** — Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
+**Traffic intensity (day vs hour)** — Displays peak usage periods for REST consumers by day and hour. This helps you understand normal traffic rhythm and identify the best times for maintenance or load testing.
 
-**HTTP Status Codes over Time** — Breaks responses into `2xx`, `4xx`, and `5xx` classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
+**HTTP status codes over time** — Breaks responses into `2xx`, `4xx`, and `5xx` classes so you can separate successful requests from client-side and server-side failures. This is useful for determining whether a problem is caused by consumer behavior or backend instability.
 
-**Application Usage Detail** — Lists the applications using the REST APIs, along with owner, usage count, error rate, and average latency. This helps identify which consumers are generating the most load, which ones are seeing the most errors, and which integrations may require follow-up.
+**Application usage detail** — Lists the applications using the REST APIs, along with owner, usage count, error rate, and average latency. This helps identify which consumers are generating the most load, which ones are seeing the most errors, and which integrations may require follow-up.
 
-**REST API Usage over Time** — Shows traffic trends for individual REST APIs, making it easier to track which APIs are growing, declining, or behaving unusually. It is useful when investigating issues affecting a specific API rather than the entire REST layer.
+**REST API usage over time** — Shows traffic trends for individual REST APIs, making it easier to track which APIs are growing, declining, or behaving unusually. It is useful when investigating issues affecting a specific API rather than the entire REST layer.
 
-**Cache Hit Percentage** — Tracks total hits, cache hits, and hit percentage over time. Higher cache hit rates usually reduce backend load and improve response times, so this chart helps you understand whether caching is working effectively.
+**Cache hit percentage** — Tracks total hits, cache hits, and hit percentage over time. Higher cache hit rates usually reduce backend load and improve response times, so this chart helps you understand whether caching is working effectively.
 
-**Cache Latency** — Shows the latency associated with cached responses so you can understand the performance benefit of caching and whether cached responses are materially improving user experience.
+**Cache latency** — Shows the latency associated with cached responses so you can understand the performance benefit of caching and whether cached responses are materially improving user experience.
 
-**Top Platforms** — Shows the operating systems used by REST API consumers. This gives you a better understanding of the environments from which REST traffic originates.
+**Top platforms** — Shows the operating systems used by REST API consumers. This gives you a better understanding of the environments from which REST traffic originates.
 
-**Top User Agents** — Shows the HTTP clients, browsers, SDKs, or tools making REST API calls. This can be helpful when diagnosing traffic patterns tied to a specific client or integration.
+**Top user agents** — Shows the HTTP clients, browsers, SDKs, or tools making REST API calls. This can be helpful when diagnosing traffic patterns tied to a specific client or integration.
 
-**Geo Map** — Displays the geographic origin of REST API traffic, with support for both **Density Heatmap** and **Metric Heatmap** views. Use it to understand regional demand and identify whether location-specific patterns are affecting usage or performance.
+**Geo map** — Displays the geographic origin of REST API traffic, with support for both **Density Heatmap** and **Metric Heatmap** views. Use it to understand regional demand and identify whether location-specific patterns are affecting usage or performance.
 
 !!! note
     Clicking any API type traffic card (**REST**, **Async**, **GraphQL**, **gRPC**, or **SOAP**) in the **All APIs Analytics** dashboard opens a drill-down dashboard for that protocol. Each drill-down follows the same layout as the REST API Analytics dashboard described above.
@@ -172,27 +172,27 @@ This dashboard is especially useful for teams building AI-powered experiences be
 
 ### Charts and visualizations
 
-**Requests by Provider** — Shows request volume by LLM provider so you can understand provider distribution and traffic share. This is useful when comparing vendor usage, planning failover strategies, or managing commercial dependencies.
+**Requests by provider** — Shows request volume by LLM provider so you can understand provider distribution and traffic share. This is useful when comparing vendor usage, planning failover strategies, or managing commercial dependencies.
 
-**Traffic Share by Model** — Shows how traffic is distributed across models, helping you monitor adoption and dependency on specific models. It can also help you identify whether expensive or experimental models are being used more heavily than expected.
+**Traffic share by model** — Shows how traffic is distributed across models, helping you monitor adoption and dependency on specific models. It can also help you identify whether expensive or experimental models are being used more heavily than expected.
 
-**Guardrail Triggers** — Shows how often each guardrail is triggered. This can help you tune thresholds, identify recurring policy issues, and understand whether requests are frequently being blocked or altered by safety controls.
+**Guardrail triggers** — Shows how often each guardrail is triggered. This can help you tune thresholds, identify recurring policy issues, and understand whether requests are frequently being blocked or altered by safety controls.
 
-**Token Usage over Time (Prompt vs Completion)** — Separates prompt and completion token usage over time so you can better understand input and output patterns. This is useful for identifying cases where prompts are too large, responses are unexpectedly verbose, or usage is growing inefficiently.
+**Token usage over time (prompt vs completion)** — Separates prompt and completion token usage over time so you can better understand input and output patterns. This is useful for identifying cases where prompts are too large, responses are unexpectedly verbose, or usage is growing inefficiently.
 
-**Error Type Breakdown** — Categorizes LLM errors to help determine whether failures come from policy violations, authentication problems, rate limits, or provider-side issues.
+**Error type breakdown** — Categorizes LLM errors to help determine whether failures come from policy violations, authentication problems, rate limits, or provider-side issues.
 
-**Cost Trend (Estimated USD)** — Tracks estimated LLM spend over time for budgeting, anomaly detection, and cost forecasting. This is especially useful when adoption is growing and cost needs to be monitored closely.
+**Cost trend (estimated USD)** — Tracks estimated LLM spend over time for budgeting, anomaly detection, and cost forecasting. This is especially useful when adoption is growing and cost needs to be monitored closely.
 
-**Request Intensity (Day vs Hour)** — Shows when AI features are used most heavily by mapping request volume across days and hours. Use it to understand peak demand windows and align scaling or cost controls accordingly.
+**Request intensity (day vs hour)** — Shows when AI features are used most heavily by mapping request volume across days and hours. Use it to understand peak demand windows and align scaling or cost controls accordingly.
 
-**Latency Trend (P90, Median)** — Shows both median and tail latency, helping you spot user experience issues that averages may hide. Tail latency is particularly important for conversational or interactive AI features.
+**Latency trend (P90, median)** — Shows both median and tail latency, helping you spot user experience issues that averages may hide. Tail latency is particularly important for conversational or interactive AI features.
 
-**Slowest Models** — Lists models by average latency, along with provider and error counts, so you can identify underperforming models and make better decisions about model selection.
+**Slowest models** — Lists models by average latency, along with provider and error counts, so you can identify underperforming models and make better decisions about model selection.
 
-**Semantic Cache Hit Ratio** — Shows the overall cache efficiency. A high ratio means similar prompts are being served from cache, reducing both latency and cost while improving consistency for repeated requests.
+**Semantic cache hit ratio** — Shows the overall cache efficiency. A high ratio means similar prompts are being served from cache, reducing both latency and cost while improving consistency for repeated requests.
 
-**Semantic Cache Hit Over Time** — Shows how cache effectiveness changes over time as prompt patterns evolve. This helps you understand whether semantic caching is becoming more or less useful as user behavior changes.
+**Semantic cache hit over time** — Shows how cache effectiveness changes over time as prompt patterns evolve. This helps you understand whether semantic caching is becoming more or less useful as user behavior changes.
 
 ---
 
@@ -213,18 +213,18 @@ This dashboard is useful when AI agents or MCP-enabled clients are interacting w
 
 ### Charts and visualizations
 
-**Traffic Volume over Time** — Shows MCP event count together with latency so you can identify spikes in activity or slower tool execution. This is useful when diagnosing whether increased tool usage is affecting response time.
+**Traffic volume over time** — Shows MCP event count together with latency so you can identify spikes in activity or slower tool execution. This is useful when diagnosing whether increased tool usage is affecting response time.
 
-**Top Tools by Calls** — Ranks MCP tools by invocation count, helping you identify heavily used tools and prioritize reliability improvements, performance tuning, or governance around the most critical tools.
+**Top tools by calls** — Ranks MCP tools by invocation count, helping you identify heavily used tools and prioritize reliability improvements, performance tuning, or governance around the most critical tools.
 
-**Unique Consumers over Time** — Tracks how the number of distinct MCP consumers changes over time, which is useful for measuring adoption and understanding whether MCP usage is expanding across teams or integrations.
+**Unique consumers over time** — Tracks how the number of distinct MCP consumers changes over time, which is useful for measuring adoption and understanding whether MCP usage is expanding across teams or integrations.
 
-**Traffic Intensity (Day vs Hour)** — Shows when agents are most active by mapping tool call volume across days and hours. This helps you understand agent behavior patterns and identify periods of concentrated tool usage.
+**Traffic intensity (day vs hour)** — Shows when agents are most active by mapping tool call volume across days and hours. This helps you understand agent behavior patterns and identify periods of concentrated tool usage.
 
-**Error Rate Trend** — Shows how MCP error levels change over time so you can correlate spikes with tool changes, client behavior changes, or upstream outages.
+**Error rate trend** — Shows how MCP error levels change over time so you can correlate spikes with tool changes, client behavior changes, or upstream outages.
 
-**Error Type Breakdown** — Categorizes MCP errors, including parse errors, invalid requests, missing methods, invalid parameters, internal errors, and server errors. This helps you distinguish malformed client requests from implementation gaps or server-side failures.
+**Error type breakdown** — Categorizes MCP errors, including parse errors, invalid requests, missing methods, invalid parameters, internal errors, and server errors. This helps you distinguish malformed client requests from implementation gaps or server-side failures.
 
-**Server Distribution** — Shows which MCP servers are handling traffic so you can understand load distribution across your MCP server fleet and identify over-reliance on a particular server.
+**Server distribution** — Shows which MCP servers are handling traffic so you can understand load distribution across your MCP server fleet and identify over-reliance on a particular server.
 
-**Client Distribution** — Shows the distribution of MCP clients by type, helping you identify which runtimes or development environments are driving usage and where MCP adoption is strongest.
+**Client distribution** — Shows the distribution of MCP clients by type, helping you identify which runtimes or development environments are driving usage and where MCP adoption is strongest.

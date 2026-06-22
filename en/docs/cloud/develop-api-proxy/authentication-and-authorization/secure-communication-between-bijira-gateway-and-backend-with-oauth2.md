@@ -22,14 +22,14 @@ When you need the API Platform Gateway to call your backend over OAuth2, use the
 
 ### Prerequisites
 
-- **Protected Backend**: The target endpoint must enforce OAuth2 (e.g., bearer-token validation).
-- **Token Endpoint**: The URL of the Key manager's token endpoint that protects your backend.
-- **OAuth2 Application Credentials**: A client ID and secret for an OAuth2 application dedicated to the API Platform Gateway's outbound calls.
+- **Protected backend**: The target endpoint must enforce OAuth2 (e.g., bearer-token validation).
+- **Token endpoint**: The URL of the Key manager's token endpoint that protects your backend.
+- **OAuth2 application credentials**: A client ID and secret for an OAuth2 application dedicated to the API Platform Gateway's outbound calls.
 
 !!! note
     Only the client-credentials grant type is currently supported.
 
-### Step 1: configure the OAuth2 policy
+### Step 1: Configure the OAuth2 policy
 
 To configure the OAuth2 policy, follow the steps given below:
 
@@ -47,7 +47,7 @@ To configure the OAuth2 policy, follow the steps given below:
 !!! note
     By default, the token is set to the Authorization header. However, it is possible to set the token to any preferred header through the given input field.
 
-### Step 2: deploy the API
+### Step 2: Deploy the API
 
 Once your OAuth2 policy is in place, deploy your API proxy so the changes take effect.
 
@@ -59,7 +59,7 @@ To deploy the API, follow the steps given below:
 
 Once the deployment is complete, you can [test the API](../../test-api-proxy/openapi-console.md) to confirm that the Gateway successfully obtains and forwards OAuth2 tokens.
 
-### Step 3: promote to higher environments
+### Step 3: Promote to higher environments
 
 To promote the proxy to higher environments, use the **Promote** button.
 

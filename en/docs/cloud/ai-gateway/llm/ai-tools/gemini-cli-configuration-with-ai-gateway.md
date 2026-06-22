@@ -16,7 +16,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: start an AI Gateway on WSO2 API Platform
+## Step 1: Start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
@@ -47,7 +47,7 @@ Once the AI Gateway is active, you can continue to create the Gemini LLM provide
 
 ---
 
-## Step 2: create and deploy a Gemini LLM provider in AI Workspace console
+## Step 2: Create and deploy a Gemini LLM provider in AI Workspace console
 
 1. Log in to the WSO2 API Platform Console as an admin.
 
@@ -81,7 +81,7 @@ The Gemini LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: create and deploy an app LLM proxy
+## Step 3: Create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Google Gemini CLI will invoke through WSO2 API Platform.
 
@@ -165,7 +165,7 @@ You will use these values when configuring Gemini CLI.
 
 ---
 
-## Step 4: configure Gemini CLI environment variables
+## Step 4: Configure Gemini CLI environment variables
 
 Open a terminal session where you want to run Google Gemini CLI.
 
@@ -208,7 +208,7 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 ---
 
-## Step 5: run Google Gemini CLI
+## Step 5: Run Google Gemini CLI
 
 After setting the required environment variables, run Gemini CLI:
 

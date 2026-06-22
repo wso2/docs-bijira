@@ -30,7 +30,7 @@ Let's take a look at the specifics of each part to understand the deployment arc
 
     Forwards inbound TCP (transmission control protocol) traffic from the Tailscale proxy container’s network interface to the SOCKS5 proxy, ensuring it reaches its destination via the secured WireGuard tunnel.
 
-- **API Proxies and API Platform API gateway**
+- **API proxies and API Platform API Gateway**
 
     API proxies within the same project as the Tailscale proxy can send their traffic to the ports exposed on the Tailscale proxy. The Tailscale proxy then forwards this traffic to the correct target node and IP address in your Tailscale network that is defined in the port mapping of the endpoint configuration
 
@@ -38,7 +38,7 @@ Let's take a look at the specifics of each part to understand the deployment arc
 
 Now that you understand the deployment architecture, let’s explore how you can use Tailscale to secure connections to your private networks.
 
-## Configure and use tailscale to access private network endpoints
+## Configure and use Tailscale to access private network endpoints
 
 This section walks you through the steps to create, configure, deploy, and use the Tailscale proxy component.
 
@@ -48,7 +48,7 @@ This section walks you through the steps to create, configure, deploy, and use t
 - Have a Tailscale account (Tailnet). There are multiple plans available for you to set up your Tailscale network. For details, see [Tailscale plans](https://tailscale.com/pricing).
 - Install Tailscale and connect your private data center or server to it, so that your private services are accessible via your Tailscale network. To quickly get started with Tailscale, see the [Tailscale quickstart](https://tailscale.com/kb/1017/install).
 
-### Step 1: create the tailscale proxy component
+### Step 1: Create the Tailscale proxy component
 
 1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
 2.  In the API Platform Console top navigation menu, select the **Organization**, and then the **Project**.
@@ -71,20 +71,20 @@ Now you have successfully created the Tailscale proxy. You can proceed to config
 
 ![Tailscale proxy detail page showing name, Tailscale Auth Key field, Endpoint Configurations section, and Save and Deploy button](../../../assets/img/administer/tailscale/tailscale-created-view.png)
 
-### Step 2: configure and deploy the tailscale proxy
+### Step 2: Configure and deploy the Tailscale proxy
 
 Here, you will set the Tailscale authentication key, configure endpoints, and deploy the Tailscale proxy.
 
 Follow the steps given below:
 
 
-#### Step 2.1: configure and deploy the tailscale proxy
+#### Step 2.1: Configure and deploy the Tailscale proxy
 
 To configure and deploy the tailscale proxy, follow the steps given below:
 
-  1. Enter Your Tailscale Auth Key
+  1. Enter your Tailscale Auth key
 
-    To connect your system to Tailscale, you need an **Auth Key**. Follow the steps below to generate one:
+    To connect your system to Tailscale, you need an **Auth key**. Follow the steps below to generate one:
 
     - Visit the Tailscale Admin Keys page: [https://login.tailscale.com/admin/settings/keys](https://login.tailscale.com/admin/settings/keys)  
     - Click on the **Generate Auth Key** button to create a new key.
@@ -104,10 +104,10 @@ To configure and deploy the tailscale proxy, follow the steps given below:
 
     ii. In the "Add Endpoint Configuration" section of the Tailscale proxy interface, fill in the following fields:
 
-      - **Endpoint Name:** A descriptive name for the endpoint (e.g., `Internal Security APIs`).  
+      - **Endpoint name:** A descriptive name for the endpoint (e.g., `Internal Security APIs`).  
       - **Port:** The port on the Tailscale proxy that will receive incoming API traffic (e.g., `8090`).  
       - **Target IP:** The IP address of the external device where the traffic should be forwarded (e.g., `192.168.1.1`).  
-      - **Target Port:** The port on the external device that should receive the traffic (e.g., `9000`).
+      - **Target port:** The port on the external device that should receive the traffic (e.g., `9000`).
 
     iii. Click the **Add** button to save the endpoint and the port mapping.  
 
@@ -131,7 +131,7 @@ To configure and deploy the tailscale proxy, follow the steps given below:
 !!! note
      You can configure multiple endpoints and port mappings on the same Tailscale device, and also across multiple Tailscale devices. This allows you to forward traffic from different ports to different external devices as needed.
 
-### Step 3: configure API proxy to forward traffic to tailscale proxy
+### Step 3: Configure API proxy to forward traffic to Tailscale proxy
 
 After the deployment is complete, the Tailscale proxy URL will be displayed in the environment view.
 
@@ -158,7 +158,7 @@ If you want to add a new private endpoint to your network and access it via the 
 ## Best practices
 
 
-### Use tailscale acls
+### Use Tailscale ACLs
 
 You can use [Tailscale ACLs](https://tailscale.com/kb/1018/acls) to precisely manage permission for users and devices on your Tailnet.
 

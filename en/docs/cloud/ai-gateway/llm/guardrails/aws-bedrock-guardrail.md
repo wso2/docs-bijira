@@ -106,7 +106,7 @@ When `redactPII` is `true`:
 
 ## Examples
 
-### Example 1: basic guardrail with static credentials
+### Example 1: Basic guardrail with static credentials
 
 Deploy an LLM provider with AWS Bedrock Guardrail validation:
 

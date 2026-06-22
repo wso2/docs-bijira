@@ -37,7 +37,7 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 7. Click **Add** (for providers) or **Submit** (for proxies).
 8. Deploy the provider or proxy to apply the changes.
 
-## Example: translation template
+## Example: Translation template
 
 **Configured template:**
 

@@ -22,8 +22,8 @@ This capability allows platform administrators and business stakeholders to gain
  - Active Moesif Account and an Application ID
 > **Note:** For obtaining the Application ID:
 > - Step 1: Sign up in [Moesif](https://www.moesif.com/)
-> - Sept 2: Follow the onboarding wizard.
-> - Sept 3: During the sign up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
+> - Step 2: Follow the onboarding wizard.
+> - Step 3: During the sign up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
 
 > For more detailed instructions and advanced configuration options, refer to the [official Moesif Documentation](https://www.moesif.com/docs).
 

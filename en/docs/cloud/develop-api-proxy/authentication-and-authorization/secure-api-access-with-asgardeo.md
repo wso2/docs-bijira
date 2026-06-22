@@ -50,7 +50,7 @@ You can provide fine-grained access control to your API resources with scopes. F
 10. Click **Publish** and continue to publish your API to the Choreo Developer Portal.  -->
 
 
-## Step 1: create an API and an application in Asgardeo
+## Step 1: Create an API and an application in Asgardeo
 
 Follow the [Asgardeo API Authorization guide](https://wso2.com/asgardeo/docs/guides/api-authorization/) to create an application and an API in Asgardeo and to enable API authorization.
 
@@ -60,7 +60,7 @@ Follow the [Asgardeo API Authorization guide](https://wso2.com/asgardeo/docs/gui
         - Select the appropriate grant types.
         - Copy the client ID and client secret of the application for future reference.
 
-## Step 2: create an application in API Platform and enable external key manager authentication
+## Step 2: Create an application in API Platform and enable external key manager authentication
 
 Follow the steps below to consume the API Platform API and use an external key manager for authentication:
 
@@ -81,7 +81,7 @@ Follow the steps below to consume the API Platform API and use an external key m
 10. You can click on the **Instructions** to view instructions to generate an access token.
 11. Click **Subscribe to more APIs** button to explore the APIs and subscribe them through the application.
 
-## Step 3: invoke the API Platform API
+## Step 3: Invoke the API Platform API
 
 1. On the API Platform Developer Portal, go to your application. 
 2. On the top of the page, under **OAuth2**, click **View** to see the **Token Endpoint** URL.

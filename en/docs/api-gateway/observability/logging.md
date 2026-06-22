@@ -102,18 +102,18 @@ docker compose --profile logging down -v
 
 This removes the `opensearch-data` volume containing all stored logs.
 
-## Viewing logs in opensearch dashboards
+## Viewing logs in OpenSearch Dashboards
 
 Once you've started the gateway with the logging profile, follow these steps to view component logs:
 
-### Step 1: access opensearch dashboards
+### Step 1: Access OpenSearch Dashboards
 
 Open your browser and navigate to:
 ```
 http://localhost:5601
 ```
 
-### Step 2: create an index pattern
+### Step 2: Create an index pattern
 
 Before you can view logs, you need to create an index pattern:
 
@@ -126,7 +126,7 @@ Before you can view logs, you need to create an index pattern:
 7. Select **@timestamp** as the time field
 8. Click **Create index pattern**
 
-### Step 3: navigate to discover
+### Step 3: Navigate to discover
 
 To view and explore logs:
 
@@ -135,7 +135,7 @@ To view and explore logs:
 3. Select the `gateway-logs-*` index pattern from the dropdown in the top-left
 4. Adjust the time range in the top-right corner if needed (default is last 15 minutes)
 
-### Step 4: filter logs by component
+### Step 4: Filter logs by component
 
 To view logs for a specific gateway component, use filters:
 
@@ -163,7 +163,7 @@ To view logs for a specific gateway component, use filters:
 4. **Value**: `router`
 5. Click **Save**
 
-### Step 5: search and filter logs
+### Step 5: Search and filter logs
 
 You can refine your log search using:
 
@@ -205,12 +205,12 @@ Search for slow requests (if duration field exists):
 duration_ms:>1000
 ```
 
-### Step 6: customize log view
+### Step 6: Customize log view
 
-- **Add/Remove Columns**: Click the **gear icon** next to the field list to select which fields to display
+- **Add/remove columns**: Click the **gear icon** next to the field list to select which fields to display
 - **Sort**: Click column headers to sort by that field
-- **Expand Logs**: Click the **>** arrow next to any log entry to see full details in JSON format
-- **Save Search**: Click **Save** in the top menu to save your filters and queries for later use
+- **Expand logs**: Click the **>** arrow next to any log entry to see full details in JSON format
+- **Save search**: Click **Save** in the top menu to save your filters and queries for later use
 
 ## Alternative logging stacks
 
@@ -254,7 +254,7 @@ Update Fluent Bit output:
     Logstash_Prefix gateway-logs
 ```
 
-### Grafana loki
+### Grafana Loki
 
 For a lightweight, Prometheus-inspired logging solution:
 
@@ -288,7 +288,7 @@ grafana:
 
 ### Cloud-native solutions
 
-#### AWS cloudwatch
+#### AWS CloudWatch
 
 Configure Fluent Bit to send logs to CloudWatch:
 

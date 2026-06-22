@@ -59,7 +59,7 @@ If `jsonPath` is empty or not specified, the entire payload is processed as a st
 
 ## Examples
 
-### Example 1: basic PII masking
+### Example 1: Basic PII masking
 
 Deploy an LLM provider that masks email addresses and phone numbers in requests and restores them in responses:
 
@@ -135,27 +135,27 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **PII Redaction**: Set `redactPII: true` to permanently replace PII with "*****" (cannot be restored). Set `redactPII: false` to use masking mode with placeholders that can be restored in responses.
+- **PII redaction**: Set `redactPII: true` to permanently replace PII with "*****" (cannot be restored). Set `redactPII: false` to use masking mode with placeholders that can be restored in responses.
 
-- **Multiple PII Types**: Configure multiple `piiEntities` in the array to detect and mask/redact various PII types (e.g., EMAIL, PHONE, CREDIT_CARD, SSN, IP_ADDRESS, DATE_OF_BIRTH).
+- **Multiple PII types**: Configure multiple `piiEntities` in the array to detect and mask/redact various PII types (e.g., EMAIL, PHONE, CREDIT_CARD, SSN, IP_ADDRESS, DATE_OF_BIRTH).
 
-- **Full Payload Processing**: Omit the `jsonPath` parameter to process the entire request body without JSONPath extraction.
+- **Full payload processing**: Omit the `jsonPath` parameter to process the entire request body without JSONPath extraction.
 
-- **Field-Specific Processing**: Use `jsonPath` to extract and process PII from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content).
+- **Field-specific processing**: Use `jsonPath` to extract and process PII from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content).
 
-- **Response Restoration**: When using masking mode (`redactPII: false`), PII is automatically restored in responses. No separate response configuration is needed. If `redactPII: true`, no restoration occurs in the response phase.
+- **Response restoration**: When using masking mode (`redactPII: false`), PII is automatically restored in responses. No separate response configuration is needed. If `redactPII: true`, no restoration occurs in the response phase.
 
 ## Use cases
 
-1. **Privacy Protection**: Mask or redact PII before sending data to AI services or external systems.
+1. **Privacy protection**: Mask or redact PII before sending data to AI services or external systems.
 
 2. **Compliance**: Meet regulatory requirements (GDPR, CCPA, HIPAA) for PII handling.
 
-3. **Data Minimization**: Reduce exposure of sensitive data in logs, analytics, or third-party integrations.
+3. **Data minimization**: Reduce exposure of sensitive data in logs, analytics, or third-party integrations.
 
-4. **Secure Processing**: Allow AI processing while protecting user privacy through masking.
+4. **Secure processing**: Allow AI processing while protecting user privacy through masking.
 
-5. **Audit Trail**: Maintain masked versions of data for auditing while protecting original values.
+5. **Audit trail**: Maintain masked versions of data for auditing while protecting original values.
 
 ## How it works
 

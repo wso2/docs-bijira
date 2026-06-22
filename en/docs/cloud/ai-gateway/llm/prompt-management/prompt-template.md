@@ -74,7 +74,7 @@ Translate the following text from english to spanish: Hello
 
 ## Examples
 
-### Example 1: translation template
+### Example 1: Translation template
 
 Deploy an LLM provider with a translation prompt template:
 
@@ -149,7 +149,7 @@ The policy will transform the request to:
 }
 ```
 
-### Example 2: summarization template
+### Example 2: Summarization template
 
 Create a template for summarizing content with configurable length:
 
@@ -206,7 +206,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 3: multiple templates
+### Example 3: Multiple templates
 
 Configure multiple templates in a single policy:
 
@@ -237,15 +237,15 @@ policies:
 
 ## Use cases
 
-1. **Standardized Prompts**: Ensure consistent prompt formatting across different API consumers by centralizing prompt definitions.
+1. **Standardized prompts**: Ensure consistent prompt formatting across different API consumers by centralizing prompt definitions.
 
-2. **Reusable Templates**: Create library of common prompts (translation, summarization, explanation) that can be reused across multiple APIs.
+2. **Reusable templates**: Create library of common prompts (translation, summarization, explanation) that can be reused across multiple APIs.
 
-3. **Parameterized Prompts**: Allow dynamic content insertion while maintaining consistent prompt structure and quality.
+3. **Parameterized prompts**: Allow dynamic content insertion while maintaining consistent prompt structure and quality.
 
-4. **Multi-language Support**: Use templates with language parameters to standardize prompts for different locales.
+4. **Multi-language support**: Use templates with language parameters to standardize prompts for different locales.
 
-5. **Prompt Versioning**: Update prompt templates centrally without requiring changes to client applications.
+5. **Prompt versioning**: Update prompt templates centrally without requiring changes to client applications.
 
 ## Template pattern matching
 

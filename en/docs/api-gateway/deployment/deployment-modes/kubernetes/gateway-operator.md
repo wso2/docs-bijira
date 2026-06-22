@@ -27,7 +27,7 @@ For mode comparison and overall context, see [API Platform Kubernetes Gateway ov
 
 ## Overview
 
-### Path a — platform CRDs (`apigateway` + `restapi`)
+### Path A — platform CRDs (`APIGateway` + `RestAPI`)
 
 | CRD | Purpose |
 |-----|---------|
@@ -36,7 +36,7 @@ For mode comparison and overall context, see [API Platform Kubernetes Gateway ov
 
 The operator watches these CRs, runs Helm for the gateway runtime, and deploys APIs through gateway-controller’s management REST API.
 
-### Path b — Kubernetes gateway API (`Gateway` + `httproute`)
+### Path B — Kubernetes Gateway API (`Gateway` + `HTTPRoute`)
 
 | Resource | Purpose |
 |----------|---------|
@@ -415,7 +415,7 @@ curl --request GET \
   -k
 ```
 
-### 6. Optional: second httproute (`hello-api-2`)
+### 6. Optional: Second HTTPRoute (`hello-api-2`)
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -491,7 +491,7 @@ Attach policies to HTTPRoutes using the `APIPolicy` CR (`gateway.api-platform.ws
 - **API-level** — set `spec.targetRef` to the HTTPRoute; entries in `spec.policies` are merged into `APIConfigData.policies`.
 - **Rule-scoped** — omit `spec.targetRef`; reference the `APIPolicy` from an HTTPRoute rule via `filters[].type: ExtensionRef`.
 
-#### 7.1 apipolicy crs (API-level + rule-scoped)
+#### 7.1 APIPolicy CRs (API-level + rule-scoped)
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -538,7 +538,7 @@ EOF
 kubectl get apipolicy -n gateway-api-demo
 ```
 
-#### 7.2 httproute with extensionref
+#### 7.2 HTTPRoute with ExtensionRef
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -611,7 +611,7 @@ curl --request GET \
   --header 'Accept: application/json' -k
 ```
 
-#### 7.3 Secret-backed apipolicy with `valuefrom`
+#### 7.3 Secret-backed APIPolicy with `valueFrom`
 
 The operator resolves `params.valueFrom.secretKeyRef` (or `configMapKeyRef`) to a plain string before calling gateway-controller, and re-reconciles the HTTPRoute whenever the referenced Secret/ConfigMap changes.
 
@@ -652,7 +652,7 @@ EOF
 kubectl get secret,apipolicy -n gateway-api-demo
 ```
 
-#### 7.4 httproute referencing the secret-backed apipolicy
+#### 7.4 HTTPRoute referencing the secret-backed APIPolicy
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -735,7 +735,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/certificates -u "admin:ad
 
 Per-gateway Helm values are supplied as a **ConfigMap** whose data includes **`values.yaml`** (partial YAML is fine; the operator **deep-merges** it onto the operator’s default gateway values file loaded from **`gateway.helm.valuesFilePath`**).
 
-### `APIGateway` (`spec.configref`)
+### `APIGateway` (`spec.configRef`)
 
 Create the ConfigMap:
 
@@ -764,7 +764,7 @@ spec:
     name: gateway-custom-config
 ```
 
-### Kubernetes gateway API (`Gateway`)
+### Kubernetes Gateway API (`Gateway`)
 
 Use the **same ConfigMap** shape (`data.values.yaml`). Put the ConfigMap in the **same namespace** as the **`Gateway`**, then point the **`Gateway`** at it with this annotation (not a field on **`spec`**):
 

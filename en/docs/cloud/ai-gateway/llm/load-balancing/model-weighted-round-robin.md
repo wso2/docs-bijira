@@ -42,12 +42,12 @@ The policy requires `requestModel` configuration from the LLM provider template 
 
 ## How it works
 
-1. **Weight Calculation**: During policy initialization, the policy calculates the total weight of all configured models and builds a weighted sequence where each model appears a number of times proportional to its weight. This sequence is built once and reused for all requests.
-2. **Model Selection**: On each request, the policy selects the next available model from the pre-computed weighted sequence using a round-robin algorithm.
-3. **Model Extraction**: The policy extracts the original model from the request using the `requestModel` configuration and stores it for reference.
-4. **Model Modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
-5. **Failure Handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
-6. **Availability Check**: Suspended models are skipped during selection until their suspension period expires.
+1. **Weight calculation**: During policy initialization, the policy calculates the total weight of all configured models and builds a weighted sequence where each model appears a number of times proportional to its weight. This sequence is built once and reused for all requests.
+2. **Model selection**: On each request, the policy selects the next available model from the pre-computed weighted sequence using a round-robin algorithm.
+3. **Model extraction**: The policy extracts the original model from the request using the `requestModel` configuration and stores it for reference.
+4. **Model modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
+5. **Failure handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
+6. **Availability check**: Suspended models are skipped during selection until their suspension period expires.
 
 ### Weight distribution example
 
@@ -63,7 +63,7 @@ The weighted sequence would be: `[A, A, A, B, B, C]`, meaning:
 
 ## Examples
 
-### Example 1: basic weighted round robin with payload-based model
+### Example 1: Basic weighted round robin with payload-based model
 
 Deploy an LLM provider with weighted round-robin load balancing:
 
@@ -136,10 +136,10 @@ curl -X POST http://openai:8080/chat/completions \
 
 When a model returns a 5xx or 429 response, the policy can automatically suspend that model for a configurable duration:
 
-- **Suspension Duration**: Configured via the `suspendDuration` parameter (in seconds)
-- **Automatic Recovery**: Suspended models are automatically re-enabled after the suspension period expires
-- **Availability Check**: Suspended models are skipped during weighted round-robin selection until they recover
-- **Weight Preservation**: When a model is suspended, the remaining models continue to be selected based on their relative weights
+- **Suspension duration**: Configured via the `suspendDuration` parameter (in seconds)
+- **Automatic recovery**: Suspended models are automatically re-enabled after the suspension period expires
+- **Availability check**: Suspended models are skipped during weighted round-robin selection until they recover
+- **Weight preservation**: When a model is suspended, the remaining models continue to be selected based on their relative weights
 
 ### Suspension behavior
 
@@ -149,17 +149,17 @@ When a model returns a 5xx or 429 response, the policy can automatically suspend
 
 ## Use cases
 
-1. **Capacity-Based Distribution**: Distribute requests based on model capacity, giving higher weights to models that can handle more load.
+1. **Capacity-based distribution**: Distribute requests based on model capacity, giving higher weights to models that can handle more load.
 
-2. **Cost Optimization**: Route more requests to cheaper models while maintaining some traffic to premium models for quality assurance.
+2. **Cost optimization**: Route more requests to cheaper models while maintaining some traffic to premium models for quality assurance.
 
-3. **Performance Tiers**: Prioritize high-performance models for critical requests while using standard models for regular traffic.
+3. **Performance tiers**: Prioritize high-performance models for critical requests while using standard models for regular traffic.
 
-4. **Gradual Migration**: Gradually shift traffic from old models to new models by adjusting weights over time.
+4. **Gradual migration**: Gradually shift traffic from old models to new models by adjusting weights over time.
 
-5. **Multi-Provider Balancing**: Distribute requests across models from different providers with different weights based on SLA or cost agreements.
+5. **Multi-provider balancing**: Distribute requests across models from different providers with different weights based on SLA or cost agreements.
 
-6. **A/B Testing with Bias**: Test different models with weighted traffic distribution to compare performance while maintaining a bias toward preferred models.
+6. **A/B testing with bias**: Test different models with weighted traffic distribution to compare performance while maintaining a bias toward preferred models.
 
 ## Request model locations
 
@@ -199,10 +199,10 @@ Extract model from URL path using regex:
 
 The policy builds a weighted sequence by repeating each model a number of times equal to its weight:
 
-- **Total Weight**: Sum of all model weights
-- **Sequence Length**: Equal to the total weight
+- **Total weight**: Sum of all model weights
+- **Sequence length**: Equal to the total weight
 - **Distribution**: Each model appears in the sequence `weight` times
-- **Proportional Selection**: Over time, each model receives requests proportional to `model_weight / total_weight`
+- **Proportional selection**: Over time, each model receives requests proportional to `model_weight / total_weight`
 
 ### Example weight distribution
 

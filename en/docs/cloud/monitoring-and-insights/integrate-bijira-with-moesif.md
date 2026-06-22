@@ -1,6 +1,6 @@
 # Integrate API Platform with Moesif
 
-Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage.  While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding. 
+Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage. While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding.
 
 In this guide, you will:
 
@@ -8,12 +8,12 @@ In this guide, you will:
 - Configure API Platform to connect to Moesif.
 - Invoke an API and observe the insights on the Moesif dashboard. 
 
-## Step 1: generate an API key in Moesif
+## Step 1: Generate an API key in Moesif
 
 Let's generate an API key in Moesif. 
 If you're an existing Moesif user with a registered organization, proceed to [step 1.2](#step-12-access-the-api-key-in-moesif-as-an-existing-user).
 
-### Step 1.1: generate a key in Moesif as a new user 
+### Step 1.1: Generate a key in Moesif as a new user 
 
 If you are a new user, follow the steps below to register an organization and generate a key:
 
@@ -38,7 +38,7 @@ If you are a new user, follow the steps below to register an organization and ge
      ![Moesif Quick Install page showing WSO2 Bijira integration with Application Id to copy](../../assets/img/monitoring-and-insights/first_time_key_moesif.png)
      
 
-### Step 1.2: access the API key in Moesif as an existing user
+### Step 1.2: Access the API key in Moesif as an existing user
 
 If you are an existing user with a registered organization, or you do not have an API key for the organization you created,  follow the steps below to access the generated API key:
 
@@ -47,7 +47,7 @@ If you are an existing user with a registered organization, or you do not have a
 3. Copy the **Collection Application Id**.
 
 
-## Step 2: integrate API Platform with Moesif
+## Step 2: Integrate API Platform with Moesif
 
 Let's configure API Platform to publish events to Moesif.
 
@@ -65,7 +65,7 @@ Once you successfully add the key, you will see a delete option next to it. Curr
     Once you configure the Moesif API key on API Platform, **wait for five minutes before you publish any data to the Moesif** API analytics platform. 
 
 
-## Step 3: invoke an API and observe the data on the Moesif dashboard 
+## Step 3: Invoke an API and observe the data on the Moesif dashboard 
 
 You have configured API Platform to publish data to Moesif. Let's see how you can view the insights on Moesif.
 

@@ -24,13 +24,13 @@ The Prompt Decorator policy dynamically modifies prompts by prepending or append
 
 ## Decoration modes
 
-### Mode 1: text prompt decoration
+### Mode 1: Text prompt decoration
 
 Text decoration is used when the JSONPath targets a string field (e.g., `$.messages[0].content`). The decoration can be:
 - A simple string that gets prepended or appended to the content
 - An array of decoration objects (their content fields are concatenated with newlines)
 
-**Configuration Example:**
+**Configuration example:**
 ```json
 {
   "decoration": "Summarize the following content in a concise, neutral, and professional tone. Structure the summary using bullet points if appropriate.\n\n"
@@ -41,11 +41,11 @@ Text decoration is used when the JSONPath targets a string field (e.g., `$.messa
 - Decoration string is prepended or appended to the target content field
 - A space is automatically added between the decoration and original content
 
-### Mode 2: chat prompt decoration
+### Mode 2: Chat prompt decoration
 
 Chat decoration is used when the JSONPath targets an array field (e.g., `$.messages`). The decoration must be an array of message objects:
 
-**Configuration Example:**
+**Configuration example:**
 ```json
 {
   "decoration": [
@@ -71,13 +71,13 @@ The decorator supports JSONPath expressions to target specific fields. Common ex
 - `$.messages` - Entire messages array (chat decoration)
 - `$.data.text` - Nested text field (text decoration)
 
-**Array Index Syntax:**
+**Array index syntax:**
 - Use `[0]` for first element, `[1]` for second, etc.
 - Use `[-1]` for last element, `[-2]` for second-to-last, etc.
 
 ## Examples
 
-### Example 1: text prompt decoration - summarization directive
+### Example 1: Text prompt decoration - summarization directive
 
 Add a summarization instruction to user prompts:
 
@@ -152,7 +152,7 @@ curl -X POST http://openai:8080/chat/completions \
 # }
 ```
 
-### Example 2: chat prompt decoration - system persona
+### Example 2: Chat prompt decoration - system persona
 
 Add a system message to define AI behavior:
 
@@ -227,7 +227,7 @@ curl -X POST http://openai:8080/chat/completions \
 # }
 ```
 
-### Example 3: append mode - adding suffix instructions
+### Example 3: Append mode - adding suffix instructions
 
 Append instructions to the end of user messages:
 
@@ -246,19 +246,19 @@ policies:
 
 ## Use cases
 
-1. **Consistent Instructions**: Prepend standardized instructions or guidelines to all prompts to ensure consistent AI behavior.
+1. **Consistent instructions**: Prepend standardized instructions or guidelines to all prompts to ensure consistent AI behavior.
 
-2. **System Personas**: Inject system messages to define AI personality, role, or behavior before user interactions.
+2. **System personas**: Inject system messages to define AI personality, role, or behavior before user interactions.
 
-3. **Quality Enhancement**: Add formatting instructions (e.g., "respond in bullet points", "use professional tone") to improve response quality.
+3. **Quality enhancement**: Add formatting instructions (e.g., "respond in bullet points", "use professional tone") to improve response quality.
 
-4. **Context Addition**: Prepend contextual information or background details to enrich prompts.
+4. **Context addition**: Prepend contextual information or background details to enrich prompts.
 
-5. **Multi-turn Conversations**: Add system messages at the beginning of chat conversations to set conversation rules.
+5. **Multi-turn conversations**: Add system messages at the beginning of chat conversations to set conversation rules.
 
 6. **Compliance**: Append compliance-related instructions or disclaimers to prompts.
 
-7. **Output Formatting**: Add instructions for specific output formats (JSON, markdown, structured text) to prompts.
+7. **Output formatting**: Add instructions for specific output formats (JSON, markdown, structured text) to prompts.
 
 ## Configuration reference
 

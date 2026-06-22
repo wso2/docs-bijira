@@ -28,7 +28,7 @@ Each section (request and response) has the following parameters:
 6. Click **Add** (for providers) or **Submit** (for proxies).
 7. Deploy the provider or proxy to apply the changes.
 
-## Example: limit prompt length
+## Example: Limit prompt length
 
 The following configuration blocks requests where the user message exceeds 50 words.
 

@@ -79,7 +79,7 @@ Artifact files support Go template expressions for injecting dynamic values. Tem
 
 Use `| redact` for sensitive values to hide them from config dumps. A `| default "value"` pipe is available for fallback values. See [Gateway Artifact Templating](../../api-gateway/setup/artifact-templating.md) for the full function reference.
 
-### Sample: reading list API
+### Sample: Reading list API
 
 Save the following as `artifacts/reading-list-v1.yaml`:
 
@@ -142,7 +142,7 @@ COPY ./artifacts /etc/api-platform-gateway/immutable_gateway/artifacts
 ENV APIP_GW_IMMUTABLE_GATEWAY_ENABLED=true
 ```
 
-### Kubernetes — mounting a configmap volume
+### Kubernetes — mounting a ConfigMap volume
 
 You can also mount artifacts as a volume from a ConfigMap or Secret without building a custom image:
 

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes standalone mode"
+title: "Kubernetes standalone mode — API Platform Gateway"
 description: "Install and manage API Platform AI Gateway on Kubernetes using the standalone Helm chart without the Gateway Operator."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/kubernetes-standalone/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/kubernetes-standalone.md
@@ -85,7 +85,7 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
 helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.controlPlane.host="platform.example.com" \
   --set gateway.controller.controlPlane.port=8443 \
-  --set gateway.controller.controlPlane.token.value="your-token-here" \
+  --set gateway.controller.controlPlane.token.value="<your-token>" \
   --set gateway.developmentMode=true
 ```
 
@@ -150,7 +150,7 @@ Refer to inline comments in chart `values.yaml` for all supported fields.
 
 ## TLS configuration
 
-### Option 1: cert-manager (recommended)
+### Option 1: Cert-manager (recommended)
 
 ```bash
 helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
@@ -176,7 +176,7 @@ gateway:
           - "*.api.example.com"
 ```
 
-### Option 2: existing TLS secret
+### Option 2: Existing TLS secret
 
 ```bash
 kubectl create secret tls gateway-tls \
@@ -189,7 +189,7 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.tls.secret.name=gateway-tls
 ```
 
-## Upstream custom cas
+## Upstream custom CAs
 
 When calling upstream services that use private/self-signed CAs:
 

@@ -29,7 +29,7 @@ Before proceeding, ensure you have [Created an Application](../manage-applicatio
 
 Follow these steps to generate a custom SDK and sample application code.
 
-### Step 1: select APIs for SDK generation
+### Step 1: Select APIs for SDK generation
 
 1. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
 2. Click on **Applications** in the Developer Portal sidebar.
@@ -41,7 +41,7 @@ Follow these steps to generate a custom SDK and sample application code.
 
     ![Subscribed API Proxies table with two APIs checked and Generate SDK button highlighted](../../../assets/img/devportal/ai_sdk_gen_button.png)
 
-### Step 2: generate SDK
+### Step 2: Generate SDK
 
 1. Click **Generate SDK** to open the SDK generation panel.
 

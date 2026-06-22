@@ -43,7 +43,7 @@ A policy only participates in the phases it implements. For example, a policy th
 
 ## How to write a policy
 
-### Step 1: create the policy
+### Step 1: Create the policy
 
 Each policy lives in its own Go module. Create a "policies" directory inside your gateway:
 
@@ -54,7 +54,7 @@ Each policy lives in its own Go module. Create a "policies" directory inside you
  └── policy-definition.yaml
 ```
 
-### Step 2: implement the base policy interface
+### Step 2: Implement the base policy interface
 
 ```go
 package mypolicy
@@ -92,7 +92,7 @@ func (p *MyPolicy) Mode() policy.ProcessingMode {
 !!! tip
     If you do not want your policy to process a specific phase, explicitly set it to `Skip`.
 
-### Step 3: implement phase interfaces
+### Step 3: Implement phase interfaces
 
 Implement only the interfaces for phases you declared in `Mode()` in step 2.
 
@@ -182,7 +182,7 @@ func (p *MyPolicy) OnResponseBody(
 !!! note
     Even if your policy is designed for streaming, you must still implement `OnResponseBody`. This acts as a fallback when the policy chain does not run in streaming mode.
 
-### Step 4: enable streaming
+### Step 4: Enable streaming
 
 Use streaming when processing SSE (Server-Sent Events) responses or large chunked transfers where you cannot or should not buffer the full body. Set `ResponseBodyMode: policy.BodyModeStream` (and/or `RequestBodyMode: policy.BodyModeStream`) in your `Mode()`, then implement the streaming interfaces.
 
@@ -288,7 +288,7 @@ func (p *MyPolicy) NeedsMoreResponseData(accumulated []byte) bool {
 }
 ```
 
-### Step 5: factory function
+### Step 5: Factory function
 
 Initialize your policy and validate parameters:
 
@@ -307,7 +307,7 @@ func GetPolicy(
 }
 ```
 
-### Step 6: define parameters
+### Step 6: Define parameters
 
 Create a `policy-definition.yaml` in your policy directory:
 
@@ -324,7 +324,7 @@ parameters:
       default: 1048576
 ```
 
-### Step 7: share data between phases
+### Step 7: Share data between phases
 
 Use the `Metadata` map to pass data between request and response phases:
 
@@ -336,7 +336,7 @@ reqCtx.Metadata["clientID"] = clientID
 clientID := respCtx.Metadata["clientID"]
 ```
 
-### Step 8: register and build
+### Step 8: Register and build
 
 Add your policy to gateway folder's `build.yaml` under `policies:` using `filePath` for local development:
 

@@ -40,15 +40,15 @@ The policy requires `requestModel` configuration from the LLM provider template 
 
 ## How it works
 
-1. **Model Selection**: On each request, the policy selects the next available model in the configured list using a round-robin algorithm.
-2. **Model Extraction**: The policy extracts the original model from the request (if configured) and stores it for reference.
-3. **Model Modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
-4. **Failure Handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
-5. **Availability Check**: Suspended models are skipped during selection until their suspension period expires.
+1. **Model selection**: On each request, the policy selects the next available model in the configured list using a round-robin algorithm.
+2. **Model extraction**: The policy extracts the original model from the request (if configured) and stores it for reference.
+3. **Model modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
+4. **Failure handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
+5. **Availability check**: Suspended models are skipped during selection until their suspension period expires.
 
 ## Examples
 
-### Example 1: basic round robin with payload-based model
+### Example 1: Basic round robin with payload-based model
 
 Deploy an LLM provider with round-robin load balancing across multiple models:
 
@@ -146,9 +146,9 @@ curl -X POST http://openai:8080/chat/completions \
 
 When a model returns a 5xx or 429 response, the policy can automatically suspend that model for a configurable duration:
 
-- **Suspension Duration**: Configured via the `suspendDuration` parameter (in seconds)
-- **Automatic Recovery**: Suspended models are automatically re-enabled after the suspension period expires
-- **Availability Check**: Suspended models are skipped during round-robin selection until they recover
+- **Suspension duration**: Configured via the `suspendDuration` parameter (in seconds)
+- **Automatic recovery**: Suspended models are automatically re-enabled after the suspension period expires
+- **Availability check**: Suspended models are skipped during round-robin selection until they recover
 
 ### Suspension behavior
 
@@ -158,15 +158,15 @@ When a model returns a 5xx or 429 response, the policy can automatically suspend
 
 ## Use cases
 
-1. **Load Distribution**: Distribute requests evenly across multiple models to prevent overloading any single model.
+1. **Load distribution**: Distribute requests evenly across multiple models to prevent overloading any single model.
 
-2. **High Availability**: Automatically route requests to available models when some models are experiencing issues.
+2. **High availability**: Automatically route requests to available models when some models are experiencing issues.
 
-3. **Cost Optimization**: Distribute requests across different model tiers (e.g., expensive and cheaper models) to balance cost and performance.
+3. **Cost optimization**: Distribute requests across different model tiers (e.g., expensive and cheaper models) to balance cost and performance.
 
-4. **A/B Testing**: Test different models with equal traffic distribution to compare performance and quality.
+4. **A/B testing**: Test different models with equal traffic distribution to compare performance and quality.
 
-5. **Multi-Provider Support**: Distribute requests across models from different providers while maintaining equal distribution.
+5. **Multi-provider support**: Distribute requests across models from different providers while maintaining equal distribution.
 
 ## Request model locations
 

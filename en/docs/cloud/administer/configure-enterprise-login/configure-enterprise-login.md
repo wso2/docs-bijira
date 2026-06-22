@@ -85,7 +85,7 @@ Before you proceed with the configuration, make sure you complete the following:
 2. Ensure your enterprise identity provider includes the group/role attributes in tokens it sends to Asgardeo via the respective protocol.
 3. Be sure you have administrator privileges in API Platform.
 
-### Step 1: configure Asgardeo
+### Step 1: Configure Asgardeo
 
 1. Sign in to [Asgardeo](https://asgardeo.io/).
 2. [Configure your IdP as an external IdP in Asgardeo](https://wso2.com/asgardeo/docs/guides/authentication/enterprise-login/). Depending on your IdP, you can select OpenID Connect or SAML as the protocol between Asgardeo and your IdP.
@@ -111,7 +111,7 @@ Before you proceed with the configuration, make sure you complete the following:
    3. Click **New Attribute** and select the **Groups** attribute.
    4. Click **Save** and then click **Save Changes**.
 
-### Step 2: map API Platform groups to enterprise idp groups via the API Platform console
+### Step 2: Map API Platform groups to enterprise idp groups via the API Platform console
 
 !!! note
 

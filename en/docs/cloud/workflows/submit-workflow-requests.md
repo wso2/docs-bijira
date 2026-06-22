@@ -18,7 +18,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to promote an api proxy from the development environment to production, follow these steps:
 
-    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.bijira.dev/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to deploy. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation menu, click **Deploy**.
     4. Go to the **Development** card and click **Request to Promote**.
@@ -51,7 +51,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to configure a custom URL for an api proxy, follow these steps:
 
-    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.bijira.dev/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to configure. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation, click the **Admin** drop-down and then click **Settings**.
     4. Click the **URL Settings** tab. This displays the active deployments of the component across different environments and indicates whether a custom URL is configured.

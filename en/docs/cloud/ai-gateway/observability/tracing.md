@@ -28,7 +28,7 @@ The default tracing stack consists of:
 Distributed tracing tracks a request as it flows through multiple components:
 - **Trace**: Represents the entire journey of a request through the system
 - **Span**: Represents a single operation within a trace (e.g., policy execution, upstream call)
-- **Context Propagation**: Traces are correlated across components using trace IDs and span IDs in headers
+- **Context propagation**: Traces are correlated across components using trace IDs and span IDs in headers
 
 ## Enabling tracing
 
@@ -93,14 +93,14 @@ docker compose --profile tracing down
 
 Once you've started the gateway with the tracing profile, follow these steps to view distributed traces:
 
-### Step 1: access Jaeger UI
+### Step 1: Access Jaeger UI
 
 Open your browser and navigate to:
 ```
 http://localhost:16686
 ```
 
-### Step 2: search for traces
+### Step 2: Search for traces
 
 The Jaeger UI provides several ways to search for traces:
 
@@ -112,18 +112,18 @@ The Jaeger UI provides several ways to search for traces:
    - Choose "all" to see all operations
    - Or select a specific operation (e.g., specific policy execution)
 
-3. **Adjust Lookback Time Range**:
+3. **Adjust lookback time range**:
    - Default: Last 1 hour
    - Options: 5m, 15m, 1h, 6h, 12h, 1d, 2d, Custom
 
-4. **Add Filters** (optional):
+4. **Add filters** (optional):
    - **Tags**: Filter by specific tag values (e.g., `http.status_code=500`)
    - **Min/Max Duration**: Filter by trace duration
    - **Limit Results**: Control number of traces returned (default: 20)
 
 5. Click **Find Traces**
 
-### Step 3: analyze trace details
+### Step 3: Analyze trace details
 
 Click on any trace in the results to view detailed information:
 
@@ -143,29 +143,29 @@ Click on any span to see:
 
 #### Common use cases
 
-**Finding Slow Requests:**
+**Finding slow requests:**
 1. Set Min Duration filter (e.g., 1000ms)
 2. Click Find Traces
 3. Examine spans to identify bottlenecks
 
-**Debugging Errors:**
+**Debugging errors:**
 1. Filter by tag: `error=true` or `http.status_code=500`
 2. Click on error traces
 3. Examine span logs and tags for error details
 
-**Understanding Request Flow:**
+**Understanding request flow:**
 1. Search for a specific trace ID (from logs or headers)
 2. View the complete request path through all components
 3. Identify which component handled which part of the request
 
-### Step 4: trace comparison
+### Step 4: Trace comparison
 
 You can compare multiple traces to identify patterns:
 1. Select multiple traces using checkboxes
 2. Click **Compare Traces** button
 3. View side-by-side comparison of trace structure and timings
 
-### Step 5: service dependency graph
+### Step 5: Service dependency graph
 
 View how services interact:
 1. Click **Dependencies** in the top navigation
@@ -244,7 +244,7 @@ service:
       exporters: [otlphttp]  # Send to Moesif
 ```
 
-**Important Notes:**
+**Important notes:**
 - The endpoint uses HTTPS (not HTTP)
 - Use the `otlphttp` exporter (not `otlp` which uses gRPC)
 - The `X-Moesif-Application-Id` header is required for authentication
@@ -299,8 +299,8 @@ After configuring and starting the gateway:
 #### Moesif features
 
 - **API Analytics**: Request volume, response times, error rates
-- **User Tracking**: Identify and track API users across requests
-- **Error Analysis**: Detailed error tracking with request/response bodies
+- **User tracking**: Identify and track API users across requests
+- **Error analysis**: Detailed error tracking with request/response bodies
 - **Behavioral Cohorts**: Group users by API usage patterns
 - **Custom Dashboards**: Build visualizations for your specific KPIs
 - **Alerting**: Get notified of anomalies or threshold breaches
@@ -354,7 +354,7 @@ exporters:
 
 Access Zipkin UI at `http://localhost:9411`
 
-### Grafana tempo
+### Grafana Tempo
 
 For a Prometheus-style tracing backend:
 
@@ -394,7 +394,7 @@ tracing:
 
 ### Cloud-native tracing solutions
 
-#### AWS X-ray
+#### AWS X-Ray
 
 Configure OTLP Collector to export to AWS X-Ray:
 
@@ -415,7 +415,7 @@ otel-collector:
     - AWS_REGION=us-east-1
 ```
 
-#### Google cloud trace
+#### Google Cloud Trace
 
 Configure OTLP Collector to export to Google Cloud:
 
@@ -426,7 +426,7 @@ exporters:
     use_insecure: false
 ```
 
-#### Azure monitor
+#### Azure Monitor
 
 Use Azure Monitor exporter:
 
@@ -470,7 +470,7 @@ tracing:
   endpoint: datadog-agent:4317
 ```
 
-#### New relic
+#### New Relic
 
 Configure OTLP Collector to export to New Relic:
 
@@ -526,7 +526,7 @@ tracing:
   endpoint: linkerd-collector.linkerd:4317
 ```
 
-## Customizing opentelemetry collector
+## Customizing OpenTelemetry Collector
 
 The OTLP Collector configuration is located at:
 ```
@@ -610,7 +610,7 @@ service:
       exporters: [otlp, debug]
 ```
 
-### Example: multi-backend export
+### Example: Multi-backend export
 
 Send traces to multiple backends simultaneously:
 
@@ -638,7 +638,7 @@ service:
       exporters: [otlp/jaeger, otlp/tempo, datadog]
 ```
 
-### Example: tail-based sampling
+### Example: Tail-based sampling
 
 Keep all error traces but sample successful traces:
 

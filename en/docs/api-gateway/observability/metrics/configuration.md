@@ -61,13 +61,13 @@ command:
 
 Gateway components use optimized bucket configurations for histograms:
 
-**Request Duration Buckets**:
+**Request duration buckets**:
 - Gateway Controller: `[0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5, 5.0]`
 - Policy Engine: `[0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5]`
 
-**Policy Execution Buckets**:
+**Policy execution buckets**:
 - `[0.0001, 0.0005, 0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5]`
 
-**Deployment Latency Buckets**:
+**Deployment latency buckets**:
 - `[0.1, 0.5, 1.0, 2.5, 5.0, 10.0, 30.0, 60.0]`
 

@@ -41,7 +41,7 @@ The Prompt Decorator policy prepends or appends content to prompts before they a
 8. Click **Add** (for providers) or **Submit** (for proxies).
 9. Deploy the provider or proxy to apply the changes.
 
-## Example: inject a system prompt
+## Example: Inject a system prompt
 
 The following configuration prepends a system instruction to every chat completion request:
 

@@ -4,7 +4,7 @@ API Platform's Developer Portal has built-in support for AI agent discoverabilit
 
 This page explains how those endpoints work and how agents navigate the portal.
 
-## `llms.txt`: the entry point for agents
+## `llms.txt`: The entry point for agents
 
 The portal dynamically generates an `llms.txt` file — a plain-text Markdown index designed as the entry point for AI agents. It provides a structured overview of everything the portal exposes for AI consumption.
 

@@ -33,7 +33,7 @@ Create the application database, user, and grant privileges:
 
 ```sql
 CREATE DATABASE gateway_controller;
-CREATE USER gateway WITH PASSWORD 'your-db-password';
+CREATE USER gateway WITH PASSWORD '<your-db-password>';
 GRANT ALL PRIVILEGES ON DATABASE gateway_controller TO gateway;
 ```
 
@@ -42,7 +42,7 @@ GRANT ALL PRIVILEGES ON DATABASE gateway_controller TO gateway;
 ```bash
 kubectl create secret generic gateway-postgres-password \
   --namespace <your-namespace> \
-  --from-literal=password='your-db-password'
+  --from-literal=password='<your-db-password>'
 ```
 
 ## Configure the chart
@@ -87,7 +87,7 @@ Create a secret containing the DSN:
 ```bash
 kubectl create secret generic gateway-postgres-dsn \
   --namespace <your-namespace> \
-  --from-literal=dsn='postgres://gateway:your-db-password@postgres.example.internal:5432/gateway_controller?sslmode=require'
+  --from-literal=dsn='postgres://gateway:<your-db-password>@postgres.example.internal:5432/gateway_controller?sslmode=require'
 ```
 
 Reference the secret in values:

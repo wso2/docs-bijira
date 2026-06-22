@@ -59,7 +59,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ## Reference scenarios
 
-### Example 1: basic tool access control
+### Example 1: Basic tool access control
 
 Restrict access to specific tools based on scopes:
 
@@ -114,7 +114,7 @@ spec:
   - `name="*", requiredScopes=["mcp:tool:execute"]`
 - Result: ✅ Access Granted (both matching rules pass)
 
-### Example 2: claim-based resource access
+### Example 2: Claim-based resource access
 
 Control resource access based on user claims:
 
@@ -166,7 +166,7 @@ spec:
 - Rule: `name="file:///private/main", requiredClaims={department="engineering"}, requiredScopes=["mcp:resource:read"]`
 - Result: ❌ Access Denied (scope mismatch)
 
-### Example 3: role-based prompt access
+### Example 3: Role-based prompt access
 
 Restrict prompt access based on user roles:
 
@@ -204,7 +204,7 @@ spec:
     ...
 ```
 
-### Example 4: method-level authorization
+### Example 4: Method-level authorization
 
 Apply authorization at the JSON-RPC method level:
 
@@ -245,7 +245,7 @@ spec:
     ...
 ```
 
-### Example 5: multi-level authorization
+### Example 5: Multi-level authorization
 
 Combine different resource types with varying access requirements:
 

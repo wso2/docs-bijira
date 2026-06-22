@@ -14,9 +14,9 @@ As a portal admin, you can create, edit, publish, and control the visibility of 
 |---|---|
 | **Name** | A short, task-oriented name (e.g., "Place an Order", "Register a Webhook") |
 | **Description** | One to two sentences explaining the goal of the workflow and when to use it |
-| **Arazzo Specification** | The machine readable workflow definition in Arazzo format |
-| **Agent Prompt** | Natural language guidance for AI agents on when and how to invoke the workflow |
-| **Agent Visibility** | Controls whether the workflow is surfaced to AI agents. Set to **Visible** to include it in `llms.txt` and `api-workflows.md`, or **Hidden** to exclude it from agent facing surfaces while keeping it accessible to human users in the portal |
+| **Arazzo specification** | The machine readable workflow definition in Arazzo format |
+| **Agent prompt** | Natural language guidance for AI agents on when and how to invoke the workflow |
+| **Agent visibility** | Controls whether the workflow is surfaced to AI agents. Set to **Visible** to include it in `llms.txt` and `api-workflows.md`, or **Hidden** to exclude it from agent facing surfaces while keeping it accessible to human users in the portal |
 
 ![API workflow creation form showing Basic info step with Name, Description, Portal visibility, and Agent visibility fields](../../../assets/img/devportal/api-workflow-creation.png)
 

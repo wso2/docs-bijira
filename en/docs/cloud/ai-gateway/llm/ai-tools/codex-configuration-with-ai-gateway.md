@@ -17,7 +17,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: start an AI Gateway on WSO2 API Platform
+## Step 1: Start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
@@ -49,7 +49,7 @@ Once the AI Gateway is active, you can continue to create the OpenAI LLM provide
 
 ---
 
-## Step 2: create and deploy an OpenAI LLM provider
+## Step 2: Create and deploy an OpenAI LLM provider
 
 1. **Log in to the WSO2 API Platform Console** as an admin.  
 
@@ -81,7 +81,7 @@ The OpenAI LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: create and deploy an app LLM proxy
+## Step 3: Create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Codex CLI invokes through WSO2 API Platform.
 
@@ -147,7 +147,7 @@ You will use these values when configuring Codex CLI.
 
 ---
 
-## Step 4: configure Codex CLI to use the app LLM proxy
+## Step 4: Configure Codex CLI to use the app LLM proxy
 
 Codex CLI can be configured to use a custom OpenAI-compatible provider by updating its `config.toml` file.
 
@@ -198,7 +198,7 @@ Codex CLI can be configured to use a custom OpenAI-compatible provider by updati
 
 ---
 
-## Step 5: configure the gateway certificate for Codex CLI
+## Step 5: Configure the gateway certificate for Codex CLI
 
 When using a local WSO2 API Platform AI Gateway over HTTPS, Codex CLI must be able to trust the certificate presented by the Gateway.
 
@@ -230,7 +230,7 @@ export SSL_CERT_FILE="<PATH TO CERTIFICATE>/gateway_certificate.pem"
 
 ---
 
-## Step 6: run the Codex CLI client
+## Step 6: Run the Codex CLI client
 
 Execute Codex CLI:
 

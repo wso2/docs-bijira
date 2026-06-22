@@ -1,6 +1,6 @@
 ---
 title: "API Platform Kubernetes gateway (v2.0.0)"
-description: "Overview of API Platform Kubernetes Gateway V2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
+description: "Overview of API Platform Kubernetes Gateway v2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview.md
 tags:
@@ -18,7 +18,7 @@ API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway expe
 If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
 
 - Previous generation (reference): [WSO2 APK 1.3.0 docs](https://apk.docs.wso2.com/en/latest/)
-- Current generation: API Platform Kubernetes Gateway V2.0.0 (this documentation set)
+- Current generation: API Platform Kubernetes Gateway v2.0.0 (this documentation set)
 
 ## What is new in v2.0.0
 
@@ -53,12 +53,12 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
 
 ## How to choose a mode
 
-- Choose **Standalone Mode** if your priority is a lightweight gateway runtime install with Helm-managed values.
-- Choose **Operator Mode** if your priority is Kubernetes-native reconciliation, GitOps workflows, multi-resource lifecycle automation, and CRD-based API management.
+- Choose **standalone mode** if your priority is a lightweight gateway runtime install with Helm-managed values.
+- Choose **operator mode** if your priority is Kubernetes-native reconciliation, GitOps workflows, multi-resource lifecycle automation, and CRD-based API management.
 
 ## Policy configuration
 
-API Platform Kubernetes Gateway V2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
+API Platform Kubernetes Gateway v2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
 
 For a full reference on available policies and how to configure them, see [Policy Configuration Overview](https://wso2.com/api-platform/docs/api-gateway/policies/overview/).
 

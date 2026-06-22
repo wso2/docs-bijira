@@ -2,7 +2,7 @@
 
 The AI Workspace enables you to manage AI gateways and LLM providers. Follow these steps to get started.
 
-## Step 1: create an AI Gateway
+## Step 1: Create an AI Gateway
 
 An AI gateway is the runtime that processes and routes requests between your applications and LLM providers. You need at least one gateway before configuring providers or proxies.
 
@@ -15,7 +15,7 @@ An AI gateway is the runtime that processes and routes requests between your app
 
 For detailed instructions, see [AI Gateways](ai-gateways/setting-up.md).
 
-## Step 2: configure an LLM provider
+## Step 2: Configure an LLM provider
 
 An LLM provider connects the AI Workspace to an AI service platform like OpenAI, Anthropic, or Azure OpenAI.
 

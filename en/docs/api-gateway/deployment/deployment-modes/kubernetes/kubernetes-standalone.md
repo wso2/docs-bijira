@@ -151,7 +151,7 @@ Refer to inline comments in chart `values.yaml` for all supported fields.
 
 ## TLS configuration
 
-### Option 1: cert-manager (recommended)
+### Option 1: Cert-manager (recommended)
 
 ```bash
 helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
@@ -177,7 +177,7 @@ gateway:
           - "*.api.example.com"
 ```
 
-### Option 2: existing TLS secret
+### Option 2: Existing TLS secret
 
 ```bash
 kubectl create secret tls gateway-tls \
@@ -190,7 +190,7 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.tls.secret.name=gateway-tls
 ```
 
-## Upstream custom cas
+## Upstream custom CAs
 
 When calling upstream services that use private/self-signed CAs:
 

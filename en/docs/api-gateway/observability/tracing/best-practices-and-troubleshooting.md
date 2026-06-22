@@ -153,9 +153,9 @@ Traces and logs work together for comprehensive observability:
 
 ### Correlating traces and logs
 
-1. **Trace ID in Logs**: Gateway components include trace IDs in log entries
-2. **Find Trace from Log**: Copy trace ID from log entry and search in Jaeger
-3. **Find Logs from Trace**: Copy trace ID from Jaeger and search in log viewer
+1. **Trace ID in logs**: Gateway components include trace IDs in log entries
+2. **Find trace from log**: Copy trace ID from log entry and search in Jaeger
+3. **Find logs from trace**: Copy trace ID from Jaeger and search in log viewer
 
 Example log entry with trace ID:
 ```json

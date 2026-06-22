@@ -107,7 +107,7 @@ You can test the MCP Server in the development environment before promoting it t
 ## Publish the MCP server
 
 !!!important
-    If you already have a Devportal theme published, please republish the theme before publishing the MCP Servers to Devportal.
+    If you already have a Devportal theme published, republish the theme before publishing the MCP Servers to Devportal.
 
 Once you verify that the MCP Server is working as expected in the development environment, you can promote it to production.
 
@@ -133,7 +133,7 @@ You can view the published MCP Server via the Developer Portal.
 In the Lifecycle Management pane, click **Go to DevPortal**. This takes you to the MCP Server published to the API Platform Developer Portal.
 
 !!!info
-    If you need to do MCP specific customization to the Developer portal, please refer the [MCP Hub documentation](./devportal-mcp-hub.md).
+    If you need to do MCP specific customization to the Developer portal, see the [MCP Hub documentation](./devportal-mcp-hub.md).
 
 ![Developer Portal home page with APIs and MCP Servers hero banner, Browse our APIs and Browse our MCP Servers buttons, and Empowering Developers to Build Applications section below](../../assets/img/introduction/mcp/mcp-devportal-landing.png)
 
@@ -147,9 +147,9 @@ MCP consumers can discover the available tools through this view. Additionally, 
 
 MCP Servers in API Platform are secured by default. To access them, you must subscribe through an application, obtain a valid token, and configure it in your MCP client.
 
-For more information regarding managing applications, please refer [this](../devportal/manage-applications/create-an-application.md).
+For more information regarding managing applications, see [Create an application](../devportal/manage-applications/create-an-application.md).
 
-Please refer [this section](../devportal/manage-subscriptions/subscribe-to-an-api.md) to get an idea on how you can manage subscriptions to an application. Subscribing to MCP Servers is similar to how you subscribe to API Proxies.
+See [this section](../devportal/manage-subscriptions/subscribe-to-an-api.md) to get an idea on how you can manage subscriptions to an application. Subscribing to MCP Servers is similar to how you subscribe to API Proxies.
 
 !!!important
     If you created the MCP Server using an existing API Proxy, you need to subscribe to both using the same application.

@@ -78,7 +78,7 @@ Once Docker finishes building, run it:
 docker run -p 5000:5000 <image-name-from-output>
 ```
 
-## User scenario: end-to-end walkthrough
+## User scenario: End-to-End walkthrough
 
 > **Scenario:** You have an OpenAPI spec for a pet store API and want to expose a "check if a pet exists, then create or update it" workflow as an MCP tool for an AI agent.
 

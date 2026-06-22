@@ -10,4 +10,4 @@ Devportal configuration has 3 modes.
 
 1. **API Portal** - In this mode, only API Proxies will be shown in the Devportal. Suitable if you have nothing to do with MCP.
 2. **MCP Hub** - In this mode, only MCP Servers will be shown in the Devportal. Suitable if you are using API Platform for MCP related use cases.
-3. **API & MCP Portal** - This is the **default** mode. Both API Proxies and MCP Servers will be shown in the Devportal
+3. **API and MCP Portal** - This is the **default** mode. Both API Proxies and MCP Servers will be shown in the Devportal

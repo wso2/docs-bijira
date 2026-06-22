@@ -31,13 +31,13 @@ The policy uses embedding models (OpenAI, Mistral, or Azure OpenAI) to convert p
 
 ## How it works
 
-1. **Text Extraction**: Extracts prompt text from the request body using JSONPath (if configured) or uses the entire request body
-2. **Embedding Generation**: Generates a vector embedding from the extracted prompt using the configured embedding provider
-3. **Validation Strategy**: The validation logic depends on which lists are configured:
+1. **Text extraction**: Extracts prompt text from the request body using JSONPath (if configured) or uses the entire request body
+2. **Embedding generation**: Generates a vector embedding from the extracted prompt using the configured embedding provider
+3. **Validation strategy**: The validation logic depends on which lists are configured:
    - **Deny list only**: Compares prompt embedding against all denied phrases. If any denied phrase has similarity >= `denySimilarityThreshold`, the request is blocked. Otherwise, it proceeds.
    - **Allow list only**: Compares prompt embedding against all allowed phrases. If no allowed phrase has similarity >= `allowSimilarityThreshold`, the request is blocked. Otherwise, it proceeds.
    - **Both lists**: First checks the deny list (blocks if similarity >= `denySimilarityThreshold`), then checks the allow list (blocks if similarity < `allowSimilarityThreshold`). Request proceeds only if it passes both checks.
-4. **Validation Result**: Request proceeds if validation passes, or is blocked with HTTP 422 if validation fails
+4. **Validation result**: Request proceeds if validation passes, or is blocked with HTTP 422 if validation fails
 
 ## Configuration
 
@@ -56,7 +56,7 @@ The policy uses embedding models (OpenAI, Mistral, or Azure OpenAI) to convert p
 
 ### System parameters (required)
 
-These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
+These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the API artifact definition file:
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -112,7 +112,7 @@ The guardrail supports JSONPath expressions to extract specific text from reques
 - Focusing on specific prompt fields while ignoring metadata
 - Handling structured JSON payloads
 
-### Common jsonpath examples
+### Common JSONPath examples
 
 - `$.messages[0].content` - First message's content in chat completions
 - `$.messages[-1].content` - Last message's content
@@ -122,7 +122,7 @@ The guardrail supports JSONPath expressions to extract specific text from reques
 
 ## Examples
 
-### Example 1: deny list only - blocking prohibited content
+### Example 1: Deny list only - blocking prohibited content
 
 Deploy an LLM provider that blocks prompts similar to prohibited phrases:
 
@@ -202,7 +202,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 2: allow list only - whitelist approach
+### Example 2: Allow list only - whitelist approach
 
 Deploy an LLM provider that only allows prompts similar to approved phrases:
 
@@ -248,7 +248,7 @@ spec:
 EOF
 ```
 
-### Example 3: combined allow and deny lists
+### Example 3: Combined allow and deny lists
 
 Use both allow and deny lists for comprehensive filtering:
 
@@ -295,21 +295,21 @@ policies:
 
 ## Use cases
 
-1. **Content Safety**: Block prompts that are semantically similar to prohibited content, even when exact keywords differ.
+1. **Content safety**: Block prompts that are semantically similar to prohibited content, even when exact keywords differ.
 
-2. **Whitelist Filtering**: Only allow prompts that match approved use cases or topics, ensuring LLM usage stays within defined boundaries.
+2. **Whitelist filtering**: Only allow prompts that match approved use cases or topics, ensuring LLM usage stays within defined boundaries.
 
 3. **Compliance**: Enforce content policies by blocking prompts similar to non-compliant examples.
 
-4. **Abuse Prevention**: Detect and block variations of known abuse patterns, even when attackers try to evade keyword filters.
+4. **Abuse prevention**: Detect and block variations of known abuse patterns, even when attackers try to evade keyword filters.
 
-5. **Domain Restriction**: Restrict LLM usage to specific domains by allowing only prompts similar to approved domain-specific phrases.
+5. **Domain restriction**: Restrict LLM usage to specific domains by allowing only prompts similar to approved domain-specific phrases.
 
-6. **Multi-tenant Security**: Apply different allow/deny lists per tenant or application to enforce tenant-specific content policies.
+6. **Multi-tenant security**: Apply different allow/deny lists per tenant or application to enforce tenant-specific content policies.
 
-7. **Prompt Injection Prevention**: Block prompts that are semantically similar to known prompt injection attacks.
+7. **Prompt injection prevention**: Block prompts that are semantically similar to known prompt injection attacks.
 
-8. **Quality Control**: Ensure prompts match expected patterns for better response quality and consistency.
+8. **Quality control**: Ensure prompts match expected patterns for better response quality and consistency.
 
 ## Error response
 
@@ -373,13 +373,13 @@ For errors during processing (e.g., JSONPath extraction failures, embedding gene
 
 ## Performance considerations
 
-1. **Embedding Generation Latency**: Generating embeddings adds ~100-500ms to request processing. This is a one-time cost per request.
+1. **Embedding generation latency**: Generating embeddings adds ~100-500ms to request processing. This is a one-time cost per request.
 
-2. **Batch Processing**: All allow/deny phrase embeddings are generated in a single batch during policy initialization, minimizing initialization overhead.
+2. **Batch processing**: All allow/deny phrase embeddings are generated in a single batch during policy initialization, minimizing initialization overhead.
 
-3. **Similarity Calculation**: Cosine similarity calculations are fast (typically < 10ms) even with many phrases.
+3. **Similarity calculation**: Cosine similarity calculations are fast (typically < 10ms) even with many phrases.
 
-4. **Embedding Provider Selection**: 
+4. **Embedding provider selection**: 
    - OpenAI: Fast, reliable, good for most use cases
    - Mistral: Alternative option with good performance
    - Azure OpenAI: Good for Azure-integrated environments

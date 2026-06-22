@@ -13,7 +13,7 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Deploy & verify
+# Deploy and verify
 
 ## Deploy the chart
 

@@ -22,8 +22,8 @@ Metrics, logs, and traces work together for comprehensive observability:
 ### Correlating metrics with logs
 
 1. **Correlation IDs**: Gateway components include request IDs in both logs and metrics
-2. **Find Logs from Metrics**: Use metric labels to filter logs (e.g., API name, route)
-3. **Find Metrics from Logs**: Copy request IDs from logs and query metrics with labels
+2. **Find logs from metrics**: Use metric labels to filter logs (e.g., API name, route)
+3. **Find metrics from logs**: Copy request IDs from logs and query metrics with labels
 
 Example: If you see errors in logs for a specific API, query metrics for that API:
 ```promql

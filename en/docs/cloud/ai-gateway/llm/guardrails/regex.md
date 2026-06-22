@@ -58,7 +58,7 @@ The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key 
 
 ## Examples
 
-### Example 1: email validation
+### Example 1: Email validation
 
 Deploy an LLM provider that protects against sensitive data leaks by blocking any payloads that mention the word "password" (case-insensitive) in either the user’s message or the LLM’s response. This is achieved by using the regex policy to validate both request and response payloads:
 
@@ -145,23 +145,23 @@ curl -X POST http://openai:8080/chat/completions \
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate patterns in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate patterns in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content that does *not* match the regex pattern. This is useful for blocking prohibited patterns (e.g., password-related content, admin keywords).
+- **Inverted logic**: Set `invert: true` to allow only content that does *not* match the regex pattern. This is useful for blocking prohibited patterns (e.g., password-related content, admin keywords).
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
 ## Use cases
 
-1. **Format Validation**: Ensure user inputs match expected formats (emails, phone numbers, IDs).
+1. **Format validation**: Ensure user inputs match expected formats (emails, phone numbers, IDs).
 
-2. **Content Filtering**: Block or allow content based on pattern matching (prohibited words, sensitive patterns).
+2. **Content filtering**: Block or allow content based on pattern matching (prohibited words, sensitive patterns).
 
-3. **Security Enforcement**: Detect and block potentially malicious patterns or injection attempts.
+3. **Security enforcement**: Detect and block potentially malicious patterns or injection attempts.
 
-4. **Data Quality**: Ensure responses follow specific formatting requirements or contain required elements.
+4. **Data quality**: Ensure responses follow specific formatting requirements or contain required elements.
 
 5. **Compliance**: Enforce patterns required by regulatory standards or business rules.
 
