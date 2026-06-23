@@ -23,16 +23,17 @@ This guide shows you how to put a token quota on an LLM proxy so no single appli
 Your application
     |  HTTPS + API key
     v
-+--------------------------------------------+
-|  WSO2 LLM Proxy                            |
-|  API key auth · token quota enforcement    |
-+--------------------------------------------+
++---------------------------------------+
+|  WSO2 AI Gateway                      |
+|  [ LLM Proxy ]                        |
+|  auth · rate limiting · audit logging |
++---------------------------------------+
     |  HTTPS + OpenAI API key
     v
 OpenAI API
 ```
 
-The LLM proxy sits between your application and OpenAI. It authenticates incoming requests using an API key, tracks token consumption from each OpenAI response, and blocks new requests once the configured quota is reached within the time window. Your application never holds the OpenAI API key.
+The LLM proxy is deployed on the AI Gateway, which sits between your application and OpenAI. The AI Gateway authenticates incoming requests using an API key, tracks token consumption from each OpenAI response, and blocks new requests once the configured quota is reached within the time window. Your application never holds the OpenAI API key.
 
 ## Step 1: Create an organization and project
 
