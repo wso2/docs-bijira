@@ -1,4 +1,4 @@
-# Publish APIs on a Self-Hosted Gateway
+# Publish APIs on a Self-hosted gateway
 
 After you create and deploy an API proxy to a **Self-Hosted Gateway**, you can make consumers aware of it by moving the API through the lifecycle and publishing it. Publishing updates the API lifecycle to **Published** so it can appear in the API Platform Developer Portal and be invoked according to how access is configured.
 

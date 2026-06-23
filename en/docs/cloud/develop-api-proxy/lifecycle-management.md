@@ -12,13 +12,13 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Lifecycle Management
+# Lifecycle management
 
 API lifecycle management is an important aspect of API management. The API lifecycle consists of various states that an API passes through, from creation to retirement. In API Platform, there are six distinct lifecycle states: created, pre-released, published, deprecated, and retired.
 
 By leveraging the various lifecycle states, API managers can optimize the development process and ensure that subscribers have access to the latest and most reliable APIs.
 
-## API Lifecycle States
+## API lifecycle states
 
 The following lifecycle states are applicable to APIs in API Platform:
 
@@ -30,7 +30,7 @@ The following lifecycle states are applicable to APIs in API Platform:
 | **DEPRECATED** | The old version of an API is moved to this state when a newer version of the API is PUBLISHED.| The API is deployed and is available to existing subscribers. New subscriptions are disabled. Existing subscribers can continue to use it as usual until the API is retired.|
 | **RETIRED** | The API is no longer in use when it is in this state.| The API is unpublished and deleted from the Developer Portal.|
 
-## Manage the Lifecycle of an API
+## Manage the lifecycle of an API
 
 To change the lifecycle state of an API via the API Platform Console, follow the instructions given below:
 

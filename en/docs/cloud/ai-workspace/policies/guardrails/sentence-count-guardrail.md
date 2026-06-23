@@ -1,4 +1,4 @@
-# Sentence Count Guardrail
+# Sentence count guardrail
 
 The Sentence Count Guardrail validates the number of sentences in a request or response. Use it to enforce policies on the structural complexity of prompts or responses — for example, requiring responses to be at least a certain length, or capping how many sentences a user prompt can contain.
 
@@ -6,7 +6,7 @@ The Sentence Count Guardrail validates the number of sentences in a request or r
 
 All parameters are under **Advanced Settings**. Configure a **request** section, a **response** section, or both.
 
-### Request / Response Parameters
+### Request / response parameters
 
 Each section (request and response) has the following parameters:
 
@@ -18,7 +18,7 @@ Each section (request and response) has the following parameters:
 | **invert** | No | `false` | When `true`, the guardrail intervenes when the sentence count **is within** the configured range instead of outside it. |
 | **showAssessment** | No | `false` | When `true`, the intervention response includes details about the violation. |
 
-## Add This Guardrail
+## Add this guardrail
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -28,7 +28,7 @@ Each section (request and response) has the following parameters:
 6. Click **Add** (for providers) or **Submit** (for proxies).
 7. Deploy the provider or proxy to apply the changes.
 
-## Example: Limit Prompt to 3 Sentences
+## Example: Limit prompt to 3 sentences
 
 The following configuration blocks requests where the user message contains more than 3 sentences.
 

@@ -1,4 +1,4 @@
-# Consume an API Secured with OAuth2
+# Consume an API secured with OAuth2
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 ---
-title: "Security Hardening"
+title: "Security hardening"
 description: "Configure the necessary security areas before deploying API Platform Gateway to production."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Security Hardening
+# Security hardening
 
 This page covers the three security areas that must be configured before a production deployment: encryption keys for data at rest, TLS for data in transit, and authentication for access control.
 
-## Encryption Keys
+## Encryption keys
 
 The controller uses AES-GCM 256-bit keys to encrypt sensitive data at rest. Providing at least one encryption key is required when `developmentMode` is set to `false`.
 
@@ -80,7 +80,7 @@ The `version` field must match the filename stem of the secret key (`default-aes
 
 ---
 
-## TLS Configuration
+## TLS configuration
 
 TLS must be configured before exposing the gateway externally. Choose one of the options below based on how certificates are managed in your environment.
 
@@ -127,7 +127,7 @@ TLS must be configured before exposing the gateway externally. Choose one of the
             renewBefore: 720h           # Renew 30 days before expiry
     ```
 
-=== "Option B: Existing TLS Secret"
+=== "Option B: Existing TLS secret"
 
     Use this option if certificates are managed externally, for example, via a corporate PKI or HashiCorp Vault.
 
@@ -154,7 +154,7 @@ TLS must be configured before exposing the gateway externally. Choose one of the
             keyKey: tls.key
     ```
 
-### Upstream Custom CA Certificates
+### Upstream custom CA certificates
 
 If backend services use certificates signed by a private CA, mount the CA bundle into the controller so it can verify upstream TLS connections.
 
@@ -206,7 +206,7 @@ Choose an authentication strategy based on your organizational requirements.
     !!! note
         Role mapping values must correspond to claims present in the JWT issued by your IDP. See the [Gateway Controller OpenAPI reference](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/gateway/v1.1.0/gateway/gateway-controller/api/management-openapi.yaml) for the full list of supported roles and their permissions.
 
-=== "Option B: Basic Auth with Bcrypt"
+=== "Option B: Basic auth with bcrypt"
 
     If basic auth is required, never store plain-text passwords. The controller supports bcrypt hashes, which are safe to include in Helm values (the hash is not reversible). Store the plain password separately in a Kubernetes secret for rotation reference only.
 
@@ -215,14 +215,14 @@ Choose an authentication strategy based on your organizational requirements.
     Requires `apache2-utils` (Debian/Ubuntu) or `httpd-tools` (RHEL/CentOS):
 
     ```bash
-    htpasswd -nbB admin 'your-secure-password' | cut -d: -f2
+    htpasswd -nbB admin '<your-secure-password>' | cut -d: -f2
     # Output: $2y$10$...
     ```
 
     On macOS without `htpasswd`:
 
     ```bash
-    docker run --rm httpd:alpine htpasswd -nbB admin 'your-secure-password' | cut -d: -f2
+    docker run --rm httpd:alpine htpasswd -nbB admin '<your-secure-password>' | cut -d: -f2
     ```
 
     **Store the plain password in a Kubernetes secret:**
@@ -233,7 +233,7 @@ Choose an authentication strategy based on your organizational requirements.
     kubectl create secret generic gateway-admin-credentials \
       --namespace <your-namespace> \
       --from-literal=username=admin \
-      --from-literal=password='your-secure-password'
+      --from-literal=password='<your-secure-password>'
     ```
 
     **Configure the chart with the bcrypt hash:**

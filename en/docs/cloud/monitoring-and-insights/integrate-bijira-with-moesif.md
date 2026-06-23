@@ -1,6 +1,6 @@
 # Integrate API Platform with Moesif
 
-Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage.  While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding. 
+Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage. While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding.
 
 In this guide, you will:
 
@@ -65,7 +65,7 @@ Once you successfully add the key, you will see a delete option next to it. Curr
     Once you configure the Moesif API key on API Platform, **wait for five minutes before you publish any data to the Moesif** API analytics platform. 
 
 
-## Step 3: Invoke an API and observe the data on the Moesif Dashboard 
+## Step 3: Invoke an API and observe the data on the Moesif dashboard 
 
 You have configured API Platform to publish data to Moesif. Let's see how you can view the insights on Moesif.
 

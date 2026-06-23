@@ -1,5 +1,5 @@
 ---
-title: "Bottom-Up API Deployment Guide"
+title: "Bottom-up API deployment guide"
 description: "Deploy REST APIs directly to API Platform Gateway and automatically sync them to on-prem WSO2 API Manager using bottom-up deployment."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deploying-apis/bottom-up-api-deployment/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md
@@ -12,17 +12,17 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# Bottom-Up API Deployment Guide
+# Bottom-up API deployment guide
 
 ## Overview
 
 When you deploy a REST API via the gateway controller's REST API endpoint, the gateway **automatically tracks it for bottom-up sync** to on-prem WSO2 APIM 4.7.x (if configured for on-prem control plane mode).
 
-### Understanding API Deployment Approaches
+### Understanding API deployment approaches
 
 The WSO2 API Platform gateway supports two fundamentally different deployment approaches, distinguished by the **direction of API flow**:
 
-#### **Top-Down Deployment (Control Plane → Gateway)**
+#### **Top-down deployment (control plane → gateway)**
 
 In top-down deployment, the **platform-API (central control plane) pushes APIs to the gateway** via WebSocket connection.
 
@@ -32,7 +32,7 @@ In top-down deployment, the **platform-API (central control plane) pushes APIs t
 - Gateway receives and applies these definitions
 - Gateway pulls configuration from control plane
 
-#### **Bottom-Up Deployment (Gateway → On-Prem APIM)**
+#### **Bottom-up deployment (gateway → On-prem APIM)**
 
 Currently this support is only available for the on prem APIM control plane type.
 
@@ -52,16 +52,16 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 - **Continues working:** API remains available on gateway even if APIM is unavailable
 
 
-#### **Key Differences**
+#### **Key differences**
 
 | Aspect | Top-Down | Bottom-Up |
 |--------|----------|-----------|
 | **Initiation** | Control plane (platform-API) | Gateway (REST API) |
 | **Direction** | Platform-API → Gateway | Gateway → On-Prem APIM |
-| **Source of Truth** | Central control plane | Local gateway |
-| **APIM Integration** | Not applicable | Syncs to on-prem APIM |
-| **Status Tracking** | Managed by platform-API | Tracked in gateway DB |
-| **Failure Handling** | Depends on platform-API | API works, sync retries |
+| **Source of truth** | Central control plane | Local gateway |
+| **APIM integration** | Not applicable | Syncs to on-prem APIM |
+| **Status tracking** | Managed by platform-API | Tracked in gateway DB |
+| **Failure handling** | Depends on platform-API | API works, sync retries |
 
 ---
 
@@ -69,12 +69,12 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 
 ## Prerequisites
 
-### Gateway Controller Requirements
+### Gateway controller requirements
 
 - Gateway controller running locally or remotely
 - Management API endpoint: `http://localhost:9090/api/management/v0.9` (default)
 
-### Bottom-Up API Sync Requirements
+### Bottom-up API sync requirements
 
 - On-prem WSO2 APIM instance
 - Control plane configuration with on-prem mode enabled
@@ -85,7 +85,7 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 
 ## Configuration
 
-### Gateway Controller Configuration
+### Gateway controller configuration
 
 **File:** `config.toml`
 
@@ -121,9 +121,9 @@ roles = ["admin"]
 
 ---
 
-## How It Works
+## How it works
 
-### Sync Behavior
+### Sync behavior
 
 When you deploy a REST API via the gateway controller:
 
@@ -138,7 +138,7 @@ When you deploy a REST API via the gateway controller:
    - Status tracked in database: `pending` → `success`/`failed`
    - Automatic retries (3 attempts) on failure
 
-### Conditions for Sync
+### Conditions for sync
 
 All three must be true:
 
@@ -148,7 +148,7 @@ controlPlaneClient.IsConnected() &&    // WebSocket connected to APIM
 controlPlaneClient.IsOnPrem()          // On-prem mode detected (via .well-known endpoint)
 ```
 
-### What Happens If Sync Fails
+### What happens if sync fails
 
 - API **remains available on the gateway**
 - Status marked as `failed` with error details
@@ -157,11 +157,11 @@ controlPlaneClient.IsOnPrem()          // On-prem mode detected (via .well-known
 
 ---
 
-## REST API Deployment
+## REST API deployment
 
 Bottom-up APIs are REST APIs deployed via the gateway controller that are **automatically synced** to on-prem WSO2 APIM.
 
-### Key Features
+### Key features
 
 - All REST APIs deployed via gateway are tracked for bottom-up sync
 - Automatic sync to on-prem APIM (if connected)
@@ -171,7 +171,7 @@ Bottom-up APIs are REST APIs deployed via the gateway controller that are **auto
 - Support for API updates and undeployment
 - Continues working even if APIM is temporarily unavailable
 
-### Deployment Flow
+### Deployment flow
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -218,7 +218,7 @@ Bottom-up APIs are REST APIs deployed via the gateway controller that are **auto
                           └────────────────┘
 ```
 
-### API Definition
+### API definition
 
 All REST APIs deployed via the gateway will be synced to on-prem APIM automatically. Here's a complete example:
 
@@ -282,7 +282,7 @@ spec:
       path: /
 ```
 
-**Important Notes:**
+**Important notes:**
 
 - `metadata.name` must be unique per API
 - `context` becomes the URL path prefix on the gateway
@@ -290,7 +290,7 @@ spec:
 - `version` is tracked separately (can have multiple versions of same API)
 - Policies are optional but recommended for security
 
-### Deployment Steps
+### Deployment steps
 
 **Step 1: Create API YAML**
 
@@ -388,9 +388,9 @@ curl -X GET https://192.168.0.102:9443/api/am/publisher/v4/apis \
 
 ---
 
-## API Updates
+## API updates
 
-### Automatic Re-Sync on Update
+### Automatic re-sync on update
 
 When you update an API, it's automatically re-synced to on-prem APIM (if connected).
 
@@ -436,14 +436,14 @@ curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
   --data-binary @petstore-api-updated.yaml
 ```
 
-**What Happens:**
+**What happens:**
 
 1. API updated on gateway immediately
 2. Sync status internally reset to `pending`
 3. Automatically re-synced to on-prem APIM
 4. Both gateway and APIM have the updated version
 
-**Check Updated Status:**
+**Check updated status:**
 
 Monitor gateway controller logs for the sync result:
 
@@ -454,9 +454,9 @@ Monitor gateway controller logs for the sync result:
 
 ---
 
-## API Undeploy
+## API undeploy
 
-### Undeploy from Gateway and APIM
+### Undeploy from gateway and APIM
 
 To undeploy an API, send a DELETE request with the API name:
 
@@ -476,9 +476,9 @@ curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 
 ---
 
-## API Management Operations
+## API management operations
 
-### Create API Key
+### Create API key
 
 ```bash
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys \
@@ -499,21 +499,21 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api
 }
 ```
 
-### Invoke Protected API
+### Invoke protected API
 
 ```bash
 curl http://localhost:8080/petstore/pet/1 \
   -H "X-API-Key: apip_39ec8f6b69ef0edaf090e11be4dbf6c379176c53cd9a86131ee3c1fc4df0a8ds"
 ```
 
-### List API Keys
+### List API keys
 
 ```bash
 curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys \
   -H "Authorization: Basic ${BASE64_CREDENTIALS}"
 ```
 
-### Revoke API Key
+### Revoke API key
 
 ```bash
 curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/api-keys/key-uuid-12345 \
@@ -522,9 +522,9 @@ curl -X DELETE http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI/a
 
 ---
 
-## Sync Status Tracking
+## Sync status tracking
 
-### Understand Sync States
+### Understand sync states
 
 The gateway tracks the APIM sync state internally in its database. You can monitor it via the gateway controller logs.
 
@@ -535,7 +535,7 @@ The gateway tracks the APIM sync state internally in its database. You can monit
 | `failed` | Sync failed after 3 retries | `"Bottom-up sync: all retries exhausted"` |
 
 
-### Retry Failed Sync
+### Retry failed sync
 
 If sync fails, the gateway automatically retries up to 3 times per sync cycle. Sync is re-triggered on the next control plane reconnection, or immediately when you update the API.
 
@@ -552,13 +552,13 @@ curl -X PUT http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 
 ## Troubleshooting
 
-### Issue: API Not Syncing to APIM
+### Issue: API not syncing to APIM
 
 **Symptom:** Gateway logs show `"Bottom-up sync: attempt failed"` or `"Bottom-up sync: all retries exhausted"`
 
 **Possible Causes & Solutions:**
 
-#### 1. Control Plane Not Configured
+#### 1. Control plane not configured
 
 ```bash
 # Check if host is set
@@ -573,7 +573,7 @@ export APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_ID=...
 export APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET=...
 ```
 
-#### 2. APIM Not Reachable
+#### 2. APIM not reachable
 
 **Check connectivity:**
 
@@ -590,7 +590,7 @@ curl -k https://192.168.0.102:9443/internal/gateway/.well-known
 - Check firewall rules
 - Verify HTTPS/TLS settings (`insecureSkipVerify` may be needed)
 
-#### 3. Invalid OAuth2 Credentials
+#### 3. Invalid OAuth2 credentials
 
 **Check APIM logs** for authentication errors
 
@@ -599,7 +599,7 @@ curl -k https://192.168.0.102:9443/internal/gateway/.well-known
 - Ensure OAuth2 credentials have proper scopes: `apim:api_import_export apim:api_view`
 - Try alternative auth method (username/password instead of client credentials)
 
-#### 4. Missing Upstream URL
+#### 4. Missing upstream URL
 
 **Check API definition:**
 
@@ -610,7 +610,7 @@ curl -X GET http://localhost:9090/api/management/v0.9/rest-apis/PetStoreAPI \
 
 **Fix:** Ensure `upstream.main.url` is set to a valid backend service
 
-#### 5. Gateway-Controller Not Connected to APIM
+#### 5. Gateway-controller not connected to APIM
 
 **Check if gateway is connected:**
 
@@ -631,14 +631,14 @@ export APIP_GW_LOG_LEVEL=debug
      --data-binary @api-definition.yaml
    ```
 
-**View Gateway Connection Status:**
+**View Gateway connection status:**
 
 Check gateway controller logs for:
 - `"Connected to control plane"` - Connected to APIM
 - `"Failed to resolve gateway path"` - Can't reach APIM
 - `"Resolved WebSocket connect URL"` - On-prem mode detected
 
-### Issue: "Access Token Not Found"
+### Issue: "access token not found"
 
 **Cause:** APIM OAuth2 token endpoint returned invalid response
 
@@ -651,7 +651,7 @@ Check gateway controller logs for:
 export APIP_GW_LOG_LEVEL=debug
 ```
 
-### Issue: "On-prem Control Plane Mode Not Enabled"
+### Issue: "On-prem control plane mode not enabled"
 
 **Cause:** `IsOnPrem()` check is failing
 

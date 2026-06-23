@@ -1,11 +1,11 @@
-# Setting Up
+# Setting up
 
 This guide provides detailed instructions for deploying the API Platform Self-Hosted Gateway in production environments. Choose the infrastructure option that matches your environment.
 
 !!! tip "Quick Start"
     If you're just getting started, see the [Getting Started](getting-started.md) guide for a quick setup.
 
-## Setup Instructions
+## Setup instructions
 
 === "Virtual Machine"
 
@@ -215,7 +215,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     helm uninstall gateway
     ```
 
-## What's Next?
+## What's next?
 
 - [Adding and Managing Policies](manage-policies.md): Configure and enforce policies
 - [Analytics](analytics.md): Monitor API traffic and performance

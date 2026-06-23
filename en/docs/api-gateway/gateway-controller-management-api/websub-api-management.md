@@ -1,5 +1,5 @@
 ---
-title: "Management API: WebSub API Management"
+title: "Management API: WebSub API management"
 description: "REST API reference for creating, listing, updating, and deleting WebSub API configurations and API keys in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/websub-api-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/websub-api-management.md
@@ -11,9 +11,9 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# WebSub API Management
+# WebSub API management
 
-## Create a new WebSubAPI
+## Create a new websubapi
 
 <a id="opIdcreateWebSubAPI"></a>
 
@@ -120,7 +120,7 @@ Required roles: `admin`, `developer`
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Conflict - WebSub API with same name and version already exists|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## List all WebSubAPIs
+## List all websubapis
 
 <a id="opIdlistWebSubAPIs"></a>
 
@@ -156,7 +156,7 @@ Required roles: `admin`, `developer`
 |context|query|string|false|Filter by WebSub API context/path|
 |status|query|string|false|Filter by deployment status|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|
@@ -272,7 +272,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -632,7 +632,7 @@ Required roles: `admin`, `consumer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WebSub API or API key not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Get WebSubAPI by id
+## Get websubapi by id
 
 <a id="opIdgetWebSubAPIById"></a>
 
@@ -713,7 +713,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WebSubAPI not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Update an existing WebSubAPI
+## Update an existing websubapi
 
 <a id="opIdupdateWebSubAPI"></a>
 
@@ -825,7 +825,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WebSubAPI not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Delete a WebSubAPI
+## Delete a websubapi
 
 <a id="opIddeleteWebSubAPI"></a>
 

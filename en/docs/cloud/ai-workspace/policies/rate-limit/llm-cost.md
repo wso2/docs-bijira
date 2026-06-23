@@ -1,11 +1,11 @@
-# LLM Cost
+# LLM cost
 
 The LLM Cost policy calculates the monetary cost of each LLM API call and makes the result available to other policies — primarily [LLM Cost-Based Rate Limit](llm-cost-based-rate-limit.md). It runs in the response phase, requires no user configuration, and never exposes the cost to the caller.
 
 !!! info "Required for cost-based rate limiting"
     Add this policy to the same provider or proxy as **LLM Cost-Based Rate Limit**, and place it **after** it in the policy list. The gateway evaluates response-phase policies in reverse order, so the cost is calculated before the budget is checked.
 
-## How It Works
+## How it works
 
 1. When the LLM response arrives (including streaming/SSE responses), the policy reads the model name from the response body.
 2. It looks up the model in the built-in pricing database.
@@ -14,7 +14,7 @@ The LLM Cost policy calculates the monetary cost of each LLM API call and makes 
 
 The cost is internal — it is never forwarded to the caller.
 
-## Supported Providers
+## Supported providers
 
 | Provider | Notes |
 |----------|-------|
@@ -23,11 +23,11 @@ The cost is internal — it is never forwarded to the caller.
 | **Google Gemini** | Google AI Studio and Vertex AI, including multi-modal (audio, image), web search grounding, and thinking models |
 | **Mistral** | All Mistral models including audio duration-based billing (Voxtral) |
 
-## Configuration Parameters
+## Configuration parameters
 
 This policy has no user-configurable parameters. The pricing database path is a gateway-level system setting configured in `config.toml`.
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -44,7 +44,7 @@ This policy has no user-configurable parameters. The pricing database path is a 
 - If the model is not found in the pricing database, cost is set to `0`, a warning is logged, and the request is not blocked.
 - The pricing database is bundled with the gateway image and loaded at startup. A gateway restart is required to pick up pricing file updates.
 
-## Metadata Written
+## Metadata written
 
 | Key | Value |
 |-----|-------|

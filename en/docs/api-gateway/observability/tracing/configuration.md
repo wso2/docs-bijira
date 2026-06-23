@@ -1,5 +1,5 @@
 ---
-title: "Tracing Configuration Options"
+title: "Tracing configuration options"
 description: "Configure distributed tracing for API Platform Gateway: sampling rates, OTLP collector endpoints, and batch export settings."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/configuration/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/tracing/configuration.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Tracing Configuration
+# Tracing configuration
 
-## Configuration Options
+## Configuration options
 
-### Adjusting Sampling Rate
+### Adjusting sampling rate
 
 To reduce trace volume in high-traffic environments, adjust the sampling rate:
 
@@ -34,7 +34,7 @@ Sampling strategies:
 **Note:** Lower sampling rates reduce overhead but may miss important traces.
 
 
-### Custom Service Names
+### Custom service names
 
 Customize service names for better identification:
 
@@ -43,7 +43,7 @@ Customize service names for better identification:
 service_name = "policy-engine-prod-us-east-1"
 ```
 
-### Batch Configuration
+### Batch configuration
 
 Optimize batch settings for your environment:
 
@@ -63,7 +63,7 @@ The OTLP Collector configuration is located at:
 gateway/observability/otel-collector/config.yaml
 ```
 
-### Configuration Structure
+### Configuration structure
 
 The configuration consists of three main sections:
 
@@ -128,7 +128,7 @@ exporters:
     sampling_thereafter: 200
 ```
 
-#### Service Pipeline
+#### Service pipeline
 Connect receivers, processors, and exporters:
 
 ```yaml
@@ -140,7 +140,7 @@ service:
       exporters: [otlp, debug]
 ```
 
-### Example: Multi-Backend Export
+### Example: Multi-backend export
 
 Send traces to multiple backends simultaneously:
 
@@ -168,7 +168,7 @@ service:
       exporters: [otlp/jaeger, otlp/tempo, datadog]
 ```
 
-### Example: Tail-Based Sampling
+### Example: Tail-based sampling
 
 Keep all error traces but sample successful traces:
 
@@ -190,7 +190,7 @@ processors:
           sampling_percentage: 10
 ```
 
-## Trace Context Propagation
+## Trace context propagation
 
 The gateway components automatically propagate trace context using standard W3C Trace Context headers:
 

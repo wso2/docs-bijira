@@ -1,4 +1,4 @@
-# Configure Asgardeo as an External Key Manager
+# Configure Asgardeo as an external key manager
 
 Asgardeo is an identity-as-a-service (IDaaS) solution designed to create seamless login experiences for your applications. Asgardeo seamlessly integrates with API Platform, providing powerful API access control through the use of API scopes. This enables restricting API access to designated user groups. By configuring Asgardeo as an external key manager in API Platform, you can leverage your Asgardeo user stores to manage API access control effectively. This guide walks you through the steps to set up Asgardeo as your external key manager.
 
@@ -63,6 +63,6 @@ Now you have configured Asgardeo as an external key manager in API Platform Deve
 
 ![Developer Portal Key Managers tab with external-asgardeo-km selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_devportal.png)
 
-## What Next?
+## What next?
 
 To secure API access with the above-configured Asgardeo as key manager, follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md).

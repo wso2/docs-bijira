@@ -2,7 +2,7 @@
 
 The AI Gateway MCP docs cover exposing Model Context Protocol servers through the gateway and applying MCP-specific traffic policies.
 
-## In This Section
+## In this section
 
 - [Quick Start Guide](quick-start-guide.md) for deploying the gateway and publishing an MCP proxy
 - [MCP Authentication](policies/mcp-authentication.md) for protecting MCP traffic

@@ -1,4 +1,4 @@
-# LLM Provider and Proxy - AI Policies for privacy and cost control
+# LLM provider and proxy - AI policies for privacy and cost control
 
 > **Sample source:** [wso2/api-platform-samples/llm-cost-control-and-privacy-control](https://github.com/wso2/api-platform/tree/24298f4d07768e664ee16c5c38f96b9d1b89889e/samples/llm-cost-control-and-privacy-control)
 >
@@ -15,7 +15,7 @@ When your application routes LLM traffic through the WSO2 AI Gateway, you can at
 
 ---
 
-## What You Will Learn
+## What you will learn
 
 By working through this sample you will understand how to:
 
@@ -24,15 +24,15 @@ By working through this sample you will understand how to:
 
 ---
 
-## Scenarios Covered
+## Scenarios covered
 
-### Scenario 1 — Semantic Cache
+### Scenario 1 — semantic cache
 
 **Problem:** Identical or near-identical questions (paraphrased, reworded) are sent to the LLM repeatedly, incurring cost and latency on every call.
 
 **What this scenario does:** The gateway generates an embedding of each incoming prompt using Mistral and stores the LLM response in Redis. If a subsequent request is ≥ 85% semantically similar to a cached prompt, the cached response is returned immediately — no LLM call is made.
 
-### Scenario 2 — PII Masking
+### Scenario 2 — PII masking
 
 **Problem:** Users sometimes include personal data (email addresses, phone numbers) in prompts. Sending this data to a third-party LLM provider may violate privacy policies or compliance requirements.
 
@@ -40,11 +40,11 @@ By working through this sample you will understand how to:
 
 ---
 
-## Expected Results
+## Expected results
 
 After running the test scripts you should observe the following for each scenario.
 
-### Scenario 1 — Semantic Cache
+### Scenario 1 — semantic cache
 
 The same question is sent twice. On the second request, the gateway should return a cached response. **The test detects a cache hit via:**
 
@@ -57,7 +57,7 @@ The same question is sent twice. On the second request, the gateway should retur
 
 > If `embedding_provider_api_key` is not set in `additional-config.toml`, cache lookups silently fall through to OpenAI and the test will warn rather than fail.
 
-### Scenario 2 — PII Masking
+### Scenario 2 — PII masking
 
 A prompt containing a unique email address and phone number is sent, asking the model to repeat them verbatim. Because the gateway redacts the values before forwarding the request, **neither the original email nor the phone number should appear in the response**.
 
@@ -80,9 +80,9 @@ A prompt containing a unique email address and phone number is sent, asking the 
 
 ---
 
-## Required Configuration
+## Required configuration
 
-### 1. OpenAI API Key
+### 1. OpenAI API key
 
 The setup script injects the key into the LLM provider at deploy time. Provide it via:
 
@@ -99,7 +99,7 @@ export OPENAI_API_KEY="sk-..."
 
 The key is never written to disk; it is substituted into the provider payload at runtime and discarded.
 
-### 2. Mistral API Key (required for Scenario 2)
+### 2. Mistral API key (required for scenario 2)
 
 Open `additional-config.toml` and fill in your Mistral key:
 
@@ -145,7 +145,7 @@ The script performs these steps in order:
 
 All steps are idempotent — re-running the script on an already-configured environment is safe.
 
-### Endpoints After Setup
+### Endpoints after setup
 
 | Endpoint | URL |
 |---|---|
@@ -155,7 +155,7 @@ All steps are idempotent — re-running the script on an already-configured envi
 
 ---
 
-## Running the Tests
+## Running the tests
 
 Each policy has its own script so you can run them independently. All scripts require `jq` and call the gateway proxy directly — no API key is needed at test time (the gateway uses its stored credentials).
 

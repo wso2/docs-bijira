@@ -1,4 +1,4 @@
-# Getting Started with API Monetization
+# Getting started with API monetization
 
 To enable API monetization, you need to connect your Stripe account to API Platform. Once connected, API Platform creates Stripe products, prices, customers, and subscriptions on your behalf, and reports usage to Stripe for billing.
 
@@ -17,7 +17,7 @@ Before you begin, ensure you have:
     - A **Standard secret key**, which has full access to your Stripe account, or
     - A **Restricted secret key**, which scopes access to only the permissions you grant. If you choose this option, make sure the key is granted the permissions listed below.
 
-        ??? info "Permissions for Restricted Secret Keys"
+        ??? info "Permissions for restricted secret keys"
 
             Grant the following minimum permissions when creating the restricted secret key in the Stripe Dashboard:
 
@@ -48,7 +48,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Add Stripe Credentials
+## Add Stripe credentials
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
@@ -60,8 +60,8 @@ Before you begin, ensure you have:
 
 6. Click **Add Stripe Credentials**.
 7. Enter the following details:
-    - **Secret Key:** The secret key from your Stripe account.
-    - **Publishable Key:** The publishable key from your Stripe account.
+    - **Secret key:** The secret key from your Stripe account.
+    - **Publishable key:** The publishable key from your Stripe account.
 
 8. Click **Save**.
 
@@ -69,6 +69,6 @@ Once saved, API Platform is connected to your Stripe account and you can start m
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Manage Paid Subscription Plans](manage-paid-subscription-plans.md)

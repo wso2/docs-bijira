@@ -49,13 +49,13 @@ Once the AI Gateway is active, you can continue to create the Anthropic LLM prov
 
 ---
 
-## Step 2: Create and Deploy an Anthropic LLM Provider
+## Step 2: Create and deploy an Anthropic LLM provider
 
 1. **Log in to the WSO2 API Platform Console** as an admin.
 
 2. Click **AI Workspace** at the top of the page.
 
-### Create an Anthropic LLM Provider
+### Create an Anthropic LLM provider
 
 1. In the left navigation panel of the AI Workspace Console, navigate to **LLM → LLM Providers**.
 
@@ -69,7 +69,7 @@ Once the AI Gateway is active, you can continue to create the Anthropic LLM prov
 
 6. Click **Add Provider**.
 
-### Deploy the Anthropic Provider to the AI Gateway
+### Deploy the Anthropic provider to the AI Gateway
 
 1. On the page that opens after creating the provider, click **Deploy to Gateway**.
 
@@ -81,7 +81,7 @@ The Anthropic LLM provider is now deployed to the selected AI Gateway.
 
 ---
 
-## Step 3: Create and Deploy an App LLM Proxy
+## Step 3: Create and deploy an app LLM proxy
 
 The App LLM Proxy is the endpoint that Claude Code invokes through WSO2 API Platform.
 
@@ -115,7 +115,7 @@ The App LLM Proxy is the endpoint that Claude Code invokes through WSO2 API Plat
 
 12. Click **Create Proxy**.
 
-### Deploy the App LLM Proxy to the AI Gateway
+### Deploy the app LLM proxy to the AI Gateway
 
 1. Click **Deploy to Gateway**.
 
@@ -125,7 +125,7 @@ The App LLM Proxy is the endpoint that Claude Code invokes through WSO2 API Plat
 
 The App LLM Proxy is now deployed to the selected AI Gateway.
 
-### Generate an API Key for Claude Code
+### Generate an API key for Claude Code
 
 Claude Code needs an API key from WSO2 API Platform to invoke the deployed App LLM Proxy.
 
@@ -147,11 +147,11 @@ You will use these values when configuring Claude Code.
 
 ---
 
-## Step 4: Configure Claude Code to Use the App LLM Proxy
+## Step 4: Configure Claude Code to use the app LLM proxy
 
 Claude Code can be configured using environment variables or through Claude Code's `settings.json` file.
 
-### Configure Environment Variables
+### Configure environment variables
 
 Open a terminal session where you want to run Claude Code.
 
@@ -171,7 +171,7 @@ Replace:
 !!! note
     These environment variables apply only to the current terminal session. If you open a new terminal session, you must export them again.
 
-!!! note "Persistent Configuration"
+!!! note "Persistent configuration"
 
     To make the configuration permanent, add the environment variables to Claude Code's `settings.json` file.
 
@@ -190,7 +190,7 @@ Replace:
 
     For more information, see [Claude Code's official documentation](https://code.claude.com/docs/en/settings).
 
-### Configure SSL Certificate Trust
+### Configure SSL certificate trust
 
 When using a local WSO2 API Platform AI Gateway over HTTPS, Claude Code must be able to trust the certificate presented by the Gateway.
 
@@ -223,7 +223,7 @@ Claude Code will now send requests through WSO2 API Platform instead of directly
 
 ## Use case examples
 
-### View API Analytics and Insights
+### View API analytics and insights
 
 By routing Claude Code requests through the WSO2 API Manager AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
 
@@ -237,7 +237,7 @@ For more information on Analytics, refer to the official [WSO2 API Platform Docu
 
 ---
 
-### Implement WSO2 AI Gateway Guardrails for Enhanced Control
+### Implement WSO2 AI Gateway guardrails for enhanced control
 
 WSO2 API Manager AI Gateway guardrails enable granular control over the data exchanged between Claude Code and the Anthropic API.
 
@@ -269,7 +269,7 @@ For more information on Rate Limiting and other policies, refer to the official 
 
 ---
 
-### Prompt Decorator
+### Prompt decorator
 
 WSO2 API Manager AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 

@@ -1,4 +1,4 @@
-# Design APIs using API Designer
+# Design APIs using API designer
 
 You can use API Designer to create and improve your OpenAPI 3.x specification with AI-assisted workflows and form-based editing.
 
@@ -16,7 +16,7 @@ Example prompt:
 
 Open your specification file, then open API Designer (see [Getting started](./getting-started.md)). API Designer treats the file as the source of truth and writes updates back to the same file.
 
-### Work in Design view
+### Work in design view
 
 ![API Designer Design view for Order Management API showing AI Readiness, Security, and REST Compliance score cards, paths list, and Edit with AI button](./images/design-view.png)
 

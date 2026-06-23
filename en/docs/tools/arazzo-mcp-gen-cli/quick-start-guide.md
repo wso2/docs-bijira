@@ -1,8 +1,8 @@
-## Quick Start — Arazzo MCP Generator (arazzo-mcp-gen)
+## Quick start — Arazzo MCP generator (arazzo-mcp-gen)
 
 `arazzo-mcp-gen` is a CLI tool that turns an [Arazzo specification](https://spec.openapis.org/arazzo/latest.html) and its referenced OpenAPI files into a fully Dockerized Python MCP (Model Context Protocol) server. Each Arazzo workflow becomes an MCP tool that any AI agent can call.
 
-## What It Does
+## What it does
 
 Given a folder containing:
 
@@ -55,7 +55,7 @@ arazzo-mcp-gen --version
 
 ---
 
-## Quick Start
+## Quick start
 
 If you don't have an Arazzo spec yet, let the CLI create a sample one:
 
@@ -78,11 +78,11 @@ Once Docker finishes building, run it:
 docker run -p 5000:5000 <image-name-from-output>
 ```
 
-## User Scenario: End-to-End Walkthrough
+## User scenario: End-to-End walkthrough
 
 > **Scenario:** You have an OpenAPI spec for a pet store API and want to expose a "check if a pet exists, then create or update it" workflow as an MCP tool for an AI agent.
 
-### Step 1 — Prepare your project folder
+### Step 1 — prepare your project folder
 
 Create a folder containing your Arazzo specification and its referenced OpenAPI files:
 
@@ -96,7 +96,7 @@ pet-project/
 └── petstore_openapi.yaml    ← Your OpenAPI spec
 ```
 
-### Step 2 — Validate the spec
+### Step 2 — validate the spec
 
 ```bash
 arazzo-mcp-gen validate -d .
@@ -114,7 +114,7 @@ Validation Result: PASSED
 
 Fix any errors reported before continuing. Warnings are informational; use `--strict` to treat them as errors in CI.
 
-### Step 3 — Inspect the spec
+### Step 3 — inspect the spec
 
 ```bash
 arazzo-mcp-gen inspect -d .
@@ -126,7 +126,7 @@ Review the printed summary to confirm:
 - Every step has an `operationId` that matches your OpenAPI spec
 - Input schema, success criteria, and routing look correct
 
-### Step 4 — Visualize the flow
+### Step 4 — visualize the flow
 
 ```bash
 arazzo-mcp-gen visualize -d .
@@ -141,7 +141,7 @@ To save it:
 arazzo-mcp-gen visualize -d . -o flow.md
 ```
 
-### Step 5 — Generate the MCP server
+### Step 5 — generate the MCP server
 
 Make sure Docker is running, then:
 
@@ -167,7 +167,7 @@ Building Docker image...
 ╚════════════════════════════════════════════════════════════════════════╝
 ```
 
-### Step 6 — Run the server
+### Step 6 — run the server
 
 Copy the `docker run` command from the output and run it:
 
@@ -175,7 +175,7 @@ Copy the `docker run` command from the output and run it:
 docker run -p 5000:5000 pet-upsert-workflow-v3-mcp-server
 ```
 
-### Step 7 — Connect an MCP client
+### Step 7 — connect an MCP client
 
 The server is now live at `http://localhost:5000/mcp` in stateless HTTP mode. To connect it to an MCP client like **Claude Desktop**, you can use `supergateway` to bridge the HTTP endpoint:
 
@@ -201,7 +201,7 @@ The AI agent can now call your Arazzo workflows as tools. The tool executes the 
 
 ---
 
-## Generated Artifacts
+## Generated artifacts
 
 Inspect with `--output` / `-o ./artifacts`:
 

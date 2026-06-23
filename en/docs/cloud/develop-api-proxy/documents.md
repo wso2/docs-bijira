@@ -23,7 +23,7 @@ When an API consumer signs in to the API Platform Developer Portal to browse API
 
 To provide such information that improves the overall visibility of the API, an API developer can add such documentation to an API before publishing it to the Developer Portal.
 
-## Add Documents to an API
+## Add documents to an API
 
 To add documentation for an API, follow the steps given below.
 

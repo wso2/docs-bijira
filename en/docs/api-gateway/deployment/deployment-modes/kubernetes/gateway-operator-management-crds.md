@@ -1,5 +1,5 @@
 ---
-title: "Gateway Operator Management CRDs"
+title: "Gateway operator management CRDs"
 description: "Reference for management-API-backed Kubernetes CRDs in API Platform Gateway: LlmProvider, LlmProxy, Mcp, ApiKey, SubscriptionPlan, Subscription, and Certificate."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/gateway-operator-management-crds/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/gateway-operator-management-crds.md
@@ -13,7 +13,7 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Gateway Operator — Management CRDs
+# Gateway operator — management CRDs
 
 This document covers the optional management-API-backed custom resources supported by the Gateway Operator: `LlmProviderTemplate`, `LlmProvider`, `LlmProxy`, `Mcp`, `ApiKey`, `SubscriptionPlan`, `Subscription`, and `Certificate`.
 
@@ -25,7 +25,7 @@ In addition to `RestApi`, the operator supports management-API-backed CRDs such 
 
 These resources use the same gateway selection model as `RestApi` (labels + `APIGateway.spec.apiSelector`).
 
-## Shared Prerequisites
+## Shared prerequisites
 
 Create a Kubernetes Secret containing credentials and tokens used by policy parameters and resource configurations:
 
@@ -52,7 +52,7 @@ kubectl get secret httproute-demo-policy-credentials
 
 **Note:** The operator uses Kubernetes-native `valueFrom.secretKeyRef` references in policy parameters and resource configurations, allowing dynamic secret resolution at reconciliation time. This approach provides better security and follows Kubernetes best practices for secret management.
 
-### Deploy LLM Backend Mock (Prerequisites for LLM Flow)
+### Deploy LLM backend mock (prerequisites for LLM flow)
 
 The LLM resources require a mock OpenAI-compatible backend (Prism + nginx HTTPS). The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
@@ -66,7 +66,7 @@ kubectl get deploy,svc -n default -l 'app.kubernetes.io/name in (mock-openai,moc
 
 Wait for both Deployments to be `Ready` before proceeding.
 
-### Deploy ApiKey Resources (Prerequisites)
+### Deploy apikey resources (prerequisites)
 
 Apply `ApiKey` CRs up front. The LLM-parent ApiKeys (`demo-llmprovider-apikey`, `demo-llmproxy-apikey`) will retry reconciliation automatically once their parent `LlmProvider`/`LlmProxy` are created.
 
@@ -223,7 +223,7 @@ kubectl get llmprovidertemplate,llmprovider,llmproxy
 - Upstream authentication credentials can be sourced from Kubernetes Secrets via `valueFrom`.
 - The operator resolves all `valueFrom` references before sending the configuration to the gateway.
 
-### Sample LLM API-key Protected Invocations
+### Sample LLM API-key protected invocations
 
 ```bash
 # LlmProvider API-key protected (wrong key -> reject)
@@ -262,7 +262,7 @@ curl -sS -k \
 
 ## Deploy MCP
 
-### Deploy MCP Backend (Prerequisites for MCP Flow)
+### Deploy MCP backend (prerequisites for MCP flow)
 
 The MCP resources require the `mcp-server-backend` service. The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
@@ -301,7 +301,7 @@ EOF
 kubectl get mcp
 ```
 
-### Sample MCP Client Invocations
+### Sample MCP client invocations
 
 ```bash
 # 1) MCP initialize (capture headers to extract mcp-session-id)
@@ -345,7 +345,7 @@ curl -sS -k \
 
 Expected result: initialize returns success JSON-RPC response; `tools/call` returns `result.content[0].text` containing `The sum of 40 and 60 is 100.`
 
-## Deploy RestAPI with Policy Parameter from Secret
+## Deploy restapi with policy parameter from secret
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -415,7 +415,7 @@ curl --request GET \
 - Nested fields within policy parameters are automatically traversed and resolved.
 - The resolved string value replaces the `valueFrom` object before the API configuration is sent to the gateway.
 
-## Deploy Hello Backend (Prerequisites for RestAPI Flows)
+## Deploy hello backend (prerequisites for restapi flows)
 
 The RestAPI resources route to the `hello-backend` service. The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
@@ -429,7 +429,7 @@ kubectl get deploy,svc -n default
 
 Wait for the Deployment to be `Ready` before proceeding.
 
-## Deploy RESTAPI with API Key
+## Deploy RestAPI with API key
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -497,7 +497,7 @@ curl --request GET \
   -k
 ```
 
-## Deploy REST API with Subscriptions
+## Deploy REST API with subscriptions
 
 ```sh
 kubectl apply -f - <<'EOF'
@@ -583,17 +583,17 @@ curl --request GET \
   -k
 ```
 
-## Validation Notes
+## Validation notes
 
 - `Subscription.spec.subscriptionPlanId` can be a literal ID or a `SubscriptionPlan` CR name.
 - `ApiKey.spec.parentRef.kind` supports `RestApi`, `LlmProvider`, and `LlmProxy`.
 - `ApiKey.spec.expiresAt` and `ApiKey.spec.expiresIn` are mutually exclusive (CEL validation rejects both together).
 
-## valueFrom Pattern — Kubernetes-Native Secret Resolution
+## valueFrom pattern — Kubernetes-native secret resolution
 
 The operator supports Kubernetes-native secret management through the `valueFrom` pattern, allowing policy parameters, credentials, and sensitive values to be resolved from Kubernetes Secrets at reconciliation time.
 
-### Supported Use Cases
+### Supported use cases
 
 The `valueFrom` pattern is supported in:
 
@@ -610,11 +610,11 @@ The `valueFrom` pattern is supported in:
 4. **Subscription tokens** in Subscription CRs
    - Authentication tokens resolved from Secrets
 
-### Pattern Syntax
+### Pattern syntax
 
 The `valueFrom` pattern supports two variants depending on the resource type:
 
-**Variant 1: Policy Parameters** (RestApi, LlmProvider, LlmProxy)
+**Variant 1: Policy parameters** (RestApi, LlmProvider, LlmProxy)
 
 Policy parameters use `valueFrom.secretKeyRef` for nested secret references:
 ```yaml
@@ -626,7 +626,7 @@ params:
         key: subscription-key
 ```
 
-**Variant 2: Direct Fields** (ApiKey, Subscription, Upstream Auth)
+**Variant 2: Direct fields** (ApiKey, Subscription, Upstream Auth)
 
 Resource-level secrets use `valueFrom` directly with `name` and `key`:
 ```yaml
@@ -641,7 +641,7 @@ apiKey:
 - `key`: Required. The data key within the Secret.
 - `namespace`: Optional. Defaults to the CR's namespace.
 
-### How It Works
+### How it works
 
 1. Operator watches all Kubernetes `Secret` resources in the namespace.
 2. At reconciliation, operator fetches referenced Secret and extracts the value.
@@ -649,11 +649,11 @@ apiKey:
 4. Configuration is sent to gateway-controller with resolved values only.
 5. If Secret is missing, reconciliation retries automatically.
 
-### Change Detection
+### Change detection
 
 The operator computes a fingerprint of all referenced Secret `resourceVersion` fields. When a Secret changes, affected CRs are automatically re-reconciled, ensuring credentials stay synchronized without manual intervention.
 
-### Example: RestApi with Policy Parameter from Secret
+### Example: RestAPI with policy parameter from secret
 
 Create the Secret:
 ```yaml
@@ -700,7 +700,7 @@ policies:
 
 Update the Secret anytime; the operator automatically redeploys with the new value.
 
-### Example 2: ApiKey with Direct valueFrom
+### Example 2: API key with direct valuefrom
 
 Reference in ApiKey (using `name` and `key` directly):
 ```yaml
@@ -721,6 +721,6 @@ spec:
     unit: days
 ```
 
-**Key Difference:**
+**Key difference:**
 - RestApi policy params use nested `secretKeyRef` structure
 - ApiKey, Subscription, and upstream auth use flat `name`/`key` under `valueFrom`

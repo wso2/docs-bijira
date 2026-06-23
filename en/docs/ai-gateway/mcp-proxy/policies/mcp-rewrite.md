@@ -1,5 +1,5 @@
 ---
-title: "MCP Rewrite"
+title: "MCP rewrite"
 description: "Expose user-facing names for MCP tools, resources, and prompts while mapping them to different backend capability names."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-rewrite/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-rewrite.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# MCP Rewrite
+# MCP rewrite
 
 ## Overview
 
@@ -22,17 +22,17 @@ When a list is provided for a capability type, only the configured capabilities 
 
 ## Features
 
-- **Tool Rewriting**: Define user-facing tool names and map them to backend tool names with custom schemas and descriptions.
-- **Resource Rewriting**: Define user-facing resource identifiers and map them to backend resource identifiers with custom descriptions.
-- **Prompt Rewriting**: Define user-facing prompt names and map them to backend prompt names with custom metadata.
-- **Flexible Metadata**: Include additional fields (beyond `name`, `description`, `target`, etc.) in capability definitions for custom metadata in list responses.
-- **Optional Mapping**: Omit the `target` field to expose capabilities as-is without mapping to a different backend name.
+- **Tool rewriting**: Define user-facing tool names and map them to backend tool names with custom schemas and descriptions.
+- **Resource rewriting**: Define user-facing resource identifiers and map them to backend resource identifiers with custom descriptions.
+- **Prompt rewriting**: Define user-facing prompt names and map them to backend prompt names with custom metadata.
+- **Flexible metadata**: Include additional fields (beyond `name`, `description`, `target`, etc.) in capability definitions for custom metadata in list responses.
+- **Optional mapping**: Omit the `target` field to expose capabilities as-is without mapping to a different backend name.
 
 ## Configuration
 
 The MCP Rewrite policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -56,9 +56,9 @@ These parameters are configured per MCP Proxy by the API developer:
 
 > **Note**: Additional custom fields can be included in `tools`, `resources`, and `prompts` definitions and will be returned in the corresponding list responses.
 
-## MCP Proxy Definition Examples
+## MCP proxy definition examples
 
-### Example 1: Basic Tool Rewriting
+### Example 1: Basic tool rewriting
 
 Expose tools with different names than the backend:
 
@@ -90,7 +90,7 @@ spec:
     ...
 ```
 
-### Example 2: Resource Rewriting with URI Mapping
+### Example 2: Resource rewriting with URI mapping
 
 Expose resources with user-friendly URIs mapped to backend resources:
 
@@ -122,7 +122,7 @@ spec:
     ...
 ```
 
-### Example 3: Prompt and Tool Rewriting Combined
+### Example 3: Prompt and tool rewriting combined
 
 Rewrite prompts and tools with metadata:
 
@@ -155,7 +155,7 @@ spec:
     ...
 ```
 
-## Use Cases
+## Use cases
 
-1. **Semantic Naming**: Use user-friendly names in the API while keeping backend names internal or legacy.
-2. **AI Readiness**: Redefine name, description, input schema, etc. in a way that is friendly to the AI agents.
+1. **Semantic naming**: Use user-friendly names in the API while keeping backend names internal or legacy.
+2. **AI readiness**: Redefine name, description, input schema, etc. in a way that is friendly to the AI agents.

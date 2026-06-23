@@ -1,5 +1,5 @@
 ---
-title: "Management API: MCP Proxy Management"
+title: "Management API: MCP proxy management"
 description: "REST API reference for creating, listing, updating, and deleting MCP proxy configurations in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/mcp-proxy-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/mcp-proxy-management.md
@@ -12,11 +12,11 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# MCP Proxy Management
+# MCP proxy management
 
 CRUD operations for MCPProxies
 
-## Create a new MCPProxy
+## Create a new mcpproxy
 
 <a id="opIdcreateMCPProxy"></a>
 
@@ -117,7 +117,7 @@ Required roles: `admin`, `developer`
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Conflict - MCP Proxy with same name and version already exists|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## List all MCPProxies
+## List all mcpproxies
 
 <a id="opIdlistMCPProxies"></a>
 
@@ -153,7 +153,7 @@ Required roles: `admin`, `developer`
 |context|query|string|false|Filter by MCP proxy context/path|
 |status|query|string|false|Filter by deployment status|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|
@@ -313,7 +313,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -327,7 +327,7 @@ Status Code **200**
 |state|deployed|
 |state|undeployed|
 
-## Get MCPProxy by id
+## Get mcpproxy by id
 
 <a id="opIdgetMCPProxyById"></a>
 
@@ -405,7 +405,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|MCPProxy not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Update an existing MCPProxy
+## Update an existing mcpproxy
 
 <a id="opIdupdateMCPProxy"></a>
 
@@ -511,7 +511,7 @@ Required roles: `admin`, `developer`
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|MCPProxy not found|[ErrorResponse](schemas.md#schemaerrorresponse)|
 |500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal server error|[ErrorResponse](schemas.md#schemaerrorresponse)|
 
-## Delete a MCPProxy
+## Delete a mcpproxy
 
 <a id="opIddeleteMCPProxy"></a>
 

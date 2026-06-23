@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Import API Contract
+# Import API contract
 
 An API proxy acts as an intermediary between an existing API and API Platform, intercepting all requests made to the API.It also functions as a managed API, allowing you to apply essential API management features such as security policies and rate limiting.
 
@@ -32,7 +32,7 @@ In this guide, you will:
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-## Create an API Proxy
+## Create an API proxy
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
@@ -48,19 +48,19 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
 6. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-## Configure and Deploy the API Proxy
+## Configure and deploy the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click it.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> OpenAPI Console** page of the API Proxy.
 2. Use the OpenAPI Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API Proxy
+## Promote the API proxy to production and publish the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.
@@ -68,7 +68,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 4. Click **Publish**.
 5. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
 
-## API Proxy Behavior
+## API proxy behavior
 
 The Reading List API Proxy provides the following functionality:
 

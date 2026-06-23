@@ -12,26 +12,26 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Creating an API Proxy from Marketplace
+# Creating an API proxy from marketplace
 
 API Platform provides built-in support for multiple well-known third-party APIs through the API Platform Marketplace. The marketplace contains API contracts for these third-party services, allowing you to create and publish API proxies effortlessly.
 
-## Steps to Create an API Proxy from the Marketplace
+## Steps to create an API proxy from the marketplace
 
 Follow these steps to create an API proxy for a third-party API available in the API Platform Marketplace:
 
-### 1. Access the API Platform Console
+### 1. Access the API Platform console
 
 1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.
 
-### 2. Select a Third-Party API
+### 2. Select a third-party API
 
 1. Click **+Create**.
 2. Navigate to **Create an API Proxy for Third-Party APIs (Egress)** and click **Get From Marketplace**.
 3. In the **Create API Proxy from Marketplace** page, browse or search for the desired third-party API.
 4. Select the API you want to integrate.
 
-### 3. Configure API Proxy Details
+### 3. Configure API proxy details
 
 1. Update the required API proxy details, such as:
     - API Name
@@ -46,12 +46,12 @@ Follow these steps to create an API proxy for a third-party API available in the
 
    Once created, the overview page of the new API proxy appears.
 
-### 4. Configure Backend Settings
+### 4. Configure backend settings
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 2. Depending on the third-party API requirements, configure **Endpoint Configurations** or set up an **API-level mediation policy** to handle authentication and authorization.
 
-#### Example: Configuring the `Currency API`
+#### Example: Configuring the `currency API`
 
 To integrate the `Currency API`, follow these steps:
 
@@ -65,7 +65,7 @@ To integrate the `Currency API`, follow these steps:
 
    ![Policy page with Configurations panel showing Currency API endpoint URL, API Key Header, and API Key input fields](../../../assets/img/create-api-proxy/third-party-apis/marketplace/third-party-api-backend-configuration.png)
 
-### Next Steps
+### Next steps
 
 - Test the API proxy to ensure it correctly forwards requests to the third-party API. See [Test REST Endpoints via the OpenAPI Console](../../test-api-proxy/openapi-console.md).
 - Apply additional policies if needed (e.g., rate limiting, security policies). See [Policy Overview](../../develop-api-proxy/policy/attach-and-manage-policies.md#attach-a-policy).

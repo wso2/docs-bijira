@@ -14,7 +14,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 1: Configure User Credentials in AWS API Gateway
+## Step 1: Configure user credentials in AWS API Gateway
 
 1. Login to your AWS account and navigate to Console Home. Search for "IAM" in the search bar.
 2. Click on the IAM service. Navigate to Users under Access Management.
@@ -26,21 +26,21 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 2: Add an External Gateway in API Platform
+## Step 2: Add an external gateway in API Platform
 
 Now that you have your AWS credentials ready, configure the external gateway connection in API Platform.
 
-1. Navigate to **Organization Level** in API Platform.  
+1. Navigate to **Organization level** in API Platform.  
 2. Click **Add External Gateway**.
 
       ![External Gateway empty state page with Add Gateway button and API gateway icon, shown under Admin > External Gateway menu](../../assets/img/gateway-federation/add-external-gateway.png)
 
 3. Enter the gateway configuration details:
-      - **Gateway Name:** A descriptive name for this gateway (e.g., `Production AWS API Gateway`)
+      - **Gateway name:** A descriptive name for this gateway (e.g., `Production AWS API Gateway`)
       - **Region:** The AWS region where your API Gateway is deployed (e.g., `us-east-1`)
       - **Stage:** The API Gateway stage to discover APIs from (e.g., `prod`, `dev`)
-      - **Access Key :** The Access Key  from Step 1
-      - **Secret Key:** The Secret Key from Step 1
+      - **Access key:** The Access Key from Step 1
+      - **Secret key:** The Secret Key from Step 1
 4. Click **Save**
    
    ![Add External Gateway form with AWS vendor selected, display name, description, AWS region us-east-1, stage name dev, access key, and secret key fields](../../assets/img/gateway-federation/add-external-gateway-form.png){ width="800" }
@@ -49,7 +49,7 @@ The external gateway is now connected to API Platform and ready for API discover
 
 ---
 
-## Step 3: Discover APIs from the Gateway
+## Step 3: Discover APIs from the gateway
 
 Once the external gateway is configured, you can discover and federate APIs into API Platform.
 

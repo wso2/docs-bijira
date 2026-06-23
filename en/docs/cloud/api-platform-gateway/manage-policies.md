@@ -1,4 +1,4 @@
-# Adding and Managing Policies
+# Adding and managing policies
 
 This guide explains how to add and manage policies for your Self-Hosted Gateway using API Platform's unified control plane.
 
@@ -6,7 +6,7 @@ This guide explains how to add and manage policies for your Self-Hosted Gateway 
 
 Policies allow you to enforce security, rate limiting, transformation, and other governance requirements on your APIs. With the Self-Hosted Gateway, you manage policies centrally through API Platform's Policy Hub, and they are automatically synchronized to your gateway.
 
-## Adding Policies to an API
+## Adding policies to an API
 
 To add policies to an API deployed on your Self-Hosted Gateway:
 
@@ -33,11 +33,11 @@ To add policies to an API deployed on your Self-Hosted Gateway:
 9. Then **Save** the API.
 10. Deploy the API changes to the Gateway.
 
-## Available Policy Types
+## Available policy types
 
 Navigate to [API Platform Policy Hub](https://wso2.com/api-platform/policy-hub/) to discover available policies.
 
-## What's Next?
+## What's next?
 
 - [Writing a Custom Policy](writing-a-custom-policy.md): Learn how to build a custom policy using the gateway SDK
 - [Writing an AI Policy](../ai-workspace/policies/writing-an-ai-policy.md): Learn how to write policies for LLM traffic

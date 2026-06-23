@@ -1,4 +1,4 @@
-# Manage App LLM Proxy
+# Manage app LLM proxy
 
 Once you create an App LLM Proxy, you can manage its configuration through the proxy details page. This guide covers all management operations available for your specialized application or agent proxy.
 
@@ -18,7 +18,7 @@ Once you create an App LLM Proxy, you can manage its configuration through the p
 
 ---
 
-## Access Proxy Details
+## Access proxy details
 
 1. Navigate to **LLM** > **Proxies** in the left navigation menu.
 
@@ -37,7 +37,7 @@ The **Deploy to Gateway** button and a **delete** icon are located in the top-ri
 
 ---
 
-## Provider Settings
+## Provider settings
 
 <div style="border-left: 4px solid #1976d2; padding-left: 16px; margin-bottom: 24px;">
 
@@ -45,7 +45,7 @@ Configure which LLM service provider the proxy connects to and how it authentica
 
 </div>
 
-### LLM Service Provider
+### LLM service provider
 
 1. Go to the **Provider** tab.
 
@@ -56,7 +56,7 @@ Configure which LLM service provider the proxy connects to and how it authentica
     !!! info
         Changing the provider updates related settings such as authentication and available resources.
 
-### API Key Configuration
+### API key configuration
 
 If your selected provider uses API key authentication, you'll see the **API Key Configuration** section below the provider dropdown.
 
@@ -86,7 +86,7 @@ Define which API endpoints (resources) are available through this proxy by impor
 
 </div>
 
-### OpenAPI Specification
+### OpenAPI specification
 
 The OpenAPI specification defines the resources (API endpoints) available through your proxy. Depending on the provider, the specification may be automatically populated.
 
@@ -103,7 +103,7 @@ The OpenAPI specification defines the resources (API endpoints) available throug
 !!! tip "OpenAPI Format"
     Supports OpenAPI 3.0 and 3.1 specifications in both JSON and YAML formats.
 
-### View Resources
+### View resources
 
 After importing, the **Resources** section displays the count and list of parsed resources. Each resource shows:
 
@@ -148,7 +148,7 @@ Attach guardrails to enforce content safety, compliance, and quality standards o
 
 </div>
 
-### Global Guardrails
+### Global guardrails
 
 Global guardrails apply to **all resources** in the proxy.
 
@@ -168,7 +168,7 @@ Global guardrails apply to **all resources** in the proxy.
 
 Added guardrails appear as pills showing the guardrail name and version.
 
-### Resource-wise Guardrails
+### Resource-wise guardrails
 
 Resource-wise guardrails apply to **specific endpoints** only. This section lists each resource from your OpenAPI specification, allowing you to attach guardrails to individual endpoints.
 
@@ -182,7 +182,7 @@ Resource-wise guardrails apply to **specific endpoints** only. This section list
 
 4. Click **Submit** to attach the guardrail to the resource.
 
-### Manage Guardrails
+### Manage guardrails
 
 - **View**: Global guardrails appear as pills in the Global Guardrails section. Resource-specific guardrails appear under each resource card.
 - **Remove**: Click the **×** icon on a guardrail pill to remove it.
@@ -195,7 +195,7 @@ Resource-wise guardrails apply to **specific endpoints** only. This section list
 
 ---
 
-## Save Changes
+## Save changes
 
 After making configuration changes across any tab (Provider, Resources, Security, Guardrails), click the **Save** button at the bottom-right of the page to persist your changes.
 
@@ -206,7 +206,7 @@ Use the **Cancel** button to discard all unsaved changes and revert to the last 
 
 ---
 
-## Delete Proxy
+## Delete proxy
 
 To delete a proxy, click the **delete** icon (trash icon) in the top-right corner of the proxy details page, next to the Deploy to Gateway button.
 
@@ -224,7 +224,7 @@ To delete a proxy, click the **delete** icon (trash icon) in the top-right corne
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Policies Overview](../policies/overview.md) - Learn about all available policies for proxies
 - [Policy Hub](https://wso2.com/api-platform/policy-hub/) - Browse the full catalog of available guardrails and policies

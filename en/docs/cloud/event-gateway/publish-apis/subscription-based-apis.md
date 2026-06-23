@@ -18,7 +18,7 @@ This model fits APIs where you need tiered access, usage limits, or clear commer
 
 For detailed steps and field behavior, see [Assign Subscription Plans to APIs](../../develop-api-proxy/subscription-plans.md).
 
-## Assign Subscription Validation Policy to the API
+## Assign subscription validation policy to the API
 
 1. Go to **Develop** → **Policies**.
 

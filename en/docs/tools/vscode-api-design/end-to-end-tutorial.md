@@ -24,7 +24,7 @@ Outcome: A working OpenAPI draft on workspace.
 
 Note: If Copilot prompts you to open the specification in API Designer, confirm the prompt.
 
-## Step 2: Open API Designer
+## Step 2: Open API designer
 
 1. With the openapi spec file (e.g: `orders-api.yaml`) focused, open API Designer using one of these options:
     - Copilot Chat: Confirm the prompt to open in API Designer (uses the `openInApiDesigner` tool).
@@ -82,7 +82,7 @@ Outcome: You can prioritize issues by impact and severity.
 
 Outcome: A practical fix backlog.
 
-## Step 7: Fix with AI (Chat + `api-design` skill)
+## Step 7: Fix with AI (chat + `api-design` skill)
 
 1. Open **Chat** with the spec available (open editor or `@` file reference, depending on product).
 2. Ask for a bounded fix tied to the report, for example:

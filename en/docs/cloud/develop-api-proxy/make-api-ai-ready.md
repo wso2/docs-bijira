@@ -12,14 +12,14 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Make an API AI-Ready
+# Make an API AI-ready
 
 When you publish an API to the Developer Portal, it is automatically included in the portal's machine readable surfaces including `llms.txt`, the API catalog Markdown, and per API documentation endpoints. These surfaces are what AI agents use to discover, understand, and invoke your APIs.
 
 This page explains what you can do as an API publisher to make your API as useful as possible for AI agents.
 
 
-## Write a Clear API Description
+## Write a clear API description
 
 The API description is the primary signal an AI agent uses to decide whether an API is relevant to the task it is trying to accomplish. A vague or empty description leads to missed discovery or incorrect usage.
 
@@ -31,7 +31,7 @@ The API description is the primary signal an AI agent uses to decide whether an 
 
 The description appears in `llms.txt` and in the agent-readable API catalog (`apis.md`), so it is often the first thing an agent reads about your API.
 
-## Use a Well-Structured API Specification
+## Use a well-structured API specification
 
 Publishing a complete, accurate API specification is one of the most impactful things you can do for AI discoverability. 
 
@@ -44,7 +44,7 @@ For REST APIs, follow these practices in your OpenAPI spec to improve agent accu
 - Note any authentication requirements per operation
 
 
-## Add Supporting Documents
+## Add supporting documents
 
 Beyond the machine readable specification, you can attach prose documents to your API (see [Documents](documents.md)). These documents are surfaced to agents in the per API Markdown endpoint alongside the specification.
 
@@ -58,7 +58,7 @@ Use documents to cover things the specification cannot express well:
 
 Well written prose documents reduce the chance that an agent will misinterpret the specification or hallucinate behavior that doesn't exist.
 
-## Control Agent Visibility
+## Control agent visibility
 
 All published APIs are agent visible by default. If an API should not be surfaced to AI agents, for example, an internal API not intended for external consumption you can hide it from agent facing endpoints while keeping it accessible to human users in the portal.
 
@@ -78,7 +78,7 @@ Once hidden, the API is excluded from `llms.txt`, `apis.md`, and all per API Mar
 !!! note
     This setting applies per API. Hiding one API does not affect the visibility of others.
 
-## Publish API Workflows
+## Publish API workflows
 
 If your API is used in multi-step scenarios, for example, authenticate, then create a resource, then retrieve it, consider publishing an API Workflow that guides agents through the correct sequence of calls.
 
@@ -86,7 +86,7 @@ Workflows solve a common agent failure mode: left to reason freely, agents often
 
 API Workflows are managed by portal admins. See [Managing API Workflows](../devportal/admin-settings/managing-api-workflows.md) for details.
 
-## Verify AI Discoverability
+## Verify AI discoverability
 
 After publishing your API, you can verify that it appears correctly in the portal's agent-facing surfaces:
 
@@ -94,7 +94,7 @@ After publishing your API, you can verify that it appears correctly in the porta
 2. Fetch `/{orgName}/views/{viewName}/api/{apiHandle}.md` and confirm the Markdown documentation is complete and readable.
 3. Fetch `/{orgName}/views/{viewName}/api/{apiHandle}/docs/specification.json` (or `.graphql` / `.xml` depending on your API type) and confirm the specification is valid.
 
-## What's Next
+## What's next
 
 - [Managing API Workflows](../devportal/admin-settings/managing-api-workflows.md) — publish workflows that guide agents through multi-step call sequences
 - [LLM Instructions](../devportal/admin-settings/llm-instructions.md) — add portal-level context that applies across all APIs in `llms.txt`

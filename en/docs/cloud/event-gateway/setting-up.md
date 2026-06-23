@@ -1,11 +1,11 @@
-# Setting Up
+# Setting up
 
 This guide provides detailed instructions for deploying the API Platform Event Gateway in production environments. Choose the infrastructure option that matches your environment.
 
 !!! tip "Quick Start"
     If you're just getting started, see the [Getting Started](getting-started.md) guide for a quick setup.
 
-## Setup Instructions
+## Setup instructions
 
 === "Virtual Machine"
 
@@ -215,6 +215,6 @@ This guide provides detailed instructions for deploying the API Platform Event G
     helm uninstall event-gateway
     ```
 
-## What's Next?
+## What's next?
 
 - [Troubleshooting](troubleshooting.md): Common issues and solutions

@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 ---
-# MCP Authorization
+# MCP authorization
 
 ## Overview
 
@@ -25,7 +25,7 @@ The MCP Authorization policy provides fine-grained access control for Model Cont
 
 The MCP Authorization policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -36,7 +36,7 @@ These parameters are configured per MCP Proxy by the API developer:
 | `prompts` | `AuthzRule` array | No | `[]` | Authorization rules for MCP prompts. |
 | `methods` | `AuthzRule` array | No | `[]` | Authorization rules for MCP (JSON-RPC) methods. |
 
-### AuthzRule Configuration
+### AuthzRule configuration
 
 Each authorization rule object supports the following fields:
 
@@ -57,9 +57,9 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
   gomodule: github.com/wso2/gateway-controllers/policies/mcp-authz@v0
 ```
 
-## Reference Scenarios
+## Reference scenarios
 
-### Example 1: Basic Tool Access Control
+### Example 1: Basic tool access control
 
 Restrict access to specific tools based on scopes:
 
@@ -114,7 +114,7 @@ spec:
   - `name="*", requiredScopes=["mcp:tool:execute"]`
 - Result: ✅ Access Granted (both matching rules pass)
 
-### Example 2: Claim-Based Resource Access
+### Example 2: Claim-based resource access
 
 Control resource access based on user claims:
 
@@ -166,7 +166,7 @@ spec:
 - Rule: `name="file:///private/main", requiredClaims={department="engineering"}, requiredScopes=["mcp:resource:read"]`
 - Result: ❌ Access Denied (scope mismatch)
 
-### Example 3: Role-Based Prompt Access
+### Example 3: Role-based prompt access
 
 Restrict prompt access based on user roles:
 
@@ -204,7 +204,7 @@ spec:
     ...
 ```
 
-### Example 4: Method-Level Authorization
+### Example 4: Method-level authorization
 
 Apply authorization at the JSON-RPC method level:
 
@@ -245,7 +245,7 @@ spec:
     ...
 ```
 
-### Example 5: Multi-Level Authorization
+### Example 5: Multi-level authorization
 
 Combine different resource types with varying access requirements:
 
@@ -304,7 +304,7 @@ spec:
     ...
 ```
 
-## Authorization Logic
+## Authorization logic
 
 The MCP Authorization policy evaluates rules using the following logic:
 
@@ -330,7 +330,7 @@ When authorization fails, the policy returns:
 - **Response Body**: JSON error response with a reason message
 - **WWW-Authenticate Header**: Contains information about required scopes for the denied resource
 
-## Related Policies
+## Related policies
 
 - [MCP Authentication Policy](./mcp-authentication.md) - Validates JWT tokens and is a prerequisite for MCP Authorization
 - [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) - Base JWT token validation mechanism

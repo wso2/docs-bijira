@@ -1,4 +1,4 @@
-# Manage Environments
+# Manage environments
 
 By default, all projects created in the cloud data planes (irrespective of the data plane region) are provisioned with two environments (i.e., development and production).
 
@@ -14,13 +14,13 @@ To create a new environment, follow the steps given below:
 4. On the **Environments** page, click **Create** and specify the following details to create a new environment:
 
    - **Name**: A display name for the new environment.
-   - **Data Plane** - The data plane to create the new environment.
+   - **Data plane** - The data plane to create the new environment.
 
 !!!tip
-     The **Data Plane** list displays all the private data planes registered under your organization.
+     The **Data plane** list displays all the private data planes registered under your organization.
 
-   - **DNS Prefix**: A DNS prefix to identify the exposed APIs in the environment. Here, the base domain depends on the custom domain attached to the API gateways provisioned on the selected data plane.
-   - **Mark environment as a Production environment**: Select if you want this environment to be a production environment.
+   - **DNS prefix**: A DNS prefix to identify the exposed APIs in the environment. Here, the base domain depends on the custom domain attached to the API gateways provisioned on the selected data plane.
+   - **Mark environment as a production environment**: Select if you want this environment to be a production environment.
 
 ![Create Environment form with Name, Data Plane, DNS Prefix fields, generated DNS URL preview, and Mark as Production checkbox](../../../assets/img/administer/settings/add-environment.png)
 

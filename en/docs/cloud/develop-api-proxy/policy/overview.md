@@ -18,7 +18,7 @@ API Platform simplifies the design, management, and mediation of API proxies wit
 
 You can intuitively map API proxies to service contracts with API Platform's interactive UI, ensuring clear and consistent request routing to backend services. With built-in mediation policies, API Platform provides flexibility to manage API requests and responses, facilitating custom transformations and logic without requiring custom code. This enhances API manageability, making it easier to configure, update, and control API traffic within the platform.
 
-## Designing API Proxies
+## Designing API proxies
 
 You can further redesign and customize your API proxy created from following the [Create API Proxy](../../create-api-proxy/overview.md) flow.
 

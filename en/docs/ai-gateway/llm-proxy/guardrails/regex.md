@@ -1,5 +1,5 @@
 ---
-title: "Regex Guardrail"
+title: "Regex guardrail"
 description: "Validate LLM request and response content against regular expression patterns to enforce formats or detect prohibited content."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/regex/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/regex.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Regex Guardrail
+# Regex guardrail
 
 ## Overview
 
@@ -30,25 +30,25 @@ The Regex Guardrail validates request or response body content against regular e
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `regex` | string | Yes | - | Regular expression pattern to match against the content. Must be at least 1 character. |
 | `jsonPath` | string | No | `""` | JSONPath expression to extract a specific value from JSON payload. If empty, validates the entire payload as a string. |
-| `invert` | boolean | No | `false` | If `true`, validation passes when regex does NOT match. If `false`, validation passes when regex matches. |
+| `invert` | boolean | No | `false` | If `true`, validation passes when regex does not match. If `false`, validation passes when regex matches. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `regex` | string | Yes | - | Regular expression pattern to match against the content. Must be at least 1 character. |
 | `jsonPath` | string | No | `""` | JSONPath expression to extract a specific value from JSON payload. If empty, validates the entire payload as a string. |
-| `invert` | boolean | No | `false` | If `true`, validation passes when regex does NOT match. If `false`, validation passes when regex matches. |
+| `invert` | boolean | No | `false` | If `true`, validation passes when regex does not match. If `false`, validation passes when regex matches. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -59,7 +59,7 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## Regular Expression Syntax
+## Regular expression syntax
 
 The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key features:
 
@@ -72,7 +72,7 @@ The guardrail uses Go's standard regexp package, which supports RE2 syntax. Key 
 
 ## Examples
 
-### Example 1: Email Validation
+### Example 1: Email validation
 
 Deploy an LLM provider that protects against sensitive data leaks by blocking any payloads that mention the word "password" (case-insensitive) in either the user’s message or the LLM’s response. This is achieved by using the regex policy to validate both request and response payloads:
 
@@ -121,7 +121,7 @@ EOF
 
 **Test the guardrail:**
 
-**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the llm provider configuration and use localhost to invoke.
+**Note**: Ensure that "openai" is mapped to the appropriate IP address (e.g., 127.0.0.1) in your `/etc/hosts` file, or remove the vhost from the LLM provider configuration and use localhost to invoke.
 
 ```bash
 # Valid request (should pass)
@@ -153,31 +153,31 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate patterns in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate patterns in both directions. Use `showAssessment: true` to include detailed assessment information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content that does *not* match the regex pattern. This is useful for blocking prohibited patterns (e.g., password-related content, admin keywords).
+- **Inverted logic**: Set `invert: true` to allow only content that does *not* match the regex pattern. This is useful for blocking prohibited patterns (e.g., password-related content, admin keywords).
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
-1. **Format Validation**: Ensure user inputs match expected formats (emails, phone numbers, IDs).
+1. **Format validation**: Ensure user inputs match expected formats (emails, phone numbers, IDs).
 
-2. **Content Filtering**: Block or allow content based on pattern matching (prohibited words, sensitive patterns).
+2. **Content filtering**: Block or allow content based on pattern matching (prohibited words, sensitive patterns).
 
-3. **Security Enforcement**: Detect and block potentially malicious patterns or injection attempts.
+3. **Security enforcement**: Detect and block potentially malicious patterns or injection attempts.
 
-4. **Data Quality**: Ensure responses follow specific formatting requirements or contain required elements.
+4. **Data quality**: Ensure responses follow specific formatting requirements or contain required elements.
 
 5. **Compliance**: Enforce patterns required by regulatory standards or business rules.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

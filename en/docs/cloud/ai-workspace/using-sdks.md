@@ -1,4 +1,4 @@
-# Invoke Providers and Proxies via SDKs
+# Invoke providers and proxies via SDKs
 
 Once you have deployed an LLM Provider or App LLM Proxy in the AI Workspace, you can invoke it using any supported AI SDK by pointing it at the gateway's Invoke URL and authenticating with your generated API key.
 
@@ -461,7 +461,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
             print(chunk.content, end="", flush=True)
     ```
 
-## Azure AI Foundry
+## Azure AI foundry
 
 !!! note
     The `model` / `azure_deployment` parameter must be your **Azure deployment name**.

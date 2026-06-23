@@ -1,6 +1,6 @@
 ---
-title: "API Platform Kubernetes Gateway (V2.0.0)"
-description: "Overview of API Platform Kubernetes Gateway V2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
+title: "API Platform Kubernetes gateway (v2.0.0)"
+description: "Overview of API Platform Kubernetes Gateway v2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/overview.md
 tags:
@@ -12,15 +12,15 @@ last_updated: 2026-06-19
 content_type: "overview"
 ---
 
-# API Platform Kubernetes Gateway (V2.0.0)
+# API Platform Kubernetes gateway (v2.0.0)
 
 API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway experience.  
 If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
 
 - Previous generation (reference): [WSO2 APK 1.3.0 docs](https://apk.docs.wso2.com/en/latest/)
-- Current generation: API Platform Kubernetes Gateway V2.0.0 (this documentation set)
+- Current generation: API Platform Kubernetes Gateway v2.0.0 (this documentation set)
 
-## What Is New in V2.0.0
+## What is new in v2.0.0
 
 - Unified API Platform gateway model for both standalone and operator-driven deployments.
 - Native support for Kubernetes Operator workflows and GitOps-style resource management.
@@ -29,11 +29,11 @@ If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the succes
     - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
 - Improved extensibility for policies and secret/config-based parameter references.
 
-## Deployment Modes
+## Deployment modes
 
 Choose one of the following modes based on your operational model.
 
-### 1) Kubernetes Standalone Mode
+### 1) Kubernetes standalone mode
 
 Use this mode when you only need the gateway runtime and manage it directly via the gateway Helm chart.
 
@@ -41,7 +41,7 @@ Use this mode when you only need the gateway runtime and manage it directly via 
 - Best for simpler setups or environments where operator lifecycle management is not required.
 - Guide: [`kubernetes-standalone.md`](./kubernetes-standalone.md)
 
-### 2) Kubernetes Operator Mode
+### 2) Kubernetes operator mode
 
 Use this mode when you want operator-managed lifecycle, declarative resources, and automation.
 
@@ -51,19 +51,19 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
     - Kubernetes Gateway API path (`Gateway` + `HTTPRoute`)
 - Guide: [`gateway-operator.md`](./gateway-operator.md)
 
-## How to Choose a Mode
+## How to choose a mode
 
-- Choose **Standalone Mode** if your priority is a lightweight gateway runtime install with Helm-managed values.
-- Choose **Operator Mode** if your priority is Kubernetes-native reconciliation, GitOps workflows, multi-resource lifecycle automation, and CRD-based API management.
+- Choose **standalone mode** if your priority is a lightweight gateway runtime install with Helm-managed values.
+- Choose **operator mode** if your priority is Kubernetes-native reconciliation, GitOps workflows, multi-resource lifecycle automation, and CRD-based API management.
 
-## Policy Configuration
+## Policy configuration
 
-API Platform Kubernetes Gateway V2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
+API Platform Kubernetes Gateway v2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
 
 For a full reference on available policies and how to configure them, see [Policy Configuration Overview](https://wso2.com/api-platform/docs/api-gateway/policies/overview/).
 
-## Next Steps
 
+## Next steps
 Learn more about the deployment modes:
 
 - [Standalone mode](./kubernetes-standalone.md)

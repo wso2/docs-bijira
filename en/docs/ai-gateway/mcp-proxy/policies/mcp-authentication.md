@@ -1,5 +1,5 @@
 ---
-title: "MCP Authentication"
+title: "MCP authentication"
 description: "Secure MCP server traffic by validating JWT access tokens and serving OAuth protected resource metadata in AI Gateway."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authentication/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/policies/mcp-authentication.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# MCP Authentication
+# MCP authentication
 
 ## Overview
 
@@ -20,20 +20,20 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
-- **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
-- **Standardized Error Handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
-- **Configurable Validation**: Supports issuer, audience, scope, and custom claim validation.
-- **Claim Mapping**: Maps token claims to downstream headers.
+- **Access token validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
+- **Protected resource metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
+- **Standardized error handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
+- **Configurable validation**: Supports issuer, audience, scope, and custom claim validation.
+- **Claim mapping**: Maps token claims to downstream headers.
 
 ## Configuration
 
 The MCP Authentication policy uses a two-level configuration model:
 
-- **System Parameters**: Configured by the administrator in `config.toml` under `policy_configurations.mcpauth_v0` or `policy_configurations.jwtauth_v0` depending on the parameter.
-- **User Parameters**: Configured per MCP proxy in the configuration yaml.
+- **System parameters**: Configured by the administrator in `config.toml` under `policy_configurations.mcpauth_v0` or `policy_configurations.jwtauth_v0` depending on the parameter.
+- **User parameters**: Configured per MCP proxy in the configuration yaml.
 
-### System Parameters (config.toml)
+### System parameters (config.toml)
 
 These parameters are set by the administrator and apply globally to all MCP authentication policies:
 
@@ -42,7 +42,7 @@ These parameters are set by the administrator and apply globally to all MCP auth
 | `keymanagers` | array | Yes | jwtauth_v0 | List of key manager definitions. Each entry must include a unique `name` and either `jwks` (for remote JWKS or local certificates) configuration. |
 | `gatewayhost` | string | No | mcpauth_v0 | The outward-facing gateway host name which will be used when deriving the values related to protected resource metadata in headers and body. The gateway will fall back to this if there are no vhosts defined in the MCP proxy configuration. |
 
-#### Key Manager Configuration
+#### Key manager configuration
 
 Each key manager in the `keymanagers` array supports the following structure:
 
@@ -58,7 +58,7 @@ Each key manager in the `keymanagers` array supports the following structure:
 
 > **Note**: Either `jwks.remote` or `jwks.local` must be specified, but not both.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per-API/route by the API developer:
 
@@ -70,7 +70,7 @@ These parameters are configured per-API/route by the API developer:
 | `requiredClaims` | object | No | - | Map of claimName → expectedValue for custom claim validation. |
 | `claimMappings` | object | No | - | Map of claimName → downstream header name to expose claims for downstream services. |
 
-## System Configuration Example
+## System configuration example
 
 Add the following to your `gateway/configs/config.toml` file under `policy_configurations`:
 
@@ -109,9 +109,9 @@ uri = "https://auth.example.org/oauth2/jwks"
 skipTlsVerify = false
 ```
 
-## MCP Proxy Definition Examples
+## MCP proxy definition examples
 
-### Example 1: Basic MCP Authentication
+### Example 1: Basic MCP authentication
 
 Apply MCP authentication to an API using a specific key manager:
 
@@ -137,7 +137,7 @@ spec:
     ...
 ```
 
-### Example 2: Scope and Audience Validation
+### Example 2: Scope and audience validation
 
 Require specific scopes and audiences:
 
@@ -168,8 +168,8 @@ spec:
     ...
 ```
 
-## Use Cases
+## Use cases
 
-1.  **MCP Server Security**: Protect Model Context Protocol servers by requiring valid access tokens from trusted identity providers.
-2.  **Resource Discovery**: Enable MCP clients to discover authorization requirements (authorization servers and scopes) via the standard `.well-known/oauth-protected-resource` endpoint.
-3.  **Multi-Provider Support**: Allow MCP clients to authenticate using tokens from different identity providers (e.g., different organizations or tenants).
+1.  **MCP server security**: Protect Model Context Protocol servers by requiring valid access tokens from trusted identity providers.
+2.  **Resource discovery**: Enable MCP clients to discover authorization requirements (authorization servers and scopes) via the standard `.well-known/oauth-protected-resource` endpoint.
+3.  **Multi-provider support**: Allow MCP clients to authenticate using tokens from different identity providers (e.g., different organizations or tenants).

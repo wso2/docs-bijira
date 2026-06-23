@@ -1,5 +1,5 @@
 ---
-title: "Artifact Templating"
+title: "Artifact templating"
 description: "Use Go text template expressions in API Platform Gateway YAML artifacts to inject environment variables and dynamic values at startup."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/setup/artifact-templating/
 md_url: https://wso2.com/api-platform/docs/api-gateway/setup/artifact-templating.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Gateway Artifact Templating
+# Gateway artifact templating
 
 
 Gateway artifact files (YAML/JSON) support Go `text/template` expressions for injecting dynamic values at startup. Templates are rendered on the raw artifact string before YAML/JSON parsing, so expressions work in any string field across the entire artifact — `upstream`, `auth`, policy `params`, metadata, etc.

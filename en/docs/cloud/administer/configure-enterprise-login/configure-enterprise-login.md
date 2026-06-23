@@ -1,4 +1,4 @@
-# Configure Enterprise Login
+# Configure enterprise login
 
 With API Platform, you can configure enterprise login to allow users from an external identity provider (IdP) to sign in to API Platform seamlessly without changing their credentials.
 
@@ -111,7 +111,7 @@ Before you proceed with the configuration, make sure you complete the following:
    3. Click **New Attribute** and select the **Groups** attribute.
    4. Click **Save** and then click **Save Changes**.
 
-### Step 2: Map API Platform groups to enterprise IdP groups via the API Platform Console
+### Step 2: Map API Platform groups to enterprise idp groups via the API Platform console
 
 !!! note
 

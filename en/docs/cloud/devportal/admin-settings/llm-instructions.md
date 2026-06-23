@@ -1,10 +1,10 @@
-# LLM Instructions
+# LLM instructions
 
 LLM Instructions allow portal admins to provide AI agents with high level context about the developer portal, what APIs are available, how the portal is organized, and any conventions or constraints agents should follow when interacting with it.
 
 These instructions are published as part of the portal's `llms.txt` file, which is the primary entry point for AI agents discovering the portal's capabilities.
 
-## What Are LLM Instructions?
+## What are LLM instructions?
 
 LLM Instructions are free form natural language text written by the portal admin. They appear at the top of `llms.txt` and are read by agents before they navigate the rest of the portal's content.
 
@@ -19,7 +19,7 @@ Use this space to tell agents:
 Well written LLM instructions reduce agent errors and improve the quality of AI-assisted integrations by giving agents the orientation they need upfront, rather than leaving them to infer context from individual API specs.
 
 
-## Configuring LLM Instructions
+## Configuring LLM instructions
 
 LLM Instructions are configured at the portal (view) level in the admin settings.
 
@@ -32,7 +32,7 @@ LLM Instructions are configured at the portal (view) level in the admin settings
 
 Changes take effect immediately, the updated instructions are reflected in `llms.txt` as soon as you save.
 
-## Previewing the Output
+## Previewing the output
 
 To verify how your instructions appear to agents, fetch the portal's `llms.txt` directly:
 

@@ -1,5 +1,5 @@
 ---
-title: "API Platform Policies Overview"
+title: "API Platform policies overview"
 description: "Understand gateway policies in WSO2 API Platform: how Go and Python policies execute in the request and response pipeline and how to chain them."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/policies/overview/
 md_url: https://wso2.com/api-platform/docs/api-gateway/policies/overview.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-11
 content_type: "concept"
 ---
 
-# API Platform Policies Overview
+# API Platform policies overview
 
-## What is a Policy?
+## What is a policy?
 
 A policy is a pluggable unit of behavior that runs in the gateway request or response pipeline. Policies can be applied at the API level (all operations) or at individual operation level, and can run on requests, responses, or both.
 
@@ -24,7 +24,7 @@ Each built-in policy is versioned independently. When a new version is published
 
 You can also write your own policy and then use API Platform CLI to build a custom gateway image that includes any combination of built-in policies and your own implementations. For more information, see [Custom Policies](custom-policies/writing-a-custom-policy.md).
 
-## Policy Languages and Runtimes
+## Policy languages and runtimes
 
 The gateway supports **two languages** for authoring policies:
 
@@ -35,7 +35,7 @@ The gateway supports **two languages** for authoring policies:
 
 Go is the **primary and recommended language** for policy development. It provides maximum execution performance, strict type safety, and minimal per-request latency. Python is available as a **specialized runtime** for use cases where access to Python-native libraries (NLP toolkits, compression engines, ML inference clients, etc.) outweighs the overhead of cross-process communication.
 
-## How Policies Execute
+## How policies execute
 
 Understanding where each language fits requires a brief look at the Gateway Runtime architecture:
 
@@ -62,14 +62,14 @@ Understanding where each language fits requires a brief look at the Gateway Runt
 !!! note
     Both Go and Python policies share the same policy evaluation pipeline. From the perspective of API configuration and deployment, a policy's language is transparent — you attach Go and Python policies to APIs in exactly the same way.
 
-## Policy Anatomy
+## Policy anatomy
 
 Regardless of language, every policy consists of two parts:
 
 * Policy definition
 * Policy implementation
 
-### Policy Definition (`policy-definition.yaml`)
+### Policy definition (`policy-definition.yaml`)
 
 A declarative YAML file that describes the policy's identity, version, and configuration schema. This file is the same for both Go and Python policies.
 
@@ -103,22 +103,22 @@ systemParameters:
 | `parameters` | JSON Schema describing the user-configurable parameters for the policy |
 | `systemParameters` | JSON Schema for operator-level configuration (set via gateway config, not per-API) |
 
-### Policy Implementation
+### Policy implementation
 
 The implementation is where the two languages diverge.
 
-### Go Policies
+### Go policies
 
 Go is the **default and recommended** language for policy development. Every built-in policy that ships with the gateway — authentication, rate limiting, CORS, guardrails, header manipulation — is written in Go.
 
-#### Why Go?
+#### Why go?
 
 - **Performance:** Compiled into the Policy Engine binary. No serialization, no IPC, no interpreter overhead.
 - **Type safety:** Compile-time guarantees reduce runtime errors in production.
 - **Ecosystem alignment:** The Policy Engine, Gateway Builder, and Gateway Controller are all Go codebases.
 - **Broad applicability:** Ideal for the vast majority of API management use cases.
 
-#### Go Policy Structure
+#### Go policy structure
 
 A Go policy is a standard **Go module** containing the policy definition and the implementation:
 
@@ -140,7 +140,7 @@ my-go-policy/
 
 Go policies implement interfaces from the gateway's Policy SDK. The Policy Engine loads them at build time via the `build.yaml` manifest.
 
-#### Build Integration
+#### Build integration
 
 Go policies are referenced in `build.yaml` using the `gomodule` field, which points to the Go module path:
 
@@ -152,17 +152,17 @@ policies:
 
 The **Gateway Builder** resolves these modules, compiles them into the Policy Engine binary, and produces a custom gateway image containing all declared policies.
 
-### Python Policies (Beta)
+### Python policies (beta)
 
 Python policy support extends the gateway's capabilities into domains where Python's ecosystem is unmatched — particularly **AI/ML, natural language processing, and complex data transformations**.
 
-#### Why Python?
+#### Why python?
 
 - **AI/ML ecosystem:** Direct access to libraries like `transformers`, `tiktoken`, `scikit-learn`, and custom compression engines.
 - **Rapid prototyping:** Faster iteration for experimental or research-oriented policies.
 - **Specialized use cases:** Prompt compression, semantic analysis, content classification, and other tasks where Python libraries provide capabilities that would be impractical to reimplement in Go.
 
-#### Python Policy Structure
+#### Python policy structure
 
 Python policies follow the standard `src` layout and are packaged as installable Python packages:
 
@@ -187,7 +187,7 @@ my-python-policy/
 | `src/<package>/policy.py` | Policy implementation |
 | `tests/` | Unit tests for the policy logic |
 
-#### Build Integration
+#### Build integration
 
 Python policies are referenced in `build.yaml` using the `pipPackage` field instead of `gomodule`:
 
@@ -199,7 +199,7 @@ policies:
 
 The Gateway Builder resolves the Python package, installs its dependencies, generates the policy registry, and bundles everything into the gateway image alongside the Python Executor.
 
-## Choosing a Language for Policy
+## Choosing a language for policy
 
 Use this decision guide when planning a new policy:
 
@@ -215,7 +215,7 @@ Use this decision guide when planning a new policy:
 
 Start with Go unless your policy specifically requires Python libraries or Python-native capabilities. The majority of gateway policies are written in Go.
 
-## Available Policies
+## Available policies
 
 The following table presents the available policies alphabetically.
 

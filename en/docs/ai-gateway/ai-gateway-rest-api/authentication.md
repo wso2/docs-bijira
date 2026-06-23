@@ -1,5 +1,5 @@
 ---
-title: "Authentication and Authorization in Gateway Controller"
+title: "Authentication and authorization in Gateway Controller"
 description: "Configure Basic Auth or JWT/IDP authentication and role-based authorization for the AI Gateway Controller REST API."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/ai-gateway-rest-api/authentication/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/ai-gateway-rest-api/authentication.md
@@ -12,23 +12,23 @@ last_updated: 2026-06-16
 content_type: "how-to"
 ---
 
-# Authentication & Authorization in Gateway Controller
+# Authentication and authorization in Gateway Controller
 
 ## Overview
 The Gateway Controller REST API (the control-plane API used to manage gateway configuration) can be protected using either locally configured users (Basic Auth) or an external Identity Provider (JWT validation via JWKS). Authorization is role-based and enforced per API route.
 
-## How It Works
+## How it works
 
-### Authentication (Who are you?)
+### Authentication (who are you?)
 You can enable one (or both) of the following:
 
 - **Basic Auth (local users)**: Define usernames/passwords and assign local roles.
-- **IDP/JWT (external users)**: Validate incoming JWTs using `jwks_url` optionally `issuer`.
+- **IDP/JWT (external users)**: Validate incoming JWTs using `jwks_url` and optionally `issuer`.
 
-**No Authentication (open access)**: If BOTH `basic.enabled` and `idp.enabled` are set to `false`, all requests to the gateway controller are allowed without authentication.
+**No Authentication (open access)**: If both `basic.enabled` and `idp.enabled` are set to `false`, all requests to the gateway controller are allowed without authentication.
 
-### Authorization (Are you allowed?)
-Gateway Controller routes are protected using **local roles** (for example `admin`, `developer`, `consumer`).
+### Authorization (are you allowed?)
+Gateway Controller routes are protected using **local roles** (for example, `admin`, `developer`, `consumer`).
 
 - If **`roles_claim` is NOT configured** in the IDP/JWT setup, **authorization is bypassed** for the Gateway Controller REST API routes (i.e., no role checks are performed).
 - If **`roles_claim` IS configured**, you **must** also configure **`role_mapping`**. Without a mapping, the controller cannot translate IDP roles → local roles, and requests will be denied.
@@ -71,7 +71,7 @@ controller:
         consumer: ["*"]
 ```
 
-## Role Mapping Semantics
+## Role mapping semantics
 `role_mapping` is defined as:
 
 ```text
@@ -92,7 +92,7 @@ role_mapping:
 ```
 In this example, a user in `platform-admins` becomes both `admin` and `developer` in the Gateway Controller.
 
-## Troubleshooting (What you’ll observe)
+## Troubleshooting (what you’ll observe)
 - **Requests are denied after enabling JWT auth**: verify `jwks_url` and (if set) `issuer` match the token you're sending.
 - **You enabled `roles_claim` and suddenly everything is forbidden**: add `role_mapping` (mapping is mandatory when `roles_claim` is provided).
 - **Users authenticate but don't have expected access**: confirm the token actually contains the configured `roles_claim`, and that its values match what you listed in `role_mapping`.

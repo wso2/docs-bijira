@@ -1,4 +1,4 @@
-# Policies Overview
+# Policies overview
 
 The AI Workspace provides built-in policies that let you govern how traffic flows through your LLM Providers and App LLM Proxies. Policies can be applied at the provider level (affecting all proxies that use the provider) or at the proxy level (scoped to a specific proxy or individual endpoints).
 
@@ -14,7 +14,7 @@ Guardrails enforce content safety and compliance on requests and responses.
 | [Word Count](guardrails/word-count-guardrail.md) | Enforce word count limits on prompts or responses. |
 | [Sentence Count](guardrails/sentence-count-guardrail.md) | Enforce sentence count limits on prompts or responses. |
 
-## Rate Limit
+## Rate limit
 
 Rate limit policies control how much LLM traffic — by token count or monetary cost — can flow through a provider or proxy.
 
@@ -24,7 +24,7 @@ Rate limit policies control how much LLM traffic — by token count or monetary 
 | [Token-Based Rate Limit](rate-limit/token-based-rate-limit.md) | Limit prompt, completion, or total token consumption within a time window. |
 | [LLM Cost-Based Rate Limit](rate-limit/llm-cost-based-rate-limit.md) | Enforce monetary spending budgets (e.g., $10/hour). Requires the LLM Cost policy. |
 
-## Other Policies
+## Other policies
 
 | Policy | Description |
 |--------|-------------|
@@ -36,7 +36,7 @@ Rate limit policies control how much LLM traffic — by token count or monetary 
 | [Semantic Cache](other-policies/semantic-cache.md) | Cache LLM responses and serve them for semantically similar requests. |
 
 
-## Where Policies are Applied
+## Where policies are applied
 
 Policies are configured through the management tabs of your LLM Providers and App LLM Proxies:
 
@@ -45,13 +45,13 @@ Policies are configured through the management tabs of your LLM Providers and Ap
 
 When both provider-level and proxy-level policies are active, they are both enforced. Provider-level policies act as a baseline, and proxy-level policies add additional protection.
 
-## Policy Hub
+## Policy hub
 
 All guardrail policies in the AI Workspace are powered by the [Policy Hub](https://wso2.com/api-platform/policy-hub/). The Policy Hub is a central registry of all available policies and their latest versions.
 
 Visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/) to explore all available guardrails, their documentation, and configuration schemas.
 
-## Next Steps
+## Next steps
 
 - [Guardrails Overview](guardrails/overview.md) — Explore available guardrails and how to configure them
 - [Writing an AI Policy](writing-an-ai-policy.md) — Learn how to write a custom AI policy for the self-hosted gateway

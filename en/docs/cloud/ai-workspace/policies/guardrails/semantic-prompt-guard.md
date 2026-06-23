@@ -1,4 +1,4 @@
-# Semantic Prompt Guard
+# Semantic prompt guard
 
 The Semantic Prompt Guard uses vector embeddings and cosine similarity to match incoming prompts against lists of **allowed** and **denied** phrases. Unlike pattern-based guardrails, it understands semantic meaning — it can block prompts that are *similar in meaning* to a denied phrase, even if they use completely different words.
 
@@ -7,7 +7,7 @@ The Semantic Prompt Guard uses vector embeddings and cosine similarity to match 
 
     See [Gateway Configuration](#gateway-configuration) below for the required `config.toml` settings.
 
-## How It Works
+## How it works
 
 When a request arrives, the guardrail:
 
@@ -16,7 +16,7 @@ When a request arrives, the guardrail:
 3. **If allowed phrases are configured** — blocks the request if no allowed phrase is similar enough (below the allow threshold).
 4. **If denied phrases are configured** — blocks the request if any denied phrase is similar enough (above the deny threshold).
 
-## Configuration Parameters
+## Configuration parameters
 
 All parameters are optional and available under **Advanced Settings**.
 
@@ -29,7 +29,7 @@ All parameters are optional and available under **Advanced Settings**.
 | **Denied Phrases** | — | Phrases that represent unacceptable prompts. If set, any prompt semantically similar to a denied phrase is blocked. |
 | **Show Assessment** | `false` | When `true`, the intervention response includes the matched phrase and similarity score. |
 
-## Gateway Configuration
+## Gateway configuration
 
 The embedding provider is configured in the gateway's `config.toml` file. These settings apply to all policies that use embeddings.
 
@@ -41,7 +41,7 @@ embedding_provider_dimension = 1536
 embedding_provider_api_key = ""
 ```
 
-### Supported Embedding Providers
+### Supported embedding providers
 
 | Provider | `embedding_provider` value | Example endpoint | Example model |
 |----------|---------------------------|-----------------|---------------|
@@ -49,7 +49,7 @@ embedding_provider_api_key = ""
 | Mistral AI | `MISTRAL` | `https://api.mistral.ai/v1/embeddings` | `mistral-embed` |
 | Azure OpenAI | `AZURE_OPENAI` | Your Azure OpenAI endpoint URL | Deployment name is in the URL |
 
-## Add This Guardrail
+## Add this guardrail
 
 1. Configure the embedding provider in `config.toml` and restart the gateway.
 2. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
@@ -61,7 +61,7 @@ embedding_provider_api_key = ""
 8. Click **Add** (for providers) or **Submit** (for proxies).
 9. Deploy the provider or proxy to apply the changes.
 
-## Example: Block Off-Topic Prompts
+## Example: Block off-topic prompts
 
 The following configuration uses an allow list to ensure only coding-related prompts are forwarded to the LLM.
 
@@ -99,7 +99,7 @@ The following configuration uses an allow list to ensure only coding-related pro
 }
 ```
 
-## Choosing Similarity Thresholds
+## Choosing similarity thresholds
 
 | Threshold | Effect |
 |-----------|--------|

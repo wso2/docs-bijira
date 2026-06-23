@@ -1,5 +1,5 @@
 ---
-title: "High-Availability Production Deployment"
+title: "High-availability production deployment"
 description: "Deploy API Platform Gateway in a highly available, production-grade configuration on Kubernetes with Helm, PostgreSQL, and replicated workloads."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/high-availability-production-deployment/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/high-availability-production-deployment.md
@@ -13,7 +13,7 @@ last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
-# High-Availability Production Deployment
+# High-availability production deployment
 
 This guide covers deploying the API Platform Gateway in a production-grade, highly available configuration using Helm on Kubernetes. Development mode is disabled, security is hardened, PostgreSQL backs the deployment state, and workloads are replicated across nodes.
 
@@ -43,7 +43,7 @@ kubectl get nodes
 helm version
 ```
 
-## Cluster Topology
+## Cluster topology
 
 Use at least two worker nodes for high availability. The recommended minimum production topology separates system and gateway workloads into dedicated node pools:
 
@@ -68,7 +68,7 @@ This ensures that all Gateway Controller replicas operate with a consistent depl
 
 ![High-availability setup example](../../assets/img/api-platform-gateway/gateway/high-availability-architecture.png)
 
-### Architecture Overview
+### Architecture overview
 
 The deployment consists of the following main components:
 
@@ -78,7 +78,7 @@ The deployment consists of the following main components:
 | **PostgreSQL Database** | Acts as the shared source of truth for API metadata, deployment state, and gateway configuration. |
 | **Gateway Runtime** | Receives configuration from its connected Gateway Controller and enforces API gateway policies at runtime. |
 
-### Deployment Synchronization Flow
+### Deployment synchronization flow
 
 When an API deployment request is received, it is handled by one of the available Gateway Controller replicas.
 
@@ -90,7 +90,7 @@ Each Gateway Runtime then applies the received configuration and starts serving 
 
 Each Gateway Controller replica can manage one or more Gateway Runtime replicas.
 
-### High Availability Behavior
+### High availability behavior
 
 High availability is achieved by removing dependency on a single controller instance.
 
@@ -102,13 +102,13 @@ If one Gateway Controller replica becomes unavailable, another replica can conti
 
 Similarly, multiple Gateway Runtime replicas can be deployed in each environment to ensure API traffic continues to be served even if one runtime replica becomes unavailable.
 
-### Configuration Synchronization
+### Configuration synchronization
 
 The PostgreSQL database is the central synchronization point between Gateway Controller replicas. It maintains the latest API deployment state and allows all controller replicas to operate consistently.
 
 Gateway Runtime replicas do not directly read from the database. Instead, they receive the required runtime configuration from their connected Gateway Controller. This keeps the runtime layer lightweight and allows the controller layer to manage configuration generation and synchronization.
 
-### Ingress Configuration
+### Ingress configuration
 
 The Helm chart deploys Kubernetes `Service` objects for the Gateway Runtime and the Controller REST API, but does not provision an Ingress Controller or Ingress resources. You are responsible for configuring external access to these services using the ingress solution of your choice.
 
@@ -116,9 +116,9 @@ At a minimum, expose the Gateway Runtime service on port **8443** (HTTPS) to rou
 
 If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deployment.md) approach or running the gateway in standalone mode, also expose the Controller REST API service on port **9090** so that developers can deploy APIs directly to the gateway.
 
-## Before You Begin
+## Before you begin
 
-### Start with the Base Values File
+### Start with the base values file
 
 Download the default `values.yaml` for the gateway Helm chart and use it as the starting point for your production configuration. All steps in this guide reference fields within this file.
 
@@ -126,7 +126,7 @@ Download the default `values.yaml` for the gateway Helm chart and use it as the 
 curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/gateway/v1.1.0/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
-### Pin the Image Versions
+### Pin the image versions
 
 Before making any other changes, set the controller and runtime image tags to the release you want to deploy. The latest stable release is **1.1.0**.
 
@@ -151,7 +151,7 @@ gateway:
 
     The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
 
-### WSO2 Subscription Users
+### WSO2 subscription users
 
 If you have a WSO2 Subscription, images are pulled from the WSO2 private registry (`registry.wso2.com`) instead of the public GHCR registry. A single Helm field activates this mode end-to-end.
 
@@ -187,7 +187,7 @@ Any explicit `image.repository` override (for example, pointing to an internal m
 
 When `wso2.subscription.imagePullSecret` is empty (the default), the chart renders identically to a non-subscription install and pulls from the public GHCR registry with no `imagePullSecrets` block.
 
-## Setup Steps
+## Setup steps
 
 Complete the following steps to configure a production-ready deployment:
 

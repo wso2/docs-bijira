@@ -1,6 +1,6 @@
-# Expose a Service as a Managed API
+# Expose a service as a managed API
 
-API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
+API Platform simplifies securely exposing existing services as managed APIs. It also lets you manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 
 In this tutorial, you will use API Platform to expose a service as an API proxy and publish it to the API Platform Developer Portal for application developers to consume.
 

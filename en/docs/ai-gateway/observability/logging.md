@@ -1,5 +1,5 @@
 ---
-title: "Gateway Logging"
+title: "Gateway logging"
 description: "Configure centralized log collection for API Platform AI Gateway using Fluent Bit, OpenSearch, and alternative logging stacks."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/observability/logging/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/observability/logging.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "how-to"
 ---
 
-# Gateway Logging
+# Gateway logging
 
 This guide explains how to implement and configure logging for the API Platform Gateway components.
 
@@ -22,7 +22,7 @@ The default logging services included in the Docker Compose configuration are **
 
 **Important**: You are free to choose any logging or observability strategy that suits your environment and requirements. The provided setup is just one of many possible configurations.
 
-## Logging Architecture
+## Logging architecture
 
 The default logging stack consists of:
 
@@ -30,7 +30,7 @@ The default logging stack consists of:
 - **OpenSearch**: Stores and indexes log data for searchability and analysis
 - **OpenSearch Dashboards**: Web interface for visualizing, exploring, and searching logs
 
-### How It Works
+### How it works
 
 1. Gateway components (gateway-controller, policy-engine, router) write structured JSON logs to stdout/stderr
 2. Docker captures these logs and stores them in `/var/lib/docker/containers`
@@ -38,9 +38,9 @@ The default logging stack consists of:
 4. Fluent Bit forwards processed logs to OpenSearch
 5. Users can view and search logs through OpenSearch Dashboards
 
-## Enabling Logging Services
+## Enabling logging services
 
-### Gateway Components Already Log to Standard Output
+### Gateway components already log to standard output
 
 **No special configuration is required to enable logging in the gateway components.** All gateway components (gateway-controller, policy-engine, and router) follow the [12-factor app](https://12factor.net/logs) architecture principle for logging:
 
@@ -50,13 +50,13 @@ The default logging stack consists of:
 
 This architecture approach allows you to utilize **any industry-standard logging stack** to collect logs from Docker container log files and view them in your preferred observability platform. The gateway components are completely decoupled from the logging infrastructure.
 
-### Demonstrated Logging Services
+### Demonstrated logging services
 
 The logging services included in the Docker Compose file (OpenSearch, OpenSearch Dashboards, and Fluent Bit) are provided as **demonstration services** to show one possible way to collect and visualize logs. You can use them as-is for development/testing, or replace them with your own logging solution.
 
 The gateway uses Docker Compose profiles to optionally enable these demonstration logging services.
 
-### Start Gateway with Demonstrated Logging Services
+### Start gateway with demonstrated logging services
 
 To start the gateway with the demonstration logging services enabled:
 
@@ -70,7 +70,7 @@ This starts:
 - OpenSearch Dashboards - *web UI for viewing logs*
 - Fluent Bit - *collects logs from Docker and forwards to OpenSearch*
 
-### Start Gateway without Logging Services
+### Start gateway without logging services
 
 To run only the core gateway services without the demonstration logging stack:
 
@@ -86,7 +86,7 @@ docker logs policy-engine
 docker logs router
 ```
 
-### Stop Logging Services
+### Stop logging services
 
 To stop all services including the logging stack:
 
@@ -102,7 +102,7 @@ docker compose --profile logging down -v
 
 This removes the `opensearch-data` volume containing all stored logs.
 
-## Viewing Logs in OpenSearch Dashboards
+## Viewing logs in OpenSearch Dashboards
 
 Once you've started the gateway with the logging profile, follow these steps to view component logs:
 
@@ -113,7 +113,7 @@ Open your browser and navigate to:
 http://localhost:5601
 ```
 
-### Step 2: Create an Index Pattern
+### Step 2: Create an index pattern
 
 Before you can view logs, you need to create an index pattern:
 
@@ -126,7 +126,7 @@ Before you can view logs, you need to create an index pattern:
 7. Select **@timestamp** as the time field
 8. Click **Create index pattern**
 
-### Step 3: Navigate to Discover
+### Step 3: Navigate to discover
 
 To view and explore logs:
 
@@ -135,11 +135,11 @@ To view and explore logs:
 3. Select the `gateway-logs-*` index pattern from the dropdown in the top-left
 4. Adjust the time range in the top-right corner if needed (default is last 15 minutes)
 
-### Step 4: Filter Logs by Component
+### Step 4: Filter logs by component
 
 To view logs for a specific gateway component, use filters:
 
-#### View Policy Engine Logs
+#### View policy engine logs
 
 1. Click **Add filter** (below the search bar)
 2. **Field**: Select `component`
@@ -147,7 +147,7 @@ To view logs for a specific gateway component, use filters:
 4. **Value**: Enter `policy-engine`
 5. Click **Save**
 
-#### View Gateway Controller Logs
+#### View gateway controller logs
 
 1. Click **Add filter**
 2. **Field**: `component`
@@ -155,7 +155,7 @@ To view logs for a specific gateway component, use filters:
 4. **Value**: `gateway-controller`
 5. Click **Save**
 
-#### View Router (Envoy) Logs
+#### View router (envoy) logs
 
 1. Click **Add filter**
 2. **Field**: `component`
@@ -163,11 +163,11 @@ To view logs for a specific gateway component, use filters:
 4. **Value**: `router`
 5. Click **Save**
 
-### Step 5: Search and Filter Logs
+### Step 5: Search and filter logs
 
 You can refine your log search using:
 
-#### Free Text Search
+#### Free text search
 Enter keywords in the search bar at the top:
 ```
 error
@@ -176,19 +176,19 @@ error
 Weather-API
 ```
 
-#### Filter by Log Level
+#### Filter by log level
 1. Click **Add filter**
 2. **Field**: `level`
 3. **Operator**: `is`
 4. **Value**: `error` (or `info`, `warn`, `debug`)
 
-#### Combine Multiple Filters
+#### Combine multiple filters
 Add multiple filters to narrow down results. For example:
 - Component: `policy-engine`
 - Level: `error`
 - Time range: Last 1 hour
 
-#### Example Search Queries
+#### Example search queries
 
 Search for errors in the policy engine:
 ```
@@ -205,18 +205,18 @@ Search for slow requests (if duration field exists):
 duration_ms:>1000
 ```
 
-### Step 6: Customize Log View
+### Step 6: Customize log view
 
-- **Add/Remove Columns**: Click the **gear icon** next to the field list to select which fields to display
+- **Add/remove columns**: Click the **gear icon** next to the field list to select which fields to display
 - **Sort**: Click column headers to sort by that field
-- **Expand Logs**: Click the **>** arrow next to any log entry to see full details in JSON format
-- **Save Search**: Click **Save** in the top menu to save your filters and queries for later use
+- **Expand logs**: Click the **>** arrow next to any log entry to see full details in JSON format
+- **Save search**: Click **Save** in the top menu to save your filters and queries for later use
 
-## Alternative Logging Stacks
+## Alternative logging stacks
 
 While the default setup uses OpenSearch and Fluent Bit, you can integrate with other logging platforms:
 
-### Elastic Stack (ELK)
+### Elastic stack (ELK)
 
 Replace OpenSearch with the Elastic Stack:
 
@@ -286,7 +286,7 @@ grafana:
     - loki
 ```
 
-### Cloud-Native Solutions
+### Cloud-native solutions
 
 #### AWS CloudWatch
 
@@ -339,7 +339,7 @@ Configure Fluent Bit to forward to Splunk HEC:
 ```
 
 
-## Additional Resources
+## Additional resources
 
 - [Fluent Bit Documentation](https://docs.fluentbit.io/)
 - [OpenSearch Documentation](https://opensearch.org/docs/latest/)

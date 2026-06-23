@@ -8,7 +8,7 @@ AI Gateways are the runtime components that process and route requests between y
 
 ---
 
-## View AI Gateways
+## View AI gateways
 
 1. Navigate to **AI Gateways** in the left navigation menu.
 
@@ -24,7 +24,7 @@ The AI Gateways page displays a list of all configured gateways with the followi
 
 ---
 
-## Add a New AI Gateway
+## Add a new AI Gateway
 
 1. Navigate to **AI Gateways** in the left navigation menu.
 
@@ -48,11 +48,11 @@ The AI Gateways page displays a list of all configured gateways with the followi
 
 ---
 
-## Set Up the Gateway
+## Set up the gateway
 
 After creating an AI gateway, you need to set up the gateway runtime. The detail page provides a **Get Started** section with setup instructions.
 
-### Gateway Registration Token
+### Gateway registration token
 
 A **Gateway Registration Token** is displayed at the top of the Get Started section. This token is required to connect your gateway runtime to the control plane.
 
@@ -62,7 +62,7 @@ A **Gateway Registration Token** is displayed at the top of the Get Started sect
 !!! tip "Lost your token?"
     The registration token is single-use. If you need to reconfigure the gateway, click the **Reconfigure** button to generate a new token. This will revoke the old token and disconnect the gateway from the control plane.
 
-### Installation Methods
+### Installation methods
 
 The Get Started section provides setup instructions for multiple deployment options:
 
@@ -215,9 +215,9 @@ Once the gateway runtime is running and connected, the gateway status will chang
 
 ---
 
-## Manage AI Gateways
+## Manage AI gateways
 
-### Edit a Gateway
+### Edit a gateway
 
 1. In the AI Gateways list, click the **edit** icon next to the gateway you want to modify.
 
@@ -225,7 +225,7 @@ Once the gateway runtime is running and connected, the gateway status will chang
 
 3. Click **Save** to apply the changes.
 
-### Delete a Gateway
+### Delete a gateway
 
 1. In the AI Gateways list, click the **delete** icon (trash icon) next to the gateway you want to remove.
 
@@ -236,7 +236,7 @@ Once the gateway runtime is running and connected, the gateway status will chang
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Configure LLM Provider](../llm-providers/configure-provider.md) - Set up an LLM provider and deploy it to your gateway
 - [Configure App LLM Proxy](../llm-proxies/configure-proxy.md) - Create a specialized LLM proxy for a Gen AI application or agent and deploy it to your gateway

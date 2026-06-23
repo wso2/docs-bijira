@@ -1,13 +1,13 @@
-# Data Planes
+# Data planes
 
 API Platform’s architecture is built around two core components, i.e. the control plane and the data plane.
 
-### Control Plane
+### Control plane
 The control plane manages key administrative tasks, including the configuration of organizations, users, and projects. It also orchestrates the entire API Proxy development lifecycle, from creation and deployment to governance enforcement, observability enablement, and publishing to the Developer Portal for application developers to consume APIs.
 
 As a SaaS platform, the API Platform control plane oversees both cloud data planes and private data planes. It supports a wide range of user roles, including CIOs, architects, and developers.
 
-### Data Plane
+### Data plane
 The data plane is where user-deployed API Proxies run, based on configurations defined in the control plane. All traffic related to these API Proxies is confined within the data plane, ensuring that user data remains securely contained.
 
 API Platform supports two types of data planes.
@@ -17,9 +17,9 @@ API Platform supports two types of data planes.
 
 ![Bijira high-level architecture with control plane, cloud data plane, and private data plane](../../assets/img/bijira-concepts/high-level-view.png)
 
-## Private Data Planes
+## Private data planes
 
-### Infrastructure Compatibility
+### Infrastructure compatibility
 API Platform private data planes can be deployed on most major cloud providers such as Azure, AWS, GCP, as well as on-premises environments.
 
 Minimum infrastructure requirements include:
@@ -43,7 +43,7 @@ Setting up an API Platform PDP involves deploying components via Helm on the Kub
 
 All components are automatically updated, including security patches and bug fixes via the Flux Controller, which is connected to the Update Management System.
 
-### Control Plane Connectivity
+### Control plane connectivity
 Private data planes communicate with the control plane for ongoing operations. All communication is outbound only from the private data plane. If your organization’s network restricts outbound traffic, allow access to the control plane's public IP range.
 
 The following table details the required inbound and outbound connections for private data planes.
@@ -65,7 +65,7 @@ The following table details the required inbound and outbound connections for pr
 
 All communications between the control plane and the private data plane are secured using TLS encryption.
 
-### Observability Architecture
+### Observability architecture
 
 The following diagram illustrates the log and observability architecture of an API Platform Azure PDP deployment.
 
@@ -88,7 +88,7 @@ The API Platform private data plane is built with production-grade security in m
 
 End-to-end encryption is enforced using Cilium transparent encryption, ensuring secure and efficient network traffic flow.
 
-### Private Data Plane Management Models
+### Private data plane management models
 
 API Platform supports flexible management models for private data planes, facilitating collaboration between WSO2 and customers across diverse scenarios.
 

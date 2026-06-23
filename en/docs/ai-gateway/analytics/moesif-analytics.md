@@ -1,5 +1,5 @@
 ---
-title: "Moesif Analytics"
+title: "Moesif analytics"
 description: "Configure Moesif in API Platform AI Gateway to capture and publish API request and response data."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/moesif-analytics/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/analytics/moesif-analytics.md
@@ -33,11 +33,11 @@ This capability allows platform administrators and business stakeholders to gain
 
 ## Prerequisites
 
- - Active Moesif Account and an Application ID
+ - Active Moesif account and an application ID
 > **Note:** For obtaining the Application ID:
 > - Step 1: Sign up in [Moesif](https://www.moesif.com/)
-> - Sept 2: Follow the onboarding wizard.
-> - Sept 3: During the sign up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
+> - Step 2: Follow the onboarding wizard.
+> - Step 3: During the sign-up process, you will receive a Collector Application ID for your configured application. Copy this value and keep it saved.
 
 > For more detailed instructions and advanced configuration options, refer to the [official Moesif Documentation](https://www.moesif.com/docs).
 
@@ -46,7 +46,7 @@ This capability allows platform administrators and business stakeholders to gain
 
 Analytics is configured entirely through the gateway `config.toml` file and is enabled at a system level.
 
-### System Parameters (`config.toml`)
+### System parameters (`config.toml`)
 
 #### Analytics
 
@@ -58,21 +58,21 @@ Analytics is configured entirely through the gateway `config.toml` file and is e
 
 | Parameter              | Type    | Required | Description                               |
 | ---------------------- | ------- | -------- | ----------------------------------------- |
-| `type`                 | string  | Yes      | Analytics publisher type (Currently limited only to ```moesif``` )                  |
+| `type`                 | string  | Yes      | Analytics publisher type (currently limited only to ```moesif``` )                  |
 | `enabled`              | boolean | Yes      | Enables the publisher                     |
-| `settings`             | object | Yes       | Map of Publisher specific attributes required for configuring the publisher client                     |
+| `settings`             | object | Yes       | Map of publisher-specific attributes required for configuring the publisher client                     |
 
-#### gRPC Event Server
+#### gRPC event server
 
 This section configures both the Envoy access log streaming settings and the ALS (Access Log Service) server that receives those logs. The ALS server runs within the policy-engine component.
 
 | Parameter               | Type     | Required | Default | Description                      |
 | ----------------------- | -------- | -------- |---- | -------------------------------- |
-| `buffer_flush_interval` | duration | No       | `1000000000`| Maximum time Envoy waits(in nanoseconds) before flushing buffered access log entries.|
+| `buffer_flush_interval` | duration | No       | `1000000000`| Maximum time Envoy waits (in nanoseconds) before flushing buffered access log entries.|
 | `buffer_size_bytes`     | int      | No       | `16384` | Maximum size of the in-memory buffer used to batch access log entries before sending them to ALS server.                  |
-| `grpc_request_timeout`  | duration | No       | `20000000000` | Timeout duration Envoy waits(in nanoseconds) for a response from the ALS server before considering the log delivery attempt failed.            |
+| `grpc_request_timeout`  | duration | No       | `20000000000` | Timeout duration Envoy waits (in nanoseconds) for a response from the ALS server before considering the log delivery attempt failed.            |
 | `server_port`           | int     | Yes      | - | gRPC port on which the ALS server listens for incoming access log streams from Envoy.      |
-| `shutdown_timeout`      | int     | No       | `600` | Maximum time allowed for the ALS server to gracefully shut down while completing in-flight log processing(in seconds). |
+| `shutdown_timeout`      | int     | No       | `600` | Maximum time allowed for the ALS server to gracefully shut down while completing in-flight log processing (in seconds). |
 | `als_plain_text`        | boolean | No       | `true` | Use plaintext gRPC        |
 | `public_key_path`       | string | No       | - | Path to the public key used for securing ALS communication when transport-level encryption or authentication is enabled.        |
 | `private_key_path`      | string | No       | - | Path to the private key used for securing ALS communication when transport-level encryption or authentication is enabled.        |
@@ -82,9 +82,9 @@ This section configures both the Envoy access log streaming settings and the ALS
 **Note:** The hostname for the ALS connection is automatically derived from the policy-engine configuration. The internal log name identifier is set to `"envoy_access_log"` and is not configurable.
 
 
-## Configuration Examples
+## Configuration examples
 
-#### Integrate Moesif Publisher
+#### Integrate Moesif publisher
 
 For Moesif analytics integration, the following publisher-specific attributes must be configured under the `settings` section. These parameters control authentication, batching behavior, and publish intervals for efficient analytics delivery. The required attributes are as follows.
 
@@ -124,11 +124,11 @@ max_header_limit = 8192
 ```
 
 
-## Use Cases
+## Use cases
 
-* **API Usage Visibility** – Understand how APIs are consumed across tenants and applications.
-* **Operational Insights** – Observe traffic volume, response behavior, and latency trends.
-* **Business Intelligence** – Support product and business decisions using API analytics data.
-* **Platform Monitoring** – Gain observability into API behavior without impacting performance.
+* **API usage visibility** – Understand how APIs are consumed across tenants and applications.
+* **Operational insights** – Observe traffic volume, response behavior, and latency trends.
+* **Business intelligence** – Support product and business decisions using API analytics data.
+* **Platform monitoring** – Gain observability into API behavior without impacting performance.
 
 

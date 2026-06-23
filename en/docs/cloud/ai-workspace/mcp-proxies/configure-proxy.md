@@ -1,4 +1,4 @@
-# Configure an MCP Proxy
+# Configure an MCP proxy
 
 An MCP Proxy exposes a managed endpoint that your applications use to reach an MCP Server. Once deployed, the proxy handles authentication and various other access controls.
 
@@ -11,7 +11,7 @@ This guide walks you through creating a proxy and deploying it to a gateway.
 
 ---
 
-## Create a New Proxy
+## Create a new proxy
 
 1. Navigate to **MCP** > **MCP Proxies** in the left navigation menu.
 
@@ -41,7 +41,7 @@ This guide walks you through creating a proxy and deploying it to a gateway.
 
 ---
 
-## Deploy Proxy to Gateway
+## Deploy proxy to gateway
 
 After creating your proxy, you must deploy it to a gateway before it can be used.
 
@@ -82,11 +82,11 @@ Click **Back to MCP Proxy** to return to the proxy details page.
 
 ---
 
-## Get Started
+## Get started
 
 Once the proxy is deployed, you will see the MCP Proxy URL in the overview page.
 
-### Connect with an MCP Client
+### Connect with an MCP client
 
 Select a gateway from the **Gateways** dropdown to see the base URL for calling this proxy through that gateway.
 
@@ -98,6 +98,6 @@ https://{gateway-host}/{proxy-context}/mcp
 
 ---
 
-## Next Steps
+## Next steps
 
 - [Apply Policies](apply-policies.md) - Apply policies for MCP Proxies.

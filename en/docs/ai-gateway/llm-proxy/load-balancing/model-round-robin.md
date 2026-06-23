@@ -1,5 +1,5 @@
 ---
-title: "Model Round Robin"
+title: "Model round robin"
 description: "Distribute LLM requests evenly across multiple AI models in a cyclic round-robin pattern with automatic failure suspension."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/load-balancing/model-round-robin/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/load-balancing/model-round-robin.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Model Round Robin
+# Model round robin
 
 ## Overview
 
@@ -35,7 +35,7 @@ The Model Round Robin policy implements round-robin load balancing for AI models
 | `models` | array | Yes | - | List of models for round-robin distribution. Each model must have a `model` name. |
 | `suspendDuration` | integer | No | `0` | Suspend duration in seconds for failed models. If set to 0, failed model knowledge is not persisted. Must be >= 0. |
 
-### Model Configuration
+### Model configuration
 
 Each model in the `models` array is an object with the following properties:
 
@@ -52,17 +52,17 @@ The policy requires `requestModel` configuration from the LLM provider template 
 | `requestModel.location` | string | Yes | Location of the model identifier: `payload`, `header`, `queryParam`, or `pathParam` |
 | `requestModel.identifier` | string | Yes | JSONPath (for payload), header name (for header), query param name (for queryParam), or regex pattern (for pathParam) to extract model |
 
-## How It Works
+## How it works
 
-1. **Model Selection**: On each request, the policy selects the next available model in the configured list using a round-robin algorithm.
-2. **Model Extraction**: The policy extracts the original model from the request (if configured) and stores it for reference.
-3. **Model Modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
-4. **Failure Handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
-5. **Availability Check**: Suspended models are skipped during selection until their suspension period expires.
+1. **Model selection**: On each request, the policy selects the next available model in the configured list using a round-robin algorithm.
+2. **Model extraction**: The policy extracts the original model from the request (if configured) and stores it for reference.
+3. **Model modification**: The policy modifies the request to use the selected model based on the `requestModel` configuration.
+4. **Failure handling**: If a model returns a 5xx or 429 response, and `suspendDuration` is configured, the model is suspended for the specified duration.
+5. **Availability check**: Suspended models are skipped during selection until their suspension period expires.
 
 ## Examples
 
-### Example 1: Basic Round Robin with Payload-based Model
+### Example 1: Basic round robin with payload-based model
 
 Deploy an LLM provider with round-robin load balancing across multiple models:
 
@@ -154,33 +154,33 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-## Model Suspension
+## Model suspension
 
 When a model returns a 5xx or 429 response, the policy can automatically suspend that model for a configurable duration:
 
-- **Suspension Duration**: Configured via the `suspendDuration` parameter (in seconds)
-- **Automatic Recovery**: Suspended models are automatically re-enabled after the suspension period expires
-- **Availability Check**: Suspended models are skipped during round-robin selection until they recover
+- **Suspension duration**: Configured via the `suspendDuration` parameter (in seconds)
+- **Automatic recovery**: Suspended models are automatically re-enabled after the suspension period expires
+- **Availability check**: Suspended models are skipped during round-robin selection until they recover
 
-### Suspension Behavior
+### Suspension behavior
 
 - Suspension is tracked per model across all requests
 - If all models are suspended, the policy returns HTTP 503 with error: "All models are currently unavailable"
 - Suspension period starts from the time of failure
 
-## Use Cases
+## Use cases
 
-1. **Load Distribution**: Distribute requests evenly across multiple models to prevent overloading any single model.
+1. **Load distribution**: Distribute requests evenly across multiple models to prevent overloading any single model.
 
-2. **High Availability**: Automatically route requests to available models when some models are experiencing issues.
+2. **High availability**: Automatically route requests to available models when some models are experiencing issues.
 
-3. **Cost Optimization**: Distribute requests across different model tiers (e.g., expensive and cheaper models) to balance cost and performance.
+3. **Cost optimization**: Distribute requests across different model tiers (e.g., expensive and cheaper models) to balance cost and performance.
 
-4. **A/B Testing**: Test different models with equal traffic distribution to compare performance and quality.
+4. **A/B testing**: Test different models with equal traffic distribution to compare performance and quality.
 
-5. **Multi-Provider Support**: Distribute requests across models from different providers while maintaining equal distribution.
+5. **Multi-provider support**: Distribute requests across models from different providers while maintaining equal distribution.
 
-## Request Model Locations
+## Request model locations
 
 The policy supports extracting the model identifier from different locations in the request:
 
@@ -198,14 +198,14 @@ Extract model from HTTP header:
 - **Location**: `header`
 - **Identifier**: Header name (e.g., `X-Model-Name`, `X-LLM-Model`)
 
-### Query Parameter
+### Query parameter
 
 Extract model from URL query parameter:
 
 - **Location**: `queryParam`
 - **Identifier**: Query parameter name (e.g., `model`, `llm_model`)
 
-### Path Parameter
+### Path parameter
 
 Extract model from URL path using regex:
 

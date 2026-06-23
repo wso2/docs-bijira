@@ -29,7 +29,7 @@ Creating an **API proxy** for:
       - [Start from Scratch](my-apis/http/start-from-scratch.md)
       - [Create with GenAI](my-apis/http/create-with-genai.md)
 
-- **Third Party APIs(Egress APIs)**
+- **Third party APIs (Egress APIs)**
 
     An API Proxy can be created to front an Endpoint or API which is managed by a third party in following scenarios:
 

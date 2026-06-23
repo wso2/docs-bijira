@@ -1,5 +1,5 @@
 ---
-title: "Metrics Best Practices and Troubleshooting"
+title: "Metrics best practices and troubleshooting"
 description: "Best practices for correlating API Platform Gateway metrics with logs and traces, and guidance for troubleshooting common metrics issues."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/best-practices-and-troubleshooting/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/best-practices-and-troubleshooting.md
@@ -13,31 +13,31 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Best Practices and Troubleshooting
+# Best practices and troubleshooting
 
-## Integration with Logging and Tracing
+## Integration with logging and tracing
 
 Metrics, logs, and traces work together for comprehensive observability:
 
-### Correlating Metrics with Logs
+### Correlating metrics with logs
 
 1. **Correlation IDs**: Gateway components include request IDs in both logs and metrics
-2. **Find Logs from Metrics**: Use metric labels to filter logs (e.g., API name, route)
-3. **Find Metrics from Logs**: Copy request IDs from logs and query metrics with labels
+2. **Find logs from metrics**: Use metric labels to filter logs (e.g., API name, route)
+3. **Find metrics from logs**: Copy request IDs from logs and query metrics with labels
 
 Example: If you see errors in logs for a specific API, query metrics for that API:
 ```promql
 gateway_controller_api_operations_total{api_name="Weather-API", status="failure"}
 ```
 
-### Correlating Metrics with Traces
+### Correlating metrics with traces
 
 Metrics and traces share labels for correlation:
 - Trace IDs are included in log entries
 - You can search traces by API name or route
 - Span attributes include metric labels
 
-### Using All Three Stacks
+### Using all three stacks
 
 Enable all observability profiles:
 ```bash
@@ -49,7 +49,7 @@ This provides:
 - **Traces**: Request flow and performance debugging
 - **Logs**: Detailed event information and error context
 
-## Best Practices
+## Best practices
 
 ### Development
 - Use default scrape interval (15s) for reasonable granularity
@@ -106,7 +106,7 @@ This provides:
 - **Prune unused metrics** to reduce cardinality
 - **Compress metric names** to reduce storage
 
-### Metric Cardinality
+### Metric cardinality
 
 Avoid high-cardinality labels (millions of unique values):
 
@@ -120,7 +120,7 @@ gateway_controller_api_operations_total{route="/weather/v1"}
 gateway_controller_api_operations_total{user_id="12345"}
 ```
 
-### Query Optimization
+### Query optimization
 
 **Use time ranges**:
 ```promql
@@ -142,7 +142,7 @@ rate(gateway_controller_http_request_duration_seconds_sum[5m])
 
 ## Troubleshooting
 
-### Metrics Not Appearing in Grafana
+### Metrics not appearing in Grafana
 
 **1. Verify metrics are enabled in configuration:**
 ```bash
@@ -187,7 +187,7 @@ docker exec prometheus wget -O- gateway-controller:9091/metrics
 docker exec prometheus wget -O- policy-engine:9003/metrics
 ```
 
-### High Cardinality Metrics
+### High cardinality metrics
 
 **Symptoms:**
 - Prometheus memory usage constantly increasing
@@ -205,7 +205,7 @@ curl http://localhost:9091/metrics | wc -l  # Count metric lines
 - Use histogram buckets instead of labels
 - Aggregate before labeling
 
-### Missing Metrics
+### Missing metrics
 
 **1. Check if metric name changed** (after component update)
 ```bash
@@ -224,7 +224,7 @@ docker logs gateway-controller | grep -i metric
 docker logs policy-engine | grep -i metric
 ```
 
-### Grafana Dashboards Not Loading
+### Grafana dashboards not loading
 
 **1. Verify Grafana is running:**
 ```bash
@@ -250,7 +250,7 @@ docker logs grafana
 # Upload JSON files from ./observability/grafana/dashboards/
 ```
 
-### High Memory Usage
+### High memory usage
 
 **1. Check Prometheus memory usage:**
 ```bash
@@ -277,7 +277,7 @@ command:
 
 **5. Use Thanos or remote write** for long-term storage
 
-### Slow Queries
+### Slow queries
 
 **1. Identify slow queries:**
 ```promql
@@ -303,7 +303,7 @@ prometheus:
         cpus: '2'
 ```
 
-### Metric Values Not Updating
+### Metric values not updating
 
 **1. Check if metrics are counters with rate:**
 ```promql

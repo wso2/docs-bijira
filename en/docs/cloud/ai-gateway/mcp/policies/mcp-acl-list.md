@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 ---
-# MCP Access Control List
+# MCP access control list
 
 ## Overview
 
@@ -11,18 +11,18 @@ The policy operates on three types of MCP capabilities: tools, resources, and pr
 
 ## Features
 
-- **Tool-Level Access Control**: Allow or deny access to specific tools using allow/deny mode with exceptions.
-- **Resource-Level Access Control**: Control access to specific resources (identified by URI) using flexible ACL rules.
-- **Prompt-Level Access Control**: Manage access to specific prompts using configurable access modes.
-- **Flexible ACL Modes**: Support both allow-with-exceptions and deny-with-exceptions patterns.
-- **List Filtering**: Filter list responses to only include capabilities that match the access control rules.
-- **Request Path Enforcement**: Enforce the same allow/deny rules on request paths, rejecting access to denied capabilities.
+- **Tool-level access control**: Allow or deny access to specific tools using allow/deny mode with exceptions.
+- **Resource-level access control**: Control access to specific resources (identified by URI) using flexible ACL rules.
+- **Prompt-level access control**: Manage access to specific prompts using configurable access modes.
+- **Flexible ACL modes**: Support both allow-with-exceptions and deny-with-exceptions patterns.
+- **List filtering**: Filter list responses to only include capabilities that match the access control rules.
+- **Request path enforcement**: Enforce the same allow/deny rules on request paths, rejecting access to denied capabilities.
 
 ## Configuration
 
 The MCP ACL List policy uses a single-level configuration model where all parameters are configured per-MCP-API/route in the API definition YAML.
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per MCP Proxy by the API developer:
 
@@ -34,7 +34,7 @@ These parameters are configured per MCP Proxy by the API developer:
 
 > **Note**: At least one of `tools`, `resources`, or `prompts` must be specified.
 
-### ToolACLConfig Configuration
+### ToolACLConfig configuration
 
 Each `ToolACLConfig` object supports the following fields:
 
@@ -43,7 +43,7 @@ Each `ToolACLConfig` object supports the following fields:
 | `mode` | string | No | `"deny"` | ACL mode for tools: `allow` (allow all except listed exceptions) or `deny` (deny all except listed exceptions). |
 | `exceptions` | string array | No | - | List of tool names that are exceptions to the selected mode. Tool names must be 1-256 characters. |
 
-### ResourceACLConfig Configuration
+### ResourceACLConfig configuration
 
 Each `ResourceACLConfig` object supports the following fields:
 
@@ -52,7 +52,7 @@ Each `ResourceACLConfig` object supports the following fields:
 | `mode` | string | No | `"deny"` | ACL mode for resources: `allow` (allow all except listed exceptions) or `deny` (deny all except listed exceptions). |
 | `exceptions` | string array | No | - | List of resource URIs that are exceptions to the selected mode. Resource URIs must be 1-2048 characters. |
 
-### PromptACLConfig Configuration
+### PromptACLConfig configuration
 
 Each `PromptACLConfig` object supports the following fields:
 
@@ -78,9 +78,9 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
   gomodule: github.com/wso2/gateway-controllers/policies/mcp-acl-list@v0
 ```
 
-## Reference Scenarios
+## Reference scenarios
 
-### Example 1: Deny Specific Tools
+### Example 1: Deny specific tools
 
 Deny access to certain tools while allowing all others:
 
@@ -108,7 +108,7 @@ spec:
     ...
 ```
 
-### Example 2: Allow Only Specific Resources
+### Example 2: Allow only specific resources
 
 Allow access to only whitelisted resources:
 
@@ -136,7 +136,7 @@ spec:
     ...
 ```
 
-### Example 3: Mixed Access Control
+### Example 3: Mixed access control
 
 Apply different access control rules to different capability types:
 

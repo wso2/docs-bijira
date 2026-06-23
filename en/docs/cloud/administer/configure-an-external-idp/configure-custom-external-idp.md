@@ -1,4 +1,4 @@
-# Configure Custom External Key Manager
+# Configure custom external key manager
 
 If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) as a key manager follow the platform-specific guides below to add them as an external key manager in API Platform.
 
@@ -56,6 +56,6 @@ Now you have configured your key manager as an external key manager in API Platf
 
 ![Developer Portal Key Managers tab with custom-key-manager selected and Save button](../../../assets/img/administer/settings/external-km/add_external_km_custom_devportal.png)
 
-## What Next?
+## What next?
 
 To secure API access with the above-configured key manager follow the steps mentioned [here](../../develop-api-proxy/authentication-and-authorization/secure-api-access-with-external-idp.md).

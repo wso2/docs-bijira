@@ -1,8 +1,8 @@
-# Prompt Decorator
+# Prompt decorator
 
 The Prompt Decorator policy prepends or appends content to prompts before they are sent to the upstream LLM. Use it to inject system instructions, safety guidelines, or contextual information into every request — without requiring changes to the client application.
 
-## Configuration Parameters
+## Configuration parameters
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
@@ -10,7 +10,7 @@ The Prompt Decorator policy prepends or appends content to prompts before they a
 | **JSON Path** | Yes | — | A JSONPath expression pointing to the field in the request body where the decoration is applied (e.g., `$.messages` for a chat array, `$.prompt` for a text field). |
 | **Append** | No | `false` | When `true`, the decoration is appended after the existing content. When `false` (default), it is prepended before. |
 
-### Decoration Formats
+### Decoration formats
 
 **Text decoration** — Use a plain string to inject text into a single-field prompt:
 
@@ -29,7 +29,7 @@ The Prompt Decorator policy prepends or appends content to prompts before they a
 ]
 ```
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -41,7 +41,7 @@ The Prompt Decorator policy prepends or appends content to prompts before they a
 8. Click **Add** (for providers) or **Submit** (for proxies).
 9. Deploy the provider or proxy to apply the changes.
 
-## Example: Inject a System Prompt
+## Example: Inject a system prompt
 
 The following configuration prepends a system instruction to every chat completion request:
 

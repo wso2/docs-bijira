@@ -1,8 +1,8 @@
-# Consuming API Workflows
+# Consuming API workflows
 
 API Workflows are published in the developer portal as structured, reusable sequences of API calls. Once an admin publishes a workflow, it becomes available to both human developers browsing the portal and AI agents that consume the portal's machine readable surfaces.
 
-## How Human Users Discover Workflows
+## How human users discover workflows
 
 Workflows are surfaced in the **API Workflows** section of the developer portal, accessible from the main navigation.
 
@@ -14,7 +14,7 @@ Each workflow is listed with its name and a short description that explains the 
 
 ![Specialist Treatment Booking Workflow detail page with flow diagram, description, and source API links](../../../assets/img/devportal/view-api-flow.png)
 
-## How AI Agents Discover Workflows
+## How AI agents discover workflows
 
 Agents that interact with the developer portal can discover workflows through two machine readable endpoints:
 
@@ -38,7 +38,7 @@ A dedicated Markdown document lists all agent-visible workflows in a format opti
 GET /{orgName}/views/{viewName}/api-workflows.md
 ```
 
-### Fetching a Specific Workflow
+### Fetching a specific workflow
 
 Once an agent identifies a relevant workflow, it can fetch the full Arazzo specification and agent prompt directly:
 
@@ -48,7 +48,7 @@ Once an agent identifies a relevant workflow, it can fetch the full Arazzo speci
 
 ---
 
-## Workflow Visibility
+## Workflow visibility
 
 Not all published workflows are visible to all consumers. Admins control visibility independently for human users and AI agents.
 
@@ -62,7 +62,7 @@ This allows workflows to be tailored for specific audiences — for example, exp
 
 ---
 
-## Using a Workflow as a Developer
+## Using a workflow as a developer
 
 To follow a workflow:
 
@@ -71,7 +71,7 @@ To follow a workflow:
 3. Follow the steps in order, using the inputs and outputs described at each step.
 4. If the workflow includes an Arazzo specification, download it to use with tools that support the Arazzo format.
 
-## Using a Workflow as an Agent
+## Using a workflow as an agent
 
 To invoke a workflow programmatically:
 

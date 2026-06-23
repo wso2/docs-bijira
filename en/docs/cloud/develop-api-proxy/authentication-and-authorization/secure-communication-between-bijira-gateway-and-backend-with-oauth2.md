@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure Communication Between the API Platform Gateway and Your Backend with OAuth2
+# Secure communication between the API Platform gateway and your backend with OAuth2
 
 OAuth2 is an industry-standard authorization framework that enables secure, delegated access to protected resources without exposing user credentials. By issuing scoped access tokens, OAuth2 ensures that clients can authenticate to backend services in a controlled, auditable manner.
 
@@ -22,9 +22,9 @@ When you need the API Platform Gateway to call your backend over OAuth2, use the
 
 ### Prerequisites
 
-- **Protected Backend**: The target endpoint must enforce OAuth2 (e.g., bearer-token validation).
-- **Token Endpoint**: The URL of the Key manager's token endpoint that protects your backend.
-- **OAuth2 Application Credentials**: A client ID and secret for an OAuth2 application dedicated to the API Platform Gateway's outbound calls.
+- **Protected backend**: The target endpoint must enforce OAuth2 (e.g., bearer-token validation).
+- **Token endpoint**: The URL of the Key manager's token endpoint that protects your backend.
+- **OAuth2 application credentials**: A client ID and secret for an OAuth2 application dedicated to the API Platform Gateway's outbound calls.
 
 !!! note
     Only the client-credentials grant type is currently supported.

@@ -1,4 +1,4 @@
-# PII Masking Regex Guardrail
+# PII masking regex guardrail
 
 ## Overview
 
@@ -21,7 +21,7 @@ The PII Masking Regex Guardrail masks or redacts Personally Identifiable Informa
 | `jsonPath` | string | No | `""` | JSONPath expression to extract a specific value from JSON payload. If empty, processes the entire payload as a string. |
 | `redactPII` | boolean | No | `false` | If `true`, redacts PII by replacing with "*****" (permanent, cannot be restored). If `false`, masks PII with placeholders that can be restored in responses. |
 
-### PII Entity Configuration
+### PII entity configuration
 
 Each PII entity in the `piiEntities` array must contain:
 
@@ -30,7 +30,7 @@ Each PII entity in the `piiEntities` array must contain:
 | `piiEntity` | string | Yes | Name/type of the PII entity (e.g., "EMAIL", "PHONE", "SSN", "CREDIT_CARD"). Must contain only uppercase letters and underscores (matches `^[A-Z_]+$`). |
 | `piiRegex` | string | Yes | Regular expression pattern to match the PII entity. Must be a valid Go regexp pattern. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and process specific fields within JSON payloads. Common examples:
 
@@ -41,16 +41,16 @@ The guardrail supports JSONPath expressions to extract and process specific fiel
 
 If `jsonPath` is empty or not specified, the entire payload is processed as a string.
 
-## PII Masking Modes
+## PII masking modes
 
-### Masking Mode (`redactPII: false`)
+### Masking mode (`redactpii: false`)
 
 - PII is replaced with placeholders in the format `[ENTITY_TYPE_XXXX]` where XXXX is a 4-digit hexadecimal number (e.g., `[EMAIL_0000]`, `[EMAIL_0001]`, `[PHONE_000a]`)
 - Placeholders are automatically restored in responses to their original values
 - Original PII values are stored temporarily in request metadata for restoration
 - Recommended when you need to preserve data for downstream processing or response generation
 
-### Redaction Mode (`redactPII: true`)
+### Redaction mode (`redactpii: true`)
 
 - PII is permanently replaced with "*****"
 - Cannot be restored in responses
@@ -59,7 +59,7 @@ If `jsonPath` is empty or not specified, the entire payload is processed as a st
 
 ## Examples
 
-### Example 1: Basic PII Masking
+### Example 1: Basic PII masking
 
 Deploy an LLM provider that masks email addresses and phone numbers in requests and restores them in responses:
 
@@ -131,35 +131,35 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **PII Redaction**: Set `redactPII: true` to permanently replace PII with "*****" (cannot be restored). Set `redactPII: false` to use masking mode with placeholders that can be restored in responses.
+- **PII redaction**: Set `redactPII: true` to permanently replace PII with "*****" (cannot be restored). Set `redactPII: false` to use masking mode with placeholders that can be restored in responses.
 
-- **Multiple PII Types**: Configure multiple `piiEntities` in the array to detect and mask/redact various PII types (e.g., EMAIL, PHONE, CREDIT_CARD, SSN, IP_ADDRESS, DATE_OF_BIRTH).
+- **Multiple PII types**: Configure multiple `piiEntities` in the array to detect and mask/redact various PII types (e.g., EMAIL, PHONE, CREDIT_CARD, SSN, IP_ADDRESS, DATE_OF_BIRTH).
 
-- **Full Payload Processing**: Omit the `jsonPath` parameter to process the entire request body without JSONPath extraction.
+- **Full payload processing**: Omit the `jsonPath` parameter to process the entire request body without JSONPath extraction.
 
-- **Field-Specific Processing**: Use `jsonPath` to extract and process PII from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content).
+- **Field-specific processing**: Use `jsonPath` to extract and process PII from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content).
 
-- **Response Restoration**: When using masking mode (`redactPII: false`), PII is automatically restored in responses. No separate response configuration is needed. If `redactPII: true`, no restoration occurs in the response phase.
+- **Response restoration**: When using masking mode (`redactPII: false`), PII is automatically restored in responses. No separate response configuration is needed. If `redactPII: true`, no restoration occurs in the response phase.
 
-## Use Cases
+## Use cases
 
-1. **Privacy Protection**: Mask or redact PII before sending data to AI services or external systems.
+1. **Privacy protection**: Mask or redact PII before sending data to AI services or external systems.
 
 2. **Compliance**: Meet regulatory requirements (GDPR, CCPA, HIPAA) for PII handling.
 
-3. **Data Minimization**: Reduce exposure of sensitive data in logs, analytics, or third-party integrations.
+3. **Data minimization**: Reduce exposure of sensitive data in logs, analytics, or third-party integrations.
 
-4. **Secure Processing**: Allow AI processing while protecting user privacy through masking.
+4. **Secure processing**: Allow AI processing while protecting user privacy through masking.
 
-5. **Audit Trail**: Maintain masked versions of data for auditing while protecting original values.
+5. **Audit trail**: Maintain masked versions of data for auditing while protecting original values.
 
-## How It Works
+## How it works
 
-### Request Phase (Masking)
+### Request phase (masking)
 
 1. Extract content using JSONPath (if specified) or use entire payload
 2. Apply each PII regex pattern to find matches
@@ -167,7 +167,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 4. Store mapping of placeholders to original values (for masking mode)
 5. Forward masked content to upstream service
 
-### Response Phase (Restoration)
+### Response phase (restoration)
 
 1. Check if PII was masked in the request phase (metadata contains PII mappings)
 2. If `redactPII: false` and mappings exist, replace placeholders with original PII values
@@ -175,7 +175,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 4. Return restored content or original response
 
 
-#### Sample Payload after intervention from Regex PII Masking with redact=true
+#### Sample payload after intervention from regex PII masking with redact=true
 
 ```
 {

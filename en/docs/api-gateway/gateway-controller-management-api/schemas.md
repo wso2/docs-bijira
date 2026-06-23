@@ -1,5 +1,5 @@
 ---
-title: "Management API Schemas"
+title: "Management API schemas"
 description: "JSON schema definitions for all API Platform Gateway Controller management API request and response objects."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/schemas/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/schemas.md
@@ -43,7 +43,7 @@ Server-managed lifecycle information for a resource
 |updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -133,7 +133,7 @@ Server-managed lifecycle information for a resource
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[APIConfigData](#schemaapiconfigdata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -278,7 +278,7 @@ and
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[WebhookAPIData](#schemawebhookapidata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -465,7 +465,7 @@ and
 |operations|[[Operation](#schemaoperation)]|true|none|List of HTTP operations/routes|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration, API keys, and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -569,7 +569,7 @@ xor
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -607,7 +607,7 @@ xor
 |path|string|true|none|Route path with optional {param} placeholders|
 |policies|[[Policy](#schemapolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -809,7 +809,7 @@ xor
 |» **additionalProperties**|[WebSubChannel](#schemawebsubchannel)|false|none|A single channel definition with optional per-channel policy overrides.|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration, API keys, and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1062,7 +1062,7 @@ Channel (topic/event stream) definition for async APIs.
 |method|string|true|none|Operation method type.|
 |policies|[[Policy](#schemapolicy)]|false|none|List of policies applied only to this channel (overrides or adds to API-level policies)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1144,7 +1144,7 @@ Channel (topic/event stream) definition for async APIs.
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[WebBrokerApiData](#schemawebbrokerapidata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1403,7 +1403,7 @@ and
 |» sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1682,7 +1682,7 @@ Configuration for consuming messages from Kafka to WebSocket
 |externalRefId|string|false|none|External reference ID for the API key.<br>This field is optional and used for tracing purposes only.<br>The gateway generates its own internal ID for tracking.|
 |issuer|string|false|none|Identifies the portal that created this key. If provided, only api keys generated from<br>the same portal will be accepted. If not provided, there is no portal restriction.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1768,7 +1768,7 @@ Details of an API key
 |source|string|true|none|Source of the API key (local or external)|
 |externalRefId|string|false|none|External reference ID for the API key|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1799,7 +1799,7 @@ Details of an API key
 |» duration|integer|true|none|Duration value for expiration|
 |expiresAt|string(date-time)|false|none|Expiration timestamp|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1882,7 +1882,7 @@ Details of an API key
 |expiryTime|string(date-time)|false|none|none|
 |status|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1925,7 +1925,7 @@ Details of an API key
 |expiryTime|string(date-time)|false|none|none|
 |status|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -1976,7 +1976,7 @@ Details of an API key
 |createdAt|string(date-time)|false|none|none|
 |updatedAt|string(date-time)|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2051,7 +2051,7 @@ Details of an API key
 |billingSubscriptionId|string|false|none|Billing subscription identifier (optional, for analytics tracking).|
 |status|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2079,7 +2079,7 @@ Details of an API key
 |---|---|---|---|---|
 |status|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2127,7 +2127,7 @@ Details of an API key
 |createdAt|string(date-time)|false|none|none|
 |updatedAt|string(date-time)|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2210,7 +2210,7 @@ Details of an API key
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[MCPProxyConfigData](#schemamcpproxyconfigdata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2373,7 +2373,7 @@ continued
 |prompts|[[MCPPrompt](#schemamcpprompt)]|false|none|none|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the MCP Proxy is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2580,7 +2580,7 @@ continued
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[LLMProviderTemplateData](#schemallmprovidertemplatedata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2854,7 +2854,7 @@ and
 |location|string|true|none|Where to find the token information|
 |identifier|string|true|none|JSONPath expression or header name to identify the token value|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -2927,7 +2927,7 @@ and
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[LLMProviderConfigData](#schemallmproviderconfigdata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3097,7 +3097,7 @@ continued
 |policies|[[LLMPolicy](#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Provider is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3131,7 +3131,7 @@ continued
 |» header|string|false|none|none|
 |» value|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3161,7 +3161,7 @@ continued
 |header|string|false|none|none|
 |value|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3222,7 +3222,7 @@ continued
 |mode|string|true|none|Access control mode|
 |exceptions|[[RouteException](#schemarouteexception)]|false|none|Path exceptions to the access control mode|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3347,7 +3347,7 @@ continued
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[LLMProxyConfigData](#schemallmproxyconfigdata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3456,7 +3456,7 @@ and
 |policies|[[LLMPolicy](#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Proxy is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3495,7 +3495,7 @@ and
 |metadata|[Metadata](#schemametadata)|true|none|none|
 |spec|[SecretConfigData](#schemasecretconfigdata)|true|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3632,7 +3632,7 @@ and
 |spec|[SecretConfigListData](#schemasecretconfiglistdata)|true|none|none|
 |status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Omitted in list items may vary; the secret value is never included here.|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3695,7 +3695,7 @@ and
 |message|string|false|none|Success or informational message|
 |status|string|false|none|none|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3881,7 +3881,7 @@ POST/PUT /secrets response. `spec.value` is not returned; see SecretConfiguratio
 |spec|[SecretConfigListData](#schemasecretconfiglistdata)|true|none|none|
 |status|[SecretResourceServiceStatus](#schemasecretresourceservicestatus)|true|none|Id and optional timestamps. Not the full ResourceStatus model (no `state` or<br>`deployedAt`).|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|
@@ -3928,7 +3928,7 @@ GET /secrets/{id} response including decrypted `spec.value`.
 |spec|[SecretConfigData](#schemasecretconfigdata)|true|none|none|
 |status|[SecretResourceServiceStatus](#schemasecretresourceservicestatus)|true|none|Id and optional timestamps. Not the full ResourceStatus model (no `state` or<br>`deployedAt`).|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|

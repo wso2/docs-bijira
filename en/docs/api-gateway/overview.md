@@ -1,5 +1,5 @@
 ---
-title: "API Platform Gateway Overview"
+title: "API Platform gateway overview"
 description: "Learn the architecture and components of API Platform Gateway: Gateway Controller, Gateway Runtime, Policy Engine, default ports, and the ap CLI."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/overview/
 md_url: https://wso2.com/api-platform/docs/api-gateway/overview.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-11
 content_type: "concept"
 ---
 
-# API Platform Gateway Overview
+# API Platform gateway overview
 
 API Platform Gateway is the complete API gateway system for managing, securing, and routing API traffic to your backend services.
 
@@ -21,10 +21,10 @@ API Platform Gateway is the complete API gateway system for managing, securing, 
 | Component | Purpose |
 |-----------|---------|
 | **Gateway-Controller** | Control plane that manages API configurations and dynamically configures the Router |
-| **Gateway-Runtime** | Data plane (Envoy Proxy) that routes HTTP/HTTPS traffic to backend services and Processes requests/responses through configurable policies (authentication, rate limiting, etc.)|
+| **Gateway-Runtime** | Data plane (Envoy Proxy) that routes HTTP/HTTPS traffic to backend services and processes requests/responses through configurable policies (authentication, rate limiting, etc.)|
 | **Policy Builder** | Build-time tooling for compiling custom policy implementations |
 
-### CLI Tool (ap)
+### CLI tool (ap)
 
 The `ap` CLI provides a command-line interface for managing gateways, APIs, and MCP proxies. Key capabilities include:
 
@@ -34,7 +34,7 @@ The `ap` CLI provides a command-line interface for managing gateways, APIs, and 
 
 For the complete list of CLI commands and usage examples, see the [CLI Reference](../tools/cli/reference.md).
 
-## Default Ports
+## Default ports
 
 | Port | Service | Description |
 |------|---------|-------------|
@@ -78,7 +78,7 @@ The complete and up-to-date policy catalogue — with configuration references a
 
 You can extend the gateway with your own policies or include specific policies from the catalogue by building a custom gateway image using the `ap` CLI. See [Building the Gateway with Custom Policies](./policies/custom-policies/building-gateway-with-custom-policies.md).
 
-## High Availability Setup
+## High availability setup
 
 In a production HA deployment:
 

@@ -2,7 +2,7 @@
 
 The AI Gateway LLM docs cover provider onboarding, application-facing proxies, and policy controls for Large Language Model traffic.
 
-## In This Section
+## In this section
 
 - [Quick Start Guide](quick-start-guide.md) for deploying the gateway and routing traffic to an LLM provider
 - [LLM Provider Templates](llm-templates.md) for supported provider metadata extraction and custom template management

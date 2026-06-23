@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Import API Contract
+# Import API contract
 
 A GraphQL API proxy operates based on the GraphQL query language specification. GraphQL provides a flexible and efficient approach to API development by allowing clients to request exactly the data they need, nothing more and nothing less.
 
@@ -34,7 +34,7 @@ In this guide, you will:
 
   This creates the organization and opens the **Project Home** page of the default project created for you.
 
-## Create an API Proxy
+## Create an API proxy
 
 In this guide, you will use a sample URL to import a GraphQL schema definition and create a GraphQL API proxy.
 
@@ -47,19 +47,19 @@ In this guide, you will use a sample URL to import a GraphQL schema definition a
 6. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
 7. Click **Create** to create the API Proxy. Wait for the setup to complete.
 
-## Configure and Deploy the API Proxy
+## Configure and deploy the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Select **Configure and Deploy** option from the **Deploy** dropdown and click it.
 3. Select **External** as API Access Mode.
 4. Click **Deploy**.
 
-## Test the API Proxy
+## Test the API proxy
 
 1. Navigate to the **Test --> Console** page of the API Proxy.
 2. Use the GraphQL Console to test the API Proxy.
 
-## Promote the API Proxy to Production and Publish the API Proxy
+## Promote the API proxy to production and publish the API proxy
 
 1. Navigate to the **Deploy** page of the API Proxy.
 2. Click **Promote**. This promotes the API proxy from the Development environment to the Production environment.
@@ -67,7 +67,7 @@ In this guide, you will use a sample URL to import a GraphQL schema definition a
 4. Click **Publish**.
 5. In the **Publish API** dialog, click **Confirm** to proceed with publishing the API. If you want to change the display name, make the necessary changes and then click **Confirm**. This sets the API lifecycle state to **Published**.
 
-## API Proxy Behavior
+## API proxy behavior
 
 This GraphQL API Proxy enables clients to query data using GraphQL queries and mutations. Clients can request exactly the fields they need, reducing bandwidth and improving performance. The API supports complex queries that fetch related data in a single request, making it efficient for applications with varying data requirements.
 

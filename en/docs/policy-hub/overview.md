@@ -1,4 +1,4 @@
-# WSO2 API Platform Policy Hub
+# WSO2 API Platform policy hub
 
 [The Policy Hub](https://wso2.com/api-platform/policy-hub) is the official, curated collection of [gateway policies](../api-gateway/policies/overview.md) for the WSO2 API Platform. It gives you a growing library of production-ready, versioned policy implementations that you can apply to any API or MCP server without writing custom code.
 
@@ -6,13 +6,13 @@ Policies are self-contained units of behavior that plug into the gateway's reque
 
 The Policy Hub is powered by an [open source repository on GitHub](https://github.com/wso2/gateway-controllers). Every policy is versioned independently, the full source and documentation live in the repo, and contributions are welcome. For more information about contributing policies, see [Policy Development Guide](https://wso2.com/api-platform/policy-hub/policy-development-guide).
 
-## How Policies Work
+## How policies work
 
 A policy attaches to an API, covering all operations, or to a specific operation, and runs on the request phase, the response phase, or both. Multiple policies chain together on the same API, each one processing the message in sequence before it reaches the next. The gateway evaluates the chain at runtime. 
 
 For more information, see [API Platform Policies overview](../api-gateway/policies/overview.md).
 
-## Policy Categories
+## Policy categories
 
 ### Security
 
@@ -63,7 +63,7 @@ Policies designed specifically for the characteristics of AI APIs — cost, toke
 | Model Weighted Round Robin | Distributes requests across model endpoints according to configured weights |
 | Respond | Returns an immediate response without forwarding to the upstream backend |
 
-### MCP (Model Context Protocol)
+### MCP (model context protocol)
 
 A dedicated policy tier for securing and controlling MCP servers — the emerging standard for exposing tools, resources, and prompts to AI agents.
 
@@ -88,14 +88,14 @@ Modify requests and responses in flight.
 | JSON/XML Mediator | Converts payloads between JSON and XML formats |
 | Interceptor Service | Calls a user-defined HTTP service during the request and/or response phase |
 
-### Logging, Analytics, and Monitoring
+### Logging, analytics, and monitoring
 
 | Policy | What it does |
 | -- | -- |
 | Log Message | Logs request/response payload and headers |
 | Analytics Header Filter | Controls which headers appear in analytics data using allow or deny mode |
 
-## Common Use Cases
+## Common use cases
 
 __AI guardrails__: Stack prompt-injection detection, PII masking, and a semantic prompt guard on an LLM API to enforce safety and compliance requirements.
 
@@ -107,10 +107,10 @@ __Semantic caching__: Place the Semantic Cache policy on a high-traffic LLM API 
 
 __Multi-model routing__: Use Model Weighted Round Robin to distribute traffic across model endpoints by weight. 
 
-## Independent Versioning
+## Independent versioning
 
 Every policy in the hub is versioned on its own track. When a new version ships, prior versions remain fully available; so running deployments do not break by upon an update.
 
-## Extending the Hub
+## Extending the hub
 
 The [API Platform CLI can build a custom gateway image](../api-gateway/policies/custom-policies/building-gateway-with-custom-policies.md) that bundles any combination of hub policies and policies you write yourself. So you can fill your requirement gaps, if any, with local implementations, and contribute them to Policy Hub.

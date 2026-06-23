@@ -1,6 +1,6 @@
-## Quick Start
+## Quick start
 
-### Using Docker Compose (Recommended)
+### Using Docker compose (recommended)
 
 
 ### Prerequisites
@@ -129,7 +129,7 @@ curl -X POST "https://localhost:8443/assistant/chat/completions" \
   }' -k
 ```
 
-## Stopping the Gateway
+## Stopping the gateway
 
 When stopping the gateway, you have two options:
 

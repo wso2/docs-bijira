@@ -1,8 +1,8 @@
-# Token-Based Rate Limit
+# Token-based rate limit
 
 The Token-Based Rate Limit policy enforces rate limits based on token consumption rather than request count. Limits can be applied to prompt (input) tokens, completion (output) tokens, or total tokens — independently or in combination.
 
-## Configuration Parameters
+## Configuration parameters
 
 At least one of the three limit categories must be configured. Any combination is valid.
 
@@ -21,7 +21,7 @@ Each entry within a category requires:
 
 When multiple limits are configured within a category, the most restrictive limit is enforced.
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.
@@ -45,7 +45,7 @@ When multiple limits are configured within a category, the most restrictive limi
 | `X-RateLimit-Reset` | Time (epoch seconds) when the window resets |
 | `RateLimit-*` | IETF equivalents of the above |
 
-## Example: Cap Total Tokens Per Minute
+## Example: Cap total tokens per minute
 
 Block requests once 100,000 total tokens have been consumed in a 1-minute window.
 
@@ -54,7 +54,7 @@ Block requests once 100,000 total tokens have been consumed in a 1-minute window
 | Total Token Limits — count | `100000` |
 | Total Token Limits — duration | `1m` |
 
-## Example: Separate Prompt and Completion Limits
+## Example: Separate prompt and completion limits
 
 Limit prompt tokens to 50,000 per hour and completion tokens to 20,000 per hour independently.
 

@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 ---
-# MCP Authentication
+# MCP authentication
 
 ## Overview
 
@@ -9,9 +9,9 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
-- **Resource-Specific Security**: Configure authentication independently for tools, resources, prompts, and JSON-RPC methods.
-- **Exception Lists**: Exclude specific resources from authentication using exception lists.
+- **Access token validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
+- **Resource-specific security**: Configure authentication independently for tools, resources, prompts, and JSON-RPC methods.
+- **Exception lists**: Exclude specific resources from authentication using exception lists.
 - **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
 - **Standardized Error Handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
 - **Claim Mapping**: Maps token claims to downstream headers for use by backend services.
@@ -21,7 +21,7 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 The MCP Authentication policy uses a two-level configuration model:
 
-### System Parameters (config.toml)
+### System parameters (config.toml)
 
 Configured by the administrator in `config.toml` under `policy_configurations.mcpauth_v1` or `policy_configurations.jwtauth_v1` depending on the parameter.
 
@@ -42,7 +42,7 @@ Configured by the administrator in `config.toml` under `policy_configurations.mc
 | `validateIssuer` | boolean | No | - | jwtauth_v1 | Whether to validate the token's issuer claim against configured key managers. |
 | `gatewayHost` | string | No | `"localhost"` | mcpauth_v1 | The outward-facing gateway host name used when deriving the protected resource metadata URL and response. |
 
-#### KeyManager Configuration
+#### KeyManager configuration
 
 Each key manager in the `keyManagers` array supports the following structure:
 
@@ -58,7 +58,7 @@ Each key manager in the `keyManagers` array supports the following structure:
 
 > **Note**: Either `jwks.remote` or `jwks.local` must be specified, but not both.
 
-#### System Configuration Example
+#### System configuration example
 
 ```toml
 [policy_configurations.mcpauth_v1]
@@ -95,11 +95,11 @@ uri = "https://auth.example.org/oauth2/jwks"
 skipTlsVerify = false
 ```
 
-### User Parameters (API Definition)
+### User parameters (API definition)
 
 These parameters are configured per-API/route by the API developer:
 
-#### Resource Type Configuration
+#### Resource type configuration
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -111,7 +111,7 @@ These parameters are configured per-API/route by the API developer:
 | `requiredScopes` | string array | No | `[]` | List of scopes that should be included in the token generated through MCP auth flow. These are advertised in the protected resource metadata but **not enforced** by this policy. Use the MCP Authorization policy to enforce scopes. |
 | `claimMappings` | object | No | `{}` | Map of claimName → downstream header or context key to expose claims for downstream services. |
 
-#### SecurityConfig Object
+#### SecurityConfig object
 
 Each resource type configuration supports the following structure:
 
@@ -129,9 +129,9 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
   gomodule: github.com/wso2/gateway-controllers/policies/mcp-auth@v0
 ```
 
-## Reference Scenarios
+## Reference scenarios
 
-### Example 1: Basic MCP Authentication
+### Example 1: Basic MCP authentication
 
 Apply MCP authentication to an API using a specific key manager:
 
@@ -157,7 +157,7 @@ spec:
     ...
 ```
 
-### Example 2: Disable Security for Specific Tools
+### Example 2: Disable security for specific tools
 
 Disable authentication for specific tools while keeping it enabled for others:
 
@@ -194,7 +194,7 @@ spec:
     ...
 ```
 
-### Example 3: Scope Advertisement in Protected Resource Metadata
+### Example 3: Scope advertisement in protected resource metadata
 
 Advertise required scopes in the protected resource metadata (scopes are not enforced by this policy):
 
@@ -223,7 +223,7 @@ spec:
     ...
 ```
 
-### Example 4: Claim Mapping for Downstream Services
+### Example 4: Claim mapping for downstream services
 
 Map JWT claims to downstream headers for use by backend services:
 
@@ -253,7 +253,7 @@ spec:
     ...
 ```
 
-### Example 5: Disable Authentication for Resources
+### Example 5: Disable authentication for resources
 
 Completely disable authentication for MCP resources while keeping it for tools:
 

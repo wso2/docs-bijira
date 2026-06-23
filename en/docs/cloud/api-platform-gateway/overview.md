@@ -1,10 +1,10 @@
-# API Platform Gateway Overview
+# API Platform gateway overview
 
 API Platform provides two types of API Platform gateways powered by WSO2, giving you flexibility to choose the deployment model that best fits your requirements. Both gateway types are managed through API Platform's unified control plane, ensuring consistent API management, policy enforcement, and monitoring across all your environments.
 
-## Gateway Types
+## Gateway types
 
-### API Platform Cloud Gateway (SaaS)
+### API Platform Cloud gateway (SaaS)
 
 The API Platform Cloud Gateway is a fully managed, WSO2-hosted gateway that requires zero infrastructure management on your part.
 
@@ -23,7 +23,7 @@ The API Platform Cloud Gateway is a fully managed, WSO2-hosted gateway that requ
 - Projects where time-to-market is critical
 - Workloads without strict data residency requirements
 
-### Self-Hosted Gateway
+### Self-hosted gateway
 
 The Self-Hosted Gateway is a containerized instance of the API Platform Gateway that you deploy and manage in your own infrastructure—on-premises, in a private cloud, or in any public cloud provider.
 
@@ -85,7 +85,7 @@ Both gateway types connect to API Platform's unified control plane:
                                      └───────────────────────────┘
 ```
 
-## Common Features
+## Common features
 
 Both gateway types share these capabilities through the unified control plane:
 
@@ -98,9 +98,9 @@ Both gateway types share these capabilities through the unified control plane:
 | **Analytics** | Unified API analytics and insights |
 | **Developer Portal** | Expose APIs to developers through the portal |
 
-## Getting Started
+## Getting started
 
-### Using API Platform Cloud Gateway
+### Using API Platform Cloud gateway
 
 The API Platform Cloud Gateway is available by default in your organization. Simply deploy your APIs and they will be routed through the managed gateway.
 
@@ -110,7 +110,7 @@ The API Platform Cloud Gateway is available by default in your organization. Sim
 
 For more details, see [API Platform Cloud Gateway](cloud-gateway.md).
 
-### Using Self-Hosted Gateway
+### Using Self-hosted gateway
 
 To deploy a Self-Hosted Gateway in your environment:
 
@@ -119,7 +119,7 @@ To deploy a Self-Hosted Gateway in your environment:
 3. **[Adding and Managing Policies](manage-policies.md)**: Configure and enforce policies.
 4. **[Analytics](analytics.md)**: Monitor API traffic and performance.
 
-## What's Next?
+## What's next?
 
 - [Getting Started](getting-started.md): Quick start guide for Self-Hosted Gateway
 - [Setting Up](setting-up.md): Configure for VM, Docker, or Kubernetes

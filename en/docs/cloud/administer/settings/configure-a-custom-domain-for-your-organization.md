@@ -1,4 +1,4 @@
-# Configure a Custom Domain for Your Organization
+# Configure a custom domain for your organization
 
 A custom domain is essential for effective branding, discoverability, and credibility of a website. API Platform allows you to easily configure custom domains for your organization, enabling developers to utilize it to configure custom URLs for their API proxies.
 
@@ -22,7 +22,7 @@ To add a custom domain for your organization, follow the steps given below:
 3.  In the left navigation menu, under **Admin**, click **Settings**. This opens the organization-level settings page.
 4.  Click the **URL Settings** tab and then click the **Active Domains** tab.
 5.  Click **+ Add Domains**.
-6.  In the **Add a Custom Domain** pane, do the following:
+6.  In the **Add a custom domain** pane, do the following:
 
     1.  Enter your domain name.
     2.  Select the environment to apply the domain name.

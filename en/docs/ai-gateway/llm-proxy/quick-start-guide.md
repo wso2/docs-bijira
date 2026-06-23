@@ -1,5 +1,5 @@
 ---
-title: "LLM Proxy Quick Start Guide"
+title: "LLM proxy quick start guide"
 description: "Run API Platform AI Gateway with Docker Compose, configure an LLM provider, and route your first LLM request through a managed proxy."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/quick-start-guide.md
@@ -12,9 +12,9 @@ last_updated: 2026-06-11
 content_type: "quickstart"
 ---
 
-## Quick Start
+## Quick start
 
-### Using Docker Compose (Recommended)
+### Using Docker compose (recommended)
 
 
 ### Prerequisites
@@ -52,7 +52,7 @@ curl http://localhost:9094/health
 
 ## Deploy an OpenAI LLM provider configuration
 
-The API Platform Gateway currently includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your openai API key and run the following command to deploy a sample OpenAI LLM provider.
+The API Platform Gateway currently includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
 
 ```bash
 curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
@@ -141,7 +141,7 @@ curl -X POST "https://localhost:8443/assistant/chat/completions" \
   }' -k
 ```
 
-## Stopping the Gateway
+## Stopping the gateway
 
 When stopping the gateway, you have two options:
 

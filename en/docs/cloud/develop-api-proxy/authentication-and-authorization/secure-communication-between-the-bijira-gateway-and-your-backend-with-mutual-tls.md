@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Secure Communication Between the API Platform Gateway and Your Backend with Mutual TLS
+# Secure communication between the API Platform gateway and your backend with mutual TLS
 
 To establish secure communication between the API Platform Gateway and your backend, you can configure mutual TLS.
 

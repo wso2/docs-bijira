@@ -6,7 +6,7 @@ This guide shows you how to set up a single governed LLM proxy that distributes 
 
 ---
 
-## Key Concepts
+## Key concepts
 
 Before you start, here are the WSO2 API Platform terms this guide uses:
 
@@ -385,7 +385,7 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 
 ---
 
-## What You Learned
+## What you learned
 
 - Set up a single governed LLM proxy so applications never call the provider directly
 - Distributed requests across Azure OpenAI models in round-robin order to balance traffic and reduce overloading on any single model
@@ -395,7 +395,7 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 
 ---
 
-## Next Steps
+## Next steps
 
 **Add prompt injection protection and OWASP coverage** — extend the guardrail configuration with additional security policies to protect against prompt injection and other LLM-specific threats
 

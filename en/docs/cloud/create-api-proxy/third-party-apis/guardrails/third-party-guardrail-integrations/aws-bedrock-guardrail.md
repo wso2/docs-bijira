@@ -13,11 +13,11 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# AWS Bedrock Guardrail
+# AWS Bedrock guardrail
 
 This policy provides the capability to integrate with [AWS Bedrock Guardrails](https://aws.amazon.com/bedrock/guardrails/) to enable real-time content safety validation and PII protection for AI applications. Through the configured Bedrock Guardrail, it can detect and block harmful content (hate speech, sexual content, self-harm, violence) and mask or redact Personally Identifiable Information (PII) in both request and response payloads. This integration helps ensure AI applications meet safety standards and compliance requirements while protecting against malicious prompt injection attacks.
 
-## Configure AWS Bedrock Guardrail
+## Configure AWS Bedrock guardrail
 
 1. In the left navigation menu, click **Develop**, then select **Policy**.
 
@@ -49,7 +49,7 @@ This policy provides the capability to integrate with [AWS Bedrock Guardrails](h
 !!! note "PII Unmasking with AWS Bedrock Guardrail"
     If you want to use the AWS Bedrock Guardrail for PII unmasking, you must attach the policy to both the request and response flows. This allows the policy to mask PII in the request and unmask it in the response. Moreover, the `Redact PII` option should be disabled in both flows to allow the PII to be restored in the response. If you enable `Redact PII` in the response flow, the PII will be permanently redacted and not restored.
 
-### Sample AWS Bedrock Guardrail Configuration
+### Sample AWS Bedrock guardrail configuration
 
 - Guardrail Name: `AWS Bedrock Guardrail`
 - AWS Guardrail ID: `guardrail-1234567890abcdef`
@@ -66,7 +66,7 @@ This policy provides the capability to integrate with [AWS Bedrock Guardrails](h
 - Passthrough On Error: `false`
 - Show Guardrail Assessment: `true`
 
-### Sample Payload to be intervened from the AWS Bedrock Guardrail
+### Sample payload to be intervened from the AWS Bedrock guardrail
 
 ```json
 {
@@ -79,7 +79,7 @@ This policy provides the capability to integrate with [AWS Bedrock Guardrails](h
 }
 ```
 
-### Sample Response after AWS Bedrock Guardrail Intervention
+### Sample response after AWS Bedrock guardrail intervention
 
 ```json
 {

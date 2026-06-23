@@ -1,4 +1,4 @@
-# JSON Schema Guardrail
+# JSON schema guardrail
 
 ## Overview
 
@@ -16,7 +16,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -25,7 +25,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 | `invert` | boolean | No | `false` | If `true`, validation passes when schema validation FAILS. If `false`, validation passes when schema validation succeeds. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed validation error information in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -34,7 +34,7 @@ The JSON Schema Guardrail validates request or response body content against a J
 | `invert` | boolean | No | `false` | If `true`, validation passes when schema validation FAILS. If `false`, validation passes when schema validation succeeds. |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed validation error information in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -45,20 +45,20 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is validated against the schema.
 
-## JSON Schema Features
+## JSON schema features
 
 The guardrail supports JSON Schema Draft 7, including:
 
 - **Types**: `string`, `number`, `integer`, `boolean`, `object`, `array`, `null`
 - **Properties**: Define object properties and their schemas
-- **Required Fields**: Specify which properties are mandatory
+- **Required fields**: Specify which properties are mandatory
 - **Constraints**: `minLength`, `maxLength`, `minimum`, `maximum`, `pattern`, `enum`
-- **Nested Structures**: Complex nested objects and arrays
-- **Conditional Logic**: `if`, `then`, `else`, `allOf`, `anyOf`, `oneOf`, `not`
+- **Nested structures**: Complex nested objects and arrays
+- **Conditional logic**: `if`, `then`, `else`, `allOf`, `anyOf`, `oneOf`, `not`
 
 ## Examples
 
-### Example 1: Basic Object Validation
+### Example 1: Basic object validation
 
 Deploy an LLM provider that validates that request contains a user object with required fields:
 
@@ -151,23 +151,23 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate JSON schemas in both directions. Use `showAssessment: true` to include detailed validation error information in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate JSON schemas in both directions. Use `showAssessment: true` to include detailed validation error information in error responses.
 
-- **Inverted Logic**: Set `invert: true` to allow only content that does *not* match the schema. This is useful for blocking requests that match specific schema patterns.
+- **Inverted logic**: Set `invert: true` to allow only content that does *not* match the schema. This is useful for blocking requests that match specific schema patterns.
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate the entire request body against the schema.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate the entire request body against the schema.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0]"` for message objects or `"$.results"` for response arrays).
+- **Field-specific validation**: Use `jsonPath` to extract and validate specific fields within JSON payloads (e.g., `"$.messages[0]"` for message objects or `"$.results"` for response arrays).
 
-## Use Cases
+## Use cases
 
-1. **API Contract Enforcement**: Ensure requests and responses conform to API specifications.
+1. **API contract enforcement**: Ensure requests and responses conform to API specifications.
 
-2. **Data Quality**: Validate data structure and types before processing.
+2. **Data quality**: Validate data structure and types before processing.
 
 3. **Security**: Enforce required fields and prevent injection of unexpected data structures.
 
@@ -175,7 +175,7 @@ You can customize the guardrail behavior by modifying the `policies` section:
 
 5. **Compliance**: Enforce data formats required by regulatory standards.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

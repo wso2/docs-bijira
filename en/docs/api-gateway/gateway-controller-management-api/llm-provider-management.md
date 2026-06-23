@@ -1,5 +1,5 @@
 ---
-title: "Management API: LLM Provider Management"
+title: "Management API: LLM provider management"
 description: "REST API reference for creating, listing, updating, and deleting LLM provider configurations and API keys in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-management.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# LLM Provider Management
+# LLM provider management
 
 CRUD operations for LLM Provider configurations
 
@@ -204,7 +204,7 @@ Required roles: `admin`, `developer`
 |status|query|string|false|Filter by deployment status|
 |vhost|query|string|false|Filter by LLM provider vhost|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Parameter|Value|
 |---|---|
@@ -374,7 +374,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|

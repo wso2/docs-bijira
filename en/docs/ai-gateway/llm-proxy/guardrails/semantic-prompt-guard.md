@@ -1,5 +1,5 @@
 ---
-title: "Semantic Prompt Guardrail"
+title: "Semantic prompt guardrail"
 description: "Block semantically similar prompts using embedding-based similarity matching against configured allow and deny phrase lists."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/semantic-prompt-guard/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/guardrails/semantic-prompt-guard.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-16
 content_type: "reference"
 ---
 
-# Semantic Prompt Guardrail
+# Semantic prompt guardrail
 
 ## Overview
 
@@ -29,15 +29,15 @@ The policy uses embedding models (OpenAI, Mistral, or Azure OpenAI) to convert p
 - **JSONPath extraction**: Extract specific fields from request body for validation
 - **Detailed assessment information**: Optional detailed violation information in error responses
 
-## How It Works
+## How it works
 
-1. **Text Extraction**: Extracts prompt text from the request body using JSONPath (if configured) or uses the entire request body
-2. **Embedding Generation**: Generates a vector embedding from the extracted prompt using the configured embedding provider
-3. **Validation Strategy**: The validation logic depends on which lists are configured:
+1. **Text extraction**: Extracts prompt text from the request body using JSONPath (if configured) or uses the entire request body
+2. **Embedding generation**: Generates a vector embedding from the extracted prompt using the configured embedding provider
+3. **Validation strategy**: The validation logic depends on which lists are configured:
    - **Deny list only**: Compares prompt embedding against all denied phrases. If any denied phrase has similarity >= `denySimilarityThreshold`, the request is blocked. Otherwise, it proceeds.
    - **Allow list only**: Compares prompt embedding against all allowed phrases. If no allowed phrase has similarity >= `allowSimilarityThreshold`, the request is blocked. Otherwise, it proceeds.
    - **Both lists**: First checks the deny list (blocks if similarity >= `denySimilarityThreshold`), then checks the allow list (blocks if similarity < `allowSimilarityThreshold`). Request proceeds only if it passes both checks.
-4. **Validation Result**: Request proceeds if validation passes, or is blocked with HTTP 422 if validation fails
+4. **Validation result**: Request proceeds if validation passes, or is blocked with HTTP 422 if validation fails
 
 ## Configuration
 
@@ -54,9 +54,9 @@ The policy uses embedding models (OpenAI, Mistral, or Azure OpenAI) to convert p
 
 \* At least one of `allowedPhrases` or `deniedPhrases` must be provided.
 
-### System Parameters (Required)
+### System parameters (required)
 
-These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the api artifact definition file as well:
+These parameters are typically configured at the gateway level and automatically injected, or you can override those values from the params section in the API artifact definition file:
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -65,7 +65,7 @@ These parameters are typically configured at the gateway level and automatically
 | `embeddingModel` | string | Conditional | - | Embedding model name. **Required for OPENAI and MISTRAL**, not required for AZURE_OPENAI (deployment name is in endpoint URL). Examples: OpenAI: `text-embedding-ada-002` or `text-embedding-3-small`, Mistral: `mistral-embed` |
 | `apiKey` | string | Yes | API key for the embedding service authentication |
 
-### Configuring System Parameters in config.toml
+### Configuring system parameters in config.toml
 
 System parameters can be configured globally in the gateway's `config.toml` file. These values serve as defaults for all Semantic Prompt Guard policy instances and can be overridden per-policy in the API configuration if needed.
 
@@ -81,11 +81,11 @@ embedding_provider_dimension = 1024
 embedding_provider_api_key = ""
 ```
 
-## Similarity Threshold Guidelines
+## Similarity threshold guidelines
 
 The similarity thresholds control how similar prompts must be to trigger allow/deny decisions:
 
-### Allow Similarity Threshold
+### Allow similarity threshold
 
 - **0.95-1.0**: Very strict matching. Only near-identical prompts to allowed phrases will pass. Use for exact-match scenarios.
 - **0.85-0.94**: Recommended for most use cases. Catches semantically equivalent prompts with some wording variation.
@@ -95,7 +95,7 @@ The similarity thresholds control how similar prompts must be to trigger allow/d
 
 **Recommendation**: Start with 0.65 and adjust based on your use case. Monitor false positives/negatives to fine-tune.
 
-### Deny Similarity Threshold
+### Deny similarity threshold
 
 - **0.95-1.0**: Very strict blocking. Only near-identical prompts to denied phrases will be blocked.
 - **0.85-0.94**: Recommended for most use cases. Catches semantically equivalent prompts with some wording variation.
@@ -105,14 +105,14 @@ The similarity thresholds control how similar prompts must be to trigger allow/d
 
 **Recommendation**: Start with 0.65 and adjust based on your use case. Monitor false positives to fine-tune.
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract specific text from request bodies before validation. This is useful for:
 - Extracting message content from chat completion requests
 - Focusing on specific prompt fields while ignoring metadata
 - Handling structured JSON payloads
 
-### Common JSONPath Examples
+### Common JSONPath examples
 
 - `$.messages[0].content` - First message's content in chat completions
 - `$.messages[-1].content` - Last message's content
@@ -122,7 +122,7 @@ The guardrail supports JSONPath expressions to extract specific text from reques
 
 ## Examples
 
-### Example 1: Deny List Only - Blocking Prohibited Content
+### Example 1: Deny list only - blocking prohibited content
 
 Deploy an LLM provider that blocks prompts similar to prohibited phrases:
 
@@ -202,7 +202,7 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Example 2: Allow List Only - Whitelist Approach
+### Example 2: Allow list only - whitelist approach
 
 Deploy an LLM provider that only allows prompts similar to approved phrases:
 
@@ -248,7 +248,7 @@ spec:
 EOF
 ```
 
-### Example 3: Combined Allow and Deny Lists
+### Example 3: Combined allow and deny lists
 
 Use both allow and deny lists for comprehensive filtering:
 
@@ -274,7 +274,7 @@ policies:
           showAssessment: true
 ```
 
-### Example 4: Azure OpenAI with Custom Timeout
+### Example 4: Azure OpenAI with custom timeout
 
 Configure semantic prompt guardrail with Azure OpenAI and extended timeout:
 
@@ -293,25 +293,25 @@ policies:
             - "Another prohibited phrase"
 ```
 
-## Use Cases
+## Use cases
 
-1. **Content Safety**: Block prompts that are semantically similar to prohibited content, even when exact keywords differ.
+1. **Content safety**: Block prompts that are semantically similar to prohibited content, even when exact keywords differ.
 
-2. **Whitelist Filtering**: Only allow prompts that match approved use cases or topics, ensuring LLM usage stays within defined boundaries.
+2. **Whitelist filtering**: Only allow prompts that match approved use cases or topics, ensuring LLM usage stays within defined boundaries.
 
 3. **Compliance**: Enforce content policies by blocking prompts similar to non-compliant examples.
 
-4. **Abuse Prevention**: Detect and block variations of known abuse patterns, even when attackers try to evade keyword filters.
+4. **Abuse prevention**: Detect and block variations of known abuse patterns, even when attackers try to evade keyword filters.
 
-5. **Domain Restriction**: Restrict LLM usage to specific domains by allowing only prompts similar to approved domain-specific phrases.
+5. **Domain restriction**: Restrict LLM usage to specific domains by allowing only prompts similar to approved domain-specific phrases.
 
-6. **Multi-tenant Security**: Apply different allow/deny lists per tenant or application to enforce tenant-specific content policies.
+6. **Multi-tenant security**: Apply different allow/deny lists per tenant or application to enforce tenant-specific content policies.
 
-7. **Prompt Injection Prevention**: Block prompts that are semantically similar to known prompt injection attacks.
+7. **Prompt injection prevention**: Block prompts that are semantically similar to known prompt injection attacks.
 
-8. **Quality Control**: Ensure prompts match expected patterns for better response quality and consistency.
+8. **Quality control**: Ensure prompts match expected patterns for better response quality and consistency.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 
@@ -371,15 +371,15 @@ For errors during processing (e.g., JSONPath extraction failures, embedding gene
 }
 ```
 
-## Performance Considerations
+## Performance considerations
 
-1. **Embedding Generation Latency**: Generating embeddings adds ~100-500ms to request processing. This is a one-time cost per request.
+1. **Embedding generation latency**: Generating embeddings adds ~100-500ms to request processing. This is a one-time cost per request.
 
-2. **Batch Processing**: All allow/deny phrase embeddings are generated in a single batch during policy initialization, minimizing initialization overhead.
+2. **Batch processing**: All allow/deny phrase embeddings are generated in a single batch during policy initialization, minimizing initialization overhead.
 
-3. **Similarity Calculation**: Cosine similarity calculations are fast (typically < 10ms) even with many phrases.
+3. **Similarity calculation**: Cosine similarity calculations are fast (typically < 10ms) even with many phrases.
 
-4. **Embedding Provider Selection**: 
+4. **Embedding provider selection**: 
    - OpenAI: Fast, reliable, good for most use cases
    - Mistral: Alternative option with good performance
    - Azure OpenAI: Good for Azure-integrated environments

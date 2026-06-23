@@ -1,5 +1,5 @@
 ---
-title: "Management API: LLM Provider Template Management"
+title: "Management API: LLM provider template management"
 description: "REST API reference for creating, listing, updating, and deleting LLM provider templates in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-template-management/
 md_url: https://wso2.com/api-platform/docs/api-gateway/gateway-controller-management-api/llm-provider-template-management.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# LLM Provider Template Management
+# LLM provider template management
 
 CRUD operations for LLM Provider Template configurations
 
@@ -292,7 +292,7 @@ Status Code **200**
 |»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
 |»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
-#### Enumerated Values
+#### Enumerated values
 
 |Property|Value|
 |---|---|

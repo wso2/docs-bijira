@@ -1,4 +1,4 @@
-# Convert a REST API into an MCP Tool and Use It in Claude Desktop
+# Convert a REST API into an MCP tool and use it in Claude Desktop
 
 ## Overview
 
@@ -9,7 +9,7 @@ This guide shows you how to expose an existing REST API as a governed MCP server
 
 ---
 
-## Key Concepts
+## Key concepts
 
 Before you start, here are the WSO2 API Platform terms this guide uses:
 
@@ -69,7 +69,7 @@ Claude Desktop only supports local stdio servers. mcp-remote runs locally and br
 
 ---
 
-## Step 1: Create an Organization and Project
+## Step 1: Create an organization and project
 
 Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
 
@@ -92,7 +92,7 @@ Once you're on the organization home page, create a project:
 
 ---
 
-## Step 2: Create the MCP Server
+## Step 2: Create the MCP server
 
 In this guide, you'll use the Reading List API — a sample REST API that manages a list of books — to create your MCP server. WSO2 API Platform reads the API's OpenAPI spec and generates one tool per operation. No custom server code is required.
 
@@ -117,7 +117,7 @@ When you complete this step, WSO2 API Platform automatically deploys the MCP ser
 
 ---
 
-## Step 3: Configure Tool Descriptions
+## Step 3: Configure tool descriptions
 
 Tool descriptions tell Claude what each tool does and when to use it. The auto-generated descriptions come from the OpenAPI spec's `operationId`, `summary`, and `description` fields — update any that are too technical or too brief.
 
@@ -140,7 +140,7 @@ Click **Save**. Then click **Deploy** from the navigation menu and select **Depl
 
 ---
 
-## Step 4: Enable OAuth2 Authentication
+## Step 4: Enable OAuth2 authentication
 
 Enabling OAuth2 tells the WSO2 MCP Gateway to reject any tool call that doesn't include a valid bearer token. Unauthenticated requests never reach your backend.
 
@@ -155,7 +155,7 @@ In the side menu, scroll to **Deploy** and select **Security Settings**. Toggle 
 
 ---
 
-## Step 5: Deploy the MCP Server
+## Step 5: Deploy the MCP server
 
 Deploying promotes your MCP server from the development environment to the production gateway.
 
@@ -169,7 +169,7 @@ Deploying promotes your MCP server from the development environment to the produ
 
 ---
 
-## Step 6: Add the MCP Server to the Developer Portal
+## Step 6: Add the MCP server to the Developer Portal
 
 Publishing makes your MCP server discoverable to consumers in the Developer Portal so they can subscribe and generate credentials.
 
@@ -186,7 +186,7 @@ Publishing makes your MCP server discoverable to consumers in the Developer Port
 
 ---
 
-## Step 7: Add a Subscription in the Developer Portal
+## Step 7: Add a subscription in the Developer Portal
 
 An application in WSO2 API Platform represents a client — in this case, Claude Desktop. You'll create one and subscribe it to the Reading List MCP server so it can make authenticated tool calls.
 
@@ -202,7 +202,7 @@ An application in WSO2 API Platform represents a client — in this case, Claude
 
 ---
 
-## Step 8: Create an Access Token
+## Step 8: Create an access token
 
 Generate the OAuth2 bearer token that Claude Desktop will use to authenticate every tool call.
 
@@ -221,7 +221,7 @@ Generate the OAuth2 bearer token that Claude Desktop will use to authenticate ev
 
 ---
 
-## Step 9: Paste the MCP Server Configuration into Claude Desktop
+## Step 9: Paste the MCP server configuration into Claude Desktop
 
 Claude Desktop only supports local stdio servers via its config file, so you can't point it directly at the WSO2 MCP Gateway URL. mcp-remote solves this — it runs locally as a subprocess, receives calls from Claude Desktop over stdio, and forwards them to the gateway over HTTPS with your bearer token attached.
 
@@ -315,7 +315,7 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 
 ---
 
-## What You Learned
+## What you learned
 
 - Created a governed MCP server from a REST API without writing any custom server code
 - Configured natural-language tool descriptions so Claude understands when to invoke each tool
@@ -324,7 +324,7 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 
 ---
 
-## Next Steps
+## Next steps
 
 - **Aggregate MCP tools from multiple APIs** — combine this MCP server with others into a single endpoint so AI agents can query across systems in one call
 - **Connect your MCP server to VS Code Copilot** — use the same deployed MCP server with VS Code Copilot using the Developer Portal's native configuration snippet

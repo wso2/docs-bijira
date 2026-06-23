@@ -1,5 +1,5 @@
 ---
-title: "Analytics Header Filter Policy"
+title: "Analytics header filter policy"
 description: "Control which request and response headers are captured in analytics using allow or deny mode in API Platform Gateway."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/analytics/analytics-header-filter/
 md_url: https://wso2.com/api-platform/docs/api-gateway/analytics/analytics-header-filter.md
@@ -12,7 +12,7 @@ last_updated: 2026-06-17
 content_type: "reference"
 ---
 
-# Analytics Header Filter
+# Analytics header filter
 
 ## Overview
 
@@ -45,7 +45,7 @@ Request and response headers can have different operation modes, allowing for fl
 | `requestHeadersToFilter`  | object | No       | -       | Configuration for filtering request headers. Contains `operation` and `headers` properties.              |
 | `responseHeadersToFilter` | object | No       | -       | Configuration for filtering response headers. Contains `operation` and `headers` properties.              |
 
-### Parameter Structure
+### Parameter structure
 
 Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) is an object with the following properties:
 
@@ -57,14 +57,14 @@ Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) i
 > **Note**: This policy only affects analytics data collection. It does not remove or modify headers sent to upstream services or returned to clients.
 
 
-## System Requirements
+## System requirements
 
 * Analytics must be enabled globally via `config.yaml` (`analytics.enabled: true`)
 * The policy must be explicitly applied to the API policy chain
 * If analytics is disabled at the system level, this policy has no effect
 
 
-## API Definition Example
+## API definition example
 
 The following example demonstrates how to apply the Analytics Header Filter policy to a REST API:
 
@@ -104,15 +104,15 @@ spec:
 EOF
 ```
 
-## Use Cases
+## Use cases
 
--  **Sensitive Data Protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
+-  **Sensitive data protection**: Prevent authentication tokens, internal identifiers, or security-related headers from being sent to analytics systems.
 
-- **Noise Reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
+- **Noise reduction**: Exclude verbose or low-value headers to improve the clarity and usefulness of analytics data.
 
-- **Compliance and Governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
+- **Compliance and governance**: Support compliance requirements by ensuring certain headers are never exported outside the platform.
 
-- **Cost and Storage Optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
+- **Cost and storage optimization**: Reduce analytics payload size by removing unnecessary headers from published events.
 
 
 ## Notes

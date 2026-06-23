@@ -1,4 +1,4 @@
-## Quick Start — API Platform Controller (ap)
+## Quick start — API Platform controller (ap)
 
 This short guide explains how to use a prebuilt `ap` binary so you can run the CLI from any location.
 

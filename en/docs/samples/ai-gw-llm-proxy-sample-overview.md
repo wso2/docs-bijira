@@ -1,4 +1,4 @@
-# LLM Proxy - Token Based Rate Limiting Sample
+# LLM proxy - token based rate limiting sample
 
 > **Sample source:** [wso2/api-platform — samples/ai-gw-llm-proxy](https://github.com/wso2/api-platform/tree/main/samples/ai-gw-llm-proxy)
 >
@@ -15,7 +15,7 @@ This sample sets up a local Docker stack that demonstrates how the gateway track
 
 ---
 
-## What You Will Learn
+## What you will learn
 
 By working through this sample you will understand:
 
@@ -23,7 +23,7 @@ By working through this sample you will understand:
 
 ---
 
-## Scenario - Token Based Rate Limiting on an LLM Proxy
+## Scenario - token based rate limiting on an LLM proxy
 
 **Problem:** An unprotected LLM proxy allows any caller to send unlimited requests, risking abuse, runaway costs, and provider rate limit violations.
 
@@ -48,11 +48,11 @@ policies:
 
 ---
 
-## Expected Results
+## Expected results
 
 After running `sh test.sh` you should observe the following.
 
-### Token Based Rate Limiting
+### Token based rate limiting
 
 Two requests are sent back to back using the registered API key. The first request succeeds and the second is rate limited.
 
@@ -121,7 +121,7 @@ The script performs these steps in order:
 6. Registers the LLM provider, LLM proxy, and inbound API key via the management API
 7. Polls the traffic endpoint until routes are live
 
-### Endpoints After Setup
+### Endpoints after setup
 
 | Endpoint | URL |
 |---|---|
@@ -132,7 +132,7 @@ The script performs these steps in order:
 
 ---
 
-## Try It Manually
+## Try it manually
 
 Once `setup.sh` completes, you can exercise the gateway directly from your terminal.
 
@@ -167,7 +167,7 @@ curl -sk -w "\n→ HTTP %{http_code}" -X POST https://localhost:8443/assistant/c
 
 ---
 
-## Running the Tests
+## Running the tests
 
 ```bash
 sh test.sh

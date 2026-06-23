@@ -1,4 +1,4 @@
-# API Platform Cloud Gateway
+# API Platform Cloud gateway
 
 API Platform Cloud Gateway is a fully managed, WSO2-hosted API gateway that provides instant API deployment with zero infrastructure management.
 
@@ -6,7 +6,7 @@ API Platform Cloud Gateway is a fully managed, WSO2-hosted API gateway that prov
 
 The API Platform Cloud Gateway is the default gateway available in your organization. When you deploy an API proxy, it's automatically routed through the cloud gateway without any additional setup or configuration required.
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---------|-------------|
@@ -17,7 +17,7 @@ The API Platform Cloud Gateway is the default gateway available in your organiza
 | **Global Reach** | Available across multiple cloud regions |
 | **Instant Deployment** | APIs are live within seconds of deployment |
 
-## How It Works
+## How it works
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -45,7 +45,7 @@ The API Platform Cloud Gateway is the default gateway available in your organiza
                    (publicly accessible)
 ```
 
-## When to Use API Platform Cloud Gateway
+## When to use API Platform Cloud gateway
 
 The API Platform Cloud Gateway is ideal for:
 
@@ -64,7 +64,7 @@ Consider using a [Self-Hosted Gateway](getting-started.md) instead if you requir
 - **Network isolation**: Running the gateway within your secure network perimeter
 - **Custom compliance**: Meeting specific regulatory requirements (HIPAA, PCI-DSS, etc.)
 
-## Getting Started
+## Getting started
 
 The API Platform Cloud Gateway is available by default. To deploy an API:
 
@@ -88,7 +88,7 @@ For example:
 https://acme-corp.gateway.bijira.dev/orders/v1
 ```
 
-## Included Capabilities
+## Included capabilities
 
 All features of the API Platform platform are available with the Cloud Gateway:
 
@@ -98,7 +98,7 @@ All features of the API Platform platform are available with the Cloud Gateway:
 - **Monitoring**: Real-time logs and monitoring
 - **Security**: OAuth2, API keys, and other authentication methods
 
-## What's Next?
+## What's next?
 
 - [Self-Hosted Gateway](getting-started.md): Deploy a gateway in your own environment
 - [Third-Party Gateways](../federation/overview.md): Federate external gateways like AWS API Gateway

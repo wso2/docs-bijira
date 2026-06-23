@@ -1,4 +1,4 @@
-# Azure Content Safety Content Moderation
+# Azure Content Safety content moderation
 
 The Azure Content Safety guardrail integrates with the Azure Content Safety API to filter harmful content in requests and LLM-generated responses. It checks for four categories — hate speech, sexual content, self-harm, and violence — each with a configurable severity threshold.
 
@@ -15,9 +15,9 @@ The Azure Content Safety guardrail integrates with the Azure Content Safety API 
     azurecontentsafety_key = "your-api-key"
     ```
 
-## Configuration Parameters
+## Configuration parameters
 
-### Advanced Settings
+### Advanced settings
 
 Content moderation settings are configured independently for the **request** and **response** phases. Both sections have the same parameters:
 
@@ -31,7 +31,7 @@ Content moderation settings are configured independently for the **request** and
 | **Self Harm Severity Threshold** | `3` | Severity threshold for self-harm content (0–7). Use `-1` to disable. |
 | **Violence Severity Threshold** | `4` | Severity threshold for violence (0–7). Use `-1` to disable. |
 
-### Severity Scale
+### Severity scale
 
 | Score | Meaning |
 |-------|---------|
@@ -40,7 +40,7 @@ Content moderation settings are configured independently for the **request** and
 | 4–5 | Medium severity |
 | 6–7 | High severity |
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.

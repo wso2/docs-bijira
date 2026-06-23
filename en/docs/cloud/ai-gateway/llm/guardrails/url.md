@@ -1,4 +1,4 @@
-# URL Guardrail
+# URL guardrail
 
 ## Overview
 
@@ -16,7 +16,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 
 ### Parameters
 
-#### Request Phase
+#### Request phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -25,7 +25,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 | `timeout` | integer | No | `3000` | Timeout in milliseconds for DNS lookup or HTTP HEAD request. Default is 3000ms (3 seconds). |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information including invalid URLs in error responses. |
 
-#### Response Phase
+#### Response phase
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
@@ -34,7 +34,7 @@ The URL Guardrail validates URLs found in request or response body content by ch
 | `timeout` | integer | No | `3000` | Timeout in milliseconds for DNS lookup or HTTP HEAD request. Default is 3000ms (3 seconds). |
 | `showAssessment` | boolean | No | `false` | If `true`, includes detailed assessment information including invalid URLs in error responses. |
 
-## JSONPath Support
+## JSONPath support
 
 The guardrail supports JSONPath expressions to extract and validate specific fields within JSON payloads. Common examples:
 
@@ -45,9 +45,9 @@ The guardrail supports JSONPath expressions to extract and validate specific fie
 
 If `jsonPath` is empty or not specified, the entire payload is treated as a string and validated.
 
-## URL Validation Modes
+## URL validation modes
 
-### DNS-Only Validation (`onlyDNS: true`)
+### DNS-only validation (`onlydns: true`)
 
 - Faster validation method
 - Only checks if the domain name resolves via DNS
@@ -55,7 +55,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 - Less reliable for detecting broken links
 - Suitable for quick validation when HTTP checks are not necessary
 
-### HTTP HEAD Request Validation (`onlyDNS: false`)
+### HTTP HEAD request validation (`onlydns: false`)
 
 - More thorough validation method
 - Performs DNS lookup and HTTP HEAD request
@@ -66,7 +66,7 @@ If `jsonPath` is empty or not specified, the entire payload is treated as a stri
 
 ## Examples
 
-### Example 1: Basic URL Validation
+### Example 1: Basic URL validation
 
 Deploy an LLM provider that validates URLs in request content using HTTP HEAD requests:
 
@@ -149,35 +149,35 @@ curl -X POST http://openai:8080/chat/completions \
   }'
 ```
 
-### Additional Configuration Options
+### Additional configuration options
 
 You can customize the guardrail behavior by modifying the `policies` section:
 
-- **Request and Response Validation**: Configure both `request` and `response` parameters to validate URLs in both directions. Use `showAssessment: true` to include detailed assessment information including invalid URLs in error responses.
+- **Request and response validation**: Configure both `request` and `response` parameters to validate URLs in both directions. Use `showAssessment: true` to include detailed assessment information including invalid URLs in error responses.
 
-- **DNS-Only Validation**: Set `onlyDNS: true` for faster validation that only checks DNS resolution. This is less reliable but faster than HTTP HEAD validation.
+- **DNS-only validation**: Set `onlyDNS: true` for faster validation that only checks DNS resolution. This is less reliable but faster than HTTP HEAD validation.
 
-- **HTTP HEAD Validation**: Set `onlyDNS: false` (default) for more thorough validation that performs both DNS lookup and HTTP HEAD request to verify URL reachability.
+- **HTTP HEAD validation**: Set `onlyDNS: false` (default) for more thorough validation that performs both DNS lookup and HTTP HEAD request to verify URL reachability.
 
-- **Timeout Configuration**: Adjust the `timeout` parameter (in milliseconds) based on network conditions and acceptable latency. Default is 3000ms (3 seconds).
+- **Timeout configuration**: Adjust the `timeout` parameter (in milliseconds) based on network conditions and acceptable latency. Default is 3000ms (3 seconds).
 
-- **Full Payload Validation**: Omit the `jsonPath` parameter to validate URLs in the entire request body without JSONPath extraction.
+- **Full payload validation**: Omit the `jsonPath` parameter to validate URLs in the entire request body without JSONPath extraction.
 
-- **Field-Specific Validation**: Use `jsonPath` to extract and validate URLs from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
+- **Field-specific validation**: Use `jsonPath` to extract and validate URLs from specific fields within JSON payloads (e.g., `"$.messages[0].content"` for message content or `"$.choices[0].message.content"` for response content).
 
-## Use Cases
+## Use cases
 
-1. **Link Validation**: Ensure all URLs in AI-generated content are valid and accessible.
+1. **Link validation**: Ensure all URLs in AI-generated content are valid and accessible.
 
 2. **Security**: Detect and block potentially malicious or suspicious URLs.
 
-3. **Quality Assurance**: Prevent broken links from being included in responses.
+3. **Quality assurance**: Prevent broken links from being included in responses.
 
-4. **Content Moderation**: Validate URLs before allowing them in user-generated content.
+4. **Content moderation**: Validate URLs before allowing them in user-generated content.
 
-5. **Resource Verification**: Ensure referenced resources are available before processing.
+5. **Resource verification**: Ensure referenced resources are available before processing.
 
-## Error Response
+## Error response
 
 When validation fails, the guardrail returns an HTTP 422 status code with the following structure:
 

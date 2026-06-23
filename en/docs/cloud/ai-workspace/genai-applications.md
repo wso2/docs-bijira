@@ -1,4 +1,4 @@
-# GenAI Applications
+# GenAI applications
 
 GenAI Applications let you represent a real AI application inside the AI Workspace and associate existing API keys with it. This gives you application-level visibility and control instead of tracking usage only at the individual key level.
 
@@ -11,7 +11,7 @@ With GenAI Applications, you can:
 - improve governance and accountability for shared GenAI workloads
 - prepare for application-level limits and controls
 
-## When to Use GenAI Applications
+## When to use GenAI applications
 
 Use a GenAI Application when:
 
@@ -22,7 +22,7 @@ Use a GenAI Application when:
 
 Examples include customer support copilots, internal knowledge assistants, document analysis apps, or workflow-specific AI agents.
 
-## How It Works
+## How it works
 
 The typical flow is:
 
@@ -40,7 +40,7 @@ The same application can have multiple API keys mapped to it. This is useful whe
 - At least one generated API key
 - Access to the AI Workspace project where the GenAI Application will be created
 
-## Create a GenAI Application
+## Create a GenAI application
 
 1. Navigate to **AI Workspace** in your API Platform dashboard.
 2. Open **GenAI Applications** from the left navigation menu.
@@ -54,7 +54,7 @@ The same application can have multiple API keys mapped to it. This is useful whe
 
 The application is created within the current project and becomes the shared representation of that GenAI workload.
 
-## Attach API Keys to an Application
+## Attach API keys to an application
 
 After creating the application, attach the API keys that the application already uses.
 
@@ -66,7 +66,7 @@ After creating the application, attach the API keys that the application already
 
 Only existing keys are mapped. This workflow does not create new keys. It links previously generated keys to the application so usage can be attributed correctly.
 
-## View and Manage Attached Keys
+## View and manage attached keys
 
 The GenAI Application details page shows the keys currently mapped to the application.
 
@@ -82,7 +82,7 @@ You can remove mappings for keys that should no longer be associated with the ap
 
 Removing a mapping only detaches the key from that GenAI Application. It does not delete the underlying key unless you remove it from the provider or proxy separately.
 
-## Insights for GenAI Applications
+## Insights for GenAI applications
 
 Once a mapped key is used to invoke the gateway, the gateway can identify the owning GenAI Application and publish analytics accordingly.
 
@@ -98,7 +98,7 @@ This is especially useful for teams that need to understand which GenAI applicat
 
 See [Insights](insights.md) for more on the analytics experience.
 
-## Best Practices
+## Best practices
 
 - Create one GenAI Application per real application or agent workload, not per developer.
 - Map all keys used by the same application so analytics stay complete.

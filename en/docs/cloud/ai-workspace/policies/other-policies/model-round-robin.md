@@ -1,15 +1,15 @@
-# Model Round Robin
+# Model round robin
 
 The Model Round Robin policy distributes requests across multiple AI models using round-robin selection. If a model returns a server error (`5xx`) or a rate limit response (`429`), it can be temporarily suspended so that traffic automatically shifts to the remaining healthy models.
 
-## Configuration Parameters
+## Configuration parameters
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
 | **Models** | Yes | The list of model names to balance across (e.g., `gpt-4o`, `gpt-4-turbo`). Add at least two models. |
 | **Suspend Duration** | No | Number of seconds to suspend a model after it returns a `5xx` or `429` response. While suspended, the model is skipped. Set to `0` (default) to disable suspension. |
 
-## Add This Policy
+## Add this policy
 
 1. Navigate to **AI Workspace** > **LLM Providers** or **App LLM Proxies**.
 2. Click on the provider or proxy name.

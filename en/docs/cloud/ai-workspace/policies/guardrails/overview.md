@@ -1,8 +1,8 @@
-# Guardrails Overview
+# Guardrails overview
 
 Guardrails inspect and act on the content of requests and responses flowing through the AI Gateway — detecting unsafe content, masking sensitive data, and caching responses. They run without any changes to client applications.
 
-## Available Guardrails
+## Available guardrails
 
 | Guardrail | Description |
 |-----------|-------------|
@@ -12,7 +12,7 @@ Guardrails inspect and act on the content of requests and responses flowing thro
 | [Word Count](word-count-guardrail.md) | Enforce minimum or maximum word count limits on prompts or responses. |
 | [Sentence Count](sentence-count-guardrail.md) | Enforce minimum or maximum sentence count limits on prompts or responses. |
 
-## How Guardrails Work
+## How guardrails work
 
 | Guardrail | Behavior |
 |-----------|----------|
@@ -22,7 +22,7 @@ Guardrails inspect and act on the content of requests and responses flowing thro
 | **Word Count** | Blocks requests or responses with `422 Unprocessable Entity` if the word count falls outside the configured limits. |
 | **Sentence Count** | Blocks requests or responses with `422 Unprocessable Entity` if the sentence count falls outside the configured limits. |
 
-## Applying Guardrails
+## Applying guardrails
 
 Guardrails can be configured on both LLM Providers and App LLM Proxies:
 
@@ -35,7 +35,7 @@ Guardrails can be configured on both LLM Providers and App LLM Proxies:
 
 When guardrails are configured at multiple levels, all of them are evaluated. Provider-level guardrails run first, followed by proxy-level guardrails.
 
-### How to Add a Guardrail
+### How to add a guardrail
 
 **On an LLM Provider:**
 
@@ -61,7 +61,7 @@ When guardrails are configured at multiple levels, all of them are evaluated. Pr
 8. Click **Submit**.
 9. Save the proxy configuration and redeploy as needed.
 
-## Guardrail Intervention Response
+## Guardrail intervention response
 
 When a guardrail blocks a request or response, it returns the following structure:
 
@@ -78,6 +78,6 @@ When a guardrail blocks a request or response, it returns the following structur
 }
 ```
 
-## Learn More
+## Learn more
 
 The [Policy Hub](https://wso2.com/api-platform/policy-hub/) is the central registry for all guardrail policies. It contains full documentation, configuration schemas, and the latest versions of each guardrail.

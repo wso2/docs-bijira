@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Operator for API Platform Gateway"
+title: "Kubernetes operator for API Platform gateway"
 description: "Deploy API Platform AI Gateway on Kubernetes using the Gateway Operator with platform CRDs or the Kubernetes Gateway API."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/gateway-operator/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/deployment-modes/kubernetes/gateway-operator.md
@@ -12,13 +12,13 @@ last_updated: 2026-06-16
 content_type: "how-to"
 ---
 
-# Kubernetes Operator for API Platform Gateway
+# Kubernetes operator for API Platform gateway
 
 The WSO2 API Platform Gateway Operator enables native Kubernetes deployment using a GitOps-friendly, operator-based model. It manages the full lifecycle of API gateways and REST APIs. You can use **either** platform CRDs **or** the **Kubernetes Gateway API** on the same operator build.
 
 ## Overview
 
-### Path A — Platform CRDs (`APIGateway` + `RestApi`)
+### Path A — platform CRDs (`apigateway` + `restapi`)
 
 | CRD | Purpose |
 |-----|---------|
@@ -27,7 +27,7 @@ The WSO2 API Platform Gateway Operator enables native Kubernetes deployment usin
 
 The operator watches these CRs, runs Helm for the gateway runtime, and deploys APIs through gateway-controller’s management REST API.
 
-### Path B — Kubernetes Gateway API (`Gateway` + `HTTPRoute`)
+### Path B — Kubernetes Gateway API (`Gateway` + `httproute`)
 
 | Resource | Purpose |
 |----------|---------|
@@ -47,7 +47,7 @@ The operator watches these CRs, runs Helm for the gateway runtime, and deploys A
 
 ## Installation
 
-### 1. Install Cert-Manager
+### 1. Install Cert-manager
 
 The operator requires cert-manager for TLS certificate management:
 
@@ -61,7 +61,7 @@ helm upgrade --install \
   --debug --wait --timeout 10m
 ```
 
-### 2. Install Gateway Operator
+### 2. Install gateway operator
 
 ```sh
 helm install my-gateway-operator oci://ghcr.io/wso2/api-platform/helm-charts/gateway-operator --version 0.6.0
@@ -145,7 +145,7 @@ kubectl apply -f https://raw.githubusercontent.com/wso2/api-platform/refs/heads/
 kubectl get restapi -n default -o json | jq '.items[0].status'
 ```
 
-### Test API Endpoints
+### Test API endpoints
 
 **`RestApi` / APIGateway-managed API** (example context `/test`, operation `GET /info`):
 
@@ -228,7 +228,7 @@ spec:
           from: Same
 ```
 
-### 4. Sample backend (Deployment + Service)
+### 4. Sample backend (deployment + service)
 
 ```yaml
 apiVersion: apps/v1
@@ -322,7 +322,7 @@ spec:
           weight: 1
 ```
 
-### 6. Optional: second HTTPRoute (`hello-api-2`)
+### 6. Optional: Second HTTPRoute (`hello-api-2`)
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -361,11 +361,11 @@ Verify: `kubectl get gateway,httproute -n gateway-api-demo`, wait for parent con
 
 Common annotations on `HTTPRoute` are copied into the **`api.yaml`** payload (for example **`gateway.api-platform.wso2.com/context`**, **`api-version`**, **`api-handle`**, **`display-name`**, **`project-id`**). If **`context`** is omitted or only whitespace, it defaults to **`/`**. If a rule **`match`** omits **`method`**, the operator emits all RestApi-supported verbs for that path: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS.
 
-### Mixed clusters (`RestApi` + `Gateway`)
+### Mixed clusters (`restapi` + `gateway`)
 
 If you run **both** `APIGateway`-selected **`RestApi`** resources and **Gateway API** routes, keep the **`gateway.api-platform.wso2.com/api-selector`** annotation on the **`Gateway`** (as in the YAML above) so this gateway does not select `RestApi` CRs meant for another `APIGateway`.
 
-### Test API Endpoints
+### Test API endpoints
 
 **Kubernetes Gateway API** — HTTPRoute **`hello-api`** from [above](#5-httproute-hello-api): API **`context`** `/hello-context`, route match path prefix **`/hello`** (hits Envoy HTTPS on the forwarded router port):
 
@@ -378,18 +378,18 @@ curl --request GET \
 
 Use **`NS=gateway-api-demo`** in the port-forward snippet when testing that demo. The sample backend may respond with a short plain-text body (e.g. `hello from gateway api demo`) depending on chart and image version.
 
-## Adding Backend Certificates
+## Adding backend certificates
 
 For APIs connecting to backends with self-signed certificates:
 
-### 1. Download the Certificate
+### 1. Download the certificate
 
 ```sh
 curl -X GET "https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/gateway/resources/secure-backend/test-backend-certs/test-backend.crt" \
   -o /tmp/test-backend.crt
 ```
 
-### 2. Add Certificate to Gateway
+### 2. Add certificate to gateway
 
 ```sh
 cert_path="/tmp/test-backend.crt"
@@ -398,7 +398,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/certificates -u "admin:ad
   -d "{\"certificate\":$(jq -Rs . < $cert_path),\"filename\":\"my-cert.pem\", \"name\":\"test\"}"
 ```
 
-## Custom Configuration
+## Custom configuration
 
 Per-gateway Helm values are supplied as a **ConfigMap** whose data includes **`values.yaml`** (partial YAML is fine; the operator **deep-merges** it onto the operator’s default gateway values file loaded from **`gateway.helm.valuesFilePath`**).
 
@@ -474,7 +474,7 @@ The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-va
 - **CRD path:** `APIGateway` drives Helm; `RestApi` drives management REST deploys.
 - **Gateway API path:** `Gateway` drives the same Helm install pattern; `HTTPRoute` is translated to the same management REST payload shape as `RestApi`.
 
-## Default Ports
+## Default ports
 
 | Port | Component | Description |
 |------|-----------|-------------|

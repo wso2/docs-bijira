@@ -1,8 +1,8 @@
-# Deployment Tracks
+# Deployment tracks
 
 Deployment Tracks in API Platform are structured pathways for simplified software component deployment. They act like advanced CI/CD pipelines, ensuring your components reach their destinations seamlessly, whether from source code or prebuilt images. They establish an organized and structured approach that minimizes the chances of errors and challenges that are typically associated with deployment workflows.
 
-## The significance of Deployment Tracks
+## The significance of deployment tracks
 
 Deployment Tracks offer practical solutions to enhance the API consumer experience by addressing two critical challenges:
 
@@ -14,13 +14,13 @@ Deployment Tracks offer practical solutions to enhance the API consumer experien
 
 For streamlined deployments, API Platform dissects two integral approaches that leverage Deployment Tracks: the comprehensive CI/CD integration and the focused CD-Only strategy.
 
-### CI/CD with Deployment Tracks
+### CI/CD with deployment tracks
 
 A deployment track is linked to a particular branch within a GitHub repository. This connection is useful for handling deployments to various environments. On the API Platform's Deploy page, you can easily visualize the deployments to specific environments associated with your selected deployment track. Moreover, the deployment track has a functionality that initiates automatic deployments for the linked branch. When activated, merging a pull request (PR) triggers a deployment to the development environment.
 
 ![Source repository branches mapped to development and production environment deployment tracks](../../assets/img/bijira-concepts/deployment-tracks-source-repo.png){.cInlineImage-half}
 
-### CD-Only strategy with Deployment Tracks
+### CD-only strategy with deployment tracks
 
 If you're inclined to use your own Continuous Integration (CI) systems and want to harness the deployment track as a Continuous Deployment (CD) pipeline, you can seamlessly link deployment tracks to a container registry repository. This configuration empowers users to effortlessly deploy images sourced directly from the linked container registry repository.
 

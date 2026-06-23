@@ -6,7 +6,7 @@ This guide explains how to monitor and analyze API traffic for your Self-Hosted 
 
 API Platform provides comprehensive analytics for your Self-Hosted Gateway, giving you visibility into API usage, performance, and errors. Analytics data is collected from your gateway and displayed in the API Platform Console.
 
-## Viewing Analytics
+## Viewing analytics
 
 To view analytics for your Self-Hosted Gateway:
 
@@ -15,11 +15,11 @@ To view analytics for your Self-Hosted Gateway:
 3. In the left navigation, go to **Insights** and select **API Insights**.
 4. Select the environment associated with your Self-Hosted Gateway.
 
-## Analytics Dashboard
+## Analytics dashboard
 
 The analytics dashboard provides key metrics:
 
-### Traffic Metrics
+### Traffic metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -28,7 +28,7 @@ The analytics dashboard provides key metrics:
 | **Unique Consumers** | Number of unique API consumers |
 | **Top APIs** | Most frequently called APIs |
 
-### Performance Metrics
+### Performance metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -37,7 +37,7 @@ The analytics dashboard provides key metrics:
 | **P99 Latency** | 99th percentile response time |
 | **Backend Time** | Time spent waiting for backend responses |
 
-### Error Metrics
+### Error metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -46,7 +46,7 @@ The analytics dashboard provides key metrics:
 | **5xx Errors** | Server error count |
 | **Error Breakdown** | Errors by type and API |
 
-## Filtering Analytics Data
+## Filtering analytics data
 
 You can filter analytics data by:
 
@@ -56,11 +56,11 @@ You can filter analytics data by:
 - **Application**: Specific consumer application
 - **Status Code**: Success or error responses
 
-## Real-Time Monitoring
+## Real-time monitoring
 
 For real-time monitoring of your gateway:
 
-### Gateway Health
+### Gateway health
 
 Check the gateway health endpoint:
 
@@ -81,7 +81,7 @@ Expected response:
 }
 ```
 
-### Live Traffic Logs
+### Live traffic logs
 
 View live traffic logs:
 
@@ -110,7 +110,7 @@ MOESIF_KEY=your-moesif-application-id
 
 For detailed instructions, see [Integrate API Platform with Moesif](../monitoring-and-insights/integrate-bijira-with-moesif.md).
 
-### Moesif Features
+### Moesif features
 
 With Moesif integration, you get:
 
@@ -119,7 +119,7 @@ With Moesif integration, you get:
 - **Alerting**: Get notified of anomalies and issues
 - **Monetization**: Bill customers based on API usage
 
-## Exporting Analytics Data
+## Exporting analytics data
 
 To export analytics data:
 
@@ -130,7 +130,7 @@ To export analytics data:
     - **CSV**: For spreadsheet analysis
     - **JSON**: For programmatic processing
 
-## Setting Up Alerts
+## Setting up alerts
 
 Configure alerts to get notified of issues:
 
@@ -142,7 +142,7 @@ Configure alerts to get notified of issues:
     - **Notification**: Email, Slack, or webhook
 4. Click **Save**.
 
-### Example Alert Configurations
+### Example alert configurations
 
 **High Error Rate Alert:**
 ```yaml
@@ -162,7 +162,7 @@ duration: 3 minutes
 notification: email
 ```
 
-## Gateway Metrics Endpoint
+## Gateway metrics endpoint
 
 The Self-Hosted Gateway exposes a Prometheus-compatible metrics endpoint:
 
@@ -170,7 +170,7 @@ The Self-Hosted Gateway exposes a Prometheus-compatible metrics endpoint:
 curl http://localhost:9091/metrics
 ```
 
-### Available Metrics
+### Available metrics
 
 | Metric | Type | Description |
 |--------|------|-------------|
@@ -202,9 +202,9 @@ Import the API Platform Gateway dashboard in Grafana:
 3. Select your Prometheus data source.
 4. Click **Import**.
 
-## Troubleshooting Analytics
+## Troubleshooting analytics
 
-### No Data Appearing
+### No data appearing
 
 If analytics data isn't appearing:
 
@@ -212,7 +212,7 @@ If analytics data isn't appearing:
 2. **Review logs**: Look for analytics-related errors in gateway logs.
 3. **Wait for aggregation**: Data may take a few minutes to appear.
 
-### Incomplete Data
+### Incomplete data
 
 If data appears incomplete:
 
@@ -220,7 +220,7 @@ If data appears incomplete:
 2. **Verify filters**: Remove filters to see all data.
 3. **Check gateway uptime**: Data gaps may indicate gateway restarts.
 
-## What's Next?
+## What's next?
 
 - [Managing Policies](manage-policies.md): Configure policies for your APIs
 - [Troubleshooting](troubleshooting.md): Common issues and solutions

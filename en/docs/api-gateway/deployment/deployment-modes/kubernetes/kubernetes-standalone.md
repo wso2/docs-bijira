@@ -1,5 +1,5 @@
 ---
-title: "Deploy in Kubernetes Standalone Mode"
+title: "Deploy in Kubernetes standalone mode"
 description: "Install and manage API Platform Gateway on Kubernetes using the standalone Helm chart, without the Gateway Operator."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
@@ -13,7 +13,7 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# API Platform Gateway - Kubernetes Standalone Mode
+# API Platform gateway - Kubernetes standalone mode
 
 This guide explains how to run API Platform Gateway in **Standalone Mode** using the gateway Helm chart only (without the Gateway Operator).
 
@@ -25,7 +25,7 @@ Standalone mode is recommended when you want:
 
 For mode selection and architecture context, see [API Platform Kubernetes Gateway deployment modes](./overview.md).
 
-## What Gets Deployed
+## What gets deployed
 
 The gateway chart deploys the runtime components used by API Platform Gateway (controller and gateway runtime workloads) from chart templates and values.
 
@@ -59,7 +59,7 @@ Verify:
 kubectl get pods -n cert-manager
 ```
 
-## Install Gateway Chart
+## Install gateway chart
 
 Use one of the following patterns.
 
@@ -97,7 +97,7 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   -f custom-values.yaml
 ```
 
-## Verify Installation
+## Verify installation
 
 ```bash
 helm status ap-gateway
@@ -114,7 +114,7 @@ kubectl logs -l app.kubernetes.io/component=controller
 kubectl logs -l app.kubernetes.io/component=gateway-runtime
 ```
 
-## Upgrade and Uninstall
+## Upgrade and uninstall
 
 Upgrade:
 
@@ -134,7 +134,7 @@ Namespace-scoped uninstall:
 helm uninstall ap-gateway --namespace api-gateway
 ```
 
-## Core Configuration Areas
+## Core configuration areas
 
 Most runtime configuration is controlled in `values.yaml`. Common sections:
 
@@ -149,9 +149,9 @@ Most runtime configuration is controlled in `values.yaml`. Common sections:
 
 Refer to inline comments in chart `values.yaml` for all supported fields.
 
-## TLS Configuration
+## TLS configuration
 
-### Option 1: cert-manager (recommended)
+### Option 1: Cert-manager (recommended)
 
 ```bash
 helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
@@ -190,7 +190,7 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.tls.secret.name=gateway-tls
 ```
 
-## Upstream Custom CAs
+## Upstream custom CAs
 
 When calling upstream services that use private/self-signed CAs:
 
@@ -204,9 +204,9 @@ helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.upstreamCerts.secretName=upstream-ca-certs
 ```
 
-## Create and Invoke API
+## Create and invoke API
 
-### Port-forward Gateway Controller Service
+### Port-forward gateway controller service
 
 ```bash
 kubectl port-forward svc/ap-gateway-controller 9090:9090
@@ -267,7 +267,7 @@ curl http://localhost:8080/reading-list/v1.0/books
 curl -k https://localhost:8443/reading-list/v1.0/books
 ```
 
-## Next Steps
+## Next steps
 
 - For operator-managed lifecycle and CRDs, see [Kubernetes Operator deployment mode](./gateway-operator.md).
 - For mode comparison and migration context from Kubernetes Gateway 1.3.0, see the [deployment modes overview page](./overview.md).

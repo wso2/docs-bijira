@@ -12,7 +12,7 @@ last_updated: 2026-06-18
 content_type: "how-to"
 ---
 
-# Attach and Manage Policies
+# Attach and manage policies
 
 You can easily attach one or more policies to an API proxy component implementation via the API Platform Console. If necessary, you can also rearrange or swap the policies you attach.
 
@@ -36,9 +36,9 @@ When a mediation policy is attached to a specific flow, the API invocation under
 
 - If an error occurs during the execution of policies or due to an internal error, API Platform executes the `Error` flow and sends an error response to the client.
 
-## Attach a Policy
+## Attach a policy
 
-### Attach an API level Policy
+### Attach an API level policy
 
 To attach an API level policy to the `Request` flow of a REST API proxy, follow the steps given below:
 
@@ -53,7 +53,7 @@ To attach an API level policy to the `Request` flow of a REST API proxy, follow 
     ![Configure Pass User Context to Backend policy panel with End User Token Audiences input field](../../../assets/img/develop-api-proxy/policy/configure-policy-API-level.png)
 7. Click **Add** to attach the policy. Then, click **Save** to apply the configuration to the API.  
 
-### Attach a Resource level Policy
+### Attach a resource level policy
 
 To attach a resource level policy to the `Request`, `Response`, or `Error` flow of a REST API proxy, follow the steps given below:
 
@@ -84,7 +84,7 @@ To deploy the API follow the steps below:
 
 3. Click **Save & Deploy**.
 
-## Refresh Mediation Policies
+## Refresh mediation policies
 
 API Platform selectively generates and builds the mediation application code during component deployment depending on specific changes. These changes include:
 

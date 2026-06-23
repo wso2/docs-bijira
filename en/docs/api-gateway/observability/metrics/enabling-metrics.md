@@ -1,5 +1,5 @@
 ---
-title: "Enable Metrics"
+title: "Enable metrics"
 description: "Enable and configure Prometheus metrics collection for API Platform Gateway components in config.toml."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/enabling-metrics/
 md_url: https://wso2.com/api-platform/docs/api-gateway/observability/metrics/enabling-metrics.md
@@ -13,17 +13,17 @@ last_updated: 2026-06-17
 content_type: "how-to"
 ---
 
-# Enabling and Disabling Metrics
+# Enabling and disabling metrics
 
-## Enabling Metrics
+## Enabling metrics
 
-### Configuration Required
+### Configuration required
 
 You need to enable metrics in the gateway configuration file. By default, metrics are enabled in the production configuration but you can customize the settings.
 
 The metrics configuration is located in `gateway/configs/config.toml`:
 
-#### Gateway Controller Metrics Configuration
+#### Gateway controller metrics configuration
 
 ```toml
 [controller.metrics]
@@ -34,7 +34,7 @@ enabled = true
 port = 9091
 ```
 
-#### Policy Engine Metrics Configuration
+#### Policy engine metrics configuration
 
 ```toml
 [policy_engine.metrics]
@@ -47,15 +47,15 @@ port = 9003
 
 **Note**: When metrics are enabled, each component starts an HTTP server on the specified port to expose metrics in Prometheus format.
 
-### Demonstrated Metrics Services
+### Demonstrated metrics services
 
 The metrics services included in the Docker Compose file (Prometheus and Grafana) are provided as **demonstration services** to show one possible way to collect and visualize metrics. You can use them as-is for development/testing, or replace them with your own metrics solution.
 
 The gateway uses Docker Compose profiles to optionally enable these demonstration metrics services.
 
-#### Setting up Grafana Image
+#### Setting up Grafana image
 
-**Important Note:** The Grafana image in the `docker-compose.yaml` file is intentionally left empty due to licensing considerations. Before you can use the demonstration dashboards, you must specify a valid Grafana image.
+**Important note:** The Grafana image in the `docker-compose.yaml` file is intentionally left empty due to licensing considerations. Before you can use the demonstration dashboards, you must specify a valid Grafana image.
 
 To add the Grafana image:
 
@@ -69,7 +69,7 @@ To add the Grafana image:
     container_name: grafana
 ```
 
-### Start Gateway with Demonstrated Metrics Services
+### Start gateway with demonstrated metrics services
 
 To start the gateway with the demonstration metrics services enabled:
 
@@ -82,7 +82,7 @@ This starts:
 - Prometheus - *scrapes and stores metrics*
 - Grafana - *visualizes metrics through dashboards*
 
-### Start Gateway without Metrics Services
+### Start gateway without metrics services
 
 To run only the core gateway services without the demonstration metrics stack:
 
@@ -95,7 +95,7 @@ docker compose up -d
 - Policy Engine: <http://localhost:9003/metrics>
 - Router (Envoy): <http://localhost:9901/stats/prometheus>
 
-### Stop Metrics Services
+### Stop metrics services
 
 To stop all services including the metrics stack:
 
@@ -111,7 +111,7 @@ docker compose --profile metrics down -v
 
 This removes the `prometheus-data` volume containing all stored metrics.
 
-## Disabling Metrics
+## Disabling metrics
 
 To completely disable metrics:
 

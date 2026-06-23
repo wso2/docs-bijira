@@ -1,4 +1,4 @@
-# Secure an API with Role-Based Access Control
+# Secure an API with role-based access control
 
 Role-based access control (RBAC) is a flexible and scalable approach to manage access to API resources. In this approach, each user or group is assigned a specific role that determines the permissions granted to perform operations on an API resource.
 
