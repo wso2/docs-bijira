@@ -29,6 +29,40 @@ If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the succes
     - Kubernetes Gateway API (`GatewayClass`, `Gateway`, `HTTPRoute`, optional `APIPolicy`)
 - Improved extensibility for policies and secret/config-based parameter references.
 
+## Benefits of API Platform Kubernetes Gateway V2.0.0
+
+### Unified API Platform Model
+
+- Single gateway model covering both standalone and operator-driven deployments, removing the fragmentation from the APK 1.3.0 era.
+
+### Kubernetes-Native Workflows
+
+- Native Kubernetes Operator support with declarative CRDs (`APIGateway`, `RestApi`, `Gateway`, `HTTPRoute`).
+
+### Flexible API Exposure Model
+
+- Supports both WSO2-native CRDs and the standard Kubernetes Gateway API, avoiding vendor lock-in.
+
+### Extensible Policy Engine
+
+- Policies can be attached to APIs in either deployment mode.
+- Supports authentication, rate limiting, header manipulation, and custom request/response mediation.
+- Dual-language policy development: Go for performance-critical logic, Python for AI/ML and data transformations.
+
+### High Availability and Production-Ready
+
+- Controller uses PostgreSQL for persistent, shared API configuration storage.
+- Runtime uses Redis for distributed rate limiting across replicas.
+
+### Built-In Observability
+
+- Metrics (Prometheus/Grafana), distributed tracing (Jaeger), logging, and Moesif analytics integration.
+
+### Improved Extensibility via Custom Policies and Secrets
+
+- Custom gateway images built with the `ap` CLI.
+- Secrets and config-based parameter references for improved security posture.
+
 ## Deployment Modes
 
 Choose one of the following modes based on your operational model.
