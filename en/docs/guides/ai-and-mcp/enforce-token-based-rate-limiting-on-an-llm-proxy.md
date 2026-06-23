@@ -100,7 +100,7 @@ Registering the provider stores your OpenAI API key in the platform. Your applic
 
 **Expected result:** OpenAI appears in the **LLM Providers** list with a deployment status of **Active**.
 
-![OpenAI LLM provider overview page showing the provider name, API key, and deployment status as Active](../../assets/img/guides/ai-and-mcp/s4/ope-ai-provider-overview.png){.cInlineImage-full}
+![OpenAI LLM provider overview page showing the provider name, API key, and deployment status as Active](../../assets/img/guides/ai-and-mcp/s4/open-ai-provider-overview.png){.cInlineImage-full}
 
 ## Step 4: Create the LLM proxy
 
@@ -143,7 +143,7 @@ This policy reads the token count from each OpenAI response and blocks further r
 
 **Expected result:** **Token Based Rate Limit** appears in the **Guardrails & Policies** tab.
 
-![Guardrails and Policies tab showing Token Based Rate Limit policy active with a 30-token-per-minute quota](../../assets/img/guides/ai-and-mcp/s4/guardrails-and-policies.png){.cInlineImage-full}
+![Guardrails and Policies tab showing Token Based Rate Limit policy active with a 100-token-per-minute quota](../../assets/img/guides/ai-and-mcp/s4/guardrails-and-policies.png){.cInlineImage-full}
 
 !!! tip
     A quota of 100 tokens per minute is intentionally low for testing. It makes the `429` easy to trigger. For production workloads, set `count` to match your actual per-application budget, for example `100000` for 100,000 tokens per minute.
