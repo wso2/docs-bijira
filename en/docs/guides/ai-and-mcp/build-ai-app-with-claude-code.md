@@ -1,3 +1,17 @@
+---
+title: "Build an AI app with Claude Code that calls governed APIs"
+description: "Put a governed API perimeter in front of Claude Code so every backend API call is authenticated, rate-limited, and attributed to a dedicated application identity."
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md
+tags:
+  - guides
+  - ai-and-mcp
+  - claude-code
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Build an AI App with Claude Code that Calls Governed Backend APIs
 
 ## Overview

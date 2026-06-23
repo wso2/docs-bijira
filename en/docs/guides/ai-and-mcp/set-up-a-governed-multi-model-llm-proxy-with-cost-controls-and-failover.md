@@ -1,3 +1,18 @@
+---
+title: "Set up a governed multi-model LLM proxy with cost controls and failover"
+description: "Distribute LLM traffic across multiple models, enforce per-team token budgets, mask PII, and cache semantically similar prompts behind a single governed proxy."
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
+tags:
+  - guides
+  - ai-and-mcp
+  - llm
+  - ai-workspace
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Set up a governed multi-model LLM proxy with cost controls and failover
 
 ## Overview

@@ -1,3 +1,17 @@
+---
+title: "Design APIs with API Designer"
+description: "Use AI-assisted editing and form-based editing in API Designer to create and refine your OpenAPI specification."
+canonical_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis/
+md_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis.md
+tags:
+  - tools
+  - vscode
+  - api-design
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Design APIs using API Designer
 
 You can use API Designer to create and improve your OpenAPI 3.x specification with AI-assisted workflows and form-based editing.

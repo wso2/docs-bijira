@@ -1,3 +1,19 @@
+---
+title: "Find and connect to an enterprise MCP server from the MCP Hub"
+description: "Discover MCP servers in the MCP Hub, review their tools, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server."
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+tags:
+  - guides
+  - ai-and-mcp
+  - mcp
+  - mcp-hub
+  - claude-desktop
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Find and connect to an enterprise MCP server from the MCP Hub
 
 ## Overview

@@ -349,6 +349,8 @@
 - [Convert a REST API into an MCP Tool](https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md): End-to-end walkthrough: expose a REST API as a governed MCP server, enforce OAuth2, and connect it to Claude Desktop
 - [Build an AI App with Claude Code](https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md): End-to-end walkthrough: build an AI application with Claude Code that calls backend APIs governed by WSO2 API Platform
 - [Governed Multi-Model LLM Proxy with Cost Controls and Failover](https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): End-to-end walkthrough: set up a single governed LLM proxy that round-robins across multiple models for failover, enforces per-team token budgets, masks PII before requests leave your network, caches semantically similar prompts, and attributes cost per team via Moesif
+- [Find and Connect to an Enterprise MCP Server from the MCP Hub](https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md): End-to-end walkthrough: discover MCP servers and tools in the MCP Hub, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server
+- [Go from Zero to a Working API Call Using the Developer Portal](https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout.md): End-to-end walkthrough: discover an API in the Developer Portal, try it with an API key, subscribe to a plan, and invoke it with rate limiting applied
 
 ## Tools
 
@@ -358,4 +360,7 @@
 - [VS Code API Designer: Getting Started](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
 - [VS Code: Design APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis.md): Design and edit OpenAPI specifications with AI assistance in VS Code
 - [VS Code: Govern APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis.md): Apply governance rules to API designs directly from VS Code
-- [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: design, govern, and publish an API using the VS Code extension
+- [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: draft, design, govern, and fix an OpenAPI specification using API Designer and GitHub Copilot
+- [Arazzo MCP Generator CLI Quick Start](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide.md): Convert an Arazzo specification into a Dockerized Python MCP server using the arazzo-mcp-gen CLI
+- [Arazzo MCP Generator CLI Reference](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/reference.md): Full command reference for arazzo-mcp-gen: sample, validate, inspect, visualize, and mcp-server generate
+- [VS Code Arazzo Visualizer: Getting Started](https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/getting-started.md): Visualize, edit, and run Arazzo workflow specifications as interactive diagrams directly inside VS Code
