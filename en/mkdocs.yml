@@ -463,6 +463,7 @@ nav:
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
         - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
         - Find and Connect to an Enterprise MCP Server from the MCP Hub: guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+        - Enforce Token-Based Rate Limiting on an LLM Proxy: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
     - Developer Portal:
         - Go from Zero to a Working API Call Using the Developer Portal: guides/developer-portal/api-discovery-and-tryout.md
   - Tools:
