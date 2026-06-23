@@ -139,7 +139,7 @@ Create a Pay-as-you-go subscription plan that charges consumers per API request.
 
 **Expected result:** The Pay-as-you-go plan appears in the Subscription Plans list.
 
-![Subscription Plans list showing the Pay-as-you-go plan after creation](../../assets/img//monetization/api-monetization/subscription_plans.png){.cInlineImage-full}
+![Subscription Plans list showing the Pay-as-you-go plan after creation](../../assets/img/monetization/api-monetization/subscription_plans.png){.cInlineImage-full}
 
 !!! note
     In usage-based models, a unit equals one API request. With the Unit model, the total charge is request count × unit price. For tiered pricing, use Volume or Graduated instead.
