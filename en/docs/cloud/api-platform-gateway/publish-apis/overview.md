@@ -1,3 +1,18 @@
+---
+title: "Publish APIs on the Self-Hosted Gateway"
+description: "Compare subscription-based and subscription-less approaches for publishing APIs deployed on the API Platform Self-Hosted Gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/overview.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - publish
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # Publish APIs on a Self-Hosted Gateway
 
 After you create and deploy an API proxy to a **Self-Hosted Gateway**, you can make consumers aware of it by moving the API through the lifecycle and publishing it. Publishing updates the API lifecycle to **Published** so it can appear in the API Platform Developer Portal and be invoked according to how access is configured.

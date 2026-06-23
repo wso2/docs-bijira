@@ -1,3 +1,17 @@
+---
+title: "Troubleshoot the Event Gateway"
+description: "Diagnose and resolve common Event Gateway issues, including connection failures, registration errors, TLS problems, and performance issues."
+canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/troubleshooting/
+md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/troubleshooting.md
+tags:
+  - cloud
+  - event-gateway
+  - troubleshooting
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "troubleshooting"
+---
+
 # Troubleshooting
 
 This guide covers common issues you may encounter when deploying and operating the API Platform Event Gateway, along with their solutions.

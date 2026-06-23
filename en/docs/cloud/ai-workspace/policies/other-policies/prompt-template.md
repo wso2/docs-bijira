@@ -1,3 +1,17 @@
+---
+title: "Prompt template in AI Workspace"
+description: "Apply reusable, parameterized prompt templates to LLM requests using template:// references, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template.md
+tags:
+  - cloud
+  - ai-workspace
+  - prompt-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Prompt Template
 
 The Prompt Template policy applies reusable, parameterized prompt templates to requests. Instead of sending a raw prompt, clients send a template reference (`template://<name>?param=value`) and the gateway substitutes the parameters into the configured template before forwarding the request to the LLM.

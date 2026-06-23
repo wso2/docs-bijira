@@ -1,3 +1,19 @@
+---
+title: "Write a custom policy for the Self-Hosted Gateway"
+description: "Build a custom policy for the API Platform Self-Hosted Gateway using the Go-based policy SDK, including streaming support."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/writing-a-custom-policy/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/writing-a-custom-policy.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - custom-policy
+  - sdk
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Writing a Custom Policy for the Self-Hosted Gateway
 
 This guide shows how to build a custom policy using the gateway SDK.

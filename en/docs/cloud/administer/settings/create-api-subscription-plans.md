@@ -1,3 +1,17 @@
+---
+title: "Create API subscription plans"
+description: "Define rate limits, burst control, and pricing models for organization-level API subscription plans in API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/settings/create-api-subscription-plans/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/settings/create-api-subscription-plans.md
+tags:
+  - cloud
+  - administer
+  - subscription-plans
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Create API Subscription Plans
 
 API subscription plans are essential to control and manage access to APIs. These plans define the rules and limitations on how clients can interact with APIs, ensuring efficient resource utilization and robust security. With the option to set rate limits, burst control, and pricing models, subscription plans allow API providers to manage traffic, prevent misuse, offer tiered service levels, and monetize APIs. Organizations can implement subscription plans to provide varying levels of API access, accommodating different user needs and business models, while ensuring optimal performance and security.

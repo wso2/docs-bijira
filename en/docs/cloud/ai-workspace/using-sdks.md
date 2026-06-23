@@ -1,3 +1,17 @@
+---
+title: "Invoke providers and proxies via SDKs"
+description: "Call a deployed LLM provider or App LLM proxy using the OpenAI, Anthropic, Gemini, Mistral, Azure OpenAI, or LangChain SDKs."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/using-sdks/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/using-sdks.md
+tags:
+  - cloud
+  - ai-workspace
+  - sdks
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Invoke Providers and Proxies via SDKs
 
 Once you have deployed an LLM Provider or App LLM Proxy in the AI Workspace, you can invoke it using any supported AI SDK by pointing it at the gateway's Invoke URL and authenticating with your generated API key.

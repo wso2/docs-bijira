@@ -1,3 +1,17 @@
+---
+title: "AI Workspace policies overview"
+description: "Apply built-in guardrail, rate-limiting, and traffic-management policies to LLM providers and App LLM proxies in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/overview.md
+tags:
+  - cloud
+  - ai-workspace
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # Policies Overview
 
 The AI Workspace provides built-in policies that let you govern how traffic flows through your LLM Providers and App LLM Proxies. Policies can be applied at the provider level (affecting all proxies that use the provider) or at the proxy level (scoped to a specific proxy or individual endpoints).

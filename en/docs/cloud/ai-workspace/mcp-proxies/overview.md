@@ -1,3 +1,17 @@
+---
+title: "MCP proxies overview"
+description: "Connect the AI Gateway to upstream MCP servers and apply security, policy, and observability controls through an MCP proxy."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/mcp-proxies/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/mcp-proxies/overview.md
+tags:
+  - cloud
+  - ai-workspace
+  - mcp-proxies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # MCP Proxies Overview
 
 ## What is Model Context Protocol?

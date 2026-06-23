@@ -1,3 +1,17 @@
+---
+title: "Use the MCP Registry API"
+description: "Query the public MCP Registry API to list MCP servers, server versions, and connection details for your organization."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry-api/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry-api.md
+tags:
+  - cloud
+  - ai-workspace
+  - mcp-registry
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "reference"
+---
+
 # Use the MCP Registry API
 
 The MCP Registry API gives AI clients, IDE plugins, and automation tooling programmatic access to your organization's MCP server catalog. Use it to discover available servers, retrieve connection details, and query specific versions.

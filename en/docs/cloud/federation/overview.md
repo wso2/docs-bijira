@@ -1,3 +1,18 @@
+---
+title: "Gateway federation overview"
+description: "Discover, govern, and publish APIs deployed on external gateways through API Platform's unified control plane."
+canonical_url: https://wso2.com/api-platform/docs/cloud/federation/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/federation/overview.md
+tags:
+  - cloud
+  - api-gateway
+  - third-party-gateways
+  - federation
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # Gateway Federation in API Platform
 
 ## What is Gateway Federation?

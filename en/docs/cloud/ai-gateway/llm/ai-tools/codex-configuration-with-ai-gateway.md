@@ -1,3 +1,18 @@
+---
+title: "Configure OpenAI Codex CLI with AI Gateway"
+description: "Route OpenAI Codex CLI requests through the AI Gateway using an OpenAI LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway.md
+tags:
+  - cloud
+  - ai-gateway
+  - ai-tools
+  - codex-cli
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configuring OpenAI Codex CLI with AI Gateway
 
 This guide explains how to configure OpenAI Codex CLI to send requests through WSO2 API Platform using an AI Gateway, an OpenAI LLM provider, and an App LLM Proxy.

@@ -1,3 +1,17 @@
+---
+title: "Manage environments"
+description: "Create and delete development and production environments for your organization's data planes in API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/manage-environments/manage-environments/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/manage-environments/manage-environments.md
+tags:
+  - cloud
+  - administer
+  - environments
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Manage Environments
 
 By default, all projects created in the cloud data planes (irrespective of the data plane region) are provisioned with two environments (i.e., development and production).

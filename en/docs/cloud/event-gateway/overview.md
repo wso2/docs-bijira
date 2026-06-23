@@ -1,3 +1,17 @@
+---
+title: "Event Gateway overview"
+description: "Learn how the Event Gateway performs protocol mediation between web-friendly protocols and message brokers such as Kafka, MQTT, and Solace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/overview.md
+tags:
+  - cloud
+  - event-gateway
+  - overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "overview"
+---
+
 # Event Gateway Overview
 
 The Event Gateway is a self-hosted runtime that performs **Protocol Mediation** — acting as the bridge between web-friendly protocols (WebSocket, WebHook, SSE) and message brokers (Kafka, MQTT, Solace). It enables you to expose event brokers as subscribable APIs while enforcing policies such as authentication, authorization, and rate limiting through the centralized API Platform’s Policy Hub.

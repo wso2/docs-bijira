@@ -1,3 +1,17 @@
+---
+title: "Customize Developer Portal theming at the organization level"
+description: "Manually customize Developer Portal colors, typography, HTML, CSS, and logo at the organization level."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-org-level/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-org-level.md
+tags:
+  - cloud
+  - devportal
+  - theming
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Customize Developer Portal Manually for your Organization
 
 Developer portal allows you to customize the user interfaces (UIs) in organization level as well as in API level. With this you can ensure that your pages not only look great but also align perfectly with your brand's identity.

@@ -1,3 +1,17 @@
+---
+title: "JSON schema guardrail"
+description: "Validate LLM request or response JSON payloads against a JSON Schema Draft 7 definition."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/json-schema/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/json-schema.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # JSON Schema Guardrail
 
 ## Overview

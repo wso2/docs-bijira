@@ -1,3 +1,17 @@
+---
+title: "LLM cost-based rate limit"
+description: "Enforce monetary spending budgets on LLM traffic using the cost calculated by the LLM Cost policy."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
+tags:
+  - cloud
+  - ai-workspace
+  - rate-limit
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # LLM Cost-Based Rate Limit
 
 The LLM Cost-Based Rate Limit policy enforces monetary spending limits on LLM traffic. It reads the cost of each API call calculated by the [LLM Cost](llm-cost.md) policy and blocks requests once a configured budget is exceeded within a time window.

@@ -1,3 +1,17 @@
+---
+title: "LLM providers overview"
+description: "Connect AI service platforms such as OpenAI, Anthropic, Azure OpenAI, Gemini, and Mistral AI as reusable LLM providers in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/overview.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-providers
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # LLM Providers Overview
 
 LLM Providers are integrations with AI service platforms that offer language models. By configuring providers in the AI Workspace, you can:

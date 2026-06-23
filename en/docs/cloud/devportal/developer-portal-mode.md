@@ -1,3 +1,17 @@
+---
+title: "Developer Portal mode"
+description: "Configure the Developer Portal to show API proxies only, MCP servers only, or both, using API Portal, MCP Hub, and API & MCP Portal modes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/developer-portal-mode/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/developer-portal-mode.md
+tags:
+  - cloud
+  - devportal
+  - configuration
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "concept"
+---
+
 # Developer Portal Mode
 
 API Platform's developer portal can be configured in different modes based on your requirements.

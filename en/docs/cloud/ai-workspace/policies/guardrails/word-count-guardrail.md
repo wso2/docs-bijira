@@ -1,3 +1,17 @@
+---
+title: "Word count guardrail in AI Workspace"
+description: "Enforce minimum and maximum word count limits on LLM prompts or responses, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/word-count-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/word-count-guardrail.md
+tags:
+  - cloud
+  - ai-workspace
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Word Count Guardrail
 
 The Word Count Guardrail validates the number of words in a request or response. Use it to enforce content length policies — for example, limiting how long a user's prompt can be, or ensuring responses meet a minimum length requirement.

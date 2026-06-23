@@ -1,3 +1,17 @@
+---
+title: "AI Workspace guardrails overview"
+description: "Detect unsafe content, mask sensitive data, and enforce content limits on LLM traffic using guardrails configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/overview.md
+tags:
+  - cloud
+  - ai-workspace
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # Guardrails Overview
 
 Guardrails inspect and act on the content of requests and responses flowing through the AI Gateway — detecting unsafe content, masking sensitive data, and caching responses. They run without any changes to client applications.

@@ -1,3 +1,17 @@
+---
+title: "Review workflow approval requests"
+description: "View and respond to pending workflow approval requests assigned to you as an authorized reviewer."
+canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/review-workflows-requests/
+md_url: https://wso2.com/api-platform/docs/cloud/workflows/review-workflows-requests.md
+tags:
+  - cloud
+  - workflows
+  - approvals
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Review Workflow Approval Requests
 
 In API Platform, administrators can [configure approvals for workflows](./configure-workflow-approvals.md) and assign specific users as approvers.

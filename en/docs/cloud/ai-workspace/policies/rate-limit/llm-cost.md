@@ -1,3 +1,17 @@
+---
+title: "LLM cost policy"
+description: "Calculate the USD cost of each LLM call from token usage and pricing tier, for use with LLM cost-based rate limiting."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost.md
+tags:
+  - cloud
+  - ai-workspace
+  - rate-limit
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # LLM Cost
 
 The LLM Cost policy calculates the monetary cost of each LLM API call and makes the result available to other policies — primarily [LLM Cost-Based Rate Limit](llm-cost-based-rate-limit.md). It runs in the response phase, requires no user configuration, and never exposes the cost to the caller.

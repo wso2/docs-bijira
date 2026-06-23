@@ -1,3 +1,17 @@
+---
+title: "Browse the MCP Hub"
+description: "Explore MCP servers registered in your organization's MCP Hub and view their tools, resources, and prompts."
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/browse-mcp-hub/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/browse-mcp-hub.md
+tags:
+  - cloud
+  - ai-workspace
+  - mcp-registry
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Browse the MCP Hub
 
 The MCP Hub is the visual catalog for your organization's MCP registry. Use it to explore available MCP servers, review their capabilities, and get the connection details needed to wire them into an AI client or agent.

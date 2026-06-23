@@ -1,3 +1,17 @@
+---
+title: "Configure workflow approvals"
+description: "Set up approval processes for environment promotion and URL customization workflows in API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals/
+md_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals.md
+tags:
+  - cloud
+  - workflows
+  - approvals
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure Approvals for API Platform Workflows
 
 API Platform allows you to configure approval processes for specific workflows within the platform. An approval process for a workflow ensures that critical or sensitive changes are properly managed and controlled.

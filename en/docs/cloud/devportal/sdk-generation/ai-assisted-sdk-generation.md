@@ -1,3 +1,17 @@
+---
+title: "Generate an SDK with AI assistance"
+description: "Generate a custom SDK and sample application code from your subscribed APIs using AI-assisted SDK generation in the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/sdk-generation/ai-assisted-sdk-generation/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/sdk-generation/ai-assisted-sdk-generation.md
+tags:
+  - cloud
+  - devportal
+  - sdk-generation
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # AI-Assisted SDK Generation
 
 AI-assisted SDK generation creates custom SDKs and sample application code based on your selected APIs. Instead of manually integrating multiple SDKs, you generate a single SDK with working code examples tailored to your specific requirements.

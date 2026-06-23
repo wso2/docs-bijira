@@ -1,3 +1,17 @@
+---
+title: "Manage paid subscription plans"
+description: "Create paid subscription plans with Stripe pricing models, assign them to APIs, and publish the API to the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans/
+md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans.md
+tags:
+  - cloud
+  - monetization
+  - subscription-plans
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Manage Paid Subscription Plans
 
 Paid subscription plans allow organizations to monetize their APIs by charging API consumers based on usage or access. API Platform supports multiple pricing models, enabling you to tailor plans to different business requirements. Once created, you can assign these plans to specific APIs.

@@ -1,3 +1,17 @@
+---
+title: "Set up the Event Gateway for production"
+description: "Deploy the API Platform Event Gateway in production using a virtual machine, Docker, or Kubernetes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/setting-up/
+md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/setting-up.md
+tags:
+  - cloud
+  - event-gateway
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Setting Up
 
 This guide provides detailed instructions for deploying the API Platform Event Gateway in production environments. Choose the infrastructure option that matches your environment.

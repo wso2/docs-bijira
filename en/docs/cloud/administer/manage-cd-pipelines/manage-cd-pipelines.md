@@ -1,3 +1,17 @@
+---
+title: "Manage CD pipelines"
+description: "Create, edit, and assign continuous deployment pipelines to control the environment promotion order for your projects."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/manage-cd-pipelines/manage-cd-pipelines/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/manage-cd-pipelines/manage-cd-pipelines.md
+tags:
+  - cloud
+  - administer
+  - cd-pipelines
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Manage Continuous Deployment Pipelines
 
 By default, all the organizations in API Platform are provisioned with a default continuous deployment pipeline.

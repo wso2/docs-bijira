@@ -1,3 +1,17 @@
+---
+title: "Set up an AI Gateway in AI Workspace"
+description: "Register an AI Gateway in AI Workspace, connect the runtime with a registration token, and manage existing gateways."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/ai-gateways/setting-up/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/ai-gateways/setting-up.md
+tags:
+  - cloud
+  - ai-workspace
+  - ai-gateways
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Setting up an AI Gateway
 
 AI Gateways are the runtime components that process and route requests between your applications and LLM providers. You can create and manage AI gateways directly within the AI Workspace to deploy your LLM providers and proxies.

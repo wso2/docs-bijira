@@ -1,3 +1,18 @@
+---
+title: "Configure Azure AD as an external key manager"
+description: "Connect Microsoft Azure Active Directory (Azure AD) to API Platform and the Developer Portal to manage API access control with scopes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md
+tags:
+  - cloud
+  - administer
+  - key-manager
+  - azure-ad
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure Azure Active Directory (Azure AD) as an External Key Manager
 
 In organizations leveraging Microsoft Azure Active Directory (Azure AD) as a key manager, integrating it with API Platform offers powerful API access control. This control hinges on the use of API scopes. That is, it enables the restriction of access to a designated group of users. This document guide you step-by-step to configure Azure AD as your external key manager.

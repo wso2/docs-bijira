@@ -1,3 +1,17 @@
+---
+title: "Configure a custom external key manager"
+description: "Integrate any OIDC/OAuth2-compliant identity provider with API Platform as a custom external key manager."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-custom-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-custom-external-idp.md
+tags:
+  - cloud
+  - administer
+  - key-manager
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure Custom External Key Manager
 
 If your organization uses Asgardeo or Microsoft Azure Active Directory (Azure AD) as a key manager follow the platform-specific guides below to add them as an external key manager in API Platform.

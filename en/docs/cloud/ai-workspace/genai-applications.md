@@ -1,3 +1,17 @@
+---
+title: "GenAI applications"
+description: "Group API keys under a named GenAI application for application-level usage visibility, analytics, and governance."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/genai-applications/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/genai-applications.md
+tags:
+  - cloud
+  - ai-workspace
+  - genai-applications
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "concept"
+---
+
 # GenAI Applications
 
 GenAI Applications let you represent a real AI application inside the AI Workspace and associate existing API keys with it. This gives you application-level visibility and control instead of tracking usage only at the individual key level.

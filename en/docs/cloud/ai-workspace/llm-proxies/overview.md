@@ -1,3 +1,17 @@
+---
+title: "App LLM proxies overview"
+description: "Add an application-facing endpoint on top of an LLM provider for app- or agent-specific authentication, guardrails, and access controls."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/overview.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-proxies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # App LLM Proxies Overview
 
 ## Why a Proxy on Top of a Provider?

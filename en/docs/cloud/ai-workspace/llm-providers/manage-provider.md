@@ -1,3 +1,17 @@
+---
+title: "Manage an LLM provider"
+description: "Configure connection, access control, security, rate limiting, guardrails, and models for a deployed LLM provider, then redeploy or delete it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/manage-provider/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/manage-provider.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-providers
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Manage LLM Provider
 
 After deploying your LLM Provider, manage its configuration through the provider details page. This guide covers all management operations organized by tab.

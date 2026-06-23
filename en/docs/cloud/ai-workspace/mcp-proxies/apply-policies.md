@@ -1,3 +1,18 @@
+---
+title: "Apply policies to an MCP proxy"
+description: "Apply access control, authorization, and rewrite policies to MCP proxies using the Policy Hub."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/mcp-proxies/apply-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/mcp-proxies/apply-policies.md
+tags:
+  - cloud
+  - ai-workspace
+  - mcp-proxies
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Apply Policies for MCP Proxy
 
 Once you create an MCP proxy, you can apply various policies through the Policies page.

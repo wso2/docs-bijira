@@ -1,3 +1,18 @@
+---
+title: "AI Gateway MCP quick start guide"
+description: "Deploy the AI Gateway with Docker Compose, run a sample MCP server, and route MCP traffic through an MCP proxy."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/quick-start-guide.md
+tags:
+  - cloud
+  - ai-gateway
+  - mcp
+  - quickstart
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "quickstart"
+---
+
 ## Quick Start
 
 ### Using Docker Compose (Recommended)

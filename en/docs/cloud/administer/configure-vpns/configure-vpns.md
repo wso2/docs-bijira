@@ -1,3 +1,18 @@
+---
+title: "Configure VPNs on the API Platform cloud data plane"
+description: "Use a Tailscale-powered forward proxy to securely connect API Platform cloud data plane projects to your private networks."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-vpns/configure-vpns/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-vpns/configure-vpns.md
+tags:
+  - cloud
+  - administer
+  - vpn
+  - tailscale
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure VPNs on the API Platform Cloud Data Plane
 
 Secure access to private networks from the API Platform cloud data plane is an essential use case for cloud data plane users.

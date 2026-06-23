@@ -1,3 +1,18 @@
+---
+title: "Insights overview"
+description: "Monitor API, LLM, and MCP traffic, errors, and platform health using the Insights dashboards in API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/insights/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/insights.md
+tags:
+  - cloud
+  - monitoring
+  - insights
+  - analytics
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "overview"
+---
+
 # Insights
 
 Insights is now integrated into API Platform with Moesif, giving you visibility into your API usage directly from the console. You can monitor API traffic, LLM API usage, MCP activity, and overall platform health. Together, these dashboards help platform teams move from raw event data to operational insight by showing how traffic is distributed, where failures are occurring, which consumers are most active, and how usage changes over time.

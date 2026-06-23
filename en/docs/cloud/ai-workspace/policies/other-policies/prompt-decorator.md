@@ -1,3 +1,17 @@
+---
+title: "Prompt decorator in AI Workspace"
+description: "Prepend or append system instructions or context to every LLM request, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-decorator/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-decorator.md
+tags:
+  - cloud
+  - ai-workspace
+  - prompt-management
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Prompt Decorator
 
 The Prompt Decorator policy prepends or appends content to prompts before they are sent to the upstream LLM. Use it to inject system instructions, safety guidelines, or contextual information into every request — without requiring changes to the client application.

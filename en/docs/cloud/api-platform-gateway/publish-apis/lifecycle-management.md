@@ -1,3 +1,18 @@
+---
+title: "Manage API lifecycle on the Self-Hosted Gateway"
+description: "Move an API proxy through its lifecycle states on the Self-Hosted Gateway: created, pre-released, published, deprecated, and retired."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/lifecycle-management/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/lifecycle-management.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - lifecycle
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Lifecycle Management
 
 API lifecycle management is an important aspect of API management. The API lifecycle consists of various states that an API passes through, from creation to retirement. In API Platform, there are five distinct lifecycle states: created, pre-released, published, deprecated, and retired.

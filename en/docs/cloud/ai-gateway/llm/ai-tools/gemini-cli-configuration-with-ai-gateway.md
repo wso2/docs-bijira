@@ -1,3 +1,18 @@
+---
+title: "Configure Gemini CLI with AI Gateway"
+description: "Route Google Gemini CLI requests through the AI Gateway using a Gemini LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/gemini-cli-configuration-with-ai-gateway/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/gemini-cli-configuration-with-ai-gateway.md
+tags:
+  - cloud
+  - ai-gateway
+  - ai-tools
+  - gemini-cli
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configuring Google Gemini CLI with AI Gateway
 
 This guide explains how to configure Google Gemini CLI to send requests through WSO2 API Platform using an AI Gateway, a Gemini LLM provider, and an App LLM Proxy.

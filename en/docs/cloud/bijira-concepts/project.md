@@ -1,4 +1,18 @@
-﻿# Projects in API Platform
+---
+title: "Projects in API Platform"
+description: "Understand projects in API Platform: structure, components, and how components are deployed within a project's namespace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/project/
+md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/project.md
+tags:
+  - cloud
+  - concepts
+  - project
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "concept"
+---
+
+# Projects in API Platform
 
 Projects are a core organizational unit in API Platform, designed to group related components and resources that together represent a cloud-native application or solution. This document provides a comprehensive overview of projects in API Platform, including their structure and the deployment.
 

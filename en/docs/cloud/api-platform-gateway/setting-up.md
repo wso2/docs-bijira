@@ -1,3 +1,18 @@
+---
+title: "Set up the Self-Hosted Gateway"
+description: "Deploy the API Platform Self-Hosted Gateway in production using a virtual machine, Docker, or Kubernetes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/setting-up/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/setting-up.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - deployment
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Setting Up
 
 This guide provides detailed instructions for deploying the API Platform Self-Hosted Gateway in production environments. Choose the infrastructure option that matches your environment.

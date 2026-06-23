@@ -1,3 +1,18 @@
+---
+title: "Azure Content Safety guardrail in AI Workspace"
+description: "Filter hate speech, sexual content, self-harm, and violence in LLM traffic using Azure Content Safety, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/azure-content-safety/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/azure-content-safety.md
+tags:
+  - cloud
+  - ai-workspace
+  - guardrails
+  - azure
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Azure Content Safety Content Moderation
 
 The Azure Content Safety guardrail integrates with the Azure Content Safety API to filter harmful content in requests and LLM-generated responses. It checks for four categories — hate speech, sexual content, self-harm, and violence — each with a configurable severity threshold.

@@ -1,3 +1,17 @@
+---
+title: "Theme the Developer Portal with AI"
+description: "Generate a Developer Portal theme automatically from your organization's website using AI-powered branding."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-with-ai/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-with-ai.md
+tags:
+  - cloud
+  - devportal
+  - theming
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Theming Developer Portal with AI for your Organization
 
 AI-powered branding simplifies the process of customizing your organization's Developer portal. By leveraging AI Branding, you can ensure that your pages not only look great but also align perfectly with your brand's identity.

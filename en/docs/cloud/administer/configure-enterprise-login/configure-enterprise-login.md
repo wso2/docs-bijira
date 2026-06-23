@@ -1,3 +1,17 @@
+---
+title: "Configure enterprise login"
+description: "Enable enterprise login and role-based access control so users from an external identity provider can sign in to API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-enterprise-login/configure-enterprise-login/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-enterprise-login/configure-enterprise-login.md
+tags:
+  - cloud
+  - administer
+  - enterprise-login
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure Enterprise Login
 
 With API Platform, you can configure enterprise login to allow users from an external identity provider (IdP) to sign in to API Platform seamlessly without changing their credentials.

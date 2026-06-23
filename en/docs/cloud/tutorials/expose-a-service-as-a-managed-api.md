@@ -1,3 +1,17 @@
+---
+title: "Expose a service as a managed API"
+description: "Create, deploy, test, promote, and publish an API proxy in API Platform, then invoke it from the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/tutorials/expose-a-service-as-a-managed-api/
+md_url: https://wso2.com/api-platform/docs/cloud/tutorials/expose-a-service-as-a-managed-api.md
+tags:
+  - cloud
+  - tutorials
+  - api-proxy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Expose a Service as a Managed API
 
 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.

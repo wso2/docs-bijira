@@ -1,3 +1,17 @@
+---
+title: "API Platform Status Page"
+description: "Check the real-time operational health, active incidents, and scheduled maintenance for WSO2 API Platform Cloud."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/status-page/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/status-page.md
+tags:
+  - cloud
+  - monitoring
+  - status
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "concept"
+---
+
 # API Platform Status Page
 
 The **API Platform Status Page** is the official, public source of truth for the real-time operational health of WSO2 API Platform Cloud. It provides live availability information for the platform's services across all regions, so you can quickly confirm whether an issue you are seeing is caused by an ongoing platform incident.

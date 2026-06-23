@@ -1,3 +1,18 @@
+---
+title: "Audit logs"
+description: "View organization-level audit logs and grant other members access to audit log data in API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/audit-logs/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/audit-logs.md
+tags:
+  - cloud
+  - monitoring
+  - logs
+  - audit
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Audit logs
 
 Audit logs, also called audit trails, enhance security, ensure compliance, provide operational insights, and help manage risks. 

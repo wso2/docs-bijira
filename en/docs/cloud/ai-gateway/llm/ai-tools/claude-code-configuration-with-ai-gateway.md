@@ -1,3 +1,18 @@
+---
+title: "Configure Claude Code with AI Gateway"
+description: "Route Claude Code requests through the AI Gateway using an Anthropic LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/claude-code-configuration-with-ai-gateway/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/claude-code-configuration-with-ai-gateway.md
+tags:
+  - cloud
+  - ai-gateway
+  - ai-tools
+  - claude-code
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configuring Claude Code with AI Gateway
 
 This guide explains how to configure Claude Code to send requests through WSO2 API Platform using an AI Gateway, an Anthropic LLM provider, and an App LLM Proxy.

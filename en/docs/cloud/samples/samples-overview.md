@@ -1,3 +1,16 @@
+---
+title: "API Platform samples overview"
+description: "Browse, filter, and deploy sample API proxies to explore core API Platform functionality."
+canonical_url: https://wso2.com/api-platform/docs/cloud/samples/samples-overview/
+md_url: https://wso2.com/api-platform/docs/cloud/samples/samples-overview.md
+tags:
+  - cloud
+  - samples
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "overview"
+---
+
 # Samples Overview
 
 API Platform provides an extensive collection of samples for a wide range of use cases. You can quickly deploy and explore these samples to easily understand the core functionalities of the platform.

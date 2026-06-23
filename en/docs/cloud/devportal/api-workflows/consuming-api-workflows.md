@@ -1,3 +1,17 @@
+---
+title: "Consume API workflows in the Developer Portal"
+description: "Discover and follow published API workflows as a developer or AI agent using the Developer Portal UI, llms.txt, and Arazzo specifications."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/api-workflows/consuming-api-workflows/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/api-workflows/consuming-api-workflows.md
+tags:
+  - cloud
+  - devportal
+  - api-workflows
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Consuming API Workflows
 
 API Workflows are published in the developer portal as structured, reusable sequences of API calls. Once an admin publishes a workflow, it becomes available to both human developers browsing the portal and AI agents that consume the portal's machine readable surfaces.
