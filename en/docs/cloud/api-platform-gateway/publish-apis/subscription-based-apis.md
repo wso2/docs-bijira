@@ -1,3 +1,18 @@
+---
+title: "Publish subscription-based APIs on the Self-Hosted Gateway"
+description: "Assign subscription plans, attach the Subscription Validation policy, and publish a subscription-based API on the Self-Hosted Gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/subscription-based-apis/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/subscription-based-apis.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - subscriptions
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Subscription-based APIs
 
 A **subscription-based** API is a published API proxy that has one or more **subscription plans** assigned. Subscription plans define quotas, rate limits, and related controls at the organization level. When consumers use the API Platform Developer Portal, they choose an API, subscribe to the API with a plan, and generate Subscription Token according to your plan rules.

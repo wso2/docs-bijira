@@ -1,3 +1,17 @@
+---
+title: "Configure an App LLM proxy"
+description: "Create an App LLM proxy, optionally attach guardrails, and deploy it to a gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/configure-proxy/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/configure-proxy.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-proxies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configure App LLM Proxy
 
 An App LLM Proxy exposes a managed endpoint that your Gen AI applications or agents use to reach an LLM Provider. Once deployed, the proxy handles authentication and enforces any guardrails you configure. While the provider can be called directly, the proxy lets you create specialized endpoints for different applications, agents, or environments with independent keys, guardrails, and access controls on top of the same provider.

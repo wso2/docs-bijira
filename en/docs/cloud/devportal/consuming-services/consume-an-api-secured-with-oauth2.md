@@ -1,3 +1,17 @@
+---
+title: "Consume an API secured with OAuth2"
+description: "Generate an OAuth2 access token from an application's consumer key and secret, then use it to invoke a subscribed API."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2.md
+tags:
+  - cloud
+  - devportal
+  - authentication
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Consume an API Secured with OAuth2
 
 ## Prerequisites

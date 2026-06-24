@@ -1,3 +1,17 @@
+---
+title: "Token-based rate limit"
+description: "Limit LLM traffic by prompt, completion, or total token consumption within a configurable time window."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit.md
+tags:
+  - cloud
+  - ai-workspace
+  - rate-limit
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Token-Based Rate Limit
 
 The Token-Based Rate Limit policy enforces rate limits based on token consumption rather than request count. Limits can be applied to prompt (input) tokens, completion (output) tokens, or total tokens — independently or in combination.

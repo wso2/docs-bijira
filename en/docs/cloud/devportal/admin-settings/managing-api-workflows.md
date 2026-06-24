@@ -1,3 +1,17 @@
+---
+title: "Manage API workflows in the Developer Portal"
+description: "Create, edit, publish, and control the visibility of API workflows for human users and AI agents."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/managing-api-workflows/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/managing-api-workflows.md
+tags:
+  - cloud
+  - devportal
+  - api-workflows
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Managing API Workflows
 
 As a portal admin, you can create, edit, publish, and control the visibility of API Workflows. This page covers the full workflow lifecycle from an admin perspective.

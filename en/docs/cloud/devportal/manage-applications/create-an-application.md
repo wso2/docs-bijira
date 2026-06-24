@@ -1,3 +1,17 @@
+---
+title: "Create an application"
+description: "Create an application in the Developer Portal to subscribe to APIs and generate access credentials."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-applications/create-an-application/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-applications/create-an-application.md
+tags:
+  - cloud
+  - devportal
+  - applications
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Create Applications
 
 An application is a logical representation of a physical application such as a mobile app, webapp, device, etc. If an application needs to consume an API, it should subscribe to the required API over a selected business plan, which determines the usage quota the application is allowed. A single application can have multiple API subscriptions.

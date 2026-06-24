@@ -1,3 +1,17 @@
+---
+title: "AI agent API discovery"
+description: "Expose published APIs and workflows through llms.txt and machine-readable Markdown endpoints so AI agents can discover and invoke them."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/ai-agent-discovery/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/ai-agent-discovery.md
+tags:
+  - cloud
+  - devportal
+  - ai-discovery
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "concept"
+---
+
 # AI Agent API Discovery
 
 API Platform's Developer Portal has built-in support for AI agent discoverability. Every published API is automatically exposed through a set of machine readable endpoints that AI agents, LLM powered assistants, and agentic frameworks can use to discover, understand, and invoke APIs without human assistance.

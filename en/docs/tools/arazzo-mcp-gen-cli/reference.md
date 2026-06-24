@@ -1,3 +1,19 @@
+---
+title: "Arazzo MCP Generator CLI reference"
+description: "Command reference for arazzo-mcp-gen: sample, validate, inspect, visualize, and mcp-server generate."
+canonical_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/reference/
+md_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/reference.md
+tags:
+  - tools
+  - cli
+  - arazzo
+  - mcp
+  - reference
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "reference"
+---
+
 ### `sample`
 
 Creates a new directory with a ready-to-use sample Arazzo spec targeting the Petstore v3 API. Good starting point for writing your own spec.

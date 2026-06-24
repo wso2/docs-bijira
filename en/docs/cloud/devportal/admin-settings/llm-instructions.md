@@ -1,3 +1,17 @@
+---
+title: "Configure LLM instructions for the Developer Portal"
+description: "Give AI agents portal-level context, conventions, and recommended workflows by publishing LLM instructions to llms.txt."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/llm-instructions/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/llm-instructions.md
+tags:
+  - cloud
+  - devportal
+  - ai-discovery
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # LLM Instructions
 
 LLM Instructions allow portal admins to provide AI agents with high level context about the developer portal, what APIs are available, how the portal is organized, and any conventions or constraints agents should follow when interacting with it.

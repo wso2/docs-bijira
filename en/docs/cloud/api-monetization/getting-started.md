@@ -1,3 +1,17 @@
+---
+title: "Get started with API Monetization"
+description: "Connect your Stripe account to API Platform to enable paid subscription plans and billing for your APIs."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started/
+md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started.md
+tags:
+  - cloud
+  - monetization
+  - stripe
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "quickstart"
+---
+
 # Getting Started with API Monetization
 
 To enable API monetization, you need to connect your Stripe account to API Platform. Once connected, API Platform creates Stripe products, prices, customers, and subscriptions on your behalf, and reports usage to Stripe for billing.

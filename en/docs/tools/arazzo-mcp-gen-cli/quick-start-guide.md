@@ -1,3 +1,18 @@
+---
+title: "Arazzo MCP Generator CLI quick start guide"
+description: "Convert an Arazzo specification into a Dockerized MCP server using the arazzo-mcp-gen CLI, from validation to running the generated server."
+canonical_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide.md
+tags:
+  - tools
+  - cli
+  - arazzo
+  - mcp
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "quickstart"
+---
+
 ## Quick Start — Arazzo MCP Generator (arazzo-mcp-gen)
 
 `arazzo-mcp-gen` is a CLI tool that turns an [Arazzo specification](https://spec.openapis.org/arazzo/latest.html) and its referenced OpenAPI files into a fully Dockerized Python MCP (Model Context Protocol) server. Each Arazzo workflow becomes an MCP tool that any AI agent can call.

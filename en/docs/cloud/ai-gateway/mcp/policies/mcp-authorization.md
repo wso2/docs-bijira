@@ -1,6 +1,18 @@
 ---
-title: "Overview"
+title: "MCP authorization"
+description: "Define fine-grained authorization rules for MCP tools, resources, prompts, and methods based on JWT claims and scopes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authorization/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authorization.md
+tags:
+  - cloud
+  - ai-gateway
+  - mcp
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
 ---
+
 # MCP Authorization
 
 ## Overview

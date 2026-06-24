@@ -1,3 +1,17 @@
+---
+title: "Write an AI policy for the Self-Hosted Gateway"
+description: "Implement a custom AI policy that handles both streaming (SSE) and non-streaming LLM request and response bodies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/writing-an-ai-policy/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/writing-an-ai-policy.md
+tags:
+  - cloud
+  - ai-workspace
+  - custom-policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Writing an AI Policy for the Self-Hosted Gateway
 
 AI policies allow you to inspect, control, and modify traffic going to and from Large Language Models (LLMs), such as OpenAI, Anthropic, or other providers.

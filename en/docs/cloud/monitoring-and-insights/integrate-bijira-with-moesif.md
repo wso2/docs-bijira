@@ -1,3 +1,18 @@
+---
+title: "Integrate API Platform with Moesif"
+description: "Connect your API Platform organization to Moesif to generate an API key, configure the integration, and view usage insights on the Moesif dashboard."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
+tags:
+  - cloud
+  - monitoring
+  - moesif
+  - integration
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Integrate API Platform with Moesif
 
 Moesif is an API analytics and monetization service that helps you grow your API products. You can integrate API Platform with Moesif and gain valuable insights into your API's usage.  While Moesif's API analytics capabilities empower you to make informed decision-making on behalf of your organization, its monetization options simplify revenue generation from your APIs, eliminating the need for complex coding. 

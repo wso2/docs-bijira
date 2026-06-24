@@ -1,3 +1,17 @@
+---
+title: "Configure a custom domain for your organization"
+description: "Add a custom domain for your organization and use it to configure custom URLs for your API proxies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/settings/configure-a-custom-domain-for-your-organization/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/settings/configure-a-custom-domain-for-your-organization.md
+tags:
+  - cloud
+  - administer
+  - custom-domain
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure a Custom Domain for Your Organization
 
 A custom domain is essential for effective branding, discoverability, and credibility of a website. API Platform allows you to easily configure custom domains for your organization, enabling developers to utilize it to configure custom URLs for their API proxies.

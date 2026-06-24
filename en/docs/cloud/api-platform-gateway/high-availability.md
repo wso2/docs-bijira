@@ -1,3 +1,18 @@
+---
+title: "High availability deployment for the Self-Hosted Gateway"
+description: "Deploy multiple Gateway Controller and Gateway Runtime replicas with a shared PostgreSQL database for high availability."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/high-availability/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/high-availability.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - high-availability
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "concept"
+---
+
 ## High Availability Deployment with Multiple Gateway Controllers and Runtimes
 
 The self-hosted gateway can be deployed in a highly available manner by running multiple **Gateway Controller** replicas and multiple **Gateway Runtime** replicas across different network zones or environments.

@@ -1,3 +1,17 @@
+---
+title: "Configure inbound authentication"
+description: "Control where and under what name client applications send their API key when calling a deployed LLM provider or App LLM proxy."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/configure-inbound-auth/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/configure-inbound-auth.md
+tags:
+  - cloud
+  - ai-workspace
+  - authentication
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configure Inbound Authentication
 
 The **Security** tab on both LLM Providers and App LLM Proxies controls how client applications authenticate when calling the deployed gateway endpoint. This is called **inbound authentication** — the key that your application sends to the gateway, as opposed to the upstream API key the gateway uses to call the LLM provider (configured in the **Connection** tab).

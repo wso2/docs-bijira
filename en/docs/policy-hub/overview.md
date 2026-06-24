@@ -1,3 +1,17 @@
+---
+title: "Policy Hub overview"
+description: "Browse the curated, versioned library of gateway policies for APIs and MCP servers in the WSO2 API Platform Policy Hub."
+canonical_url: https://wso2.com/api-platform/docs/policy-hub/overview/
+md_url: https://wso2.com/api-platform/docs/policy-hub/overview.md
+tags:
+  - policy-hub
+  - policies
+  - gateway
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "overview"
+---
+
 # WSO2 API Platform Policy Hub
 
 [The Policy Hub](https://wso2.com/api-platform/policy-hub) is the official, curated collection of [gateway policies](../api-gateway/policies/overview.md) for the WSO2 API Platform. It gives you a growing library of production-ready, versioned policy implementations that you can apply to any API or MCP server without writing custom code.

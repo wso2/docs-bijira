@@ -1,3 +1,17 @@
+---
+title: "Sentence count guardrail in AI Workspace"
+description: "Enforce minimum and maximum sentence count limits on LLM prompts or responses, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail.md
+tags:
+  - cloud
+  - ai-workspace
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Sentence Count Guardrail
 
 The Sentence Count Guardrail validates the number of sentences in a request or response. Use it to enforce policies on the structural complexity of prompts or responses — for example, requiring responses to be at least a certain length, or capping how many sentences a user prompt can contain.

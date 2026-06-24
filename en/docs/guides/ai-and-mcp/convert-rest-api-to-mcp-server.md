@@ -1,3 +1,18 @@
+---
+title: "Convert a REST API into an MCP tool for Claude Desktop"
+description: "Expose a REST API as a governed MCP server, enforce OAuth2 at the gateway, and connect Claude Desktop to it using mcp-remote."
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
+tags:
+  - guides
+  - ai-and-mcp
+  - mcp
+  - claude-desktop
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Convert a REST API into an MCP Tool and Use It in Claude Desktop
 
 ## Overview

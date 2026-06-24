@@ -1,3 +1,18 @@
+---
+title: "Semantic prompt guardrail"
+description: "Block or allow LLM prompts using semantic similarity matching against configured allow and deny phrase lists."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-prompt-guard/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-prompt-guard.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+  - semantic
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Semantic Prompt Guardrail
 
 ## Overview

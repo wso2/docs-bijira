@@ -1,3 +1,17 @@
+---
+title: "Manage an App LLM proxy"
+description: "Configure provider settings, resources, security, and guardrails for a deployed App LLM proxy, then save, redeploy, or delete it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/manage-proxy/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/manage-proxy.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-proxies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Manage App LLM Proxy
 
 Once you create an App LLM Proxy, you can manage its configuration through the proxy details page. This guide covers all management operations available for your specialized application or agent proxy.

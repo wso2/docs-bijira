@@ -1,3 +1,17 @@
+---
+title: "Content length guardrail"
+description: "Validate the byte length of LLM request or response content against configurable minimum and maximum thresholds."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/content-length/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/content-length.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Content Length Guardrail
 
 ## Overview

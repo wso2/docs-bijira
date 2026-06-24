@@ -107,7 +107,7 @@
 - [PII Masking Regex Guardrail](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/pii-masking-regex.md): Mask personally identifiable information using configurable regex patterns
 - [Regex Guardrail](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/regex.md): Block or allow content matching a regular expression pattern
 - [Semantic Prompt Guard](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-prompt-guard.md): Block semantically similar prompts using embedding-based similarity matching against allow/deny phrase lists
-- [Semantic Tool Filtering](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering.md): Filter MCP tool calls based on semantic similarity to allowed or blocked tool descriptions
+- [Semantic Tool Filtering](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering.md): Dynamically filter the tools included in an LLM request based on their semantic relevance to the user's query, selecting top matches or those above a similarity threshold
 - [Sentence Count Guardrail](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/sentence-count.md): Enforce min/max sentence count on LLM inputs and outputs
 - [URL Guardrail](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/url.md): Validate and block URLs found in LLM prompts or completions
 - [Word Count Guardrail](https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/word-count.md): Enforce min/max word count on LLM inputs and outputs
@@ -149,7 +149,7 @@
 - [LLM Cost-Based Rate Limit](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md): Block requests once a configured monetary spending limit is reached within a time window
 - [Model Round Robin (AI Workspace)](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/model-round-robin.md): Round-robin load balancing across LLM providers in AI Workspace
 - [Prompt Decorator (AI Workspace)](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-decorator.md): Prepend or append system instructions to every LLM request in AI Workspace
-- [Prompt Template (AI Workspace)](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template.md): Enforce structured prompt formats for AI Workspace LLM proxies
+- [Prompt Template (AI Workspace)](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template.md): Apply reusable, parameterized prompt templates to LLM requests using template:// URI references in AI Workspace
 - [Semantic Cache (AI Workspace)](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/semantic-cache.md): Cache LLM responses by semantic similarity in AI Workspace
 - [Writing an AI Policy](https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/writing-an-ai-policy.md): Author a custom AI policy for use in AI Workspace
 
@@ -211,11 +211,12 @@
 - [Audit Logs](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/audit-logs.md): Review audit trails for configuration and administrative changes
 - [Insights](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/insights.md): API traffic analytics: latency, error rates, LLM usage, and MCP activity
 - [Compliance Dashboard](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/compliance.md): Monitor API governance compliance across your organization
-- [Integrate with Moesif](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md): Connect API Platform to Moesif for advanced analytics and monetization
+- [Integrate with Moesif](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md): Manually connect an existing Moesif organization to API Platform and view API usage insights on the Moesif dashboard
+- [API Platform Status Page](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/status-page.md): Check real-time service availability, active incidents, and scheduled maintenance for WSO2 API Platform Cloud
 
 ## API Monetization
 
-- [API Monetization Overview](https://wso2.com/api-platform/docs/cloud/api-monetization/overview.md): Usage-based API monetization via Stripe and Moesif integration
+- [API Monetization Overview](https://wso2.com/api-platform/docs/cloud/api-monetization/overview.md): Generate revenue from APIs with Stripe-powered paid subscription plans and flexible pricing models
 - [Monetization Getting Started](https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started.md): Connect a Stripe account and set up your first paid subscription plan
 - [Manage Paid Subscription Plans](https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans.md): Create and configure paid subscription tiers
 - [Subscribe to a Paid Plan](https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan.md): How consumers subscribe to a paid API subscription plan via Stripe checkout
@@ -236,7 +237,7 @@
 
 ## Workflows
 
-- [Configure Workflow Approvals](https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals.md): Set up approval gates for API lifecycle events such as subscription and publication
+- [Configure Workflow Approvals](https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals.md): Set up approval gates for environment promotion and custom URL configuration workflows
 - [Submit Workflow Approval Requests](https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests.md): How developers submit requests that trigger approval workflows
 - [Review Workflow Approval Requests](https://wso2.com/api-platform/docs/cloud/workflows/review-workflows-requests.md): How admins review and act on pending approval requests
 
@@ -345,10 +346,11 @@
 
 ## Guides
 
-- [Convert a REST API into an MCP Tool](https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md): End-to-end walkthrough — expose a REST API as a governed MCP server, enforce OAuth2, and connect it to Claude Desktop
-- [Build an AI App with Claude Code](https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md): End-to-end walkthrough — build an AI application with Claude Code that calls backend APIs governed by WSO2 API Platform
-- [Governed Multi-Model LLM Proxy with Cost Controls and Failover](https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): End-to-end walkthrough — set up a single governed LLM proxy that round-robins across multiple models for failover, enforces per-team token budgets, masks PII before requests leave your network, caches semantically similar prompts, and attributes cost per team via Moesif
-- [Monetize a REST API with Stripe](https://wso2.com/api-platform/docs/guides/monetization/api-monetization.md): End-to-end walkthrough — charge for an existing REST API using the platform's Stripe integration, with Free and Pay-as-you-go subscription plans, Stripe-powered checkout, and automatic per-request metering — no billing code required
+- [Convert a REST API into an MCP Tool](https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md): End-to-end walkthrough: expose a REST API as a governed MCP server, enforce OAuth2, and connect it to Claude Desktop
+- [Build an AI App with Claude Code](https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md): End-to-end walkthrough: build an AI application with Claude Code that calls backend APIs governed by WSO2 API Platform
+- [Governed Multi-Model LLM Proxy with Cost Controls and Failover](https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): End-to-end walkthrough: set up a single governed LLM proxy that round-robins across multiple models for failover, enforces per-team token budgets, masks PII before requests leave your network, caches semantically similar prompts, and attributes cost per team via Moesif
+- [Find and Connect to an Enterprise MCP Server from the MCP Hub](https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md): End-to-end walkthrough: discover MCP servers and tools in the MCP Hub, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server
+- [Go from Zero to a Working API Call Using the Developer Portal](https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout.md): End-to-end walkthrough: discover an API in the Developer Portal, try it with an API key, subscribe to a plan, and invoke it with rate limiting applied
 
 ## Tools
 
@@ -358,4 +360,7 @@
 - [VS Code API Designer: Getting Started](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
 - [VS Code: Design APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis.md): Design and edit OpenAPI specifications with AI assistance in VS Code
 - [VS Code: Govern APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis.md): Apply governance rules to API designs directly from VS Code
-- [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: design, govern, and publish an API using the VS Code extension
+- [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: draft, design, govern, and fix an OpenAPI specification using API Designer and GitHub Copilot
+- [Arazzo MCP Generator CLI Quick Start](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide.md): Convert an Arazzo specification into a Dockerized Python MCP server using the arazzo-mcp-gen CLI
+- [Arazzo MCP Generator CLI Reference](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/reference.md): Full command reference for arazzo-mcp-gen: sample, validate, inspect, visualize, and mcp-server generate
+- [VS Code Arazzo Visualizer: Getting Started](https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/getting-started.md): Visualize, edit, and run Arazzo workflow specifications as interactive diagrams directly inside VS Code

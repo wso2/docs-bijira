@@ -1,3 +1,17 @@
+---
+title: "Configure an LLM provider"
+description: "Add an LLM provider in AI Workspace, configure authentication and guardrails, and deploy it to an AI Gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/configure-provider/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/configure-provider.md
+tags:
+  - cloud
+  - ai-workspace
+  - llm-providers
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Configure LLM Provider
 
 LLM Providers allow you to connect AI service platforms like OpenAI, Anthropic, and others to the AI Workspace. Once configured, providers can be deployed and used directly through the managed gateway.

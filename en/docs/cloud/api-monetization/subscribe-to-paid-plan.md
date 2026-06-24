@@ -1,3 +1,18 @@
+---
+title: "Subscribe to a paid plan"
+description: "Subscribe an application to a paid API subscription plan in the Developer Portal using Stripe checkout."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan/
+md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan.md
+tags:
+  - cloud
+  - monetization
+  - devportal
+  - subscriptions
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Subscribe to a Paid Plan
 
 API consumers can browse monetized APIs on the Developer Portal and subscribe to a paid subscription plan using a secure Stripe-powered checkout. Once the payment is successful, the application is subscribed to the API and can be used to invoke it.

@@ -1,3 +1,18 @@
+---
+title: "Customize gateway policies with the API Platform CLI"
+description: "Use the ap CLI to build a custom gateway image with selected Policy Hub and local policies via a build.yaml file."
+canonical_url: https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies/
+md_url: https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies.md
+tags:
+  - tools
+  - cli
+  - gateway
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Customizing the Gateway by Adding and Removing Policies
 
 ## CLI Command

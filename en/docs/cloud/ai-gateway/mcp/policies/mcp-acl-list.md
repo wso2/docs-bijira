@@ -1,6 +1,18 @@
 ---
-title: "Overview"
+title: "MCP access control list"
+description: "Control access to MCP tools, resources, and prompts using an allow/deny mode with exceptions."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-acl-list/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-acl-list.md
+tags:
+  - cloud
+  - ai-gateway
+  - mcp
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
 ---
+
 # MCP Access Control List
 
 ## Overview

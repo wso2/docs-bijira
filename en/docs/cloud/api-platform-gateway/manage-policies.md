@@ -1,3 +1,18 @@
+---
+title: "Add and manage policies on the Self-Hosted Gateway"
+description: "Attach, configure, and deploy policies on API proxies running on the API Platform Self-Hosted Gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/manage-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/manage-policies.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - policies
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Adding and Managing Policies
 
 This guide explains how to add and manage policies for your Self-Hosted Gateway using API Platform's unified control plane.

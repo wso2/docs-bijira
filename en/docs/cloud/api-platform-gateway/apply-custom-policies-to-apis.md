@@ -1,3 +1,18 @@
+---
+title: "Apply custom policies to APIs"
+description: "Sync a custom policy from your Self-Hosted Gateway to your organization and apply it to API proxies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/apply-custom-policies-to-apis/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/apply-custom-policies-to-apis.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - custom-policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Apply Custom Policies to APIs
 
 After [building the gateway with your custom policies](build-gateway-with-custom-policies.md) and starting it, the gateway automatically sends its policy manifest to the control plane on connection. You can then sync your custom policies to the organization and apply them to your APIs.

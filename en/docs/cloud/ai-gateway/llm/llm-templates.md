@@ -1,3 +1,18 @@
+---
+title: "LLM provider templates"
+description: "Use built-in LLM provider templates for OpenAI, Azure OpenAI, Anthropic, Gemini, Mistral AI, AWS Bedrock, and Azure AI Foundry, or create custom templates."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/llm-templates/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/llm-templates.md
+tags:
+  - cloud
+  - ai-gateway
+  - llm
+  - templates
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "reference"
+---
+
 # LLM Provider Templates
 
 ## Overview

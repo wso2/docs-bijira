@@ -1,3 +1,18 @@
+---
+title: "Compliance Dashboard"
+description: "Monitor governance policy compliance and run AI compliance analysis for your API proxies, projects, and organization."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/compliance/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/compliance.md
+tags:
+  - cloud
+  - monitoring
+  - compliance
+  - governance
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Compliance Dashboard
 
 The Compliance Dashboard lets you monitor how your API proxies adhere to the governance policies defined in your organization. Before using this dashboard, ensure you have set up rulesets and policies. See [Govern API Proxies](../governance/govern-api-proxy.md) for instructions on creating rulesets, policies, and documents.

@@ -1,3 +1,18 @@
+---
+title: "Build the Self-Hosted Gateway with custom policies"
+description: "Install the AP CLI, configure build.yaml, and build a custom Self-Hosted Gateway image that includes your custom policies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/build-gateway-with-custom-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/build-gateway-with-custom-policies.md
+tags:
+  - cloud
+  - api-gateway
+  - self-hosted
+  - custom-policy
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Building the Gateway with Custom Policies
 
 ## Install the AP CLI Tool

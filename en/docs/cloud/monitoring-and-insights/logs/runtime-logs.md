@@ -1,3 +1,17 @@
+---
+title: "Runtime logs"
+description: "Access and search application, gateway, and system logs for your API proxies using text and regex-based filters."
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/runtime-logs/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/runtime-logs.md
+tags:
+  - cloud
+  - monitoring
+  - logs
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Runtime logs
 
 API Platform runtime logs provide insights into both project and API Proxy-level logs, covering application and gateway logs. These logs streamline the debugging process by centralizing diverse log sources.

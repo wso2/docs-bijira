@@ -1,3 +1,17 @@
+---
+title: "Regex guardrail"
+description: "Validate LLM request or response content against regular expression patterns to enforce formats or block prohibited content."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/regex/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/regex.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Regex Guardrail
 
 ## Overview

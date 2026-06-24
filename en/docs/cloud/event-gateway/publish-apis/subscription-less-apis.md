@@ -1,3 +1,17 @@
+---
+title: "Publish subscription-less APIs on the Event Gateway"
+description: "Publish an API on the Event Gateway without subscription plans so consumers can invoke it without subscribing."
+canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-less-apis/
+md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-less-apis.md
+tags:
+  - cloud
+  - event-gateway
+  - subscriptions
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Subscription-less APIs
 
 A **subscription-less** API is a published API proxy that is **not** tied to subscription plans in the Developer Portal. API consumers do not need to select a subscription plan or subscribe through the standard subscription flow to consume the API, though you may still secure the API using other mechanisms (for example, API keys or OAuth configured on the API).

@@ -1,3 +1,18 @@
+---
+title: "Secure an API with role-based access control"
+description: "Implement RBAC for an API proxy by defining permissions, roles, and groups, then verify scope-based access with Asgardeo."
+canonical_url: https://wso2.com/api-platform/docs/cloud/tutorials/secure-an-api-with-role-based-access-control/
+md_url: https://wso2.com/api-platform/docs/cloud/tutorials/secure-an-api-with-role-based-access-control.md
+tags:
+  - cloud
+  - tutorials
+  - rbac
+  - security
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Secure an API with Role-Based Access Control
 
 Role-based access control (RBAC) is a flexible and scalable approach to manage access to API resources. In this approach, each user or group is assigned a specific role that determines the permissions granted to perform operations on an API resource.

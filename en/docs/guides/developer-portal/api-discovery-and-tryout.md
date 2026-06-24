@@ -1,3 +1,17 @@
+---
+title: "Go from zero to a working API call using the Developer Portal"
+description: "Discover an API in the Developer Portal, try it with an API key, then subscribe to a plan to generate a subscription token and apply rate limits."
+canonical_url: https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout/
+md_url: https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout.md
+tags:
+  - guides
+  - developer-portal
+  - api-discovery
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # Go from zero to a working API call using the Developer Portal
 
 ## Overview

@@ -1,3 +1,18 @@
+---
+title: "Data Planes"
+description: "Learn about API Platform's control plane and data plane architecture, including cloud and private data plane deployment models."
+canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/data-planes/
+md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/data-planes.md
+tags:
+  - cloud
+  - concepts
+  - data-planes
+  - architecture
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "concept"
+---
+
 # Data Planes
 
 API Platform’s architecture is built around two core components, i.e. the control plane and the data plane.

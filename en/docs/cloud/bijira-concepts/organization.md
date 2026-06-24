@@ -1,4 +1,18 @@
-﻿# Organizations in API Platform
+---
+title: "Organizations in API Platform"
+description: "Understand organizations in API Platform: structure, groups, roles, and how to find your Organization ID and Handle."
+canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/organization/
+md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/organization.md
+tags:
+  - cloud
+  - concepts
+  - organization
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "concept"
+---
+
+# Organizations in API Platform
 
 Organizations are the foundational building blocks in API Platform, providing a secure and logical grouping of users, resources, and projects. This covers everything you need to know about organizations in API Platform, including their structure, management, permissions, and unique identifiers.
 

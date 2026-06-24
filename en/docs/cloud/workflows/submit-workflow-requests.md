@@ -1,3 +1,17 @@
+---
+title: "Submit workflow approval requests"
+description: "Request approval to promote an API proxy or configure a custom URL when a workflow approval is required."
+canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests/
+md_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests.md
+tags:
+  - cloud
+  - workflows
+  - approvals
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Submit Workflow Approval Requests
 
 In API Platform, if an administrator [configures a workflow to require approval](./configure-workflow-approvals.md), you must submit a request to obtain approval to perform the task.

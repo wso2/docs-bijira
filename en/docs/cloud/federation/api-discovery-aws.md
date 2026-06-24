@@ -1,3 +1,18 @@
+---
+title: "Discover APIs from AWS API Gateway"
+description: "Connect an AWS API Gateway account to API Platform and federate discovered REST APIs into your organization."
+canonical_url: https://wso2.com/api-platform/docs/cloud/federation/api-discovery-aws/
+md_url: https://wso2.com/api-platform/docs/cloud/federation/api-discovery-aws.md
+tags:
+  - cloud
+  - api-gateway
+  - third-party-gateways
+  - aws
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Discover APIs from AWS API Gateway
 
 API Platform allows you to discover APIs from AWS API Gateway and bring them under centralized governance.

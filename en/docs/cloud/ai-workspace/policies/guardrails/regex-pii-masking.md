@@ -1,3 +1,18 @@
+---
+title: "PII masking regex guardrail in AI Workspace"
+description: "Detect and mask personally identifiable information in LLM requests and responses using regex patterns, configured in AI Workspace."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/regex-pii-masking/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/regex-pii-masking.md
+tags:
+  - cloud
+  - ai-workspace
+  - guardrails
+  - pii
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # PII Masking Regex
 
 The PII Masking Regex guardrail detects and masks Personally Identifiable Information (PII) in request and response payloads using regex patterns. It supports built-in detectors for common PII types and custom regex patterns for additional entities.

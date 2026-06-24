@@ -1,3 +1,17 @@
+---
+title: "Consume an API secured with an API key"
+description: "Generate an API key for a subscribed API and use it to authenticate requests in the api-key header."
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key.md
+tags:
+  - cloud
+  - devportal
+  - authentication
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Consume an API Secured with API Key
 
 ## Prerequisites

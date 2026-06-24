@@ -1,3 +1,18 @@
+---
+title: "Model weighted round robin"
+description: "Distribute LLM requests across AI models proportionally by weight, giving higher-capacity models a larger share of traffic."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/load-balancing/model-weighted-round-robin/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/load-balancing/model-weighted-round-robin.md
+tags:
+  - cloud
+  - ai-gateway
+  - llm
+  - load-balancing
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Model Weighted Round Robin
 
 ## Overview

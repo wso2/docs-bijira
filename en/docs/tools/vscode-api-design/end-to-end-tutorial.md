@@ -1,3 +1,18 @@
+---
+title: "API Designer end-to-end tutorial"
+description: "Walk through drafting, designing, governing, and fixing an OpenAPI specification end to end using API Designer and GitHub Copilot."
+canonical_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial/
+md_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md
+tags:
+  - tools
+  - vscode
+  - api-design
+  - tutorial
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "tutorial"
+---
+
 # End-to-end tutorial
 
 Follow this guide once to understand the full API Designer workflow using one OpenAPI file.

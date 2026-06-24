@@ -1,3 +1,18 @@
+---
+title: "Govern APIs with API Designer"
+description: "Review AI readiness, REST design, and OWASP security findings for your OpenAPI specification using API Designer governance reports."
+canonical_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis/
+md_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis.md
+tags:
+  - tools
+  - vscode
+  - api-design
+  - governance
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Govern APIs using API Designer
 
 You can use API Designer to assess and improve your OpenAPI 3.x specification for AI readiness, design quality, and secure production use.

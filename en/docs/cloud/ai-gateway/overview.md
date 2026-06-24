@@ -1,3 +1,17 @@
+---
+title: "AI Gateway overview"
+description: "Route, secure, and observe LLM and MCP traffic through the AI Gateway, deployable standalone or managed by the AI Workspace control plane."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/overview.md
+tags:
+  - cloud
+  - ai-gateway
+  - overview
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "overview"
+---
+
 # AI Gateway Overview
 
 The AI Gateway is the standalone runtime plane for routing, securing, and observing AI traffic. It handles Large Language Model (LLM) APIs and Model Context Protocol (MCP) servers, and can run independently or connect to the AI Workspace control plane for centralized management.

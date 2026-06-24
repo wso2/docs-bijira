@@ -1,3 +1,18 @@
+---
+title: "Azure Content Safety guardrail"
+description: "Moderate LLM content with Azure Content Safety, detecting hate speech, sexual content, self-harm, and violence with configurable severity thresholds."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/azure-content-safety/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/azure-content-safety.md
+tags:
+  - cloud
+  - ai-gateway
+  - guardrails
+  - azure
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Azure Content Safety
 
 ## Overview

@@ -1,3 +1,18 @@
+---
+title: "Semantic caching"
+description: "Cache LLM responses using vector similarity search to reduce cost and latency for semantically similar requests."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/semantic-caching/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/semantic-caching.md
+tags:
+  - cloud
+  - ai-gateway
+  - llm
+  - semantic-cache
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Semantic Caching
 
 ## Overview

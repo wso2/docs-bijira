@@ -1,3 +1,17 @@
+---
+title: "Semantic cache policy in AI Workspace"
+description: "Cache LLM responses using vector embeddings and cosine similarity to serve semantically similar future requests without calling the upstream LLM."
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/semantic-cache/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/semantic-cache.md
+tags:
+  - cloud
+  - ai-workspace
+  - semantic-cache
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-22
+content_type: "how-to"
+---
+
 # Semantic Cache
 
 The Semantic Cache policy caches LLM responses and serves them for semantically similar future requests — without calling the upstream LLM. Unlike exact-match caching, it uses vector embeddings and cosine similarity to recognize requests that ask essentially the same question with different wording.

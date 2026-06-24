@@ -1,3 +1,18 @@
+---
+title: "Configure Asgardeo as an external key manager"
+description: "Connect your Asgardeo identity provider to API Platform and the Developer Portal to manage API access control with scopes."
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+tags:
+  - cloud
+  - administer
+  - key-manager
+  - asgardeo
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # Configure Asgardeo as an External Key Manager
 
 Asgardeo is an identity-as-a-service (IDaaS) solution designed to create seamless login experiences for your applications. Asgardeo seamlessly integrates with API Platform, providing powerful API access control through the use of API scopes. This enables restricting API access to designated user groups. By configuring Asgardeo as an external key manager in API Platform, you can leverage your Asgardeo user stores to manage API access control effectively. This guide walks you through the steps to set up Asgardeo as your external key manager.

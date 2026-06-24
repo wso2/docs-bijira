@@ -1,3 +1,18 @@
+---
+title: "View billing and usage"
+description: "Monitor API usage, review invoices, and manage paid subscriptions from the Billing and Usage view in the Developer Portal."
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/view-billing-and-usage/
+md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/view-billing-and-usage.md
+tags:
+  - cloud
+  - monetization
+  - devportal
+  - billing
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-23
+content_type: "how-to"
+---
+
 # View Billing and Usage
 
 The Developer Portal provides a consolidated **Billing & Usage** view where API consumers can monitor usage, review invoices, and manage their paid subscriptions across all subscribed APIs.
