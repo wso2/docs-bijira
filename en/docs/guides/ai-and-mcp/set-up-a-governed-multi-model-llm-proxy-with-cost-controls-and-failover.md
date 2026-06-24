@@ -17,7 +17,7 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to set up a single governed LLM proxy that distributes requests across multiple models from the same provider, enforces per-team token budgets, masks sensitive data before it leaves your network, and attributes every token of cost to the team that spent it. Without this, any application can call any model without limits, costs are invisible until the invoice arrives, and a single overloaded model takes down every team at once.
+This guide shows you how to set up a single governed LLM proxy that distributes requests across multiple models from the same provider, enforces per-team token budgets, masks sensitive data before it leaves your network, and attributes every token of cost to the team that spent it. Without this, any application can call any model without limits, costs are invisible until the invoice arrives, and a single overloaded model takes down every team at once. By the end, you will have a governed LLM proxy with model round-robin, PII masking, and semantic caching deployed and verified against a live Azure OpenAI provider. A companion sample is available to run the full setup locally using Docker.
 
 ---
 
@@ -415,3 +415,11 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 **Add prompt injection protection and OWASP coverage** — extend the guardrail configuration with additional security policies to protect against prompt injection and other LLM-specific threats
 
 **Semantic caching deep-dive with cost comparison** — tune similarity thresholds and measure the cost reduction from caching across your traffic
+
+---
+
+## Try the sample
+
+The companion sample runs this setup end to end using Docker, demonstrating model round-robin, PII masking, and semantic caching against an OpenAI-compatible endpoint.
+
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/llm-cost-control-and-privacy-control).

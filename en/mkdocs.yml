@@ -368,13 +368,13 @@ nav:
           - Standalone Mode: api-gateway/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
           - Kubernetes Operator Mode: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator.md
           - Management CRDs: api-gateway/deployment/deployment-modes/kubernetes/gateway-operator-management-crds.md
-        - High-Availability Production Deployment:
-            - Overview: api-gateway/deployment/high-availability-production-deployment.md
-            - Security Hardening: api-gateway/deployment/production-deployment/security-hardening.md
-            - Database Configuration: api-gateway/deployment/production-deployment/database-configuration.md
-            - Resources & Scaling: api-gateway/deployment/production-deployment/resources-and-scaling.md
-            - Deploy & Verify: api-gateway/deployment/production-deployment/deploy-and-verify.md
-            - Control Plane Connection: api-gateway/deployment/production-deployment/control-plane-connection.md
+      - High-Availability Production Deployment:
+        - Overview: api-gateway/deployment/high-availability-production-deployment.md
+        - Security Hardening: api-gateway/deployment/production-deployment/security-hardening.md
+        - Database Configuration: api-gateway/deployment/production-deployment/database-configuration.md
+        - Resources & Scaling: api-gateway/deployment/production-deployment/resources-and-scaling.md
+        - Deploy & Verify: api-gateway/deployment/production-deployment/deploy-and-verify.md
+        - Control Plane Connection: api-gateway/deployment/production-deployment/control-plane-connection.md
       - Deploying APIs:
         - Bottom-Up Deployment: api-gateway/deployment/deploying-apis/bottom-up-api-deployment.md 
     - Observability:
@@ -463,11 +463,11 @@ nav:
         - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
         - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
         - Find and Connect to an Enterprise MCP Server from the MCP Hub: guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+        - Enforce Token-Based Rate Limiting on an LLM Proxy: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
     - Developer Portal:
         - Go from Zero to a Working API Call Using the Developer Portal: guides/developer-portal/api-discovery-and-tryout.md
-  - Samples:
-    - LLM Proxy - Token Based Rate Limiting: samples/ai-gw-llm-proxy-sample-overview.md
-    - LLM Provider and Proxy - AI Policies for Privacy and Cost Control: samples/AI-gateway-and-llm-failover.md
+    - Monetization:
+        - API Monetization : guides/monetization/api-monetization.md
   - Tools:
     - API Platform CLI:
         - Quick Start Guide: tools/cli/quick-start-guide.md
