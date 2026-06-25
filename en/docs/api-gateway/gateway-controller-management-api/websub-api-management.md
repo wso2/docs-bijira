@@ -218,59 +218,59 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» count|integer|false|none|none|
-|» apis|[allOf]|false|none|none|
+|status|string|false|none|none|
+|count|integer|false|none|none|
+|apis|[allOf]|false|none|none|
 
 *allOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|[WebSubAPIRequest](schemas.md#schemawebsubapirequest)|false|none|none|
-|»»» apiVersion|string|true|none|API specification version|
-|»»» kind|string|true|none|API type|
-|»»» metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
-|»»»» name|string|true|none|Unique handle for the resource|
-|»»»» labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»»» annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»» spec|[WebhookAPIData](schemas.md#schemawebhookapidata)|true|none|none|
-|»»»» displayName|string|true|none|Human-readable API name (must be URL-friendly - only letters, numbers, spaces, hyphens, underscores, and dots allowed)|
-|»»»» version|string|true|none|Semantic version of the API|
-|»»»» context|string|true|none|Base path for all API routes (must start with /, no trailing slash)|
-|»»»» vhosts|object|false|none|Custom virtual hosts/domains for the API|
-|»»»»» main|string|true|none|Custom virtual host/domain for production traffic|
-|»»»»» sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
-|»»»» allChannels|[WebSubAllChannelPolicies](schemas.md#schemawebsuballchannelpolicies)|false|none|Policies applied to all channels, organized by event type.|
-|»»»»» on_subscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»»» policies|[[Policy](schemas.md#schemapolicy)]|false|none|List of policies applied for this event type.|
-|»»»»»»» name|string|true|none|Name of the policy|
-|»»»»»»» version|string|true|none|Version of the policy. Only major-only version is allowed (e.g., v0, v1). Full semantic version (e.g., v1.0.0) is not accepted and will be rejected. The Gateway Controller resolves the major version to the single matching full version installed in the gateway image.|
-|»»»»»»» executionCondition|string|false|none|Expression controlling conditional execution of the policy|
-|»»»»»»» params|object|false|none|Arbitrary parameters for the policy (free-form key/value structure)|
-|»»»»» on_unsubscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»» on_message_received|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»» on_message_delivery|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»» channels|object|false|none|Per-channel configuration keyed by channel name. Each key is a channel name and defines policies applied only to that channel.|
-|»»»»» **additionalProperties**|[WebSubChannel](schemas.md#schemawebsubchannel)|false|none|A single channel definition with optional per-channel policy overrides.|
-|»»»»»» on_subscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»»» on_unsubscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»»» on_message_received|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»»»» on_message_delivery|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
-|»»»» deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration, API keys, and policies are preserved for potential redeployment.|
+|*anonymous*|[WebSubAPIRequest](schemas.md#schemawebsubapirequest)|false|none|none|
+|apiVersion|string|true|none|API specification version|
+|kind|string|true|none|API type|
+|metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
+|name|string|true|none|Unique handle for the resource|
+|labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
+|**additionalProperties**|string|false|none|none|
+|annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
+|**additionalProperties**|string|false|none|none|
+|spec|[WebhookAPIData](schemas.md#schemawebhookapidata)|true|none|none|
+|displayName|string|true|none|Human-readable API name (must be URL-friendly - only letters, numbers, spaces, hyphens, underscores, and dots allowed)|
+|version|string|true|none|Semantic version of the API|
+|context|string|true|none|Base path for all API routes (must start with /, no trailing slash)|
+|vhosts|object|false|none|Custom virtual hosts/domains for the API|
+|main|string|true|none|Custom virtual host/domain for production traffic|
+|sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
+|allChannels|[WebSubAllChannelPolicies](schemas.md#schemawebsuballchannelpolicies)|false|none|Policies applied to all channels, organized by event type.|
+|on_subscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|policies|[[Policy](schemas.md#schemapolicy)]|false|none|List of policies applied for this event type.|
+|name|string|true|none|Name of the policy|
+|version|string|true|none|Version of the policy. Only major-only version is allowed (e.g., v0, v1). Full semantic version (e.g., v1.0.0) is not accepted and will be rejected. The Gateway Controller resolves the major version to the single matching full version installed in the gateway image.|
+|executionCondition|string|false|none|Expression controlling conditional execution of the policy|
+|params|object|false|none|Arbitrary parameters for the policy (free-form key/value structure)|
+|on_unsubscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|on_message_received|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|on_message_delivery|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|channels|object|false|none|Per-channel configuration keyed by channel name. Each key is a channel name and defines policies applied only to that channel.|
+|**additionalProperties**|[WebSubChannel](schemas.md#schemawebsubchannel)|false|none|A single channel definition with optional per-channel policy overrides.|
+|on_subscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|on_unsubscription|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|on_message_received|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|on_message_delivery|[WebSubEventPolicies](schemas.md#schemawebsubeventpolicies)|false|none|Policies for a single event type.|
+|deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration, API keys, and policies are preserved for potential redeployment.|
 
 *and*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|object|false|none|none|
-|»»» status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
-|»»»» id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
-|»»»» state|string|false|none|Desired deployment state reported by the server|
-|»»»» createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
-|»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
-|»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
+|*anonymous*|object|false|none|none|
+|status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
+|state|string|false|none|Desired deployment state reported by the server|
+|createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
+|updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
+|deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
 #### Enumerated Values
 
@@ -888,6 +888,6 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» id|string|false|none|none|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|id|string|false|none|none|

@@ -204,9 +204,9 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» id|string|false|none|none|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|id|string|false|none|none|
 
 ## Manually reload certificates
 
@@ -260,6 +260,6 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» totalBytes|integer|false|none|Total bytes of all loaded certificates|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|totalBytes|integer|false|none|Total bytes of all loaded certificates|
