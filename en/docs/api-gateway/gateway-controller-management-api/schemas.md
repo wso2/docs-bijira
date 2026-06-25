@@ -234,7 +234,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_WebSubAPIRequest">WebSubAPIRequest</h2>
 
@@ -338,7 +338,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_Metadata">Metadata</h2>
 
@@ -368,9 +368,9 @@ and
 |---|---|---|---|---|
 |name|string|true|none|Unique handle for the resource|
 |labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
-|» **additionalProperties**|string|false|none|none|
+|**additionalProperties**|string|false|none|none|
 |annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
-|» **additionalProperties**|string|false|none|none|
+|**additionalProperties**|string|false|none|none|
 
 <h2 id="tocS_APIConfigData">APIConfigData</h2>
 
@@ -455,11 +455,11 @@ and
 |context|string|true|none|Base path for all API routes (must start with /, no trailing slash). Use $version to embed the version in the path (e.g., /reading-list/$version resolves to /reading-list/v1.0).|
 |upstreamDefinitions|[[UpstreamDefinition](#schemaupstreamdefinition)]|false|none|List of reusable upstream definitions with optional timeout configurations|
 |upstream|object|true|none|API-level upstream configuration|
-|» main|[Upstream](#schemaupstream)|true|none|Upstream backend configuration (single target or reference)|
-|» sandbox|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
+|main|[Upstream](#schemaupstream)|true|none|Upstream backend configuration (single target or reference)|
+|sandbox|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
 |vhosts|object|false|none|Custom virtual hosts/domains for the API|
-|» main|string|true|none|Custom virtual host/domain for production traffic|
-|» sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
+|main|string|true|none|Custom virtual host/domain for production traffic|
+|sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
 |subscriptionPlans|[string]|false|none|List of subscription plan names available for this API|
 |policies|[[Policy](#schemapolicy)]|false|none|List of API-level policies applied to all operations unless overridden|
 |operations|[[Operation](#schemaoperation)]|true|none|List of HTTP operations/routes|
@@ -506,8 +506,8 @@ Reusable upstream configuration with optional timeout and load balancing setting
 |basePath|string|false|none|Base path prefix for all endpoints in this upstream (e.g., /api/v2). All requests to this upstream will have this path prepended.|
 |timeout|[UpstreamTimeout](#schemaupstreamtimeout)|false|none|Timeout configuration for upstream requests|
 |upstreams|[object]|true|none|List of backend targets with optional weights for load balancing|
-|» url|string(uri)|true|none|Backend URL (host and port only, path comes from basePath)|
-|» weight|integer|false|none|Weight for load balancing (optional, default 100)|
+|url|string(uri)|true|none|Backend URL (host and port only, path comes from basePath)|
+|weight|integer|false|none|Weight for load balancing (optional, default 100)|
 
 <h2 id="tocS_UpstreamTimeout">UpstreamTimeout</h2>
 
@@ -802,11 +802,11 @@ xor
 |version|string|true|none|Semantic version of the API|
 |context|string|true|none|Base path for all API routes (must start with /, no trailing slash)|
 |vhosts|object|false|none|Custom virtual hosts/domains for the API|
-|» main|string|true|none|Custom virtual host/domain for production traffic|
-|» sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
+|main|string|true|none|Custom virtual host/domain for production traffic|
+|sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
 |allChannels|[WebSubAllChannelPolicies](#schemawebsuballchannelpolicies)|false|none|Policies applied to all channels, organized by event type.|
 |channels|object|false|none|Per-channel configuration keyed by channel name. Each key is a channel name and defines policies applied only to that channel.|
-|» **additionalProperties**|[WebSubChannel](#schemawebsubchannel)|false|none|A single channel definition with optional per-channel policy overrides.|
+|**additionalProperties**|[WebSubChannel](#schemawebsubchannel)|false|none|A single channel definition with optional per-channel policy overrides.|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration, API keys, and policies are preserved for potential redeployment.|
 
 #### Enumerated Values
@@ -1238,7 +1238,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_WebBrokerApiData">WebBrokerApiData</h2>
 
@@ -1397,10 +1397,10 @@ and
 |broker|[WebBrokerApiBroker](#schemawebbrokerapibroker)|true|none|Message broker driver configuration|
 |allChannels|[WebBrokerApiAllChannelPolicies](#schemawebbrokerapiallchannelpolicies)|false|none|Protocol mediation policies applied to all channels|
 |channels|object|true|none|Map of WebSocket channels for bidirectional streaming with Kafka (key is channel name)|
-|» **additionalProperties**|[WebBrokerApiChannel](#schemawebbrokerapichannel)|false|none|WebSocket channel configuration with Kafka topic mapping|
+|**additionalProperties**|[WebBrokerApiChannel](#schemawebbrokerapichannel)|false|none|WebSocket channel configuration with Kafka topic mapping|
 |vhosts|object|false|none|Custom virtual hosts/domains for the API|
-|» main|string|true|none|Custom virtual host/domain for production traffic|
-|» sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
+|main|string|true|none|Custom virtual host/domain for production traffic|
+|sandbox|string|false|none|Custom virtual host/domain for sandbox traffic|
 |deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the API is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
 #### Enumerated Values
@@ -1676,8 +1676,8 @@ Configuration for consuming messages from Kafka to WebSocket
 |apiKey|string|false|none|Optional plain-text API key value for external key injection.<br>If provided, this key will be used instead of generating a new one.<br>The key will be hashed before storage. The key can be in any format<br>(minimum 36 characters). Use this for injecting externally generated<br>API keys.|
 |maskedApiKey|string|false|none|Masked version of the API key for display purposes.<br>Provided by the platform API when injecting pre-hashed keys.|
 |expiresIn|object|false|none|Expiration duration for the API key|
-|» unit|string|true|none|Time unit for expiration|
-|» duration|integer|true|none|Duration value for expiration|
+|unit|string|true|none|Time unit for expiration|
+|duration|integer|true|none|Duration value for expiration|
 |expiresAt|string(date-time)|false|none|Expiration timestamp. If both expiresIn and expiresAt are provided, expiresAt takes precedence.|
 |externalRefId|string|false|none|External reference ID for the API key.<br>This field is optional and used for tracing purposes only.<br>The gateway generates its own internal ID for tracking.|
 |issuer|string|false|none|Identifies the portal that created this key. If provided, only api keys generated from<br>the same portal will be accepted. If not provided, there is no portal restriction.|
@@ -1795,8 +1795,8 @@ Details of an API key
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |expiresIn|object|false|none|Expiration duration for the API key|
-|» unit|string|true|none|Time unit for expiration|
-|» duration|integer|true|none|Duration value for expiration|
+|unit|string|true|none|Time unit for expiration|
+|duration|integer|true|none|Duration value for expiration|
 |expiresAt|string(date-time)|false|none|Expiration timestamp|
 
 #### Enumerated Values
@@ -2267,7 +2267,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_MCPProxyConfigData">MCPProxyConfigData</h2>
 
@@ -2355,13 +2355,13 @@ allOf
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» *anonymous*|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
+|*anonymous*|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
 
 and
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» *anonymous*|[UpstreamAuth](#schemaupstreamauth)|false|none|none|
+|*anonymous*|[UpstreamAuth](#schemaupstreamauth)|false|none|none|
 
 continued
 
@@ -2470,10 +2470,10 @@ continued
 |title|string|false|none|Optional human-readable name of the prompt for display purposes|
 |description|string|false|none|Optional human-readable description|
 |arguments|[object]|false|none|Optional list of arguments for customization|
-|» name|string|true|none|Name of the argument|
-|» description|string|false|none|Description of the argument|
-|» required|boolean|false|none|Whether the argument is required|
-|» title|string|false|none|Optional human-readable title of the argument|
+|name|string|true|none|Name of the argument|
+|description|string|false|none|Description of the argument|
+|required|boolean|false|none|Whether the argument is required|
+|title|string|false|none|Optional human-readable title of the argument|
 
 <h2 id="tocS_ErrorResponse">ErrorResponse</h2>
 
@@ -2650,7 +2650,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_LLMProviderTemplateData">LLMProviderTemplateData</h2>
 
@@ -3009,7 +3009,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_LLMProviderConfigData">LLMProviderConfigData</h2>
 
@@ -3081,13 +3081,13 @@ allOf
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» *anonymous*|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
+|*anonymous*|[Upstream](#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
 
 and
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» *anonymous*|[UpstreamAuth](#schemaupstreamauth)|false|none|none|
+|*anonymous*|[UpstreamAuth](#schemaupstreamauth)|false|none|none|
 
 continued
 
@@ -3127,9 +3127,9 @@ continued
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |auth|object|false|none|none|
-|» type|string|true|none|none|
-|» header|string|false|none|none|
-|» value|string|false|none|none|
+|type|string|true|none|none|
+|header|string|false|none|none|
+|value|string|false|none|none|
 
 #### Enumerated Values
 
@@ -3401,7 +3401,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_LLMProxyConfigData">LLMProxyConfigData</h2>
 
@@ -3548,7 +3548,7 @@ and
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |*anonymous*|object|false|none|none|
-|» status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|status|[ResourceStatus](#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
 
 <h2 id="tocS_SecretConfigData">SecretConfigData</h2>
 

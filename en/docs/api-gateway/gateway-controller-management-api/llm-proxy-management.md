@@ -204,54 +204,54 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» count|integer|false|none|none|
-|» proxies|[allOf]|false|none|none|
+|status|string|false|none|none|
+|count|integer|false|none|none|
+|proxies|[allOf]|false|none|none|
 
 *allOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|[LLMProxyConfigurationRequest](schemas.md#schemallmproxyconfigurationrequest)|false|none|none|
-|»»» apiVersion|string|true|none|Proxy specification version|
-|»»» kind|string|true|none|Proxy kind|
-|»»» metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
-|»»»» name|string|true|none|Unique handle for the resource|
-|»»»» labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»»» annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»» spec|[LLMProxyConfigData](schemas.md#schemallmproxyconfigdata)|true|none|none|
-|»»»» displayName|string|true|none|Human-readable LLM proxy name (must be URL-friendly - only letters, numbers, spaces, hyphens, underscores, and dots allowed)|
-|»»»» version|string|true|none|Semantic version of the LLM proxy|
-|»»»» context|string|false|none|Base path for all API routes (must start with /, no trailing slash)|
-|»»»» vhost|string|false|none|Virtual host name used for routing. Supports standard domain names, subdomains, or wildcard domains. Must follow RFC-compliant hostname rules. Wildcards are only allowed in the left-most label (e.g., *.example.com).|
-|»»»» provider|[LLMProxyProvider](schemas.md#schemallmproxyprovider)|true|none|none|
-|»»»»» id|string|true|none|Unique id of a deployed llm provider|
-|»»»»» auth|[LLMUpstreamAuth](schemas.md#schemallmupstreamauth)|false|none|none|
-|»»»»»» type|string|true|none|none|
-|»»»»»» header|string|false|none|none|
-|»»»»»» value|string|false|none|none|
-|»»»» policies|[[LLMPolicy](schemas.md#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
-|»»»»» name|string|true|none|none|
-|»»»»» version|string|true|none|none|
-|»»»»» paths|[[LLMPolicyPath](schemas.md#schemallmpolicypath)]|true|none|none|
-|»»»»»» path|string|true|none|none|
-|»»»»»» methods|[string]|true|none|none|
-|»»»»»» params|object|true|none|JSON Schema describing the parameters accepted by this policy. This itself is a JSON Schema document.|
-|»»»» deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Proxy is removed from router traffic but configuration and policies are preserved for potential redeployment.|
+|*anonymous*|[LLMProxyConfigurationRequest](schemas.md#schemallmproxyconfigurationrequest)|false|none|none|
+|apiVersion|string|true|none|Proxy specification version|
+|kind|string|true|none|Proxy kind|
+|metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
+|name|string|true|none|Unique handle for the resource|
+|labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
+|**additionalProperties**|string|false|none|none|
+|annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
+|**additionalProperties**|string|false|none|none|
+|spec|[LLMProxyConfigData](schemas.md#schemallmproxyconfigdata)|true|none|none|
+|displayName|string|true|none|Human-readable LLM proxy name (must be URL-friendly - only letters, numbers, spaces, hyphens, underscores, and dots allowed)|
+|version|string|true|none|Semantic version of the LLM proxy|
+|context|string|false|none|Base path for all API routes (must start with /, no trailing slash)|
+|vhost|string|false|none|Virtual host name used for routing. Supports standard domain names, subdomains, or wildcard domains. Must follow RFC-compliant hostname rules. Wildcards are only allowed in the left-most label (e.g., *.example.com).|
+|provider|[LLMProxyProvider](schemas.md#schemallmproxyprovider)|true|none|none|
+|id|string|true|none|Unique id of a deployed llm provider|
+|auth|[LLMUpstreamAuth](schemas.md#schemallmupstreamauth)|false|none|none|
+|type|string|true|none|none|
+|header|string|false|none|none|
+|value|string|false|none|none|
+|policies|[[LLMPolicy](schemas.md#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
+|name|string|true|none|none|
+|version|string|true|none|none|
+|paths|[[LLMPolicyPath](schemas.md#schemallmpolicypath)]|true|none|none|
+|path|string|true|none|none|
+|methods|[string]|true|none|none|
+|params|object|true|none|JSON Schema describing the parameters accepted by this policy. This itself is a JSON Schema document.|
+|deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Proxy is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
 *and*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|object|false|none|none|
-|»»» status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
-|»»»» id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
-|»»»» state|string|false|none|Desired deployment state reported by the server|
-|»»»» createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
-|»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
-|»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
+|*anonymous*|object|false|none|none|
+|status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
+|state|string|false|none|Desired deployment state reported by the server|
+|createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
+|updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
+|deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
 #### Enumerated Values
 
@@ -491,9 +491,9 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» id|string|false|none|none|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|id|string|false|none|none|
 
 ## Create a new API key for an LLM proxy
 

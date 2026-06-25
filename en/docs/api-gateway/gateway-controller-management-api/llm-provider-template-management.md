@@ -243,54 +243,54 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» count|integer|false|none|none|
-|» templates|[allOf]|false|none|none|
+|status|string|false|none|none|
+|count|integer|false|none|none|
+|templates|[allOf]|false|none|none|
 
 *allOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|[LLMProviderTemplateRequest](schemas.md#schemallmprovidertemplaterequest)|false|none|none|
-|»»» apiVersion|string|true|none|Template specification version|
-|»»» kind|string|true|none|Template kind|
-|»»» metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
-|»»»» name|string|true|none|Unique handle for the resource|
-|»»»» labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»»» annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»» spec|[LLMProviderTemplateData](schemas.md#schemallmprovidertemplatedata)|true|none|none|
-|»»»» displayName|string|true|none|Human-readable LLM Template name|
-|»»»» promptTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»» location|string|true|none|Where to find the token information|
-|»»»»» identifier|string|true|none|JSONPath expression or header name to identify the token value|
-|»»»» completionTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»» totalTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»» remainingTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»» requestModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»» responseModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»» resourceMappings|[LLMProviderTemplateResourceMappings](schemas.md#schemallmprovidertemplateresourcemappings)|false|none|none|
-|»»»»» resources|[[LLMProviderTemplateResourceMapping](schemas.md#schemallmprovidertemplateresourcemapping)]|false|none|none|
-|»»»»»» resource|string|true|none|Resource path pattern for this mapping|
-|»»»»»» promptTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»»» completionTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»»» totalTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»»» remainingTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»»» requestModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
-|»»»»»» responseModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|*anonymous*|[LLMProviderTemplateRequest](schemas.md#schemallmprovidertemplaterequest)|false|none|none|
+|apiVersion|string|true|none|Template specification version|
+|kind|string|true|none|Template kind|
+|metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
+|name|string|true|none|Unique handle for the resource|
+|labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
+|**additionalProperties**|string|false|none|none|
+|annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
+|**additionalProperties**|string|false|none|none|
+|spec|[LLMProviderTemplateData](schemas.md#schemallmprovidertemplatedata)|true|none|none|
+|displayName|string|true|none|Human-readable LLM Template name|
+|promptTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|location|string|true|none|Where to find the token information|
+|identifier|string|true|none|JSONPath expression or header name to identify the token value|
+|completionTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|totalTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|remainingTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|requestModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|responseModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|resourceMappings|[LLMProviderTemplateResourceMappings](schemas.md#schemallmprovidertemplateresourcemappings)|false|none|none|
+|resources|[[LLMProviderTemplateResourceMapping](schemas.md#schemallmprovidertemplateresourcemapping)]|false|none|none|
+|resource|string|true|none|Resource path pattern for this mapping|
+|promptTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|completionTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|totalTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|remainingTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|requestModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
+|responseModel|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
 
 *and*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|object|false|none|none|
-|»»» status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
-|»»»» id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
-|»»»» state|string|false|none|Desired deployment state reported by the server|
-|»»»» createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
-|»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
-|»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
+|*anonymous*|object|false|none|none|
+|status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
+|state|string|false|none|Desired deployment state reported by the server|
+|createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
+|updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
+|deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
 #### Enumerated Values
 
@@ -581,6 +581,6 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» id|string|false|none|none|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|id|string|false|none|none|

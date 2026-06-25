@@ -288,91 +288,91 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» count|integer|false|none|none|
-|» providers|[allOf]|false|none|none|
+|status|string|false|none|none|
+|count|integer|false|none|none|
+|providers|[allOf]|false|none|none|
 
 *allOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|[LLMProviderConfigurationRequest](schemas.md#schemallmproviderconfigurationrequest)|false|none|none|
-|»»» apiVersion|string|true|none|Provider specification version|
-|»»» kind|string|true|none|Provider kind|
-|»»» metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
-|»»»» name|string|true|none|Unique handle for the resource|
-|»»»» labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»»» annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
-|»»»»» **additionalProperties**|string|false|none|none|
-|»»» spec|[LLMProviderConfigData](schemas.md#schemallmproviderconfigdata)|true|none|none|
-|»»»» displayName|string|true|none|Human-readable LLM Provider name|
-|»»»» version|string|true|none|Semantic version of the LLM Provider|
-|»»»» context|string|false|none|Base path for all API routes (must start with /, no trailing slash)|
-|»»»» vhost|string|false|none|Virtual host name used for routing. Supports standard domain names, subdomains, or wildcard domains. Must follow RFC-compliant hostname rules. Wildcards are only allowed in the left-most label (e.g., *.example.com).|
-|»»»» template|string|true|none|Template name to use for this LLM Provider|
-|»»»» upstream|any|true|none|none|
+|*anonymous*|[LLMProviderConfigurationRequest](schemas.md#schemallmproviderconfigurationrequest)|false|none|none|
+|apiVersion|string|true|none|Provider specification version|
+|kind|string|true|none|Provider kind|
+|metadata|[Metadata](schemas.md#schemametadata)|true|none|none|
+|name|string|true|none|Unique handle for the resource|
+|labels|object|false|none|Labels are key-value pairs for organizing and selecting APIs. Keys must not contain spaces.|
+|**additionalProperties**|string|false|none|none|
+|annotations|object|false|none|Annotations are arbitrary non-identifying metadata. Use domain-prefixed keys.|
+|**additionalProperties**|string|false|none|none|
+|spec|[LLMProviderConfigData](schemas.md#schemallmproviderconfigdata)|true|none|none|
+|displayName|string|true|none|Human-readable LLM Provider name|
+|version|string|true|none|Semantic version of the LLM Provider|
+|context|string|false|none|Base path for all API routes (must start with /, no trailing slash)|
+|vhost|string|false|none|Virtual host name used for routing. Supports standard domain names, subdomains, or wildcard domains. Must follow RFC-compliant hostname rules. Wildcards are only allowed in the left-most label (e.g., *.example.com).|
+|template|string|true|none|Template name to use for this LLM Provider|
+|upstream|any|true|none|none|
 
 *allOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»»»»» *anonymous*|[Upstream](schemas.md#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
-|»»»»»» url|string(uri)|false|none|Direct backend URL to route traffic to|
-|»»»»»» ref|string|false|none|Reference to a predefined upstreamDefinition|
-|»»»»»» hostRewrite|string|false|none|Controls how the Host header is handled when routing to the upstream. `auto` delegates host rewriting to Envoy, which rewrites the Host header using the upstream cluster host. `manual` disables automatic rewriting and expects explicit configuration.|
+|*anonymous*|[Upstream](schemas.md#schemaupstream)|false|none|Upstream backend configuration (single target or reference)|
+|url|string(uri)|false|none|Direct backend URL to route traffic to|
+|ref|string|false|none|Reference to a predefined upstreamDefinition|
+|hostRewrite|string|false|none|Controls how the Host header is handled when routing to the upstream. `auto` delegates host rewriting to Envoy, which rewrites the Host header using the upstream cluster host. `manual` disables automatic rewriting and expects explicit configuration.|
 
 *oneOf*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»»»»»» *anonymous*|object|false|none|none|
+|*anonymous*|object|false|none|none|
 
 *xor*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»»»»»» *anonymous*|object|false|none|none|
+|*anonymous*|object|false|none|none|
 
 *and*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»»»»» *anonymous*|[UpstreamAuth](schemas.md#schemaupstreamauth)|false|none|none|
-|»»»»»» auth|object|false|none|none|
-|»»»»»»» type|string|true|none|none|
-|»»»»»»» header|string|false|none|none|
-|»»»»»»» value|string|false|none|none|
+|*anonymous*|[UpstreamAuth](schemas.md#schemaupstreamauth)|false|none|none|
+|auth|object|false|none|none|
+|type|string|true|none|none|
+|header|string|false|none|none|
+|value|string|false|none|none|
 
 *continued*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»»»» accessControl|[LLMAccessControl](schemas.md#schemallmaccesscontrol)|true|none|none|
-|»»»»» mode|string|true|none|Access control mode|
-|»»»»» exceptions|[[RouteException](schemas.md#schemarouteexception)]|false|none|Path exceptions to the access control mode|
-|»»»»»» path|string|true|none|Path pattern|
-|»»»»»» methods|[string]|true|none|HTTP methods|
-|»»»» policies|[[LLMPolicy](schemas.md#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
-|»»»»» name|string|true|none|none|
-|»»»»» version|string|true|none|none|
-|»»»»» paths|[[LLMPolicyPath](schemas.md#schemallmpolicypath)]|true|none|none|
-|»»»»»» path|string|true|none|none|
-|»»»»»» methods|[string]|true|none|none|
-|»»»»»» params|object|true|none|JSON Schema describing the parameters accepted by this policy. This itself is a JSON Schema document.|
-|»»»» deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Provider is removed from router traffic but configuration and policies are preserved for potential redeployment.|
+|accessControl|[LLMAccessControl](schemas.md#schemallmaccesscontrol)|true|none|none|
+|mode|string|true|none|Access control mode|
+|exceptions|[[RouteException](schemas.md#schemarouteexception)]|false|none|Path exceptions to the access control mode|
+|path|string|true|none|Path pattern|
+|methods|[string]|true|none|HTTP methods|
+|policies|[[LLMPolicy](schemas.md#schemallmpolicy)]|false|none|List of policies applied only to this operation (overrides or adds to API-level policies)|
+|name|string|true|none|none|
+|version|string|true|none|none|
+|paths|[[LLMPolicyPath](schemas.md#schemallmpolicypath)]|true|none|none|
+|path|string|true|none|none|
+|methods|[string]|true|none|none|
+|params|object|true|none|JSON Schema describing the parameters accepted by this policy. This itself is a JSON Schema document.|
+|deploymentState|string|false|none|Desired deployment state - 'deployed' (default) or 'undeployed'. When set to 'undeployed', the LLM Provider is removed from router traffic but configuration and policies are preserved for potential redeployment.|
 
 *and*
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|»» *anonymous*|object|false|none|none|
-|»»» status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
-|»»»» id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
-|»»»» state|string|false|none|Desired deployment state reported by the server|
-|»»»» createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
-|»»»» updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
-|»»»» deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
+|*anonymous*|object|false|none|none|
+|status|[ResourceStatus](schemas.md#schemaresourcestatus)|false|read-only|Server-managed lifecycle fields. Populated on responses.|
+|id|string|false|none|Unique identifier assigned by the server (equal to metadata.name)|
+|state|string|false|none|Desired deployment state reported by the server|
+|createdAt|string(date-time)|false|none|Timestamp when the resource was first created (UTC)|
+|updatedAt|string(date-time)|false|none|Timestamp when the resource was last updated (UTC)|
+|deployedAt|string(date-time)|false|none|Timestamp when the resource was last deployed (omitted when undeployed)|
 
 #### Enumerated Values
 
@@ -700,9 +700,9 @@ Status Code **200**
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|» status|string|false|none|none|
-|» message|string|false|none|none|
-|» id|string|false|none|none|
+|status|string|false|none|none|
+|message|string|false|none|none|
+|id|string|false|none|none|
 
 ## Create a new API key for an LLM provider
 
