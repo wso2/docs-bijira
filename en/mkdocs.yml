@@ -789,7 +789,6 @@ extra:
     - title: Developer Portal
       options:
         - verticle-line
-        - divider
     - title: API Manager
       options:
         - verticle-line
