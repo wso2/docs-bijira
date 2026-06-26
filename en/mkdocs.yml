@@ -468,6 +468,8 @@ nav:
         - Go from Zero to a Working API Call Using the Developer Portal: guides/developer-portal/api-discovery-and-tryout.md
     - Monetization:
         - API Monetization : guides/monetization/api-monetization.md
+    - Gateway Federation:
+        - Discover APIs from AWS API Gateway: guides/gateway-federation/discover-apis-from-aws-api-gateway.md
   - Tools:
     - API Platform CLI:
         - Quick Start Guide: tools/cli/quick-start-guide.md
