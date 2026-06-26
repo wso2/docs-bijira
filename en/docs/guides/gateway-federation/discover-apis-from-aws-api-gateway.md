@@ -115,7 +115,7 @@ A **stage** is a named deployment snapshot in AWS API Gateway (for example, `pro
     | **Deployment stage** | `prod`             |
     | **Deployment description** | Initial deployment |
 
-3. Click **Deploy**.
+4. Click **Deploy**.
 
 **Expected result:** AWS API Gateway displays the **Stage Editor** for the `prod` stage.
 
@@ -225,6 +225,10 @@ The discovery results table lists every API found on the selected gateways, alon
 ## Step 5: Navigate to the discovered API overview
 
 Each API added from a connected third party gateway has its own overview page in API Platform that shows the gateway metadata captured at discovery time.
+
+1. On the project **Overview** page, click the name of the API you just added (for example, `PetStore`).
+
+**Expected result:** The API overview page opens and shows the endpoint URL, API specification, and gateway metadata captured at discovery time.
 
 ### 5.1 Check policy compliance
 
