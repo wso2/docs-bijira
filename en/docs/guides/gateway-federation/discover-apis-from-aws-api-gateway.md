@@ -17,7 +17,7 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to discover APIs from AWS API Gateway and bring them under centralized governance in WSO2 API Platform. Connecting a third party gateway lets API Platform discover its APIs, apply policies, and surface them in the Developer Portal, all without rerouting any traffic. By the end, you'll have AWS API Gateway connected as a third party gateway, with its APIs discovered and visible in your project.
+This guide shows you how to discover APIs from AWS API Gateway and bring them under centralized governance. Connecting a third party gateway to WSO2 API Platform lets API Platform discover its APIs, apply policies, and surface them in the Developer Portal, all without rerouting any traffic. By the end, you'll have AWS API Gateway connected as a third party gateway, with its APIs discovered and visible in your project.
 
 ---
 
@@ -158,9 +158,9 @@ API Platform connects to AWS API Gateway using an **IAM user's** (AWS Identity a
 Now that you have AWS credentials, register AWS API Gateway as a Third party gateway in API Platform. This step requires admin access to your organization.
 
 1. Sign in to the API Platform Console.
-2. Go to the organization level.
+2. In the top navigation bar, select your organization from the organization switcher.
 3. In the left navigation menu, click **Admin**, then click **Gateways**.
-4. Select Third Party Tab.
+4. Select the **Third Party** tab.
 5. Click **Add Third Party Gateway**.
 6. Fill in the gateway configuration:
 
@@ -194,6 +194,8 @@ With the third party gateway registered, you can discover the REST APIs it hosts
 
     ![Create New page showing Discover APIs option](../../assets/img/guides/gateway-federation/discover-apis.png){.cInlineImage-full}
 
+**Expected result:** The **Select Gateways for API Discovery** page opens and shows the list of registered third party gateways.
+
 ### 4.2 Select gateways and run discovery
 
 1. On the **Select Gateways** page, check the box next to each gateway you want to discover from. Select `productionawsapigateway`.
@@ -211,7 +213,7 @@ With the third party gateway registered, you can discover the REST APIs it hosts
 The discovery results table lists every API found on the selected gateways, along with the gateway name it was discovered from.
 
 1. Review the list of discovered APIs.
-2. For each API you want to add to Platform API, click **Create** next to the API name. API Platform creates a reference to that API in the API Platform.
+2. For each API you want to add to your project, click **Create** next to the API name. API Platform creates a reference to that API in the project.
    ![Discovered APIs table listing APIs found on the selected gateways with a Create button for each](../../assets/img/guides/gateway-federation/create-api.png){.cInlineImage-full}
 3. Repeat for all APIs you want to add.
 4. When done, navigate to the project **Overview** page to confirm the APIs appear there.
@@ -277,12 +279,10 @@ Publishing the API makes it discoverable in the Developer Portal so developers c
 
 ## What you learned
 
-- Created and deployed a REST API to a stage in AWS API Gateway.
-- Created a scoped IAM user with `AmazonAPIGatewayAdministrator` permission and generated secure access credentials.
+- Created and deployed a REST API in AWS API Gateway and generated scoped IAM credentials for API Platform to use.
 - Registered AWS API Gateway as an external gateway in WSO2 API Platform using IAM credentials.
 - Ran API discovery to pull REST API metadata from the registered gateway into API Platform.
-- Brought REST APIs from the connected third party gateway under governance, making them visible in the API Platform console.
-- Checked policy compliance for a discovered API using the Compliance dashboard.
+- Brought REST APIs under governance in API Platform and checked policy compliance using the Compliance dashboard.
 - Published the API to the Developer Portal so developers can discover and subscribe to it, while all invocations continue to go directly to AWS API Gateway.
 
 ---
