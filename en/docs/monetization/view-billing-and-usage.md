@@ -1,8 +1,8 @@
 ---
 title: "View billing and usage"
 description: "Monitor API usage, review invoices, and manage paid subscriptions from the Billing and Usage view in the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/view-billing-and-usage/
-md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/view-billing-and-usage.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/view-billing-and-usage/
+md_url: https://wso2.com/api-platform/docs/monetization/view-billing-and-usage.md
 tags:
   - cloud
   - monetization

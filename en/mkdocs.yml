@@ -291,14 +291,6 @@ nav:
         - Compliance Dashboard: cloud/monitoring-and-insights/compliance.md
         - Integrate API Platform with Moesif: cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
         - API Platform Status Page: cloud/monitoring-and-insights/status-page.md
-    - API Monetization:
-        - Overview: cloud/api-monetization/overview.md
-        - Monetizing APIs:
-            - Getting Started: cloud/api-monetization/getting-started.md
-            - Manage Paid Subscription Plans: cloud/api-monetization/manage-paid-subscription-plans.md
-        - Consume Monetized APIs:
-            - Subscribe to a Paid Plan: cloud/api-monetization/subscribe-to-paid-plan.md
-            - View Billing and Usage: cloud/api-monetization/view-billing-and-usage.md
     - Administer:
         - Create API Subscription Plans: cloud/administer/settings/create-api-subscription-plans.md
         - Configure a Custom Domain for Your Organization: cloud/administer/settings/configure-a-custom-domain-for-your-organization.md
@@ -453,8 +445,16 @@ nav:
     - Analytics:
         - Moesif Analytics: ai-gateway/analytics/moesif-analytics.md
         - Analytics Header Filter: ai-gateway/analytics/analytics-header-filter.md
-  - Analytics & Monetization: 
-    - Overview: analytics-and-monetization/overview.md
+  - Analytics: 
+    - Overview: analytics/overview.md
+  - Monetization:
+    - Overview: monetization/overview.md
+    - Monetizing APIs:
+        - Getting Started: monetization/getting-started.md
+        - Manage Paid Subscription Plans: monetization/manage-paid-subscription-plans.md
+    - Consume Monetized APIs:
+        - Subscribe to a Paid Plan: monetization/subscribe-to-paid-plan.md
+        - View Billing and Usage: monetization/view-billing-and-usage.md
   - Policy Hub:
     - Overview: policy-hub/overview.md
   - Guides:
@@ -601,11 +601,11 @@ plugins:
         ai-workspace/policies/rate-limit/token-based-rate-limit.md: cloud/ai-workspace/policies/rate-limit/token-based-rate-limit.md
         ai-workspace/policies/writing-an-ai-policy.md: cloud/ai-workspace/policies/writing-an-ai-policy.md
         # API Monetization
-        api-monetization/getting-started.md: cloud/api-monetization/getting-started.md
-        api-monetization/manage-paid-subscription-plans.md: cloud/api-monetization/manage-paid-subscription-plans.md
-        api-monetization/overview.md: cloud/api-monetization/overview.md
-        api-monetization/subscribe-to-paid-plan.md: cloud/api-monetization/subscribe-to-paid-plan.md
-        api-monetization/view-billing-and-usage.md: cloud/api-monetization/view-billing-and-usage.md
+        api-monetization/getting-started.md: monetization/getting-started.md
+        api-monetization/manage-paid-subscription-plans.md: monetization/manage-paid-subscription-plans.md
+        api-monetization/overview.md: monetization/overview.md
+        api-monetization/subscribe-to-paid-plan.md: monetization/subscribe-to-paid-plan.md
+        api-monetization/view-billing-and-usage.md: monetization/view-billing-and-usage.md
         # API Platform Gateway
         api-platform-gateway/analytics.md: cloud/api-platform-gateway/analytics.md
         api-platform-gateway/apply-custom-policies-to-apis.md: cloud/api-platform-gateway/apply-custom-policies-to-apis.md
@@ -801,7 +801,11 @@ extra:
       options:
         - verticle-line
         - divider
-    - title: Analytics & Monetization
+    - title: Analytics
+      options:
+        - verticle-line
+        - divider
+    - title: Monetization
       options:
         - verticle-line
         - divider
@@ -896,6 +900,10 @@ extra:
         level: 1
     API Manager:
         icon: octicons/sliders-16
+    Analytics:
+        icon: octicons/graph-16
+    Monetization:
+        icon: octicons/credit-card-16
     Policy Hub:
         icon: octicons/package-16
 

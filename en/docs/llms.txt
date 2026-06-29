@@ -214,14 +214,17 @@
 - [Integrate with Moesif](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md): Manually connect an existing Moesif organization to API Platform and view API usage insights on the Moesif dashboard
 - [API Platform Status Page](https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/status-page.md): Check real-time service availability, active incidents, and scheduled maintenance for WSO2 API Platform Cloud
 
-## API Monetization
+## Analytics
 
-- [API Monetization Overview](https://wso2.com/api-platform/docs/cloud/api-monetization/overview.md): Generate revenue from APIs with Stripe-powered paid subscription plans and flexible pricing models
-- [Monetization Getting Started](https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started.md): Connect a Stripe account and set up your first paid subscription plan
-- [Manage Paid Subscription Plans](https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans.md): Create and configure paid subscription tiers
-- [Subscribe to a Paid Plan](https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan.md): How consumers subscribe to a paid API subscription plan via Stripe checkout
-- [View Billing and Usage](https://wso2.com/api-platform/docs/cloud/api-monetization/view-billing-and-usage.md): View consumption metrics and billing statements for paid subscriptions
-- [Analytics and Monetization Overview](https://wso2.com/api-platform/docs/analytics-and-monetization/overview.md): High-level overview of Moesif capabilities: analytics, metered billing, governance, and alerting
+- [API Analytics with Moesif](https://wso2.com/api-platform/docs/analytics/overview.md): Set up Moesif Basic in WSO2 API Platform Cloud or self-hosted gateways, configure real-time alerts, and explore analytics dashboards for APIs, LLM proxies, and MCP servers
+
+## Monetization
+
+- [API Monetization Overview](https://wso2.com/api-platform/docs/monetization/overview.md): Generate revenue from APIs with Stripe-powered paid subscription plans and flexible pricing models
+- [Monetization Getting Started](https://wso2.com/api-platform/docs/monetization/getting-started.md): Connect a Stripe account and set up your first paid subscription plan
+- [Manage Paid Subscription Plans](https://wso2.com/api-platform/docs/monetization/manage-paid-subscription-plans.md): Create and configure paid subscription tiers
+- [Subscribe to a Paid Plan](https://wso2.com/api-platform/docs/monetization/subscribe-to-paid-plan.md): How consumers subscribe to a paid API subscription plan via Stripe checkout
+- [View Billing and Usage](https://wso2.com/api-platform/docs/monetization/view-billing-and-usage.md): View consumption metrics and billing statements for paid subscriptions
 
 ## Administer
 

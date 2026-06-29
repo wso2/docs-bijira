@@ -1,8 +1,8 @@
 ---
 title: "Subscribe to a paid plan"
 description: "Subscribe an application to a paid API subscription plan in the Developer Portal using Stripe checkout."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan/
-md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/subscribe-to-paid-plan.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/subscribe-to-paid-plan/
+md_url: https://wso2.com/api-platform/docs/monetization/subscribe-to-paid-plan.md
 tags:
   - cloud
   - monetization
