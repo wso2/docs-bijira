@@ -8,7 +8,7 @@ tags:
   - mcp
   - quickstart
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-18
+last_updated: 2026-06-30
 content_type: "quickstart"
 ---
 
@@ -17,6 +17,21 @@ content_type: "quickstart"
 API Platform provides a complete solution for transforming existing APIs into intelligent, AI-ready tools using the Model Context Protocol (MCP). With a centralized control plane, API Platform simplifies the entire lifecycle of MCP server management from creation to discovery delivering a seamless experience for both API developers and AI agent builders.
 
 In this tutorial, you will use API Platform to create an MCP Server from an HTTP backend, test it using the MCP Playground, publish it, and connect it with an MCP client.
+
+!!! info "Watch the video walkthrough"
+    [Check out this quick start on YouTube](https://youtu.be/xwa-7ZUfxRc?rel=0) or watch below.
+
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/xwa-7ZUfxRc?rel=0" 
+  title="YouTube video player" 
+  style="border: 0;" 
+  loading="lazy" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>
+
 
 ## Prerequisites
 
