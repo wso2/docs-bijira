@@ -8,7 +8,7 @@ tags:
   - moesif
   - api-management
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-11
+last_updated: 2026-06-30
 content_type: "overview"
 ---
   
@@ -28,19 +28,6 @@ Moesif is available in:
 For managed SaaS environments, setup is executed entirely through the cloud Console.
 
 When you create an organization using the Console, you can start using Moesif Basic right away without any additional steps. To access it, from the organization or project view in the Console, select **Insights** and then **API Insights** in the navigation menu.
-
-If you have a separate Moesif account or subscription, you can integrate it from the Console through these steps:
-
-1. In the organization view, select **Admin** and then select **Settings**.  
-   2. Go to the **Moesif Dashboard** tab and enable Moesif API analytics for the organization.  
-   3. In the advanced settings, specify the desired environment type and paste your Moesif Application ID.  
-   4. Select Add.
-
-You can always access the Application ID any time by following these steps after logging into [Moesif Portal](https://moesif.com/wrap):
-
-1. Select the account icon to bring up the settings menu.  
-2. Select **Installation** or **API Keys**.  
-3. Copy your Moesif Application ID from the **Collector Application ID** field.
 
 ### Self-Hosted Platform Gateway (WSO2 API Platform)
 
