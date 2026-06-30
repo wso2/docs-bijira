@@ -469,6 +469,8 @@ nav:
     - Monetization:
         - API Monetization : guides/monetization/api-monetization.md
         - MCP Tool Monetization: guides/monetization/mcp-tool-monetization.md
+    - Gateway Federation:
+        - Discover APIs from AWS API Gateway: guides/gateway-federation/discover-apis-from-aws-api-gateway.md
   - Tools:
     - API Platform CLI:
         - Quick Start Guide: tools/cli/quick-start-guide.md
