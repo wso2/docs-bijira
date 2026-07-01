@@ -1070,16 +1070,16 @@ extra:
       slug: api-gateway
       default: "1.1.0"
       versions:
-        - "next"
         - "1.1.0"
         - "1.0.0"
+        - "next"
     AI Gateway:
       slug: ai-gateway
       default: "1.1.0"
       versions:
-        - "next"
         - "1.1.0"
         - "1.0.0"
+        - "next"
   expanded_navs:
     - title: Cloud
       options:
