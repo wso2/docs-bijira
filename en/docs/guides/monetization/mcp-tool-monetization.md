@@ -113,6 +113,9 @@ curl http://localhost:9094/health
 
 **Expected result:** The health endpoint returns a success response, confirming the gateway is up.
 
+![Health endpoint returns success response](../../assets/img/monetization/mcp-monetization/health-success.png){.cInlineImage-full}
+
+
 !!! tip
     Keep the distribution directory open in a terminal. You'll edit `config.toml` inside it in Step 3 and restart the stack to apply the analytics configuration.
 
@@ -251,6 +254,10 @@ In Moesif, define a billing meter that counts MCP tool calls. This is where you 
 4. Save the meter.
 
 **Expected result:** The meter aggregates incoming MCP tool-call events into a billable quantity per consumer.
+
+![Billed MCP tool calls](../../assets/img/monetization/mcp-monetization/billing-meter.png){.cInlineImage-full}
+
+
 
 !!! note
     Because the gateway publishes the consumer identity (from the validated JWT) and the request path with each event, you can meter per tool, per consumer, or per plan. See the [Moesif metered billing documentation](https://www.moesif.com/docs/metered-billing/) for meter configuration details.
