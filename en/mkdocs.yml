@@ -185,10 +185,6 @@ nav:
             - Prompt Decorator: cloud/ai-gateway/llm/prompt-management/prompt-decorator.md
             - Prompt Template: cloud/ai-gateway/llm/prompt-management/prompt-template.md
           - Semantic Caching: cloud/ai-gateway/llm/semantic-caching.md
-          - AI Tools:
-            - Claude Code configuration with AI Gateway: cloud/ai-gateway/llm/ai-tools/claude-code-configuration-with-ai-gateway.md
-            - Google Gemini CLI configuration with AI Gateway: cloud/ai-gateway/llm/ai-tools/gemini-cli-configuration-with-ai-gateway.md
-            - OpenAI Codex CLI configuration with AI Gateway: cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway.md
         - MCP:
           - Quick Start Guide: cloud/ai-gateway/mcp/quick-start-guide.md
           - Policies:
@@ -675,6 +671,10 @@ nav:
         - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
         - Find and Connect to an Enterprise MCP Server from the MCP Hub: guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
         - Enforce Token-Based Rate Limiting on an LLM Proxy: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
+        - AI Coding Assistants:
+            - Configure Claude Code with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
+            - Configure Google Gemini CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
+            - Configure OpenAI Codex CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md
     - Developer Portal:
         - Go from Zero to a Working API Call Using the Developer Portal: guides/developer-portal/api-discovery-and-tryout.md
     - Monetization:
@@ -862,6 +862,10 @@ plugins:
         ai-gateway/mcp/policies/mcp-authorization.md: cloud/ai-gateway/mcp/policies/mcp-authorization.md
         ai-gateway/mcp/policies/mcp-rewrite.md: cloud/ai-gateway/mcp/policies/mcp-rewrite.md
         ai-gateway/observability/index.md: cloud/ai-gateway/observability/index.md
+        # AI Tools guides moved from Cloud > AI Gateway to Guides > AI and MCP > AI Coding Assistants
+        cloud/ai-gateway/llm/ai-tools/claude-code-configuration-with-ai-gateway.md: guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
+        cloud/ai-gateway/llm/ai-tools/gemini-cli-configuration-with-ai-gateway.md: guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
+        cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway.md: guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md
         # AI Workspace
         ai-workspace/ai-gateways/setting-up.md: cloud/ai-workspace/ai-gateways/setting-up.md
         ai-workspace/configure-inbound-auth.md: cloud/ai-workspace/configure-inbound-auth.md

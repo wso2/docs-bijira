@@ -1,15 +1,15 @@
 ---
 title: "Configure OpenAI Codex CLI with AI Gateway"
 description: "Route OpenAI Codex CLI requests through the AI Gateway using an OpenAI LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/ai-tools/codex-configuration-with-ai-gateway.md
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md
 tags:
-  - cloud
-  - ai-gateway
-  - ai-tools
+  - guides
+  - ai-and-mcp
+  - ai-coding-assistants
   - codex-cli
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-22
+last_updated: 2026-07-01
 content_type: "how-to"
 ---
 
@@ -267,7 +267,7 @@ WSO2 provides integrated analytics, powered by Moesif, and also supports integra
 
 The following example shows Moesif being used to view analytics.  
 
-[![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/analytics-example.png)
+[![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/analytics-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/analytics-example.png)
 
 For more information on Analytics, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/monitoring-and-insights/integrate-bijira-with-moesif/)
 
@@ -281,7 +281,7 @@ By applying guardrails, you can enforce security and compliance policies.
 
 For example, a **PII Masking Regex Guardrail** can be configured in the request flow to prevent Personally Identifiable Information (PII) from reaching the OpenAI API. If a user submits a prompt containing PII, the guardrail evaluates the request against defined patterns and redacts them before they reach the OpenAI API.
 
-[![Codex CLI terminal showing phone number redacted as asterisks after confirming PII masking guardrail intercepted the value](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-guardrail-redacted-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-guardrail-redacted-example.png)
+[![Codex CLI terminal showing phone number redacted as asterisks after confirming PII masking guardrail intercepted the value](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-guardrail-redacted-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-guardrail-redacted-example.png)
 
 For more information on AI Guardrails, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/guardrails/pii-masking-regex/)
 
@@ -297,7 +297,7 @@ This helps control token consumption and avoid unexpected costs.
 
 The following screenshot illustrates Codex CLI operating under a configured AI Gateway rate limit.
 
-[![Codex CLI terminal showing a working indicator at the bottom while processing a WSO2-related query](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-rate-limit-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-rate-limit-example.png)
+[![Codex CLI terminal showing a working indicator at the bottom while processing a WSO2-related query](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-rate-limit-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-rate-limit-example.png)
 
 For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
 
@@ -320,6 +320,6 @@ You are operating behind an enterprise AI gateway. Follow these rules:
 
 Once configured, every request sent from Codex CLI is automatically modified by the Gateway to include this instruction before being forwarded to OpenAI.
 
-[![Codex CLI terminal showing response ending with "Routed through WSO2 AI Gateway" footer added by Prompt Decorator](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-prompt-decorator-example.png)](../../../../assets/img/ai-gateway/ai-workspace/ai-gateway/codex-prompt-decorator-example.png)
+[![Codex CLI terminal showing response ending with "Routed through WSO2 AI Gateway" footer added by Prompt Decorator](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-prompt-decorator-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/codex/codex-prompt-decorator-example.png)
 
 For more information on Prompt Management, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/prompt-management/prompt-decorator/)
