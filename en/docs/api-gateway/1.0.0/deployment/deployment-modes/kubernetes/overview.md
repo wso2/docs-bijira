@@ -51,7 +51,7 @@ If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the succes
 
 ### High Availability and Production-Ready
 
-- Controller uses an external database (PostgreSQL or SQL Server) for persistent, shared API configuration storage.
+- Controller uses PostgreSQL for persistent, shared API configuration storage.
 - Runtime uses Redis for distributed rate limiting across replicas.
 
 ### Built-In Observability
