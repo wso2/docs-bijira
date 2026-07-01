@@ -44,14 +44,14 @@ You want a lightweight gateway that you can download and run immediately. There 
 
 | Guide | What you will do |
 | :--- | :--- |
-| [API Gateway: Getting started](api-gateway/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
+| [API Gateway: Getting started](api-gateway/1.1.0/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
 
 **For AI traffic (LLMs and MCP):**
 
 | Guide | What you will do |
 | :--- | :--- |
-| [LLM Proxy: Quick start](ai-gateway/llm-proxy/quick-start-guide.md) | Configure an LLM provider, apply a guardrail, and route your first LLM request. |
-| [MCP Proxy: Quick start](ai-gateway/mcp-proxy/quick-start-guide.md) | Expose a REST API as an MCP tool and invoke it through an MCP client. |
+| [LLM Proxy: Quick start](ai-gateway/1.1.0/llm-proxy/quick-start-guide.md) | Configure an LLM provider, apply a guardrail, and route your first LLM request. |
+| [MCP Proxy: Quick start](ai-gateway/1.1.0/mcp-proxy/quick-start-guide.md) | Expose a REST API as an MCP tool and invoke it through an MCP client. |
 
 ### I want to govern AI services at the organizational level
 You already have gateways running and now want centralized management of LLM providers, MCP servers, guardrails, and cost controls across your organization.
@@ -72,7 +72,7 @@ Once you have completed a quick start guide, here is where to go next:
 
 | I want to... | Go here |
 | :--- | :--- |
-| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/overview.md) · [AI Gateway](ai-gateway/overview.md) |
+| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/1.1.0/overview.md) · [AI Gateway](ai-gateway/1.1.0/overview.md) |
 | Follow end-to-end scenarios spanning multiple components | [Guides](guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) |
 | Try runnable code samples | [Samples](cloud/samples/samples-overview.md) |
 | Understand platform concepts (organizations, projects, data planes) | [Concepts](cloud/bijira-concepts/organization.md) |

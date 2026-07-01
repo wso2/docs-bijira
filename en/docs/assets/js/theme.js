@@ -316,3 +316,288 @@ if (preRelLink) {
   request.send();
 });
 
+/*
+ * Per-section versioned navigation
+ * -------------------------------------------------------------------------
+ * Sections configured under `extra.versioned_sections` in mkdocs.yml render a
+ * version <select> plus one `.md-nav__version-group[data-md-version]` per
+ * version (see partials/nav-item.html). Here we:
+ *   1. Resolve the active version (URL segment > localStorage > default).
+ *   2. Show only the active version's group.
+ *   3. On change, keep the user on the equivalent page under the new version,
+ *      falling back to that version's overview when it does not exist.
+ */
+if (typeof window.versionedNavInitialized === 'undefined') window.versionedNavInitialized = false;
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.versionedNavInitialized) return;
+  window.versionedNavInitialized = true;
+
+  document.querySelectorAll('.md-nav__item--versioned').forEach(function (section) {
+    var slug = section.getAttribute('data-md-versioned-section');
+    var defaultVersion = section.getAttribute('data-md-default-version');
+    var select = section.querySelector('.md-nav__version-dropdown');
+    var groups = Array.prototype.slice.call(
+      section.querySelectorAll('.md-nav__version-group')
+    );
+    if (!slug || !select || groups.length === 0) return;
+
+    var storageKey = 'docVersion:' + slug;
+
+    // Available version values, in the order rendered.
+    var versions = groups.map(function (g) {
+      return g.getAttribute('data-md-version');
+    });
+
+    // Resolve the active version: URL path segment wins, then stored
+    // preference, then the configured default.
+    function versionFromPath() {
+      // Match ".../<slug>/<version>/..." anywhere in the path.
+      var parts = window.location.pathname.split('/').filter(Boolean);
+      var idx = parts.lastIndexOf(slug);
+      if (idx !== -1 && idx + 1 < parts.length) {
+        var candidate = parts[idx + 1];
+        if (versions.indexOf(candidate) !== -1) return candidate;
+      }
+      return null;
+    }
+
+    var stored = null;
+    try {
+      stored = window.localStorage.getItem(storageKey);
+    } catch (e) {
+      stored = null;
+    }
+
+    var active =
+      versionFromPath() ||
+      (versions.indexOf(stored) !== -1 ? stored : null) ||
+      (versions.indexOf(defaultVersion) !== -1 ? defaultVersion : versions[0]);
+
+    function showVersion(version) {
+      groups.forEach(function (g) {
+        g.classList.toggle('is-active', g.getAttribute('data-md-version') === version);
+      });
+      if (select.value !== version) select.value = version;
+      try {
+        window.localStorage.setItem(storageKey, version);
+      } catch (e) {
+        /* storage unavailable: selection simply won't persist */
+      }
+    }
+
+    showVersion(active);
+
+    // Collect the set of page paths available in a given version's group, plus
+    // that version's overview (first link) as the fallback target.
+    function groupForVersion(version) {
+      return groups.filter(function (g) {
+        return g.getAttribute('data-md-version') === version;
+      })[0];
+    }
+
+    function pathTailAfterVersion(pathname, version) {
+      // Returns the part of the path after "<slug>/<version>/", or null.
+      var marker = '/' + slug + '/' + version + '/';
+      var i = pathname.indexOf(marker);
+      if (i === -1) return null;
+      return pathname.slice(i + marker.length);
+    }
+
+    select.addEventListener('change', function () {
+      var target = select.value;
+      var group = groupForVersion(target);
+      if (!group) return;
+
+      var links = Array.prototype.slice.call(group.querySelectorAll('a[href]'));
+      if (links.length === 0) {
+        showVersion(target);
+        return;
+      }
+
+      // Build the equivalent URL: same tail path, new version segment. Compare
+      // against each link's resolved pathname (hrefs in the nav are relative).
+      var current = versionFromPath();
+      var tail = current ? pathTailAfterVersion(window.location.pathname, current) : null;
+
+      var destination = null;
+      if (tail !== null) {
+        var wanted = ('/' + slug + '/' + target + '/' + tail).replace(/\/+$/, '');
+        for (var i = 0; i < links.length; i++) {
+          var linkPath = new URL(links[i].href).pathname.replace(/\/+$/, '');
+          if (linkPath.slice(-wanted.length) === wanted) {
+            destination = links[i].href;
+            break;
+          }
+        }
+      }
+
+      // Fall back to the new version's overview (its first rendered link).
+      if (!destination) destination = links[0].href;
+
+      // Persist before navigating so the new page restores the same version.
+      try {
+        window.localStorage.setItem(storageKey, target);
+      } catch (e) {
+        /* ignore */
+      }
+      window.location.href = destination;
+    });
+  });
+});
+
+/*
+ * Search result breadcrumbs + version scoping
+ * -------------------------------------------------------------------------
+ * Across products / versions many pages share a title ("Overview", "Regex
+ * Guardrail", ...). Material's search results show only the title, so results
+ * are ambiguous and (because every version is indexed) the same page appears
+ * once per version. We:
+ *   1. Load a URL -> breadcrumb map produced at build time
+ *      (assets/search-breadcrumbs.json, see hooks.py) and inject the breadcrumb
+ *      (e.g. "AI Gateway › 1.1.0 › LLM Proxy › Guardrails") under each result.
+ *   2. Hide results from a NON-active version of a versioned product, so a user
+ *      who selected 1.0.0 only sees 1.0.0 hits (plus non-versioned results such
+ *      as Cloud / Guides). Active version is resolved exactly like the nav
+ *      selector: URL segment > localStorage > configured default.
+ */
+if (typeof window.searchBreadcrumbsInitialized === 'undefined') window.searchBreadcrumbsInitialized = false;
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.searchBreadcrumbsInitialized) return;
+  window.searchBreadcrumbsInitialized = true;
+
+  var output = document.querySelector('[data-md-component="search-result"]');
+  if (!output) return;
+
+  // Material exposes the site root as an absolute URL in `window.__md_scope`
+  // (set on every page, e.g. https://host/bijira/docs/). Use it to build the
+  // fetch URL and to turn a result's pathname into a build-time breadcrumb key.
+  // Fall back to a <base> tag, then the server root.
+  var scope = window.__md_scope ||
+    (document.querySelector('base') ? new URL(document.querySelector('base').href) : new URL('/', location));
+  var basePath = scope.pathname;
+  if (basePath.charAt(basePath.length - 1) !== '/') basePath += '/';
+
+  var breadcrumbs = null;
+  var pending = false;
+
+  // Resolve, per versioned product (slug), which version is "active" for this
+  // page. Reads the global versioned-nav DOM, mirroring the nav selector logic.
+  var activeVersions = null;
+  function getActiveVersions() {
+    if (activeVersions) return activeVersions;
+    activeVersions = {};
+    document.querySelectorAll('.md-nav__item--versioned').forEach(function (section) {
+      var slug = section.getAttribute('data-md-versioned-section');
+      var def = section.getAttribute('data-md-default-version');
+      if (!slug) return;
+      var versions = [];
+      section.querySelectorAll('.md-nav__version-group').forEach(function (g) {
+        var v = g.getAttribute('data-md-version');
+        if (v) versions.push(v);
+      });
+      var active = null;
+      var parts = window.location.pathname.split('/').filter(Boolean);
+      var idx = parts.lastIndexOf(slug);
+      if (idx !== -1 && idx + 1 < parts.length && versions.indexOf(parts[idx + 1]) !== -1) {
+        active = parts[idx + 1];
+      }
+      if (!active) {
+        try {
+          var s = window.localStorage.getItem('docVersion:' + slug);
+          if (versions.indexOf(s) !== -1) active = s;
+        } catch (e) { /* ignore */ }
+      }
+      if (!active) active = versions.indexOf(def) !== -1 ? def : versions[0];
+      activeVersions[slug] = { active: active, versions: versions };
+    });
+    return activeVersions;
+  }
+
+  function keyForHref(href) {
+    var path;
+    try {
+      path = new URL(href, scope).pathname;
+    } catch (e) {
+      return null;
+    }
+    // Strip the base path prefix to match the JSON keys (relative page URLs).
+    if (basePath !== '/' && path.indexOf(basePath) === 0) {
+      path = path.slice(basePath.length);
+    } else {
+      path = path.replace(/^\//, '');
+    }
+    if (path && path.charAt(path.length - 1) !== '/') path += '/';
+    return path;
+  }
+
+  // True if the page key belongs to a non-active version (should be hidden).
+  function isHiddenVersion(key) {
+    if (!key) return false;
+    var parts = key.split('/');
+    if (parts.length < 2) return false;
+    var cfg = getActiveVersions()[parts[0]];
+    if (!cfg) return false;
+    if (cfg.versions.indexOf(parts[1]) === -1) return false; // not a version segment
+    return parts[1] !== cfg.active;
+  }
+
+  function decorate() {
+    if (!breadcrumbs) return;
+    var items = output.querySelectorAll('.md-search-result__item');
+    var visible = 0;
+    items.forEach(function (item) {
+      var link = item.querySelector('.md-search-result__link');
+      if (!link) return;
+      var key = keyForHref(link.getAttribute('href') || link.href);
+
+      // 1. Version scoping: hide results from non-active versions.
+      var hide = isHiddenVersion(key);
+      item.style.display = hide ? 'none' : '';
+      if (!hide) visible++;
+
+      // 2. Breadcrumb: inject once, under the document-level result title.
+      if (!item.querySelector('.md-search-result__breadcrumbs')) {
+        var crumbs = key && breadcrumbs[key];
+        if (crumbs && crumbs.length) {
+          var el = document.createElement('div');
+          el.className = 'md-search-result__breadcrumbs';
+          el.textContent = crumbs.join(' › '); // " > "
+          var title = link.querySelector('.md-search-result__title');
+          if (title && title.parentNode) {
+            title.parentNode.insertBefore(el, title.nextSibling);
+          } else {
+            link.insertBefore(el, link.firstChild);
+          }
+        }
+      }
+    });
+
+    // Keep the "N matching documents" meta count honest about what's shown.
+    // Idempotent: only writes when the number actually changes (loop-safe).
+    var meta = output.querySelector('.md-search-result__meta');
+    if (meta && items.length && /\d/.test(meta.textContent)) {
+      var desired = meta.textContent.replace(/\d[\d,]*/, String(visible));
+      if (meta.textContent !== desired) meta.textContent = desired;
+    }
+  }
+
+  function ensureLoadedThenDecorate() {
+    if (breadcrumbs) {
+      decorate();
+      return;
+    }
+    if (pending) return;
+    pending = true;
+    var url = new URL('assets/search-breadcrumbs.json', scope).href;
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (data) { breadcrumbs = data; decorate(); })
+      .catch(function () { breadcrumbs = {}; });
+  }
+
+  // Results are rendered asynchronously and re-rendered on each keystroke, so
+  // observe the output container and (re)decorate whenever it changes.
+  var observer = new MutationObserver(function () { ensureLoadedThenDecorate(); });
+  observer.observe(output, { childList: true, subtree: true });
+});
+

@@ -1,5 +1,6 @@
 import re
 import os
+import json
 import hashlib
 
 _HOOKS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -7,6 +8,11 @@ _HOOKS_DIR = os.path.dirname(os.path.abspath(__file__))
 # Populated in on_pre_build; used by on_post_page and on_post_build.
 _partial_hashes: dict[str, str] = {}
 _theme_css_version: str = ""
+
+# Maps each page URL to its breadcrumb (list of ancestor section titles).
+# Populated in on_nav; written to a JSON asset in on_post_build so the search
+# results UI can show which doc set / version a result belongs to.
+_breadcrumbs: dict[str, list[str]] = {}
 
 
 def _file_hash(path: str) -> str:
@@ -47,10 +53,38 @@ def on_pre_build(config, **kwargs):
     _theme_css_version = hashlib.md5(combined).hexdigest()[:8]
 
 
+def on_nav(nav, config, files):
+    """Build a URL -> breadcrumb map from the navigation tree.
+
+    The breadcrumb is the list of ancestor section titles for each page (e.g.
+    ["API Gateway", "1.1.0", "Policies"]). This is used to disambiguate search
+    results that share the same title across versions / doc sets.
+    """
+    _breadcrumbs.clear()
+    for page in nav.pages:
+        crumbs = []
+        item = page.parent
+        while item is not None:
+            if getattr(item, "title", None):
+                crumbs.insert(0, item.title)
+            item = item.parent
+        if page.url and crumbs:
+            _breadcrumbs[page.url] = crumbs
+    return nav
+
+
 def on_post_build(config, **kwargs):
     """Append content-hash query strings to @import URLs inside the built theme.css
-    so that CDN / browser caches are busted whenever a partial file changes."""
+    so that CDN / browser caches are busted whenever a partial file changes.
+    Also writes the search breadcrumb map collected in on_nav."""
     site_dir = config["site_dir"]
+
+    # Write the breadcrumb map for the search results UI.
+    breadcrumbs_path = os.path.join(site_dir, "assets", "search-breadcrumbs.json")
+    os.makedirs(os.path.dirname(breadcrumbs_path), exist_ok=True)
+    with open(breadcrumbs_path, "w", encoding="utf-8") as f:
+        json.dump(_breadcrumbs, f, ensure_ascii=False)
+
     theme_css_path = os.path.join(site_dir, "assets", "css", "theme.css")
 
     if not os.path.exists(theme_css_path):
@@ -122,12 +156,29 @@ def _raw_frontmatter(src_path: str) -> str:
     return match.group(0) if match else ""
 
 
+def _drop_tags_from_search(page):
+    """Stop frontmatter tags from dominating search ranking.
+
+    Material weights `tags` very heavily. Broad tags (e.g. the homepage's
+    "platform-overview", "api-management") tokenize into common query words and
+    let unrelated pages outrank the exact page a user searched for. There is no
+    `tags` plugin in this project, so tags exist only to feed search — removing
+    them from the index restores title/content-driven ranking with no other
+    side effects.
+    """
+    if isinstance(page.meta, dict) and page.meta.get("tags"):
+        page.meta["tags"] = []
+
+
 def on_page_markdown(markdown, page, config, **kwargs):
     """Write Markdown files to a parallel .md file in the build output.
 
     For example, it creates the file `SITE_DIR/cloud/ai-gateway/overview.md`
     alongside the HTML page.
     """
+    # Keep tags out of the search index (see helper above).
+    _drop_tags_from_search(page)
+
     site_dir = config["site_dir"]
     # page.url is like "cloud/ai-gateway/overview/" so strip trailing slash
     # to produce "cloud/ai-gateway/overview.md".
