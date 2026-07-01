@@ -32,7 +32,7 @@ The `ap` CLI provides a command-line interface for managing gateways, APIs, and 
 - API lifecycle management (apply, list, get, delete)
 - MCP proxy management (generate, list, get, delete)
 
-For the complete list of CLI commands and usage examples, see the [CLI Reference](../tools/cli/reference.md).
+For the complete list of CLI commands and usage examples, see the [CLI Reference](../../tools/cli/reference.md).
 
 ## Default Ports
 
@@ -45,7 +45,7 @@ For the complete list of CLI commands and usage examples, see the [CLI Reference
 
 ## Architecture
 
-![Architecture diagram showing Gateway Controller with REST API, Configuration Transformer, xDS Server, and Repository Controller above, and Gateway Runtime with Envoy Router, Policy Engine, and Python Executor below](../assets/img/api-gateway/gateway-architecture.png)
+![Architecture diagram showing Gateway Controller with REST API, Configuration Transformer, xDS Server, and Repository Controller above, and Gateway Runtime with Envoy Router, Policy Engine, and Python Executor below](../../assets/img/api-gateway/gateway-architecture.png)
 <!-- image source: https://docs.google.com/drawings/d/1pgADdQNpNcvLrLVvV1fx2hxQOb3syoU0DEBhJd2N6Aw/edit?usp=sharing -->
 
 The API Gateway consists of two main components: **Gateway Controller** and **Gateway Runtime**.
@@ -85,5 +85,5 @@ In a production HA deployment:
 - **Gateway Controller** instances connect to a shared external database (**PostgreSQL** or **SQL Server**) for persistent storage of API configurations, subscriptions, and other metadata.
 - **Gateway Runtime** instances connect to a shared **Redis** instance used for distributed rate limiting, ensuring rate limit counters are synchronized across all runtime instances.
 
-![HA diagram with two Gateway Controller replicas sharing PostgreSQL, three Gateway Runtime replicas sharing Redis, and all runtimes reporting to Moesif analytics](../assets/img/api-gateway/gateway-ha-setup.png)
+![HA diagram with two Gateway Controller replicas sharing PostgreSQL, three Gateway Runtime replicas sharing Redis, and all runtimes reporting to Moesif analytics](../../assets/img/api-gateway/gateway-ha-setup.png)
 <!-- image source: https://docs.google.com/drawings/d/1CIH3V8Uc2YxCWEGS7yUz3qyBfSpdLK1VpWK0NgmP4OQ/edit?usp=sharing -->

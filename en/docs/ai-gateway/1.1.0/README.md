@@ -1,15 +1,15 @@
 ---
-title: "API Platform AI Gateway Overview"
-description: "Manage and secure AI traffic with API Platform AI Gateway: LLM providers, LLM proxies, MCP proxies, and guardrails for LLM APIs and MCP servers."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/overview.md
+title: "API Platform AI Gateway"
+description: "Overview of API Platform AI Gateway for managing LLM and MCP traffic, covering key concepts, architecture, and quick start links."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/
+md_url: https://wso2.com/api-platform/docs/ai-gateway.md
 tags:
   - ai-gateway
   - llm
   - mcp
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-11
-content_type: "concept"
+last_updated: 2026-06-16
+content_type: "overview"
 ---
 
 # API Platform AI Gateway
@@ -18,8 +18,8 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 ## Quick Start
 
-- [LLM Quick Start Guide](llm-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
-- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
+- [LLM Quick Start Guide](llm-proxy/quick-start-guide.md) - Set up the gateway and route traffic to LLM providers like OpenAI
+- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway and route traffic to MCP servers
 
 ## Key Concepts
 
@@ -72,7 +72,6 @@ An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a prot
 | 8080 | Router | HTTP traffic |
 | 8443 | Router | HTTPS traffic |
 | 9090 | Gateway-Controller | REST API |
-| 9094 | Gateway-Controller Admin | Health and admin endpoints |
 
 ## Architecture
 
@@ -93,25 +92,16 @@ An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a prot
 
 **How it works:**
 
-1. Administrators verify the Gateway-Controller admin health endpoint and configure LLM Providers and MCP Proxies via the Gateway-Controller API
+1. Administrators configure LLM Providers and MCP Proxies via the Gateway-Controller API
 2. Developers create LLM Proxies to build AI applications on top of available providers
 3. The gateway routes traffic, applies policies, and manages authentication
-
-## AI Guardrails
-
-AI Guardrails allow you to enforce safety, content, and compliance policies on AI traffic flowing through the AI Gateway. They can be applied at the LLM Provider level (organization-wide), at the LLM Proxy level (per-application), or on MCP Proxies.
-
-The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: [https://github.com/wso2/gateway-controllers/blob/main/docs/README.md](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md)
-
-You can extend the AI Gateway with custom guardrail policies by building a custom gateway image using the `ap` CLI. See [Customizing the Gateway by Adding and Removing Policies](../tools/cli/customizing-gateway-policies.md).
 
 ## Documentation
 
 | Section | Description |
 |---------|-------------|
-| [LLM](llm-proxy/quick-start-guide.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
-| [MCP](mcp-proxy/quick-start-guide.md) | MCP proxy setup and policies |
-| [Observability](observability/logging.md) | Logging and tracing configuration |
-| [Analytics](analytics/moesif-analytics.md) | Analytics integrations (Moesif) |
-| [Policies and Guardrails](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md) | Gateway policies and guardrails for AI traffic control |
-| [REST APIs](ai-gateway-rest-api/authentication.md) | REST API authentication and usage |
+| [llm/](llm/) | LLM provider configuration, guardrails, prompt management, and semantic caching |
+| [mcp/](mcp/) | MCP proxy setup and policies |
+| [observability/](observability/) | Logging and tracing configuration |
+| [analytics/](analytics/) | Analytics integrations (Moesif) |
+| [ai-gateway-rest-api/](ai-gateway-rest-api/) | REST API authentication and usage |
