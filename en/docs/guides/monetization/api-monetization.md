@@ -1,3 +1,17 @@
+---
+title: "Monetize a REST API with Stripe"
+description: "Charge for an existing REST API without writing billing code: publish an API with a Pay-as-you-go plan and let WSO2 API Platform sync per-request usage to Stripe for metering and payments."
+canonical_url: https://wso2.com/api-platform/docs/guides/monetization/api-monetization/
+md_url: https://wso2.com/api-platform/docs/guides/monetization/api-monetization.md
+tags:
+  - guides
+  - monetization
+  - stripe
+author: WSO2 API Platform Documentation Team
+last_updated: 2026-06-26
+content_type: "tutorial"
+---
+
 # Monetize a REST API with Stripe
 
 ## Overview

@@ -53,6 +53,14 @@
 
   {% set current_title = nav_item.title %}
 
+  <!-- Versioned section config (see extra.versioned_sections in mkdocs.yml).
+       Only applies to top-level tabs (level 1); a same-named section nested
+       elsewhere (e.g. under Cloud) is rendered normally. -->
+  {% set versioned_cfg = None %}
+  {% if level == 1 and config.extra.versioned_sections and nav_item.title in config.extra.versioned_sections %}
+    {% set versioned_cfg = config.extra.versioned_sections[nav_item.title] %}
+  {% endif %}
+
   <!-- Set nav icon -->
   {% set icon = None %}
 
@@ -91,8 +99,93 @@
     {% endif %}
   {% endif %}
 
+  <!-- Versioned section: render a version selector + one group of subtopics per
+       version. Only the active version's group is shown (CSS/JS); see theme.js. -->
+  {% if nav_item.children and versioned_cfg %}
+
+    {% set v_slug = versioned_cfg.slug %}
+    {% set v_default = versioned_cfg.default %}
+    {% set v_versions = versioned_cfg.versions %}
+
+    <!-- Resolve the active version from the current page URL, else the default.
+         A namespace is required so the assignment survives the for-loop scope. -->
+    {% set ns = namespace(active=v_default) %}
+    {% if page and page.url %}
+      {% for v in v_versions %}
+        {% if (v_slug ~ "/" ~ v ~ "/") in (page.url ~ "/") %}
+          {% set ns.active = v %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% set active_version = ns.active %}
+
+    <!-- Match the expanded-section styling used by other top-level sections -->
+    {% set matched_expanded_nav = config.extra.expanded_navs | selectattr("title", "equalto", nav_item.title) | first %}
+    {% if matched_expanded_nav is defined and matched_expanded_nav.options is defined %}
+      {% if "verticle-line" in matched_expanded_nav.options %}
+        {% set class = class ~ " md-nav--expanded-section md-nav--expanded-section-verticle-line" %}
+      {% endif %}
+      {% if "divider" in matched_expanded_nav.options %}
+        <hr class="md-nav--expanded-section-divider" />
+      {% endif %}
+    {% endif %}
+    {% set has_icon_class = "md-nav--has-icon" if icon %}
+
+    <li
+      class="{{ class }} md-nav__item--nested md-nav__item--versioned {{ has_icon_class }}"
+      data-md-versioned-section="{{ v_slug }}"
+      data-md-default-version="{{ v_default }}"
+    >
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="{{ path }}"
+        {{ "checked" if nav_item.active }}
+      />
+
+      <!-- Section header: title + inline version selector on the same row -->
+      <div class="md-nav__link md-nav__versioned-header">
+        <label class="md-nav__versioned-title" for="{{ path }}" id="{{ path }}_label" tabindex="0">
+          <span>
+            {% if icon %}
+              {{ nav_icon(icon) }}
+              {{ "&nbsp;" + nav_item.title }}
+            {% else %}
+              {{ nav_item.title }}
+            {% endif %}
+          </span>
+        </label>
+        <select class="md-nav__version-dropdown" aria-label="{{ nav_item.title }} version">
+          {% for v in v_versions %}
+            <option value="{{ v }}" {{ "selected" if v == active_version }}>{{ v }}</option>
+          {% endfor %}
+        </select>
+        <label class="md-nav__icon md-icon md-nav__versioned-toggle" for="{{ path }}"></label>
+      </div>
+
+      <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label">
+        <label class="md-nav__title" for="{{ path }}">
+          <span class="md-nav__icon md-icon"></span>
+          {{ nav_item.title }}
+        </label>
+
+        <!-- One subtopic group per version; JS toggles which is active -->
+        {% for version_item in nav_item.children %}
+          {% set vgroup_path = path ~ "_v" ~ loop.index %}
+          {% set is_active_group = "is-active" if version_item.title == active_version %}
+          <div class="md-nav__version-group {{ is_active_group }}" data-md-version="{{ version_item.title }}">
+            <ul class="md-nav__list" data-md-scrollfix>
+              {% for sub in version_item.children %}
+                {{ render(sub, vgroup_path ~ "_" ~ loop.index, level + 1, current_title) }}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </nav>
+    </li>
+
   <!-- Main navigation item with nested items -->
-  {% if nav_item.children %}
+  {% elif nav_item.children %}
 
     <!-- Determine whether to render item as a section -->
     {% if "navigation.sections" in features and level == 1 + (
