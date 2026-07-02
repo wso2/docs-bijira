@@ -79,6 +79,8 @@ Once you're on the organization home page, create a project:
 
 **Expected result:** The project home page opens.
 
+![Project home page showing the Overview cards to create your first LLM provider, LLM proxy, MCP proxy, and GenAI application](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/project-home-page.png){.cInlineImage-full}
+
 ## Step 2: Create and start an AI gateway
 
 The AI gateway is the runtime that hosts your proxy and enforces your policies. If you already have a gateway running and shown as **Active** in the console, skip this step and proceed to Step 3.
@@ -105,16 +107,16 @@ Open the **Get Started** guide on the gateway detail page and follow the instruc
 
 **Expected result:** The console displays **Your gateway is connected successfully.** and the gateway status changes to **Active**.
 
-![AI gateway detail page showing the gateway status as Active after successful connection](../../assets/img/guides/ai-and-mcp/s4/ai-gateway-active-status.png){.cInlineImage-full}
+![AI gateway detail page showing the gateway status as Active after successful connection](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/gateway-connected.png){.cInlineImage-full}
 
-## Step 3: Add OpenAI as an LLM provider
+## Step 3: Add Anthropic as an LLM provider
 
-Registering the provider stores your OpenAI API key in the platform. Your application never handles the key directly. The proxy uses it to authenticate with OpenAI on every request.
+Registering the provider stores your Anthropic API key in the platform. Your application never handles the key directly. The proxy uses it to authenticate with OpenAI on every request.
 
 1. In the left navigation menu, click **LLM Providers**.
 2. Click **+ Create Provider**.
-3. Select **OpenAI** from the provider list.
-4. Enter **OpenAI** as the provider name and paste your OpenAI API key.
+3. Select **Anthropic** from the provider list.
+4. Enter **Anthropic** as the provider name and paste your Anthropic API key.
 5. Click **Add Provider**.
 
 **Deploy the provider to the gateway:**
@@ -124,7 +126,7 @@ Registering the provider stores your OpenAI API key in the platform. Your applic
 
 **Expected result:** OpenAI appears in the **LLM Providers** list with a deployment status of **Active**.
 
-![OpenAI LLM provider overview page showing the provider name, API key, and deployment status as Active](../../assets/img/guides/ai-and-mcp/s4/open-ai-provider-overview.png){.cInlineImage-full}
+![Creating an LLM provider and deploying it to the gateway until the deployment status shows Active](../../assets/clips/ai-n-mcp/llm-provider-creation.gif){.cInlineImage-full}
 
 ## Step 4: Create the LLM proxy
 
@@ -146,7 +148,7 @@ The LLM proxy is the endpoint your applications call. It abstracts the provider 
 
 **Expected result:** The `persona-proxy` proxy is created and the proxy detail page opens.
 
-![App LLM proxy overview page showing the persona-proxy with provider configuration and invoke URL](../../assets/img/guides/ai-and-mcp/s4/llm-proxy-overview.png){.cInlineImage-full}
+![Creating the persona-proxy App LLM proxy with its provider configuration until the proxy detail page opens](../../assets/clips/ai-n-mcp/llm-proxy-creation.gif){.cInlineImage-full}
 
 ## Step 5: Add a prompt decorator policy
 
@@ -167,6 +169,8 @@ This policy prepends a persona system message to the `messages` array of every r
 
 **Expected result:** **Prompt Decorator** appears in the **Guardrails & Policies** tab as active. Every request to the proxy now carries the persona system message before it reaches OpenAI.
 
+![Adding and configuring the Prompt Decorator policy on the Guardrails & Policies tab until it appears as active](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/add-prompt-decorator.gif){.cInlineImage-full}
+
 !!! note "How the fields work together"
     - **promptDecoratorConfig** holds the content to inject as a JSON object. Because `jsonPath` targets the `messages` array, the `decoration` value must be an array of message objects, each with a `role` and a `content`. This is called *chat decoration*.
     - **jsonPath** selects the field to modify. `$.messages` targets the whole messages array.
@@ -184,7 +188,7 @@ Deploying pushes your proxy configuration, including the prompt decorator policy
 
 **Expected result:** The gateway card shows **Deployment Status** as **Active**.
 
-![Deploy to Gateway page showing the persona-proxy with Deployment Status as Active](../../assets/img/guides/ai-and-mcp/s4/llm-proxy-deployment-status.png){.cInlineImage-full}
+![AI proxy detail page showing the gateway deployment status as Active](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/proxy-deployed.png){.cInlineImage-full}
 
 ## Step 7: Generate an API key
 
