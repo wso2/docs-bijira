@@ -1,6 +1,6 @@
 ---
 title: "High-Availability Production Deployment"
-description: "Deploy API Platform Gateway in a highly available, production-grade configuration on Kubernetes with Helm, an external database (PostgreSQL or SQL Server), and replicated workloads."
+description: "Deploy API Platform Gateway in a highly available, production-grade configuration on Kubernetes with Helm, PostgreSQL, and replicated workloads."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/deployment/high-availability-production-deployment/
 md_url: https://wso2.com/api-platform/docs/api-gateway/deployment/high-availability-production-deployment.md
 tags:
@@ -9,13 +9,13 @@ tags:
   - kubernetes
   - devops
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-26
+last_updated: 2026-06-11
 content_type: "how-to"
 ---
 
 # High-Availability Production Deployment
 
-This guide covers deploying the API Platform Gateway in a production-grade, highly available configuration using Helm on Kubernetes. Development mode is disabled, security is hardened, an external database (PostgreSQL or SQL Server) backs the deployment state, and workloads are replicated across nodes.
+This guide covers deploying the API Platform Gateway in a production-grade, highly available configuration using Helm on Kubernetes. Development mode is disabled, security is hardened, PostgreSQL backs the deployment state, and workloads are replicated across nodes.
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ This separation provides:
 
 The self-hosted gateway can be deployed in a highly available manner by running multiple **Gateway Controller** replicas and multiple **Gateway Runtime** replicas across different network zones or environments.
 
-In this deployment model, API deployments are received by one of the Gateway Controller replicas. The controller persists the API deployment information in the shared database. Other Gateway Controller replicas then read the updated deployment state from the database and synchronize the relevant configuration with the Gateway Runtime instances connected to them.
+In this deployment model, API deployments are received by one of the Gateway Controller replicas. The controller persists the API deployment information in the shared PostgreSQL database. Other Gateway Controller replicas then read the updated deployment state from the database and synchronize the relevant configuration with the Gateway Runtime instances connected to them.
 
 This ensures that all Gateway Controller replicas operate with a consistent deployment state and that each runtime environment receives the latest API configuration.
 
@@ -75,14 +75,14 @@ The deployment consists of the following main components:
 | Component | Description |
 | ----- | ----- |
 | **Gateway Controller** | Receives API deployment requests, stores deployment state in the database, and synchronizes runtime configuration with connected Gateway Runtime instances. |
-| **Database (PostgreSQL / SQL Server)** | Acts as the shared source of truth for API metadata, deployment state, and gateway configuration. |
+| **PostgreSQL Database** | Acts as the shared source of truth for API metadata, deployment state, and gateway configuration. |
 | **Gateway Runtime** | Receives configuration from its connected Gateway Controller and enforces API gateway policies at runtime. |
 
 ### Deployment Synchronization Flow
 
 When an API deployment request is received, it is handled by one of the available Gateway Controller replicas.
 
-The controller that receives the request validates the deployment and stores the API metadata and deployment state in the shared database. This database acts as the common source of truth for all Gateway Controller replicas.
+The controller that receives the request validates the deployment and stores the API metadata and deployment state in the shared PostgreSQL database. This database acts as the common source of truth for all Gateway Controller replicas.
 
 Other Gateway Controller replicas continuously read or synchronize the latest deployment state from the database. Once a controller detects a new or updated API deployment, it generates the required runtime configuration and synchronizes it with the Gateway Runtime instances connected to that controller.
 
@@ -94,7 +94,7 @@ Each Gateway Controller replica can manage one or more Gateway Runtime replicas.
 
 High availability is achieved by removing dependency on a single controller instance.
 
-If an API deployment request is received by **Gateway Controller Replica 01**, that replica stores the deployment state in the shared database. **Gateway Controller Replica 02** can then read the same deployment state from the database and synchronize it with the Gateway Runtime replicas connected to it.
+If an API deployment request is received by **Gateway Controller Replica 01**, that replica stores the deployment state in PostgreSQL. **Gateway Controller Replica 02** can then read the same deployment state from the database and synchronize it with the Gateway Runtime replicas connected to it.
 
 ![High-availability behavior](../../../assets/img/api-gateway/high-availability-deployment-example.png)
 
@@ -104,7 +104,7 @@ Similarly, multiple Gateway Runtime replicas can be deployed in each environment
 
 ### Configuration Synchronization
 
-The shared database is the central synchronization point between Gateway Controller replicas. It maintains the latest API deployment state and allows all controller replicas to operate consistently.
+The PostgreSQL database is the central synchronization point between Gateway Controller replicas. It maintains the latest API deployment state and allows all controller replicas to operate consistently.
 
 Gateway Runtime replicas do not directly read from the database. Instead, they receive the required runtime configuration from their connected Gateway Controller. This keeps the runtime layer lightweight and allows the controller layer to manage configuration generation and synchronization.
 

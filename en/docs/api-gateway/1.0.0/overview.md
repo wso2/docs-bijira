@@ -82,7 +82,7 @@ You can extend the gateway with your own policies or include specific policies f
 
 In a production HA deployment:
 
-- **Gateway Controller** instances connect to a shared external database (**PostgreSQL** or **SQL Server**) for persistent storage of API configurations, subscriptions, and other metadata.
+- **Gateway Controller** instances connect to a shared **PostgreSQL** database for persistent storage of API configurations, subscriptions, and other metadata.
 - **Gateway Runtime** instances connect to a shared **Redis** instance used for distributed rate limiting, ensuring rate limit counters are synchronized across all runtime instances.
 
 ![HA diagram with two Gateway Controller replicas sharing PostgreSQL, three Gateway Runtime replicas sharing Redis, and all runtimes reporting to Moesif analytics](../../assets/img/api-gateway/gateway-ha-setup.png)
