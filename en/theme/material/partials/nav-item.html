@@ -121,6 +121,10 @@
 
     <!-- Match the expanded-section styling used by other top-level sections -->
     {% set matched_expanded_nav = config.extra.expanded_navs | selectattr("title", "equalto", nav_item.title) | first %}
+    {# Respect an optional level restriction so a same-named nested item isn't styled like the top-level section #}
+    {% if matched_expanded_nav and matched_expanded_nav.level is defined and matched_expanded_nav.level != level %}
+      {% set matched_expanded_nav = None %}
+    {% endif %}
     {% if matched_expanded_nav is defined and matched_expanded_nav.options is defined %}
       {% if "verticle-line" in matched_expanded_nav.options %}
         {% set class = class ~ " md-nav--expanded-section md-nav--expanded-section-verticle-line" %}
@@ -196,6 +200,10 @@
 
 
     {% set matched_expanded_nav = config.extra.expanded_navs | selectattr("title", "equalto", nav_item.title) | first %}
+    {# Respect an optional level restriction so a same-named nested item isn't styled like the top-level section #}
+    {% if matched_expanded_nav and matched_expanded_nav.level is defined and matched_expanded_nav.level != level %}
+      {% set matched_expanded_nav = None %}
+    {% endif %}
     {% set show_collapsible_icon = true %}
 
     {# Only add expanded-section for verticle-line and expanded_nav_titles, never for verticle-line-only #}

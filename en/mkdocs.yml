@@ -1133,6 +1133,7 @@ extra:
         - verticle-line
         - divider
     - title: Monetization
+      level: 1
       options:
         - verticle-line
         - divider
@@ -1231,6 +1232,7 @@ extra:
         icon: octicons/graph-16
     Monetization:
         icon: octicons/credit-card-16
+        level: 1
     Policy Hub:
         icon: octicons/package-16
 
