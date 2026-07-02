@@ -407,6 +407,10 @@ nav:
           - WebSub API Management: api-gateway/next/gateway-controller-management-api/websub-api-management.md
           - WebBroker API Management: api-gateway/next/gateway-controller-management-api/webbroker-api-management.md
           - Schemas: api-gateway/next/gateway-controller-management-api/schemas.md
+        - Performance:
+          - Overview: api-gateway/next/performance/overview.md
+          - Gateway runtime with two CPUs: api-gateway/next/performance/gateway-runtime-with-two-cpus.md
+          - Gateway runtime with four CPUs: api-gateway/next/performance/gateway-runtime-with-four-cpus.md
     - "1.1.0":
         - Overview: api-gateway/1.1.0/overview.md
         - Setup:
@@ -470,6 +474,11 @@ nav:
           - WebSub API Management: api-gateway/1.1.0/gateway-controller-management-api/websub-api-management.md
           - WebBroker API Management: api-gateway/1.1.0/gateway-controller-management-api/webbroker-api-management.md
           - Schemas: api-gateway/1.1.0/gateway-controller-management-api/schemas.md
+        - Performance:
+          - Overview: api-gateway/1.1.0/performance/overview.md
+          - Gateway runtime with two CPUs: api-gateway/1.1.0/performance/gateway-runtime-with-two-cpus.md
+          - Gateway runtime with four CPUs: api-gateway/1.1.0/performance/gateway-runtime-with-four-cpus.md
+
     - "1.0.0":
         - Overview: api-gateway/1.0.0/overview.md
         - Setup:
