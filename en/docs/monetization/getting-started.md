@@ -1,8 +1,8 @@
 ---
 title: "Get started with API Monetization"
 description: "Connect your Stripe account to API Platform to enable paid subscription plans and billing for your APIs."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started/
-md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/getting-started/
+md_url: https://wso2.com/api-platform/docs/monetization/getting-started.md
 tags:
   - cloud
   - monetization

@@ -1,8 +1,8 @@
 ---
 title: "API Monetization overview"
 description: "Generate revenue from your APIs with Stripe-powered paid subscription plans and flexible pricing models in API Platform."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/overview/
-md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/overview.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/overview/
+md_url: https://wso2.com/api-platform/docs/monetization/overview.md
 tags:
   - cloud
   - monetization

@@ -1,8 +1,8 @@
 ---
 title: "Manage paid subscription plans"
 description: "Create paid subscription plans with Stripe pricing models, assign them to APIs, and publish the API to the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans/
-md_url: https://wso2.com/api-platform/docs/cloud/api-monetization/manage-paid-subscription-plans.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/manage-paid-subscription-plans/
+md_url: https://wso2.com/api-platform/docs/monetization/manage-paid-subscription-plans.md
 tags:
   - cloud
   - monetization
