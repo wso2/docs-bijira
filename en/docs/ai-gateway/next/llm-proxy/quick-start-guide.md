@@ -8,11 +8,25 @@ tags:
   - llm
   - quickstart
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-11
+last_updated: 2026-07-02
 content_type: "quickstart"
 ---
 
 ## Quick Start
+
+!!! info "Watch the video walkthrough"
+    [Check out this quick start on YouTube](https://youtu.be/p5xBXZWt5GU?rel=0) or watch below.
+
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/p5xBXZWt5GU?rel=0" 
+  title="YouTube video player" 
+  style="border: 0;" 
+  loading="lazy" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>
 
 ### Using Docker Compose (Recommended)
 
