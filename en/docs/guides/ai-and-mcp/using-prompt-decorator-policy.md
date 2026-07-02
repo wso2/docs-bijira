@@ -124,7 +124,7 @@ Registering the provider stores your Anthropic API key in the platform. Your app
 6. On the provider detail page, click **Deploy to Gateway**.
 7. Select **my-ai-gateway** and click **Deploy**.
 
-**Expected result:** OpenAI appears in the **LLM Providers** list with a deployment status of **Active**.
+**Expected result:** Anthropic appears in the **LLM Providers** list with a deployment status of **Active**.
 
 ![Creating an LLM provider and deploying it to the gateway until the deployment status shows Active](../../assets/clips/ai-n-mcp/llm-provider-creation.gif){.cInlineImage-full}
 
