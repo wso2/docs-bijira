@@ -661,8 +661,16 @@ nav:
         - Analytics:
             - Moesif Analytics: ai-gateway/1.0.0/analytics/moesif-analytics.md
             - Analytics Header Filter: ai-gateway/1.0.0/analytics/analytics-header-filter.md
-  - Analytics & Monetization:
-    - Overview: analytics-and-monetization/overview.md
+  - Analytics: 
+    - Overview: analytics/overview.md
+  - Monetization:
+    - Overview: monetization/overview.md
+    - Monetizing APIs:
+        - Getting Started: monetization/getting-started.md
+        - Manage Paid Subscription Plans: monetization/manage-paid-subscription-plans.md
+    - Consume Monetized APIs:
+        - Subscribe to a Paid Plan: monetization/subscribe-to-paid-plan.md
+        - View Billing and Usage: monetization/view-billing-and-usage.md
   - Policy Hub:
     - Overview: policy-hub/overview.md
   - Guides:
