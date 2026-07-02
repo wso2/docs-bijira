@@ -22,11 +22,10 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
     [Check out this quick start on YouTube](https://youtu.be/kElzVeJPlRs?rel=0) or watch below.
 
 <iframe 
-  width="560" 
-  height="315" 
+  width="100%" 
   src="https://www.youtube.com/embed/kElzVeJPlRs?rel=0" 
   title="YouTube video player" 
-  style="border: 0;" 
+  style="border: 0; display: block; aspect-ratio: 16 / 9;" 
   loading="lazy" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
   allowfullscreen>
